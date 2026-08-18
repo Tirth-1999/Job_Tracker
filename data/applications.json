@@ -1,6 +1,105 @@
 {
-  "updatedAt": "2026-08-18T21:49:08.785Z",
+  "updatedAt": "2026-08-18T22:25:09.901Z",
   "applications": [
+    {
+      "id": "texas-rangers-general-application",
+      "company": "Texas Rangers",
+      "role": "General Application",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Ready for the Texas Rangers Sports & Entertainment Career Expo?",
+      "latestFrom": "Davis Filippell <davis@teamworkonline.com>",
+      "lastActivityAt": "2026-08-18T22:24:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a016f99bc0ef0fc",
+      "gmailMessageIds": [
+        "1a016f99bc0ef0fc"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "mail-delivery-subsystem-more-information-see-https",
+      "company": "Mail Delivery Subsystem",
+      "role": "More Information See Https",
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "Delivery Status Notification (Failure)",
+      "latestFrom": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "lastActivityAt": "2026-08-18T22:15:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a016f15c585cbae",
+      "gmailMessageIds": [
+        "1a016f17358d2339"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tesla-data-engineer",
+      "company": "Tesla",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "lastActivityAt": "2026-08-18T22:15:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a016f66c063a82a",
+      "gmailMessageIds": [
+        "1a016f66c063a82a",
+        "1a016f17039809b2",
+        "1a016f16c42177bb",
+        "1a016f169219e084",
+        "1a016f164d15991a",
+        "1a016f15c585cbae",
+        "1a016f157afa4a2f",
+        "1a016f150fa17e1a",
+        "1a016f14de17bf04",
+        "1a016f14d02bf05b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "verizon-general-application",
+      "company": "Verizon",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Reminder: Verizon Experience Feedback: Application",
+      "latestFrom": "Tsenta Inbox <inbox@mail.tsenta.com>",
+      "lastActivityAt": "2026-08-18T22:00:30.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a016e3ed79445d7",
+      "gmailMessageIds": [
+        "1a016e3ed79445d7"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "abacus-insights-associate-data-qa-engineer",
+      "company": "Abacus Insights",
+      "role": "Associate Data QA Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Update- Abacus Insights",
+      "latestFrom": "no-reply@abacusinsights.com",
+      "lastActivityAt": "2026-08-18T21:52:53.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a016dcf390e7ae6",
+      "gmailMessageIds": [
+        "1a016dcf390e7ae6"
+      ],
+      "notes": ""
+    },
     {
       "id": "pyramid-consulting-data-engineer",
       "company": "Pyramid Consulting",
