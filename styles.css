@@ -175,23 +175,32 @@ button:hover {
   display: block;
 }
 
+.stat.stat-clickable {
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat.stat-clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent);
+}
+
 .board {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(260px, 1fr));
   gap: 16px;
   overflow-x: auto;
   padding-bottom: 16px;
-  align-items: stretch;
-  min-height: calc(100vh - 240px);
+  align-items: start;
 }
 
 .lane {
   display: flex;
   flex-direction: column;
-  flex: 0 0 300px;
-  width: 300px;
-  min-width: 300px;
-  height: calc(100vh - 250px);
-  max-height: calc(100vh - 250px);
+  min-width: 250px;
+  height: calc(100vh - 240px);
+  max-height: calc(100vh - 240px);
   background: #eef1f6;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -247,7 +256,7 @@ button:hover {
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   padding: 12px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -256,6 +265,7 @@ button:hover {
 }
 
 .card {
+  flex-shrink: 0;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -263,7 +273,7 @@ button:hover {
   overflow: hidden;
   word-break: break-word;
   overflow-wrap: anywhere;
-  padding: 12px;
+  padding: 14px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);

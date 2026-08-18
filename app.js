@@ -3,8 +3,7 @@ const LANES = [
   ["reply_needed", "Reply Needed", "lane-reply"],
   ["interviewed", "Interviewed", "lane-interviewed"],
   ["offered", "Offered", "lane-offered"],
-  ["rejected", "Rejected", "lane-rejected"],
-  ["not_related", "Other / Review", "lane-not-related"]
+  ["rejected", "Rejected", "lane-rejected"]
 ];
 
 const state = {
@@ -41,6 +40,7 @@ function render() {
   renderBoard(applications);
   renderCompanies(applications);
   renderApplications(applications);
+  renderOtherEmails(applications);
 }
 
 function renderStatus() {
@@ -52,14 +52,29 @@ function renderStatus() {
 
 function renderStats(applications) {
   const counts = Object.fromEntries(LANES.map(([key]) => [key, 0]));
+  let otherCount = 0;
+
   for (const app of applications) {
     const status = normalizeStatus(app.status);
-    counts[status] = (counts[status] ?? 0) + 1;
+    if (status === "not_related") {
+      otherCount += 1;
+    } else {
+      counts[status] = (counts[status] ?? 0) + 1;
+    }
   }
 
-  byId("stats").innerHTML = LANES.map(([key, label, className]) => {
+  const laneStatsHtml = LANES.map(([key, label, className]) => {
     return `<article class="stat ${className}"><strong>${counts[key] ?? 0}</strong><span>${label}</span></article>`;
   }).join("");
+
+  const otherStatHtml = `<article class="stat lane-not-related stat-clickable" title="Click to view Other Emails tab"><strong>${otherCount}</strong><span>Other Emails</span></article>`;
+
+  byId("stats").innerHTML = laneStatsHtml + otherStatHtml;
+
+  const otherStatEl = document.querySelector(".stat-clickable");
+  if (otherStatEl) {
+    otherStatEl.addEventListener("click", () => switchTab("otherEmails"));
+  }
 }
 
 function renderBoard(applications) {
@@ -176,6 +191,31 @@ function renderApplications(applications) {
   ` : `<div class="empty">No applications found</div>`;
 }
 
+function renderOtherEmails(applications) {
+  const otherApps = applications.filter((app) => normalizeStatus(app.status) === "not_related");
+  const rows = [...otherApps].sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
+
+  byId("otherEmails").innerHTML = rows.length ? `
+    <div style="padding: 14px 18px; border-bottom: 1px solid var(--border); background: #f8fafc; font-size: 13px; color: var(--muted);">
+      <strong>Catch-All Inbox:</strong> Showing ${rows.length} miscellaneous communications, portal account verifications, non-standard notifications, and recruiter digests.
+    </div>
+    <table>
+      <thead><tr><th>Sender / Organization</th><th>Subject</th><th>Classification</th><th>Date</th><th>Action</th></tr></thead>
+      <tbody>
+        ${rows.map((app) => `
+          <tr>
+            <td><strong>${escapeHtml(app.company || "Other")}</strong></td>
+            <td>${escapeHtml(app.latestSubject || "No subject")}</td>
+            <td><span class="pill status-pill status-not-related">Other / Review</span></td>
+            <td>${formatDate(app.lastActivityAt)}</td>
+            <td><a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open in Gmail ↗</a></td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  ` : `<div class="empty">No other emails found</div>`;
+}
+
 function normalizeCompany(company) {
   return String(company || "unknown").trim().toLowerCase();
 }
@@ -203,6 +243,14 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function switchTab(viewName) {
+  state.view = viewName;
+  document.querySelectorAll(".tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.view === viewName));
+  document.querySelectorAll(".view").forEach((view) => view.classList.remove("active"));
+  const viewEl = byId(`${viewName}View`);
+  if (viewEl) viewEl.classList.add("active");
 }
 
 byId("searchInput").addEventListener("input", (event) => {
@@ -233,10 +281,7 @@ byId("refreshButton").addEventListener("click", async () => {
 
 for (const button of document.querySelectorAll(".tab")) {
   button.addEventListener("click", () => {
-    state.view = button.dataset.view;
-    document.querySelectorAll(".tab").forEach((tab) => tab.classList.toggle("active", tab === button));
-    document.querySelectorAll(".view").forEach((view) => view.classList.remove("active"));
-    byId(`${state.view}View`).classList.add("active");
+    switchTab(button.dataset.view);
   });
 }
 
