@@ -84,20 +84,54 @@ function renderStats(applications) {
 }
 
 function renderBoard(applications) {
+  state.lanePages ??= {};
+  const LANE_PAGE_SIZE = 25;
+
   byId("board").innerHTML = LANES.map(([key, label, className]) => {
     const laneApps = applications.filter((app) => normalizeStatus(app.status) === key);
+    const totalLaneCards = laneApps.length;
+    const totalPages = Math.ceil(totalLaneCards / LANE_PAGE_SIZE) || 1;
+    const currentLanePage = Math.min(Math.max(1, state.lanePages[key] || 1), totalPages);
+    const startIdx = (currentLanePage - 1) * LANE_PAGE_SIZE;
+    const pagedCards = laneApps.slice(startIdx, startIdx + LANE_PAGE_SIZE);
+
+    const paginationHtml = totalLaneCards > LANE_PAGE_SIZE ? `
+      <div class="lane-pagination">
+        <button class="btn-lane-page btn-lane-prev" data-lane="${key}" ${currentLanePage <= 1 ? "disabled" : ""}>◀</button>
+        <span>${startIdx + 1}–${Math.min(startIdx + LANE_PAGE_SIZE, totalLaneCards)} of ${totalLaneCards}</span>
+        <button class="btn-lane-page btn-lane-next" data-lane="${key}" ${currentLanePage >= totalPages ? "disabled" : ""}>▶</button>
+      </div>
+    ` : "";
+
     return `
       <section class="lane ${className}">
         <div class="lane-header">
           <span>${label}</span>
-          <span class="lane-count">${laneApps.length}</span>
+          <span class="lane-count">${totalLaneCards}</span>
         </div>
+        ${paginationHtml}
         <div class="cards">
-          ${laneApps.map(renderCard).join("") || `<div class="empty">No applications</div>`}
+          ${pagedCards.map(renderCard).join("") || `<div class="empty">No applications</div>`}
         </div>
       </section>
     `;
   }).join("");
+
+  document.querySelectorAll(".btn-lane-prev").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lane = btn.dataset.lane;
+      state.lanePages[lane] = Math.max(1, (state.lanePages[lane] || 1) - 1);
+      renderBoard(applications);
+    });
+  });
+
+  document.querySelectorAll(".btn-lane-next").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lane = btn.dataset.lane;
+      state.lanePages[lane] = (state.lanePages[lane] || 1) + 1;
+      renderBoard(applications);
+    });
+  });
 }
 
 function getGmailUrl(app) {
@@ -139,7 +173,7 @@ function renderCard(app) {
   `;
 }
 
-function renderPaginationBar(totalItems, currentPage, pageSize, prefix) {
+function renderPaginationBar(totalItems, currentPage, pageSize, prefix, pos = "bottom") {
   if (totalItems === 0) return "";
   const isAll = pageSize === "all";
   const numPageSize = isAll ? totalItems : Number(pageSize);
@@ -149,23 +183,23 @@ function renderPaginationBar(totalItems, currentPage, pageSize, prefix) {
   const end = isAll ? totalItems : Math.min(safePage * numPageSize, totalItems);
 
   return `
-    <div class="pagination-bar">
+    <div class="pagination-bar pagination-${pos}">
       <div class="pagination-info">
         Showing <strong>${start}–${end}</strong> of <strong>${totalItems}</strong> entries
       </div>
       <div class="pagination-controls">
         <label class="page-size-selector">
           Rows:
-          <select id="${prefix}PageSizeSelect">
+          <select class="${prefix}PageSizeSelect">
             <option value="25" ${pageSize == 25 ? "selected" : ""}>25</option>
             <option value="50" ${pageSize == 50 ? "selected" : ""}>50</option>
             <option value="100" ${pageSize == 100 ? "selected" : ""}>100</option>
             <option value="all" ${pageSize === "all" ? "selected" : ""}>All (${totalItems})</option>
           </select>
         </label>
-        <button id="${prefix}PrevBtn" class="btn-page" ${safePage <= 1 ? "disabled" : ""}>◀ Prev</button>
+        <button class="${prefix}PrevBtn btn-page" ${safePage <= 1 ? "disabled" : ""}>◀ Prev</button>
         <span class="page-current">Page ${safePage} of ${totalPages}</span>
-        <button id="${prefix}NextBtn" class="btn-page" ${safePage >= totalPages ? "disabled" : ""}>Next ▶</button>
+        <button class="${prefix}NextBtn btn-page" ${safePage >= totalPages ? "disabled" : ""}>Next ▶</button>
       </div>
     </div>
   `;
@@ -203,6 +237,7 @@ function renderCompanies(applications) {
   const pagedRows = paginateArray(allRows, state.pageCompanies, state.pageSizeCompanies);
 
   byId("companies").innerHTML = allRows.length ? `
+    ${renderPaginationBar(allRows.length, state.pageCompanies, state.pageSizeCompanies, "comp", "top")}
     <table>
       <thead><tr><th>Company</th><th>Applications</th><th>Status</th><th>Last Activity</th><th>Action</th></tr></thead>
       <tbody>
@@ -217,7 +252,7 @@ function renderCompanies(applications) {
         `).join("")}
       </tbody>
     </table>
-    ${renderPaginationBar(allRows.length, state.pageCompanies, state.pageSizeCompanies, "comp")}
+    ${renderPaginationBar(allRows.length, state.pageCompanies, state.pageSizeCompanies, "comp", "bottom")}
   ` : `<div class="empty">No companies found</div>`;
 
   attachPaginationListeners("comp", allRows.length, "pageCompanies", "pageSizeCompanies", () => renderCompanies(applications));
@@ -229,6 +264,7 @@ function renderApplications(applications) {
   const pagedRows = paginateArray(allRows, state.pageApps, state.pageSizeApps);
 
   byId("applications").innerHTML = allRows.length ? `
+    ${renderPaginationBar(allRows.length, state.pageApps, state.pageSizeApps, "apps", "top")}
     <table>
       <thead><tr><th>Company</th><th>Role</th><th>Status</th><th>Latest Email</th><th>Last Activity</th><th>Action</th></tr></thead>
       <tbody>
@@ -244,7 +280,7 @@ function renderApplications(applications) {
         `).join("")}
       </tbody>
     </table>
-    ${renderPaginationBar(allRows.length, state.pageApps, state.pageSizeApps, "apps")}
+    ${renderPaginationBar(allRows.length, state.pageApps, state.pageSizeApps, "apps", "bottom")}
   ` : `<div class="empty">No applications found</div>`;
 
   attachPaginationListeners("apps", allRows.length, "pageApps", "pageSizeApps", () => renderApplications(applications));
@@ -259,6 +295,7 @@ function renderOtherEmails(applications) {
     <div style="padding: 14px 18px; border-bottom: 1px solid var(--border); background: #f8fafc; font-size: 13px; color: var(--muted);">
       <strong>Catch-All Inbox:</strong> Showing ${allRows.length} miscellaneous communications, portal account verifications, non-standard notifications, and recruiter digests.
     </div>
+    ${renderPaginationBar(allRows.length, state.pageOther, state.pageSizeOther, "other", "top")}
     <table>
       <thead><tr><th>Sender / Organization</th><th>Subject</th><th>Classification</th><th>Date</th><th>Action</th></tr></thead>
       <tbody>
@@ -273,28 +310,24 @@ function renderOtherEmails(applications) {
         `).join("")}
       </tbody>
     </table>
-    ${renderPaginationBar(allRows.length, state.pageOther, state.pageSizeOther, "other")}
+    ${renderPaginationBar(allRows.length, state.pageOther, state.pageSizeOther, "other", "bottom")}
   ` : `<div class="empty">No other emails found</div>`;
 
   attachPaginationListeners("other", allRows.length, "pageOther", "pageSizeOther", () => renderOtherEmails(applications));
 }
 
 function attachPaginationListeners(prefix, totalItems, pageKey, pageSizeKey, rerenderFn) {
-  const prevBtn = byId(`${prefix}PrevBtn`);
-  const nextBtn = byId(`${prefix}NextBtn`);
-  const sizeSelect = byId(`${prefix}PageSizeSelect`);
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
+  document.querySelectorAll(`.${prefix}PrevBtn`).forEach((btn) => {
+    btn.addEventListener("click", () => {
       if (state[pageKey] > 1) {
         state[pageKey] -= 1;
         rerenderFn();
       }
     });
-  }
+  });
 
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
+  document.querySelectorAll(`.${prefix}NextBtn`).forEach((btn) => {
+    btn.addEventListener("click", () => {
       const numPageSize = state[pageSizeKey] === "all" ? totalItems : Number(state[pageSizeKey]);
       const totalPages = Math.ceil(totalItems / numPageSize) || 1;
       if (state[pageKey] < totalPages) {
@@ -302,15 +335,13 @@ function attachPaginationListeners(prefix, totalItems, pageKey, pageSizeKey, rer
         rerenderFn();
       }
     });
-  }
+  });
 
-  if (sizeSelect) {
-    sizeSelect.addEventListener("change", (e) => {
+  document.querySelectorAll(`.${prefix}PageSizeSelect`).forEach((select) => {
+    select.addEventListener("change", (e) => {
       state[pageSizeKey] = e.target.value === "all" ? "all" : Number(e.target.value);
       state[pageKey] = 1;
       rerenderFn();
-    });
-  }
 }
 
 function normalizeCompany(company) {
