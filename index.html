@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Tracker</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Job Tracker</h1>
+        <p id="syncStatus">Loading applications...</p>
+      </div>
+      <div class="toolbar">
+        <input id="searchInput" type="search" placeholder="Search company, role, subject" />
+        <button id="refreshButton" type="button">Refresh</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="stats" id="stats"></section>
+
+      <nav class="tabs" aria-label="Views">
+        <button class="tab active" type="button" data-view="board">Board</button>
+        <button class="tab" type="button" data-view="companies">Companies</button>
+        <button class="tab" type="button" data-view="applications">Applications</button>
+      </nav>
+
+      <section id="boardView" class="view active">
+        <div id="board" class="board"></div>
+      </section>
+
+      <section id="companiesView" class="view">
+        <div id="companies" class="table-shell"></div>
+      </section>
+
+      <section id="applicationsView" class="view">
+        <div id="applications" class="table-shell"></div>
+      </section>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
