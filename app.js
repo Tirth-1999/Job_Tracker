@@ -27,8 +27,37 @@ async function loadData() {
   render();
 }
 
+function getDoneApps() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem("job_tracker_done_apps") || "[]"));
+  } catch {
+    return new Set();
+  }
+}
+
+function setAppDone(appId, isDone) {
+  const doneSet = getDoneApps();
+  if (isDone) {
+    doneSet.add(appId);
+  } else {
+    doneSet.delete(appId);
+  }
+  localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
+  render();
+}
+
 function filteredApplications() {
-  const applications = state.data?.applications ?? [];
+  const rawApps = state.data?.applications ?? [];
+  const doneSet = getDoneApps();
+
+  const applications = rawApps.map((app) => {
+    const isDone = doneSet.has(app.id);
+    if (isDone && app.status === "reply_needed") {
+      return { ...app, effectiveStatus: "applied", isDone: true };
+    }
+    return { ...app, effectiveStatus: app.status, isDone };
+  });
+
   const query = state.query.trim();
   if (!query) return applications;
 
@@ -70,6 +99,7 @@ function render() {
   renderCompanies(applications);
   renderApplications(applications);
   renderOtherEmails(applications);
+  attachCardActionListeners();
 }
 
 function renderStatus() {
@@ -84,7 +114,7 @@ function renderStats(applications) {
   let otherCount = 0;
 
   for (const app of applications) {
-    const status = normalizeStatus(app.status);
+    const status = normalizeStatus(app.effectiveStatus || app.status);
     if (status === "not_related") {
       otherCount += 1;
     } else {
@@ -108,7 +138,7 @@ function renderStats(applications) {
 
 function renderBoard(applications) {
   byId("board").innerHTML = LANES.map(([key, label, className]) => {
-    const laneApps = applications.filter((app) => normalizeStatus(app.status) === key);
+    const laneApps = applications.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === key);
     return `
       <section class="lane ${className}">
         <div class="lane-header">
@@ -138,8 +168,27 @@ function getGmailUrl(app) {
 
 function renderCard(app) {
   const confidence = app.confidence ? `${app.confidence} confidence` : "unscored";
-  const status = normalizeStatus(app.status);
+  const status = normalizeStatus(app.effectiveStatus || app.status);
   const gmailUrl = getGmailUrl(app);
+
+  const doneBadge = app.isDone ? `<span class="pill pill-done">✅ Action Completed</span>` : "";
+
+  let actionButton = "";
+  if (app.status === "reply_needed" && !app.isDone) {
+    actionButton = `
+      <div class="card-actions">
+        <button class="btn-action btn-mark-done" data-id="${app.id}">✅ Mark Done</button>
+      </div>
+    `;
+  } else if (app.isDone) {
+    actionButton = `
+      <div class="card-actions">
+        <button class="btn-action btn-reopen" data-id="${app.id}">↩ Reopen to Reply Needed</button>
+      </div>
+    `;
+  }
+
+  const msgCountBadge = app.gmailMessageIds?.length > 1 ? `<span class="pill" title="${app.gmailMessageIds.length} emails in this thread">📬 ${app.gmailMessageIds.length} emails</span>` : "";
 
   return `
     <article class="card ${statusClass(status)}">
@@ -154,12 +203,31 @@ function renderCard(app) {
       <div class="subject">${escapeHtml(app.latestSubject || "No subject")}</div>
       <div class="meta">
         <span class="pill status-pill ${statusClass(status)}">${escapeHtml(labelForStatus(status))}</span>
+        ${doneBadge}
+        ${msgCountBadge}
         <span class="pill">${formatDate(app.lastActivityAt)}</span>
         <span class="pill">${escapeHtml(confidence)}</span>
         <a class="pill pill-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer">📧 Gmail ↗</a>
       </div>
+      ${actionButton}
     </article>
   `;
+}
+
+function attachCardActionListeners() {
+  document.querySelectorAll(".btn-mark-done").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setAppDone(btn.dataset.id, true);
+    });
+  });
+
+  document.querySelectorAll(".btn-reopen").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setAppDone(btn.dataset.id, false);
+    });
+  });
 }
 
 function renderPaginationBar(totalItems, currentPage, pageSize, prefix, pos = "bottom") {

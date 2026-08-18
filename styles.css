@@ -480,6 +480,56 @@ tr:last-child td {
   padding: 0 4px;
 }
 
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-mark-done {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.btn-mark-done:hover {
+  background: #059669;
+  color: #fff;
+  border-color: #059669;
+}
+
+.btn-reopen {
+  background: #f1f5f9;
+  color: #475569;
+  border-color: #cbd5e1;
+}
+
+.btn-reopen:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.pill-done {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+  font-weight: 600;
+}
+
 .btn-gmail-icon {
   display: inline-flex;
   align-items: center;
