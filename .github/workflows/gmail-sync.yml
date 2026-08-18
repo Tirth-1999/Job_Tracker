@@ -4,6 +4,31 @@ on:
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
+    inputs:
+      backfill:
+        description: "Backfill older Gmail messages"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      reset_data:
+        description: "Replace data/applications.json from scratch"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      max_pages:
+        description: "Number of Gmail result pages to scan"
+        required: false
+        default: "20"
+      query:
+        description: "Optional Gmail search query override"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -24,7 +49,10 @@ jobs:
           GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
           GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
           GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
-          GMAIL_QUERY: ${{ vars.GMAIL_QUERY }}
+          GMAIL_BACKFILL: ${{ github.event.inputs.backfill || 'false' }}
+          GMAIL_RESET_DATA: ${{ github.event.inputs.reset_data || 'false' }}
+          GMAIL_MAX_PAGES: ${{ github.event.inputs.max_pages || '' }}
+          GMAIL_QUERY: ${{ github.event.inputs.query || vars.GMAIL_QUERY }}
         run: node scripts/sync-gmail.mjs
 
       - name: Commit updated data

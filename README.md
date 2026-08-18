@@ -64,6 +64,16 @@ Store these repository secrets in GitHub:
 
 The workflow runs every 30 minutes and can also be started manually from the GitHub Actions tab.
 
+For a full Gmail backfill:
+
+1. Go to **Actions > Gmail Sync > Run workflow**.
+2. Set `backfill` to `true`.
+3. Set `reset_data` to `true` when you want to rebuild the board from scratch.
+4. Keep `max_pages` at `20` for about 2,000 Gmail search results.
+5. Run the workflow.
+
+Scheduled runs stay small and only scan recent Gmail results.
+
 Optional repository variable:
 
 - `GMAIL_QUERY`: defaults to `newer_than:14d (application OR interview OR recruiter OR hiring OR offer)`

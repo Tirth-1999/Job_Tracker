@@ -7,6 +7,12 @@
   --border: #d9dee8;
   --accent: #2f6fed;
   --danger: #c44141;
+  --applied: #2f6fed;
+  --initial: #7b61ff;
+  --reply: #d87917;
+  --interviewed: #008f7a;
+  --offered: #247a3d;
+  --rejected: #c44141;
   --shadow: 0 8px 24px rgba(32, 36, 44, 0.08);
 }
 
@@ -94,6 +100,30 @@ button:hover {
   box-shadow: var(--shadow);
 }
 
+.stat.lane-applied {
+  border-top: 4px solid var(--applied);
+}
+
+.stat.lane-initial {
+  border-top: 4px solid var(--initial);
+}
+
+.stat.lane-reply {
+  border-top: 4px solid var(--reply);
+}
+
+.stat.lane-interviewed {
+  border-top: 4px solid var(--interviewed);
+}
+
+.stat.lane-offered {
+  border-top: 4px solid var(--offered);
+}
+
+.stat.lane-rejected {
+  border-top: 4px solid var(--rejected);
+}
+
 .stat strong {
   display: block;
   font-size: 28px;
@@ -141,6 +171,30 @@ button:hover {
   border-radius: 8px;
 }
 
+.lane.lane-applied {
+  --lane-color: var(--applied);
+}
+
+.lane.lane-initial {
+  --lane-color: var(--initial);
+}
+
+.lane.lane-reply {
+  --lane-color: var(--reply);
+}
+
+.lane.lane-interviewed {
+  --lane-color: var(--interviewed);
+}
+
+.lane.lane-offered {
+  --lane-color: var(--offered);
+}
+
+.lane.lane-rejected {
+  --lane-color: var(--rejected);
+}
+
 .lane-header {
   position: sticky;
   top: 0;
@@ -152,6 +206,7 @@ button:hover {
   border-bottom: 1px solid var(--border);
   border-radius: 8px 8px 0 0;
   font-weight: 700;
+  box-shadow: inset 0 3px 0 var(--lane-color);
 }
 
 .lane-count {
@@ -173,6 +228,36 @@ button:hover {
   border-left: 4px solid var(--accent);
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(32, 36, 44, 0.06);
+}
+
+.card.status-applied,
+.status-pill.status-applied {
+  border-left-color: var(--applied);
+}
+
+.card.status-initial-revert-needed,
+.status-pill.status-initial-revert-needed {
+  border-left-color: var(--initial);
+}
+
+.card.status-reply-needed,
+.status-pill.status-reply-needed {
+  border-left-color: var(--reply);
+}
+
+.card.status-interviewed,
+.status-pill.status-interviewed {
+  border-left-color: var(--interviewed);
+}
+
+.card.status-offered,
+.status-pill.status-offered {
+  border-left-color: var(--offered);
+}
+
+.card.status-rejected,
+.status-pill.status-rejected {
+  border-left-color: var(--rejected);
 }
 
 .card h3 {
@@ -206,6 +291,11 @@ button:hover {
   background: #f2f4f8;
   border: 1px solid var(--border);
   border-radius: 999px;
+}
+
+.status-pill {
+  border-left: 4px solid var(--accent);
+  background: #fff;
 }
 
 .table-shell {

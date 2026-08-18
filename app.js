@@ -1,10 +1,10 @@
 const LANES = [
-  ["applied", "Applied"],
-  ["initial_revert_needed", "Initial Revert Needed"],
-  ["reply_needed", "Reply Needed"],
-  ["interviewed", "Interviewed"],
-  ["offered", "Offered"],
-  ["rejected", "Rejected"]
+  ["applied", "Applied", "lane-applied"],
+  ["initial_revert_needed", "Initial Revert Needed", "lane-initial"],
+  ["reply_needed", "Reply Needed", "lane-reply"],
+  ["interviewed", "Interviewed", "lane-interviewed"],
+  ["offered", "Offered", "lane-offered"],
+  ["rejected", "Rejected", "lane-rejected"]
 ];
 
 const state = {
@@ -54,16 +54,16 @@ function renderStats(applications) {
   const counts = Object.fromEntries(LANES.map(([key]) => [key, 0]));
   for (const app of applications) counts[app.status] = (counts[app.status] ?? 0) + 1;
 
-  byId("stats").innerHTML = LANES.map(([key, label]) => {
-    return `<article class="stat"><strong>${counts[key] ?? 0}</strong><span>${label}</span></article>`;
+  byId("stats").innerHTML = LANES.map(([key, label, className]) => {
+    return `<article class="stat ${className}"><strong>${counts[key] ?? 0}</strong><span>${label}</span></article>`;
   }).join("");
 }
 
 function renderBoard(applications) {
-  byId("board").innerHTML = LANES.map(([key, label]) => {
+  byId("board").innerHTML = LANES.map(([key, label, className]) => {
     const laneApps = applications.filter((app) => app.status === key);
     return `
-      <section class="lane">
+      <section class="lane ${className}">
         <div class="lane-header">
           <span>${label}</span>
           <span class="lane-count">${laneApps.length}</span>
@@ -77,13 +77,16 @@ function renderBoard(applications) {
 }
 
 function renderCard(app) {
+  const confidence = app.confidence ? `${app.confidence} confidence` : "unscored";
   return `
-    <article class="card">
+    <article class="card ${statusClass(app.status)}">
       <h3>${escapeHtml(app.company || "Unknown company")}</h3>
       <div class="role">${escapeHtml(app.role || "Unknown role")}</div>
       <div class="subject">${escapeHtml(app.latestSubject || "No subject")}</div>
       <div class="meta">
+        <span class="pill status-pill">${escapeHtml(labelForStatus(app.status))}</span>
         <span class="pill">${formatDate(app.lastActivityAt)}</span>
+        <span class="pill">${escapeHtml(confidence)}</span>
         ${app.source === "gmail" ? `<span class="pill">Gmail</span>` : ""}
       </div>
     </article>
@@ -117,7 +120,7 @@ function renderCompanies(applications) {
           <tr>
             <td>${escapeHtml(row.company)}</td>
             <td>${row.count}</td>
-            <td>${escapeHtml([...row.statuses].join(", "))}</td>
+            <td>${[...row.statuses].map((status) => `<span class="pill">${escapeHtml(status)}</span>`).join(" ")}</td>
             <td>${formatDate(row.lastActivityAt)}</td>
           </tr>
         `).join("")}
@@ -136,7 +139,7 @@ function renderApplications(applications) {
           <tr>
             <td>${escapeHtml(app.company || "Unknown company")}</td>
             <td>${escapeHtml(app.role || "Unknown role")}</td>
-            <td>${escapeHtml(labelForStatus(app.status))}</td>
+            <td><span class="pill status-pill ${statusClass(app.status)}">${escapeHtml(labelForStatus(app.status))}</span></td>
             <td>${escapeHtml(app.latestSubject || "No subject")}</td>
             <td>${formatDate(app.lastActivityAt)}</td>
           </tr>
@@ -152,6 +155,10 @@ function normalizeCompany(company) {
 
 function labelForStatus(status) {
   return LANES.find(([key]) => key === status)?.[1] ?? "Applied";
+}
+
+function statusClass(status) {
+  return `status-${String(status || "applied").replaceAll("_", "-")}`;
 }
 
 function formatDate(value) {
