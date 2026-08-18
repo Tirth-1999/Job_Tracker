@@ -1,11 +1,27 @@
 import fs from "node:fs/promises";
+import fsSync from "node:fs";
 import path from "node:path";
+
+// Auto-load local .env file if present
+if (fsSync.existsSync(".env")) {
+  const envContent = fsSync.readFileSync(".env", "utf8");
+  for (const line of envContent.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const idx = trimmed.indexOf("=");
+    if (idx > 0) {
+      const key = trimmed.slice(0, idx).trim();
+      const val = trimmed.slice(idx + 1).trim().replace(/^["']|["']$/g, "");
+      if (!process.env[key]) process.env[key] = val;
+    }
+  }
+}
 
 const DATA_PATH = path.resolve("data/applications.json");
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 const GMAIL_API = "https://gmail.googleapis.com/gmail/v1/users/me";
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
-const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || "openrouter/free";
+const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || "google/gemini-2.5-flash-lite";
 const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.0-flash";
 const AI_BATCH_SIZE = Number(process.env.AI_BATCH_SIZE || process.env.GEMINI_BATCH_SIZE || "20");
 const ALLOWED_STATUSES = new Set(["applied", "reply_needed", "interviewed", "offered", "rejected"]);
@@ -52,9 +68,9 @@ async function main() {
     return;
   }
 
-  // 1. Download all email bodies in fast parallel chunks (50 concurrent)
+  // 1. Download email bodies in safe parallel chunks (8 concurrent)
   console.log(`Fetching ${unhandledMessages.length} emails in parallel...`);
-  const CHUNK_SIZE = 50;
+  const CHUNK_SIZE = 8;
   const allFetched = [];
   for (let i = 0; i < unhandledMessages.length; i += CHUNK_SIZE) {
     const chunk = unhandledMessages.slice(i, i + CHUNK_SIZE);
@@ -71,6 +87,9 @@ async function main() {
       })
     );
     allFetched.push(...chunkResults.filter(Boolean));
+    if (i + CHUNK_SIZE < unhandledMessages.length) {
+      await new Promise((r) => setTimeout(r, 60));
+    }
   }
 
   // 2. Filter obvious noise
@@ -129,9 +148,9 @@ async function main() {
     data.applications = cleanupApplications(data.applications);
     data.updatedAt = new Date().toISOString();
     await fs.writeFile(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`);
-    console.log(`\nSuccessfully updated applications dataset! Processed ${totalProcessed} emails, saved/updated ${totalSaved} active applications.`);
+    console.log(`\nSuccessfully updated applications dataset! Processed ${unhandledMessages.length} emails, saved/updated ${totalSaved} active applications.`);
   } else {
-    console.log(`No new matching applications found among ${totalProcessed} emails.`);
+    console.log(`No new matching applications found among ${unhandledMessages.length} emails.`);
   }
 }
 
@@ -195,12 +214,18 @@ async function getMessage(token, id) {
   return response.json();
 }
 
-async function gmailFetch(token, url) {
-  const response = await fetch(url, {
-    headers: { Authorization: `Bearer ${token}` }
-  });
-  if (!response.ok) throw new Error(`Gmail API failed: ${response.status} ${await response.text()}`);
-  return response;
+async function gmailFetch(token, url, retries = 3) {
+  for (let attempt = 0; attempt < retries; attempt++) {
+    const response = await fetch(url, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    if (response.status === 429 && attempt < retries - 1) {
+      await new Promise((r) => setTimeout(r, 800 * (attempt + 1)));
+      continue;
+    }
+    if (!response.ok) throw new Error(`Gmail API failed: ${response.status} ${await response.text()}`);
+    return response;
+  }
 }
 
 function parseMessage(message) {
