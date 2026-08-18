@@ -371,8 +371,8 @@ async function extractAndClassifyWithAI(items, rotator) {
 
     const systemPrompt = [
       "You are a specialized job application email extraction engine.",
-      "Extract: 1) True hiring company name (strip ATS like Workday/Greenhouse/Lever/Ashby), 2) Job role title (standard title, never phrases like 'your application to...'), 3) Status (applied, reply_needed, interviewed, offered, rejected, ignore).",
-      "Set is_job=false and status='ignore' for noise, OTPs, receipts, or non-job emails."
+      "Extract: 1) True hiring company name (strip ATS like Workday/Greenhouse/Lever/Ashby/BambooHR/SmartRecruiters), 2) Specific job role title (standard title, never phrases like 'your application to...'), 3) Status: 'applied' (Thank you for applying/Application received confirmation), 'reply_needed' (ONLY when recruiter asks candidate to take action, complete assessment/test, or provide availability), 'interviewed' (Interview/video screen confirmed or scheduled), 'offered' (Formal job offer letter), 'rejected' (Decision updates, unfortunately, not moving forward, role closed), 'ignore' (Marketing spam, job board alerts, OTPs, receipts).",
+      "CRITICAL: Any 'Thank you for applying' or 'We received your application' MUST be status='applied', NEVER 'reply_needed'."
     ].join(" ");
 
     const parsedBatch = await rotator.callWithFailover(async (apiKey, keyIndex) => {

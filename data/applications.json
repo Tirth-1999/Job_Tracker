@@ -1,20 +1,15 @@
 {
   "version": 1,
-<<<<<<< HEAD
-  "updatedAt": "2026-08-18T17:28:39.991Z",
-=======
-  "updatedAt": "2026-08-18T17:29:22.672Z",
->>>>>>> 060e6c1 (Accurately classify all lanes (applied, reply_needed, interviewed, rejected) and fix 5-lane CSS grid)
+  "updatedAt": "2026-08-18T17:30:35.440Z",
   "lastHistoryId": null,
   "applications": [
     {
-      "id": "infoway-group-euc-vdi-solutions-architect",
-      "company": "Infoway Group",
+      "id": "gohil-anos-euc-vdi-solutions-architect",
+      "company": "Gohil Anos",
       "role": "EUC / VDI Solutions Architect",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "EUC / VDI Solutions Architect",
       "latestFrom": "Gohil Anos <Gohil@infowaygroup.com>",
       "lastActivityAt": "2026-08-18T17:18:54.000Z",
@@ -26,13 +21,12 @@
       "notes": ""
     },
     {
-      "id": "clifyx-sql-python-data-engineer",
-      "company": "Clifyx",
-      "role": "SQL / Python Data Engineer",
+      "id": "harshit-singh-jan2021-data-engineer-richardson-tx-75082-12-month-contract",
+      "company": "Harshit Singh_JAN2021",
+      "role": "Data Engineer- Richardson, TX 75082- 12+ Month Contract",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "SQL / Python Data Engineer- Richardson, TX 75082- 12+ month Contract",
       "latestFrom": "Harshit Singh_JAN2021 <harshit@clifyx.com>",
       "lastActivityAt": "2026-08-18T17:13:44.000Z",
@@ -44,13 +38,12 @@
       "notes": ""
     },
     {
-      "id": "cm-placement-job-opportunities",
-      "company": "CM Placement",
+      "id": "rubi-sharma-job-opportunities",
+      "company": "Rubi Sharma",
       "role": "Job Opportunities",
-      "status": "reply_needed",
+      "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Job Opportunities – CM Placement Process",
       "latestFrom": "Rubi Sharma <rubi.sharma@cmplacement.com>",
       "lastActivityAt": "2026-08-18T17:12:53.000Z",
@@ -79,38 +72,23 @@
       "notes": ""
     },
     {
-      "id": "family-dollar-data-engineer",
-      "company": "Family Dollar",
+      "id": "linkedin-data-engineer",
+      "company": "LinkedIn",
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Tirth Chirayu, your application was sent to Family Dollar",
       "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
       "lastActivityAt": "2026-08-18T13:04:22.000Z",
       "source": "gmail",
       "gmailThreadId": "1a014f9110ccd570",
       "gmailMessageIds": [
-        "1a014f9110ccd570"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "code17tek-data-engineer",
-      "company": "Code17tek",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Tirth Chirayu, your application was sent to Code17Tek",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-08-18T13:03:26.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a014f839ca18c36",
-      "gmailMessageIds": [
-        "1a014f839ca18c36"
+        "1a014f9110ccd570",
+        "1a014f839ca18c36",
+        "1a014f3813a17834",
+        "1a014b28d63eeb4f",
+        "1a014af94a9288f2"
       ],
       "notes": ""
     },
@@ -133,12 +111,11 @@
     },
     {
       "id": "bioagilytix-data-engineer",
-      "company": "Bioagilytix",
+      "company": "BioAgilytix",
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Tirth Chirayu, your application was sent to BioAgilytix",
       "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
       "lastActivityAt": "2026-08-18T13:02:54.000Z",
@@ -167,13 +144,12 @@
       "notes": ""
     },
     {
-      "id": "latentview-analytics-data-engineer-data-modeling-ai-infrastructure",
-      "company": "Latentview Analytics",
+      "id": "linkedin-data-engineer-data-modeling-ai-infrastructure",
+      "company": "LinkedIn",
       "role": "Data Engineer – Data Modeling & AI Infrastructure",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Tirth Chirayu, your application was sent to LatentView Analytics",
       "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
       "lastActivityAt": "2026-08-18T13:01:09.000Z",
@@ -202,13 +178,12 @@
       "notes": ""
     },
     {
-      "id": "cresset-associate-data-engineer",
-      "company": "Cresset",
+      "id": "linkedin-associate-data-engineer",
+      "company": "LinkedIn",
       "role": "Associate, Data Engineer",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Tirth Chirayu, your application was sent to Cresset",
       "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
       "lastActivityAt": "2026-08-18T12:59:46.000Z",
@@ -225,8 +200,7 @@
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Tirth Chirayu, your application was sent to Headwater Science",
       "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
       "lastActivityAt": "2026-08-18T12:59:07.000Z",
@@ -238,31 +212,12 @@
       "notes": ""
     },
     {
-      "id": "idr-inc-data-engineer",
-      "company": "Idr, Inc",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Tirth Chirayu, your application was sent to IDR, Inc.",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-08-18T12:58:17.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a014f3813a17834",
-      "gmailMessageIds": [
-        "1a014f3813a17834"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "smith-system-driver-risk-management-data-engineer-ii",
-      "company": "Smith System Driver Risk Management",
+      "id": "linkedin-data-engineer-ii",
+      "company": "LinkedIn",
       "role": "Data Engineer II",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Tirth Chirayu, your application was sent to Smith System Driver Risk Management",
       "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
       "lastActivityAt": "2026-08-18T12:57:17.000Z",
@@ -308,13 +263,12 @@
       "notes": ""
     },
     {
-      "id": "generac-analytics-engineer-ii-marketing",
+      "id": "generac-analytics-engineer-ii-marketing-is-on-its-way",
       "company": "Generac",
-      "role": "Analytics Engineer Ii, Marketing",
+      "role": "Analytics Engineer Ii, Marketing Is On Its Way",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Your application for Analytics Engineer II, Marketing is on its way",
       "latestFrom": "generac@myworkday.com",
       "lastActivityAt": "2026-08-18T12:26:34.000Z",
@@ -399,8 +353,7 @@
       "role": "Job Application",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Your Greystar Application Was Received",
       "latestFrom": "greystar@myworkday.com",
       "lastActivityAt": "2026-08-18T12:12:25.000Z",
@@ -429,25 +382,6 @@
       "notes": ""
     },
     {
-      "id": "inceed-data-engineer",
-      "company": "Inceed",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Tirth Chirayu, your application was sent to Inceed",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-08-18T11:44:06.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a014b28d63eeb4f",
-      "gmailMessageIds": [
-        "1a014b28d63eeb4f",
-        "1a014af94a9288f2"
-      ],
-      "notes": ""
-    },
-    {
       "id": "american-medical-association-data-engineer-ii",
       "company": "American Medical Association",
       "role": "Data Engineer II",
@@ -465,13 +399,12 @@
       "notes": ""
     },
     {
-      "id": "ibm-associate-data-engineer",
+      "id": "ibm-associate-data-engineer-2027",
       "company": "IBM",
-      "role": "Associate Data Engineer",
+      "role": "Associate Data Engineer 2027",
       "status": "reply_needed",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Action Required:IBM Assessments for completion Tirth Shah - 128750 Associate Data Engineer 2027",
       "latestFrom": "IBM Talent Acquisition <talent@ibm.com>",
       "lastActivityAt": "2026-08-18T06:32:44.000Z",
@@ -489,8 +422,7 @@
       "role": "Job Application",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Thank you for your interest in Travelers",
       "latestFrom": "travelers@myworkday.com",
       "lastActivityAt": "2026-08-18T05:22:28.000Z",
@@ -502,13 +434,12 @@
       "notes": ""
     },
     {
-      "id": "gm-agentic-data-engineer",
+      "id": "gm-data-engineer",
       "company": "GM",
-      "role": "Agentic Data Engineer",
+      "role": "Data Engineer",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Your interest in Agentic Data Engineer at GM",
       "latestFrom": "Tsenta Inbox <inbox@mail.tsenta.com>",
       "lastActivityAt": "2026-08-18T04:47:43.000Z",
@@ -574,13 +505,12 @@
       "notes": ""
     },
     {
-      "id": "atc-ba",
+      "id": "atc-business-analyst",
       "company": "ATC",
-      "role": "BA",
+      "role": "Business Analyst",
       "status": "offered",
       "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "classifier": "ai_accurate",
       "latestSubject": "Kirstyn Thompson sent you ATC Offer Letter - Tirth Chirayu Shah BA via PandaDoc",
       "latestFrom": "Kirstyn Thompson via PandaDoc <docs@email.pandadoc.net>",
       "lastActivityAt": "2026-08-17T19:42:42.000Z",
@@ -2029,9 +1959,9 @@
       "notes": ""
     },
     {
-      "id": "briana-smith-our-data-engineer-job-posting",
-      "company": "Briana Smith",
-      "role": "Our Data Engineer Job Posting",
+      "id": "emergent-software-data-engineer",
+      "company": "Emergent Software",
+      "role": "Data Engineer",
       "status": "reply_needed",
       "confidence": "high",
       "classifier": "ai_accurate",
@@ -2288,9 +2218,9 @@
       "notes": ""
     },
     {
-      "id": "atc-sending-these-over",
+      "id": "atc-video-screening",
       "company": "ATC",
-      "role": "Sending These Over",
+      "role": "Video Screening",
       "status": "interviewed",
       "confidence": "high",
       "classifier": "ai_accurate",
@@ -3518,9 +3448,9 @@
       "notes": ""
     },
     {
-      "id": "weekday-data-engineer-finance-expert-role-next-steps",
+      "id": "weekday-data-engineer-finance-expert",
       "company": "Weekday",
-      "role": "Data Engineer Finance Expert Role - Next Steps",
+      "role": "Data Engineer Finance Expert",
       "status": "reply_needed",
       "confidence": "high",
       "classifier": "ai_accurate",
@@ -4366,8 +4296,8 @@
       "notes": ""
     },
     {
-      "id": "from-scratch-general-application",
-      "company": "From Scratch",
+      "id": "atc-general-application",
+      "company": "ATC",
       "role": "General Application",
       "status": "applied",
       "confidence": "high",
@@ -4378,7 +4308,13 @@
       "source": "gmail",
       "gmailThreadId": "19fc78642eb18451",
       "gmailMessageIds": [
-        "19fc78642eb18451"
+        "19fc78642eb18451",
+        "19fb31c8bd61bddc",
+        "1a014dd59685f054",
+        "19fdc4e442db3c1c",
+        "19fccc1915646406",
+        "19fa3933c5aaa7de",
+        "19f89c5cdeb2d1ad"
       ],
       "notes": ""
     },
@@ -4468,8 +4404,8 @@
       "notes": ""
     },
     {
-      "id": "prop-firm-match-global-fzco-data-engineer-prop-firm-match-global",
-      "company": "Prop Firm Match Global – FZCO",
+      "id": "atc-data-engineer-prop-firm-match-global",
+      "company": "ATC",
       "role": "Data Engineer - Prop Firm Match Global",
       "status": "applied",
       "confidence": "high",
@@ -4949,23 +4885,6 @@
       "notes": ""
     },
     {
-      "id": "prop-firm-match-global-general-application",
-      "company": "Prop Firm Match Global",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "ai_accurate",
-      "latestSubject": "Thanks for applying to Prop Firm Match Global – FZCO",
-      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
-      "lastActivityAt": "2026-07-30T13:00:10.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fb31c8bd61bddc",
-      "gmailMessageIds": [
-        "19fb31c8bd61bddc"
-      ],
-      "notes": ""
-    },
-    {
       "id": "klaviyo-general-application",
       "company": "Klaviyo",
       "role": "General Application",
@@ -5437,9 +5356,9 @@
       "notes": ""
     },
     {
-      "id": "akraya-data-engineer",
+      "id": "akraya-data-engineer-ai-supply-chain",
       "company": "Akraya",
-      "role": "Data Engineer",
+      "role": "Data Engineer – AI & Supply Chain",
       "status": "reply_needed",
       "confidence": "high",
       "classifier": "ai_accurate",
@@ -7101,27 +7020,6 @@
       "gmailThreadId": "19f89c6d2ffe28b8",
       "gmailMessageIds": [
         "19f89c6d2ffe28b8"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "thatch-general-application",
-      "company": "Thatch",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "ai_accurate",
-      "latestSubject": "Thank you for applying to Thatch",
-      "latestFrom": "no-reply@thatch.com",
-      "lastActivityAt": "2026-07-22T12:21:07.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a014dd59685f054",
-      "gmailMessageIds": [
-        "1a014dd59685f054",
-        "19fdc4e442db3c1c",
-        "19fccc1915646406",
-        "19fa3933c5aaa7de",
-        "19f89c5cdeb2d1ad"
       ],
       "notes": ""
     },
