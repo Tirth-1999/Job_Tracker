@@ -274,20 +274,26 @@ function paginateArray(items, currentPage, pageSize) {
 function renderCompanies(applications) {
   const companies = new Map();
   for (const app of applications) {
-    if (normalizeStatus(app.status) === "not_related") continue;
+    if (normalizeStatus(app.effectiveStatus || app.status) === "not_related") continue;
     const key = normalizeCompany(app.company);
     if (!companies.has(key)) {
       companies.set(key, {
         company: app.company || "Unknown company",
         count: 0,
         statuses: new Set(),
-        lastActivityAt: app.lastActivityAt
+        lastActivityAt: app.lastActivityAt,
+        latestApp: app,
+        allApps: []
       });
     }
     const row = companies.get(key);
     row.count += 1;
-    row.statuses.add(labelForStatus(normalizeStatus(app.status)));
-    if ((app.lastActivityAt || "") > (row.lastActivityAt || "")) row.lastActivityAt = app.lastActivityAt;
+    row.statuses.add(labelForStatus(normalizeStatus(app.effectiveStatus || app.status)));
+    row.allApps.push(app);
+    if ((app.lastActivityAt || "") >= (row.lastActivityAt || "")) {
+      row.lastActivityAt = app.lastActivityAt;
+      row.latestApp = app;
+    }
   }
 
   const allRows = [...companies.values()].sort((a, b) => a.company.localeCompare(b.company));
@@ -298,15 +304,18 @@ function renderCompanies(applications) {
     <table>
       <thead><tr><th>Company</th><th>Applications</th><th>Status</th><th>Last Activity</th><th>Action</th></tr></thead>
       <tbody>
-        ${pagedRows.map((row) => `
-          <tr>
-            <td><strong>${escapeHtml(row.company)}</strong></td>
-            <td>${row.count}</td>
-            <td>${[...row.statuses].map((status) => `<span class="pill">${escapeHtml(status)}</span>`).join(" ")}</td>
-            <td>${formatDate(row.lastActivityAt)}</td>
-            <td><a class="btn-gmail-table" href="https://mail.google.com/mail/u/0/#search/${encodeURIComponent(row.company)}" target="_blank" rel="noopener noreferrer">Search in Gmail ↗</a></td>
-          </tr>
-        `).join("")}
+        ${pagedRows.map((row) => {
+          const directUrl = getGmailUrl(row.latestApp);
+          return `
+            <tr>
+              <td><strong>${escapeHtml(row.company)}</strong></td>
+              <td>${row.count}</td>
+              <td>${[...row.statuses].map((status) => `<span class="pill">${escapeHtml(status)}</span>`).join(" ")}</td>
+              <td>${formatDate(row.lastActivityAt)}</td>
+              <td><a class="btn-gmail-table" href="${directUrl}" target="_blank" rel="noopener noreferrer" title="Open the exact email thread for ${escapeHtml(row.company)} in Gmail">Open Thread in Gmail ↗</a></td>
+            </tr>
+          `;
+        }).join("")}
       </tbody>
     </table>
     ${renderPaginationBar(allRows.length, state.pageCompanies, state.pageSizeCompanies, "comp", "bottom")}
