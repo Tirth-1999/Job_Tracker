@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-18T16:12:42.541Z",
+  "updatedAt": "2026-08-18T16:32:48.507Z",
   "lastHistoryId": null,
   "applications": [
     {
@@ -213,6 +213,22 @@
       "notes": ""
     },
     {
+      "id": "seek-welcome-the-right-job",
+      "company": "SEEK Welcome",
+      "role": "the right job",
+      "status": "interviewed",
+      "confidence": "low",
+      "latestSubject": "Welcome To SEEK",
+      "latestFrom": "SEEK Welcome <noreply@seek.com.au>",
+      "lastActivityAt": "2026-08-18T04:36:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a013280156864ee",
+      "gmailMessageIds": [
+        "1a013280156864ee"
+      ],
+      "notes": ""
+    },
+    {
       "id": "state-street-applying-to-state-street",
       "company": "State Street",
       "role": "applying to State Street",
@@ -275,6 +291,22 @@
       "gmailThreadId": "1a010966b4e6efd2",
       "gmailMessageIds": [
         "1a010966b4e6efd2"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "google-chat-google",
+      "company": "Google Chat",
+      "role": "Google",
+      "status": "interviewed",
+      "confidence": "low",
+      "latestSubject": "Welcome to Chat!",
+      "latestFrom": "Google Chat <chat-noreply@google.com>",
+      "lastActivityAt": "2026-08-17T16:11:44.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0107e402a32fda",
+      "gmailMessageIds": [
+        "1a0107e402a32fda"
       ],
       "notes": ""
     },
