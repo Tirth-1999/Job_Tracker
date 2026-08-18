@@ -1,6 +1,61 @@
 {
-  "updatedAt": "2026-08-18T19:51:26.532Z",
+  "updatedAt": "2026-08-18T20:25:25.387Z",
   "applications": [
+    {
+      "id": "pyramid-consulting-data-engineer",
+      "company": "Pyramid Consulting",
+      "role": "Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Invitation for Pre-Screen for Data Engineer Role via Pyramid Consulting",
+      "latestFrom": "pair-noreply@pyramidci.com",
+      "lastActivityAt": "2026-08-18T20:07:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a016453376b2a56",
+      "gmailMessageIds": [
+        "1a016453376b2a56",
+        "1a0167c2c6bd4f70"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "huron-consulting-general-application",
+      "company": "Huron Consulting",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on Your Application",
+      "latestFrom": "Huron Consulting Group <huron@myworkday.com>",
+      "lastActivityAt": "2026-08-18T20:06:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0167b4042695bf",
+      "gmailMessageIds": [
+        "1a0167b4042695bf"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "andhealth-data-engineer",
+      "company": "Andhealth",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Status: Data Engineer at AndHealth",
+      "latestFrom": "AndHealth <recruiting+433567751-90628a8e@applytojob.com>",
+      "lastActivityAt": "2026-08-18T19:54:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01670f70e73a20",
+      "gmailMessageIds": [
+        "1a01670f70e73a20"
+      ],
+      "notes": ""
+    },
     {
       "id": "prime-video-data-engineer",
       "company": "Prime Video",
@@ -16,24 +71,6 @@
       "gmailThreadId": "1a01667566e5bb44",
       "gmailMessageIds": [
         "1a01667566e5bb44"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "pyramid-consulting-data-engineer",
-      "company": "Pyramid Consulting",
-      "role": "Data Engineer",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Invitation for Pre-Screen for Data Engineer Role via Pyramid Consulting",
-      "latestFrom": "pair-noreply@pyramidci.com",
-      "lastActivityAt": "2026-08-18T19:07:08.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a016453376b2a56",
-      "gmailMessageIds": [
-        "1a016453376b2a56"
       ],
       "notes": ""
     },
