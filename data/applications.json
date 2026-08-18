@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-18T17:53:24.689Z",
+  "updatedAt": "2026-08-18T17:56:40.184Z",
   "lastHistoryId": null,
   "applications": [
     {
@@ -373,15 +373,16 @@
       "role": "General Application",
       "status": "applied",
       "confidence": "high",
-      "classifier": "openrouter_ai",
-      "reason": "AI verified",
-      "latestSubject": "Thank You for Applying to Ontic!",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Demographic Survey for Ontic Technologies",
       "latestFrom": "Ontic Hiring Team <no-reply@ashbyhq.com>",
-      "lastActivityAt": "2026-08-18T12:18:53.000Z",
+      "lastActivityAt": "2026-08-18T12:19:32.000Z",
       "source": "gmail",
       "gmailThreadId": "1a014cf6c14de89d",
       "gmailMessageIds": [
-        "1a014cf6c14de89d"
+        "1a014cf6c14de89d",
+        "1a014d009c89d7d8"
       ],
       "notes": ""
     },
