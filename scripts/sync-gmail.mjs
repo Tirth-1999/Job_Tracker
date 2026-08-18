@@ -347,7 +347,7 @@ const STRUCTURED_JSON_SCHEMA = {
             role: { type: "string" },
             status: {
               type: "string",
-              enum: ["applied", "reply_needed", "interviewed", "offered", "rejected", "ignore"]
+              enum: ["applied", "reply_needed", "interviewed", "offered", "rejected", "not_related"]
             },
             confidence: {
               type: "string",
@@ -371,9 +371,16 @@ async function extractAndClassifyWithAI(items, rotator) {
   }
 
   const systemPrompt = [
-    "You are a specialized job application email extraction engine.",
-    "Extract: 1) True hiring company name (strip ATS like Workday/Greenhouse/Lever/Ashby/BambooHR/SmartRecruiters), 2) Specific job role title (standard title, never phrases like 'your application to...'), 3) Status: 'applied' (Thank you for applying/Application received confirmation), 'reply_needed' (ONLY when recruiter asks candidate to take action, complete assessment/test, or provide availability), 'interviewed' (Interview/video screen confirmed or scheduled), 'offered' (Formal job offer letter), 'rejected' (Decision updates, unfortunately, not moving forward, role closed), 'ignore' (Marketing spam, job board alerts, OTPs, receipts).",
-    "CRITICAL: Any 'Thank you for applying' or 'We received your application' MUST be status='applied', NEVER 'reply_needed'."
+    "You are an expert AI Job Application and Recruitment Classifier.",
+    "Extract: 1) True hiring company name (strip ATS like Workday/Greenhouse/Lever/Ashby/BambooHR/SmartRecruiters, e.g. 'ClifyX', 'ATC', 'IBM', 'Meta', 'Emergent Software', 'PwC').",
+    "2) Specific standardized role title (e.g. 'Data Engineer', 'Business Analyst', 'Software Engineer', 'General Application').",
+    "3) Status classification rules:",
+    "- 'offered': Official job offer letter, compensation package, offer rollout details (e.g. Kirstyn Thompson PandaDoc Offer, ATC offer rollout).",
+    "- 'interviewed': Confirmed interview invitation, video screening, hiring manager call, interview calendar invite (e.g. ATC Video Screening, ATC Final Interview).",
+    "- 'reply_needed': Direct recruiter outreach pitched to the candidate requesting a reply or availability (e.g. Harshit Singh from ClifyX, Rubi Sharma), coding assessment invites (e.g. IBM Coding Assessment, Emergent TestGorilla Assessment), action required candidate questionnaires (Meta prescreen, Akraya, UTA, Chewy, Fearless).",
+    "- 'rejected': Explicit notice of not moving forward, rejection, role cancelled.",
+    "- 'applied': Job application confirmation receipt, submission confirmation, portal receipt.",
+    "- 'not_related': Non-job emails, security alerts, OTPs, password resets, Google account notifications, surveys, newsletters, platform promotional upsells."
   ].join(" ");
 
   // Run all AI batches concurrently in parallel across keys
