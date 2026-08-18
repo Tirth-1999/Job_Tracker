@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-08-18T20:25:25.387Z",
+  "updatedAt": "2026-08-18T20:51:07.867Z",
   "applications": [
+    {
+      "id": "infoway-project-manager",
+      "company": "Infoway",
+      "role": "Project Manager",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Project Manager",
+      "latestFrom": "Ubaidhur rahuman Infoway <ubaidhur@infowaygroup.com>",
+      "lastActivityAt": "2026-08-18T20:35:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0169d65bbacdc8",
+      "gmailMessageIds": [
+        "1a0169d65bbacdc8"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "diverselynx-data-engineer",
+      "company": "Diverselynx",
+      "role": "Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Urgent Requirement  - Data Strategy / Data Engineer / Data Analytics - Sunnyvale, CA / Onsite",
+      "latestFrom": "Rishi Kumar <rishi.kumar@diverselynx.com>",
+      "lastActivityAt": "2026-08-18T20:29:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a016979f0f30f78",
+      "gmailMessageIds": [
+        "1a016979f0f30f78"
+      ],
+      "notes": ""
+    },
     {
       "id": "pyramid-consulting-data-engineer",
       "company": "Pyramid Consulting",
