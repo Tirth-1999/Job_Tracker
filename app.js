@@ -3,7 +3,8 @@ const LANES = [
   ["reply_needed", "Reply Needed", "lane-reply"],
   ["interviewed", "Interviewed", "lane-interviewed"],
   ["offered", "Offered", "lane-offered"],
-  ["rejected", "Rejected", "lane-rejected"]
+  ["rejected", "Rejected", "lane-rejected"],
+  ["not_related", "Other / Review", "lane-not-related"]
 ];
 
 const state = {

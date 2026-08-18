@@ -24,20 +24,20 @@ const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || "google/gemini-2.5-flash-lite";
 const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.0-flash";
 const AI_BATCH_SIZE = Number(process.env.AI_BATCH_SIZE || process.env.GEMINI_BATCH_SIZE || "20");
-const ALLOWED_STATUSES = new Set(["applied", "reply_needed", "interviewed", "offered", "rejected"]);
+const ALLOWED_STATUSES = new Set(["applied", "reply_needed", "interviewed", "offered", "rejected", "not_related"]);
 
 const DEFAULT_RECENT_QUERY = [
   "(",
-  "from:(lever.co OR greenhouse-mail.io OR ashbyhq.com OR myworkday.com OR smartrecruiters.com OR workablemail.com OR icims.com OR bamboohr.com OR dover.com OR applytojob.com OR comeet-notifications.com OR careers OR recruiting OR talent)",
-  "OR subject:(\"thank you for applying\" OR \"thanks for applying\" OR \"application received\" OR \"we received your application\" OR \"your application to\" OR \"application update\" OR \"update on your application\" OR \"assessment invite\" OR \"video screening\" OR \"offer letter\" OR \"next steps\")",
+  "from:(lever.co OR greenhouse-mail.io OR ashbyhq.com OR myworkday.com OR smartrecruiters.com OR workablemail.com OR icims.com OR bamboohr.com OR dover.com OR applytojob.com OR comeet-notifications.com OR careers OR recruiting OR talent OR hiring OR jobs)",
+  "OR subject:(apply OR applied OR application OR interview OR recruiter OR candidate OR career OR \"next steps\" OR offer OR screening OR assessment OR \"update on\" OR status)",
   ")",
   "-subject:(otp OR \"verification code\" OR \"security code\" OR password OR receipt OR invoice OR \"welcome to chat\")"
 ].join(" ");
 
 const DEFAULT_BACKFILL_QUERY = [
   "(",
-  "from:(lever.co OR greenhouse-mail.io OR ashbyhq.com OR myworkday.com OR smartrecruiters.com OR workablemail.com OR icims.com OR bamboohr.com OR dover.com OR applytojob.com OR comeet-notifications.com OR careers OR recruiting OR talent)",
-  "OR subject:(\"thank you for applying\" OR \"thanks for applying\" OR \"application received\" OR \"we received your application\" OR \"your application to\" OR \"application update\" OR \"update on your application\" OR \"assessment invite\" OR \"video screening\" OR \"offer letter\" OR \"next steps\")",
+  "from:(lever.co OR greenhouse-mail.io OR ashbyhq.com OR myworkday.com OR smartrecruiters.com OR workablemail.com OR icims.com OR bamboohr.com OR dover.com OR applytojob.com OR comeet-notifications.com OR careers OR recruiting OR talent OR hiring OR jobs)",
+  "OR subject:(apply OR applied OR application OR interview OR recruiter OR candidate OR career OR \"next steps\" OR offer OR screening OR assessment OR \"update on\" OR status)",
   ")",
   "-subject:(otp OR \"verification code\" OR \"security code\" OR password OR receipt OR invoice OR subscription OR 2fa OR \"welcome to chat\")"
 ].join(" ");
@@ -440,7 +440,7 @@ async function extractAndClassifyWithAI(items, rotator) {
                         role: { type: "STRING" },
                         status: {
                           type: "STRING",
-                          enum: ["applied", "reply_needed", "interviewed", "offered", "rejected", "ignore"]
+                          enum: ["applied", "reply_needed", "interviewed", "offered", "rejected", "not_related"]
                         },
                         confidence: {
                           type: "STRING",
@@ -479,7 +479,7 @@ async function extractAndClassifyWithAI(items, rotator) {
         const aiResult = parsedMap.get(item.message.id);
         const isJob = aiResult?.is_job ?? aiResult?.is_job_application ?? false;
 
-        if (aiResult && isJob && aiResult.status !== "ignore") {
+        if (aiResult && isJob && aiResult.status !== "not_related") {
           const cleanCompany = sanitizeCompanyName(aiResult.company);
           const cleanRoleName = sanitizeRole(aiResult.role);
           const validStatus = ALLOWED_STATUSES.has(aiResult.status) ? aiResult.status : "applied";
@@ -494,7 +494,20 @@ async function extractAndClassifyWithAI(items, rotator) {
             classifier: "openrouter",
             reason: "AI extracted"
           });
-        } else if (!aiResult) {
+        } else if (aiResult) {
+          // Uncategorized / Review lane item
+          const cleanCompany = sanitizeCompanyName(aiResult.company || inferCompanyHeuristic(item.parsed.from, item.parsed.subject, item.parsed.body));
+          batchResults.push({
+            message: item.message,
+            parsed: item.parsed,
+            company: cleanCompany || "Other",
+            role: sanitizeRole(aiResult.role || "General Communication"),
+            status: "not_related",
+            confidence: "medium",
+            classifier: "openrouter",
+            reason: "Review / Other"
+          });
+        } else {
           batchResults.push(extractWithHeuristics(item));
         }
       }
