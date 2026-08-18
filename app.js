@@ -29,13 +29,36 @@ async function loadData() {
 
 function filteredApplications() {
   const applications = state.data?.applications ?? [];
-  const query = state.query.trim().toLowerCase();
+  const query = state.query.trim();
   if (!query) return applications;
 
+  const lowerQuery = query.toLowerCase();
+  const wordRegex = new RegExp(`\\b${query.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}\\b`, "i");
+
   return applications.filter((app) => {
-    return [app.company, app.role, app.status, app.latestSubject, app.latestFrom, app.notes]
-      .filter(Boolean)
-      .some((value) => String(value).toLowerCase().includes(query));
+    const company = String(app.company || "");
+    const role = String(app.role || "");
+    const subject = String(app.latestSubject || "");
+    const from = String(app.latestFrom || "");
+
+    // 1. Exact or whole-word match on Company, Role, Subject, or From
+    if (wordRegex.test(company) || wordRegex.test(role) || wordRegex.test(subject) || wordRegex.test(from)) {
+      return true;
+    }
+
+    // 2. Substring match on company or role or subject if query is 4+ characters
+    if (lowerQuery.length > 3) {
+      if (
+        company.toLowerCase().includes(lowerQuery) ||
+        role.toLowerCase().includes(lowerQuery) ||
+        subject.toLowerCase().includes(lowerQuery) ||
+        from.toLowerCase().includes(lowerQuery)
+      ) {
+        return true;
+      }
+    }
+
+    return false;
   });
 }
 
@@ -84,54 +107,20 @@ function renderStats(applications) {
 }
 
 function renderBoard(applications) {
-  state.lanePages ??= {};
-  const LANE_PAGE_SIZE = 25;
-
   byId("board").innerHTML = LANES.map(([key, label, className]) => {
     const laneApps = applications.filter((app) => normalizeStatus(app.status) === key);
-    const totalLaneCards = laneApps.length;
-    const totalPages = Math.ceil(totalLaneCards / LANE_PAGE_SIZE) || 1;
-    const currentLanePage = Math.min(Math.max(1, state.lanePages[key] || 1), totalPages);
-    const startIdx = (currentLanePage - 1) * LANE_PAGE_SIZE;
-    const pagedCards = laneApps.slice(startIdx, startIdx + LANE_PAGE_SIZE);
-
-    const paginationHtml = totalLaneCards > LANE_PAGE_SIZE ? `
-      <div class="lane-pagination">
-        <button class="btn-lane-page btn-lane-prev" data-lane="${key}" ${currentLanePage <= 1 ? "disabled" : ""}>◀</button>
-        <span>${startIdx + 1}–${Math.min(startIdx + LANE_PAGE_SIZE, totalLaneCards)} of ${totalLaneCards}</span>
-        <button class="btn-lane-page btn-lane-next" data-lane="${key}" ${currentLanePage >= totalPages ? "disabled" : ""}>▶</button>
-      </div>
-    ` : "";
-
     return `
       <section class="lane ${className}">
         <div class="lane-header">
           <span>${label}</span>
-          <span class="lane-count">${totalLaneCards}</span>
+          <span class="lane-count">${laneApps.length}</span>
         </div>
-        ${paginationHtml}
         <div class="cards">
-          ${pagedCards.map(renderCard).join("") || `<div class="empty">No applications</div>`}
+          ${laneApps.map(renderCard).join("") || `<div class="empty">No applications</div>`}
         </div>
       </section>
     `;
   }).join("");
-
-  document.querySelectorAll(".btn-lane-prev").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const lane = btn.dataset.lane;
-      state.lanePages[lane] = Math.max(1, (state.lanePages[lane] || 1) - 1);
-      renderBoard(applications);
-    });
-  });
-
-  document.querySelectorAll(".btn-lane-next").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const lane = btn.dataset.lane;
-      state.lanePages[lane] = (state.lanePages[lane] || 1) + 1;
-      renderBoard(applications);
-    });
-  });
 }
 
 function getGmailUrl(app) {
