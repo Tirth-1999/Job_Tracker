@@ -8,7 +8,6 @@
   --accent: #2f6fed;
   --danger: #c44141;
   --applied: #2f6fed;
-  --initial: #7b61ff;
   --reply: #d87917;
   --interviewed: #008f7a;
   --offered: #247a3d;
@@ -104,10 +103,6 @@ button:hover {
   border-top: 4px solid var(--applied);
 }
 
-.stat.lane-initial {
-  border-top: 4px solid var(--initial);
-}
-
 .stat.lane-reply {
   border-top: 4px solid var(--reply);
 }
@@ -175,10 +170,6 @@ button:hover {
   --lane-color: var(--applied);
 }
 
-.lane.lane-initial {
-  --lane-color: var(--initial);
-}
-
 .lane.lane-reply {
   --lane-color: var(--reply);
 }
@@ -233,11 +224,6 @@ button:hover {
 .card.status-applied,
 .status-pill.status-applied {
   border-left-color: var(--applied);
-}
-
-.card.status-initial-revert-needed,
-.status-pill.status-initial-revert-needed {
-  border-left-color: var(--initial);
 }
 
 .card.status-reply-needed,

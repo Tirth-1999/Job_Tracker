@@ -1,6 +1,5 @@
 const LANES = [
   ["applied", "Applied", "lane-applied"],
-  ["initial_revert_needed", "Initial Revert Needed", "lane-initial"],
   ["reply_needed", "Reply Needed", "lane-reply"],
   ["interviewed", "Interviewed", "lane-interviewed"],
   ["offered", "Offered", "lane-offered"],
@@ -52,7 +51,10 @@ function renderStatus() {
 
 function renderStats(applications) {
   const counts = Object.fromEntries(LANES.map(([key]) => [key, 0]));
-  for (const app of applications) counts[app.status] = (counts[app.status] ?? 0) + 1;
+  for (const app of applications) {
+    const status = normalizeStatus(app.status);
+    counts[status] = (counts[status] ?? 0) + 1;
+  }
 
   byId("stats").innerHTML = LANES.map(([key, label, className]) => {
     return `<article class="stat ${className}"><strong>${counts[key] ?? 0}</strong><span>${label}</span></article>`;
@@ -61,7 +63,7 @@ function renderStats(applications) {
 
 function renderBoard(applications) {
   byId("board").innerHTML = LANES.map(([key, label, className]) => {
-    const laneApps = applications.filter((app) => app.status === key);
+    const laneApps = applications.filter((app) => normalizeStatus(app.status) === key);
     return `
       <section class="lane ${className}">
         <div class="lane-header">
@@ -78,13 +80,14 @@ function renderBoard(applications) {
 
 function renderCard(app) {
   const confidence = app.confidence ? `${app.confidence} confidence` : "unscored";
+  const status = normalizeStatus(app.status);
   return `
-    <article class="card ${statusClass(app.status)}">
+    <article class="card ${statusClass(status)}">
       <h3>${escapeHtml(app.company || "Unknown company")}</h3>
       <div class="role">${escapeHtml(app.role || "Unknown role")}</div>
       <div class="subject">${escapeHtml(app.latestSubject || "No subject")}</div>
       <div class="meta">
-        <span class="pill status-pill">${escapeHtml(labelForStatus(app.status))}</span>
+        <span class="pill status-pill ${statusClass(status)}">${escapeHtml(labelForStatus(status))}</span>
         <span class="pill">${formatDate(app.lastActivityAt)}</span>
         <span class="pill">${escapeHtml(confidence)}</span>
         ${app.source === "gmail" ? `<span class="pill">Gmail</span>` : ""}
@@ -107,7 +110,7 @@ function renderCompanies(applications) {
     }
     const row = companies.get(key);
     row.count += 1;
-    row.statuses.add(labelForStatus(app.status));
+    row.statuses.add(labelForStatus(normalizeStatus(app.status)));
     if ((app.lastActivityAt || "") > (row.lastActivityAt || "")) row.lastActivityAt = app.lastActivityAt;
   }
 
@@ -139,7 +142,7 @@ function renderApplications(applications) {
           <tr>
             <td>${escapeHtml(app.company || "Unknown company")}</td>
             <td>${escapeHtml(app.role || "Unknown role")}</td>
-            <td><span class="pill status-pill ${statusClass(app.status)}">${escapeHtml(labelForStatus(app.status))}</span></td>
+            <td><span class="pill status-pill ${statusClass(normalizeStatus(app.status))}">${escapeHtml(labelForStatus(normalizeStatus(app.status)))}</span></td>
             <td>${escapeHtml(app.latestSubject || "No subject")}</td>
             <td>${formatDate(app.lastActivityAt)}</td>
           </tr>
@@ -154,11 +157,15 @@ function normalizeCompany(company) {
 }
 
 function labelForStatus(status) {
-  return LANES.find(([key]) => key === status)?.[1] ?? "Applied";
+  return LANES.find(([key]) => key === normalizeStatus(status))?.[1] ?? "Applied";
 }
 
 function statusClass(status) {
-  return `status-${String(status || "applied").replaceAll("_", "-")}`;
+  return `status-${normalizeStatus(status).replaceAll("_", "-")}`;
+}
+
+function normalizeStatus(status) {
+  return status === "initial_revert_needed" ? "applied" : status || "applied";
 }
 
 function formatDate(value) {

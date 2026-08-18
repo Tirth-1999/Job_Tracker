@@ -11,7 +11,6 @@ A lightweight static Kanban board for tracking job applications. Gmail sync runs
 ## Status Lanes
 
 - Applied
-- Initial Revert Needed
 - Reply Needed
 - Interviewed
 - Offered
@@ -40,7 +39,7 @@ When the GitHub Action commits updated Gmail data, Vercel's GitHub integration w
 
 This project intentionally does not use GitHub Pages.
 
-## Gmail Sync Setup
+## Gmail Sync & AI Setup
 
 Create a Google OAuth web client with Gmail API enabled.
 
@@ -56,11 +55,15 @@ Then generate a refresh token locally:
 GMAIL_CLIENT_ID="your-client-id" GMAIL_CLIENT_SECRET="your-client-secret" node scripts/get-gmail-refresh-token.mjs
 ```
 
+Obtain an API key from [OpenRouter](https://openrouter.ai/) (or Google AI Studio).
+
 Store these repository secrets in GitHub:
 
 - `GMAIL_CLIENT_ID`
 - `GMAIL_CLIENT_SECRET`
 - `GMAIL_REFRESH_TOKEN`
+- `OPENROUTER_API_KEY` (Your OpenRouter API key)
+- `OPENROUTER_API_KEY_2` (Optional second key for automatic failover / round-robin rotation)
 
 The workflow runs every 30 minutes and can also be started manually from the GitHub Actions tab.
 
