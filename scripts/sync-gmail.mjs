@@ -11,47 +11,25 @@ const AI_BATCH_SIZE = Number(process.env.AI_BATCH_SIZE || process.env.GEMINI_BAT
 const ALLOWED_STATUSES = new Set(["applied", "reply_needed", "interviewed", "offered", "rejected"]);
 
 const DEFAULT_RECENT_QUERY = [
-  "newer_than:30d",
   "(",
-  "\"thank you for applying\"",
-  "OR \"application received\"",
-  "OR \"application update\"",
-  "OR \"your application was sent\"",
-  "OR \"thanks for applying\"",
-  "OR interview",
-  "OR recruiter",
-  "OR \"next steps\"",
-  "OR \"schedule\"",
-  "OR \"not moving forward\"",
-  "OR \"unfortunately\"",
-  "OR \"offer\"",
+  "from:(lever.co OR greenhouse-mail.io OR ashbyhq.com OR myworkday.com OR smartrecruiters.com OR workablemail.com OR icims.com OR bamboohr.com OR dover.com OR applytojob.com OR comeet-notifications.com OR careers OR recruiting OR talent)",
+  "OR subject:(\"thank you for applying\" OR \"thanks for applying\" OR \"application received\" OR \"we received your application\" OR \"your application to\" OR \"application update\" OR \"update on your application\" OR \"assessment invite\" OR \"video screening\" OR \"offer letter\" OR \"next steps\")",
   ")",
-  "-subject:(otp OR \"verification code\" OR \"security code\" OR password OR invoice OR receipt OR 2fa)"
+  "-subject:(otp OR \"verification code\" OR \"security code\" OR password OR receipt OR invoice OR \"welcome to chat\")"
 ].join(" ");
 
 const DEFAULT_BACKFILL_QUERY = [
   "(",
-  "\"thank you for applying\"",
-  "OR \"thanks for applying\"",
-  "OR \"application received\"",
-  "OR \"your application was sent\"",
-  "OR \"application update\"",
-  "OR \"we received your application\"",
-  "OR \"not moving forward\"",
-  "OR \"unfortunately\"",
-  "OR \"schedule interview\"",
-  "OR \"next steps\"",
-  "OR recruiter",
-  "OR \"talent acquisition\"",
-  "OR offer",
+  "from:(lever.co OR greenhouse-mail.io OR ashbyhq.com OR myworkday.com OR smartrecruiters.com OR workablemail.com OR icims.com OR bamboohr.com OR dover.com OR applytojob.com OR comeet-notifications.com OR careers OR recruiting OR talent)",
+  "OR subject:(\"thank you for applying\" OR \"thanks for applying\" OR \"application received\" OR \"we received your application\" OR \"your application to\" OR \"application update\" OR \"update on your application\" OR \"assessment invite\" OR \"video screening\" OR \"offer letter\" OR \"next steps\")",
   ")",
-  "-subject:(otp OR \"verification code\" OR \"security code\" OR password OR invoice OR receipt OR subscription OR 2fa)"
+  "-subject:(otp OR \"verification code\" OR \"security code\" OR password OR receipt OR invoice OR subscription OR 2fa OR \"welcome to chat\")"
 ].join(" ");
 
 const NOISE_SUBJECT_PATTERNS = [
   /\b(otp|one-time password|verification code|security code|2fa|two-factor)\b/i,
   /\b(reset your password|sign-in code|login code|verify your email|verify your account)\b/i,
-  /\b(receipt|invoice|subscription renewal|sale ends|limited time offer)\b/i
+  /\b(receipt|invoice|subscription renewal|sale ends|limited time offer|welcome to chat)\b/i
 ];
 
 async function main() {
@@ -74,20 +52,14 @@ async function main() {
     return;
   }
 
-  const keys = getAiApiKeys();
-  const rotator = keys.length > 0 ? new KeyRotator(keys) : null;
-  const BATCH_SIZE = 25;
-  let totalProcessed = 0;
-  let totalSaved = 0;
-  let changed = resetData;
-
-  // Process in concurrent streaming batches
-  for (let i = 0; i < unhandledMessages.length; i += BATCH_SIZE) {
-    const batchRefs = unhandledMessages.slice(i, i + BATCH_SIZE);
-    
-    // 1. Fetch all emails in the batch concurrently in parallel
-    const fetchedBatch = await Promise.all(
-      batchRefs.map(async (ref) => {
+  // 1. Download all email bodies in fast parallel chunks (50 concurrent)
+  console.log(`Fetching ${unhandledMessages.length} emails in parallel...`);
+  const CHUNK_SIZE = 50;
+  const allFetched = [];
+  for (let i = 0; i < unhandledMessages.length; i += CHUNK_SIZE) {
+    const chunk = unhandledMessages.slice(i, i + CHUNK_SIZE);
+    const chunkResults = await Promise.all(
+      chunk.map(async (ref) => {
         try {
           const message = await getMessage(token, ref.id);
           const parsed = parseMessage(message);
@@ -98,55 +70,59 @@ async function main() {
         }
       })
     );
+    allFetched.push(...chunkResults.filter(Boolean));
+  }
 
-    // 2. Fast noise filtering
-    const candidateItems = fetchedBatch.filter(
-      (item) => item && item.parsed && !isObviousNoise(item.parsed.subject)
-    );
+  // 2. Filter obvious noise
+  const candidateItems = allFetched.filter(
+    (item) => item.parsed && !isObviousNoise(item.parsed.subject)
+  );
 
-    totalProcessed += batchRefs.length;
-    console.log(`[Batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(unhandledMessages.length / BATCH_SIZE)}] Fetched ${batchRefs.length} emails (${candidateItems.length} candidate jobs).`);
+  console.log(`Analyzing ${candidateItems.length} candidate job emails with AI...`);
 
-    if (!candidateItems.length) continue;
+  const keys = getAiApiKeys();
+  const rotator = keys.length > 0 ? new KeyRotator(keys) : null;
+  let extractedItems = [];
 
-    // 3. Extract & Classify with AI (or heuristic fallback)
-    let extractedItems = [];
-    if (rotator) {
-      try {
-        extractedItems = await extractAndClassifyWithAI(candidateItems, rotator);
-      } catch (err) {
-        console.warn("AI extraction failed for batch, falling back to heuristics:", err.message);
-        extractedItems = candidateItems.map(extractWithHeuristics);
-      }
-    } else {
+  // 3. Run AI classification on candidate items in parallel batches
+  if (rotator && candidateItems.length > 0) {
+    try {
+      extractedItems = await extractAndClassifyWithAI(candidateItems, rotator);
+    } catch (err) {
+      console.warn("AI extraction failed, falling back to heuristics:", err.message);
       extractedItems = candidateItems.map(extractWithHeuristics);
     }
+  } else {
+    extractedItems = candidateItems.map(extractWithHeuristics);
+  }
 
-    // 4. Upsert into dataset
-    for (const item of extractedItems) {
-      if (!item || item.status === "ignore" || !item.company || isGenericCompany(item.company)) {
-        continue;
-      }
+  // 4. Upsert into dataset
+  let totalSaved = 0;
+  let changed = resetData;
 
-      upsertApplication(data, {
-        id: makeApplicationId(item.company, item.role),
-        company: item.company,
-        role: item.role || "General Application",
-        status: item.status,
-        confidence: item.confidence || "medium",
-        classifier: item.classifier || "openrouter",
-        reason: item.reason || "",
-        latestSubject: item.parsed.subject,
-        latestFrom: item.parsed.from,
-        lastActivityAt: item.parsed.date,
-        source: "gmail",
-        gmailThreadId: item.message.threadId,
-        gmailMessageIds: [item.message.id],
-        notes: ""
-      });
-      changed = true;
-      totalSaved += 1;
+  for (const item of extractedItems) {
+    if (!item || item.status === "ignore" || !item.company || isGenericCompany(item.company)) {
+      continue;
     }
+
+    upsertApplication(data, {
+      id: makeApplicationId(item.company, item.role),
+      company: item.company,
+      role: item.role || "General Application",
+      status: item.status,
+      confidence: item.confidence || "medium",
+      classifier: item.classifier || "openrouter",
+      reason: item.reason || "",
+      latestSubject: item.parsed.subject,
+      latestFrom: item.parsed.from,
+      lastActivityAt: item.parsed.date,
+      source: "gmail",
+      gmailThreadId: item.message.threadId,
+      gmailMessageIds: [item.message.id],
+      notes: ""
+    });
+    changed = true;
+    totalSaved += 1;
   }
 
   if (changed) {
@@ -358,10 +334,19 @@ const STRUCTURED_JSON_SCHEMA = {
 };
 
 async function extractAndClassifyWithAI(items, rotator) {
-  const results = [];
-
+  const batches = [];
   for (let i = 0; i < items.length; i += AI_BATCH_SIZE) {
-    const batch = items.slice(i, i + AI_BATCH_SIZE);
+    batches.push(items.slice(i, i + AI_BATCH_SIZE));
+  }
+
+  const systemPrompt = [
+    "You are a specialized job application email extraction engine.",
+    "Extract: 1) True hiring company name (strip ATS like Workday/Greenhouse/Lever/Ashby/BambooHR/SmartRecruiters), 2) Specific job role title (standard title, never phrases like 'your application to...'), 3) Status: 'applied' (Thank you for applying/Application received confirmation), 'reply_needed' (ONLY when recruiter asks candidate to take action, complete assessment/test, or provide availability), 'interviewed' (Interview/video screen confirmed or scheduled), 'offered' (Formal job offer letter), 'rejected' (Decision updates, unfortunately, not moving forward, role closed), 'ignore' (Marketing spam, job board alerts, OTPs, receipts).",
+    "CRITICAL: Any 'Thank you for applying' or 'We received your application' MUST be status='applied', NEVER 'reply_needed'."
+  ].join(" ");
+
+  // Run all AI batches concurrently in parallel across keys
+  const batchPromises = batches.map(async (batch, batchIndex) => {
     const batchPromptPayload = batch.map((item) => ({
       id: item.message.id,
       from: item.parsed.from.slice(0, 100),
@@ -369,133 +354,134 @@ async function extractAndClassifyWithAI(items, rotator) {
       snippet: item.parsed.body.slice(0, 500)
     }));
 
-    const systemPrompt = [
-      "You are a specialized job application email extraction engine.",
-      "Extract: 1) True hiring company name (strip ATS like Workday/Greenhouse/Lever/Ashby/BambooHR/SmartRecruiters), 2) Specific job role title (standard title, never phrases like 'your application to...'), 3) Status: 'applied' (Thank you for applying/Application received confirmation), 'reply_needed' (ONLY when recruiter asks candidate to take action, complete assessment/test, or provide availability), 'interviewed' (Interview/video screen confirmed or scheduled), 'offered' (Formal job offer letter), 'rejected' (Decision updates, unfortunately, not moving forward, role closed), 'ignore' (Marketing spam, job board alerts, OTPs, receipts).",
-      "CRITICAL: Any 'Thank you for applying' or 'We received your application' MUST be status='applied', NEVER 'reply_needed'."
-    ].join(" ");
-
-    const parsedBatch = await rotator.callWithFailover(async (apiKey, keyIndex) => {
-      if (apiKey.startsWith("sk-or-") || process.env.OPENROUTER_API_KEY || !apiKey.startsWith("AIza")) {
-        // OpenRouter Structured JSON Call
-        const response = await fetch(OPENROUTER_API_URL, {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            "Content-Type": "application/json",
-            "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
-            "X-Title": "Job Tracker"
-          },
-          body: JSON.stringify({
-            model: OPENROUTER_MODEL,
-            messages: [
-              { role: "system", content: systemPrompt },
-              { role: "user", content: `Extract emails:\n${JSON.stringify(batchPromptPayload)}` }
-            ],
-            response_format: {
-              type: "json_schema",
-              json_schema: STRUCTURED_JSON_SCHEMA
+    try {
+      const parsedBatch = await rotator.callWithFailover(async (apiKey, keyIndex) => {
+        if (apiKey.startsWith("sk-or-") || process.env.OPENROUTER_API_KEY || !apiKey.startsWith("AIza")) {
+          // OpenRouter Structured JSON Call
+          const response = await fetch(OPENROUTER_API_URL, {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${apiKey}`,
+              "Content-Type": "application/json",
+              "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
+              "X-Title": "Job Tracker"
             },
-            temperature: 0
-          })
-        });
-
-        if (!response.ok) {
-          throw new Error(`OpenRouter HTTP ${response.status}: ${await response.text()}`);
-        }
-
-        const json = await response.json();
-        const rawContent = json.choices?.[0]?.message?.content ?? "{}";
-        return parseJsonResponse(rawContent);
-      } else {
-        // Direct Gemini API call with structured schema
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`;
-        const payload = {
-          contents: [
-            {
-              role: "user",
-              parts: [{ text: `${systemPrompt}\nEmails:\n${JSON.stringify(batchPromptPayload)}` }]
-            }
-          ],
-          generationConfig: {
-            temperature: 0,
-            maxOutputTokens: 2000,
-            responseMimeType: "application/json",
-            responseSchema: {
-              type: "OBJECT",
-              properties: {
-                applications: {
-                  type: "ARRAY",
-                  items: {
-                    type: "OBJECT",
-                    properties: {
-                      id: { type: "STRING" },
-                      is_job: { type: "BOOLEAN" },
-                      company: { type: "STRING" },
-                      role: { type: "STRING" },
-                      status: {
-                        type: "STRING",
-                        enum: ["applied", "reply_needed", "interviewed", "offered", "rejected", "ignore"]
-                      },
-                      confidence: {
-                        type: "STRING",
-                        enum: ["high", "medium", "low"]
-                      }
-                    },
-                    required: ["id", "is_job", "company", "role", "status", "confidence"]
-                  }
-                }
+            body: JSON.stringify({
+              model: OPENROUTER_MODEL,
+              messages: [
+                { role: "system", content: systemPrompt },
+                { role: "user", content: `Extract emails:\n${JSON.stringify(batchPromptPayload)}` }
+              ],
+              response_format: {
+                type: "json_schema",
+                json_schema: STRUCTURED_JSON_SCHEMA
               },
-              required: ["applications"]
-            }
+              temperature: 0
+            })
+          });
+
+          if (!response.ok) {
+            throw new Error(`OpenRouter HTTP ${response.status}: ${await response.text()}`);
           }
-        };
 
-        const response = await fetch(url, {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify(payload)
-        });
+          const json = await response.json();
+          const rawContent = json.choices?.[0]?.message?.content ?? "{}";
+          return parseJsonResponse(rawContent);
+        } else {
+          // Direct Gemini API call with structured schema
+          const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`;
+          const payload = {
+            contents: [
+              {
+                role: "user",
+                parts: [{ text: `${systemPrompt}\nEmails:\n${JSON.stringify(batchPromptPayload)}` }]
+              }
+            ],
+            generationConfig: {
+              temperature: 0,
+              maxOutputTokens: 2000,
+              responseMimeType: "application/json",
+              responseSchema: {
+                type: "OBJECT",
+                properties: {
+                  applications: {
+                    type: "ARRAY",
+                    items: {
+                      type: "OBJECT",
+                      properties: {
+                        id: { type: "STRING" },
+                        is_job: { type: "BOOLEAN" },
+                        company: { type: "STRING" },
+                        role: { type: "STRING" },
+                        status: {
+                          type: "STRING",
+                          enum: ["applied", "reply_needed", "interviewed", "offered", "rejected", "ignore"]
+                        },
+                        confidence: {
+                          type: "STRING",
+                          enum: ["high", "medium", "low"]
+                        }
+                      },
+                      required: ["id", "is_job", "company", "role", "status", "confidence"]
+                    }
+                  }
+                },
+                required: ["applications"]
+              }
+            }
+          };
 
-        if (!response.ok) {
-          throw new Error(`Gemini HTTP ${response.status}: ${await response.text()}`);
+          const response = await fetch(url, {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+
+          if (!response.ok) {
+            throw new Error(`Gemini HTTP ${response.status}: ${await response.text()}`);
+          }
+
+          const json = await response.json();
+          const text = json.candidates?.[0]?.content?.parts?.[0]?.text ?? "{}";
+          return parseJsonResponse(text);
         }
+      });
 
-        const json = await response.json();
-        const text = json.candidates?.[0]?.content?.parts?.[0]?.text ?? "{}";
-        return parseJsonResponse(text);
+      const parsedMap = new Map((Array.isArray(parsedBatch) ? parsedBatch : []).map((p) => [p.id, p]));
+      const batchResults = [];
+
+      for (const item of batch) {
+        const aiResult = parsedMap.get(item.message.id);
+        const isJob = aiResult?.is_job ?? aiResult?.is_job_application ?? false;
+
+        if (aiResult && isJob && aiResult.status !== "ignore") {
+          const cleanCompany = sanitizeCompanyName(aiResult.company);
+          const cleanRoleName = sanitizeRole(aiResult.role);
+          const validStatus = ALLOWED_STATUSES.has(aiResult.status) ? aiResult.status : "applied";
+
+          batchResults.push({
+            message: item.message,
+            parsed: item.parsed,
+            company: cleanCompany,
+            role: cleanRoleName,
+            status: validStatus,
+            confidence: aiResult.confidence || "high",
+            classifier: "openrouter",
+            reason: "AI extracted"
+          });
+        } else if (!aiResult) {
+          batchResults.push(extractWithHeuristics(item));
+        }
       }
-    });
-
-    const parsedMap = new Map((Array.isArray(parsedBatch) ? parsedBatch : []).map((p) => [p.id, p]));
-
-    for (const item of batch) {
-      const aiResult = parsedMap.get(item.message.id);
-      const isJob = aiResult?.is_job ?? aiResult?.is_job_application ?? false;
-
-      if (aiResult && isJob && aiResult.status !== "ignore") {
-        const cleanCompany = sanitizeCompanyName(aiResult.company);
-        const cleanRoleName = sanitizeRole(aiResult.role);
-        const validStatus = ALLOWED_STATUSES.has(aiResult.status) ? aiResult.status : "applied";
-
-        results.push({
-          message: item.message,
-          parsed: item.parsed,
-          company: cleanCompany,
-          role: cleanRoleName,
-          status: validStatus,
-          confidence: aiResult.confidence || "medium",
-          classifier: "openrouter",
-          reason: "AI extracted"
-        });
-      } else if (!aiResult) {
-        // Fallback for missing item in batch
-        results.push(extractWithHeuristics(item));
-      }
+      return batchResults;
+    } catch (err) {
+      console.warn(`Batch ${batchIndex + 1} AI call failed, using heuristics:`, err.message);
+      return batch.map(extractWithHeuristics);
     }
-  }
+  });
 
-  return results;
+  const resolvedBatches = await Promise.all(batchPromises);
+  return resolvedBatches.flat();
 }
 
 function parseJsonResponse(raw) {
