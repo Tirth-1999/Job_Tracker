@@ -1,8 +1,62 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-18T17:21:50.865Z",
+  "updatedAt": "2026-08-18T17:28:39.991Z",
   "lastHistoryId": null,
   "applications": [
+    {
+      "id": "infoway-group-euc-vdi-solutions-architect",
+      "company": "Infoway Group",
+      "role": "EUC / VDI Solutions Architect",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "EUC / VDI Solutions Architect",
+      "latestFrom": "Gohil Anos <Gohil@infowaygroup.com>",
+      "lastActivityAt": "2026-08-18T17:18:54.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a015e960aead7fd",
+      "gmailMessageIds": [
+        "1a015e960aead7fd"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "clifyx-sql-python-data-engineer",
+      "company": "Clifyx",
+      "role": "SQL / Python Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "SQL / Python Data Engineer- Richardson, TX 75082- 12+ month Contract",
+      "latestFrom": "Harshit Singh_JAN2021 <harshit@clifyx.com>",
+      "lastActivityAt": "2026-08-18T17:13:44.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a015e4a4132def6",
+      "gmailMessageIds": [
+        "1a015e4a4132def6"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "cm-placement-job-opportunities",
+      "company": "CM Placement",
+      "role": "Job Opportunities",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Job Opportunities – CM Placement Process",
+      "latestFrom": "Rubi Sharma <rubi.sharma@cmplacement.com>",
+      "lastActivityAt": "2026-08-18T17:12:53.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a015dcb34ea8345",
+      "gmailMessageIds": [
+        "1a015dcb34ea8345"
+      ],
+      "notes": ""
+    },
     {
       "id": "credigy-data-model-operations-engineer",
       "company": "Credigy",
@@ -17,6 +71,42 @@
       "gmailThreadId": "1a01521fac5c7992",
       "gmailMessageIds": [
         "1a01521fac5c7992"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "family-dollar-data-engineer",
+      "company": "Family Dollar",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Family Dollar",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-18T13:04:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014f9110ccd570",
+      "gmailMessageIds": [
+        "1a014f9110ccd570"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "code17tek-data-engineer",
+      "company": "Code17tek",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Code17Tek",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-18T13:03:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014f839ca18c36",
+      "gmailMessageIds": [
+        "1a014f839ca18c36"
       ],
       "notes": ""
     },
@@ -38,6 +128,24 @@
       "notes": ""
     },
     {
+      "id": "bioagilytix-data-engineer",
+      "company": "Bioagilytix",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to BioAgilytix",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-18T13:02:54.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014f7bb4e196ce",
+      "gmailMessageIds": [
+        "1a014f7bb4e196ce"
+      ],
+      "notes": ""
+    },
+    {
       "id": "doubleverify-general-application",
       "company": "DoubleVerify",
       "role": "General Application",
@@ -55,6 +163,24 @@
       "notes": ""
     },
     {
+      "id": "latentview-analytics-data-engineer-data-modeling-ai-infrastructure",
+      "company": "Latentview Analytics",
+      "role": "Data Engineer – Data Modeling & AI Infrastructure",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to LatentView Analytics",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-18T13:01:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014f61ebb98080",
+      "gmailMessageIds": [
+        "1a014f61ebb98080"
+      ],
+      "notes": ""
+    },
+    {
       "id": "headwater-science-general-application",
       "company": "Headwater Science",
       "role": "General Application",
@@ -68,6 +194,78 @@
       "gmailThreadId": "1a014f54dfc10522",
       "gmailMessageIds": [
         "1a014f54dfc10522"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "cresset-associate-data-engineer",
+      "company": "Cresset",
+      "role": "Associate, Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Cresset",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-18T12:59:46.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014f4db7daa356",
+      "gmailMessageIds": [
+        "1a014f4db7daa356"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "headwater-science-data-engineer",
+      "company": "Headwater Science",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Headwater Science",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-18T12:59:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014f444c06b81c",
+      "gmailMessageIds": [
+        "1a014f444c06b81c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "idr-inc-data-engineer",
+      "company": "Idr, Inc",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to IDR, Inc.",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-18T12:58:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014f3813a17834",
+      "gmailMessageIds": [
+        "1a014f3813a17834"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "smith-system-driver-risk-management-data-engineer-ii",
+      "company": "Smith System Driver Risk Management",
+      "role": "Data Engineer II",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Smith System Driver Risk Management",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-18T12:57:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014f295afeffa4",
+      "gmailMessageIds": [
+        "1a014f295afeffa4"
       ],
       "notes": ""
     },
@@ -102,6 +300,24 @@
       "gmailThreadId": "1a014e167c85b283",
       "gmailMessageIds": [
         "1a014e167c85b283"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "generac-analytics-engineer-ii-marketing",
+      "company": "Generac",
+      "role": "Analytics Engineer Ii, Marketing",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application for Analytics Engineer II, Marketing is on its way",
+      "latestFrom": "generac@myworkday.com",
+      "lastActivityAt": "2026-08-18T12:26:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014d6790f876f9",
+      "gmailMessageIds": [
+        "1a014d6790f876f9"
       ],
       "notes": ""
     },
@@ -174,6 +390,24 @@
       "notes": ""
     },
     {
+      "id": "greystar-job-application",
+      "company": "Greystar",
+      "role": "Job Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Greystar Application Was Received",
+      "latestFrom": "greystar@myworkday.com",
+      "lastActivityAt": "2026-08-18T12:12:25.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014c9808f22ab6",
+      "gmailMessageIds": [
+        "1a014c9808f22ab6"
+      ],
+      "notes": ""
+    },
+    {
       "id": "capstone-investment-advisors-general-application",
       "company": "Capstone Investment Advisors",
       "role": "General Application",
@@ -191,6 +425,25 @@
       "notes": ""
     },
     {
+      "id": "inceed-data-engineer",
+      "company": "Inceed",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Inceed",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-18T11:44:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a014b28d63eeb4f",
+      "gmailMessageIds": [
+        "1a014b28d63eeb4f",
+        "1a014af94a9288f2"
+      ],
+      "notes": ""
+    },
+    {
       "id": "american-medical-association-data-engineer-ii",
       "company": "American Medical Association",
       "role": "Data Engineer II",
@@ -204,6 +457,61 @@
       "gmailThreadId": "1a014066a148f2f1",
       "gmailMessageIds": [
         "1a014066a148f2f1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ibm-associate-data-engineer",
+      "company": "IBM",
+      "role": "Associate Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Action Required:IBM Assessments for completion Tirth Shah - 128750 Associate Data Engineer 2027",
+      "latestFrom": "IBM Talent Acquisition <talent@ibm.com>",
+      "lastActivityAt": "2026-08-18T06:32:44.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0139352744cf6f",
+      "gmailMessageIds": [
+        "1a013e6245ee3ec0",
+        "1a0139352744cf6f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "travelers-job-application",
+      "company": "Travelers",
+      "role": "Job Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in Travelers",
+      "latestFrom": "travelers@myworkday.com",
+      "lastActivityAt": "2026-08-18T05:22:28.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a013523030ba8f9",
+      "gmailMessageIds": [
+        "1a013523030ba8f9"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gm-agentic-data-engineer",
+      "company": "GM",
+      "role": "Agentic Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your interest in Agentic Data Engineer at GM",
+      "latestFrom": "Tsenta Inbox <inbox@mail.tsenta.com>",
+      "lastActivityAt": "2026-08-18T04:47:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0133262aa6302b",
+      "gmailMessageIds": [
+        "1a0133262aa6302b"
       ],
       "notes": ""
     },
@@ -258,6 +566,24 @@
       "gmailMessageIds": [
         "1a011d7d439ba787",
         "1a011d7c8c26e181"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "atc-ba",
+      "company": "ATC",
+      "role": "BA",
+      "status": "offered",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Kirstyn Thompson sent you ATC Offer Letter - Tirth Chirayu Shah BA via PandaDoc",
+      "latestFrom": "Kirstyn Thompson via PandaDoc <docs@email.pandadoc.net>",
+      "lastActivityAt": "2026-08-17T19:42:42.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0113f64691b4ca",
+      "gmailMessageIds": [
+        "1a0113f64691b4ca"
       ],
       "notes": ""
     },
