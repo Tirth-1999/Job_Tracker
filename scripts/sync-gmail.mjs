@@ -48,8 +48,12 @@ const ATS_DOMAINS = new Set([
   "greenhouse.io",
   "hire.lever.co",
   "icims.com",
+  "jobylon.com",
   "jobvite.com",
+  "mail.tsenta.com",
   "myworkday.com",
+  "newtonsoftware.com",
+  "pinpoint.email",
   "smartrecruiters.com",
   "workablemail.com",
   "workday.com"
@@ -66,8 +70,11 @@ const GENERIC_COMPANY_WORDS = new Set([
   "lever",
   "mail",
   "notifications",
+  "human resources",
+  "inbox",
   "recruiting",
   "talent",
+  "tsenta inbox",
   "unknown company",
   "us",
   "workable"
@@ -177,9 +184,16 @@ const COMPANY_HINTS = [
   /your application was sent to ([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
   /thank you for (?:your application to|applying to|applying at) ([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
   /thanks for applying to ([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
-  /application (?:received|update) (?:from|for|at) ([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
+  /application (?:received|update) (?:from|for|at|with) ([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
   /application received .* at ([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
-  /(?:from|at)\s+([A-Z][A-Za-z0-9&.\- ]{1,50})/i,
+  /application received.*\bat\s+([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
+  /application received\s*[-—:|]\s*.*\bat\s+([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
+  /(?:an update|update|important information) (?:on|about|regarding) your ([A-Z][A-Za-z0-9&.'\- ]{1,60}) application/i,
+  /regarding your application (?:to|with|at) ([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
+  /your application status with ([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
+  /(?:position|role) at ([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
+  /^([A-Z][A-Za-z0-9&.'\- ]{1,60})\s*[-—:|]\s*(?:thank|application|candidate|your)/i,
+  /^([A-Z][A-Za-z0-9&.'\- ]{1,60})\s+application received/i,
   /^([A-Z][A-Za-z0-9&.\- ]{1,50})\s+(?:careers|recruiting|talent|jobs)$/i
 ];
 
@@ -350,23 +364,41 @@ function classify(parsed) {
 }
 
 function inferCompany({ fromName, fromDomain, subject, body }) {
-  const text = `${subject}\n${body.slice(0, 2000)}`;
-
   for (const regex of COMPANY_HINTS) {
-    const match = text.match(regex);
+    const match = subject.match(regex);
     const company = normalizeCompanyName(match?.[1]);
     if (company) return company;
   }
+
+  const bodyCompany = inferCompanyFromStructuredBody(body);
+  if (bodyCompany) return bodyCompany;
 
   const senderCompany = normalizeCompanyName(fromName);
   if (senderCompany && !isGenericCompany(senderCompany)) return senderCompany;
 
   if (fromDomain && !isGenericDomain(fromDomain) && !isAtsDomain(fromDomain)) {
-    const company = normalizeCompanyName(fromDomain.split(".")[0].replaceAll("-", " "));
+    const company = normalizeCompanyName(companyFromDomain(fromDomain));
     if (company) return company;
   }
 
   return "Unknown company";
+}
+
+function inferCompanyFromStructuredBody(body) {
+  const firstChunk = body.slice(0, 1200);
+  const patterns = [
+    /Company:\s*([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
+    /Employer:\s*([A-Z][A-Za-z0-9&.'\- ]{1,60})/i,
+    /Job\s+Company:\s*([A-Z][A-Za-z0-9&.'\- ]{1,60})/i
+  ];
+
+  for (const regex of patterns) {
+    const match = firstChunk.match(regex);
+    const company = normalizeCompanyName(match?.[1]);
+    if (company) return company;
+  }
+
+  return "";
 }
 
 function inferRole(subject, body) {
@@ -389,12 +421,14 @@ function normalizeCompanyName(value) {
   if (!value) return "";
   const cleaned = value
     .replace(/["'<>]/g, "")
+    .replace(/&amp;/gi, "&")
+    .replace(/\S+@\S+/g, "")
     .replace(/\b(hiring team|careers|recruiting|recruiter|talent|jobs|notifications|no.?reply|noreply)\b/gi, "")
     .replace(/\s+/g, " ")
     .trim()
     .replace(/[.!?,:;]+$/, "");
 
-  if (!cleaned || isGenericCompany(cleaned)) return "";
+  if (!cleaned || cleaned.length < 3 || isGenericCompany(cleaned)) return "";
   return titleCase(cleaned).slice(0, 80);
 }
 
@@ -426,7 +460,18 @@ function isGenericDomain(domain) {
 }
 
 function isGenericCompany(company) {
-  return GENERIC_COMPANY_WORDS.has(String(company).trim().toLowerCase());
+  const normalized = String(company).trim().toLowerCase();
+  return GENERIC_COMPANY_WORDS.has(normalized) || normalized.includes("@");
+}
+
+function companyFromDomain(domain) {
+  const labels = domain.split(".").filter(Boolean);
+  const candidate = labels.length > 2 && (labels[0].length <= 2 || ["mail", "email", "jobs", "careers"].includes(labels[0]))
+    ? labels[1]
+    : labels[0];
+
+  if (candidate.length <= 3) return candidate.toUpperCase();
+  return candidate.replaceAll("-", " ");
 }
 
 function upsertApplication(data, incoming) {
