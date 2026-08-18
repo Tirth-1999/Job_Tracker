@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-08-18T21:25:48.918Z",
+  "updatedAt": "2026-08-18T21:49:08.785Z",
   "applications": [
+    {
+      "id": "pyramid-consulting-data-engineer",
+      "company": "Pyramid Consulting",
+      "role": "Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Invitation for Pre-Screen for Data Engineer Role via Pyramid Consulting",
+      "latestFrom": "pair-noreply@pyramidci.com",
+      "lastActivityAt": "2026-08-18T21:37:15.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a016453376b2a56",
+      "gmailMessageIds": [
+        "1a016453376b2a56",
+        "1a0167c2c6bd4f70",
+        "1a016cea72bf26b8"
+      ],
+      "notes": ""
+    },
     {
       "id": "ampcus-software-dev-engineer-ii",
       "company": "AMPCUS",
@@ -53,25 +73,6 @@
       "gmailThreadId": "1a016979f0f30f78",
       "gmailMessageIds": [
         "1a016979f0f30f78"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "pyramid-consulting-data-engineer",
-      "company": "Pyramid Consulting",
-      "role": "Data Engineer",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Invitation for Pre-Screen for Data Engineer Role via Pyramid Consulting",
-      "latestFrom": "pair-noreply@pyramidci.com",
-      "lastActivityAt": "2026-08-18T20:07:10.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a016453376b2a56",
-      "gmailMessageIds": [
-        "1a016453376b2a56",
-        "1a0167c2c6bd4f70"
       ],
       "notes": ""
     },
