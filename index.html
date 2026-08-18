@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Tracker</title>
-    <link rel="stylesheet" href="./styles.css?v=1.6.0" />
+    <link rel="stylesheet" href="./styles.css?v=1.7.0" />
   </head>
   <body>
     <header class="topbar">
@@ -15,6 +15,10 @@
       <div class="toolbar">
         <input id="searchInput" type="search" placeholder="Search company, role, subject" />
         <button id="refreshButton" type="button">Refresh</button>
+        <button id="exportButton" class="btn-export" type="button" title="Download all applications into Excel / CSV spreadsheet">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Export to Excel
+        </button>
       </div>
     </header>
 
@@ -45,6 +49,6 @@
       </section>
     </main>
 
-    <script src="./app.js?v=1.6.0" type="module"></script>
+    <script src="./app.js?v=1.7.0" type="module"></script>
   </body>
 </html>

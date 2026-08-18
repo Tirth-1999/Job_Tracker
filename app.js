@@ -440,6 +440,66 @@ function switchTab(viewName) {
   if (viewEl) viewEl.classList.add("active");
 }
 
+function exportToExcel() {
+  const applications = state.data?.applications ?? [];
+  if (!applications.length) {
+    alert("No application data available to export.");
+    return;
+  }
+
+  // Headers for Excel / CSV export
+  const headers = [
+    "Company",
+    "Role",
+    "Status",
+    "Last Activity Date",
+    "Latest Email Subject",
+    "Latest From (Sender)",
+    "Confidence",
+    "Emails in Thread",
+    "Direct Gmail Link",
+    "Notes / Snippet"
+  ];
+
+  // Helper to safely escape CSV values for Excel
+  const escapeCsv = (val) => {
+    if (val === null || val === undefined) return '""';
+    const str = String(val).replace(/"/g, '""');
+    return `"${str}"`;
+  };
+
+  const rows = applications.map((app) => {
+    const status = normalizeStatus(app.effectiveStatus || app.status);
+    const gmailUrl = getGmailUrl(app);
+    return [
+      escapeCsv(app.company || "Unknown"),
+      escapeCsv(app.role || "General Application"),
+      escapeCsv(labelForStatus(status)),
+      escapeCsv(app.lastActivityAt ? new Date(app.lastActivityAt).toLocaleDateString() : ""),
+      escapeCsv(app.latestSubject || ""),
+      escapeCsv(app.latestFrom || ""),
+      escapeCsv(app.confidence || "high"),
+      escapeCsv(app.gmailMessageIds?.length || 1),
+      escapeCsv(gmailUrl),
+      escapeCsv(app.notes || "")
+    ].join(",");
+  });
+
+  // UTF-8 BOM (\uFEFF) ensures Excel displays international characters and punctuation cleanly
+  const csvContent = "\uFEFF" + [headers.map((h) => `"${h}"`).join(","), ...rows].join("\r\n");
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  const today = new Date().toISOString().split("T")[0];
+  a.href = url;
+  a.download = `job_applications_${today}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 byId("searchInput").addEventListener("input", (event) => {
   state.query = event.target.value;
   state.pageApps = 1;
@@ -468,6 +528,13 @@ byId("refreshButton").addEventListener("click", async () => {
     }, 2000);
   }
 });
+
+const exportBtn = byId("exportButton");
+if (exportBtn) {
+  exportBtn.addEventListener("click", () => {
+    exportToExcel();
+  });
+}
 
 for (const button of document.querySelectorAll(".tab")) {
   button.addEventListener("click", () => {

@@ -84,6 +84,24 @@ button:hover {
   border-color: var(--accent);
 }
 
+.btn-export {
+  background: #107c41;
+  color: #fff;
+  font-weight: 600;
+  border-color: #0e6b37;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-export:hover {
+  background: #0b5c2e;
+  border-color: #0b5c2e;
+  color: #fff;
+}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(6, minmax(130px, 1fr));
