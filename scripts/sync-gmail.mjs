@@ -65,61 +65,97 @@ async function main() {
   const token = await getAccessToken();
   const messages = await listMessages(token);
   const seenMessageIds = new Set(data.applications.flatMap((app) => app.gmailMessageIds ?? []));
-  const candidateMessages = [];
-  let skipped = 0;
-  let changed = resetData;
+  const unhandledMessages = messages.filter((m) => !seenMessageIds.has(m.id));
 
-  for (const messageRef of messages) {
-    if (seenMessageIds.has(messageRef.id)) continue;
+  console.log(`Discovered ${messages.length} total messages (${unhandledMessages.length} new/unprocessed).`);
 
-    const message = await getMessage(token, messageRef.id);
-    const parsed = parseMessage(message);
-
-    // Fast-path noise pre-filter (pure OTPs, security codes, billing receipts)
-    if (isObviousNoise(parsed.subject)) {
-      skipped += 1;
-      continue;
-    }
-
-    candidateMessages.push({ message, parsed });
+  if (!unhandledMessages.length && !resetData) {
+    console.log("No new Gmail messages to process.");
+    return;
   }
 
-  console.log(`Analyzing ${candidateMessages.length} candidate emails...`);
+  const keys = getAiApiKeys();
+  const rotator = keys.length > 0 ? new KeyRotator(keys) : null;
+  const BATCH_SIZE = 25;
+  let totalProcessed = 0;
+  let totalSaved = 0;
+  let changed = resetData;
 
-  const extractedItems = await processCandidateMessages(candidateMessages);
+  // Process in concurrent streaming batches
+  for (let i = 0; i < unhandledMessages.length; i += BATCH_SIZE) {
+    const batchRefs = unhandledMessages.slice(i, i + BATCH_SIZE);
+    
+    // 1. Fetch all emails in the batch concurrently in parallel
+    const fetchedBatch = await Promise.all(
+      batchRefs.map(async (ref) => {
+        try {
+          const message = await getMessage(token, ref.id);
+          const parsed = parseMessage(message);
+          return { message, parsed };
+        } catch (err) {
+          console.warn(`Failed to fetch message ${ref.id}:`, err.message);
+          return null;
+        }
+      })
+    );
 
-  for (const item of extractedItems) {
-    if (!item || item.status === "ignore" || !item.company || isGenericCompany(item.company)) {
-      skipped += 1;
-      continue;
+    // 2. Fast noise filtering
+    const candidateItems = fetchedBatch.filter(
+      (item) => item && item.parsed && !isObviousNoise(item.parsed.subject)
+    );
+
+    totalProcessed += batchRefs.length;
+    console.log(`[Batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(unhandledMessages.length / BATCH_SIZE)}] Fetched ${batchRefs.length} emails (${candidateItems.length} candidate jobs).`);
+
+    if (!candidateItems.length) continue;
+
+    // 3. Extract & Classify with AI (or heuristic fallback)
+    let extractedItems = [];
+    if (rotator) {
+      try {
+        extractedItems = await extractAndClassifyWithAI(candidateItems, rotator);
+      } catch (err) {
+        console.warn("AI extraction failed for batch, falling back to heuristics:", err.message);
+        extractedItems = candidateItems.map(extractWithHeuristics);
+      }
+    } else {
+      extractedItems = candidateItems.map(extractWithHeuristics);
     }
 
-    upsertApplication(data, {
-      id: makeApplicationId(item.company, item.role),
-      company: item.company,
-      role: item.role || "General Application",
-      status: item.status,
-      confidence: item.confidence || "medium",
-      classifier: item.classifier || "gemini",
-      reason: item.reason || "",
-      latestSubject: item.parsed.subject,
-      latestFrom: item.parsed.from,
-      lastActivityAt: item.parsed.date,
-      source: "gmail",
-      gmailThreadId: item.message.threadId,
-      gmailMessageIds: [item.message.id],
-      notes: ""
-    });
-    changed = true;
+    // 4. Upsert into dataset
+    for (const item of extractedItems) {
+      if (!item || item.status === "ignore" || !item.company || isGenericCompany(item.company)) {
+        continue;
+      }
+
+      upsertApplication(data, {
+        id: makeApplicationId(item.company, item.role),
+        company: item.company,
+        role: item.role || "General Application",
+        status: item.status,
+        confidence: item.confidence || "medium",
+        classifier: item.classifier || "openrouter",
+        reason: item.reason || "",
+        latestSubject: item.parsed.subject,
+        latestFrom: item.parsed.from,
+        lastActivityAt: item.parsed.date,
+        source: "gmail",
+        gmailThreadId: item.message.threadId,
+        gmailMessageIds: [item.message.id],
+        notes: ""
+      });
+      changed = true;
+      totalSaved += 1;
+    }
   }
 
   if (changed) {
     data.applications = cleanupApplications(data.applications);
     data.updatedAt = new Date().toISOString();
     await fs.writeFile(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`);
-    console.log(`Successfully updated applications data. Processed ${messages.length} messages, skipped ${skipped}.`);
+    console.log(`\nSuccessfully updated applications dataset! Processed ${totalProcessed} emails, saved/updated ${totalSaved} active applications.`);
   } else {
-    console.log(`No matching Gmail changes found. Processed ${messages.length} messages, skipped ${skipped}.`);
+    console.log(`No new matching applications found among ${totalProcessed} emails.`);
   }
 }
 
