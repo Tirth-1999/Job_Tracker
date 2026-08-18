@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-18T17:50:44.080Z",
+  "updatedAt": "2026-08-18T17:53:24.689Z",
   "lastHistoryId": null,
   "applications": [
     {
@@ -661,6 +661,26 @@
       "notes": ""
     },
     {
+      "id": "ford-data-engineer",
+      "company": "Ford",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Confirm your identity for job Data Engineer - 67674",
+      "latestFrom": "Ford Careers <RecruitingNoReply@ford.com>",
+      "lastActivityAt": "2026-08-17T15:58:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01570d468cccaa",
+      "gmailMessageIds": [
+        "1a01570d468cccaa",
+        "1a01072229d0ca6d",
+        "1a01071f909e328c"
+      ],
+      "notes": ""
+    },
+    {
       "id": "allied-onesource-data-engineer-iv",
       "company": "Allied OneSource",
       "role": "Data Engineer IV",
@@ -1204,6 +1224,24 @@
       "notes": ""
     },
     {
+      "id": "uber-data-scientist-i-tech",
+      "company": "Uber",
+      "role": "Data Scientist I, Tech",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Confirm your identity for 300707 - Data Scientist I, Tech",
+      "latestFrom": "Uber Talent <no-reply@uber.com>",
+      "lastActivityAt": "2026-08-17T00:23:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a00d1a5d2d3759d",
+      "gmailMessageIds": [
+        "1a00d1a5d2d3759d"
+      ],
+      "notes": ""
+    },
+    {
       "id": "brunswick-general-application",
       "company": "Brunswick",
       "role": "General Application",
@@ -1346,6 +1384,25 @@
       "gmailThreadId": "1a00629626688900",
       "gmailMessageIds": [
         "1a00629626688900"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tsenta-general-application",
+      "company": "Tsenta",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying",
+      "latestFrom": "Tsenta Inbox <inbox@mail.tsenta.com>",
+      "lastActivityAt": "2026-08-15T16:02:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a006298683c74c7",
+      "gmailMessageIds": [
+        "1a006298683c74c7",
+        "1a00629265d975a3"
       ],
       "notes": ""
     },
@@ -5003,6 +5060,26 @@
       "notes": ""
     },
     {
+      "id": "texas-instruments-data-engineer",
+      "company": "Texas Instruments",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Confirm your identity for job Data Engineer - 25016562",
+      "latestFrom": "Texas Instruments Recruiting <ti_myhiring_no-reply@recruiting.ti.com>",
+      "lastActivityAt": "2026-08-06T12:25:16.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fe1d1336387c13",
+      "gmailMessageIds": [
+        "19fe1d1336387c13",
+        "19fd709372cdd657",
+        "19fd70903497cd47"
+      ],
+      "notes": ""
+    },
+    {
       "id": "aarp-general-application",
       "company": "AARP",
       "role": "General Application",
@@ -8314,6 +8391,24 @@
       "notes": ""
     },
     {
+      "id": "ascot-data-engineer",
+      "company": "Ascot",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Confirm your identity for job Data Engineer - 976",
+      "latestFrom": "Talent Acquisition at Ascot Group <emkq.fa.sender@workflow.mail.em2.cloud.oracle.com>",
+      "lastActivityAt": "2026-07-28T11:50:27.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fa88fdd8fadfea",
+      "gmailMessageIds": [
+        "19fa88fdd8fadfea"
+      ],
+      "notes": ""
+    },
+    {
       "id": "cubist-systematic-data-engineer",
       "company": "Cubist Systematic",
       "role": "Data Engineer",
@@ -9622,6 +9717,24 @@
       "gmailThreadId": "19f93f7af9300590",
       "gmailMessageIds": [
         "19f93f7af9300590"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "healthpartners-data-engineer",
+      "company": "Healthpartners",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your recent job application for Data Engineer (Multiple Positions) - 122066",
+      "latestFrom": "HealthPartners Recruiting <donotreply.careers@healthpartners.com>",
+      "lastActivityAt": "2026-07-24T11:46:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f93f323e3a8437",
+      "gmailMessageIds": [
+        "19f93f323e3a8437"
       ],
       "notes": ""
     },
@@ -13626,6 +13739,28 @@
       "gmailThreadId": "19f6731e15212938",
       "gmailMessageIds": [
         "19f6731e15212938"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "unknown-data-engineer",
+      "company": "Unknown",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-15T19:03:27.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19febc8f6caaf4df",
+      "gmailMessageIds": [
+        "19febc8f6caaf4df",
+        "19fdc4ab157496a1",
+        "19f8fe1b7722c54e",
+        "19f6ab10260a50a9",
+        "19f6729a0bb15942"
       ],
       "notes": ""
     },

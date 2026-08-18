@@ -595,16 +595,64 @@ function inferRoleHeuristic(subject, body) {
   return match?.[1] || "General Application";
 }
 
+const COMPANY_MAP = {
+  "pwc": "PwC",
+  "gm": "General Motors",
+  "vt": "Virginia Tech",
+  "hcacareers": "HCA Healthcare",
+  "hca": "HCA Healthcare",
+  "castletoncommoditiesnoreply myworkday": "Castleton Commodities",
+  "castleton commodities": "Castleton Commodities",
+  "amex": "American Express",
+  "bah": "Booz Allen Hamilton",
+  "booz allen": "Booz Allen Hamilton",
+  "uta": "Utah Transit Authority",
+  "rideuta": "Utah Transit Authority",
+  "hgv": "Hilton Grand Vacations",
+  "ama": "American Medical Association",
+  "ama assn": "American Medical Association",
+  "usc": "USC",
+  "mercury insurance services, llc": "Mercury Insurance",
+  "mercury insurance": "Mercury Insurance",
+  "axtria, inc": "Axtria",
+  "axtria": "Axtria",
+  "dept®": "Dept",
+  "dept": "Dept",
+  "ontic technologies": "Ontic",
+  "ontic": "Ontic",
+  "allied onesource": "Allied OneSource",
+  "allied recruiting": "Allied OneSource",
+  "emergent staffing": "Emergent Software",
+  "emergent software": "Emergent Software",
+  "blains farm & fleet": "Blain's Farm & Fleet",
+  "dma": "DMA",
+  "physicians mutual insurance company": "Physicians Mutual Insurance",
+  "physicians mutual": "Physicians Mutual Insurance",
+  "ninjaholdings": "Ninja Holdings",
+  "ninja holdings": "Ninja Holdings",
+  "stellantis": "Stellantis",
+  "pepsi": "PepsiCo",
+  "pepsico": "PepsiCo",
+  "lilly": "Eli Lilly",
+  "eli lilly": "Eli Lilly"
+};
+
 function sanitizeCompanyName(company) {
   if (!company) return "Unknown Company";
   let cleaned = company
-    .replace(/["'<>]/g, "")
+    .replace(/["'<>®™]/g, "")
     .replace(/&amp;/gi, "&")
     .replace(/\S+@\S+/g, "")
-    .replace(/\b(hiring team|careers|recruiting|recruiter|talent|jobs|notifications|no.?reply|noreply|workday|greenhouse|lever|ashby)\b/gi, "")
+    .replace(/\b(hiring team|careers|recruiting team|recruiting|recruiter|talent acquisition|talent|jobs|notifications|no.?reply|noreply|workday|greenhouse|lever|ashby|smartrecruiters|bamboohr|admin|inbox|human resources|the)\b/gi, "")
+    .replace(/\s+(LLC|Inc|Corp|Corporation|Technologies|Services|Group|Co)\b/gi, "")
     .replace(/\s+/g, " ")
     .trim()
-    .replace(/[.!?,:;]+$/, "");
+    .replace(/[.!?,:;_\-]+$/, "");
+
+  const lower = cleaned.toLowerCase();
+  if (COMPANY_MAP[lower]) {
+    return COMPANY_MAP[lower];
+  }
 
   if (!cleaned || cleaned.length < 2) return "Unknown Company";
   return titleCase(cleaned).slice(0, 80);
@@ -615,12 +663,20 @@ function sanitizeRole(role) {
   let cleaned = role
     .split(/[.!?\n]/)[0]
     .replace(/\s+/g, " ")
-    .replace(/^(your application to|taking the time to apply to our open|applying to|applying for|application for|interest in)\s+/i, "")
+    .replace(/^(your application to|taking the time to apply to our open|applying to|applying for|application for|application to|interest in the|interest in|update on your|update on|recent job application for)\s+/i, "")
     .replace(/\s+(at|with|from)\s+[A-Z][A-Za-z0-9&.'\- ]+$/i, "")
+    .replace(/\s*\(Open\)\s*$/i, "")
+    .replace(/\s*\(Hybrid\)\s*$/i, "")
+    .replace(/\s*\(R\d+\)\s*,?\s*/i, "")
+    .replace(/\s*-\s*\d+\s*$/i, "")
+    .replace(/\s+in\s+[A-Za-z\s,]+$/i, "")
+    .replace(/\b(role|position)$/i, "")
+    .replace(/\|\s*.*$/i, "")
+    .replace(/[-–,;:\s]+$/, "")
     .trim()
     .slice(0, 80);
 
-  if (!cleaned || cleaned.length < 2 || /^applying$/i.test(cleaned)) {
+  if (!cleaned || cleaned.length < 2 || /^unknown$/i.test(cleaned) || /^applying$/i.test(cleaned)) {
     return "General Application";
   }
   return titleCase(cleaned);
@@ -631,7 +687,7 @@ function titleCase(value) {
     .split(/\s+/)
     .filter(Boolean)
     .map((word) => {
-      if (/^[A-Z0-9]{2,}$/.test(word)) return word;
+      if (/^[A-Z0-9-]{2,}$/.test(word)) return word;
       return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
     })
     .join(" ");

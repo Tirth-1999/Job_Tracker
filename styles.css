@@ -328,6 +328,82 @@ tr:last-child td {
   text-align: center;
 }
 
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.btn-gmail-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: #f0f4ff;
+  border: 1px solid #d0e0ff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-gmail-icon:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.btn-gmail-table {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  background: #f0f4ff;
+  border: 1px solid #d0e0ff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-gmail-table:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.pill-link {
+  text-decoration: none;
+  color: var(--accent);
+  transition: all 0.15s ease;
+}
+
+.pill-link:hover {
+  background: #e4ecff;
+  border-color: var(--accent);
+}
+
+#refreshButton {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+#refreshButton:hover {
+  background: #2057ca;
+}
+
+#refreshButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 @media (max-width: 900px) {
   .topbar {
     align-items: stretch;

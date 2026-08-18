@@ -50,10 +50,28 @@ const server = http.createServer(async (req, res) => {
     const token = await tokenResponse.json();
 
     res.writeHead(200, { "content-type": "text/plain" });
-    res.end("Refresh token created. You can close this tab and return to the terminal.");
+    res.end("Refresh token created successfully! You can close this tab and return to the terminal.");
 
-    console.log("\nGMAIL_REFRESH_TOKEN:");
-    console.log(token.refresh_token || "No refresh token returned. Revoke app access and retry with prompt=consent.");
+    const refreshToken = token.refresh_token;
+      const currentKey = process.env.OPENROUTER_API_KEY || "your_openrouter_api_key_here";
+      const envContent = [
+        `GMAIL_CLIENT_ID=${clientId}`,
+        `GMAIL_CLIENT_SECRET=${clientSecret}`,
+        `GMAIL_REFRESH_TOKEN=${refreshToken}`,
+        `OPENROUTER_API_KEY=${currentKey}`,
+        `OPENROUTER_MODEL=google/gemini-2.5-flash-lite`,
+        `GMAIL_BACKFILL=true`,
+        `GMAIL_RESET_DATA=false`,
+        ""
+      ].join("\n");
+      const fsSync = await import("node:fs");
+      fsSync.writeFileSync(".env", envContent);
+      console.log("\n✅ Successfully generated and saved GMAIL_REFRESH_TOKEN to .env!");
+      console.log(`GMAIL_REFRESH_TOKEN=${refreshToken}`);
+    } else {
+      console.log("\n⚠️ No refresh token returned. (Google only returns it the first time you consent).");
+      console.log("Tip: Remove the app from https://myaccount.google.com/permissions and retry.");
+    }
     server.close();
   } catch (error) {
     res.writeHead(500).end("Token exchange failed. Check the terminal.");
