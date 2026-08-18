@@ -9,7 +9,13 @@ const LANES = [
 const state = {
   data: null,
   query: "",
-  view: "board"
+  view: "board",
+  pageApps: 1,
+  pageSizeApps: 50,
+  pageCompanies: 1,
+  pageSizeCompanies: 50,
+  pageOther: 1,
+  pageSizeOther: 50
 };
 
 const byId = (id) => document.getElementById(id);
@@ -133,9 +139,51 @@ function renderCard(app) {
   `;
 }
 
+function renderPaginationBar(totalItems, currentPage, pageSize, prefix) {
+  if (totalItems === 0) return "";
+  const isAll = pageSize === "all";
+  const numPageSize = isAll ? totalItems : Number(pageSize);
+  const totalPages = isAll ? 1 : Math.ceil(totalItems / numPageSize);
+  const safePage = Math.min(Math.max(1, currentPage), totalPages);
+  const start = isAll ? 1 : (safePage - 1) * numPageSize + 1;
+  const end = isAll ? totalItems : Math.min(safePage * numPageSize, totalItems);
+
+  return `
+    <div class="pagination-bar">
+      <div class="pagination-info">
+        Showing <strong>${start}–${end}</strong> of <strong>${totalItems}</strong> entries
+      </div>
+      <div class="pagination-controls">
+        <label class="page-size-selector">
+          Rows:
+          <select id="${prefix}PageSizeSelect">
+            <option value="25" ${pageSize == 25 ? "selected" : ""}>25</option>
+            <option value="50" ${pageSize == 50 ? "selected" : ""}>50</option>
+            <option value="100" ${pageSize == 100 ? "selected" : ""}>100</option>
+            <option value="all" ${pageSize === "all" ? "selected" : ""}>All (${totalItems})</option>
+          </select>
+        </label>
+        <button id="${prefix}PrevBtn" class="btn-page" ${safePage <= 1 ? "disabled" : ""}>◀ Prev</button>
+        <span class="page-current">Page ${safePage} of ${totalPages}</span>
+        <button id="${prefix}NextBtn" class="btn-page" ${safePage >= totalPages ? "disabled" : ""}>Next ▶</button>
+      </div>
+    </div>
+  `;
+}
+
+function paginateArray(items, currentPage, pageSize) {
+  if (pageSize === "all") return items;
+  const numPageSize = Number(pageSize);
+  const totalPages = Math.ceil(items.length / numPageSize) || 1;
+  const safePage = Math.min(Math.max(1, currentPage), totalPages);
+  const start = (safePage - 1) * numPageSize;
+  return items.slice(start, start + numPageSize);
+}
+
 function renderCompanies(applications) {
   const companies = new Map();
   for (const app of applications) {
+    if (normalizeStatus(app.status) === "not_related") continue;
     const key = normalizeCompany(app.company);
     if (!companies.has(key)) {
       companies.set(key, {
@@ -151,12 +199,14 @@ function renderCompanies(applications) {
     if ((app.lastActivityAt || "") > (row.lastActivityAt || "")) row.lastActivityAt = app.lastActivityAt;
   }
 
-  const rows = [...companies.values()].sort((a, b) => a.company.localeCompare(b.company));
-  byId("companies").innerHTML = rows.length ? `
+  const allRows = [...companies.values()].sort((a, b) => a.company.localeCompare(b.company));
+  const pagedRows = paginateArray(allRows, state.pageCompanies, state.pageSizeCompanies);
+
+  byId("companies").innerHTML = allRows.length ? `
     <table>
       <thead><tr><th>Company</th><th>Applications</th><th>Status</th><th>Last Activity</th><th>Action</th></tr></thead>
       <tbody>
-        ${rows.map((row) => `
+        ${pagedRows.map((row) => `
           <tr>
             <td><strong>${escapeHtml(row.company)}</strong></td>
             <td>${row.count}</td>
@@ -167,16 +217,22 @@ function renderCompanies(applications) {
         `).join("")}
       </tbody>
     </table>
+    ${renderPaginationBar(allRows.length, state.pageCompanies, state.pageSizeCompanies, "comp")}
   ` : `<div class="empty">No companies found</div>`;
+
+  attachPaginationListeners("comp", allRows.length, "pageCompanies", "pageSizeCompanies", () => renderCompanies(applications));
 }
 
 function renderApplications(applications) {
-  const rows = [...applications].sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
-  byId("applications").innerHTML = rows.length ? `
+  const jobApps = applications.filter((app) => normalizeStatus(app.status) !== "not_related");
+  const allRows = [...jobApps].sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
+  const pagedRows = paginateArray(allRows, state.pageApps, state.pageSizeApps);
+
+  byId("applications").innerHTML = allRows.length ? `
     <table>
       <thead><tr><th>Company</th><th>Role</th><th>Status</th><th>Latest Email</th><th>Last Activity</th><th>Action</th></tr></thead>
       <tbody>
-        ${rows.map((app) => `
+        ${pagedRows.map((app) => `
           <tr>
             <td><strong>${escapeHtml(app.company || "Unknown company")}</strong></td>
             <td>${escapeHtml(app.role || "Unknown role")}</td>
@@ -188,21 +244,25 @@ function renderApplications(applications) {
         `).join("")}
       </tbody>
     </table>
+    ${renderPaginationBar(allRows.length, state.pageApps, state.pageSizeApps, "apps")}
   ` : `<div class="empty">No applications found</div>`;
+
+  attachPaginationListeners("apps", allRows.length, "pageApps", "pageSizeApps", () => renderApplications(applications));
 }
 
 function renderOtherEmails(applications) {
   const otherApps = applications.filter((app) => normalizeStatus(app.status) === "not_related");
-  const rows = [...otherApps].sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
+  const allRows = [...otherApps].sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
+  const pagedRows = paginateArray(allRows, state.pageOther, state.pageSizeOther);
 
-  byId("otherEmails").innerHTML = rows.length ? `
+  byId("otherEmails").innerHTML = allRows.length ? `
     <div style="padding: 14px 18px; border-bottom: 1px solid var(--border); background: #f8fafc; font-size: 13px; color: var(--muted);">
-      <strong>Catch-All Inbox:</strong> Showing ${rows.length} miscellaneous communications, portal account verifications, non-standard notifications, and recruiter digests.
+      <strong>Catch-All Inbox:</strong> Showing ${allRows.length} miscellaneous communications, portal account verifications, non-standard notifications, and recruiter digests.
     </div>
     <table>
       <thead><tr><th>Sender / Organization</th><th>Subject</th><th>Classification</th><th>Date</th><th>Action</th></tr></thead>
       <tbody>
-        ${rows.map((app) => `
+        ${pagedRows.map((app) => `
           <tr>
             <td><strong>${escapeHtml(app.company || "Other")}</strong></td>
             <td>${escapeHtml(app.latestSubject || "No subject")}</td>
@@ -213,7 +273,44 @@ function renderOtherEmails(applications) {
         `).join("")}
       </tbody>
     </table>
+    ${renderPaginationBar(allRows.length, state.pageOther, state.pageSizeOther, "other")}
   ` : `<div class="empty">No other emails found</div>`;
+
+  attachPaginationListeners("other", allRows.length, "pageOther", "pageSizeOther", () => renderOtherEmails(applications));
+}
+
+function attachPaginationListeners(prefix, totalItems, pageKey, pageSizeKey, rerenderFn) {
+  const prevBtn = byId(`${prefix}PrevBtn`);
+  const nextBtn = byId(`${prefix}NextBtn`);
+  const sizeSelect = byId(`${prefix}PageSizeSelect`);
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      if (state[pageKey] > 1) {
+        state[pageKey] -= 1;
+        rerenderFn();
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      const numPageSize = state[pageSizeKey] === "all" ? totalItems : Number(state[pageSizeKey]);
+      const totalPages = Math.ceil(totalItems / numPageSize) || 1;
+      if (state[pageKey] < totalPages) {
+        state[pageKey] += 1;
+        rerenderFn();
+      }
+    });
+  }
+
+  if (sizeSelect) {
+    sizeSelect.addEventListener("change", (e) => {
+      state[pageSizeKey] = e.target.value === "all" ? "all" : Number(e.target.value);
+      state[pageKey] = 1;
+      rerenderFn();
+    });
+  }
 }
 
 function normalizeCompany(company) {
@@ -255,6 +352,9 @@ function switchTab(viewName) {
 
 byId("searchInput").addEventListener("input", (event) => {
   state.query = event.target.value;
+  state.pageApps = 1;
+  state.pageCompanies = 1;
+  state.pageOther = 1;
   render();
 });
 
