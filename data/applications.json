@@ -855,24 +855,6 @@
       "notes": ""
     },
     {
-      "id": "atc-offer-rollout",
-      "company": "ATC",
-      "role": "Offer Rollout",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Re: Details Required For Offer Rollout",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "lastActivityAt": "2026-08-17T18:27:37.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a010c26461b28d6",
-      "gmailMessageIds": [
-        "1a010faa67337ccf"
-      ],
-      "notes": ""
-    },
-    {
       "id": "atc-business-analyst",
       "company": "ATC",
       "role": "Business Analyst",
@@ -880,16 +862,17 @@
       "confidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted",
-      "latestSubject": "Details Required For Offer Rollout",
-      "latestFrom": "Divya Maran <divya@atc.xyz>",
-      "lastActivityAt": "2026-08-17T17:26:08.000Z",
+      "latestSubject": "Kirstyn Thompson sent you ATC Offer Letter - Tirth Chirayu Shah BA via PandaDoc",
+      "latestFrom": "Kirstyn Thompson via PandaDoc <docs@email.pandadoc.net>",
+      "lastActivityAt": "2026-08-17T19:22:15.000Z",
       "source": "gmail",
       "gmailThreadId": "1a0113f64691b4ca",
       "gmailMessageIds": [
         "1a0113f64691b4ca",
-        "1a010c26461b28d6"
+        "1a010c26461b28d6",
+        "1a010faa67337ccf"
       ],
-      "notes": ""
+      "notes": "Formal Offer Letter sent by Kirstyn Thompson via PandaDoc for Business Analyst role ($70,000)"
     },
     {
       "id": "true-classic-your-interest-in-the-data-analytics-engineer-role-and-for-taking-the-time-to-a",

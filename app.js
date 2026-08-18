@@ -342,6 +342,8 @@ function attachPaginationListeners(prefix, totalItems, pageKey, pageSizeKey, rer
       state[pageSizeKey] = e.target.value === "all" ? "all" : Number(e.target.value);
       state[pageKey] = 1;
       rerenderFn();
+    });
+  });
 }
 
 function normalizeCompany(company) {
