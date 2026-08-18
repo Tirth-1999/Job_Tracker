@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-18T22:25:09.901Z",
+  "updatedAt": "2026-08-18T22:51:47.994Z",
   "applications": [
+    {
+      "id": "eliyan-software-engineer",
+      "company": "Eliyan",
+      "role": "Software Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest.",
+      "latestFrom": "Kay Nord <kay@eliyan.com>",
+      "lastActivityAt": "2026-08-18T22:43:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0170b307fa988a",
+      "gmailMessageIds": [
+        "1a0170b307fa988a"
+      ],
+      "notes": ""
+    },
     {
       "id": "texas-rangers-general-application",
       "company": "Texas Rangers",
