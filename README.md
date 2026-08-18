@@ -27,6 +27,19 @@ python3 -m http.server 8080
 
 Then open `http://localhost:8080`.
 
+## Vercel Deployment
+
+1. Push this repository to GitHub.
+2. In Vercel, choose **Add New > Project**.
+3. Import the GitHub repository.
+4. Keep the framework preset as **Other**.
+5. Leave build command and output directory empty.
+6. Deploy.
+
+When the GitHub Action commits updated Gmail data, Vercel's GitHub integration will redeploy the static site from the latest commit.
+
+This project intentionally does not use GitHub Pages.
+
 ## Gmail Sync Setup
 
 Create a Google OAuth web client with Gmail API enabled.
