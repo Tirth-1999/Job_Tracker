@@ -182,29 +182,35 @@ async function getAccessToken() {
 
 async function listMessages(token) {
   const isBackfill = process.env.GMAIL_BACKFILL === "true";
-  const query = process.env.GMAIL_QUERY || (isBackfill ? DEFAULT_BACKFILL_QUERY : DEFAULT_RECENT_QUERY);
-  const maxResults = Number(process.env.GMAIL_MAX_RESULTS || (isBackfill ? "100" : "50"));
-  const maxPages = Number(process.env.GMAIL_MAX_PAGES || (isBackfill ? "20" : "1"));
+  const fetchAll = process.env.GMAIL_FETCH_ALL !== "false";
+  const query = process.env.GMAIL_QUERY || (fetchAll ? "" : (isBackfill ? DEFAULT_BACKFILL_QUERY : DEFAULT_RECENT_QUERY));
+  const maxResults = 500;
+  const maxPages = Number(process.env.GMAIL_MAX_PAGES || "20");
   const messages = [];
   let pageToken = process.env.GMAIL_PAGE_TOKEN || "";
+
+  console.log(`🔍 Listing Gmail messages (query: "${query || 'ALL MAIL'}")...`);
 
   for (let page = 0; page < maxPages; page += 1) {
     const url = new URL(`${GMAIL_API}/messages`);
     url.searchParams.set("maxResults", String(maxResults));
-    url.searchParams.set("q", query);
+    if (query) url.searchParams.set("q", query);
     if (pageToken) url.searchParams.set("pageToken", pageToken);
 
     const response = await gmailFetch(token, url);
     const json = await response.json();
     messages.push(...(json.messages ?? []));
 
+    console.log(`Page ${page + 1}: retrieved ${json.messages?.length || 0} messages (total: ${messages.length})`);
+
     pageToken = json.nextPageToken;
     if (!pageToken) break;
   }
 
-  console.log(`Gmail query: ${query}`);
-  console.log(`Fetched ${messages.length} message references.`);
-  return messages;
+  // Deduplicate message references by ID
+  const uniqueMessages = [...new Map(messages.map((m) => [m.id, m])).values()];
+  console.log(`Fetched ${uniqueMessages.length} total unique message references from Gmail.`);
+  return uniqueMessages;
 }
 
 async function getMessage(token, id) {
