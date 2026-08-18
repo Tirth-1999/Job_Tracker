@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-18T16:08:02.543Z",
+  "updatedAt": "2026-08-18T16:12:42.541Z",
   "lastHistoryId": null,
   "applications": [
     {
@@ -100,22 +100,6 @@
       "notes": ""
     },
     {
-      "id": "applicants-for-each-of-our-positions-if-you-are-se-your-interest-in-axogen",
-      "company": "Applicants For Each Of Our Positions. If You Are Se",
-      "role": "your interest in Axogen",
-      "status": "applied",
-      "confidence": "low",
-      "latestSubject": "Thanks!  We're excited you've chosen to apply to Axogen!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-18T12:28:20.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a014d81754f9979",
-      "gmailMessageIds": [
-        "1a014d81754f9979"
-      ],
-      "notes": ""
-    },
-    {
       "id": "arcadia-your-application-to-arcadia",
       "company": "Arcadia",
       "role": "your application to Arcadia",
@@ -196,8 +180,8 @@
       "notes": ""
     },
     {
-      "id": "cs-unknown-role",
-      "company": "Cs",
+      "id": "ama-assn-unknown-role",
+      "company": "Ama Assn",
       "role": "Unknown role",
       "status": "applied",
       "confidence": "low",
@@ -208,6 +192,23 @@
       "gmailThreadId": "1a014066a148f2f1",
       "gmailMessageIds": [
         "1a014066a148f2f1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "verizon-unknown-role",
+      "company": "Verizon",
+      "role": "Unknown role",
+      "status": "applied",
+      "confidence": "low",
+      "latestSubject": "Update on your Verizon Application: Associate Director, Corporate Data Engineering R-1097185 in Irving, Texas",
+      "latestFrom": "Tsenta Inbox <inbox@mail.tsenta.com>",
+      "lastActivityAt": "2026-08-18T04:46:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01331020b1c193",
+      "gmailMessageIds": [
+        "1a01331020b1c193",
+        "1a01330f7952e2a3"
       ],
       "notes": ""
     },
@@ -229,8 +230,8 @@
       "notes": ""
     },
     {
-      "id": "workday-bah-com-data-engineer-senior",
-      "company": "Workday@bah.com",
+      "id": "bah-data-engineer-senior",
+      "company": "BAH",
       "role": "Data Engineer, Senior",
       "status": "applied",
       "confidence": "low",
@@ -246,8 +247,8 @@
       "notes": ""
     },
     {
-      "id": "this-time-we-had-a-strong-pool-for-this-one-your-interest-in-the-data-analytics-engineer-role-and-for-taking-the-time-to-a",
-      "company": "This Time. We Had A Strong Pool For This One",
+      "id": "true-classic-your-interest-in-the-data-analytics-engineer-role-and-for-taking-the-time-to-a",
+      "company": "True Classic",
       "role": "your interest in the Data & Analytics Engineer role and for taking the time to a",
       "status": "rejected",
       "confidence": "high",
@@ -262,8 +263,8 @@
       "notes": ""
     },
     {
-      "id": "this-time-we-truly-value-your-interest-in-e-source-your-interest-in-e-source",
-      "company": "This Time. We Truly Value Your Interest In E Source",
+      "id": "e-source-your-interest-in-e-source",
+      "company": "E Source",
       "role": "your interest in E Source",
       "status": "rejected",
       "confidence": "high",
@@ -278,8 +279,8 @@
       "notes": ""
     },
     {
-      "id": "workday-bah-com-applying",
-      "company": "Workday@bah.com",
+      "id": "bah-applying",
+      "company": "BAH",
       "role": "applying",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -311,8 +312,8 @@
       "notes": ""
     },
     {
-      "id": "tsenta-inbox-data-engineer",
-      "company": "Tsenta Inbox",
+      "id": "tsenta-data-engineer",
+      "company": "Tsenta",
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "low",
@@ -344,8 +345,8 @@
       "notes": ""
     },
     {
-      "id": "shield-ai-after-reviewing-your-work-and-experience-your-interest-tirth",
-      "company": "Shield Ai. After Reviewing Your Work And Experience",
+      "id": "shield-ai-your-interest-tirth",
+      "company": "Shield AI",
       "role": "your interest, Tirth",
       "status": "applied",
       "confidence": "low",
@@ -408,8 +409,8 @@
       "notes": ""
     },
     {
-      "id": "our-mid-level-data-engineer-applying-to-our-mid-level-data-engineer-analyst-usa-role",
-      "company": "Our Mid-level Data Engineer",
+      "id": "cogniify-applying-to-our-mid-level-data-engineer-analyst-usa-role",
+      "company": "Cogniify",
       "role": "applying to our Mid-Level Data Engineer / Analyst - USA role",
       "status": "reply_needed",
       "confidence": "medium",
@@ -440,8 +441,8 @@
       "notes": ""
     },
     {
-      "id": "matrix-global-applying-for-data-modeling-ai-analytics",
-      "company": "Matrix Global",
+      "id": "we-got-it-applying-for-data-modeling-ai-analytics",
+      "company": "We Got It",
       "role": "applying for Data Modeling & AI Analytics",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -504,8 +505,8 @@
       "notes": ""
     },
     {
-      "id": "human-resources-thank-you-again-for-your-interest-your-recent-employment-inquiry-to-the-purdue-research-foundation-purdue-for-life",
-      "company": "Human Resources. Thank You Again For Your Interest",
+      "id": "purdue-for-life-foundation-your-recent-employment-inquiry-to-the-purdue-research-foundation-purdue-for-life",
+      "company": "Purdue For Life Foundation",
       "role": "your recent employment inquiry to the Purdue Research Foundation/Purdue For Life",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -552,8 +553,8 @@
       "notes": ""
     },
     {
-      "id": "the-meduvi-team-your-application",
-      "company": "The Meduvi Team",
+      "id": "meduvi-action-request-your-application",
+      "company": "Meduvi Action Request",
       "role": "your Application",
       "status": "reply_needed",
       "confidence": "medium",
@@ -632,8 +633,8 @@
       "notes": ""
     },
     {
-      "id": "usc-workday-notification-applying",
-      "company": "USC Workday Notification",
+      "id": "usc-applying",
+      "company": "USC",
       "role": "Applying",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -776,8 +777,8 @@
       "notes": ""
     },
     {
-      "id": "brunswick-unknown-role",
-      "company": "Brunswick",
+      "id": "brunswick-workday-admin-unknown-role",
+      "company": "Brunswick Workday Admin",
       "role": "Unknown role",
       "status": "applied",
       "confidence": "low",
@@ -788,22 +789,6 @@
       "gmailThreadId": "1a0096e628c39109",
       "gmailMessageIds": [
         "1a0096e628c39109"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "bpd-applying-for-ai-engineer",
-      "company": "BPD",
-      "role": "applying for AI Engineer",
-      "status": "interviewed",
-      "confidence": "medium",
-      "latestSubject": "Application Confirmed! Thank you for applying for AI Engineer at BPD.",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-16T05:25:04.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a00907ddc165a2b",
-      "gmailMessageIds": [
-        "1a00907ddc165a2b"
       ],
       "notes": ""
     },
@@ -824,8 +809,8 @@
       "notes": ""
     },
     {
-      "id": "csc-your-application-for-senior-data-scientist",
-      "company": "CSC",
+      "id": "workflow-your-application-for-senior-data-scientist",
+      "company": "Workflow",
       "role": "your application for Senior Data Scientist",
       "status": "applied",
       "confidence": "low",
@@ -840,8 +825,8 @@
       "notes": ""
     },
     {
-      "id": "tsenta-inbox-associate-director-corporate-data-engineering",
-      "company": "Tsenta Inbox",
+      "id": "tsenta-associate-director-corporate-data-engineering",
+      "company": "Tsenta",
       "role": "Associate Director, Corporate Data Engineering",
       "status": "applied",
       "confidence": "low",
@@ -856,8 +841,8 @@
       "notes": ""
     },
     {
-      "id": "tsenta-inbox-applying",
-      "company": "Tsenta Inbox",
+      "id": "tsenta-applying",
+      "company": "Tsenta",
       "role": "Applying",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -873,8 +858,8 @@
       "notes": ""
     },
     {
-      "id": "tsenta-inbox-engineer-ii-ai-ml-engineering",
-      "company": "Tsenta Inbox",
+      "id": "tsenta-engineer-ii-ai-ml-engineering",
+      "company": "Tsenta",
       "role": "Engineer II - AI/ML Engineering",
       "status": "applied",
       "confidence": "low",
@@ -889,8 +874,8 @@
       "notes": ""
     },
     {
-      "id": "tsenta-inbox-unknown-role",
-      "company": "Tsenta Inbox",
+      "id": "agentic-data-engineer-jr-202616159-agentic-data-engineer-unknown-role",
+      "company": "Agentic Data Engineer - Jr-202616159 Agentic Data Engineer",
       "role": "Unknown role",
       "status": "applied",
       "confidence": "low",
@@ -898,10 +883,8 @@
       "latestFrom": "Tsenta Inbox <inbox@mail.tsenta.com>",
       "lastActivityAt": "2026-08-15T15:57:18.000Z",
       "source": "gmail",
-      "gmailThreadId": "1a01331020b1c193",
+      "gmailThreadId": "1a00624518608fb9",
       "gmailMessageIds": [
-        "1a01331020b1c193",
-        "1a01330f7952e2a3",
         "1a00624518608fb9"
       ],
       "notes": ""
@@ -939,40 +922,8 @@
       "notes": ""
     },
     {
-      "id": "dept-your-interest-in-opportunities",
-      "company": "DEPT",
-      "role": "your interest in opportunities",
-      "status": "reply_needed",
-      "confidence": "medium",
-      "latestSubject": "Whoo! We've received your application!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-15T14:31:02.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a005d558a103593",
-      "gmailMessageIds": [
-        "1a005d558a103593"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "esris-spatial-data-engineer-i-position-unfortunately-applying-to-esri",
-      "company": "Esris Spatial Data Engineer I Position. Unfortunately",
-      "role": "applying to Esri",
-      "status": "rejected",
-      "confidence": "high",
-      "latestSubject": "Your application status with Esri",
-      "latestFrom": "no-reply@esri.com",
-      "lastActivityAt": "2026-08-14T21:13:39.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0021f965abb666",
-      "gmailMessageIds": [
-        "1a0021f965abb666"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "emergent-software-we-sincerely-appreciate-your-int-your-interest-in-emergent-software",
-      "company": "Emergent Software. We Sincerely Appreciate Your Int",
+      "id": "briana-smith-your-interest-in-emergent-software",
+      "company": "Briana Smith",
       "role": "your interest in Emergent Software",
       "status": "rejected",
       "confidence": "high",
@@ -987,8 +938,8 @@
       "notes": ""
     },
     {
-      "id": "this-time-while-you-have-many-skills-that-could-be-your-interest-in-lantern-and-the-data-engineer-ii-position",
-      "company": "This Time. While You Have Many Skills That Could Be",
+      "id": "lanterncare-your-interest-in-lantern-and-the-data-engineer-ii-position",
+      "company": "Lanterncare",
       "role": "your interest in Lantern and the Data Engineer II position",
       "status": "rejected",
       "confidence": "high",
@@ -1003,8 +954,8 @@
       "notes": ""
     },
     {
-      "id": "yourself-up-thinking-scannability",
-      "company": "Yourself Up Thinking",
+      "id": "team-scannability",
+      "company": "Team",
       "role": "scannability",
       "status": "applied",
       "confidence": "low",
@@ -1019,8 +970,8 @@
       "notes": ""
     },
     {
-      "id": "behind-every-application-is-a-real-person-who-spent-your-interest-in-samsara",
-      "company": "Behind Every Application Is A Real Person Who Spent",
+      "id": "samsara-your-interest-in-samsara",
+      "company": "Samsara",
       "role": "your interest in Samsara",
       "status": "rejected",
       "confidence": "high",
@@ -1035,8 +986,8 @@
       "notes": ""
     },
     {
-      "id": "the-scion-group-there-are-lots-of-great-opportunit-investing-your-time-in-applying-for-the-data-engineer-position",
-      "company": "The Scion Group. There Are Lots Of Great Opportunit",
+      "id": "the-scion-group-investing-your-time-in-applying-for-the-data-engineer-position",
+      "company": "The Scion Group",
       "role": "investing your time in applying for the Data Engineer position",
       "status": "applied",
       "confidence": "low",
@@ -1099,24 +1050,8 @@
       "notes": ""
     },
     {
-      "id": "ledgebrook-applying-for-data-engineer",
-      "company": "Ledgebrook",
-      "role": "applying for Data Engineer",
-      "status": "initial_revert_needed",
-      "confidence": "high",
-      "latestSubject": "We Got It: Thanks for applying for Data Engineer",
-      "latestFrom": "Ledgebrook <no-reply@ledgebrook.comeet-notifications.com>",
-      "lastActivityAt": "2026-08-14T12:46:56.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0004faff6f3c07",
-      "gmailMessageIds": [
-        "1a0004faff6f3c07"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "united-states-soccer-federation-1-applying",
-      "company": "UNITED STATES SOCCER FEDERATION 1",
+      "id": "ussf-applying",
+      "company": "USSF",
       "role": "applying",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -1195,8 +1130,8 @@
       "notes": ""
     },
     {
-      "id": "publicis-sapient-our-people-are-our-greatest-asset-your-referral",
-      "company": "Publicis Sapient. Our People Are Our Greatest Asset",
+      "id": "publicisgroupe-your-referral",
+      "company": "PUBLICISGROUPE",
       "role": "your referral",
       "status": "applied",
       "confidence": "low",
@@ -1275,8 +1210,8 @@
       "notes": ""
     },
     {
-      "id": "speria-your-application-for-data-engineer-your-application",
-      "company": "Speria. Your Application For Data Engineer",
+      "id": "speria-your-application",
+      "company": "Speria",
       "role": "your application",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -1291,8 +1226,8 @@
       "notes": ""
     },
     {
-      "id": "an-unmonitored-mailbox-please-do-not-reply-to-this-your-interest-in-aarp-and-applying-to-the-engineer-i-data-platforms-2026-7679-p",
-      "company": "An Unmonitored Mailbox. Please Do Not Reply To This",
+      "id": "aarp-your-interest-in-aarp-and-applying-to-the-engineer-i-data-platforms-2026-7679-p",
+      "company": "AARP",
       "role": "your interest in AARP and applying to the Engineer I, Data Platforms 2026-7679 p",
       "status": "applied",
       "confidence": "low",
@@ -1308,8 +1243,8 @@
       "notes": ""
     },
     {
-      "id": "the-data-engineer-position-at-swish-analytics-your-job-application",
-      "company": "The Data Engineer Position At Swish Analytics",
+      "id": "roddy-jones-swish-analytics-your-job-application",
+      "company": "Roddy Jones - Swish Analytics",
       "role": "your job application",
       "status": "rejected",
       "confidence": "high",
@@ -1340,8 +1275,8 @@
       "notes": ""
     },
     {
-      "id": "you-took-the-time-to-fill-out-our-application-we-w-considering-a-position",
-      "company": "You Took The Time To Fill Out Our Application. We W",
+      "id": "nicholas-mcculloch-considering-a-position",
+      "company": "Nicholas Mcculloch",
       "role": "considering a position",
       "status": "rejected",
       "confidence": "high",
@@ -1468,8 +1403,8 @@
       "notes": ""
     },
     {
-      "id": "our-us-nj-camden-location-thank-you-for-taking-the-your-application",
-      "company": "Our Us-nj-camden Location. Thank You For Taking The",
+      "id": "nfi-your-application",
+      "company": "NFI",
       "role": "Your Application",
       "status": "reply_needed",
       "confidence": "medium",
@@ -1516,8 +1451,8 @@
       "notes": ""
     },
     {
-      "id": "the-data-analytics-engineer-role-at-true-classic-weve-rec-applying-to-the-data-analytics-engineer-role",
-      "company": "The Data & Analytics Engineer Role At True Classic. Weve Rec",
+      "id": "true-classic-applying-to-the-data-analytics-engineer-role",
+      "company": "True Classic",
       "role": "applying to the Data & Analytics Engineer role",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -1596,22 +1531,6 @@
       "notes": ""
     },
     {
-      "id": "oddball-applying",
-      "company": "Oddball",
-      "role": "applying",
-      "status": "reply_needed",
-      "confidence": "medium",
-      "latestSubject": "Thank you for applying!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-13T11:57:11.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19ffafbc4fc15e49",
-      "gmailMessageIds": [
-        "19ffafbc4fc15e49"
-      ],
-      "notes": ""
-    },
-    {
       "id": "faith-technologies-applying",
       "company": "Faith Technologies",
       "role": "Applying",
@@ -1628,8 +1547,8 @@
       "notes": ""
     },
     {
-      "id": "scout-motors-we-truly-believe-that-the-world-needs-applying-for-the-manager-data-platform-ai-engineering-position",
-      "company": "Scout Motors. We Truly Believe That The World Needs",
+      "id": "scout-motors-applying-for-the-manager-data-platform-ai-engineering-position",
+      "company": "Scout Motors",
       "role": "applying for the Manager, Data Platform - AI Engineering position",
       "status": "rejected",
       "confidence": "high",
@@ -1640,6 +1559,22 @@
       "gmailThreadId": "19ff7d7092c655f7",
       "gmailMessageIds": [
         "19ff7d7092c655f7"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "staff-data-science-jr-202617273-staff-data-science-unknown-role",
+      "company": "Staff Data Science - Jr-202617273 Staff Data Science",
+      "role": "Unknown role",
+      "status": "applied",
+      "confidence": "low",
+      "latestSubject": "Regarding your application to Staff Data Science - JR-202617273 Staff Data Science (Open)",
+      "latestFrom": "generalmotors@myworkday.com",
+      "lastActivityAt": "2026-08-12T21:17:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19ff7d69800677ee",
+      "gmailMessageIds": [
+        "19ff7d69800677ee"
       ],
       "notes": ""
     },
@@ -1694,8 +1629,8 @@
       "notes": ""
     },
     {
-      "id": "monks-we-received-many-qualified-applicants-and-ha-taking-the-time-to-apply-to-our-business-systems-analyst-role",
-      "company": "Monks. We Received Many Qualified Applicants And Ha",
+      "id": "monks-taking-the-time-to-apply-to-our-business-systems-analyst-role",
+      "company": "Monks",
       "role": "taking the time to apply to our Business Systems Analyst role",
       "status": "rejected",
       "confidence": "high",
@@ -1710,8 +1645,8 @@
       "notes": ""
     },
     {
-      "id": "openai-tirth-shah",
-      "company": "Openai",
+      "id": "tirth-shah-tirth-shah",
+      "company": "Tirth Shah",
       "role": "Tirth Shah",
       "status": "rejected",
       "confidence": "high",
@@ -1726,8 +1661,8 @@
       "notes": ""
     },
     {
-      "id": "our-data-engineer-job-posting-after-reviewing-your-applicati-applying-to-our-data-engineer-job-posting",
-      "company": "Our Data Engineer Job Posting. After Reviewing Your Applicati",
+      "id": "briana-smith-applying-to-our-data-engineer-job-posting",
+      "company": "Briana Smith",
       "role": "applying to our Data Engineer job posting",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -1758,24 +1693,8 @@
       "notes": ""
     },
     {
-      "id": "the-analytics-engineer-analytics-engineer-data",
-      "company": "The Analytics Engineer",
-      "role": "Analytics Engineer, Data",
-      "status": "rejected",
-      "confidence": "high",
-      "latestSubject": "Your Application for Analytics Engineer, Data at Tailscale",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-12T14:43:41.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19ff66dd890c967d",
-      "gmailMessageIds": [
-        "19ff66dd890c967d"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "best-regards-applying-for-the-data-engineer-iv-position",
-      "company": "Best Regards",
+      "id": "tirth-chirayu-applying-for-the-data-engineer-iv-position",
+      "company": "Tirth Chirayu",
       "role": "applying for the Data Engineer IV position",
       "status": "reply_needed",
       "confidence": "medium",
@@ -1790,8 +1709,8 @@
       "notes": ""
     },
     {
-      "id": "you-applying-for-the-etl-data-engineer-role",
-      "company": "You",
+      "id": "952-395-5033-applying-for-the-etl-data-engineer-role",
+      "company": "(952) 395-5033",
       "role": "applying for the ETL Data Engineer role",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -1854,8 +1773,8 @@
       "notes": ""
     },
     {
-      "id": "our-applying-to-our",
-      "company": "Our",
+      "id": "xperteez-technology-applying-to-our",
+      "company": "Xperteez Technology",
       "role": "applying to our",
       "status": "reply_needed",
       "confidence": "medium",
@@ -1918,8 +1837,8 @@
       "notes": ""
     },
     {
-      "id": "abbvie-we-will-review-your-experience-and-qualific-applying-for-the-data-engineer-pds-t-cmc-r00148626-position",
-      "company": "Abbvie. We Will Review Your Experience And Qualific",
+      "id": "abbvie-application-received-applying-for-the-data-engineer-pds-t-cmc-r00148626-position",
+      "company": "Abbvie Application Received",
       "role": "applying for the Data Engineer, PDS&T CMC-R00148626 position",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -1968,8 +1887,8 @@
       "notes": ""
     },
     {
-      "id": "the-data-engineer-role-at-emergent-staffing-we-applying-to-emergent-staffing",
-      "company": "The Data Engineer Role At Emergent Staffing. We",
+      "id": "emergent-staffing-applying-to-emergent-staffing",
+      "company": "Emergent Staffing",
       "role": "applying to Emergent Staffing",
       "status": "reply_needed",
       "confidence": "medium",
@@ -1984,8 +1903,8 @@
       "notes": ""
     },
     {
-      "id": "my-side-i-look-forward-to-hearing-about-next-steps-sending-these-over",
-      "company": "My Side. I Look Forward To Hearing About Next Steps",
+      "id": "tirth-shah-sending-these-over",
+      "company": "Tirth Shah",
       "role": "sending these over",
       "status": "reply_needed",
       "confidence": "medium",
@@ -2032,8 +1951,8 @@
       "notes": ""
     },
     {
-      "id": "our-data-engineer-role-and-for-sharing-your-time-with-the-tea-applying-to-our-data-engineer-role-and-for-sharing-your-time",
-      "company": "Our Data Engineer Role And For Sharing Your Time With The Tea",
+      "id": "horizonsurgicalsystems-applying-to-our-data-engineer-role-and-for-sharing-your-time",
+      "company": "Horizonsurgicalsystems",
       "role": "applying to our Data Engineer role and for sharing your time",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -2048,8 +1967,8 @@
       "notes": ""
     },
     {
-      "id": "profound-after-careful-review-your-interest-in-the-analytics-engineer-ny-role",
-      "company": "Profound. After Careful Review",
+      "id": "profound-your-interest-in-the-analytics-engineer-ny-role",
+      "company": "Profound",
       "role": "your interest in the Analytics Engineer - NY role",
       "status": "rejected",
       "confidence": "high",
@@ -2064,8 +1983,8 @@
       "notes": ""
     },
     {
-      "id": "we-are-looking-for-your-interest-in-joining-k1x-and-for-taking-the-time-to-apply-for-the-data-engin",
-      "company": "We Are Looking For",
+      "id": "k1x-your-interest-in-joining-k1x-and-for-taking-the-time-to-apply-for-the-data-engin",
+      "company": "K1X",
       "role": "your interest in joining K1X and for taking the time to apply for the Data Engin",
       "status": "reply_needed",
       "confidence": "medium",
@@ -2096,8 +2015,24 @@
       "notes": ""
     },
     {
-      "id": "the-los-angeles-lakers-the-data-engineer-at-the-los-angeles-lakers-inc-has-been-received",
-      "company": "The Los Angeles Lakers",
+      "id": "kodiak-interiors-group-unknown-role",
+      "company": "Kodiak Interiors Group",
+      "role": "Unknown role",
+      "status": "applied",
+      "confidence": "low",
+      "latestSubject": "Kodiak Interiors Group: Application Update",
+      "latestFrom": "<KodiakInteriorsGroup.hr@adp.com>",
+      "lastActivityAt": "2026-08-11T13:03:27.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19ff0ebb8f475e79",
+      "gmailMessageIds": [
+        "19ff0ebb8f475e79"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "adp-the-data-engineer-at-the-los-angeles-lakers-inc-has-been-received",
+      "company": "ADP",
       "role": "the Data Engineer at The Los Angeles Lakers, Inc has been received",
       "status": "applied",
       "confidence": "low",
@@ -2160,8 +2095,8 @@
       "notes": ""
     },
     {
-      "id": "the-deployment-engineer-applying-to-base-power-company",
-      "company": "The Deployment Engineer",
+      "id": "base-power-company-applying-to-base-power-company",
+      "company": "Base Power Company",
       "role": "Applying to Base Power Company",
       "status": "reply_needed",
       "confidence": "medium",
@@ -2176,24 +2111,8 @@
       "notes": ""
     },
     {
-      "id": "applied-systems-if-your-experience-is-a-good-fit-f-submitting-your-application-for-our-data-engineer",
-      "company": "Applied Systems. If Your Experience Is A Good Fit F",
-      "role": "submitting your application for our Data Engineer",
-      "status": "reply_needed",
-      "confidence": "medium",
-      "latestSubject": "We've Received Your Application!",
-      "latestFrom": "\"Applied Systems, Inc. @ icims\" <appliedsystems+autoreply@talent.icims.com>",
-      "lastActivityAt": "2026-08-11T12:30:04.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19ff0cd2b12386af",
-      "gmailMessageIds": [
-        "19ff0cd2b12386af"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "donotreply-armanino-com-applying",
-      "company": "Donotreply@armanino.com",
+      "id": "armanino-applying",
+      "company": "Armanino",
       "role": "Applying",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -2224,8 +2143,8 @@
       "notes": ""
     },
     {
-      "id": "sequoia-connect-applying-for-junior-data-engineer",
-      "company": "Sequoia Connect",
+      "id": "we-got-it-applying-for-junior-data-engineer",
+      "company": "We Got It",
       "role": "applying for Junior Data Engineer",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -2289,8 +2208,8 @@
       "notes": ""
     },
     {
-      "id": "infosys-the-senior-lead-data-scientist",
-      "company": "Infosys",
+      "id": "tirth-shah-the-senior-lead-data-scientist",
+      "company": "Tirth Shah",
       "role": "the Senior / Lead Data Scientist",
       "status": "reply_needed",
       "confidence": "medium",
@@ -2305,8 +2224,8 @@
       "notes": ""
     },
     {
-      "id": "percepta-after-reviewing-your-application-we-applying-for-the-data-engineer-healthcare-role",
-      "company": "Percepta. After Reviewing Your Application We",
+      "id": "percepta-applying-for-the-data-engineer-healthcare-role",
+      "company": "Percepta",
       "role": "applying for the Data Engineer, Healthcare role",
       "status": "rejected",
       "confidence": "high",
@@ -2321,8 +2240,8 @@
       "notes": ""
     },
     {
-      "id": "mod-op-making-a-decision-to-join-an-organization-is-an-impor-applying-to-mod-op",
-      "company": "Mod Op. Making A Decision To Join An Organization Is An Impor",
+      "id": "mod-op-applying-to-mod-op",
+      "company": "Mod Op",
       "role": "applying to Mod Op",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -2337,8 +2256,8 @@
       "notes": ""
     },
     {
-      "id": "human-resources-your-interest-in-flexjet-and-the-ai-data-engineer-position",
-      "company": "Human Resources",
+      "id": "clearcompany-your-interest-in-flexjet-and-the-ai-data-engineer-position",
+      "company": "Clearcompany",
       "role": "your interest in Flexjet and the AI Data Engineer position",
       "status": "reply_needed",
       "confidence": "medium",
@@ -2353,8 +2272,8 @@
       "notes": ""
     },
     {
-      "id": "join-massive-rocket-we-applying-to-join-massive-rocket",
-      "company": "Join Massive Rocket. We",
+      "id": "massive-rocket-applying-to-join-massive-rocket",
+      "company": "Massive Rocket",
       "role": "applying to join Massive Rocket",
       "status": "rejected",
       "confidence": "high",
@@ -2450,8 +2369,8 @@
       "notes": ""
     },
     {
-      "id": "us-here-at-lovable-applying-to-lovable",
-      "company": "Us Here At Lovable",
+      "id": "lovable-applying-to-lovable",
+      "company": "Lovable",
       "role": "applying to Lovable",
       "status": "reply_needed",
       "confidence": "medium",
@@ -2499,8 +2418,8 @@
       "notes": ""
     },
     {
-      "id": "national-trench-safety-the-position-analytics-engineer-at-national-trench-safety-inc-has-been-received",
-      "company": "National Trench Safety",
+      "id": "adp-the-position-analytics-engineer-at-national-trench-safety-inc-has-been-received",
+      "company": "ADP",
       "role": "the position Analytics Engineer at National Trench Safety, Inc has been received",
       "status": "applied",
       "confidence": "low",
@@ -2596,8 +2515,8 @@
       "notes": ""
     },
     {
-      "id": "the-senior-data-engineer-databricks-position-at-sugarai-af-your-interest-in-sugarai-tirth",
-      "company": "The Senior Data Engineer - Databricks Position At Sugarai. Af",
+      "id": "sugarai-your-interest-in-sugarai-tirth",
+      "company": "Sugarai",
       "role": "your interest in SugarAI, Tirth",
       "status": "applied",
       "confidence": "low",
@@ -2612,8 +2531,8 @@
       "notes": ""
     },
     {
-      "id": "this-time-thank-you-again-for-your-interest-in-an-your-interest-in-our-data-engineer-opening",
-      "company": "This Time. Thank You Again For Your Interest In An",
+      "id": "ra-capital-your-interest-in-our-data-engineer-opening",
+      "company": "RA Capital",
       "role": "your interest in our Data Engineer opening",
       "status": "rejected",
       "confidence": "high",
@@ -2644,40 +2563,8 @@
       "notes": ""
     },
     {
-      "id": "pepsi-unknown-role",
-      "company": "@ Pepsi",
-      "role": "Unknown role",
-      "status": "applied",
-      "confidence": "low",
-      "latestSubject": "Your job application is incomplete!",
-      "latestFrom": "\"Jobs @ Pepsi\" <pepsico+autoreply@talent.icims.com>",
-      "lastActivityAt": "2026-08-08T04:18:15.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fdf97cf4b22d55",
-      "gmailMessageIds": [
-        "19fdf97cf4b22d55"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "vt-edu-unknown-role",
-      "company": "@vt.edu",
-      "role": "Unknown role",
-      "status": "applied",
-      "confidence": "low",
-      "latestSubject": "Incomplete job application reminder",
-      "latestFrom": "\"careers@vt.edu\" <careers-968@mail.pageuppeople.com>",
-      "lastActivityAt": "2026-08-07T23:03:30.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fde77a5452424d",
-      "gmailMessageIds": [
-        "19fde77a5452424d"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "rzr-global-inc-for-the-analyst-sf-position-we-applying-for-analyst-sf",
-      "company": "RZR Global Inc.for The Analyst- SF Position. We",
+      "id": "rzr-global-inc-applying-for-analyst-sf",
+      "company": "RZR Global Inc",
       "role": "applying for Analyst- SF",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -2774,8 +2661,8 @@
       "notes": ""
     },
     {
-      "id": "you-your-application",
-      "company": "You",
+      "id": "north-highland-your-application",
+      "company": "North Highland",
       "role": "Your Application",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -2786,22 +2673,6 @@
       "gmailThreadId": "19fdc2c224db91ab",
       "gmailMessageIds": [
         "19fdc2c224db91ab"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "fairview-offices-at-323-stinson-we-are-humbled-and-your-application-fairview-health-services",
-      "company": "Fairview Offices At 323 Stinson. We Are Humbled And",
-      "role": "your application - Fairview Health Services",
-      "status": "applied",
-      "confidence": "low",
-      "latestSubject": "Thank you for your application - Fairview Health Services",
-      "latestFrom": "\"Fairview Health Services @ icims\" <fairview+autoreply@talent.icims.com>",
-      "lastActivityAt": "2026-08-07T12:21:39.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fdc2c0229a734f",
-      "gmailMessageIds": [
-        "19fdc2c0229a734f"
       ],
       "notes": ""
     },
@@ -2838,8 +2709,8 @@
       "notes": ""
     },
     {
-      "id": "we-do-your-interest-in-joining-zelis",
-      "company": "We Do",
+      "id": "zelis-your-interest-in-joining-zelis",
+      "company": "Zelis",
       "role": "your interest in joining Zelis",
       "status": "reply_needed",
       "confidence": "medium",
@@ -2920,8 +2791,8 @@
       "notes": ""
     },
     {
-      "id": "mod-op-thinking-of-mod-op",
-      "company": "Mod Op",
+      "id": "we-got-your-application-thinking-of-mod-op",
+      "company": "We Got Your Application -",
       "role": "thinking of Mod Op",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -2936,8 +2807,8 @@
       "notes": ""
     },
     {
-      "id": "ziff-davis-data-engineer",
-      "company": "Ziff Davis",
+      "id": "ookla-team-data-engineer",
+      "company": "Ookla Team",
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "low",
@@ -2948,23 +2819,6 @@
       "gmailThreadId": "19fdbffecc8f149c",
       "gmailMessageIds": [
         "19fdbffecc8f149c"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "amit-data-engineer-finance-expert-role-next-steps",
-      "company": "Amit",
-      "role": "Data Engineer Finance Expert role - next steps",
-      "status": "reply_needed",
-      "confidence": "medium",
-      "latestSubject": "Your application for Data Engineer Finance Expert role - next steps",
-      "latestFrom": "Amit <amit@weekdaymail.com>",
-      "lastActivityAt": "2026-08-07T08:20:13.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fd623055ed48ab",
-      "gmailMessageIds": [
-        "19fe07e7e45acb3b",
-        "19fdb4f07e2f3ca4"
       ],
       "notes": ""
     },
@@ -2985,8 +2839,8 @@
       "notes": ""
     },
     {
-      "id": "rhythm-energy-and-for-taking-the-time-to-apply-we-your-interest-in-the-analytics-engineer-ii-role",
-      "company": "Rhythm Energy And For Taking The Time To Apply. We",
+      "id": "rhythm-energy-your-interest-in-the-analytics-engineer-ii-role",
+      "company": "Rhythm Energy",
       "role": "your interest in the Analytics Engineer II role",
       "status": "rejected",
       "confidence": "high",
@@ -3050,8 +2904,8 @@
       "notes": ""
     },
     {
-      "id": "abacus-insights-we-truly-appreciate-the-time-and-e-your-interest-in-the-associate-data-engineer-role",
-      "company": "Abacus Insights. We Truly Appreciate The Time And E",
+      "id": "abacusinsights-your-interest-in-the-associate-data-engineer-role",
+      "company": "Abacusinsights",
       "role": "your interest in the Associate Data Engineer role",
       "status": "rejected",
       "confidence": "high",
@@ -3082,8 +2936,8 @@
       "notes": ""
     },
     {
-      "id": "ask-consulting-data-analyst",
-      "company": "ASK Consulting",
+      "id": "curately-data-analyst",
+      "company": "Curately",
       "role": "Data Analyst",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -3110,22 +2964,6 @@
       "gmailThreadId": "19fd71e7f9cd97a9",
       "gmailMessageIds": [
         "19fd71e7f9cd97a9"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "focus-financial-partners-our-team-is-currently-reviewing-you-your-application",
-      "company": "Focus Financial Partners. Our Team Is Currently Reviewing You",
-      "role": "your application",
-      "status": "reply_needed",
-      "confidence": "medium",
-      "latestSubject": "Thank you for your application",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-06T12:42:09.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fd718750ef0e93",
-      "gmailMessageIds": [
-        "19fd718750ef0e93"
       ],
       "notes": ""
     },
@@ -3226,8 +3064,8 @@
       "notes": ""
     },
     {
-      "id": "i-can-take-it-forward-regards-amit-founder-and-ceo-data-engineer-finance-expert-role-next-steps",
-      "company": "I Can Take It Forward. Regards Amit Founder And CEO",
+      "id": "amit-data-engineer-finance-expert-role-next-steps",
+      "company": "Amit",
       "role": "Data Engineer Finance Expert role - next steps",
       "status": "reply_needed",
       "confidence": "medium",
@@ -3237,23 +3075,9 @@
       "source": "gmail",
       "gmailThreadId": "19fd623055ed48ab",
       "gmailMessageIds": [
+        "19fe07e7e45acb3b",
+        "19fdb4f07e2f3ca4",
         "19fd623055ed48ab"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "tmg-unknown-role",
-      "company": "TMG",
-      "role": "Unknown role",
-      "status": "applied",
-      "confidence": "low",
-      "latestSubject": "An update to your application at TMG: Actuarial Data Engineer",
-      "latestFrom": "themutualgroup@myworkday.com",
-      "lastActivityAt": "2026-08-06T07:28:05.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fd5f8e3601df1c",
-      "gmailMessageIds": [
-        "19fd5f8e3601df1c"
       ],
       "notes": ""
     },
@@ -3322,8 +3146,8 @@
       "notes": ""
     },
     {
-      "id": "solace-we-are-grateful-for-your-interest-in-advanc-applying-for-the-data-engineer-role",
-      "company": "Solace. We Are Grateful For Your Interest In Advanc",
+      "id": "solace-applying-for-the-data-engineer-role",
+      "company": "Solace",
       "role": "applying for the Data Engineer role",
       "status": "rejected",
       "confidence": "high",
@@ -3338,8 +3162,8 @@
       "notes": ""
     },
     {
-      "id": "merit-america-we-appreciate-you-taking-the-time-to-taking-the-time-to-apply-to-the-analytics-engineer-position",
-      "company": "Merit America. We Appreciate You Taking The Time To",
+      "id": "acquisition-team-taking-the-time-to-apply-to-the-analytics-engineer-position",
+      "company": "Acquisition Team",
       "role": "taking the time to apply to the Analytics Engineer position",
       "status": "rejected",
       "confidence": "high",
@@ -3354,8 +3178,8 @@
       "notes": ""
     },
     {
-      "id": "slalom-we-have-received-your-application-and-our-r-applying",
-      "company": "Slalom. We Have Received Your Application And Our R",
+      "id": "your-application-was-submitted-applying",
+      "company": "Your Application Was Submitted",
       "role": "Applying",
       "status": "reply_needed",
       "confidence": "medium",
@@ -3371,8 +3195,8 @@
       "notes": ""
     },
     {
-      "id": "an-unattended-mailbox-replies-will-not-be-read-applying",
-      "company": "An Unattended Mailbox. Replies Will Not Be Read",
+      "id": "fortitude-re-applying",
+      "company": "Fortitude Re",
       "role": "Applying",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -3403,8 +3227,8 @@
       "notes": ""
     },
     {
-      "id": "this-time-thank-you-again-for-considering-ibotta-a-data-engineer",
-      "company": "This Time. Thank You Again For Considering Ibotta A",
+      "id": "ibotta-data-engineer",
+      "company": "Ibotta",
       "role": "Data Engineer",
       "status": "rejected",
       "confidence": "high",
@@ -3419,24 +3243,8 @@
       "notes": ""
     },
     {
-      "id": "senior-analytics-engineer-unfortunately-applying-to-senior-analytics-engineer",
-      "company": "Senior Analytics Engineer. Unfortunately",
-      "role": "applying to Senior Analytics Engineer",
-      "status": "rejected",
-      "confidence": "high",
-      "latestSubject": "Follow up after your HubSpot Application",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-05T17:01:15.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fd2df49828055a",
-      "gmailMessageIds": [
-        "19fd2df49828055a"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "the-role-we-taking-part-in-our-interview-process",
-      "company": "The Role We",
+      "id": "forus-team-taking-part-in-our-interview-process",
+      "company": "Forus Team",
       "role": "taking part in our interview process",
       "status": "rejected",
       "confidence": "high",
@@ -3451,8 +3259,8 @@
       "notes": ""
     },
     {
-      "id": "the-data-services-engineer-your-application-to-the-data-services-engineer-strategic-projects-role",
-      "company": "The Data Services Engineer",
+      "id": "paige-mckowen-your-application-to-the-data-services-engineer-strategic-projects-role",
+      "company": "Paige Mckowen",
       "role": "your application to the Data Services Engineer, Strategic Projects role",
       "status": "rejected",
       "confidence": "high",
@@ -3467,8 +3275,8 @@
       "notes": ""
     },
     {
-      "id": "is-eeo-applying",
-      "company": "Is EEO",
+      "id": "wizehire-team-applying",
+      "company": "Wizehire Team",
       "role": "applying",
       "status": "reply_needed",
       "confidence": "medium",
@@ -3531,8 +3339,8 @@
       "notes": ""
     },
     {
-      "id": "the-analytics-engineer-applying-to-the-analytics-engineer",
-      "company": "The Analytics Engineer",
+      "id": "kalibrate-analytics-engineer-us-applying-to-the-analytics-engineer",
+      "company": "Kalibrate/analytics Engineer (us)",
       "role": "applying to the Analytics Engineer",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -3559,22 +3367,6 @@
       "gmailThreadId": "19fd1e4286ecf83e",
       "gmailMessageIds": [
         "19fd1e4286ecf83e"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "the-associate-analytics-engineer-role-here-at-circleci-your-applying",
-      "company": "The Associate Analytics Engineer Role Here At Circleci. Your",
-      "role": "applying",
-      "status": "initial_revert_needed",
-      "confidence": "high",
-      "latestSubject": "(CircleCI) Thank you for applying",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-05T12:26:18.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fd1e38e820088a",
-      "gmailMessageIds": [
-        "19fd1e38e820088a"
       ],
       "notes": ""
     },
@@ -3643,8 +3435,8 @@
       "notes": ""
     },
     {
-      "id": "you-applied-for-the-data-engineer-role-at-srs-acqui-your-application",
-      "company": "You Applied For The Data Engineer Role At SRS Acqui",
+      "id": "srsa-team-your-application",
+      "company": "SRSA Team",
       "role": "Your Application",
       "status": "reply_needed",
       "confidence": "medium",
@@ -3676,8 +3468,8 @@
       "notes": ""
     },
     {
-      "id": "zof-ai-we-have-received-your-application-for-the-data-engine-applying-to-zof-ai",
-      "company": "Zof Ai. We Have Received Your Application For The Data Engine",
+      "id": "zof-ai-applying-to-zof-ai",
+      "company": "Zof AI",
       "role": "applying to Zof AI",
       "status": "reply_needed",
       "confidence": "medium",
@@ -3790,8 +3582,8 @@
       "notes": ""
     },
     {
-      "id": "this-time-should-your-situation-change-your-interest-in-volunteering",
-      "company": "This Time. Should Your Situation Change",
+      "id": "jerseystem-your-interest-in-volunteering",
+      "company": "Jerseystem",
       "role": "your interest in volunteering",
       "status": "rejected",
       "confidence": "high",
@@ -3806,8 +3598,8 @@
       "notes": ""
     },
     {
-      "id": "workday-onedigitial-your-application",
-      "company": "Workday@onedigitial",
+      "id": "onedigitial-your-application",
+      "company": "Onedigitial",
       "role": "your application",
       "status": "applied",
       "confidence": "low",
@@ -3834,6 +3626,23 @@
       "gmailThreadId": "19fccd18f13cf3b9",
       "gmailMessageIds": [
         "19fccd18f13cf3b9"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "plata-applying-for-plata",
+      "company": "Plata",
+      "role": "applying for Plata",
+      "status": "rejected",
+      "confidence": "high",
+      "latestSubject": "Thank you for applying for Plata",
+      "latestFrom": "no-reply@plata.careers",
+      "lastActivityAt": "2026-08-04T12:47:08.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fd1ec9922c67ab",
+      "gmailMessageIds": [
+        "19fd1ec9922c67ab",
+        "19fccd0476dc5108"
       ],
       "notes": ""
     },
@@ -3952,8 +3761,8 @@
       "notes": ""
     },
     {
-      "id": "nttdata-your-application",
-      "company": "Nttdata",
+      "id": "ntt-data-your-application",
+      "company": "NTT DATA",
       "role": "Your Application",
       "status": "applied",
       "confidence": "low",
@@ -4048,8 +3857,8 @@
       "notes": ""
     },
     {
-      "id": "we-have-to-end-your-application-process-at-this-poi-your-application-as",
-      "company": "We Have To End Your Application Process At This Poi",
+      "id": "statista-recruitment-team-your-application-as",
+      "company": "Statista Recruitment Team",
       "role": "your application as",
       "status": "rejected",
       "confidence": "high",
@@ -4064,8 +3873,8 @@
       "notes": ""
     },
     {
-      "id": "this-juncture-we-will-not-be-moving-forward-with-yo-contacting-us-through-the-point72-website",
-      "company": "This Juncture We Will Not Be Moving Forward With Yo",
+      "id": "cubistsystematic-contacting-us-through-the-point72-website",
+      "company": "Cubistsystematic",
       "role": "contacting us through the Point72 website",
       "status": "rejected",
       "confidence": "high",
@@ -4128,8 +3937,8 @@
       "notes": ""
     },
     {
-      "id": "e-source-your-application-has-been-received-and-we-will-revi-your-application-e-source",
-      "company": "E Source. Your Application Has Been Received And We Will Revi",
+      "id": "e-source-your-application-e-source",
+      "company": "E Source",
       "role": "your application - E Source",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -4240,8 +4049,8 @@
       "notes": ""
     },
     {
-      "id": "human-resources-your-interest-in-dlrdmv-and-the-sql-developer-position",
-      "company": "Human Resources",
+      "id": "clearcompany-your-interest-in-dlrdmv-and-the-sql-developer-position",
+      "company": "Clearcompany",
       "role": "your interest in DLRdmv and the SQL Developer position",
       "status": "reply_needed",
       "confidence": "medium",
@@ -4256,8 +4065,8 @@
       "notes": ""
     },
     {
-      "id": "this-time-we-hope-you-will-keep-an-eye-on-our-http-your-interest-in-flashpoint-and-for-taking-the-time-to-apply-to-the-data-enginee",
-      "company": "This Time. We Hope You Will Keep An Eye On Our Http",
+      "id": "flashpoint-team-your-interest-in-flashpoint-and-for-taking-the-time-to-apply-to-the-data-enginee",
+      "company": "Flashpoint Team",
       "role": "your interest in Flashpoint and for taking the time to apply to the Data Enginee",
       "status": "rejected",
       "confidence": "high",
@@ -4272,24 +4081,8 @@
       "notes": ""
     },
     {
-      "id": "the-data-engineer-position-unfortunately-your-application-to-the-data-engineer-position",
-      "company": "The Data Engineer Position. Unfortunately",
-      "role": "your application to the Data Engineer position",
-      "status": "rejected",
-      "confidence": "high",
-      "latestSubject": "Inspire11 Application Information",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-31T19:40:51.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fb9b19a2d361ef",
-      "gmailMessageIds": [
-        "19fb9b19a2d361ef"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "prop-firm-match-global-fzco-after-reviewing-your-application-applying-to-prop-firm-match-global-fzco",
-      "company": "Prop Firm Match Global Fzco. After Reviewing Your Application",
+      "id": "prop-firm-match-global-fzco-applying-to-prop-firm-match-global-fzco",
+      "company": "Prop Firm Match Global – FZCO",
       "role": "applying to Prop Firm Match Global FZCO",
       "status": "rejected",
       "confidence": "high",
@@ -4418,8 +4211,8 @@
       "notes": ""
     },
     {
-      "id": "evolv-consulting-consultant",
-      "company": "Evolv Consulting",
+      "id": "evolv-consulting-team-consultant",
+      "company": "Evolv Consulting Team",
       "role": "Consultant",
       "status": "applied",
       "confidence": "low",
@@ -4629,8 +4422,8 @@
       "notes": ""
     },
     {
-      "id": "cinteot-the-will-carefully-review-your-applying-for-the-ai-data-engineer-position",
-      "company": "Cinteot. The Will Carefully Review Your",
+      "id": "scalis-applying-for-the-ai-data-engineer-position",
+      "company": "SCALIS",
       "role": "applying for the AI Data Engineer position",
       "status": "reply_needed",
       "confidence": "medium",
@@ -4661,8 +4454,8 @@
       "notes": ""
     },
     {
-      "id": "take-two-interactive-software-your-interest-in-the-data-engineer",
-      "company": "Take-two Interactive Software",
+      "id": "take2games-your-interest-in-the-data-engineer",
+      "company": "Take2games",
       "role": "your interest in the Data Engineer",
       "status": "rejected",
       "confidence": "high",
@@ -4677,8 +4470,8 @@
       "notes": ""
     },
     {
-      "id": "radical-numerics-and-for-the-time-you-put-into-learning-about-applying-to-radical-numerics-and-for-the-time-you-put-into-learning-about-our-wo",
-      "company": "Radical Numerics And For The Time You Put Into Learning About",
+      "id": "brian-pepin-applying-to-radical-numerics-and-for-the-time-you-put-into-learning-about-our-wo",
+      "company": "Brian Pepin",
       "role": "applying to Radical Numerics and for the time you put into learning about our wo",
       "status": "rejected",
       "confidence": "high",
@@ -4693,8 +4486,8 @@
       "notes": ""
     },
     {
-      "id": "scout-motors-we-truly-appreciate-the-time-and-ener-analyst-logistics-equipment-and-tpm-planning-position",
-      "company": "Scout Motors. We Truly Appreciate The Time And Ener",
+      "id": "scoutmotors-analyst-logistics-equipment-and-tpm-planning-position",
+      "company": "Scoutmotors",
       "role": "Analyst, Logistics Equipment and TPM Planning position",
       "status": "applied",
       "confidence": "low",
@@ -4709,8 +4502,8 @@
       "notes": ""
     },
     {
-      "id": "tebra-data-engineer",
-      "company": "Tebra",
+      "id": "tessa-nguyen-data-engineer",
+      "company": "Tessa Nguyen",
       "role": "Data Engineer",
       "status": "rejected",
       "confidence": "high",
@@ -4725,8 +4518,24 @@
       "notes": ""
     },
     {
-      "id": "openloop-health-after-careful-consideration-openloop-health",
-      "company": "Openloop Health. After Careful Consideration",
+      "id": "postscript-your-interest-in-joining-postscript-and-for-the-time-you-invested-in-the-applica",
+      "company": "Postscript",
+      "role": "your interest in joining Postscript and for the time you invested in the applica",
+      "status": "rejected",
+      "confidence": "high",
+      "latestSubject": "Regarding your application to Postscript",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-30T14:48:39.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fb37fb802a2b5f",
+      "gmailMessageIds": [
+        "19fb37fb802a2b5f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "openloop-health-openloop-health",
+      "company": "Openloop Health",
       "role": "OpenLoop Health",
       "status": "rejected",
       "confidence": "high",
@@ -4741,8 +4550,8 @@
       "notes": ""
     },
     {
-      "id": "jobot-applying-for-technical-business-analyst-was-technical-business-analyst-was-a-great-move-your-stakeholder-facing-analytics-i",
-      "company": "Jobot. Applying For Technical Business Analyst Was",
+      "id": "949-550-0300-technical-business-analyst-was-a-great-move-your-stakeholder-facing-analytics-i",
+      "company": "(949) 550-0300",
       "role": "Technical Business Analyst was a great move, your stakeholder facing analytics i",
       "status": "applied",
       "confidence": "low",
@@ -4757,8 +4566,8 @@
       "notes": ""
     },
     {
-      "id": "join-the-team-at-prop-firm-match-global-applying-to-join-the-team",
-      "company": "Join The Team At Prop Firm Match Global",
+      "id": "prop-firm-match-global-fzco-applying-to-join-the-team",
+      "company": "Prop Firm Match Global – FZCO",
       "role": "applying to join the team",
       "status": "reply_needed",
       "confidence": "medium",
@@ -4838,8 +4647,8 @@
       "notes": ""
     },
     {
-      "id": "tyler-technologies-conversion-engineer",
-      "company": "Tyler Technologies",
+      "id": "tyler-technologies-team-conversion-engineer",
+      "company": "Tyler Technologies Team",
       "role": "Conversion Engineer",
       "status": "applied",
       "confidence": "low",
@@ -4886,8 +4695,8 @@
       "notes": ""
     },
     {
-      "id": "decera-clinical-has-been-received-the-position-associate-data-analytics-engineer",
-      "company": "Decera Clinical Has Been Received",
+      "id": "adp-the-position-associate-data-analytics-engineer",
+      "company": "ADP",
       "role": "the position Associate Data & Analytics Engineer",
       "status": "applied",
       "confidence": "low",
@@ -4902,8 +4711,8 @@
       "notes": ""
     },
     {
-      "id": "p3-we-know-filling-out-job-application-forms-is-no-applying",
-      "company": "P3. We Know Filling Out Job Application Forms Is No",
+      "id": "ultipro-applying",
+      "company": "Ultipro",
       "role": "applying",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -4918,8 +4727,8 @@
       "notes": ""
     },
     {
-      "id": "flashpoint-applying-to-flashpoint",
-      "company": "Flashpoint",
+      "id": "flashpoint-team-applying-to-flashpoint",
+      "company": "Flashpoint Team",
       "role": "applying to Flashpoint",
       "status": "reply_needed",
       "confidence": "medium",
@@ -4934,8 +4743,8 @@
       "notes": ""
     },
     {
-      "id": "our-database-this-email-was-sent-via-recruitee-data-bi-engineer-odos-and-we",
-      "company": "Our Database. This Email Was Sent Via Recruitee",
+      "id": "decircle-data-bi-engineer-odos-data-bi-engineer-odos-and-we",
+      "company": "Decircle/data & BI Engineer - Odos",
       "role": "Data & BI Engineer - Odos, and we",
       "status": "reply_needed",
       "confidence": "medium",
@@ -5017,8 +4826,8 @@
       "notes": ""
     },
     {
-      "id": "mass-recruiters-greetings-for-the-day-the-day",
-      "company": "Mass Recruiters. Greetings For The Day",
+      "id": "massrecruiters-the-day",
+      "company": "Massrecruiters",
       "role": "the day",
       "status": "interviewed",
       "confidence": "low",
@@ -5065,22 +4874,6 @@
       "notes": ""
     },
     {
-      "id": "your-experience-aligns-with-the-role-your-interest",
-      "company": "Your Experience Aligns With The Role",
-      "role": "your interest",
-      "status": "applied",
-      "confidence": "low",
-      "latestSubject": "Tirth / Rithum - Thanks for your interest!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-29T13:05:06.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fadfaa08b5c2d6",
-      "gmailMessageIds": [
-        "19fadfaa08b5c2d6"
-      ],
-      "notes": ""
-    },
-    {
       "id": "halo-your-application-to-halo",
       "company": "HALO",
       "role": "Your Application to HALO",
@@ -5097,8 +4890,8 @@
       "notes": ""
     },
     {
-      "id": "scout-motors-we-truly-believe-that-the-world-needs-applying-for-the-analyst-logistics-equipment-and-tpm-planning-position",
-      "company": "Scout Motors. We Truly Believe That The World Needs",
+      "id": "scout-motors-applying-for-the-analyst-logistics-equipment-and-tpm-planning-position",
+      "company": "Scout Motors",
       "role": "applying for the Analyst, Logistics Equipment and TPM Planning position",
       "status": "rejected",
       "confidence": "high",
@@ -5122,8 +4915,9 @@
       "latestFrom": "no-reply@esri.com",
       "lastActivityAt": "2026-07-29T12:49:12.000Z",
       "source": "gmail",
-      "gmailThreadId": "19ff0dfaea174de7",
+      "gmailThreadId": "1a0021f965abb666",
       "gmailMessageIds": [
+        "1a0021f965abb666",
         "19ff1be2a4dcd8a3",
         "19ff0dfaea174de7",
         "19fadec018d8cfb6"
@@ -5263,8 +5057,8 @@
       "notes": ""
     },
     {
-      "id": "you-applying",
-      "company": "You",
+      "id": "667-275-7655-applying",
+      "company": "(667) 275-7655",
       "role": "applying",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -5279,8 +5073,8 @@
       "notes": ""
     },
     {
-      "id": "apolisrises-unknown-role",
-      "company": "Apolisrises",
+      "id": "apolis-unknown-role",
+      "company": "Apolis",
       "role": "Unknown role",
       "status": "applied",
       "confidence": "low",
@@ -5312,8 +5106,8 @@
       "notes": ""
     },
     {
-      "id": "this-is-an-automated-email-your-recent-application-to-data-engineer",
-      "company": "This Is An Automated Email",
+      "id": "automation-user-your-recent-application-to-data-engineer",
+      "company": "Automation User",
       "role": "your recent application to Data Engineer",
       "status": "reply_needed",
       "confidence": "medium",
@@ -5361,8 +5155,24 @@
       "notes": ""
     },
     {
-      "id": "skimmer-the-time-and-interest-you-spent-in-your-application-to-the-data-engineer",
-      "company": "Skimmer",
+      "id": "eli-lilly-unknown-role",
+      "company": "Eli Lilly",
+      "role": "Unknown role",
+      "status": "applied",
+      "confidence": "low",
+      "latestSubject": "Eli Lilly - Application Update",
+      "latestFrom": "lilly@myworkday.com",
+      "lastActivityAt": "2026-07-29T04:30:42.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fac239dced6ba9",
+      "gmailMessageIds": [
+        "19fac239dced6ba9"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "matthew-plinck-the-time-and-interest-you-spent-in-your-application-to-the-data-engineer",
+      "company": "Matthew Plinck",
       "role": "the time and interest you spent in your application to the Data Engineer",
       "status": "rejected",
       "confidence": "high",
@@ -5377,8 +5187,8 @@
       "notes": ""
     },
     {
-      "id": "lean-layer-about-your-application-your-patience-while-we-came-to-a-decision-regarding-the-status-of-your-applicati",
-      "company": "Lean Layer About Your Application",
+      "id": "amira-williams-your-patience-while-we-came-to-a-decision-regarding-the-status-of-your-applicati",
+      "company": "Amira Williams",
       "role": "your patience while we came to a decision regarding the status of your applicati",
       "status": "rejected",
       "confidence": "high",
@@ -5411,8 +5221,8 @@
       "notes": ""
     },
     {
-      "id": "kendall-howard-applying-data-engineer",
-      "company": "Kendall Howard",
+      "id": "adp-applying-data-engineer",
+      "company": "ADP",
       "role": "Applying- Data Engineer",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -5508,22 +5318,6 @@
       "notes": ""
     },
     {
-      "id": "you-taking-the-time-to-apply-to-our-data-services-analyst-sr-role",
-      "company": "You",
-      "role": "taking the time to apply to our Data Services Analyst Sr role",
-      "status": "rejected",
-      "confidence": "high",
-      "latestSubject": "Your application has been received by Sagent's Talent Team!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-28T12:20:09.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fa8ab0d148824a",
-      "gmailMessageIds": [
-        "19fa8ab0d148824a"
-      ],
-      "notes": ""
-    },
-    {
       "id": "cerebras-applying-to-cerebras",
       "company": "Cerebras",
       "role": "applying to Cerebras",
@@ -5540,8 +5334,8 @@
       "notes": ""
     },
     {
-      "id": "bumble-bee-foods-llc-applying",
-      "company": "BUMBLE BEE Foods, LLC",
+      "id": "bumble-bee-foods-applying",
+      "company": "Bumble Bee Foods",
       "role": "applying",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -5652,8 +5446,8 @@
       "notes": ""
     },
     {
-      "id": "talentacquisition-oraclecloud-verisk-com-analytics-engineer-3599",
-      "company": "Talentacquisition@oraclecloud.verisk.com",
+      "id": "oraclecloud-analytics-engineer-3599",
+      "company": "Oraclecloud",
       "role": "Analytics Engineer - 3599",
       "status": "applied",
       "confidence": "low",
@@ -5668,8 +5462,8 @@
       "notes": ""
     },
     {
-      "id": "our-earliest-opportunity-data-engineer",
-      "company": "Our Earliest Opportunity",
+      "id": "eab-data-engineer",
+      "company": "EAB",
       "role": "Data Engineer /",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -5684,8 +5478,8 @@
       "notes": ""
     },
     {
-      "id": "the-analytics-engineer-position-at-kalibrate-i-applying-to-the-analytics-engineer-position",
-      "company": "The Analytics Engineer Position At Kalibrate. I",
+      "id": "kalibrate-analytics-engineer-applying-to-the-analytics-engineer-position",
+      "company": "Kalibrate/analytics Engineer",
       "role": "applying to the Analytics Engineer position",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -5717,8 +5511,8 @@
       "notes": ""
     },
     {
-      "id": "intermedia-intelligent-communications-your-applica-applying-for-the-analytics-engineer-position",
-      "company": "Intermedia Intelligent Communications. Your Applica",
+      "id": "intermedia-intelligent-communications-applying-for-the-analytics-engineer-position",
+      "company": "Intermedia Intelligent Communications",
       "role": "applying for the Analytics Engineer position",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -5815,8 +5609,8 @@
       "notes": ""
     },
     {
-      "id": "mattel-while-your-skills-and-background-are-impres-your-interest-in-mattel",
-      "company": "Mattel. While Your Skills And Background Are Impres",
+      "id": "joshua-jacobs-from-mattel-your-interest-in-mattel",
+      "company": "Joshua Jacobs From Mattel",
       "role": "your interest in Mattel",
       "status": "rejected",
       "confidence": "high",
@@ -5833,8 +5627,8 @@
       "notes": ""
     },
     {
-      "id": "livefront-and-your-interest-in-our-data-engineer-your-interest-in-livefront-tirth",
-      "company": "Livefront And Your Interest In Our Data Engineer",
+      "id": "corey-fleitz-your-interest-in-livefront-tirth",
+      "company": "Corey Fleitz",
       "role": "your interest in Livefront, Tirth",
       "status": "rejected",
       "confidence": "high",
@@ -5849,8 +5643,8 @@
       "notes": ""
     },
     {
-      "id": "choosing-a-career-consulting-partner-is-an-importan-your-selected-program",
-      "company": "Choosing A Career Consulting Partner Is An Importan",
+      "id": "saicharan-sammeta-your-selected-program",
+      "company": "Saicharan Sammeta",
       "role": "your selected program",
       "status": "offered",
       "confidence": "high",
@@ -5865,8 +5659,8 @@
       "notes": ""
     },
     {
-      "id": "arlo-after-reviewing-your-application-applying-for-the-data-engineer-role",
-      "company": "Arlo. After Reviewing Your Application",
+      "id": "arlo-applying-for-the-data-engineer-role",
+      "company": "Arlo",
       "role": "applying for the Data Engineer role",
       "status": "rejected",
       "confidence": "high",
@@ -5913,8 +5707,8 @@
       "notes": ""
     },
     {
-      "id": "ujet-your-interest-in-joining-our-team",
-      "company": "UJET",
+      "id": "application-confirmation-your-interest-in-joining-our-team",
+      "company": "Application Confirmation",
       "role": "your interest in joining our team",
       "status": "reply_needed",
       "confidence": "medium",
@@ -5991,24 +5785,6 @@
       "gmailThreadId": "19fa3a62deadd192",
       "gmailMessageIds": [
         "19fa3a62deadd192"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "us-within-the-next-week-if-you-don-applying-for-plata",
-      "company": "Us Within The Next Week. If You Don",
-      "role": "applying for Plata",
-      "status": "rejected",
-      "confidence": "high",
-      "latestSubject": "Thank you for applying for Plata",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-27T12:54:08.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fd1ec9922c67ab",
-      "gmailMessageIds": [
-        "19fd1ec9922c67ab",
-        "19fccd0476dc5108",
-        "19fa3a3cbfa88b12"
       ],
       "notes": ""
     },
@@ -6131,22 +5907,6 @@
       "notes": ""
     },
     {
-      "id": "happens-next-your-application-to-postscript",
-      "company": "Happens Next",
-      "role": "your application to Postscript",
-      "status": "reply_needed",
-      "confidence": "medium",
-      "latestSubject": "Thanks for your application to Postscript!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-27T12:20:13.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fa384bf3e05e77",
-      "gmailMessageIds": [
-        "19fa384bf3e05e77"
-      ],
-      "notes": ""
-    },
-    {
       "id": "movement-labs-applying-to-movement-labs",
       "company": "Movement Labs",
       "role": "applying to Movement Labs",
@@ -6196,8 +5956,8 @@
       "notes": ""
     },
     {
-      "id": "the-senior-data-engineer-role-at-eliseai-as-you-can-imagine-applying-to-the-senior-data-engineer-role",
-      "company": "The Senior Data Engineer Role At Eliseai. As You Can Imagine",
+      "id": "eliseai-applying-to-the-senior-data-engineer-role",
+      "company": "Eliseai",
       "role": "applying to the Senior Data Engineer role",
       "status": "rejected",
       "confidence": "high",
@@ -6212,8 +5972,8 @@
       "notes": ""
     },
     {
-      "id": "our-earlier-email-your-interest-in-working",
-      "company": "Our Earlier Email",
+      "id": "red-bull-wingfinder-your-interest-in-working",
+      "company": "Red Bull Wingfinder",
       "role": "your interest in working",
       "status": "rejected",
       "confidence": "high",
@@ -6228,8 +5988,8 @@
       "notes": ""
     },
     {
-      "id": "our-data-engineer-position-we-wanted-to-update-you-that-this-applying-to-our-data-engineer-position",
-      "company": "Our Data Engineer Position. We Wanted To Update You That This",
+      "id": "fanduel-applying-to-our-data-engineer-position",
+      "company": "Fanduel",
       "role": "applying to our Data Engineer position",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -6341,22 +6101,6 @@
       "notes": ""
     },
     {
-      "id": "the-scion-group-we-appreciate-the-time-and-effort-you-put-in-your-application",
-      "company": "The Scion Group. We Appreciate The Time And Effort You Put In",
-      "role": "your application",
-      "status": "initial_revert_needed",
-      "confidence": "high",
-      "latestSubject": "Thank you for your application!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-24T13:09:13.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19f943e8d4d4e58f",
-      "gmailMessageIds": [
-        "19f943e8d4d4e58f"
-      ],
-      "notes": ""
-    },
-    {
       "id": "skimmer-applying-to-skimmer",
       "company": "Skimmer",
       "role": "Applying to Skimmer",
@@ -6373,8 +6117,8 @@
       "notes": ""
     },
     {
-      "id": "our-data-engineer-role-applying-to-our-data-engineer-role",
-      "company": "Our Data Engineer Role",
+      "id": "entrada-ai-applying-to-our-data-engineer-role",
+      "company": "Entrada AI",
       "role": "applying to our Data Engineer role",
       "status": "reply_needed",
       "confidence": "medium",
@@ -6583,8 +6327,8 @@
       "notes": ""
     },
     {
-      "id": "accordion-while-there-is-a-lot-to-like-about-your-your-interest-in-the-cloud-devops-engineer-data-analytics-role",
-      "company": "Accordion. While There Is A Lot To Like About Your",
+      "id": "accordion-your-interest-in-the-cloud-devops-engineer-data-analytics-role",
+      "company": "Accordion",
       "role": "your interest in the Cloud DevOps Engineer, Data & Analytics role",
       "status": "rejected",
       "confidence": "high",
@@ -6631,8 +6375,8 @@
       "notes": ""
     },
     {
-      "id": "parafin-after-reviewing-your-work-and-experience-at-parafin",
-      "company": "Parafin. After Reviewing Your Work And Experience",
+      "id": "parafin-at-parafin",
+      "company": "Parafin",
       "role": "at Parafin",
       "status": "rejected",
       "confidence": "high",
@@ -6710,6 +6454,23 @@
         "1a00056516fc9a60",
         "19fa3aa62f72ff4c",
         "19f8fd081d4d235f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "symetra-unknown-role",
+      "company": "Symetra",
+      "role": "Unknown role",
+      "status": "initial_revert_needed",
+      "confidence": "high",
+      "latestSubject": "Tirth, we have received your application",
+      "latestFrom": "careers@careers.symetra.com",
+      "lastActivityAt": "2026-07-23T16:28:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fc7a2ab7907cbb",
+      "gmailMessageIds": [
+        "19fc7a2ab7907cbb",
+        "19f8fce521eeadd0"
       ],
       "notes": ""
     },
@@ -6817,8 +6578,8 @@
       "notes": ""
     },
     {
-      "id": "energy-your-interest-in-habitat-energy-and-for-taking-the-time-to-apply-for-the-data-en",
-      "company": "Energy",
+      "id": "habitat-energy-your-interest-in-habitat-energy-and-for-taking-the-time-to-apply-for-the-data-en",
+      "company": "Habitat Energy",
       "role": "your interest in Habitat Energy and for taking the time to apply for the Data En",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -6835,7 +6596,7 @@
     },
     {
       "id": "adp-unknown-role",
-      "company": "Adp",
+      "company": "ADP",
       "role": "Unknown role",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -6843,27 +6604,10 @@
       "latestFrom": "<ConduitServicesLLC.hr@adp.com>",
       "lastActivityAt": "2026-07-22T19:49:16.000Z",
       "source": "gmail",
-      "gmailThreadId": "19ff0ebb8f475e79",
+      "gmailThreadId": "19faddd99343d6e2",
       "gmailMessageIds": [
-        "19ff0ebb8f475e79",
         "19faddd99343d6e2",
         "19f8b6013907a823"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "rothera-we-received-many-qualified-applicants-and-the-senior-associate-engineering-data-engineering-analytics-opening",
-      "company": "Rothera. We Received Many Qualified Applicants And",
-      "role": "the Senior Associate, Engineering - Data Engineering & Analytics opening",
-      "status": "rejected",
-      "confidence": "high",
-      "latestSubject": "Important information about your application to Rothera",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-22T19:48:00.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19f8b5eea5c251e0",
-      "gmailMessageIds": [
-        "19f8b5eea5c251e0"
       ],
       "notes": ""
     },
@@ -6900,8 +6644,24 @@
       "notes": ""
     },
     {
-      "id": "deals-with-export-controlled-data-your-interest-in-sep-tirth",
-      "company": "Deals With Export Controlled Data",
+      "id": "recent-unknown-role",
+      "company": "Recent",
+      "role": "Unknown role",
+      "status": "applied",
+      "confidence": "low",
+      "latestSubject": "Update on Your Recent Application",
+      "latestFrom": "tysonfoods@myworkday.com",
+      "lastActivityAt": "2026-07-22T16:11:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f8a98f2d26f700",
+      "gmailMessageIds": [
+        "19f8a98f2d26f700"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sep-your-interest-in-sep-tirth",
+      "company": "SEP",
       "role": "your interest in SEP, Tirth",
       "status": "rejected",
       "confidence": "high",
@@ -6916,8 +6676,8 @@
       "notes": ""
     },
     {
-      "id": "artech-i-am-calling-you-for-opportunity-that-you-ha-opportunity-that-you-had-applied-for-lets-connect-as-soon-as-possible-to-determi",
-      "company": "Artech I Am Calling You For Opportunity That You Ha",
+      "id": "google-voice-opportunity-that-you-had-applied-for-lets-connect-as-soon-as-possible-to-determi",
+      "company": "Google Voice",
       "role": "opportunity that you had applied for Lets connect as soon as possible to determi",
       "status": "applied",
       "confidence": "low",
@@ -6948,8 +6708,8 @@
       "notes": ""
     },
     {
-      "id": "green-courte-residential-holdings-llc-has-been-rece-the-position-data-engineer",
-      "company": "Green Courte Residential Holdings LLC Has Been Rece",
+      "id": "adp-the-position-data-engineer",
+      "company": "ADP",
       "role": "the position Data Engineer",
       "status": "applied",
       "confidence": "low",
@@ -6964,8 +6724,8 @@
       "notes": ""
     },
     {
-      "id": "the-azure-data-engineer-applying-to-the-azure-data-engineer",
-      "company": "The Azure Data Engineer",
+      "id": "289-206-2800-applying-to-the-azure-data-engineer",
+      "company": "(289) 206-2800",
       "role": "applying to the Azure Data Engineer",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -7016,8 +6776,8 @@
       "notes": ""
     },
     {
-      "id": "it-your-application",
-      "company": "It",
+      "id": "bank-ozk-your-application",
+      "company": "Bank OZK",
       "role": "Your Application",
       "status": "reply_needed",
       "confidence": "medium",
@@ -7202,8 +6962,8 @@
       "notes": ""
     },
     {
-      "id": "medvet-data-engineer",
-      "company": "Medvet",
+      "id": "medvet-team-data-engineer",
+      "company": "Medvet Team",
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "low",
@@ -7250,8 +7010,8 @@
       "notes": ""
     },
     {
-      "id": "the-data-engineer-role-at-swish-analytics-we-your-interest-in-joining-swish",
-      "company": "The Data Engineer Role At Swish Analytics. We",
+      "id": "roddy-jones-swish-analytics-your-interest-in-joining-swish",
+      "company": "Roddy Jones - Swish Analytics",
       "role": "Your Interest in Joining Swish",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -7333,22 +7093,6 @@
       "notes": ""
     },
     {
-      "id": "hightouch-applying-to-hightouch",
-      "company": "Hightouch",
-      "role": "applying to Hightouch",
-      "status": "reply_needed",
-      "confidence": "medium",
-      "latestSubject": "💚 Hightouch | Application Received",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-22T11:19:09.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19f898d0a19b7f90",
-      "gmailMessageIds": [
-        "19f898d0a19b7f90"
-      ],
-      "notes": ""
-    },
-    {
       "id": "vertex-service-partners-applying-for-the-analytics-engineer-business-solutions-position",
       "company": "Vertex Service Partners",
       "role": "applying for the Analytics Engineer, Business Solutions position",
@@ -7365,8 +7109,8 @@
       "notes": ""
     },
     {
-      "id": "some-of-our-top-athletes-who-share-the-same-strengt-your-interest-in-joining-red-bull",
-      "company": "Some Of Our Top Athletes Who Share The Same Strengt",
+      "id": "red-bull-wingfinder-your-interest-in-joining-red-bull",
+      "company": "Red Bull Wingfinder",
       "role": "your interest in joining Red Bull",
       "status": "rejected",
       "confidence": "high",
@@ -7397,8 +7141,8 @@
       "notes": ""
     },
     {
-      "id": "the-brattle-group-we-have-reviewed-your-applicatio-your-interest-in-the-data-and-ai-engineer-role",
-      "company": "The Brattle Group. We Have Reviewed Your Applicatio",
+      "id": "brattle-your-interest-in-the-data-and-ai-engineer-role",
+      "company": "Brattle",
       "role": "your interest in the Data and AI Engineer role",
       "status": "rejected",
       "confidence": "high",
@@ -7429,8 +7173,8 @@
       "notes": ""
     },
     {
-      "id": "team-members-the",
-      "company": "Team Members",
+      "id": "pilot-company-the",
+      "company": "Pilot Company",
       "role": "the",
       "status": "reply_needed",
       "confidence": "medium",
@@ -7691,8 +7435,8 @@
       "notes": ""
     },
     {
-      "id": "elevate-aviation-group-llc-applying",
-      "company": "ELEVATE AVIATION GROUP LLC",
+      "id": "elevate-aviation-group-applying",
+      "company": "Elevate Aviation Group",
       "role": "applying",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -7724,7 +7468,7 @@
     },
     {
       "id": "adp-your-application-tirth",
-      "company": "Adp",
+      "company": "ADP",
       "role": "your application, Tirth",
       "status": "applied",
       "confidence": "low",
@@ -7791,8 +7535,8 @@
       "notes": ""
     },
     {
-      "id": "clasp-we-applying",
-      "company": "Clasp. We",
+      "id": "clasp-applying",
+      "company": "Clasp",
       "role": "applying",
       "status": "reply_needed",
       "confidence": "medium",
@@ -7926,8 +7670,8 @@
       "notes": ""
     },
     {
-      "id": "our-data-engineer-role-applying-to-baseten",
-      "company": "Our Data Engineer Role",
+      "id": "baseten-applying-to-baseten",
+      "company": "Baseten",
       "role": "applying to Baseten",
       "status": "reply_needed",
       "confidence": "medium",
@@ -8135,8 +7879,8 @@
       "notes": ""
     },
     {
-      "id": "this-time-we-greatly-appreciate-your-interest-in-j-your-application-beghou-consulting",
-      "company": "This Time. We Greatly Appreciate Your Interest In J",
+      "id": "beghou-consulting-your-application-beghou-consulting",
+      "company": "Beghou Consulting",
       "role": "your application - Beghou Consulting",
       "status": "rejected",
       "confidence": "high",
@@ -8151,8 +7895,8 @@
       "notes": ""
     },
     {
-      "id": "the-analytics-engineer-applying-to-the-analytics-engineer-gfco-analytics-role",
-      "company": "The Analytics Engineer",
+      "id": "coinbase-applying-to-the-analytics-engineer-gfco-analytics-role",
+      "company": "Coinbase",
       "role": "applying to the Analytics Engineer, GFCO Analytics role",
       "status": "rejected",
       "confidence": "high",
@@ -8167,8 +7911,8 @@
       "notes": ""
     },
     {
-      "id": "this-time-we-received-many-qualified-applicants-an-your-application-and-interest-in-amend-consulting",
-      "company": "This Time. We Received Many Qualified Applicants An",
+      "id": "amendllc-your-application-and-interest-in-amend-consulting",
+      "company": "Amendllc",
       "role": "your application and interest in AMEND Consulting",
       "status": "rejected",
       "confidence": "high",
@@ -8201,8 +7945,8 @@
       "notes": ""
     },
     {
-      "id": "this-time-this-was-not-an-easy-decision-your-interest-in-the-nbsp",
-      "company": "This Time. This Was Not An Easy Decision",
+      "id": "covista-your-interest-in-the-nbsp",
+      "company": "Covista",
       "role": "your interest in the&nbsp",
       "status": "rejected",
       "confidence": "high",
@@ -8318,8 +8062,8 @@
       "notes": ""
     },
     {
-      "id": "the-analytics-engineer-position-at-podium-applying-to-podium",
-      "company": "The Analytics Engineer Position At Podium",
+      "id": "podium-applying-to-podium",
+      "company": "Podium",
       "role": "applying to Podium",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -8431,8 +8175,8 @@
       "notes": ""
     },
     {
-      "id": "hca-healthcare-unknown-role",
-      "company": "HCA Healthcare",
+      "id": "hcacareers-unknown-role",
+      "company": "Hcacareers",
       "role": "Unknown role",
       "status": "applied",
       "confidence": "low",
@@ -8463,8 +8207,8 @@
       "notes": ""
     },
     {
-      "id": "continental-we-applying-for-data-engineer",
-      "company": "Continental. We",
+      "id": "continental-services-applying-for-data-engineer",
+      "company": "Continental Services",
       "role": "applying for Data Engineer",
       "status": "reply_needed",
       "confidence": "medium",
@@ -8479,8 +8223,8 @@
       "notes": ""
     },
     {
-      "id": "you-would-consider-joining-our-team-our-team-will-your-interest-in-recurly",
-      "company": "You Would Consider Joining Our Team. Our Team Will",
+      "id": "recurly-your-interest-in-recurly",
+      "company": "Recurly",
       "role": "your interest in Recurly",
       "status": "rejected",
       "confidence": "high",
@@ -8496,17 +8240,18 @@
       "notes": ""
     },
     {
-      "id": "abra-applying-for-data-engineer",
-      "company": "Abra",
-      "role": "applying for Data engineer",
+      "id": "we-got-it-applying-for-data-engineer",
+      "company": "We Got It",
+      "role": "applying for Data Engineer",
       "status": "initial_revert_needed",
       "confidence": "high",
       "latestSubject": "We Got It: Thanks for applying for Data engineer",
       "latestFrom": "abra <no-reply@abra.rnd.comeet-notifications.com>",
       "lastActivityAt": "2026-07-17T10:40:32.000Z",
       "source": "gmail",
-      "gmailThreadId": "19f6fa9e3f9ffe58",
+      "gmailThreadId": "1a0004faff6f3c07",
       "gmailMessageIds": [
+        "1a0004faff6f3c07",
         "19f6fa9e3f9ffe58"
       ],
       "notes": ""
@@ -8524,6 +8269,22 @@
       "gmailThreadId": "19f6fa9e3287869b",
       "gmailMessageIds": [
         "19f6fa9e3287869b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "iqvia-global-acquisition-applying",
+      "company": "IQVIA Global Acquisition",
+      "role": "Applying",
+      "status": "initial_revert_needed",
+      "confidence": "high",
+      "latestSubject": "IQVIA Global Talent Acquisition - Thank you for Applying!",
+      "latestFrom": "iqvia@myworkday.com",
+      "lastActivityAt": "2026-07-17T10:38:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fa79828a89bb",
+      "gmailMessageIds": [
+        "19f6fa79828a89bb"
       ],
       "notes": ""
     },
@@ -8827,8 +8588,8 @@
       "notes": ""
     },
     {
-      "id": "you-have-considered-wings-credit-union-as-a-potenti-taking-the-time-to-apply-for-the-data-engineer-i-opportunity",
-      "company": "You Have Considered Wings Credit Union As A Potenti",
+      "id": "wings-credit-union-taking-the-time-to-apply-for-the-data-engineer-i-opportunity",
+      "company": "Wings Credit Union",
       "role": "taking the time to apply for the Data Engineer I opportunity",
       "status": "rejected",
       "confidence": "high",
@@ -8863,8 +8624,8 @@
       "notes": ""
     },
     {
-      "id": "you-do-not-reply-directly-to-this-message-best-your-interest-in-david-protein",
-      "company": "You Do Not Reply Directly To This Message. Best",
+      "id": "david-protein-your-interest-in-david-protein",
+      "company": "David Protein",
       "role": "your interest in David Protein",
       "status": "reply_needed",
       "confidence": "medium",
@@ -8895,8 +8656,8 @@
       "notes": ""
     },
     {
-      "id": "evolved-aeropsace-we-taking-the-time-to-apply-for-the-data-engineer",
-      "company": "Evolved Aeropsace. We",
+      "id": "evolved-aerospace-holdings-ltd-taking-the-time-to-apply-for-the-data-engineer",
+      "company": "Evolved Aerospace Holdings Ltd",
       "role": "taking the time to apply for the Data Engineer",
       "status": "reply_needed",
       "confidence": "medium",
@@ -8911,8 +8672,8 @@
       "notes": ""
     },
     {
-      "id": "rhythm-energy-we-applying-to-rhythm-energy",
-      "company": "Rhythm Energy. We",
+      "id": "rhythm-energy-applying-to-rhythm-energy",
+      "company": "Rhythm Energy",
       "role": "applying to Rhythm Energy",
       "status": "reply_needed",
       "confidence": "medium",
@@ -8929,8 +8690,8 @@
       "notes": ""
     },
     {
-      "id": "astrana-health-your-sincere-interest-in-the-data-engineer",
-      "company": "Astrana Health",
+      "id": "astrana-health-inc-your-sincere-interest-in-the-data-engineer",
+      "company": "Astrana Health Inc",
       "role": "your sincere interest in the Data Engineer",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -8977,8 +8738,8 @@
       "notes": ""
     },
     {
-      "id": "metropolitan-companies-your-application-will-be-r-applying-for-the-data-engineer-position",
-      "company": "Metropolitan Companies . Your Application Will Be R",
+      "id": "metropolitan-companies-applying-for-the-data-engineer-position",
+      "company": "Metropolitan Companies",
       "role": "applying for the Data Engineer position",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -8989,23 +8750,6 @@
       "gmailThreadId": "19f6a7cec77e70d0",
       "gmailMessageIds": [
         "19f6a7cec77e70d0"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "in-the-ring-we-know-hitting-applying",
-      "company": "In The Ring. We Know Hitting",
-      "role": "Applying",
-      "status": "initial_revert_needed",
-      "confidence": "high",
-      "latestSubject": "Thanks for Applying – Stay Tuned!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-16T10:32:08.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fd6fdfedc66a3b",
-      "gmailMessageIds": [
-        "19fd6fdfedc66a3b",
-        "19f6a7bd676c4e2a"
       ],
       "notes": ""
     },
@@ -9060,8 +8804,8 @@
       "notes": ""
     },
     {
-      "id": "hollstadt-your-application",
-      "company": "Hollstadt",
+      "id": "hollstadt-consulting-your-application",
+      "company": "Hollstadt Consulting",
       "role": "your application",
       "status": "applied",
       "confidence": "low",
@@ -9124,8 +8868,8 @@
       "notes": ""
     },
     {
-      "id": "gei-consultants-data-engineer",
-      "company": "GEI Consultants",
+      "id": "gei-consultants-team-data-engineer",
+      "company": "GEI Consultants Team",
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "low",
@@ -9208,8 +8952,8 @@
       "notes": ""
     },
     {
-      "id": "sennos-we-wanted-to-confirm-that-we-have-received-your-interest-and-application-for-the-data-engineer-role",
-      "company": "Sennos. We Wanted To Confirm That We Have Received",
+      "id": "sennos-your-interest-and-application-for-the-data-engineer-role",
+      "company": "Sennos",
       "role": "your interest and application for the Data Engineer role",
       "status": "reply_needed",
       "confidence": "medium",
@@ -9345,8 +9089,8 @@
       "notes": ""
     },
     {
-      "id": "you-are-interested-in-lantern-applying",
-      "company": "You Are Interested In Lantern",
+      "id": "lantern-applying",
+      "company": "Lantern",
       "role": "applying",
       "status": "reply_needed",
       "confidence": "medium",
@@ -9545,8 +9289,8 @@
       "notes": ""
     },
     {
-      "id": "avalon-administrative-services-llc-has-been-receive-the-position-data-engineer-ii-ai-enablement",
-      "company": "Avalon Administrative Services LLC Has Been Receive",
+      "id": "adp-the-position-data-engineer-ii-ai-enablement",
+      "company": "ADP",
       "role": "the position Data Engineer II, AI Enablement",
       "status": "applied",
       "confidence": "low",
@@ -9629,8 +9373,8 @@
       "notes": ""
     },
     {
-      "id": "eptura-submitting-your-application-for-the-data-engineering-analyst-position",
-      "company": "Eptura",
+      "id": "eptura-application-received-submitting-your-application-for-the-data-engineering-analyst-position",
+      "company": "Eptura Application Received",
       "role": "submitting your application for the Data Engineering Analyst position",
       "status": "reply_needed",
       "confidence": "medium",
@@ -9660,23 +9404,6 @@
         "19fadcdc1ed0f2a2",
         "19f8b5e7d88deec5",
         "19f62aba16304494"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "an-unattended-mailbox-replies-will-not-be-read-applying-to-10a-labs",
-      "company": "An Unattended Mailbox. Replies Will Not Be Read",
-      "role": "applying to 10a Labs",
-      "status": "initial_revert_needed",
-      "confidence": "high",
-      "latestSubject": "Thank you for applying to 10a Labs",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-14T22:01:20.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19f6feb803fdc84d",
-      "gmailMessageIds": [
-        "19f6feb803fdc84d",
-        "19f62a61b66b81c0"
       ],
       "notes": ""
     },
@@ -9747,22 +9474,17 @@
       "notes": ""
     },
     {
-      "id": "we-applying",
-      "company": "We",
-      "role": "applying",
+      "id": "betterup-applying",
+      "company": "Betterup",
+      "role": "Applying",
       "status": "initial_revert_needed",
       "confidence": "high",
       "latestSubject": "Thank you for Applying!",
       "latestFrom": "BetterUp Hiring Team <no-reply@ashbyhq.com>",
       "lastActivityAt": "2026-07-14T21:22:35.000Z",
       "source": "gmail",
-      "gmailThreadId": "19febc8f6caaf4df",
+      "gmailThreadId": "19f62829f839c494",
       "gmailMessageIds": [
-        "19febc8f6caaf4df",
-        "19fdc4ab157496a1",
-        "19f8fe1b7722c54e",
-        "19f6ab10260a50a9",
-        "19f6729a0bb15942",
         "19f62829f839c494"
       ],
       "notes": ""
@@ -10184,23 +9906,6 @@
       "notes": ""
     },
     {
-      "id": "taxbit-taking-the-time-to-apply-for-the-agentic-ai-engineer-role",
-      "company": "Taxbit",
-      "role": "taking the time to apply for the Agentic AI Engineer role",
-      "status": "reply_needed",
-      "confidence": "medium",
-      "latestSubject": "Application to TaxBit Received!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-07-13T19:15:18.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19f5ce7bf485900b",
-      "gmailMessageIds": [
-        "19f5cfdd16b40c7f",
-        "19f5ce7bf485900b"
-      ],
-      "notes": ""
-    },
-    {
       "id": "fairmarkit-applying-to-fairmarkit",
       "company": "Fairmarkit",
       "role": "applying to Fairmarkit",
@@ -10233,8 +9938,8 @@
       "notes": ""
     },
     {
-      "id": "our-position-for-our-client-we-will-review-your-application-applying-to-our-position-for-our-client",
-      "company": "Our Position For Our Client. We Will Review Your Application",
+      "id": "lisa-alfa-ai-applying-to-our-position-for-our-client",
+      "company": "Lisa, Alfa AI",
       "role": "applying to our position for our client",
       "status": "initial_revert_needed",
       "confidence": "high",
@@ -10265,8 +9970,8 @@
       "notes": ""
     },
     {
-      "id": "collabera-applying-to-agentic-ai-engineer-31311",
-      "company": "Collabera",
+      "id": "job-alert-applying-to-agentic-ai-engineer-31311",
+      "company": "JOB ALERT",
       "role": "Applying to - Agentic AI Engineer - 31311",
       "status": "reply_needed",
       "confidence": "medium",
@@ -10313,8 +10018,8 @@
       "notes": ""
     },
     {
-      "id": "the-review-process-may-take-some-time-due-to-a-high-your-application",
-      "company": "The Review Process May Take Some Time Due To A High",
+      "id": "bloomberg-your-application",
+      "company": "Bloomberg",
       "role": "your Application",
       "status": "reply_needed",
       "confidence": "medium",
