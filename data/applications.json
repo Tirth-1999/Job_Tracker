@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-19T12:49:47.248Z",
+  "updatedAt": "2026-08-19T13:44:50.116Z",
   "applications": [
+    {
+      "id": "remotehunter-general-application",
+      "company": "Remotehunter",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Tirth, Your First Job Matches Have Arrived",
+      "latestFrom": "RemoteHunter <hello@mail.remotehunter.com>",
+      "lastActivityAt": "2026-08-19T12:53:49.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01a15c5915dc79",
+      "gmailMessageIds": [
+        "1a01a15c5915dc79"
+      ],
+      "notes": ""
+    },
     {
       "id": "cspring-general-application",
       "company": "Cspring",
