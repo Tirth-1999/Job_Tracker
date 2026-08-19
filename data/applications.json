@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-19T05:31:51.909Z",
+  "updatedAt": "2026-08-19T08:38:56.807Z",
   "applications": [
+    {
+      "id": "usc-general-application",
+      "company": "USC",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "USC Job Application Update",
+      "latestFrom": "USC Workday Notification <usc@myworkday.com>",
+      "lastActivityAt": "2026-08-19T07:50:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019001fc683638",
+      "gmailMessageIds": [
+        "1a019001fc683638"
+      ],
+      "notes": ""
+    },
     {
       "id": "faith-general-application",
       "company": "Faith",
