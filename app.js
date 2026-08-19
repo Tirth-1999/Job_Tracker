@@ -456,6 +456,7 @@ function renderAnalytics(applications) {
   if (!analyticsEl) return;
 
   const currentSelectedDate = state.selectedDate || getTodayDateStr();
+  const currentCategoryFilter = state.analyticsCategoryFilter || "all";
 
   // 1. Group applications by date
   const dateMap = new Map();
@@ -489,7 +490,26 @@ function renderAnalytics(applications) {
     else if (status === "rejected") rejectedCount += 1;
   }
 
-  // 3. Build ±5 Days Navigation Window around selected date
+  // 3. Compute Overall Category Aggregates across the entire dataset
+  const aggCategories = [
+    { key: "applied", label: "Applied", icon: "📝", color: "var(--applied)" },
+    { key: "reply_needed", label: "Reply Needed", icon: "💬", color: "var(--reply)" },
+    { key: "interviewed", label: "Interviewed", icon: "🎯", color: "var(--interviewed)" },
+    { key: "offered", label: "Offered", icon: "🏆", color: "var(--offered)" },
+    { key: "rejected", label: "Rejected", icon: "❌", color: "var(--rejected)" },
+    { key: "not_related", label: "Other Emails", icon: "📁", color: "#64748b" }
+  ];
+
+  const totalAllApps = applications.length || 1;
+  const overallCounts = {};
+  for (const cat of aggCategories) overallCounts[cat.key] = 0;
+  for (const app of applications) {
+    const status = normalizeStatus(app.effectiveStatus || app.status);
+    overallCounts[status] = (overallCounts[status] || 0) + 1;
+  }
+  const maxCatCount = Math.max(...Object.values(overallCounts), 1);
+
+  // 4. Build ±5 Days Navigation Window around selected date
   const selDateObj = new Date(currentSelectedDate + "T12:00:00");
   const pillDays = [];
   for (let i = -5; i <= 5; i++) {
@@ -502,7 +522,7 @@ function renderAnalytics(applications) {
     pillDays.push({ key, label, count, isToday, isSelected: key === currentSelectedDate });
   }
 
-  // 4. Build 14-Day Activity Bar Chart
+  // 5. Build 14-Day Activity Bar Chart
   const chartDays = [];
   const todayObj = new Date(getTodayDateStr() + "T12:00:00");
   for (let i = 13; i >= 0; i--) {
@@ -515,8 +535,13 @@ function renderAnalytics(applications) {
     const weekday = d.toLocaleDateString("en-US", { weekday: "narrow" });
     chartDays.push({ key, label: `${weekday} ${label}`, count, isSelected: key === currentSelectedDate });
   }
-
   const maxDailyCount = Math.max(...chartDays.map((c) => c.count), 1);
+
+  // 6. Filter day activity log by selected category tag
+  const filteredDayApps =
+    currentCategoryFilter === "all"
+      ? dayApps
+      : dayApps.filter((a) => normalizeStatus(a.effectiveStatus || a.status) === currentCategoryFilter);
 
   // Format header title
   const formattedSelectedDate = selDateObj.toLocaleDateString("en-US", {
@@ -525,7 +550,6 @@ function renderAnalytics(applications) {
     month: "long",
     day: "numeric"
   });
-
   const isSelectedToday = currentSelectedDate === getTodayDateStr();
 
   analyticsEl.innerHTML = `
@@ -581,9 +605,43 @@ function renderAnalytics(applications) {
       </div>
     </div>
 
+    <!-- Aggregate Category Bar Graph -->
+    <div class="aggregate-card">
+      <div class="aggregate-header">
+        <h3>📊 Aggregate Category Distribution (${applications.length} Total Entries)</h3>
+        <span style="font-size:12px;color:var(--muted);">Click any bar to filter the activity table below</span>
+      </div>
+      <div class="aggregate-bars-list">
+        ${aggCategories
+          .map((cat) => {
+            const count = overallCounts[cat.key] || 0;
+            const pct = Math.round((count / totalAllApps) * 100);
+            const barPct = Math.max(Math.round((count / maxCatCount) * 100), 2);
+            const isActive = currentCategoryFilter === cat.key;
+            return `
+            <div class="agg-row ${isActive ? "active" : ""}" data-category="${cat.key}" title="Click to filter by ${cat.label}">
+              <div class="agg-label">
+                <span class="agg-dot" style="background: ${cat.color};"></span>
+                <span>${cat.icon} ${cat.label}</span>
+              </div>
+              <div class="agg-bar-track">
+                <div class="agg-bar-fill" style="width: ${barPct}%; background: ${cat.color};"></div>
+              </div>
+              <div class="agg-stats">
+                <span>${count}</span>
+                <span class="agg-pct">(${pct}%)</span>
+              </div>
+            </div>
+          `;
+          })
+          .join("")}
+      </div>
+    </div>
+
+    <!-- 14-Day Activity Trend Bar Chart -->
     <div class="chart-card">
       <div class="chart-header">
-        <h3>14-Day Activity Trend (Click any day to inspect)</h3>
+        <h3>📈 14-Day Activity Trend (Click any day to inspect)</h3>
         <span style="font-size:12px;color:var(--muted);">Peak: <strong>${maxDailyCount}</strong> items/day</span>
       </div>
       <div class="chart-bars-wrap">
@@ -602,12 +660,39 @@ function renderAnalytics(applications) {
       </div>
     </div>
 
+    <!-- Quick Category Filter Tags -->
+    <div class="category-filter-tags-card">
+      <span class="filter-tags-label">🏷️ Filter Activity Log by Category:</span>
+      <div class="category-filter-tags">
+        <button class="cat-tag-btn ${currentCategoryFilter === "all" ? "active" : ""}" data-category="all">
+          🌐 All Activity <span class="cat-tag-count">${dayApps.length}</span>
+        </button>
+        ${aggCategories
+          .map((cat) => {
+            const dayCount = dayApps.filter((a) => normalizeStatus(a.effectiveStatus || a.status) === cat.key).length;
+            const isActive = currentCategoryFilter === cat.key;
+            return `
+            <button class="cat-tag-btn ${isActive ? "active" : ""}" data-category="${cat.key}">
+              ${cat.icon} ${cat.label} <span class="cat-tag-count">${dayCount}</span>
+            </button>
+          `;
+          })
+          .join("")}
+      </div>
+    </div>
+
+    <!-- Activity Log for Selected Date -->
     <div class="table-shell">
       <div style="padding: 14px 18px; border-bottom: 1px solid var(--border); background: #f8fafc; font-size: 14px; font-weight: 700; display:flex; justify-content:space-between; align-items:center;">
-        <span>Activity Log for ${formattedSelectedDate} (${dayApps.length} entries)</span>
+        <span>Activity Log for ${formattedSelectedDate} (${filteredDayApps.length} ${currentCategoryFilter === "all" ? "entries" : `"${currentCategoryFilter.replace("_", " ")}" entries`})</span>
+        ${
+          currentCategoryFilter !== "all"
+            ? `<button class="cat-tag-btn" data-category="all" style="font-size:11px;padding:3px 8px;">✕ Clear Filter</button>`
+            : ""
+        }
       </div>
       ${
-        dayApps.length
+        filteredDayApps.length
           ? `
         <table>
           <thead>
@@ -621,7 +706,7 @@ function renderAnalytics(applications) {
             </tr>
           </thead>
           <tbody>
-            ${dayApps
+            ${filteredDayApps
               .sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""))
               .map((app) => {
                 const status = normalizeStatus(app.effectiveStatus || app.status);
@@ -641,7 +726,7 @@ function renderAnalytics(applications) {
           </tbody>
         </table>
       `
-          : `<div class="empty">No activity recorded on ${formattedSelectedDate}</div>`
+          : `<div class="empty">No ${currentCategoryFilter !== "all" ? `"${currentCategoryFilter.replace("_", " ")}"` : ""} activity recorded on ${formattedSelectedDate}</div>`
       }
     </div>
   `;
@@ -695,6 +780,23 @@ function attachAnalyticsListeners(applications) {
   document.querySelectorAll(".chart-col").forEach((col) => {
     col.addEventListener("click", () => {
       state.selectedDate = col.dataset.date;
+      renderAnalytics(applications);
+    });
+  });
+
+  // Category Filter Tags Click Listener
+  document.querySelectorAll(".cat-tag-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state.analyticsCategoryFilter = btn.dataset.category || "all";
+      renderAnalytics(applications);
+    });
+  });
+
+  // Aggregate Category Bar Click Listener
+  document.querySelectorAll(".agg-row").forEach((row) => {
+    row.addEventListener("click", () => {
+      const cat = row.dataset.category;
+      state.analyticsCategoryFilter = state.analyticsCategoryFilter === cat ? "all" : cat;
       renderAnalytics(applications);
     });
   });
