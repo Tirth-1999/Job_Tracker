@@ -1029,25 +1029,15 @@ function renderServices(applications) {
   const currentModel = AI_MODELS.find((m) => m.id === currentModelId) || AI_MODELS[0];
 
   servicesEl.innerHTML = `
+    <!-- Combined Header & Active Model Selector Card -->
     <div class="services-header-card">
-      <div class="services-title">
-        <h2>⚙️ Operations & AI Services Suite</h2>
-        <p>Automated cloud batch jobs, full-mailbox AI re-classifiers, synchronization services, and data repair utilities</p>
-      </div>
-      <div>
-        <span class="pill pill-done" style="font-size:12px;padding:6px 12px;">✅ AI Engine: ${escapeHtml(currentModel.name)}</span>
-      </div>
-    </div>
-
-    <!-- AI Model Selector Card -->
-    <div class="model-selector-card">
-      <div class="model-selector-top">
-        <div>
-          <h3>🤖 Active AI Model Engine Selection</h3>
-          <p style="font-size:13px;color:var(--muted);margin-top:2px;">Select the LLM judge engine used for all future Gmail synchronizations and full-mailbox re-classifications.</p>
+      <div class="services-header-top">
+        <div class="services-title">
+          <h2>⚙️ Operations & AI Services Suite</h2>
+          <p>Automated cloud batch jobs, full-mailbox AI re-classifiers, synchronization services, and data repair utilities</p>
         </div>
-        <div class="model-select-wrapper">
-          <label style="font-size:13px;font-weight:700;">Model:</label>
+        <div class="model-select-inline">
+          <label style="font-size:13px;font-weight:700;white-space:nowrap;">AI Engine:</label>
           <select id="modelSelectorDropdown" class="model-select">
             ${AI_MODELS.map(
               (m) => `
@@ -1059,10 +1049,12 @@ function renderServices(applications) {
           </select>
         </div>
       </div>
-      <div class="model-details-badge">
-        <strong>${escapeHtml(currentModel.name)}</strong> (${escapeHtml(currentModel.provider)}) &mdash; 
-        <span style="color:var(--accent);font-weight:600;">${escapeHtml(currentModel.badge)}</span>
-        <div style="margin-top:4px;color:var(--text);font-size:12px;">${escapeHtml(currentModel.description)}</div>
+      <div class="model-details-banner">
+        <div>
+          <strong>Active: ${escapeHtml(currentModel.name)}</strong> (${escapeHtml(currentModel.provider)}) &mdash; 
+          <span style="color:var(--text);font-size:12px;">${escapeHtml(currentModel.description)}</span>
+        </div>
+        <span class="pill pill-done" style="font-size:11px;font-weight:700;white-space:nowrap;">${escapeHtml(currentModel.badge)}</span>
       </div>
     </div>
 
