@@ -1342,6 +1342,10 @@ function attachPaginationListeners(prefix, totalItems, pageKey, pageSizeKey, rer
   });
 }
 
+function normalizeCompany(company) {
+  return String(company || "unknown").trim().toLowerCase();
+}
+
 const STATUS_LABELS = {
   applied: "Applied",
   reply_needed: "Reply Needed",
