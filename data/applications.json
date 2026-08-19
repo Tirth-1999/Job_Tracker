@@ -1,6 +1,82 @@
 {
-  "updatedAt": "2026-08-19T21:19:30.092Z",
+  "updatedAt": "2026-08-19T21:25:01.872Z",
   "applications": [
+    {
+      "id": "toyota-general-application",
+      "company": "Toyota",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Acknowledgement",
+      "latestFrom": "Workday_Notifications Toyota <toyota@myworkday.com>",
+      "lastActivityAt": "2026-08-19T21:24:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01be8f64687d35",
+      "gmailMessageIds": [
+        "1a01be8f64687d35"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "toyota-production-data-engineer",
+      "company": "Toyota",
+      "role": "Production Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application! One final step!",
+      "latestFrom": "Toyota <alerts@jobs.toyotarecruiting.com>",
+      "lastActivityAt": "2026-08-19T21:24:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01be8f14a1b5b0",
+      "gmailMessageIds": [
+        "1a01be8f14a1b5b0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "abaka-ai-data-solutions-engineer",
+      "company": "Abaka AI",
+      "role": "Data Solutions Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on Your Application: Data Solutions Engineer @ Abaka AI",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-19T21:22:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01be75f0cb9992",
+      "gmailMessageIds": [
+        "1a01be75f0cb9992"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "amazon-general-application",
+      "company": "Amazon",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Keep track of your application",
+      "latestFrom": "noreply@mail.amazon.jobs",
+      "lastActivityAt": "2026-08-19T21:20:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01bdc7d40b1417",
+      "gmailMessageIds": [
+        "1a01bddccf140a9d",
+        "1a01bdd7d2646129",
+        "1a01bdc7d40b1417",
+        "1a01be63a54ca56d",
+        "1a01be5e4e67d32e"
+      ],
+      "notes": ""
+    },
     {
       "id": "american-airlines-data-engineer-senior-data-engineer",
       "company": "American Airlines",
@@ -34,26 +110,6 @@
       "gmailThreadId": "1a01be0f4ead03c4",
       "gmailMessageIds": [
         "1a01be0f4ead03c4"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "amazon-general-application",
-      "company": "Amazon",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Keep track of your application",
-      "latestFrom": "noreply@mail.amazon.jobs",
-      "lastActivityAt": "2026-08-19T21:10:29.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a01bdc7d40b1417",
-      "gmailMessageIds": [
-        "1a01bddccf140a9d",
-        "1a01bdd7d2646129",
-        "1a01bdc7d40b1417"
       ],
       "notes": ""
     },
