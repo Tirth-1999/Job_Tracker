@@ -1,6 +1,52 @@
 {
-  "updatedAt": "2026-08-19T19:10:22.281Z",
+  "updatedAt": "2026-08-19T19:26:57.776Z",
   "applications": [
+    {
+      "id": "unknown-data-engineer",
+      "company": "Unknown",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "lastActivityAt": "2026-08-19T19:21:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01b78ce91908a0",
+      "gmailMessageIds": [
+        "1a01b78ce91908a0",
+        "1a01b78b70ebb4cc",
+        "1a01b78b1b1c2f49",
+        "1a01b789e730f62c",
+        "1a01b789ae6742a6",
+        "1a01b78838951bde",
+        "1a01b78723ead4f4",
+        "1a01b7864e246983",
+        "1a01b7850cebf3f0",
+        "1a01b784ee04b0a1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "varite-data-engineer",
+      "company": "Varite",
+      "role": "Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Re: Infosys Client is looking for Data Engineer - Apply W2 Candidates // 122559-1",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "lastActivityAt": "2026-08-19T19:15:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01a9f496c0b2c4",
+      "gmailMessageIds": [
+        "1a01a9f496c0b2c4",
+        "1a01b7320606d728"
+      ],
+      "notes": ""
+    },
     {
       "id": "brightwheel-senior-data-analyst",
       "company": "Brightwheel",
@@ -219,24 +265,6 @@
       "gmailMessageIds": [
         "1a01ad5447ad1144",
         "1a01ad4e48bc2ccb"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "varite-data-engineer",
-      "company": "Varite",
-      "role": "Data Engineer",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Infosys Client is looking for Data Engineer - Apply W2 Candidates // 122559-1",
-      "latestFrom": "G Pankaja <Pankaja.G@varite.com>",
-      "lastActivityAt": "2026-08-19T15:16:04.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a01a9f496c0b2c4",
-      "gmailMessageIds": [
-        "1a01a9f496c0b2c4"
       ],
       "notes": ""
     },
