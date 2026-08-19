@@ -652,8 +652,10 @@ function promptConfirmMove(app, targetStatus, onConfirm) {
 
   if (!backdrop || !modalBody) return;
 
-  const currentLabel = labelForStatus(normalizeStatus(app.effectiveStatus || app.status));
-  const targetLabel = labelForStatus(normalizeStatus(targetStatus));
+  const currentStatus = normalizeStatus(app.effectiveStatus || app.status);
+  const targetStatusNorm = normalizeStatus(targetStatus);
+  const currentLabel = labelForStatus(currentStatus);
+  const targetLabel = labelForStatus(targetStatusNorm);
 
   modalTitle.textContent = "Confirm Pipeline Stage Change";
   modalBody.innerHTML = `
@@ -662,12 +664,16 @@ function promptConfirmMove(app, targetStatus, onConfirm) {
       <div style="font-weight:700;font-size:14px;margin-bottom:4px;">${escapeHtml(app.company || "Unknown Company")}</div>
       <div style="color:var(--muted);font-size:12px;margin-bottom:8px;">${escapeHtml(app.role || "General Application")}</div>
       <div style="display:flex;align-items:center;gap:8px;font-size:13px;">
-        <span class="pill status-pill ${statusClass(app.status)}">${escapeHtml(currentLabel)}</span>
+        <span class="pill status-pill ${statusClass(currentStatus)}">${escapeHtml(currentLabel)}</span>
         <span>➔</span>
-        <span class="pill status-pill ${statusClass(targetStatus)}" style="font-weight:700;">${escapeHtml(targetLabel)}</span>
+        <span class="pill status-pill ${statusClass(targetStatusNorm)}" style="font-weight:700;">${escapeHtml(targetLabel)}</span>
       </div>
     </div>
-    <p style="font-size:12px;color:var(--muted);">This will update the application's pipeline stage and persist the change in your tracker dataset.</p>
+    <p style="font-size:12px;color:var(--muted);">
+      ${targetStatusNorm === "not_related" 
+        ? "This email will be moved to the <strong>Other Emails</strong> tab and excluded from active job pipeline lanes." 
+        : `This will move the application to the <strong>${escapeHtml(targetLabel)}</strong> lane and sync directly to Supabase.`}
+    </p>
   `;
 
   const close = () => {
@@ -690,10 +696,14 @@ function moveApplicationLane(appId, targetStatus) {
   if (!app) return;
 
   promptConfirmMove(app, targetStatus, async () => {
+    const now = new Date().toISOString();
     // Mutate status FIRST so Supabase row gets the new value
     app.status = targetStatus;
     app.effectiveStatus = targetStatus;
-    app.updatedAt = new Date().toISOString();
+    app.updatedAt = now;
+    app.isManualOverride = true;
+    app.manualAction = targetStatus === "not_related" ? "move_to_not_related" : `move_to_${targetStatus}`;
+    app.manualChangedAt = now;
 
     // Clear localStorage overrides
     const doneSet = getDoneApps();
@@ -703,10 +713,10 @@ function moveApplicationLane(appId, targetStatus) {
     localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
     localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
 
-    state.data.updatedAt = app.updatedAt;
+    state.data.updatedAt = now;
     render();
 
-    await syncAppToSupabase(app, `move_to_${targetStatus}`);
+    await syncAppToSupabase(app, app.manualAction);
   });
 }
 
@@ -841,7 +851,7 @@ function renderCompanies(applications) {
 }
 
 function renderApplications(applications) {
-  const jobApps = applications.filter((app) => normalizeStatus(app.status) !== "not_related");
+  const jobApps = applications.filter((app) => normalizeStatus(app.effectiveStatus || app.status) !== "not_related");
   const allRows = [...jobApps].sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
   const pagedRows = paginateArray(allRows, state.pageApps, state.pageSizeApps);
 
@@ -851,6 +861,7 @@ function renderApplications(applications) {
       <thead><tr><th>Company</th><th>Role</th><th>Status</th><th>AI Decision</th><th>Latest Email</th><th>Last Activity</th><th>Action</th></tr></thead>
       <tbody>
         ${pagedRows.map((app) => {
+          const status = normalizeStatus(app.effectiveStatus || app.status);
           const aiTag = app.aiDecision
             ? `<span class="pill pill-ai" title="AI Engine: ${escapeHtml(app.aiModel || 'Gemini Flash')}&#10;Decision: ${escapeHtml(app.aiDecision)}&#10;Evaluated: ${app.aiClassifiedAt ? new Date(app.aiClassifiedAt).toLocaleString() : 'Recently'}">🤖 ${escapeHtml(app.aiDecision)}</span>`
             : `<span style="color:var(--muted);font-size:11px;">Default</span>`;
@@ -858,11 +869,24 @@ function renderApplications(applications) {
             <tr>
               <td><strong>${escapeHtml(app.company || "Unknown company")}</strong></td>
               <td>${escapeHtml(app.role || "Unknown role")}</td>
-              <td><span class="pill status-pill ${statusClass(normalizeStatus(app.status))}">${escapeHtml(labelForStatus(normalizeStatus(app.status)))}</span></td>
+              <td><span class="pill status-pill ${statusClass(status)}">${escapeHtml(labelForStatus(status))}</span></td>
               <td>${aiTag}</td>
               <td>${escapeHtml(app.latestSubject || "No subject")}</td>
               <td>${formatDate(app.lastActivityAt)}</td>
-              <td><a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open in Gmail ↗</a></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+                  <a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open ↗</a>
+                  <select class="select-move-lane" data-id="${app.id}" data-current="${status}" style="font-size:11px;padding:3px 6px;border-radius:4px;border:1px solid var(--border);" title="Change stage">
+                    <option value="" disabled selected>Move ▾</option>
+                    <option value="applied" ${status === "applied" ? "disabled" : ""}>Applied</option>
+                    <option value="reply_needed" ${status === "reply_needed" ? "disabled" : ""}>Reply Needed</option>
+                    <option value="interviewed" ${status === "interviewed" ? "disabled" : ""}>Interviewed</option>
+                    <option value="offered" ${status === "offered" ? "disabled" : ""}>Offered</option>
+                    <option value="rejected" ${status === "rejected" ? "disabled" : ""}>Rejected</option>
+                    <option value="not_related" ${status === "not_related" ? "disabled" : ""}>Other Emails</option>
+                  </select>
+                </div>
+              </td>
             </tr>
           `;
         }).join("")}
@@ -871,7 +895,10 @@ function renderApplications(applications) {
     ${renderPaginationBar(allRows.length, state.pageApps, state.pageSizeApps, "apps", "bottom")}
   ` : `<div class="empty">No applications found</div>`;
 
-  attachPaginationListeners("apps", allRows.length, "pageApps", "pageSizeApps", () => renderApplications(applications));
+  attachPaginationListeners("apps", allRows.length, "pageApps", "pageSizeApps", () => {
+    renderApplications(applications);
+    attachCardActionListeners();
+  });
 }
 
 function renderOtherEmails(applications) {
@@ -892,7 +919,7 @@ function renderOtherEmails(applications) {
           const aiTag = app.aiDecision
             ? `<div style="margin-top:4px;"><span class="pill pill-ai" title="AI Model: ${escapeHtml(app.aiModel || '')}&#10;Decision: ${escapeHtml(app.aiDecision)}">🤖 ${escapeHtml(app.aiDecision)}</span></div>`
             : "";
-          const reopenBtn = app.isIgnored ? `<button class="btn-action btn-reopen" data-id="${app.id}" style="margin-left:6px;">↩ Reopen</button>` : "";
+          const reopenBtn = app.isIgnored ? `<button class="btn-action btn-reopen" data-id="${app.id}">↩ Reopen</button>` : "";
           return `
             <tr>
               <td><strong>${escapeHtml(app.company || "Other")}</strong></td>
@@ -900,8 +927,18 @@ function renderOtherEmails(applications) {
               <td>${ignoredTag}${aiTag}</td>
               <td>${formatDate(app.lastActivityAt)}</td>
               <td>
-                <a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open in Gmail ↗</a>
-                ${reopenBtn}
+                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+                  <a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open ↗</a>
+                  ${reopenBtn}
+                  <select class="select-move-lane" data-id="${app.id}" data-current="not_related" style="font-size:11px;padding:3px 6px;border-radius:4px;border:1px solid var(--border);" title="Promote to job pipeline stage">
+                    <option value="" disabled selected>Move to Lane ▾</option>
+                    <option value="applied">Applied</option>
+                    <option value="reply_needed">Reply Needed</option>
+                    <option value="interviewed">Interviewed</option>
+                    <option value="offered">Offered</option>
+                    <option value="rejected">Rejected</option>
+                  </select>
+                </div>
               </td>
             </tr>
           `;
@@ -911,7 +948,10 @@ function renderOtherEmails(applications) {
     ${renderPaginationBar(allRows.length, state.pageOther, state.pageSizeOther, "other", "bottom")}
   ` : `<div class="empty">No other emails found</div>`;
 
-  attachPaginationListeners("other", allRows.length, "pageOther", "pageSizeOther", () => renderOtherEmails(applications));
+  attachPaginationListeners("other", allRows.length, "pageOther", "pageSizeOther", () => {
+    renderOtherEmails(applications);
+    attachCardActionListeners();
+  });
 }
 
 function getLocalDateKey(dateInput) {
@@ -1302,20 +1342,30 @@ function attachPaginationListeners(prefix, totalItems, pageKey, pageSizeKey, rer
   });
 }
 
-function normalizeCompany(company) {
-  return String(company || "unknown").trim().toLowerCase();
-}
+const STATUS_LABELS = {
+  applied: "Applied",
+  reply_needed: "Reply Needed",
+  interviewed: "Interviewed",
+  offered: "Offered",
+  rejected: "Rejected",
+  not_related: "Other Emails"
+};
 
 function labelForStatus(status) {
-  return LANES.find(([key]) => key === normalizeStatus(status))?.[1] ?? "Applied";
+  const norm = normalizeStatus(status);
+  return STATUS_LABELS[norm] || LANES.find(([key]) => key === norm)?.[1] || "Applied";
 }
 
 function statusClass(status) {
-  return `status-${normalizeStatus(status).replaceAll("_", "-")}`;
+  const norm = normalizeStatus(status);
+  return `status-${norm.replaceAll("_", "-")}`;
 }
 
 function normalizeStatus(status) {
-  return status === "initial_revert_needed" ? "applied" : status || "applied";
+  if (!status || status === "initial_revert_needed") return "applied";
+  const s = String(status).trim().toLowerCase();
+  if (STATUS_LABELS[s]) return s;
+  return "applied";
 }
 
 function formatDate(value) {
