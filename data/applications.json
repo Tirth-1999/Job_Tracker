@@ -1,6 +1,60 @@
 {
-  "updatedAt": "2026-08-19T17:28:23.031Z",
+  "updatedAt": "2026-08-19T18:36:59.943Z",
   "applications": [
+    {
+      "id": "scale-general-application",
+      "company": "Scale",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Something worth knowing if you're job searching right now",
+      "latestFrom": "Leela Yanamaddi <hello@scale.jobs>",
+      "lastActivityAt": "2026-08-19T18:17:28.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01b3e17863e673",
+      "gmailMessageIds": [
+        "1a01b3e17863e673"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "nbcuniversal-data-engineer",
+      "company": "Nbcuniversal",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you from NBCUniversal - Data Engineer, Engineering & Operations - Tirth  Shah ",
+      "latestFrom": "NBCUniversal Hiring Team <notifications@smartrecruiters.com>",
+      "lastActivityAt": "2026-08-19T18:11:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01b3832e326090",
+      "gmailMessageIds": [
+        "1a01b3832e326090"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pyramid-consulting-data-architect",
+      "company": "Pyramid Consulting",
+      "role": "Data Architect",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Data Architect/Engineer | Deerfield Beach, FL",
+      "latestFrom": "Prabhat Kumar Patro <Prabhat.Patro@pyramidci.com>",
+      "lastActivityAt": "2026-08-19T17:58:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01b2ce482df402",
+      "gmailMessageIds": [
+        "1a01b2ce482df402"
+      ],
+      "notes": ""
+    },
     {
       "id": "built-in-general-application",
       "company": "Built In",
