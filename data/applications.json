@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-18T22:51:47.994Z",
+  "updatedAt": "2026-08-19T03:47:43.270Z",
   "applications": [
+    {
+      "id": "whoop-analytics-engineer-ii",
+      "company": "WHOOP",
+      "role": "Analytics Engineer II",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for your Interest in WHOOP",
+      "latestFrom": "Whoop Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-19T03:40:16.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0181afc4fb15a2",
+      "gmailMessageIds": [
+        "1a0181afc4fb15a2"
+      ],
+      "notes": ""
+    },
     {
       "id": "eliyan-software-engineer",
       "company": "Eliyan",
