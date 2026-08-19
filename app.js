@@ -503,17 +503,32 @@ function renderBoard(applications) {
 }
 
 function getGmailUrl(app) {
-  if (!app) return "https://mail.google.com/mail/u/0/#inbox";
-  if (app.gmailThreadId) {
-    return `https://mail.google.com/mail/u/0/#inbox/${encodeURIComponent(app.gmailThreadId)}`;
+  if (!app) return "https://mail.google.com/mail/u/0/#all";
+
+  // 1. Primary: Open exact thread from All Mail (works for all inbox, archived, labeled & tabbed emails)
+  if (app.gmailThreadId && String(app.gmailThreadId).trim()) {
+    return `https://mail.google.com/mail/u/0/#all/${encodeURIComponent(String(app.gmailThreadId).trim())}`;
   }
-  if (app.gmailMessageIds?.length) {
-    return `https://mail.google.com/mail/u/0/#all/${encodeURIComponent(app.gmailMessageIds[0])}`;
+
+  // 2. Secondary: Message ID lookup in All Mail
+  if (app.gmailMessageIds && Array.isArray(app.gmailMessageIds) && app.gmailMessageIds.length > 0 && String(app.gmailMessageIds[0]).trim()) {
+    return `https://mail.google.com/mail/u/0/#all/${encodeURIComponent(String(app.gmailMessageIds[0]).trim())}`;
   }
-  if (app.company || app.latestSubject) {
-    return `https://mail.google.com/mail/u/0/#search/${encodeURIComponent(app.company || app.latestSubject)}`;
+
+  // 3. Fallback: Search query by exact subject
+  if (app.latestSubject && String(app.latestSubject).trim()) {
+    const cleanSubj = String(app.latestSubject).replace(/^(re|fwd|fw):\s*/gi, "").trim();
+    if (cleanSubj) {
+      return `https://mail.google.com/mail/u/0/#search/subject%3A%22${encodeURIComponent(cleanSubj)}%22`;
+    }
   }
-  return "https://mail.google.com/mail/u/0/#inbox";
+
+  // 4. Fallback: Search by company
+  if (app.company && String(app.company).trim() && app.company !== "Unknown") {
+    return `https://mail.google.com/mail/u/0/#search/${encodeURIComponent(String(app.company).trim())}`;
+  }
+
+  return "https://mail.google.com/mail/u/0/#all";
 }
 
 function renderCard(app) {
@@ -581,14 +596,18 @@ function renderCard(app) {
   return `
     <article class="card ${statusClass(status)}">
       <div class="card-header">
-        <h3>${escapeHtml(app.company || "Unknown company")}</h3>
-        <a class="btn-gmail-icon" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open this thread directly in Gmail">
+        <a class="card-header-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact email thread in Gmail">
+          <h3>${escapeHtml(app.company || "Unknown company")}</h3>
+        </a>
+        <a class="btn-gmail-icon" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact thread in Gmail">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          Open
+          Open ↗
         </a>
       </div>
       <div class="role">${escapeHtml(app.role || "Unknown role")}</div>
-      <div class="subject">${escapeHtml(app.latestSubject || "No subject")}</div>
+      <a class="card-subject-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact email thread in Gmail">
+        <div class="subject">${escapeHtml(app.latestSubject || "No subject")}</div>
+      </a>
       <div class="meta">
         <span class="pill status-pill ${statusClass(status)}">${escapeHtml(labelForStatus(status))}</span>
         ${doneBadge}

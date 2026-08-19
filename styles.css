@@ -995,6 +995,31 @@ tr:last-child td {
   color: var(--muted);
 }
 
+.card-header-link {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.card-header-link:hover h3 {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.card-subject-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.card-subject-link:hover .subject {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .btn-gmail-icon {
   display: inline-flex;
   align-items: center;
