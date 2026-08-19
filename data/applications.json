@@ -1,6 +1,204 @@
 {
-  "updatedAt": "2026-08-19T11:26:15.041Z",
+  "updatedAt": "2026-08-19T11:52:01.664Z",
   "applications": [
+    {
+      "id": "paretohealth-data-engineer",
+      "company": "Paretohealth",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to ParetoHealth",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-19T11:50:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019db66d65f05a",
+      "gmailMessageIds": [
+        "1a019db66d65f05a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "harrison-street-general-application",
+      "company": "Harrison Street",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Harrison Street",
+      "latestFrom": "Harrison Street <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-08-19T11:49:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019db4b43fb25e",
+      "gmailMessageIds": [
+        "1a019db4b43fb25e"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fdm-general-application",
+      "company": "FDM",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Application to join FDM",
+      "latestFrom": "FDM Group <careers@fdmgroup.com>",
+      "lastActivityAt": "2026-08-19T11:49:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019dae11991f08",
+      "gmailMessageIds": [
+        "1a019dae11991f08"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "usm-sql-pl-sql-developer",
+      "company": "USM",
+      "role": "Sql/pl SQL Developer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to USM",
+      "latestFrom": "USM <notification@smartrecruiters.com>",
+      "lastActivityAt": "2026-08-19T11:47:49.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019d95a7dbe80f",
+      "gmailMessageIds": [
+        "1a019d95a7dbe80f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "publicis-groupe-general-application",
+      "company": "Publicis Groupe",
+      "role": "General Application",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "User account with Publicis Groupe",
+      "latestFrom": "PUBLICISGROUPE <publicisgroupe+autoreply@talent.icims.eu>",
+      "lastActivityAt": "2026-08-19T11:44:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019d5e08235629",
+      "gmailMessageIds": [
+        "1a019d5e08235629"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "stem-search-general-application",
+      "company": "STEM Search",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying!",
+      "latestFrom": "STEM Search Group <noreply@recruiterflowmail.com>",
+      "lastActivityAt": "2026-08-19T11:41:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019d3bb2bdb861",
+      "gmailMessageIds": [
+        "1a019d3bb2bdb861"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ova-general-application",
+      "company": "OVA",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Job #26-00318",
+      "latestFrom": "HumanResources@ovahq.com",
+      "lastActivityAt": "2026-08-19T11:37:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019d73532277e0",
+      "gmailMessageIds": [
+        "1a019d73532277e0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "jobot-senior-data-engineer",
+      "company": "Jobot",
+      "role": "Senior Data Engineer",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Keep Going With More Jobs Like Senior Data Engineer",
+      "latestFrom": "Jobot Alerts <jobs@alerts.jobot.com>",
+      "lastActivityAt": "2026-08-19T11:34:55.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019cd8c15aaebb",
+      "gmailMessageIds": [
+        "1a019cd8c15aaebb"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "seton-ny-general-application",
+      "company": "Seton NY",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Seton NY",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-19T11:31:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019ca1cdefbaea",
+      "gmailMessageIds": [
+        "1a019ca1cdefbaea"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pride-global-general-application",
+      "company": "Pride Global",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Job #26-23296",
+      "latestFrom": "HumanResources@prideglobal.com",
+      "lastActivityAt": "2026-08-19T11:26:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019cd7068794bb",
+      "gmailMessageIds": [
+        "1a019cd7068794bb"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "resource-search-general-application",
+      "company": "Resource Search",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Job #26-01415",
+      "latestFrom": "HumanResources@resourcesearch.com",
+      "lastActivityAt": "2026-08-19T11:23:54.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019cabbbed0a92",
+      "gmailMessageIds": [
+        "1a019cabbbed0a92"
+      ],
+      "notes": ""
+    },
     {
       "id": "roberts-data-engineer",
       "company": "Roberts",
