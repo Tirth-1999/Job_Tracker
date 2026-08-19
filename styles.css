@@ -1289,12 +1289,13 @@ tr:last-child td {
 .service-hero-content h3 {
   font-size: 17px;
   font-weight: 700;
+  color: #0f172a !important;
   margin: 0;
 }
 
 .service-hero-content p {
   font-size: 13px;
-  color: var(--muted);
+  color: #475569 !important;
   line-height: 1.5;
   margin: 6px 0 10px 0;
 }
@@ -1475,12 +1476,13 @@ tr:last-child td {
 .service-details h3 {
   font-size: 15px;
   font-weight: 700;
+  color: #0f172a !important;
   margin-bottom: 6px;
 }
 
 .service-details p {
   font-size: 13px;
-  color: var(--muted);
+  color: #475569 !important;
   line-height: 1.45;
   margin: 0;
 }
@@ -1490,6 +1492,15 @@ tr:last-child td {
   gap: 6px;
   flex-wrap: wrap;
   margin-top: 10px;
+}
+
+.service-meta-badges .pill {
+  background: #f1f5f9 !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1 !important;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
 }
 
 .service-action-wrap {

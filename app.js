@@ -460,10 +460,11 @@ function renderStatus() {
 }
 
 function renderStats(applications) {
+  const allApps = state.data?.applications || applications || [];
   const counts = Object.fromEntries(LANES.map(([key]) => [key, 0]));
   let otherCount = 0;
 
-  for (const app of applications) {
+  for (const app of allApps) {
     const status = normalizeStatus(app.effectiveStatus || app.status);
     if (status === "not_related") {
       otherCount += 1;
@@ -1539,18 +1540,13 @@ function renderServices(applications) {
       <div class="model-details-banner">
         <div>
           <strong>Active Engine: ${escapeHtml(currentModel.name)}</strong> (${escapeHtml(currentModel.provider)}) &mdash; 
-          <span style="color:var(--text);font-size:12px;">${escapeHtml(currentModel.description)}</span>
+          <span style="color:#94a3b8;font-size:12px;">${escapeHtml(currentModel.description)}</span>
         </div>
         <span class="pill pill-done" style="font-size:11px;font-weight:700;white-space:nowrap;">${escapeHtml(currentModel.badge)}</span>
       </div>
     </div>
 
-    <!-- Cloud Database & GitHub Direct Sync Card -->
-    <div class="github-sync-card">
-      <div class="github-sync-header">
-        <div>
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385     <div class="services-layout-wrap">
+    <div class="services-layout-wrap">
       <!-- Service 1: Hero Card (Master AI Mailbox Re-Classification) -->
       <div class="service-hero-card">
         <div class="service-hero-top">
