@@ -1382,11 +1382,25 @@ function escapeHtml(value) {
 }
 
 function switchTab(viewName) {
+  if (!viewName) return;
   state.view = viewName;
-  document.querySelectorAll(".tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.view === viewName));
-  document.querySelectorAll(".view").forEach((view) => view.classList.remove("active"));
-  const viewEl = byId(`${viewName}View`);
-  if (viewEl) viewEl.classList.add("active");
+  
+  // 1. Update Tab Buttons
+  document.querySelectorAll(".tab").forEach((tab) => {
+    const isActive = tab.dataset.view === viewName;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", isActive ? "true" : "false");
+  });
+
+  // 2. Update View Sections (Force inline display to eliminate CSS specificity issues)
+  document.querySelectorAll(".view").forEach((view) => {
+    const isTarget = view.id === `${viewName}View`;
+    view.classList.toggle("active", isTarget);
+    view.style.display = isTarget ? "block" : "none";
+  });
+
+  // 3. Re-bind listeners for newly visible view
+  attachCardActionListeners();
 }
 
 const AI_MODELS = [
@@ -2250,11 +2264,14 @@ if (exportBtn) {
   });
 }
 
-for (const button of document.querySelectorAll(".tab")) {
-  button.addEventListener("click", () => {
-    switchTab(button.dataset.view);
-  });
-}
+// Tab click handler with document event delegation for guaranteed reactivity
+document.addEventListener("click", (e) => {
+  const tabBtn = e.target.closest(".tab");
+  if (tabBtn && tabBtn.dataset.view) {
+    e.preventDefault();
+    switchTab(tabBtn.dataset.view);
+  }
+});
 
 loadData().catch((error) => {
   byId("syncStatus").textContent = error.message;
