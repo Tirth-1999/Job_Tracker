@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-08-19T15:32:41.905Z",
+  "updatedAt": "2026-08-19T16:33:01.827Z",
   "applications": [
+    {
+      "id": "supabase-general-application",
+      "company": "Supabase",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your email and launch your projects on Supabase!",
+      "latestFrom": "Supabase <welcome@supabase.com>",
+      "lastActivityAt": "2026-08-19T16:22:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01ad5447ad1144",
+      "gmailMessageIds": [
+        "1a01ad5447ad1144",
+        "1a01ad4e48bc2ccb"
+      ],
+      "notes": ""
+    },
     {
       "id": "varite-data-engineer",
       "company": "Varite",
