@@ -156,43 +156,85 @@ const state = {
 };
 
 const byId = (id) => document.getElementById(id);
+let realtimeChannel = null;
 
 async function loadData() {
-  // 1. Try fetching from Supabase first
   const sb = initSupabase();
-  if (sb) {
+  if (!sb) {
+    throw new Error("Supabase client not initialized.");
+  }
+
+  // 1. Fetch live data from Supabase
+  const { data: sbData, error } = await sb
+    .from("applications")
+    .select("*")
+    .order("last_activity_at", { ascending: false });
+
+  if (error) {
+    console.error("Supabase load error:", error);
+    throw new Error(`Failed to load applications from Supabase: ${error.message}`);
+  }
+
+  state.data = {
+    applications: (sbData || []).map((row) => ({
+      id: row.id,
+      company: row.company,
+      role: row.role,
+      status: row.status,
+      confidence: row.confidence,
+      lastActivityAt: row.last_activity_at,
+      latestSubject: row.latest_subject,
+      latestFrom: row.latest_from,
+      gmailThreadId: row.gmail_thread_id,
+      gmailMessageIds: row.gmail_message_ids || [],
+      notes: row.notes
+    })),
+    updatedAt: new Date().toISOString()
+  };
+
+  console.log(`✅ Loaded ${state.data.applications.length} applications directly from Supabase Cloud Database!`);
+
+  // 2. Setup Realtime WebSocket Listener (if not already listening)
+  if (!realtimeChannel) {
     try {
-      const { data: sbData, error } = await sb.from("applications").select("*").order("last_activity_at", { ascending: false });
-      if (!error && sbData && sbData.length > 0) {
-        state.data = {
-          applications: sbData.map((row) => ({
-            id: row.id,
-            company: row.company,
-            role: row.role,
-            status: row.status,
-            confidence: row.confidence,
-            lastActivityAt: row.last_activity_at,
-            latestSubject: row.latest_subject,
-            latestFrom: row.latest_from,
-            gmailThreadId: row.gmail_thread_id,
-            gmailMessageIds: row.gmail_message_ids || [],
-            notes: row.notes
-          })),
-          updatedAt: new Date().toISOString()
-        };
-        console.log(`Loaded ${state.data.applications.length} applications from Supabase Cloud Database.`);
-        render();
-        return;
-      }
-    } catch (sbErr) {
-      console.warn("Supabase fetch fallback to static json:", sbErr.message);
+      realtimeChannel = sb
+        .channel("public:applications")
+        .on("postgres_changes", { event: "*", schema: "public", table: "applications" }, (payload) => {
+          console.log("⚡ Realtime change received from Supabase:", payload.eventType);
+          if (payload.eventType === "UPDATE" || payload.eventType === "INSERT") {
+            const row = payload.new;
+            const idx = state.data.applications.findIndex((a) => a.id === row.id);
+            const mapped = {
+              id: row.id,
+              company: row.company,
+              role: row.role,
+              status: row.status,
+              confidence: row.confidence,
+              lastActivityAt: row.last_activity_at,
+              latestSubject: row.latest_subject,
+              latestFrom: row.latest_from,
+              gmailThreadId: row.gmail_thread_id,
+              gmailMessageIds: row.gmail_message_ids || [],
+              notes: row.notes
+            };
+            if (idx !== -1) {
+              state.data.applications[idx] = mapped;
+            } else {
+              state.data.applications.unshift(mapped);
+            }
+            render();
+          } else if (payload.eventType === "DELETE") {
+            state.data.applications = state.data.applications.filter((a) => a.id !== payload.old.id);
+            render();
+          }
+        })
+        .subscribe();
+      console.log("⚡ Supabase Realtime channel subscribed successfully.");
+    } catch (realtimeErr) {
+      console.warn("Realtime subscription note:", realtimeErr.message);
     }
   }
 
-  // 2. Fallback to local / GitHub applications.json
-  const response = await fetch(`./data/applications.json?t=${Date.now()}`);
-  if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
-  state.data = await response.json();
   render();
 }
 
