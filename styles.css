@@ -567,6 +567,14 @@ tr:last-child td {
   font-weight: 600;
 }
 
+.pill-manual {
+  background: #fffbeb;
+  color: #92400e;
+  border-color: #fde68a;
+  font-weight: 600;
+  cursor: help;
+}
+
 /* Analytics View Styling */
 .analytics-shell {
   display: flex;

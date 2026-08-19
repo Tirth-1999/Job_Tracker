@@ -49,9 +49,10 @@ function setGitHubToken(token) {
 }
 
 // ─── Map in-memory app object → Supabase row ─────────────────────────────────
-function appToSupabaseRow(app) {
+// manualAction: string like "move_to_interviewed" | "mark_done" | "ignore" | "reopen" | null
+function appToSupabaseRow(app, manualAction = null) {
   const now = new Date().toISOString();
-  return {
+  const row = {
     id: app.id,
     company: app.company || "Unknown",
     role: app.role || "General Application",
@@ -63,48 +64,55 @@ function appToSupabaseRow(app) {
     gmail_thread_id: app.gmailThreadId || null,
     gmail_message_ids: app.gmailMessageIds || [],
     notes: app.notes || "",
-    updated_at: now   // ← always stamp the exact moment of mutation
+    updated_at: now
   };
+  // Audit trail columns (only written if columns exist — safe to include always)
+  if (manualAction) {
+    row.is_manual_override = true;
+    row.manual_action = manualAction;
+    row.manual_changed_at = now;
+  } else {
+    row.is_manual_override = false;
+    row.manual_action = null;
+    // Don't overwrite manual_changed_at when syncing automated changes
+  }
+  return row;
 }
 
-// ─── Primary sync function: upsert ONE row to Supabase ───────────────────────
-// Always awaited at call sites so errors surface immediately
-async function syncAppToSupabase(app) {
+// ─── Primary sync: upsert ONE row to Supabase ────────────────────────────────
+async function syncAppToSupabase(app, manualAction = null) {
   const sb = initSupabase();
-  if (!sb) {
-    console.warn("syncAppToSupabase: Supabase not available, skipping cloud write.");
-    return false;
-  }
-  if (!app || !app.id) {
-    console.warn("syncAppToSupabase: called with null/missing app id.");
-    return false;
-  }
+  if (!sb) { console.warn("Supabase not available."); return false; }
+  if (!app?.id) { console.warn("syncAppToSupabase: missing app id."); return false; }
 
-  const row = appToSupabaseRow(app);
-  const { error } = await sb.from("applications").upsert(row, { onConflict: "id" });
+  const row = appToSupabaseRow(app, manualAction);
+  const { error, data } = await sb
+    .from("applications")
+    .upsert(row, { onConflict: "id" })
+    .select("id, status, updated_at, is_manual_override, manual_action")
+    .single();
 
   if (error) {
-    console.error(`❌ Supabase upsert failed for ${app.id}:`, error.message);
+    console.error(`❌ Supabase upsert failed [${app.id}]:`, error.message);
     return false;
   }
-
-  console.log(`✅ Supabase synced: ${app.company} → status="${app.status}", updated_at=${row.updated_at}`);
+  console.log(`✅ Supabase row confirmed: ${app.company} → status="${data?.status}", updated_at=${data?.updated_at}, manual=${data?.is_manual_override}, action=${data?.manual_action}`);
   return true;
 }
 
-// ─── Batch upsert many rows (used by AI re-classify / noise purge) ────────────
+// ─── Batch upsert many rows (AI re-classify / noise purge) ───────────────────
 async function syncAllAppsToSupabase(apps, label = "batch") {
   const sb = initSupabase();
   if (!sb || !apps?.length) return;
 
-  const rows = apps.map(appToSupabaseRow);
+  const rows = apps.map((app) => appToSupabaseRow(app, null));
   const CHUNK = 50;
   let ok = 0;
 
   for (let i = 0; i < rows.length; i += CHUNK) {
     const { error } = await sb.from("applications").upsert(rows.slice(i, i + CHUNK), { onConflict: "id" });
     if (error) {
-      console.error(`❌ Supabase batch upsert chunk ${i / CHUNK + 1} failed [${label}]:`, error.message);
+      console.error(`❌ Batch chunk ${Math.floor(i / CHUNK) + 1} failed [${label}]:`, error.message);
     } else {
       ok += Math.min(CHUNK, rows.length - i);
     }
@@ -112,7 +120,93 @@ async function syncAllAppsToSupabase(apps, label = "batch") {
   console.log(`✅ Supabase batch sync [${label}]: ${ok}/${rows.length} rows committed.`);
 }
 
-// ─── Optional GitHub fallback commit ─────────────────────────────────────────
+// ─── Trigger Gmail Sync via GitHub Actions Workflow Dispatch ──────────────────
+async function triggerGmailSync(appendConsole) {
+  const token = getGitHubToken();
+  if (!token) {
+    appendConsole("❌ No GitHub PAT saved. Go to Services → GitHub Sync panel and save your token first.", "error");
+    return { success: false };
+  }
+
+  appendConsole("📡 Dispatching Gmail Sync workflow to GitHub Actions...");
+
+  // 1. Trigger workflow dispatch
+  const dispatchRes = await fetch(
+    `https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/gmail-sync.yml/dispatches`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ ref: "main" })
+    }
+  );
+
+  if (!dispatchRes.ok) {
+    const err = await dispatchRes.json().catch(() => ({}));
+    appendConsole(`❌ Workflow dispatch failed (${dispatchRes.status}): ${err.message || "Unknown error"}`, "error");
+    return { success: false };
+  }
+
+  appendConsole("✅ GitHub Actions workflow dispatched! Waiting for it to start...", "success");
+
+  // 2. Poll for the most recent run to start (up to 30s)
+  let runId = null;
+  for (let attempt = 0; attempt < 12; attempt++) {
+    await new Promise((r) => setTimeout(r, 3000));
+    const runsRes = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/gmail-sync.yml/runs?per_page=1&branch=main`,
+      { headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" } }
+    );
+    if (runsRes.ok) {
+      const runsData = await runsRes.json();
+      const latestRun = runsData.workflow_runs?.[0];
+      if (latestRun && (latestRun.status === "queued" || latestRun.status === "in_progress")) {
+        runId = latestRun.id;
+        appendConsole(`⏳ Workflow run #${runId} started (status: ${latestRun.status})...`);
+        break;
+      }
+    }
+  }
+
+  if (!runId) {
+    appendConsole("⚠️ Could not detect running workflow. It may still be starting. Check GitHub Actions manually.", "error");
+    return { success: false };
+  }
+
+  // 3. Poll until the run completes (up to 5 minutes)
+  appendConsole("⏳ Polling Gmail Sync workflow... (this typically takes 1–3 minutes)");
+  for (let poll = 0; poll < 60; poll++) {
+    await new Promise((r) => setTimeout(r, 5000));
+    const runRes = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/actions/runs/${runId}`,
+      { headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" } }
+    );
+    if (!runRes.ok) continue;
+    const run = await runRes.json();
+    const elapsed = Math.round((poll + 1) * 5);
+
+    if (run.status === "completed") {
+      if (run.conclusion === "success") {
+        appendConsole(`✅ Gmail Sync workflow completed successfully (${elapsed}s). Reloading from Supabase...`, "success");
+        return { success: true };
+      } else {
+        appendConsole(`❌ Gmail Sync workflow finished with conclusion: ${run.conclusion}. Check GitHub Actions for details.`, "error");
+        return { success: false };
+      }
+    }
+    if (poll % 6 === 5) {
+      appendConsole(`⏳ Still running... (${elapsed}s elapsed, status: ${run.status})`);
+    }
+  }
+
+  appendConsole("⚠️ Workflow timed out polling after 5 minutes. Will reload data anyway.", "error");
+  return { success: false };
+}
+
+// ─── Optional GitHub file commit (backup) ─────────────────────────────────────
 async function syncToGitHub(commitMessage = "Update applications dataset from Job Tracker Dashboard") {
   const token = getGitHubToken();
   if (!token) return { success: false, reason: "no_token" };
@@ -132,9 +226,7 @@ async function syncToGitHub(commitMessage = "Update applications dataset from Jo
 
     const putRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`, {
       method: "PUT",
-      headers: {
-        Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json"
-      },
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" },
       body: JSON.stringify({ message: `${commitMessage} [skip ci]`, content: contentBase64, sha, branch: "main" })
     });
     if (!putRes.ok) throw new Error((await putRes.json()).message || `HTTP ${putRes.status}`);
@@ -167,6 +259,27 @@ const state = {
 const byId = (id) => document.getElementById(id);
 let realtimeChannel = null;
 
+// ─── Row mapper (Supabase row → in-memory app) ────────────────────────────────
+function rowToApp(row) {
+  return {
+    id: row.id,
+    company: row.company,
+    role: row.role,
+    status: row.status,
+    confidence: row.confidence,
+    lastActivityAt: row.last_activity_at,
+    latestSubject: row.latest_subject,
+    latestFrom: row.latest_from,
+    gmailThreadId: row.gmail_thread_id,
+    gmailMessageIds: row.gmail_message_ids || [],
+    notes: row.notes,
+    updatedAt: row.updated_at,
+    isManualOverride: row.is_manual_override || false,
+    manualAction: row.manual_action || null,
+    manualChangedAt: row.manual_changed_at || null
+  };
+}
+
 // ─── Load: Supabase is the EXCLUSIVE source of truth ─────────────────────────
 async function loadData() {
   const sb = initSupabase();
@@ -180,20 +293,7 @@ async function loadData() {
   if (error) throw new Error(`Supabase SELECT failed: ${error.message}`);
 
   state.data = {
-    applications: (sbData || []).map((row) => ({
-      id: row.id,
-      company: row.company,
-      role: row.role,
-      status: row.status,
-      confidence: row.confidence,
-      lastActivityAt: row.last_activity_at,
-      latestSubject: row.latest_subject,
-      latestFrom: row.latest_from,
-      gmailThreadId: row.gmail_thread_id,
-      gmailMessageIds: row.gmail_message_ids || [],
-      notes: row.notes,
-      updatedAt: row.updated_at   // ← carry updated_at per-row from Supabase
-    })),
+    applications: (sbData || []).map(rowToApp),
     updatedAt: new Date().toISOString()
   };
 
@@ -209,28 +309,14 @@ async function loadData() {
         (payload) => {
           console.log("⚡ Realtime:", payload.eventType, payload.new?.id ?? payload.old?.id);
           if (payload.eventType === "INSERT" || payload.eventType === "UPDATE") {
-            const row = payload.new;
-            const mapped = {
-              id: row.id,
-              company: row.company,
-              role: row.role,
-              status: row.status,
-              confidence: row.confidence,
-              lastActivityAt: row.last_activity_at,
-              latestSubject: row.latest_subject,
-              latestFrom: row.latest_from,
-              gmailThreadId: row.gmail_thread_id,
-              gmailMessageIds: row.gmail_message_ids || [],
-              notes: row.notes,
-              updatedAt: row.updated_at
-            };
-            const idx = state.data.applications.findIndex((a) => a.id === row.id);
+            const mapped = rowToApp(payload.new);
+            const idx = state.data.applications.findIndex((a) => a.id === payload.new.id);
             if (idx !== -1) {
               state.data.applications[idx] = mapped;
             } else {
               state.data.applications.unshift(mapped);
             }
-            state.data.updatedAt = row.updated_at;
+            state.data.updatedAt = payload.new.updated_at;
             render();
           } else if (payload.eventType === "DELETE") {
             state.data.applications = state.data.applications.filter((a) => a.id !== payload.old.id);
@@ -269,12 +355,11 @@ async function setAppDone(appId, isDone) {
 
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
-    // Mutate status FIRST, then sync so Supabase gets the new value
     if (isDone && app.status === "reply_needed") app.status = "applied";
     app.updatedAt = new Date().toISOString();
     state.data.updatedAt = app.updatedAt;
-    render();   // Instant local UI update
-    await syncAppToSupabase(app);   // Persist to Supabase with correct status + updated_at
+    render();
+    await syncAppToSupabase(app, isDone ? "mark_done" : "reopen");
   }
 }
 
@@ -289,15 +374,15 @@ async function setAppIgnored(appId, isIgnored) {
 
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
-    // Mutate status FIRST, then sync
     if (isIgnored && app.status === "reply_needed") app.status = "not_related";
     else if (!isIgnored && app.status === "not_related") app.status = "reply_needed";
     app.updatedAt = new Date().toISOString();
     state.data.updatedAt = app.updatedAt;
     render();
-    await syncAppToSupabase(app);
+    await syncAppToSupabase(app, isIgnored ? "ignore" : "reopen");
   }
 }
+
 
 
 function filteredApplications() {
@@ -437,6 +522,22 @@ function renderCard(app) {
   const doneBadge = app.isDone ? `<span class="pill pill-done">✅ Action Completed</span>` : "";
   const ignoredBadge = app.isIgnored ? `<span class="pill pill-ignored">🚫 Ignored</span>` : "";
 
+  // Manual override audit badge — shows when a human moved this card
+  const manualActionLabels = {
+    move_to_applied: "Moved → Applied",
+    move_to_reply_needed: "Moved → Reply Needed",
+    move_to_interviewed: "Moved → Interviewed",
+    move_to_offered: "Moved → Offered",
+    move_to_rejected: "Moved → Rejected",
+    move_to_not_related: "Moved → Other",
+    mark_done: "Marked Done",
+    ignore: "Ignored",
+    reopen: "Reopened"
+  };
+  const manualBadge = app.isManualOverride
+    ? `<span class="pill pill-manual" title="Manually changed on ${app.manualChangedAt ? new Date(app.manualChangedAt).toLocaleString() : "unknown"}">✋ ${manualActionLabels[app.manualAction] || app.manualAction || "Manual Override"}</span>`
+    : "";
+
   let actionButton = "";
   if (app.status === "reply_needed" && !app.isDone && !app.isIgnored) {
     actionButton = `
@@ -486,6 +587,7 @@ function renderCard(app) {
         <span class="pill status-pill ${statusClass(status)}">${escapeHtml(labelForStatus(status))}</span>
         ${doneBadge}
         ${ignoredBadge}
+        ${manualBadge}
         ${msgCountBadge}
         <span class="pill">${formatDate(app.lastActivityAt)}</span>
         <span class="pill">${escapeHtml(confidence)}</span>
@@ -568,10 +670,9 @@ function moveApplicationLane(appId, targetStatus) {
     localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
 
     state.data.updatedAt = app.updatedAt;
-    render();   // Instant local update
+    render();
 
-    // Persist to Supabase — awaited so errors surface
-    await syncAppToSupabase(app);
+    await syncAppToSupabase(app, `move_to_${targetStatus}`);
   });
 }
 
@@ -1553,29 +1654,32 @@ function attachServicesListeners(applications) {
     });
   }
 
-  // 2. Run Live Sync (reload from Supabase)
+  // 2. Sync New Messages — triggers GitHub Actions Gmail sync, then reloads from Supabase
   const btnSync = byId("btnRunSync");
   if (btnSync) {
     btnSync.addEventListener("click", async () => {
       btnSync.disabled = true;
-      btnSync.innerHTML = "<span>🔄 Syncing...</span>";
-      appendConsole("Reloading live data from Supabase Cloud Database...");
+      btnSync.innerHTML = "<span>⏳ Syncing Gmail...</span>";
       try {
+        const result = await triggerGmailSync(appendConsole);
+        // Always reload from Supabase after workflow (success or timeout)
+        appendConsole("Reloading latest data from Supabase...");
         await loadData();
-        appendConsole("✅ Live sync reload successful! All application metrics refreshed from Supabase.", "success");
-        btnSync.innerHTML = "<span>✅ Synced!</span>";
-        setTimeout(() => {
-          btnSync.innerHTML = "<span>🔄 Sync New Messages</span>";
-          btnSync.disabled = false;
-        }, 1500);
+        if (result.success) {
+          appendConsole("✅ Gmail sync complete! New emails imported and dashboard refreshed.", "success");
+          btnSync.innerHTML = "<span>✅ Synced!</span>";
+        } else {
+          appendConsole("⚠️ Workflow may not have completed — data reloaded from Supabase regardless.", "error");
+          btnSync.innerHTML = "<span>⚠️ Check Actions</span>";
+        }
       } catch (err) {
-        appendConsole(`Sync error: ${err.message}`, "error");
-        btnSync.innerHTML = "<span>❌ Sync Failed</span>";
-        setTimeout(() => {
-          btnSync.innerHTML = "<span>🔄 Sync New Messages</span>";
-          btnSync.disabled = false;
-        }, 2000);
+        appendConsole(`❌ Sync error: ${err.message}`, "error");
+        btnSync.innerHTML = "<span>❌ Failed</span>";
       }
+      setTimeout(() => {
+        btnSync.innerHTML = "<span>🔄 Sync New Messages</span>";
+        btnSync.disabled = false;
+      }, 3000);
     });
   }
 
