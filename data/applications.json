@@ -1,6 +1,135 @@
 {
-  "updatedAt": "2026-08-19T16:33:01.827Z",
+  "updatedAt": "2026-08-19T17:28:23.031Z",
   "applications": [
+    {
+      "id": "built-in-general-application",
+      "company": "Built In",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "New Engineering Job Matches",
+      "latestFrom": "Built In <support@builtin.com>",
+      "lastActivityAt": "2026-08-19T17:21:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01b0aab9a5ca15",
+      "gmailMessageIds": [
+        "1a01b0aab9a5ca15"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "corewell-health-general-application",
+      "company": "Corewell Health",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Thinking about a change? Join Corewell Health",
+      "latestFrom": "Corewell Health <talent@careeralerts.corewellhealth.org>",
+      "lastActivityAt": "2026-08-19T17:18:46.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01b085a3e7efe1",
+      "gmailMessageIds": [
+        "1a01b085a3e7efe1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "corewell-health-epic-data-engineer",
+      "company": "Corewell Health",
+      "role": "Epic Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on the Epic Data Engineer ( Job ID R220184 ) opportunity at Corewell Health",
+      "latestFrom": "Corewell Health Workday <spectrumhealth@myworkday.com>",
+      "lastActivityAt": "2026-08-19T17:15:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01b059a489883c",
+      "gmailMessageIds": [
+        "1a01b059a489883c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "stitch-fix-data-engineer",
+      "company": "Stitch Fix",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on Data Engineer position with Stitch Fix",
+      "latestFrom": "no-reply@stitchfix.com",
+      "lastActivityAt": "2026-08-19T17:15:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01b05845a7834b",
+      "gmailMessageIds": [
+        "1a01b05845a7834b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "resume-worded-general-application",
+      "company": "Resume Worded",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Tirth, something I noticed on your resume",
+      "latestFrom": "\"Kim @ Resume Worded\" <team@team.resumeworded.com>",
+      "lastActivityAt": "2026-08-19T17:15:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a010b8769e5c5fd",
+      "gmailMessageIds": [
+        "1a010b8769e5c5fd",
+        "1a00b91ce0faed8e",
+        "1a0014586c32acd1",
+        "1a01b050c47248ee"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "jobright-data-engineer",
+      "company": "Jobright",
+      "role": "Data Engineer",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Edgecore Digital Infrastructure is hiring for “Data Engineer” like you — 97% match from Jobright - 08/19/2026",
+      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
+      "lastActivityAt": "2026-08-19T16:39:48.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01ae4aae922d79",
+      "gmailMessageIds": [
+        "1a01ae4aae922d79"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "salesforce-general-application",
+      "company": "Salesforce",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Ending Tomorrow: Save $400 and lock in your sessions",
+      "latestFrom": "Dreamforce <email@mail.salesforce.com>",
+      "lastActivityAt": "2026-08-19T16:34:40.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01ae0aca1bb84f",
+      "gmailMessageIds": [
+        "1a01ae0aca1bb84f"
+      ],
+      "notes": ""
+    },
     {
       "id": "supabase-general-application",
       "company": "Supabase",
@@ -4847,26 +4976,6 @@
         "1a0014e71e05e74c"
       ],
       "notes": "You have received a new message from MONOGRAM MANAGEMENT SERVICES INC. Dear Tirth, Thank you for your interest in the Engineer, Data position at Monogram Foods. We appreciate you taking the time to"
-    },
-    {
-      "id": "resume-worded-general-application",
-      "company": "Resume Worded",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Tirth, here's why 88% of resumes never get read",
-      "latestFrom": "\"Kim @ Resume Worded\" <team@team.resumeworded.com>",
-      "lastActivityAt": "2026-08-14T17:15:28.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a010b8769e5c5fd",
-      "gmailMessageIds": [
-        "1a010b8769e5c5fd",
-        "1a00b91ce0faed8e",
-        "1a0014586c32acd1"
-      ],
-      "notes": ""
     },
     {
       "id": "msg-1a0012edac54bd50",
