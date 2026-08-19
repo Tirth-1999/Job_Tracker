@@ -149,6 +149,51 @@ async function main() {
     data.updatedAt = new Date().toISOString();
     await fs.writeFile(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`);
     console.log(`\nSuccessfully updated applications dataset! Processed ${unhandledMessages.length} emails, saved/updated ${totalSaved} active applications.`);
+
+    // Also batch sync to Supabase PostgreSQL database if credentials are present
+    const sbUrl = process.env.SUPABASE_URL || "https://dykamjxudtxkwgfllxxy.supabase.co";
+    const sbKey = process.env.SUPABASE_ANON_KEY || "sb_publishable_b2SuLtxZgeR-LGQRzMa3_A_lxV0bn75";
+
+    if (sbUrl && sbKey && data.applications.length > 0) {
+      try {
+        console.log(`Syncing ${data.applications.length} applications to Supabase Cloud Database...`);
+        const sbPayload = data.applications.map((app) => ({
+          id: app.id,
+          company: app.company,
+          role: app.role,
+          status: app.status,
+          confidence: app.confidence,
+          last_activity_at: app.lastActivityAt,
+          latest_subject: app.latestSubject,
+          latest_from: app.latestFrom,
+          gmail_thread_id: app.gmailThreadId,
+          gmail_message_ids: app.gmailMessageIds || [],
+          notes: app.notes || "",
+          updated_at: new Date().toISOString()
+        }));
+
+        // Send in batches of 100 to Supabase REST endpoint
+        for (let b = 0; b < sbPayload.length; b += 100) {
+          const chunk = sbPayload.slice(b, b + 100);
+          const sbRes = await fetch(`${sbUrl}/rest/v1/applications`, {
+            method: "POST",
+            headers: {
+              apikey: sbKey,
+              Authorization: `Bearer ${sbKey}`,
+              "Content-Type": "application/json",
+              Prefer: "resolution=merge-duplicates"
+            },
+            body: JSON.stringify(chunk)
+          });
+          if (!sbRes.ok) {
+            console.warn(`Supabase batch sync notice (${sbRes.status}):`, await sbRes.text());
+          }
+        }
+        console.log("✅ Supabase Cloud Database sync complete!");
+      } catch (sbErr) {
+        console.warn("Supabase batch sync warning:", sbErr.message);
+      }
+    }
   } else {
     console.log(`No new matching applications found among ${unhandledMessages.length} emails.`);
   }

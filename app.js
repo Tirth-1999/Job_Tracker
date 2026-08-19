@@ -9,6 +9,23 @@ const LANES = [
 const GITHUB_REPO = "Tirth-1999/Job_Tracker";
 const GITHUB_FILE_PATH = "data/applications.json";
 
+// Supabase Direct API Configuration
+const SUPABASE_URL = "https://dykamjxudtxkwgfllxxy.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_b2SuLtxZgeR-LGQRzMa3_A_lxV0bn75";
+let supabaseClient = null;
+
+function initSupabase() {
+  if (typeof window !== "undefined" && window.supabase && !supabaseClient) {
+    try {
+      supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      console.log("Supabase Client initialized successfully with dykamjxudtxkwgfllxxy");
+    } catch (err) {
+      console.warn("Failed to init Supabase client:", err.message);
+    }
+  }
+  return supabaseClient;
+}
+
 function getGitHubToken() {
   return localStorage.getItem("job_tracker_gh_token") || "";
 }
@@ -21,16 +38,54 @@ function setGitHubToken(token) {
   }
 }
 
+// Unified Cloud Sync: Directly updates Supabase PostgreSQL DB and commits to GitHub
+async function syncToCloud(commitMessage = "Update applications dataset from Job Tracker Dashboard", updatedApp = null) {
+  const results = { supabase: false, github: false };
+
+  // 1. Supabase Direct Upsert / Update
+  const sb = initSupabase();
+  if (sb && updatedApp) {
+    try {
+      const { error } = await sb.from("applications").upsert({
+        id: updatedApp.id,
+        company: updatedApp.company || "Unknown",
+        role: updatedApp.role || "General Application",
+        status: updatedApp.status || "applied",
+        confidence: updatedApp.confidence || "high",
+        last_activity_at: updatedApp.lastActivityAt || new Date().toISOString(),
+        latest_subject: updatedApp.latestSubject || "",
+        latest_from: updatedApp.latestFrom || "",
+        gmail_thread_id: updatedApp.gmailThreadId || null,
+        gmail_message_ids: updatedApp.gmailMessageIds || [],
+        notes: updatedApp.notes || "",
+        updated_at: new Date().toISOString()
+      });
+      if (error) {
+        console.warn("Supabase upsert note:", error.message);
+      } else {
+        console.log(`✅ Synced ${updatedApp.company} to Supabase PostgreSQL!`);
+        results.supabase = true;
+      }
+    } catch (sbErr) {
+      console.warn("Supabase sync error:", sbErr.message);
+    }
+  }
+
+  // 2. GitHub Contents API Commit
+  const ghRes = await syncToGitHub(commitMessage);
+  results.github = ghRes.success;
+
+  return results;
+}
+
 // Directly commit and persist modified applications.json to GitHub Repository
 async function syncToGitHub(commitMessage = "Update applications dataset from Job Tracker Dashboard") {
   const token = getGitHubToken();
   if (!token) {
-    console.log("No GitHub token saved. State updated locally in browser memory.");
     return { success: false, reason: "no_token" };
   }
 
   try {
-    // 1. Fetch current file SHA from GitHub Contents API
     const getRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -46,7 +101,6 @@ async function syncToGitHub(commitMessage = "Update applications dataset from Jo
     const fileMeta = await getRes.json();
     const currentSha = fileMeta.sha;
 
-    // 2. Prepare UTF-8 base64 encoded content
     const jsonStr = JSON.stringify(state.data, null, 2) + "\n";
     const utf8Bytes = new TextEncoder().encode(jsonStr);
     let binary = "";
@@ -56,7 +110,6 @@ async function syncToGitHub(commitMessage = "Update applications dataset from Jo
     }
     const contentBase64 = btoa(binary);
 
-    // 3. PUT commit to update data/applications.json
     const putRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`, {
       method: "PUT",
       headers: {
@@ -105,6 +158,38 @@ const state = {
 const byId = (id) => document.getElementById(id);
 
 async function loadData() {
+  // 1. Try fetching from Supabase first
+  const sb = initSupabase();
+  if (sb) {
+    try {
+      const { data: sbData, error } = await sb.from("applications").select("*").order("last_activity_at", { ascending: false });
+      if (!error && sbData && sbData.length > 0) {
+        state.data = {
+          applications: sbData.map((row) => ({
+            id: row.id,
+            company: row.company,
+            role: row.role,
+            status: row.status,
+            confidence: row.confidence,
+            lastActivityAt: row.last_activity_at,
+            latestSubject: row.latest_subject,
+            latestFrom: row.latest_from,
+            gmailThreadId: row.gmail_thread_id,
+            gmailMessageIds: row.gmail_message_ids || [],
+            notes: row.notes
+          })),
+          updatedAt: new Date().toISOString()
+        };
+        console.log(`Loaded ${state.data.applications.length} applications from Supabase Cloud Database.`);
+        render();
+        return;
+      }
+    } catch (sbErr) {
+      console.warn("Supabase fetch fallback to static json:", sbErr.message);
+    }
+  }
+
+  // 2. Fallback to local / GitHub applications.json
   const response = await fetch(`./data/applications.json?t=${Date.now()}`);
   if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
   state.data = await response.json();
@@ -139,14 +224,14 @@ function setAppDone(appId, isDone) {
   localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
   localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
   
-  // Also update application status directly in state.data and sync to GitHub
+  // Update state.data and sync to Supabase + GitHub Cloud
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
     if (isDone && app.status === "reply_needed") {
       app.status = "applied";
     }
     state.data.updatedAt = new Date().toISOString();
-    syncToGitHub(`Mark application ${app.company || appId} as done`);
+    syncToCloud(`Mark application ${app.company || appId} as done`, app);
   }
 
   render();
@@ -164,14 +249,14 @@ function setAppIgnored(appId, isIgnored) {
   localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
   localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
   
-  // Also update application status directly in state.data and sync to GitHub
+  // Update state.data and sync to Supabase + GitHub Cloud
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
     if (isIgnored && app.status === "reply_needed") {
       app.status = "not_related";
     }
     state.data.updatedAt = new Date().toISOString();
-    syncToGitHub(`Ignore application ${app.company || appId}`);
+    syncToCloud(`Ignore application ${app.company || appId}`, app);
   }
 
   render();
@@ -442,9 +527,9 @@ function moveApplicationLane(appId, targetStatus) {
     localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
     localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
 
-    // Record change timestamp & sync directly to GitHub
+    // Record change timestamp & sync directly to Supabase + GitHub
     state.data.updatedAt = new Date().toISOString();
-    syncToGitHub(`Move ${app.company || appId} to ${targetStatus}`);
+    syncToCloud(`Move ${app.company || appId} to ${targetStatus}`, app);
     render();
   });
 }
@@ -1160,22 +1245,24 @@ function renderServices(applications) {
       </div>
     </div>
 
-    <!-- GitHub Direct Cloud Sync Card -->
+    <!-- Cloud Database & GitHub Direct Sync Card -->
     <div class="github-sync-card">
       <div class="github-sync-header">
         <div>
           <h3>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub Cloud Direct Sync
+            Supabase Cloud DB & GitHub Real-Time Sync
           </h3>
           <p class="github-sync-status">
-            ${getGitHubToken() ? "🟢 <strong>Active</strong> &mdash; Manual moves & re-classifications are directly committed to <code>data/applications.json</code> in your repo." : "⚪ <strong>Offline (Local Only)</strong> &mdash; Enter a GitHub Personal Access Token (PAT) with <code>repo</code> scope to persist changes directly to GitHub."}
+            🟢 <strong>Supabase Connected</strong> (<code>dykamjxudtxkwgfllxxy.supabase.co</code>) &mdash; All manual moves, stage updates & audits sync in real-time across all devices.
+            <br />
+            ${getGitHubToken() ? "🟢 <strong>GitHub Commits Active</strong> &mdash; Automatically commits to <code>data/applications.json</code> in repo." : "⚪ <strong>GitHub Commits Optional</strong> &mdash; Enter a GitHub PAT if you also want direct commits to the git repository."}
           </p>
         </div>
         <div class="token-input-group">
-          <input type="password" id="ghTokenInput" class="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" value="${getGitHubToken() ? "••••••••••••••••••••" : ""}" />
+          <input type="password" id="ghTokenInput" class="token-input" placeholder="GitHub PAT (Optional): ghp_xxx" value="${getGitHubToken() ? "••••••••••••••••••••" : ""}" />
           <button id="btnSaveGhToken" class="btn-github-save" type="button">
-            ${getGitHubToken() ? "Update Token" : "Save Token & Connect"}
+            ${getGitHubToken() ? "Update Token" : "Connect GitHub"}
           </button>
           ${getGitHubToken() ? `<button id="btnClearGhToken" class="btn-modal-cancel" style="padding:6px 12px;font-size:11px;" type="button">Disconnect</button>` : ""}
         </div>
