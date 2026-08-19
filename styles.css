@@ -1111,6 +1111,83 @@ tr:last-child td {
   border: 1px solid var(--border);
 }
 
+/* GitHub Cloud Sync Card */
+.github-sync-card {
+  background: #0d1117;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.github-sync-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.github-sync-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f0f6fc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.token-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.token-input {
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  color: #f0f6fc;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  min-width: 280px;
+  outline: none;
+}
+
+.token-input:focus {
+  border-color: #58a6ff;
+}
+
+.btn-github-save {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 6px;
+  border: 1px solid #238636;
+  background: #238636;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-github-save:hover {
+  background: #2ea043;
+}
+
+.github-sync-status {
+  font-size: 12px;
+  color: #8b949e;
+  line-height: 1.45;
+}
+
 .services-title p {
   color: var(--muted);
   font-size: 13px;

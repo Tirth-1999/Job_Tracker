@@ -6,6 +6,85 @@ const LANES = [
   ["rejected", "Rejected", "lane-rejected"]
 ];
 
+const GITHUB_REPO = "Tirth-1999/Job_Tracker";
+const GITHUB_FILE_PATH = "data/applications.json";
+
+function getGitHubToken() {
+  return localStorage.getItem("job_tracker_gh_token") || "";
+}
+
+function setGitHubToken(token) {
+  if (token) {
+    localStorage.setItem("job_tracker_gh_token", token.trim());
+  } else {
+    localStorage.removeItem("job_tracker_gh_token");
+  }
+}
+
+// Directly commit and persist modified applications.json to GitHub Repository
+async function syncToGitHub(commitMessage = "Update applications dataset from Job Tracker Dashboard") {
+  const token = getGitHubToken();
+  if (!token) {
+    console.log("No GitHub token saved. State updated locally in browser memory.");
+    return { success: false, reason: "no_token" };
+  }
+
+  try {
+    // 1. Fetch current file SHA from GitHub Contents API
+    const getRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json"
+      }
+    });
+
+    if (!getRes.ok) {
+      const err = await getRes.json();
+      throw new Error(err.message || `HTTP ${getRes.status}`);
+    }
+
+    const fileMeta = await getRes.json();
+    const currentSha = fileMeta.sha;
+
+    // 2. Prepare UTF-8 base64 encoded content
+    const jsonStr = JSON.stringify(state.data, null, 2) + "\n";
+    const utf8Bytes = new TextEncoder().encode(jsonStr);
+    let binary = "";
+    const len = utf8Bytes.byteLength;
+    for (let i = 0; i < len; i++) {
+      binary += String.fromCharCode(utf8Bytes[i]);
+    }
+    const contentBase64 = btoa(binary);
+
+    // 3. PUT commit to update data/applications.json
+    const putRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: `${commitMessage} [skip ci]`,
+        content: contentBase64,
+        sha: currentSha,
+        branch: "main"
+      })
+    });
+
+    if (!putRes.ok) {
+      const err = await putRes.json();
+      throw new Error(err.message || `HTTP ${putRes.status}`);
+    }
+
+    console.log("Successfully committed and synced updated data directly to GitHub repo!");
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to sync directly to GitHub API:", error);
+    return { success: false, error: error.message };
+  }
+}
+
 function getTodayDateStr() {
   return new Date().toLocaleDateString("en-CA"); // "YYYY-MM-DD"
 }
@@ -59,6 +138,17 @@ function setAppDone(appId, isDone) {
   }
   localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
   localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
+  
+  // Also update application status directly in state.data and sync to GitHub
+  const app = state.data?.applications?.find((a) => a.id === appId);
+  if (app) {
+    if (isDone && app.status === "reply_needed") {
+      app.status = "applied";
+    }
+    state.data.updatedAt = new Date().toISOString();
+    syncToGitHub(`Mark application ${app.company || appId} as done`);
+  }
+
   render();
 }
 
@@ -73,6 +163,17 @@ function setAppIgnored(appId, isIgnored) {
   }
   localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
   localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
+  
+  // Also update application status directly in state.data and sync to GitHub
+  const app = state.data?.applications?.find((a) => a.id === appId);
+  if (app) {
+    if (isIgnored && app.status === "reply_needed") {
+      app.status = "not_related";
+    }
+    state.data.updatedAt = new Date().toISOString();
+    syncToGitHub(`Ignore application ${app.company || appId}`);
+  }
+
   render();
 }
 
@@ -341,8 +442,9 @@ function moveApplicationLane(appId, targetStatus) {
     localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
     localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
 
-    // Record change timestamp
+    // Record change timestamp & sync directly to GitHub
     state.data.updatedAt = new Date().toISOString();
+    syncToGitHub(`Move ${app.company || appId} to ${targetStatus}`);
     render();
   });
 }
@@ -1058,6 +1160,28 @@ function renderServices(applications) {
       </div>
     </div>
 
+    <!-- GitHub Direct Cloud Sync Card -->
+    <div class="github-sync-card">
+      <div class="github-sync-header">
+        <div>
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub Cloud Direct Sync
+          </h3>
+          <p class="github-sync-status">
+            ${getGitHubToken() ? "🟢 <strong>Active</strong> &mdash; Manual moves & re-classifications are directly committed to <code>data/applications.json</code> in your repo." : "⚪ <strong>Offline (Local Only)</strong> &mdash; Enter a GitHub Personal Access Token (PAT) with <code>repo</code> scope to persist changes directly to GitHub."}
+          </p>
+        </div>
+        <div class="token-input-group">
+          <input type="password" id="ghTokenInput" class="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" value="${getGitHubToken() ? "••••••••••••••••••••" : ""}" />
+          <button id="btnSaveGhToken" class="btn-github-save" type="button">
+            ${getGitHubToken() ? "Update Token" : "Save Token & Connect"}
+          </button>
+          ${getGitHubToken() ? `<button id="btnClearGhToken" class="btn-modal-cancel" style="padding:6px 12px;font-size:11px;" type="button">Disconnect</button>` : ""}
+        </div>
+      </div>
+    </div>
+
     <div class="services-grid">
       <!-- Service 1: Master AI Mailbox Re-Classification -->
       <div class="service-card">
@@ -1174,6 +1298,31 @@ function attachServicesListeners(applications) {
     consoleCard.scrollTop = consoleCard.scrollHeight;
   };
 
+  // GitHub Token Handlers
+  const btnSaveToken = byId("btnSaveGhToken");
+  const tokenInput = byId("ghTokenInput");
+  if (btnSaveToken && tokenInput) {
+    btnSaveToken.addEventListener("click", () => {
+      const val = tokenInput.value.trim();
+      if (val && !val.includes("••")) {
+        setGitHubToken(val);
+        appendConsole("GitHub Cloud Token saved. Automatic direct cloud sync is now ACTIVE.", "success");
+        renderServices(applications);
+      } else if (!val) {
+        appendConsole("Please enter a valid GitHub Personal Access Token (PAT).", "error");
+      }
+    });
+  }
+
+  const btnClearToken = byId("btnClearGhToken");
+  if (btnClearToken) {
+    btnClearToken.addEventListener("click", () => {
+      setGitHubToken("");
+      appendConsole("GitHub Cloud Token disconnected. Tracker reverted to local mode.", "info");
+      renderServices(applications);
+    });
+  }
+
   // Model Selector change handler
   const modelSelect = byId("modelSelectorDropdown");
   if (modelSelect) {
@@ -1250,6 +1399,9 @@ function attachServicesListeners(applications) {
         appendConsole(`AI Re-Classification Complete (${activeModel.name}): verified ${total} items (${reclassifiedCount} adjustments applied).`, "success");
         appendConsole("Re-rendering all dashboard views, board lanes, and analytics...", "success");
 
+        state.data.updatedAt = new Date().toISOString();
+        syncToGitHub(`Full AI Re-Classification audit with ${activeModel.name}`);
+
         render();
         btnReclassify.innerHTML = "<span>✅ Re-Classification Done!</span>";
         setTimeout(() => {
@@ -1311,6 +1463,8 @@ function attachServicesListeners(applications) {
         }
       }
       appendConsole(`Purge completed: ${purged} noise items routed to Other Emails tab.`, "success");
+      state.data.updatedAt = new Date().toISOString();
+      syncToGitHub("Execute Noise, OTP and Survey purge");
       render();
     });
   }
