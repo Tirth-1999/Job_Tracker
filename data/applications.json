@@ -1,6 +1,188 @@
 {
-  "updatedAt": "2026-08-19T09:35:30.144Z",
+  "updatedAt": "2026-08-19T11:26:15.041Z",
   "applications": [
+    {
+      "id": "roberts-data-engineer",
+      "company": "Roberts",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Application has been Received",
+      "latestFrom": "Shana Roberts <shana@robertsrecruiting.com>",
+      "lastActivityAt": "2026-08-19T11:22:21.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019c20b68389ae",
+      "gmailMessageIds": [
+        "1a019c20b68389ae"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "eateam-big-data-engineer",
+      "company": "Eateam",
+      "role": "Big Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Eateam",
+      "latestFrom": "Eateam <notification@smartrecruiters.com>",
+      "lastActivityAt": "2026-08-19T11:12:46.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019b9434a2acf8",
+      "gmailMessageIds": [
+        "1a019b9434a2acf8"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gtt-it-general-application",
+      "company": "GTT IT",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Job #26-08257",
+      "latestFrom": "HumanResources@gttit.com",
+      "lastActivityAt": "2026-08-19T11:02:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019b7131fa484a",
+      "gmailMessageIds": [
+        "1a019b7131fa484a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "lumenalta-general-application",
+      "company": "Lumenalta",
+      "role": "General Application",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Lumenalta Application Update",
+      "latestFrom": "CleverHire <hire@lumenalta.com>",
+      "lastActivityAt": "2026-08-19T11:00:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fb82d75b8bb8fe",
+      "gmailMessageIds": [
+        "19fb82d75b8bb8fe",
+        "1a019ae121f4c673"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pageup-people-general-application",
+      "company": "Pageup People",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Incomplete job application reminder",
+      "latestFrom": "UFHR Talent <talent-674@mail.pageuppeople.com>",
+      "lastActivityAt": "2026-08-19T11:00:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019adc2a104b34",
+      "gmailMessageIds": [
+        "1a019adc2a104b34"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "scan-com-data-engineer-ii",
+      "company": "Scan.com",
+      "role": "Data Engineer II",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Data Engineer II - Scan.com",
+      "latestFrom": "\"Scan.com Hiring Team\" <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-19T10:52:49.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fb2f6af3dee10c",
+      "gmailMessageIds": [
+        "19fb2f6af3dee10c",
+        "1a019a6feb0a2fa6"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "visionairy-general-application",
+      "company": "Visionairy",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Visionairy",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-19T10:51:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019a581589976d",
+      "gmailMessageIds": [
+        "1a019a581589976d"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "providence-groups-general-application",
+      "company": "Providence Groups",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying!",
+      "latestFrom": "The Providence Groups <do-not-reply@mail.paylocity.com>",
+      "lastActivityAt": "2026-08-19T10:44:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0199f060050f36",
+      "gmailMessageIds": [
+        "1a0199f060050f36"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "smarty-data-engineer",
+      "company": "Smarty",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Smarty",
+      "latestFrom": "Smarty <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-08-19T10:42:36.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0199da7f2f4753",
+      "gmailMessageIds": [
+        "1a0199da7f2f4753"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "activision-blizzard-king-general-application",
+      "company": "Activision Blizzard King",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We’ve Got Your Activision Blizzard King Application",
+      "latestFrom": "ABK Workday <activision@myworkday.com>",
+      "lastActivityAt": "2026-08-19T10:37:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01998ebd5879b8",
+      "gmailMessageIds": [
+        "1a01998ebd5879b8"
+      ],
+      "notes": ""
+    },
     {
       "id": "ford-data-engineer",
       "company": "Ford",
@@ -12646,24 +12828,6 @@
       "notes": "Hi Tirth, Thank you for applying for the Data Engineer, Cloud Platform role at Contoro Inc.! We appreciate your interest in joining the team. We will review your application and get back to you if"
     },
     {
-      "id": "lumenalta-general-application",
-      "company": "Lumenalta",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "You’re In – Let’s Take the Next Step Together",
-      "latestFrom": "Lumenalta Careers <careers@lumenalta.com>",
-      "lastActivityAt": "2026-07-31T12:36:54.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fb82d75b8bb8fe",
-      "gmailMessageIds": [
-        "19fb82d75b8bb8fe"
-      ],
-      "notes": ""
-    },
-    {
       "id": "msg-19fb82aec58a76c1",
       "company": "Topgolf",
       "role": "General Application",
@@ -13333,24 +13497,6 @@
         "19fb300458775969"
       ],
       "notes": "Hi Tirth, Copy and paste this code into the security code field on your application: eAsGRGqP After you enter the code, resubmit your application. © 2026 Greenhouse 18 West 18th Street, 11th Floor, New"
-    },
-    {
-      "id": "scan-com-data-engineer-ii",
-      "company": "Scan.com",
-      "role": "Data Engineer II",
-      "status": "not_related",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Scan.com - Request for Voluntary EEO Information",
-      "latestFrom": "\"Scan.com Hiring Team\" <no-reply@ashbyhq.com>",
-      "lastActivityAt": "2026-07-30T12:18:58.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fb2f6af3dee10c",
-      "gmailMessageIds": [
-        "19fb2f6af3dee10c"
-      ],
-      "notes": ""
     },
     {
       "id": "msg-19fb2f615a5f89c2",
