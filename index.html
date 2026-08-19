@@ -59,6 +59,23 @@
       </section>
     </main>
 
-    <script src="./app.js?v=2.1.0" type="module"></script>
+    <!-- Custom Confirmation Modal Dialog -->
+    <div id="confirmModalBackdrop" class="modal-backdrop">
+      <div class="modal-box">
+        <div class="modal-header">
+          <div class="modal-header-icon">🔄</div>
+          <h3 id="modalTitle">Confirm Pipeline Move</h3>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Populated dynamically -->
+        </div>
+        <div class="modal-actions">
+          <button id="btnModalCancel" class="btn-modal-cancel" type="button">Cancel</button>
+          <button id="btnModalConfirm" class="btn-modal-confirm" type="button">Confirm & Move</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js?v=2.2.0" type="module"></script>
   </body>
 </html>

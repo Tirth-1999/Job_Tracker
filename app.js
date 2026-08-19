@@ -237,6 +237,16 @@ function renderCard(app) {
 
   const msgCountBadge = app.gmailMessageIds?.length > 1 ? `<span class="pill" title="${app.gmailMessageIds.length} emails in this thread">📬 ${app.gmailMessageIds.length} emails</span>` : "";
 
+  // Dropdown options for moving cards across all pipeline stages
+  const MOVE_OPTIONS = [
+    { key: "applied", label: "Move to: Applied" },
+    { key: "reply_needed", label: "Move to: Reply Needed" },
+    { key: "interviewed", label: "Move to: Interviewed" },
+    { key: "offered", label: "Move to: Offered" },
+    { key: "rejected", label: "Move to: Rejected" },
+    { key: "not_related", label: "Move to: Other Emails" }
+  ];
+
   return `
     <article class="card ${statusClass(status)}">
       <div class="card-header">
@@ -255,11 +265,86 @@ function renderCard(app) {
         ${msgCountBadge}
         <span class="pill">${formatDate(app.lastActivityAt)}</span>
         <span class="pill">${escapeHtml(confidence)}</span>
-        <a class="pill pill-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer">📧 Gmail ↗</a>
+        <div class="move-select-wrapper">
+          <select class="select-move-lane" data-id="${app.id}" data-current="${status}" title="Move application to a different lane">
+            <option value="" disabled selected>📂 Move Lane ▾</option>
+            ${MOVE_OPTIONS.map(
+              (opt) => `
+              <option value="${opt.key}" ${opt.key === status ? 'disabled style="color:#94a3b8;"' : ""}>
+                ${opt.label} ${opt.key === status ? " (Current)" : ""}
+              </option>
+            `
+            ).join("")}
+          </select>
+        </div>
       </div>
       ${actionButton}
     </article>
   `;
+}
+
+function promptConfirmMove(app, targetStatus, onConfirm) {
+  const backdrop = byId("confirmModalBackdrop");
+  const modalTitle = byId("modalTitle");
+  const modalBody = byId("modalBody");
+  const btnCancel = byId("btnModalCancel");
+  const btnConfirm = byId("btnModalConfirm");
+
+  if (!backdrop || !modalBody) return;
+
+  const currentLabel = labelForStatus(normalizeStatus(app.effectiveStatus || app.status));
+  const targetLabel = labelForStatus(normalizeStatus(targetStatus));
+
+  modalTitle.textContent = "Confirm Pipeline Stage Change";
+  modalBody.innerHTML = `
+    <p>Are you sure you want to move this application?</p>
+    <div class="modal-highlight-card">
+      <div style="font-weight:700;font-size:14px;margin-bottom:4px;">${escapeHtml(app.company || "Unknown Company")}</div>
+      <div style="color:var(--muted);font-size:12px;margin-bottom:8px;">${escapeHtml(app.role || "General Application")}</div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;">
+        <span class="pill status-pill ${statusClass(app.status)}">${escapeHtml(currentLabel)}</span>
+        <span>➔</span>
+        <span class="pill status-pill ${statusClass(targetStatus)}" style="font-weight:700;">${escapeHtml(targetLabel)}</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);">This will update the application's pipeline stage and persist the change in your tracker dataset.</p>
+  `;
+
+  const close = () => {
+    backdrop.classList.remove("active");
+    btnCancel.onclick = null;
+    btnConfirm.onclick = null;
+  };
+
+  btnCancel.onclick = close;
+  btnConfirm.onclick = () => {
+    close();
+    onConfirm();
+  };
+
+  backdrop.classList.add("active");
+}
+
+function moveApplicationLane(appId, targetStatus) {
+  const app = state.data?.applications?.find((a) => a.id === appId);
+  if (!app) return;
+
+  promptConfirmMove(app, targetStatus, () => {
+    app.status = targetStatus;
+    app.effectiveStatus = targetStatus;
+    
+    // Clear manual overrides if explicitly moved to another status
+    const doneSet = getDoneApps();
+    const ignoredSet = getIgnoredApps();
+    doneSet.delete(appId);
+    ignoredSet.delete(appId);
+    localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
+    localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
+
+    // Record change timestamp
+    state.data.updatedAt = new Date().toISOString();
+    render();
+  });
 }
 
 function attachCardActionListeners() {
@@ -282,6 +367,18 @@ function attachCardActionListeners() {
       e.stopPropagation();
       setAppDone(btn.dataset.id, false);
       setAppIgnored(btn.dataset.id, false);
+    });
+  });
+
+  document.querySelectorAll(".select-move-lane").forEach((select) => {
+    select.addEventListener("change", (e) => {
+      e.stopPropagation();
+      const targetStatus = e.target.value;
+      const appId = select.dataset.id;
+      if (targetStatus && appId) {
+        moveApplicationLane(appId, targetStatus);
+      }
+      select.value = ""; // Reset dropdown to placeholder
     });
   });
 }
