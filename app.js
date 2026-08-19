@@ -1365,6 +1365,18 @@ function setSelectedModel(modelId) {
   localStorage.setItem("job_tracker_ai_model", modelId);
 }
 
+function getOpenRouterKey() {
+  return localStorage.getItem("job_tracker_openrouter_key") || "";
+}
+
+function setOpenRouterKey(key) {
+  if (key) {
+    localStorage.setItem("job_tracker_openrouter_key", key.trim());
+  } else {
+    localStorage.removeItem("job_tracker_openrouter_key");
+  }
+}
+
 function renderServices(applications) {
   const servicesEl = byId("services");
   if (!servicesEl) return;
@@ -1372,6 +1384,7 @@ function renderServices(applications) {
   const totalApps = applications.length;
   const currentModelId = getSelectedModel();
   const currentModel = AI_MODELS.find((m) => m.id === currentModelId) || AI_MODELS[0];
+  const orKey = getOpenRouterKey();
 
   servicesEl.innerHTML = `
     <!-- Combined Header & Active Model Selector Card -->
@@ -1379,24 +1392,33 @@ function renderServices(applications) {
       <div class="services-header-top">
         <div class="services-title">
           <h2>⚙️ Operations & AI Services Suite</h2>
-          <p>Automated cloud batch jobs, full-mailbox AI re-classifiers, synchronization services, and data repair utilities</p>
+          <p>Automated cloud batch jobs, live LLM AI re-classifiers, synchronization services, and data repair utilities</p>
         </div>
-        <div class="model-select-inline">
-          <label style="font-size:13px;font-weight:700;white-space:nowrap;">AI Engine:</label>
-          <select id="modelSelectorDropdown" class="model-select">
-            ${AI_MODELS.map(
-              (m) => `
-              <option value="${m.id}" ${m.id === currentModelId ? "selected" : ""}>
-                ${m.name} (${m.badge.split(" · ")[0]})
-              </option>
-            `
-            ).join("")}
-          </select>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <div class="model-select-inline">
+            <label style="font-size:13px;font-weight:700;white-space:nowrap;">AI Engine:</label>
+            <select id="modelSelectorDropdown" class="model-select">
+              ${AI_MODELS.map(
+                (m) => `
+                <option value="${m.id}" ${m.id === currentModelId ? "selected" : ""}>
+                  ${m.name} (${m.badge.split(" · ")[0]})
+                </option>
+              `
+              ).join("")}
+            </select>
+          </div>
+          <div class="token-input-group" style="margin:0;">
+            <input type="password" id="openRouterKeyInput" class="token-input" placeholder="OpenRouter Key (Optional if in Vercel)" value="${orKey ? "••••••••••••••••••••" : ""}" style="max-width:210px;" />
+            <button id="btnSaveOrKey" class="btn-github-save" type="button" style="padding:6px 12px;font-size:11px;">
+              ${orKey ? "Save Key" : "Set Key"}
+            </button>
+            ${orKey ? `<button id="btnClearOrKey" class="btn-modal-cancel" style="padding:6px 10px;font-size:11px;" type="button">Clear</button>` : ""}
+          </div>
         </div>
       </div>
       <div class="model-details-banner">
         <div>
-          <strong>Active: ${escapeHtml(currentModel.name)}</strong> (${escapeHtml(currentModel.provider)}) &mdash; 
+          <strong>Active Engine: ${escapeHtml(currentModel.name)}</strong> (${escapeHtml(currentModel.provider)}) &mdash; 
           <span style="color:var(--text);font-size:12px;">${escapeHtml(currentModel.description)}</span>
         </div>
         <span class="pill pill-done" style="font-size:11px;font-weight:700;white-space:nowrap;">${escapeHtml(currentModel.badge)}</span>
@@ -1600,6 +1622,31 @@ function attachServicesListeners(applications) {
     });
   }
 
+  // OpenRouter API Key Handlers
+  const btnSaveOrKey = byId("btnSaveOrKey");
+  const orKeyInput = byId("openRouterKeyInput");
+  if (btnSaveOrKey && orKeyInput) {
+    btnSaveOrKey.addEventListener("click", () => {
+      const val = orKeyInput.value.trim();
+      if (val && !val.includes("••")) {
+        setOpenRouterKey(val);
+        appendConsole("OpenRouter API Key saved in browser. Live AI Re-Classification will use this key.", "success");
+        renderServices(applications);
+      } else if (!val) {
+        appendConsole("Please enter a valid OpenRouter API Key (sk-or-v1-...).", "error");
+      }
+    });
+  }
+
+  const btnClearOrKey = byId("btnClearOrKey");
+  if (btnClearOrKey) {
+    btnClearOrKey.addEventListener("click", () => {
+      setOpenRouterKey("");
+      appendConsole("OpenRouter API Key cleared from browser. Reverting to Vercel environment key.", "info");
+      renderServices(applications);
+    });
+  }
+
   // Model Selector change handler
   const modelSelect = byId("modelSelectorDropdown");
   if (modelSelect) {
@@ -1612,7 +1659,7 @@ function attachServicesListeners(applications) {
     });
   }
 
-  // 1. Run AI Re-Classification with Live Progress Bar & AI Decision Tagging
+  // 1. Run AI Re-Classification with Real OpenRouter API Execution & Live Progress Bar
   const btnReclassify = byId("btnRunReclassify");
   if (btnReclassify) {
     btnReclassify.addEventListener("click", async () => {
@@ -1626,103 +1673,92 @@ function attachServicesListeners(applications) {
       btnReclassify.innerHTML = "<span>⏳ AI Reclassifying...</span>";
       if (progressWrap) progressWrap.style.display = "flex";
 
-      appendConsole(`Starting Master AI Mailbox Re-Classification using ${activeModel.name}...`);
-      appendConsole("Applying Master AI Recruitment Auditor Prompt taxonomy (5-page schema)...");
+      appendConsole(`Starting Live AI Mailbox Re-Classification with ${activeModel.name}...`);
+      appendConsole(`Connecting to OpenRouter API (model: ${activeModel.id})...`);
 
       try {
         const total = state.data.applications.length;
-        const chunkSize = 25;
+        const chunkSize = 15; // 15 apps per LLM request for optimal token generation & speed
         let reclassifiedCount = 0;
-        const now = new Date().toISOString();
+        let totalTokensUsed = 0;
+        const totalBatches = Math.ceil(total / chunkSize);
+
+        const customOrKey = getOpenRouterKey();
+        const reqHeaders = { "Content-Type": "application/json" };
+        if (customOrKey) {
+          reqHeaders["Authorization"] = `Bearer ${customOrKey}`;
+        }
 
         for (let i = 0; i < total; i += chunkSize) {
           const end = Math.min(i + chunkSize, total);
+          const batchIndex = Math.floor(i / chunkSize) + 1;
           const pct = Math.round((end / total) * 100);
 
-          if (progressLabel) progressLabel.textContent = `Auditing batch ${Math.floor(i / chunkSize) + 1} (${end}/${total} apps)...`;
+          if (progressLabel) progressLabel.textContent = `Querying ${activeModel.name.split(" ")[1] || "AI"} (batch ${batchIndex}/${totalBatches}, apps ${i + 1}–${end})...`;
           if (progressPct) progressPct.textContent = `${pct}%`;
           if (progressFill) progressFill.style.width = `${pct}%`;
 
-          // Process current chunk with deep semantic taxonomy
-          for (let j = i; j < end; j++) {
-            const app = state.data.applications[j];
-            const subject = String(app.latestSubject || "");
-            const from = String(app.latestFrom || "");
-            const text = `${subject} ${from} ${app.notes || ""}`.toLowerCase();
+          const chunk = state.data.applications.slice(i, end);
 
-            // Always tag with active AI Model & timestamp
-            app.aiModel = activeModel.name;
-            app.aiClassifiedAt = now;
-            app.aiConfidence = "high";
-            app.updatedAt = now;
+          // Call our Vercel Serverless Function which proxies to OpenRouter securely
+          const response = await fetch("/api/reclassify", {
+            method: "POST",
+            headers: reqHeaders,
+            body: JSON.stringify({
+              applications: chunk,
+              model: activeModel.id
+            })
+          });
 
-            // 1. Noise exclusion rule
-            if (/security code|verification code|verify your candidate account|verify your email|confirm your identity|confirm your email|confirm your account|password setup|password reset|temporary password|eeo survey|voluntary eeo|equal opportunity compliance|demographic survey|survey invitation|candidate feedback survey|welcome to chat!|security alert|2-step verification|google cloud free trial|review your google account|txt\.voice\.google\.com|new text message from/i.test(text) || /otp\.workday\.com|accounts\.google\.com|chat-noreply@google\.com|voice-noreply@google\.com/i.test(from)) {
-              if (app.status !== "not_related") {
-                app.status = "not_related";
-                reclassifiedCount++;
-              }
-              app.aiDecision = "Noise Filter: Verification code / security alert / survey / notification";
-            }
-            // 2. Job Offer rule
-            else if (/offer letter|job offer|offer of employment|welcome to the team|congratulations on your offer/i.test(subject + " " + (app.notes || ""))) {
-              if (app.status !== "offered") {
-                app.status = "offered";
-                reclassifiedCount++;
-              }
-              app.aiDecision = "Job Offer: Formal offer of employment received";
-            }
-            // 3. Interview / Assessment Invitation rule
-            else if (/interview invitation|invitation to interview|schedule your interview|interview confirmed|technical interview|coding challenge|hackerrank|coderpad|take-home assessment|technical screening|interview with the team|first round interview/i.test(subject + " " + (app.notes || ""))) {
-              if (app.status !== "interviewed") {
-                app.status = "interviewed";
-                reclassifiedCount++;
-              }
-              app.aiDecision = "Interview: Technical assessment / interview round invitation";
-            }
-            // 4. Recruiter direct inquiries / sourcing (Reply Needed)
-            else if (/clifyx|akraya|lancesoft|pyramidci|apolisrises|infowaygroup|cmplacement|emergentstaffing|weekdaymail|testgorilla|apex systems|teksystems|robert half|insight global|hays|kforce|beacon hill|modis|cybercoders|collabera|randstad/i.test(from + " " + subject) && !/applied|received your application|thank you for applying/i.test(subject)) {
-              if (app.status !== "reply_needed" && app.status !== "offered" && app.status !== "interviewed") {
-                app.status = "reply_needed";
-                reclassifiedCount++;
-              }
-              app.aiDecision = "Recruiter Direct Outreach: Sourcing inquiry / rate & availability request";
-            }
-            // 5. Formal Rejection rule
-            else if (/not moving forward|pursue other candidates|decided to move forward with other|position has been filled|will not be moving forward|regret to inform|other applicants|unfortunate news|unable to offer|after careful consideration/i.test(subject + " " + (app.notes || ""))) {
-              if (app.status !== "rejected") {
-                app.status = "rejected";
-                reclassifiedCount++;
-              }
-              app.aiDecision = "Rejection: Not moving forward with candidacy";
-            }
-            // 6. Application Confirmation (Applied)
-            else if (/thank you for applying|received your application|application received|application confirmation|successfully submitted|application for|thanks for applying|we received your application/i.test(subject)) {
-              if (app.status !== "applied") {
-                app.status = "applied";
-                reclassifiedCount++;
-              }
-              app.aiDecision = "Application Confirmed: Formal application acknowledgement from ATS / employer";
-            }
-            // 7. General confirmation in existing status
-            else {
-              app.aiDecision = `Audited: Confirmed in ${labelForStatus(app.status)} stage based on communication history`;
-            }
+          if (!response.ok) {
+            const errData = await response.json().catch(() => ({}));
+            throw new Error(errData.error || `HTTP ${response.status} from /api/reclassify`);
           }
 
-          appendConsole(`Batch ${Math.floor(i / chunkSize) + 1}: verified apps ${i + 1}–${end} of ${total} (${pct}% complete)`);
-          await new Promise((r) => setTimeout(r, 60));
+          const resData = await response.json();
+          const results = resData.results || [];
+          const batchTokens = resData.usage?.total_tokens || 0;
+          totalTokensUsed += batchTokens;
+
+          const now = new Date().toISOString();
+          const resultMap = new Map(results.map((r) => [r.id, r]));
+
+          for (const app of chunk) {
+            const aiRes = resultMap.get(app.id);
+            if (aiRes) {
+              if (aiRes.status && aiRes.status !== app.status) {
+                reclassifiedCount++;
+                app.status = aiRes.status;
+              }
+              if (aiRes.company && aiRes.company !== "Unknown" && !aiRes.company.includes("Workday")) {
+                app.company = aiRes.company;
+              }
+              if (aiRes.role && aiRes.role !== "Unknown role") {
+                app.role = aiRes.role;
+              }
+              app.confidence = aiRes.confidence || "high";
+              app.aiDecision = aiRes.reason || `Classified as ${aiRes.status}`;
+            } else {
+              app.aiDecision = `Audited with ${activeModel.name}: Retained in ${labelForStatus(app.status)}`;
+            }
+            app.aiModel = activeModel.name;
+            app.aiClassifiedAt = now;
+            app.updatedAt = now;
+          }
+
+          appendConsole(`Batch ${batchIndex}/${totalBatches}: OpenRouter returned ${results.length} classifications (${batchTokens} tokens used).`);
+          await new Promise((r) => setTimeout(r, 80));
         }
 
-        if (progressLabel) progressLabel.textContent = `Completed all ${total} applications! Syncing to Supabase...`;
+        if (progressLabel) progressLabel.textContent = `Completed ${total} applications! Syncing to Supabase...`;
         if (progressFill) progressFill.style.width = "100%";
         if (progressPct) progressPct.textContent = "100%";
 
-        appendConsole(`AI Re-Classification Complete (${activeModel.name}): audited ${total} items (${reclassifiedCount} adjustments applied).`, "success");
-        appendConsole(`Syncing all ${total} application rows with full AI Decision metadata to Supabase...`, "info");
+        appendConsole(`✅ OpenRouter AI Execution Complete! Processed ${total} items (${reclassifiedCount} adjustments, ~${totalTokensUsed} tokens).`, "success");
+        appendConsole("Persisting updated classifications & AI Decision tags to Supabase...", "info");
 
-        state.data.updatedAt = now;
-        await syncAllAppsToSupabase(state.data.applications, `AI Re-Classification (${activeModel.name})`);
+        state.data.updatedAt = new Date().toISOString();
+        await syncAllAppsToSupabase(state.data.applications, `Live AI Re-Classification (${activeModel.name})`);
 
         appendConsole("✅ Supabase cloud database updated! Re-rendering dashboard with AI tags...", "success");
         render();
@@ -1733,13 +1769,16 @@ function attachServicesListeners(applications) {
           if (progressWrap) progressWrap.style.display = "none";
         }, 3000);
       } catch (err) {
-        appendConsole(`Error running AI re-classifier: ${err.message}`, "error");
+        appendConsole(`❌ OpenRouter Re-Classification Error: ${err.message}`, "error");
+        if (err.message.includes("OPENROUTER_API_KEY")) {
+          appendConsole("💡 Tip: Add OPENROUTER_API_KEY to your Vercel Project Settings → Environment Variables and redeploy.", "error");
+        }
         btnReclassify.innerHTML = "<span>❌ Failed</span>";
         setTimeout(() => {
           btnReclassify.innerHTML = "<span>⚡ Run AI Re-Classification</span>";
           btnReclassify.disabled = false;
           if (progressWrap) progressWrap.style.display = "none";
-        }, 2000);
+        }, 3000);
       }
     });
   }
