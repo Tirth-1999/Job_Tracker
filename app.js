@@ -1520,37 +1520,39 @@ function renderServices(applications) {
             </div>
 
             <!-- Re-Classification Scope & Filter Controls -->
-            <div class="reclassify-scope-card" style="margin-top:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:10px 14px;display:flex;flex-direction:column;gap:8px;">
-              <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-                <div style="font-size:12px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:6px;">
+            <div class="reclassify-scope-card">
+              <div class="scope-header-row">
+                <div class="scope-title-label">
                   <span>🎯 Audit Target Scope:</span>
                 </div>
-                <div id="reclassifyTargetBadge" class="pill pill-done" style="font-size:11px;font-weight:700;">
+                <div id="reclassifyTargetBadge" class="scope-target-badge">
                   Targeting: ${targetedApps.length} of ${totalApps} applications (${Math.round((targetedApps.length / Math.max(1, totalApps)) * 100)}%)
                 </div>
               </div>
               
-              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                <select id="reclassifyScopeType" class="model-select" style="font-size:12px;padding:5px 8px;">
-                  <option value="recent_n" ${currentScopeType === "recent_n" ? "selected" : ""}>Most Recent N Applications</option>
-                  <option value="days" ${currentScopeType === "days" ? "selected" : ""}>Time Window (Past N Days)</option>
-                  <option value="unclassified" ${currentScopeType === "unclassified" ? "selected" : ""}>Only Unaudited / Unclassified</option>
-                  <option value="all" ${currentScopeType === "all" ? "selected" : ""}>Entire Mailbox (All ${totalApps} Apps)</option>
-                </select>
+              <div class="scope-controls-grid">
+                <div class="scope-inputs-row">
+                  <select id="reclassifyScopeType" class="scope-select">
+                    <option value="recent_n" ${currentScopeType === "recent_n" ? "selected" : ""}>Most Recent N Applications</option>
+                    <option value="days" ${currentScopeType === "days" ? "selected" : ""}>Time Window (Past N Days)</option>
+                    <option value="unclassified" ${currentScopeType === "unclassified" ? "selected" : ""}>Only Unaudited / Unclassified</option>
+                    <option value="all" ${currentScopeType === "all" ? "selected" : ""}>Entire Mailbox (All ${totalApps} Apps)</option>
+                  </select>
 
-                <div id="reclassifyScopeValWrap" style="display:${currentScopeType === "all" || currentScopeType === "unclassified" ? "none" : "inline-flex"};align-items:center;gap:6px;">
-                  <input type="number" id="reclassifyScopeValue" min="1" max="${totalApps}" value="${currentScopeVal}" class="token-input" style="width:75px;padding:4px 8px;font-size:12px;margin:0;" />
-                  <span id="reclassifyScopeUnit" style="font-size:12px;color:var(--muted);font-weight:600;">
-                    ${currentScopeType === "days" ? "days" : "applications"}
-                  </span>
+                  <div id="reclassifyScopeValWrap" style="display:${currentScopeType === "all" || currentScopeType === "unclassified" ? "none" : "inline-flex"};align-items:center;gap:6px;">
+                    <input type="number" id="reclassifyScopeValue" min="1" max="${totalApps}" value="${currentScopeVal}" class="scope-num-input" />
+                    <span id="reclassifyScopeUnit" style="font-size:12px;color:var(--muted);font-weight:600;">
+                      ${currentScopeType === "days" ? "days" : "apps"}
+                    </span>
+                  </div>
                 </div>
 
-                <!-- Quick Preset Shortcuts -->
-                <div style="display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;">
-                  <button type="button" class="btn-scope-preset" data-type="recent_n" data-val="25" style="padding:3px 8px;font-size:11px;border:1px solid var(--border);border-radius:4px;background:#fff;cursor:pointer;">Recent 25</button>
-                  <button type="button" class="btn-scope-preset" data-type="recent_n" data-val="50" style="padding:3px 8px;font-size:11px;border:1px solid var(--border);border-radius:4px;background:#fff;cursor:pointer;">Recent 50</button>
-                  <button type="button" class="btn-scope-preset" data-type="days" data-val="7" style="padding:3px 8px;font-size:11px;border:1px solid var(--border);border-radius:4px;background:#fff;cursor:pointer;">Last 7 Days</button>
-                  <button type="button" class="btn-scope-preset" data-type="days" data-val="30" style="padding:3px 8px;font-size:11px;border:1px solid var(--border);border-radius:4px;background:#fff;cursor:pointer;">Last 30 Days</button>
+                <div class="scope-presets-row">
+                  <span style="font-size:11px;color:var(--muted);font-weight:600;">Presets:</span>
+                  <button type="button" class="btn-scope-preset" data-type="recent_n" data-val="25">Recent 25</button>
+                  <button type="button" class="btn-scope-preset" data-type="recent_n" data-val="50">Recent 50</button>
+                  <button type="button" class="btn-scope-preset" data-type="days" data-val="7">Last 7d</button>
+                  <button type="button" class="btn-scope-preset" data-type="days" data-val="30">Last 30d</button>
                 </div>
               </div>
             </div>
