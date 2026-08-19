@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-08-19T18:36:59.943Z",
+  "updatedAt": "2026-08-19T19:10:22.281Z",
   "applications": [
+    {
+      "id": "brightwheel-senior-data-analyst",
+      "company": "Brightwheel",
+      "role": "Senior Data Analyst",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for your interest in brightwheel",
+      "latestFrom": "brightwheel Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-19T19:04:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01631e19325aeb",
+      "gmailMessageIds": [
+        "1a01631e19325aeb",
+        "1a01b697df8eb8e1"
+      ],
+      "notes": ""
+    },
     {
       "id": "scale-general-application",
       "company": "Scale",
@@ -1334,24 +1353,6 @@
       "gmailThreadId": "1a0163fd6847f910",
       "gmailMessageIds": [
         "1a0163fd6847f910"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "brightwheel-senior-data-analyst",
-      "company": "Brightwheel",
-      "role": "Senior Data Analyst",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thank you for your application to brightwheel",
-      "latestFrom": "brightwheel Hiring Team <no-reply@ashbyhq.com>",
-      "lastActivityAt": "2026-08-18T18:46:02.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a01631e19325aeb",
-      "gmailMessageIds": [
-        "1a01631e19325aeb"
       ],
       "notes": ""
     },
