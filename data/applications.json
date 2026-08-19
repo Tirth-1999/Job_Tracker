@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-19T08:38:56.807Z",
+  "updatedAt": "2026-08-19T09:35:30.144Z",
   "applications": [
+    {
+      "id": "ford-data-engineer",
+      "company": "Ford",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tell us about your experience applying for Data Engineer at Ford",
+      "latestFrom": "Ford Candidate Experience <noreplycandex@qualtrics-survey.com>",
+      "lastActivityAt": "2026-08-19T09:12:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0194b336e8ec27",
+      "gmailMessageIds": [
+        "1a0194b336e8ec27"
+      ],
+      "notes": ""
+    },
     {
       "id": "usc-general-application",
       "company": "USC",
