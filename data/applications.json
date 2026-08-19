@@ -1,6 +1,390 @@
 {
-  "updatedAt": "2026-08-19T11:52:01.664Z",
+  "updatedAt": "2026-08-19T12:49:47.248Z",
   "applications": [
+    {
+      "id": "cspring-general-application",
+      "company": "Cspring",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "CSpring Application Status Update",
+      "latestFrom": "Greg Weisiger <reply-to-sender@mail.paylocity.com>",
+      "lastActivityAt": "2026-08-19T12:36:51.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01a063e4418dd5",
+      "gmailMessageIds": [
+        "1a01a063e4418dd5"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "captech-data-engineer",
+      "company": "Captech",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You",
+      "latestFrom": "CapTech Consulting Hiring Team <notifications@captechcareers.com>",
+      "lastActivityAt": "2026-08-19T12:32:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01a02520123613",
+      "gmailMessageIds": [
+        "1a01a02520123613"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "optomi-data-engineer",
+      "company": "Optomi",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Optomi",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-19T12:18:25.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f55f2eb1e1f",
+      "gmailMessageIds": [
+        "1a019f55f2eb1e1f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "oremda-infotech-data-engineer",
+      "company": "Oremda Infotech",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Oremda Infotech Inc",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-19T12:18:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f51da1f086a",
+      "gmailMessageIds": [
+        "1a019f51da1f086a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tech-observer-data-engineer",
+      "company": "Tech Observer",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Tech Observer",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-19T12:17:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f48f063d0cb",
+      "gmailMessageIds": [
+        "1a019f48f063d0cb"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "kforce-junior-data-engineer",
+      "company": "Kforce",
+      "role": "Junior Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Kforce Inc",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-19T12:16:29.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f3977585e78",
+      "gmailMessageIds": [
+        "1a019f3977585e78"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sotalent-data-engineer",
+      "company": "Sotalent",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to SoTalent",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-19T12:16:08.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f3449ac86ed",
+      "gmailMessageIds": [
+        "1a019f3449ac86ed"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "innodata-data-engineer",
+      "company": "Innodata",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Innodata Inc.",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-19T12:15:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f36ef41fee0",
+      "gmailMessageIds": [
+        "1a019f36ef41fee0",
+        "1a019f30916f6eda"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "varite-data-engineer-i",
+      "company": "VARITE",
+      "role": "Data Engineer - I",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to VARITE INC",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-19T12:15:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f266a95f875",
+      "gmailMessageIds": [
+        "1a019f266a95f875"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "quantum-tech-data-engineer",
+      "company": "Quantum Tech",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Quantum Tech Inc",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-19T12:14:40.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f1ed2d58625",
+      "gmailMessageIds": [
+        "1a019f1ed2d58625"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tech-consulting-data-engineer",
+      "company": "Tech Consulting",
+      "role": "Junior Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Tech Consulting",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-19T12:13:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f107a65b5ad",
+      "gmailMessageIds": [
+        "1a019f3fac3965a5",
+        "1a019f107a65b5ad"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "judi-health-general-application",
+      "company": "Judi Health",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Judi Health",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-19T12:13:08.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f087a6a63c0",
+      "gmailMessageIds": [
+        "1a019f087a6a63c0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "rysun-labs-data-engineer",
+      "company": "Rysun Labs",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Your Application",
+      "latestFrom": "notifications@careerplug.com",
+      "lastActivityAt": "2026-08-19T12:08:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019ec07a719e53",
+      "gmailMessageIds": [
+        "1a019ec07a719e53"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "newsela-data-engineer",
+      "company": "Newsela",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Newsela",
+      "latestFrom": "do-not-reply@newsela.com",
+      "lastActivityAt": "2026-08-19T12:07:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019eb0ed3f6160",
+      "gmailMessageIds": [
+        "1a019eb0ed3f6160"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tebra-data-engineer",
+      "company": "Tebra",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, Thank you for applying to Tebra",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-19T12:06:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019ea19f30666c",
+      "gmailMessageIds": [
+        "1a019ea19f30666c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "avantcredit-data-engineer",
+      "company": "Avantcredit",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to AvantCredit",
+      "latestFrom": "AvantCredit <notification@smartrecruiters.com>",
+      "lastActivityAt": "2026-08-19T12:03:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019e7e6b0e7a11",
+      "gmailMessageIds": [
+        "1a019e7e6b0e7a11"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pyramid-consulting-data-engineer",
+      "company": "Pyramid Consulting",
+      "role": "Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Final Reminder: Pre-Screen for Data Engineer Role via Pyramid Consulting",
+      "latestFrom": "pair-noreply@pyramidci.com",
+      "lastActivityAt": "2026-08-19T12:00:39.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a016453376b2a56",
+      "gmailMessageIds": [
+        "1a016453376b2a56",
+        "1a0167c2c6bd4f70",
+        "1a016cea72bf26b8",
+        "1a019e51a627e56f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "wrapbook-senior-analytics-engineer-ii",
+      "company": "Wrapbook",
+      "role": "Senior Analytics Engineer II",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Confirmation and NDA Request",
+      "latestFrom": "Wrapbook Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-19T11:58:53.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019e37a0ccf4ab",
+      "gmailMessageIds": [
+        "1a019e37a0ccf4ab"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "otter-general-application",
+      "company": "Otter",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Applying to Otter!",
+      "latestFrom": "no-reply@csscompany.com",
+      "lastActivityAt": "2026-08-19T11:55:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019e0268bf92bb",
+      "gmailMessageIds": [
+        "1a019e2e97c211a2",
+        "1a019e0268bf92bb"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "waverly-advisors-general-application",
+      "company": "Waverly Advisors",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Waverly Advisors, LLC",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-19T11:53:13.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019de4a334a39f",
+      "gmailMessageIds": [
+        "1a019de4a334a39f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "taskrabbit-general-application",
+      "company": "Taskrabbit",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Taskrabbit!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-19T11:52:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019dd3cf459638",
+      "gmailMessageIds": [
+        "1a019dd3cf459638"
+      ],
+      "notes": ""
+    },
     {
       "id": "paretohealth-data-engineer",
       "company": "Paretohealth",
@@ -567,26 +951,6 @@
       "gmailThreadId": "1a016dcf390e7ae6",
       "gmailMessageIds": [
         "1a016dcf390e7ae6"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "pyramid-consulting-data-engineer",
-      "company": "Pyramid Consulting",
-      "role": "Data Engineer",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Invitation for Pre-Screen for Data Engineer Role via Pyramid Consulting",
-      "latestFrom": "pair-noreply@pyramidci.com",
-      "lastActivityAt": "2026-08-18T21:37:15.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a016453376b2a56",
-      "gmailMessageIds": [
-        "1a016453376b2a56",
-        "1a0167c2c6bd4f70",
-        "1a016cea72bf26b8"
       ],
       "notes": ""
     },
