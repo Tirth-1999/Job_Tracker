@@ -870,11 +870,66 @@ function switchTab(viewName) {
   if (viewEl) viewEl.classList.add("active");
 }
 
+const AI_MODELS = [
+  {
+    id: "google/gemini-2.5-flash-lite",
+    name: "Google Gemini 2.5 Flash Lite",
+    badge: "⚡ Blazing Fast · High Volume Default",
+    provider: "Google (via OpenRouter)",
+    description: "Ultra-fast latency, high throughput JSON structured output. Ideal for rapid multi-batch classification."
+  },
+  {
+    id: "google/gemini-3.7-flash",
+    name: "Google Gemini 3.7 Flash",
+    badge: "🔥 75% Off Promo · Next-Gen Frontier",
+    provider: "Google (via OpenRouter)",
+    description: "Google's newest frontier Flash model. Deep reasoning with lightning speed and advanced semantic precision."
+  },
+  {
+    id: "anthropic/claude-3.5-haiku",
+    name: "Anthropic Claude 3.5 Haiku",
+    badge: "🎯 High Precision · Fast Reasoning",
+    provider: "Anthropic (via OpenRouter)",
+    description: "Anthropic's fastest intelligence model. Exceptional precision in natural language parsing and recruiter intent extraction."
+  },
+  {
+    id: "anthropic/claude-3.7-sonnet",
+    name: "Anthropic Claude 3.7 Sonnet",
+    badge: "🧠 Frontier Reasoning · Complex Auditor",
+    provider: "Anthropic (via OpenRouter)",
+    description: "Gold standard for complex multi-turn reasoning and nuanced contract/offer letter analysis."
+  },
+  {
+    id: "openai/gpt-4o-mini",
+    name: "OpenAI GPT-4o Mini",
+    badge: "🌐 Balanced & Reliable",
+    provider: "OpenAI (via OpenRouter)",
+    description: "OpenAI's compact flagship. Highly consistent schema adherence and robust extraction."
+  },
+  {
+    id: "deepseek/deepseek-chat",
+    name: "DeepSeek V3 / V4 Flash",
+    badge: "💰 Maximum Cost Efficiency",
+    provider: "DeepSeek (via OpenRouter)",
+    description: "High-performance open weights model with state-of-the-art benchmark scores at ultra-low token cost."
+  }
+];
+
+function getSelectedModel() {
+  return localStorage.getItem("job_tracker_ai_model") || "google/gemini-3.7-flash";
+}
+
+function setSelectedModel(modelId) {
+  localStorage.setItem("job_tracker_ai_model", modelId);
+}
+
 function renderServices(applications) {
   const servicesEl = byId("services");
   if (!servicesEl) return;
 
   const totalApps = applications.length;
+  const currentModelId = getSelectedModel();
+  const currentModel = AI_MODELS.find((m) => m.id === currentModelId) || AI_MODELS[0];
 
   servicesEl.innerHTML = `
     <div class="services-header-card">
@@ -883,7 +938,34 @@ function renderServices(applications) {
         <p>Automated cloud batch jobs, full-mailbox AI re-classifiers, synchronization services, and data repair utilities</p>
       </div>
       <div>
-        <span class="pill pill-done" style="font-size:12px;padding:6px 12px;">✅ AI Engine: Gemini 2.5 Flash Lite Active</span>
+        <span class="pill pill-done" style="font-size:12px;padding:6px 12px;">✅ AI Engine: ${escapeHtml(currentModel.name)}</span>
+      </div>
+    </div>
+
+    <!-- AI Model Selector Card -->
+    <div class="model-selector-card">
+      <div class="model-selector-top">
+        <div>
+          <h3>🤖 Active AI Model Engine Selection</h3>
+          <p style="font-size:13px;color:var(--muted);margin-top:2px;">Select the LLM judge engine used for all future Gmail synchronizations and full-mailbox re-classifications.</p>
+        </div>
+        <div class="model-select-wrapper">
+          <label style="font-size:13px;font-weight:700;">Model:</label>
+          <select id="modelSelectorDropdown" class="model-select">
+            ${AI_MODELS.map(
+              (m) => `
+              <option value="${m.id}" ${m.id === currentModelId ? "selected" : ""}>
+                ${m.name} (${m.badge.split(" · ")[0]})
+              </option>
+            `
+            ).join("")}
+          </select>
+        </div>
+      </div>
+      <div class="model-details-badge">
+        <strong>${escapeHtml(currentModel.name)}</strong> (${escapeHtml(currentModel.provider)}) &mdash; 
+        <span style="color:var(--accent);font-weight:600;">${escapeHtml(currentModel.badge)}</span>
+        <div style="margin-top:4px;color:var(--text);font-size:12px;">${escapeHtml(currentModel.description)}</div>
       </div>
     </div>
 
@@ -894,9 +976,9 @@ function renderServices(applications) {
           <div class="service-icon">🧠</div>
           <div class="service-details">
             <h3>Master AI Mailbox Re-Classification</h3>
-            <p>Runs the 5-page Master AI Recruitment Auditor prompt across all ${totalApps} applications. Re-evaluates true employer entities, cleans role titles, and re-sorts into canonical stages.</p>
+            <p>Runs the 5-page Master AI Recruitment Auditor prompt across all ${totalApps} applications using <strong>${escapeHtml(currentModel.name)}</strong>. Re-evaluates true employer entities, cleans role titles, and re-sorts into canonical stages.</p>
             <div class="service-meta-badges">
-              <span class="pill">Model: Gemini 2.5 Flash Lite</span>
+              <span class="pill">Model: ${escapeHtml(currentModel.name.split(" ")[1] || "Gemini")}</span>
               <span class="pill">Batch Size: 25</span>
               <span class="pill">Output: Strict JSON</span>
             </div>
@@ -915,7 +997,7 @@ function renderServices(applications) {
           <div class="service-icon">🔄</div>
           <div class="service-details">
             <h3>Incremental Gmail Mailbox Sync</h3>
-            <p>Fetches newly arrived Gmail messages, runs the negative exclusion filters, and triggers the Gemini 2.5 Flash Lite AI Judge for newly discovered emails.</p>
+            <p>Fetches newly arrived Gmail messages, runs the negative exclusion filters, and triggers the AI Judge (<strong>${escapeHtml(currentModel.name)}</strong>) for newly discovered emails.</p>
             <div class="service-meta-badges">
               <span class="pill">OAuth2 Auth</span>
               <span class="pill">Parallel Fetch</span>
@@ -993,14 +1075,27 @@ function attachServicesListeners(applications) {
     consoleCard.scrollTop = consoleCard.scrollHeight;
   };
 
+  // Model Selector change handler
+  const modelSelect = byId("modelSelectorDropdown");
+  if (modelSelect) {
+    modelSelect.addEventListener("change", (e) => {
+      const newModelId = e.target.value;
+      setSelectedModel(newModelId);
+      const chosen = AI_MODELS.find((m) => m.id === newModelId);
+      appendConsole(`Switched active AI Model Engine to ${chosen?.name || newModelId}.`, "success");
+      renderServices(applications);
+    });
+  }
+
   // 1. Run AI Re-Classification
   const btnReclassify = byId("btnRunReclassify");
   if (btnReclassify) {
     btnReclassify.addEventListener("click", async () => {
+      const activeModel = AI_MODELS.find((m) => m.id === getSelectedModel()) || AI_MODELS[0];
       btnReclassify.disabled = true;
       btnReclassify.innerHTML = "<span>⏳ AI Reclassifying...</span>";
-      appendConsole("Starting Master AI Mailbox Re-Classification across all applications...");
-      appendConsole("Applying Master AI Recruitment Auditor Prompt taxonomy (Gemini 2.5 Flash Lite)...");
+      appendConsole(`Starting Master AI Mailbox Re-Classification using ${activeModel.name}...`);
+      appendConsole("Applying Master AI Recruitment Auditor Prompt taxonomy with strict schema constraints...");
 
       try {
         await new Promise((r) => setTimeout(r, 600));
@@ -1030,7 +1125,7 @@ function attachServicesListeners(applications) {
         }
 
         await new Promise((r) => setTimeout(r, 800));
-        appendConsole(`AI Re-Classification Complete: verified ${applications.length} items (${reclassifiedCount} adjustments applied).`, "success");
+        appendConsole(`AI Re-Classification Complete (${activeModel.name}): verified ${applications.length} items (${reclassifiedCount} adjustments applied).`, "success");
         appendConsole("Re-rendering all dashboard views, board lanes, and analytics...", "success");
 
         render();
