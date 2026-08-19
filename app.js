@@ -1071,6 +1071,16 @@ function renderServices(applications) {
               <span class="pill">Batch Size: 25</span>
               <span class="pill">Output: Strict JSON</span>
             </div>
+            <!-- Dynamic Progress Bar (Active during execution) -->
+            <div id="reclassifyProgressWrap" class="service-progress-wrap" style="display:none;">
+              <div class="service-progress-header">
+                <span id="reclassifyProgressLabel" style="color:var(--accent);">Auditing application 0 of ${totalApps}...</span>
+                <span id="reclassifyProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+              </div>
+              <div class="service-progress-track">
+                <div id="reclassifyProgressFill" class="service-progress-fill"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="service-action-wrap">
@@ -1176,45 +1186,68 @@ function attachServicesListeners(applications) {
     });
   }
 
-  // 1. Run AI Re-Classification
+  // 1. Run AI Re-Classification with Live Progress Bar
   const btnReclassify = byId("btnRunReclassify");
   if (btnReclassify) {
     btnReclassify.addEventListener("click", async () => {
       const activeModel = AI_MODELS.find((m) => m.id === getSelectedModel()) || AI_MODELS[0];
+      const progressWrap = byId("reclassifyProgressWrap");
+      const progressLabel = byId("reclassifyProgressLabel");
+      const progressPct = byId("reclassifyProgressPct");
+      const progressFill = byId("reclassifyProgressFill");
+
       btnReclassify.disabled = true;
       btnReclassify.innerHTML = "<span>⏳ AI Reclassifying...</span>";
+      if (progressWrap) progressWrap.style.display = "flex";
+
       appendConsole(`Starting Master AI Mailbox Re-Classification using ${activeModel.name}...`);
-      appendConsole("Applying Master AI Recruitment Auditor Prompt taxonomy with strict schema constraints...");
+      appendConsole("Applying Master AI Recruitment Auditor Prompt taxonomy (5-page schema)...");
 
       try {
-        await new Promise((r) => setTimeout(r, 600));
-        appendConsole(`Auditing ${applications.length} applications with Master Taxonomy...`);
-        
-        // Clean and refine statuses with updated taxonomy
+        const total = state.data.applications.length;
+        const chunkSize = 25;
         let reclassifiedCount = 0;
-        for (const app of state.data.applications) {
-          const subject = String(app.latestSubject || "");
-          const from = String(app.latestFrom || "");
-          const text = `${subject} ${from} ${app.notes || ""}`.toLowerCase();
 
-          // Noise exclusion
-          if (/security code|verification code|verify your candidate account|verify your email|confirm your identity|confirm your email|confirm your account|password setup|password reset|temporary password|eeo survey|voluntary eeo|equal opportunity compliance|demographic survey|survey invitation|candidate feedback survey|welcome to chat!|security alert|2-step verification|google cloud free trial|review your google account|txt\.voice\.google\.com|new text message from/i.test(text) || /otp\.workday\.com|accounts\.google\.com|chat-noreply@google\.com|voice-noreply@google\.com/i.test(from)) {
-            if (app.status !== "not_related") {
-              app.status = "not_related";
-              reclassifiedCount++;
+        for (let i = 0; i < total; i += chunkSize) {
+          const end = Math.min(i + chunkSize, total);
+          const pct = Math.round((end / total) * 100);
+
+          if (progressLabel) progressLabel.textContent = `Auditing batch ${Math.floor(i / chunkSize) + 1} (${end}/${total} apps)...`;
+          if (progressPct) progressPct.textContent = `${pct}%`;
+          if (progressFill) progressFill.style.width = `${pct}%`;
+
+          // Process current chunk
+          for (let j = i; j < end; j++) {
+            const app = state.data.applications[j];
+            const subject = String(app.latestSubject || "");
+            const from = String(app.latestFrom || "");
+            const text = `${subject} ${from} ${app.notes || ""}`.toLowerCase();
+
+            // Noise exclusion
+            if (/security code|verification code|verify your candidate account|verify your email|confirm your identity|confirm your email|confirm your account|password setup|password reset|temporary password|eeo survey|voluntary eeo|equal opportunity compliance|demographic survey|survey invitation|candidate feedback survey|welcome to chat!|security alert|2-step verification|google cloud free trial|review your google account|txt\.voice\.google\.com|new text message from/i.test(text) || /otp\.workday\.com|accounts\.google\.com|chat-noreply@google\.com|voice-noreply@google\.com/i.test(from)) {
+              if (app.status !== "not_related") {
+                app.status = "not_related";
+                reclassifiedCount++;
+              }
+            }
+            // Recruiter direct inquiries
+            else if (/clifyx|akraya|lancesoft|pyramidci|apolisrises|infowaygroup|cmplacement|emergentstaffing|weekdaymail|testgorilla/i.test(from + " " + subject) && !/applied|received your application|thank you for applying/i.test(subject)) {
+              if (app.status !== "reply_needed" && app.status !== "offered" && app.status !== "interviewed") {
+                app.status = "reply_needed";
+                reclassifiedCount++;
+              }
             }
           }
-          // Recruiter direct inquiries
-          else if (/clifyx|akraya|lancesoft|pyramidci|apolisrises|infowaygroup|cmplacement|emergentstaffing|weekdaymail|testgorilla/i.test(from + " " + subject) && !/applied|received your application|thank you for applying/i.test(subject)) {
-            if (app.status !== "reply_needed" && app.status !== "offered" && app.status !== "interviewed") {
-              app.status = "reply_needed";
-              reclassifiedCount++;
-            }
-          }
+
+          appendConsole(`Batch ${Math.floor(i / chunkSize) + 1}: verified apps ${i + 1}–${end} of ${total} (${pct}% complete)`);
+          await new Promise((r) => setTimeout(r, 120));
         }
 
-        await new Promise((r) => setTimeout(r, 800));
-        appendConsole(`AI Re-Classification Complete (${activeModel.name}): verified ${applications.length} items (${reclassifiedCount} adjustments applied).`, "success");
+        if (progressLabel) progressLabel.textContent = `Completed all ${total} applications!`;
+        if (progressFill) progressFill.style.width = "100%";
+        if (progressPct) progressPct.textContent = "100%";
+
+        appendConsole(`AI Re-Classification Complete (${activeModel.name}): verified ${total} items (${reclassifiedCount} adjustments applied).`, "success");
         appendConsole("Re-rendering all dashboard views, board lanes, and analytics...", "success");
 
         render();
@@ -1222,13 +1255,15 @@ function attachServicesListeners(applications) {
         setTimeout(() => {
           btnReclassify.innerHTML = "<span>⚡ Run AI Re-Classification</span>";
           btnReclassify.disabled = false;
-        }, 2000);
+          if (progressWrap) progressWrap.style.display = "none";
+        }, 2500);
       } catch (err) {
         appendConsole(`Error running AI re-classifier: ${err.message}`, "error");
         btnReclassify.innerHTML = "<span>❌ Failed</span>";
         setTimeout(() => {
           btnReclassify.innerHTML = "<span>⚡ Run AI Re-Classification</span>";
           btnReclassify.disabled = false;
+          if (progressWrap) progressWrap.style.display = "none";
         }, 2000);
       }
     });
