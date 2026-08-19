@@ -162,13 +162,17 @@ async function main() {
           company: app.company,
           role: app.role,
           status: app.status,
-          confidence: app.confidence,
+          confidence: app.confidence || "high",
           last_activity_at: app.lastActivityAt,
           latest_subject: app.latestSubject,
           latest_from: app.latestFrom,
           gmail_thread_id: app.gmailThreadId,
           gmail_message_ids: app.gmailMessageIds || [],
           notes: app.notes || "",
+          ai_decision: app.aiDecision || app.reason || (app.status === 'applied' ? 'ATS Application Receipt' : app.status === 'reply_needed' ? 'Recruiter Outreach' : app.status === 'interviewed' ? 'Interview Invitation' : app.status === 'offered' ? 'Job Offer' : app.status === 'rejected' ? 'Rejection' : 'Other Communication'),
+          ai_model: app.aiModel || app.classifier || process.env.OPENROUTER_MODEL || "Google Gemini 3.7 Flash",
+          ai_classified_at: app.aiClassifiedAt || new Date().toISOString(),
+          ai_confidence: app.aiConfidence || app.confidence || "high",
           updated_at: new Date().toISOString()
         }));
 

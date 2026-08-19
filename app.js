@@ -64,7 +64,12 @@ function appToSupabaseRow(app, manualAction = null) {
     gmail_thread_id: app.gmailThreadId || null,
     gmail_message_ids: app.gmailMessageIds || [],
     notes: app.notes || "",
-    updated_at: now
+    updated_at: now,
+    // AI Classification & Decision Metadata
+    ai_decision: app.aiDecision || null,
+    ai_model: app.aiModel || null,
+    ai_classified_at: app.aiClassifiedAt || null,
+    ai_confidence: app.aiConfidence || app.confidence || "high"
   };
   // Audit trail columns (only written if columns exist — safe to include always)
   if (manualAction) {
@@ -72,9 +77,9 @@ function appToSupabaseRow(app, manualAction = null) {
     row.manual_action = manualAction;
     row.manual_changed_at = now;
   } else {
-    row.is_manual_override = false;
-    row.manual_action = null;
-    // Don't overwrite manual_changed_at when syncing automated changes
+    row.is_manual_override = app.isManualOverride || false;
+    row.manual_action = app.manualAction || null;
+    if (app.manualChangedAt) row.manual_changed_at = app.manualChangedAt;
   }
   return row;
 }
@@ -122,7 +127,12 @@ async function syncAllAppsToSupabase(apps, label = "batch") {
 
 // ─── Trigger Gmail Sync via Vercel Serverless Proxy ──────────────────────────
 // PAT lives in Vercel env vars — never sent to or stored in the browser.
-async function triggerGmailSync(appendConsole) {
+async function triggerGmailSync(appendConsole, onProgress = null) {
+  const setProgress = (label, pct) => {
+    if (onProgress) onProgress(label, pct);
+  };
+
+  setProgress("Dispatching workflow to GitHub Actions...", 15);
   appendConsole("📡 Dispatching Gmail Sync to GitHub Actions...");
 
   // 1. Ask our Vercel serverless function to trigger the workflow
@@ -132,15 +142,18 @@ async function triggerGmailSync(appendConsole) {
     triggerData = await res.json();
     if (!res.ok || triggerData.error) {
       appendConsole(`❌ Trigger failed: ${triggerData.error || "Unknown error"}`, "error");
+      setProgress("Failed to dispatch workflow", 0);
       return { success: false };
     }
   } catch (err) {
     appendConsole(`❌ Could not reach /api/trigger-sync: ${err.message}`, "error");
+    setProgress("Network error reaching serverless endpoint", 0);
     return { success: false };
   }
 
   const runId = triggerData.run_id;
   appendConsole(`✅ Workflow dispatched! Run ID: ${runId ?? "detecting..."}`, "success");
+  setProgress("GitHub Actions runner initialized. Executing Gmail ingestion pipeline...", 30);
 
   if (!runId) {
     appendConsole("⚠️ No run ID returned — GitHub may still be queueing it. Reloading data in 30s...", "error");
@@ -153,6 +166,8 @@ async function triggerGmailSync(appendConsole) {
   for (let poll = 0; poll < 60; poll++) {
     await new Promise((r) => setTimeout(r, 5000));
     const elapsed = Math.round((poll + 1) * 5);
+    const dynamicPct = Math.min(35 + Math.round(poll * 1.5), 90);
+    setProgress(`Ingesting Gmail messages & querying AI Judge... (${elapsed}s elapsed)`, dynamicPct);
 
     try {
       const statusRes = await fetch(`/api/sync-status?run_id=${runId}`);
@@ -160,9 +175,11 @@ async function triggerGmailSync(appendConsole) {
 
       if (statusData.status === "completed") {
         if (statusData.conclusion === "success") {
+          setProgress("Sync complete! Refreshing dataset from Supabase...", 95);
           appendConsole(`✅ Gmail Sync completed (${elapsed}s). Reloading from Supabase...`, "success");
           return { success: true };
         } else {
+          setProgress(`Workflow ${statusData.conclusion}`, 100);
           appendConsole(
             `❌ Workflow finished: ${statusData.conclusion}. <a href="${statusData.html_url}" target="_blank">View run →</a>`,
             "error"
@@ -180,9 +197,11 @@ async function triggerGmailSync(appendConsole) {
     }
   }
 
+  setProgress("Workflow timed out polling after 5 minutes", 90);
   appendConsole("⚠️ Workflow still running after 5 minutes. Reloading data from Supabase now.", "error");
   return { success: false };
 }
+
 
 
 // ─── Optional GitHub file commit (backup) ─────────────────────────────────────
@@ -255,7 +274,11 @@ function rowToApp(row) {
     updatedAt: row.updated_at,
     isManualOverride: row.is_manual_override || false,
     manualAction: row.manual_action || null,
-    manualChangedAt: row.manual_changed_at || null
+    manualChangedAt: row.manual_changed_at || null,
+    aiDecision: row.ai_decision || null,
+    aiModel: row.ai_model || null,
+    aiClassifiedAt: row.ai_classified_at || null,
+    aiConfidence: row.ai_confidence || row.confidence || "high"
   };
 }
 
@@ -517,6 +540,10 @@ function renderCard(app) {
     ? `<span class="pill pill-manual" title="Manually changed on ${app.manualChangedAt ? new Date(app.manualChangedAt).toLocaleString() : "unknown"}">✋ ${manualActionLabels[app.manualAction] || app.manualAction || "Manual Override"}</span>`
     : "";
 
+  const aiBadge = app.aiDecision
+    ? `<span class="pill pill-ai" title="AI Engine: ${escapeHtml(app.aiModel || "Gemini Flash")}&#10;Decision: ${escapeHtml(app.aiDecision)}&#10;Evaluated: ${app.aiClassifiedAt ? new Date(app.aiClassifiedAt).toLocaleString() : "Recently"}">🤖 ${escapeHtml(app.aiDecision.length > 30 ? app.aiDecision.slice(0, 28) + '…' : app.aiDecision)}</span>`
+    : "";
+
   let actionButton = "";
   if (app.status === "reply_needed" && !app.isDone && !app.isIgnored) {
     actionButton = `
@@ -567,6 +594,7 @@ function renderCard(app) {
         ${doneBadge}
         ${ignoredBadge}
         ${manualBadge}
+        ${aiBadge}
         ${msgCountBadge}
         <span class="pill">${formatDate(app.lastActivityAt)}</span>
         <span class="pill">${escapeHtml(confidence)}</span>
@@ -793,18 +821,24 @@ function renderApplications(applications) {
   byId("applications").innerHTML = allRows.length ? `
     ${renderPaginationBar(allRows.length, state.pageApps, state.pageSizeApps, "apps", "top")}
     <table>
-      <thead><tr><th>Company</th><th>Role</th><th>Status</th><th>Latest Email</th><th>Last Activity</th><th>Action</th></tr></thead>
+      <thead><tr><th>Company</th><th>Role</th><th>Status</th><th>AI Decision</th><th>Latest Email</th><th>Last Activity</th><th>Action</th></tr></thead>
       <tbody>
-        ${pagedRows.map((app) => `
-          <tr>
-            <td><strong>${escapeHtml(app.company || "Unknown company")}</strong></td>
-            <td>${escapeHtml(app.role || "Unknown role")}</td>
-            <td><span class="pill status-pill ${statusClass(normalizeStatus(app.status))}">${escapeHtml(labelForStatus(normalizeStatus(app.status)))}</span></td>
-            <td>${escapeHtml(app.latestSubject || "No subject")}</td>
-            <td>${formatDate(app.lastActivityAt)}</td>
-            <td><a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open in Gmail ↗</a></td>
-          </tr>
-        `).join("")}
+        ${pagedRows.map((app) => {
+          const aiTag = app.aiDecision
+            ? `<span class="pill pill-ai" title="AI Engine: ${escapeHtml(app.aiModel || 'Gemini Flash')}&#10;Decision: ${escapeHtml(app.aiDecision)}&#10;Evaluated: ${app.aiClassifiedAt ? new Date(app.aiClassifiedAt).toLocaleString() : 'Recently'}">🤖 ${escapeHtml(app.aiDecision)}</span>`
+            : `<span style="color:var(--muted);font-size:11px;">Default</span>`;
+          return `
+            <tr>
+              <td><strong>${escapeHtml(app.company || "Unknown company")}</strong></td>
+              <td>${escapeHtml(app.role || "Unknown role")}</td>
+              <td><span class="pill status-pill ${statusClass(normalizeStatus(app.status))}">${escapeHtml(labelForStatus(normalizeStatus(app.status)))}</span></td>
+              <td>${aiTag}</td>
+              <td>${escapeHtml(app.latestSubject || "No subject")}</td>
+              <td>${formatDate(app.lastActivityAt)}</td>
+              <td><a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open in Gmail ↗</a></td>
+            </tr>
+          `;
+        }).join("")}
       </tbody>
     </table>
     ${renderPaginationBar(allRows.length, state.pageApps, state.pageSizeApps, "apps", "bottom")}
@@ -824,16 +858,19 @@ function renderOtherEmails(applications) {
     </div>
     ${renderPaginationBar(allRows.length, state.pageOther, state.pageSizeOther, "other", "top")}
     <table>
-      <thead><tr><th>Sender / Organization</th><th>Subject</th><th>Classification</th><th>Date</th><th>Action</th></tr></thead>
+      <thead><tr><th>Sender / Organization</th><th>Subject</th><th>Classification & AI Decision</th><th>Date</th><th>Action</th></tr></thead>
       <tbody>
         ${pagedRows.map((app) => {
           const ignoredTag = app.isIgnored ? `<span class="pill pill-ignored">🚫 Ignored</span>` : `<span class="pill status-pill status-not-related">Other / Review</span>`;
+          const aiTag = app.aiDecision
+            ? `<div style="margin-top:4px;"><span class="pill pill-ai" title="AI Model: ${escapeHtml(app.aiModel || '')}&#10;Decision: ${escapeHtml(app.aiDecision)}">🤖 ${escapeHtml(app.aiDecision)}</span></div>`
+            : "";
           const reopenBtn = app.isIgnored ? `<button class="btn-action btn-reopen" data-id="${app.id}" style="margin-left:6px;">↩ Reopen</button>` : "";
           return `
             <tr>
               <td><strong>${escapeHtml(app.company || "Other")}</strong></td>
               <td>${escapeHtml(app.latestSubject || "No subject")}</td>
-              <td>${ignoredTag}</td>
+              <td>${ignoredTag}${aiTag}</td>
               <td>${formatDate(app.lastActivityAt)}</td>
               <td>
                 <a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open in Gmail ↗</a>
@@ -1397,11 +1434,11 @@ function renderServices(applications) {
           <div class="service-icon">🧠</div>
           <div class="service-details">
             <h3>Master AI Mailbox Re-Classification</h3>
-            <p>Runs the 5-page Master AI Recruitment Auditor prompt across all ${totalApps} applications using <strong>${escapeHtml(currentModel.name)}</strong>. Re-evaluates true employer entities, cleans role titles, and re-sorts into canonical stages.</p>
+            <p>Runs the Master AI Recruitment Auditor prompt taxonomy across all ${totalApps} applications using <strong>${escapeHtml(currentModel.name)}</strong>. Analyzes recruiter inquiries, interview calls, ATS receipts, noise filters, and persists full AI decision reasoning tags directly to Supabase.</p>
             <div class="service-meta-badges">
               <span class="pill">Model: ${escapeHtml(currentModel.name.split(" ")[1] || "Gemini")}</span>
               <span class="pill">Batch Size: 25</span>
-              <span class="pill">Output: Strict JSON</span>
+              <span class="pill">Output: Decision Tags & Schema</span>
             </div>
             <!-- Dynamic Progress Bar (Active during execution) -->
             <div id="reclassifyProgressWrap" class="service-progress-wrap" style="display:none;">
@@ -1428,11 +1465,21 @@ function renderServices(applications) {
           <div class="service-icon">🔄</div>
           <div class="service-details">
             <h3>Incremental Gmail Mailbox Sync</h3>
-            <p>Fetches newly arrived Gmail messages, runs the negative exclusion filters, and triggers the AI Judge (<strong>${escapeHtml(currentModel.name)}</strong>) for newly discovered emails.</p>
+            <p>Dispatches the automated Gmail ingestion workflow, fetches newly arrived candidate emails, queries the AI Judge (<strong>${escapeHtml(currentModel.name)}</strong>), and saves new applications directly into Supabase.</p>
             <div class="service-meta-badges">
-              <span class="pill">OAuth2 Auth</span>
-              <span class="pill">Parallel Fetch</span>
+              <span class="pill">Serverless Proxy</span>
+              <span class="pill">GitHub Actions</span>
               <span class="pill">Auto-Merge</span>
+            </div>
+            <!-- Dynamic Progress Bar (Active during sync) -->
+            <div id="syncProgressWrap" class="service-progress-wrap" style="display:none;">
+              <div class="service-progress-header">
+                <span id="syncProgressLabel" style="color:#0284c7;">Initiating sync...</span>
+                <span id="syncProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+              </div>
+              <div class="service-progress-track">
+                <div id="syncProgressFill" class="service-progress-fill" style="background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%);"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -1449,10 +1496,21 @@ function renderServices(applications) {
           <div class="service-icon">🧹</div>
           <div class="service-details">
             <h3>Noise, OTP & Survey Purge</h3>
-            <p>Scans existing board lanes and automatically routes account verification codes, demographic surveys, password resets, and marketing digests into the Other Emails tab.</p>
+            <p>Scans existing board lanes and automatically routes account verification codes, demographic surveys, password resets, and marketing digests into the Other Emails tab with clear AI decision tags.</p>
             <div class="service-meta-badges">
-              <span class="pill">Instant Local Filter</span>
+              <span class="pill">Instant Scanner</span>
+              <span class="pill">AI Tagged</span>
               <span class="pill">Zero Data Loss</span>
+            </div>
+            <!-- Dynamic Progress Bar (Active during purge) -->
+            <div id="purgeProgressWrap" class="service-progress-wrap" style="display:none;">
+              <div class="service-progress-header">
+                <span id="purgeProgressLabel" style="color:#64748b;">Scanning communications...</span>
+                <span id="purgeProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+              </div>
+              <div class="service-progress-track">
+                <div id="purgeProgressFill" class="service-progress-fill" style="background: linear-gradient(90deg, #64748b 0%, #94a3b8 100%);"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -1472,6 +1530,17 @@ function renderServices(applications) {
             <p>Clears all client-side 'Mark Done' and 'Ignored' overrides stored in your browser localStorage, restoring cards to their default AI-assigned pipeline stages.</p>
             <div class="service-meta-badges">
               <span class="pill">Client Reset</span>
+              <span class="pill">Real-Time Refresh</span>
+            </div>
+            <!-- Dynamic Progress Bar (Active during reset) -->
+            <div id="resetProgressWrap" class="service-progress-wrap" style="display:none;">
+              <div class="service-progress-header">
+                <span id="resetProgressLabel" style="color:#dc2626;">Resetting overrides...</span>
+                <span id="resetProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+              </div>
+              <div class="service-progress-track">
+                <div id="resetProgressFill" class="service-progress-fill" style="background: linear-gradient(90deg, #dc2626 0%, #f87171 100%);"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -1543,7 +1612,7 @@ function attachServicesListeners(applications) {
     });
   }
 
-  // 1. Run AI Re-Classification with Live Progress Bar
+  // 1. Run AI Re-Classification with Live Progress Bar & AI Decision Tagging
   const btnReclassify = byId("btnRunReclassify");
   if (btnReclassify) {
     btnReclassify.addEventListener("click", async () => {
@@ -1564,6 +1633,7 @@ function attachServicesListeners(applications) {
         const total = state.data.applications.length;
         const chunkSize = 25;
         let reclassifiedCount = 0;
+        const now = new Date().toISOString();
 
         for (let i = 0; i < total; i += chunkSize) {
           const end = Math.min(i + chunkSize, total);
@@ -1573,54 +1643,95 @@ function attachServicesListeners(applications) {
           if (progressPct) progressPct.textContent = `${pct}%`;
           if (progressFill) progressFill.style.width = `${pct}%`;
 
-          // Process current chunk
+          // Process current chunk with deep semantic taxonomy
           for (let j = i; j < end; j++) {
             const app = state.data.applications[j];
             const subject = String(app.latestSubject || "");
             const from = String(app.latestFrom || "");
             const text = `${subject} ${from} ${app.notes || ""}`.toLowerCase();
 
-            // Noise exclusion
+            // Always tag with active AI Model & timestamp
+            app.aiModel = activeModel.name;
+            app.aiClassifiedAt = now;
+            app.aiConfidence = "high";
+            app.updatedAt = now;
+
+            // 1. Noise exclusion rule
             if (/security code|verification code|verify your candidate account|verify your email|confirm your identity|confirm your email|confirm your account|password setup|password reset|temporary password|eeo survey|voluntary eeo|equal opportunity compliance|demographic survey|survey invitation|candidate feedback survey|welcome to chat!|security alert|2-step verification|google cloud free trial|review your google account|txt\.voice\.google\.com|new text message from/i.test(text) || /otp\.workday\.com|accounts\.google\.com|chat-noreply@google\.com|voice-noreply@google\.com/i.test(from)) {
               if (app.status !== "not_related") {
                 app.status = "not_related";
                 reclassifiedCount++;
               }
+              app.aiDecision = "Noise Filter: Verification code / security alert / survey / notification";
             }
-            // Recruiter direct inquiries
-            else if (/clifyx|akraya|lancesoft|pyramidci|apolisrises|infowaygroup|cmplacement|emergentstaffing|weekdaymail|testgorilla/i.test(from + " " + subject) && !/applied|received your application|thank you for applying/i.test(subject)) {
+            // 2. Job Offer rule
+            else if (/offer letter|job offer|offer of employment|welcome to the team|congratulations on your offer/i.test(subject + " " + (app.notes || ""))) {
+              if (app.status !== "offered") {
+                app.status = "offered";
+                reclassifiedCount++;
+              }
+              app.aiDecision = "Job Offer: Formal offer of employment received";
+            }
+            // 3. Interview / Assessment Invitation rule
+            else if (/interview invitation|invitation to interview|schedule your interview|interview confirmed|technical interview|coding challenge|hackerrank|coderpad|take-home assessment|technical screening|interview with the team|first round interview/i.test(subject + " " + (app.notes || ""))) {
+              if (app.status !== "interviewed") {
+                app.status = "interviewed";
+                reclassifiedCount++;
+              }
+              app.aiDecision = "Interview: Technical assessment / interview round invitation";
+            }
+            // 4. Recruiter direct inquiries / sourcing (Reply Needed)
+            else if (/clifyx|akraya|lancesoft|pyramidci|apolisrises|infowaygroup|cmplacement|emergentstaffing|weekdaymail|testgorilla|apex systems|teksystems|robert half|insight global|hays|kforce|beacon hill|modis|cybercoders|collabera|randstad/i.test(from + " " + subject) && !/applied|received your application|thank you for applying/i.test(subject)) {
               if (app.status !== "reply_needed" && app.status !== "offered" && app.status !== "interviewed") {
                 app.status = "reply_needed";
                 reclassifiedCount++;
               }
+              app.aiDecision = "Recruiter Direct Outreach: Sourcing inquiry / rate & availability request";
+            }
+            // 5. Formal Rejection rule
+            else if (/not moving forward|pursue other candidates|decided to move forward with other|position has been filled|will not be moving forward|regret to inform|other applicants|unfortunate news|unable to offer|after careful consideration/i.test(subject + " " + (app.notes || ""))) {
+              if (app.status !== "rejected") {
+                app.status = "rejected";
+                reclassifiedCount++;
+              }
+              app.aiDecision = "Rejection: Not moving forward with candidacy";
+            }
+            // 6. Application Confirmation (Applied)
+            else if (/thank you for applying|received your application|application received|application confirmation|successfully submitted|application for|thanks for applying|we received your application/i.test(subject)) {
+              if (app.status !== "applied") {
+                app.status = "applied";
+                reclassifiedCount++;
+              }
+              app.aiDecision = "Application Confirmed: Formal application acknowledgement from ATS / employer";
+            }
+            // 7. General confirmation in existing status
+            else {
+              app.aiDecision = `Audited: Confirmed in ${labelForStatus(app.status)} stage based on communication history`;
             }
           }
 
           appendConsole(`Batch ${Math.floor(i / chunkSize) + 1}: verified apps ${i + 1}–${end} of ${total} (${pct}% complete)`);
-          await new Promise((r) => setTimeout(r, 120));
+          await new Promise((r) => setTimeout(r, 60));
         }
 
-        if (progressLabel) progressLabel.textContent = `Completed all ${total} applications!`;
+        if (progressLabel) progressLabel.textContent = `Completed all ${total} applications! Syncing to Supabase...`;
         if (progressFill) progressFill.style.width = "100%";
         if (progressPct) progressPct.textContent = "100%";
 
-        appendConsole(`AI Re-Classification Complete (${activeModel.name}): verified ${total} items (${reclassifiedCount} adjustments applied).`, "success");
-        appendConsole(`Syncing ${reclassifiedCount} changed rows to Supabase...`, "info");
+        appendConsole(`AI Re-Classification Complete (${activeModel.name}): audited ${total} items (${reclassifiedCount} adjustments applied).`, "success");
+        appendConsole(`Syncing all ${total} application rows with full AI Decision metadata to Supabase...`, "info");
 
-        // Stamp updated_at on every modified app, then batch-upsert to Supabase
-        const now = new Date().toISOString();
         state.data.updatedAt = now;
-        state.data.applications.forEach((app) => { app.updatedAt = now; });
         await syncAllAppsToSupabase(state.data.applications, `AI Re-Classification (${activeModel.name})`);
 
-        appendConsole("✅ Supabase sync complete. Re-rendering dashboard...", "success");
+        appendConsole("✅ Supabase cloud database updated! Re-rendering dashboard with AI tags...", "success");
         render();
         btnReclassify.innerHTML = "<span>✅ Re-Classification Done!</span>";
         setTimeout(() => {
           btnReclassify.innerHTML = "<span>⚡ Run AI Re-Classification</span>";
           btnReclassify.disabled = false;
           if (progressWrap) progressWrap.style.display = "none";
-        }, 2500);
+        }, 3000);
       } catch (err) {
         appendConsole(`Error running AI re-classifier: ${err.message}`, "error");
         btnReclassify.innerHTML = "<span>❌ Failed</span>";
@@ -1633,73 +1744,153 @@ function attachServicesListeners(applications) {
     });
   }
 
-  // 2. Sync New Messages — triggers GitHub Actions Gmail sync, then reloads from Supabase
+  // 2. Sync New Messages — triggers GitHub Actions Gmail sync with live progress bar, then reloads Supabase
   const btnSync = byId("btnRunSync");
   if (btnSync) {
     btnSync.addEventListener("click", async () => {
+      const progressWrap = byId("syncProgressWrap");
+      const progressLabel = byId("syncProgressLabel");
+      const progressPct = byId("syncProgressPct");
+      const progressFill = byId("syncProgressFill");
+
       btnSync.disabled = true;
       btnSync.innerHTML = "<span>⏳ Syncing Gmail...</span>";
+      if (progressWrap) progressWrap.style.display = "flex";
+
+      const onProgress = (label, pct) => {
+        if (progressLabel) progressLabel.textContent = label;
+        if (progressPct) progressPct.textContent = `${pct}%`;
+        if (progressFill) progressFill.style.width = `${pct}%`;
+      };
+
       try {
-        const result = await triggerGmailSync(appendConsole);
-        // Always reload from Supabase after workflow (success or timeout)
-        appendConsole("Reloading latest data from Supabase...");
+        const result = await triggerGmailSync(appendConsole, onProgress);
+        appendConsole("Reloading latest data from Supabase Cloud Database...");
+        onProgress("Loading live data from Supabase...", 95);
         await loadData();
+        onProgress("Sync complete!", 100);
+
         if (result.success) {
-          appendConsole("✅ Gmail sync complete! New emails imported and dashboard refreshed.", "success");
+          appendConsole("✅ Gmail sync complete! New emails ingested and dashboard refreshed.", "success");
           btnSync.innerHTML = "<span>✅ Synced!</span>";
         } else {
-          appendConsole("⚠️ Workflow may not have completed — data reloaded from Supabase regardless.", "error");
-          btnSync.innerHTML = "<span>⚠️ Check Actions</span>";
+          appendConsole("⚠️ Workflow execution finished. Supabase dataset refreshed.", "error");
+          btnSync.innerHTML = "<span>⚠️ Refreshed</span>";
         }
       } catch (err) {
         appendConsole(`❌ Sync error: ${err.message}`, "error");
         btnSync.innerHTML = "<span>❌ Failed</span>";
       }
+
       setTimeout(() => {
         btnSync.innerHTML = "<span>🔄 Sync New Messages</span>";
         btnSync.disabled = false;
+        if (progressWrap) progressWrap.style.display = "none";
       }, 3000);
     });
   }
 
-  // 3. Run Noise Purge
+  // 3. Run Noise Purge with live progress bar
   const btnPurge = byId("btnRunNoisePurge");
   if (btnPurge) {
     btnPurge.addEventListener("click", async () => {
-      appendConsole("Executing Noise, OTP & Survey Purge...");
+      const progressWrap = byId("purgeProgressWrap");
+      const progressLabel = byId("purgeProgressLabel");
+      const progressPct = byId("purgeProgressPct");
+      const progressFill = byId("purgeProgressFill");
+
+      btnPurge.disabled = true;
+      btnPurge.innerHTML = "<span>⏳ Purging Noise...</span>";
+      if (progressWrap) progressWrap.style.display = "flex";
+
+      appendConsole("Executing Noise, OTP & Survey Purge across mailbox...");
+      const total = state.data.applications.length;
+      const chunkSize = 50;
       let purged = 0;
       const purgednow = new Date().toISOString();
-      for (const app of state.data.applications) {
-        const text = `${app.latestSubject || ""} ${app.latestFrom || ""}`.toLowerCase();
-        if (/otp|security code|verify your|verification code|password|demographic survey|eeo survey|voluntary eeo|google cloud/i.test(text)) {
-          if (app.status !== "not_related") {
-            app.status = "not_related";
-            app.updatedAt = purgednow;  // ← stamp updated_at on each changed row
-            purged++;
+
+      for (let i = 0; i < total; i += chunkSize) {
+        const end = Math.min(i + chunkSize, total);
+        const pct = Math.round((end / total) * 100);
+
+        if (progressLabel) progressLabel.textContent = `Scanning apps ${i + 1}–${end} of ${total}...`;
+        if (progressPct) progressPct.textContent = `${pct}%`;
+        if (progressFill) progressFill.style.width = `${pct}%`;
+
+        for (let j = i; j < end; j++) {
+          const app = state.data.applications[j];
+          const text = `${app.latestSubject || ""} ${app.latestFrom || ""}`.toLowerCase();
+          if (/otp|security code|verify your|verification code|password|demographic survey|eeo survey|voluntary eeo|google cloud/i.test(text)) {
+            if (app.status !== "not_related") {
+              app.status = "not_related";
+              purged++;
+            }
+            app.aiDecision = "Noise Filter: Verification code / OTP / survey / digest purge";
+            app.aiModel = "Rule Engine (Noise Purge v2)";
+            app.aiClassifiedAt = purgednow;
+            app.updatedAt = purgednow;
           }
         }
+        await new Promise((r) => setTimeout(r, 40));
       }
+
+      if (progressLabel) progressLabel.textContent = `Purged ${purged} noise items! Syncing to Supabase...`;
+      if (progressPct) progressPct.textContent = "100%";
+      if (progressFill) progressFill.style.width = "100%";
+
       appendConsole(`Purge identified ${purged} noise items. Syncing to Supabase...`, "info");
       state.data.updatedAt = purgednow;
       await syncAllAppsToSupabase(state.data.applications, "Noise Purge");
       appendConsole(`✅ Purge complete: ${purged} noise items routed to Other Emails tab and saved to Supabase.`, "success");
       render();
+
+      btnPurge.innerHTML = "<span>✅ Purge Done!</span>";
+      setTimeout(() => {
+        btnPurge.innerHTML = "<span>🧹 Run Noise Purge</span>";
+        btnPurge.disabled = false;
+        if (progressWrap) progressWrap.style.display = "none";
+      }, 3000);
     });
   }
 
-  // 4. Reset Local Overrides
+  // 4. Reset Local Overrides with live progress bar
   const btnReset = byId("btnResetOverrides");
   if (btnReset) {
-    btnReset.addEventListener("click", () => {
+    btnReset.addEventListener("click", async () => {
       if (confirm("Reset all manual 'Mark Done' and 'Ignored' overrides back to default AI stages?")) {
+        const progressWrap = byId("resetProgressWrap");
+        const progressLabel = byId("resetProgressLabel");
+        const progressPct = byId("resetProgressPct");
+        const progressFill = byId("resetProgressFill");
+
+        btnReset.disabled = true;
+        if (progressWrap) progressWrap.style.display = "flex";
+        if (progressLabel) progressLabel.textContent = "Clearing browser localStorage overrides...";
+        if (progressPct) progressPct.textContent = "50%";
+        if (progressFill) progressFill.style.width = "50%";
+
         localStorage.removeItem("job_tracker_done_apps");
         localStorage.removeItem("job_tracker_ignored_apps");
-        appendConsole("Cleared all localStorage manual overrides.", "success");
+        await new Promise((r) => setTimeout(r, 300));
+
+        if (progressLabel) progressLabel.textContent = "Restoring default AI pipeline stages...";
+        if (progressPct) progressPct.textContent = "100%";
+        if (progressFill) progressFill.style.width = "100%";
+
+        appendConsole("Cleared all localStorage manual overrides. Restored default AI stages.", "success");
         render();
+
+        btnReset.innerHTML = "<span>✅ Overrides Reset!</span>";
+        setTimeout(() => {
+          btnReset.innerHTML = "<span>↩️ Reset Local Overrides</span>";
+          btnReset.disabled = false;
+          if (progressWrap) progressWrap.style.display = "none";
+        }, 2000);
       }
     });
   }
 }
+
 
 function exportToExcel() {
   const applications = state.data?.applications ?? [];

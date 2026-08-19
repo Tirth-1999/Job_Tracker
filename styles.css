@@ -575,6 +575,22 @@ tr:last-child td {
   cursor: help;
 }
 
+.pill-ai {
+  background: #f0fdf4;
+  color: #166534;
+  border-color: #bbf7d0;
+  font-weight: 600;
+  cursor: help;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pill-ai:hover {
+  background: #dcfce7;
+  border-color: #86efac;
+}
+
 /* Analytics View Styling */
 .analytics-shell {
   display: flex;
