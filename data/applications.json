@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-08-19T13:44:50.116Z",
+  "updatedAt": "2026-08-19T15:32:41.905Z",
   "applications": [
+    {
+      "id": "varite-data-engineer",
+      "company": "Varite",
+      "role": "Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Infosys Client is looking for Data Engineer - Apply W2 Candidates // 122559-1",
+      "latestFrom": "G Pankaja <Pankaja.G@varite.com>",
+      "lastActivityAt": "2026-08-19T15:16:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01a9f496c0b2c4",
+      "gmailMessageIds": [
+        "1a01a9f496c0b2c4"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "atc-general-application",
+      "company": "ATC",
+      "role": "General Application",
+      "status": "offered",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Final Reminder- Offer Letter",
+      "latestFrom": "Divya Maran <divya@atc.xyz>",
+      "lastActivityAt": "2026-08-19T14:53:00.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01a82eb45a8f36",
+      "gmailMessageIds": [
+        "1a01a82eb45a8f36"
+      ],
+      "notes": ""
+    },
     {
       "id": "remotehunter-general-application",
       "company": "Remotehunter",
