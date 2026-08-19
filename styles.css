@@ -1167,18 +1167,89 @@ tr:last-child td {
   border: 1px solid #30363d;
   border-radius: 8px;
   padding: 18px 22px;
+.services-header-card {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  margin-bottom: 18px;
+}
+
+.services-header-top {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.services-title h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px 0;
+}
+
+.services-title p {
+  color: #94a3b8;
+  font-size: 13px;
+  margin: 0;
+}
+
+.services-top-controls {
+  display: flex;
+  align-items: center;
   gap: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  flex-wrap: wrap;
+}
+
+.model-select-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.model-select {
+  padding: 7px 12px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #f8fafc;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.model-details-banner {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+/* GitHub & Supabase Sync Card */
+.github-sync-card {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 16px 22px;
+  margin-bottom: 20px;
 }
 
 .github-sync-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
   flex-wrap: wrap;
-  gap: 12px;
 }
 
 .github-sync-header h3 {
@@ -1188,77 +1259,255 @@ tr:last-child td {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin: 0 0 6px 0;
+}
+
+.github-sync-status {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .token-input-group {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .token-input {
-  height: 36px;
-  padding: 0 12px;
+  height: 34px;
+  padding: 0 10px;
   border-radius: 6px;
-  border: 1px solid #30363d;
-  background: #161b22;
+  border: 1px solid #334155;
+  background: #1e293b;
   color: #f0f6fc;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: ui-monospace, SFMono-Regular, monospace;
   font-size: 12px;
-  min-width: 280px;
   outline: none;
-}
-
-.token-input:focus {
-  border-color: #58a6ff;
+  box-sizing: border-box;
 }
 
 .btn-github-save {
-  height: 36px;
-  padding: 0 16px;
+  height: 34px;
+  padding: 0 14px;
   border-radius: 6px;
-  border: 1px solid #238636;
-  background: #238636;
+  border: 1px solid #16a34a;
+  background: #16a34a;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.15s ease;
+  white-space: nowrap;
 }
 
 .btn-github-save:hover {
-  background: #2ea043;
+  background: #15803d;
 }
 
-.github-sync-status {
-  font-size: 12px;
-  color: #8b949e;
-  line-height: 1.45;
+/* Services Container */
+.services-layout-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 
-.services-title p {
-  color: var(--muted);
+/* Hero Card: Service 1 (Master AI Re-Classification) */
+.service-hero-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px 26px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.service-hero-top {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.service-icon-hero {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #f0f4ff;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.service-hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.service-hero-content h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.service-hero-content p {
   font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 6px 0 10px 0;
 }
 
-.services-grid {
+/* Reclassification Scope Box */
+.reclassify-scope-card {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.scope-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.scope-title-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.scope-target-badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 14px;
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+  white-space: nowrap;
+}
+
+.scope-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.scope-inputs-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.scope-select {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #94a3b8;
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+  outline: none;
+}
+
+.scope-select:focus {
+  border-color: var(--accent);
+}
+
+.scope-num-input {
+  width: 70px;
+  height: 32px;
+  padding: 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #94a3b8;
+  background: #fff;
+  color: var(--text);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.scope-num-input:focus {
+  border-color: var(--accent);
+}
+
+.scope-presets-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.btn-scope-preset {
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-scope-preset:hover {
+  background: #e2e8f0;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-scope-preset.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Subgrid for Services 2, 3, 4 */
+.services-subgrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 18px;
+  width: 100%;
 }
 
 .service-card {
   background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 20px 24px;
+  border-radius: 10px;
+  padding: 20px 22px;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
   transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .service-card:hover {
@@ -1273,15 +1522,15 @@ tr:last-child td {
 }
 
 .service-icon {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 8px;
   background: #f0f4ff;
   color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 20px;
   flex-shrink: 0;
 }
 
@@ -1291,7 +1540,7 @@ tr:last-child td {
 }
 
 .service-details h3 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   margin-bottom: 6px;
 }
@@ -1300,6 +1549,7 @@ tr:last-child td {
   font-size: 13px;
   color: var(--muted);
   line-height: 1.45;
+  margin: 0;
 }
 
 .service-meta-badges {
@@ -1309,124 +1559,12 @@ tr:last-child td {
   margin-top: 10px;
 }
 
-/* Reclassification Scope Box */
-.reclassify-scope-card {
-  margin-top: 14px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 12px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.scope-header-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.scope-title-label {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.scope-target-badge {
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 12px;
-  background: #dcfce7;
-  color: #15803d;
-  border: 1px solid #bbf7d0;
-  white-space: nowrap;
-}
-
-.scope-controls-grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.scope-inputs-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.scope-select {
-  padding: 5px 10px;
-  font-size: 12px;
-  font-weight: 600;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  background: #fff;
-  color: var(--text);
-  cursor: pointer;
-  outline: none;
-}
-
-.scope-select:focus {
-  border-color: var(--accent);
-}
-
-.scope-num-input {
-  width: 65px;
-  padding: 5px 8px;
-  font-size: 12px;
-  font-weight: 600;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  background: #fff;
-  color: var(--text);
-  outline: none;
-}
-
-.scope-num-input:focus {
-  border-color: var(--accent);
-}
-
-.scope-presets-row {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-
-.btn-scope-preset {
-  padding: 4px 8px;
-  font-size: 11px;
-  font-weight: 600;
-  border: 1px solid #cbd5e1;
-  border-radius: 5px;
-  background: #ffffff;
-  color: var(--text);
-  cursor: pointer;
-  transition: all 0.15s ease;
-  white-space: nowrap;
-}
-
-.btn-scope-preset:hover {
-  background: #f1f5f9;
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
 .service-action-wrap {
   display: flex;
   justify-content: flex-end;
-  padding-top: 12px;
+  padding-top: 14px;
   border-top: 1px solid var(--border);
+  margin-top: auto;
 }
 
 .btn-service-run {

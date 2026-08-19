@@ -1481,31 +1481,12 @@ function renderServices(applications) {
       <div class="github-sync-header">
         <div>
           <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            Supabase Cloud DB & GitHub Real-Time Sync
-          </h3>
-          <p class="github-sync-status">
-            🟢 <strong>Supabase Connected</strong> (<code>dykamjxudtxkwgfllxxy.supabase.co</code>) &mdash; All manual moves, stage updates & audits sync in real-time across all devices.
-            <br />
-            ${getGitHubToken() ? "🟢 <strong>GitHub Commits Active</strong> &mdash; Automatically commits to <code>data/applications.json</code> in repo." : "⚪ <strong>GitHub Commits Optional</strong> &mdash; Enter a GitHub PAT if you also want direct commits to the git repository."}
-          </p>
-        </div>
-        <div class="token-input-group">
-          <input type="password" id="ghTokenInput" class="token-input" placeholder="GitHub PAT (Optional): ghp_xxx" value="${getGitHubToken() ? "••••••••••••••••••••" : ""}" />
-          <button id="btnSaveGhToken" class="btn-github-save" type="button">
-            ${getGitHubToken() ? "Update Token" : "Connect GitHub"}
-          </button>
-          ${getGitHubToken() ? `<button id="btnClearGhToken" class="btn-modal-cancel" style="padding:6px 12px;font-size:11px;" type="button">Disconnect</button>` : ""}
-        </div>
-      </div>
-    </div>
-
-    <div class="services-grid">
-      <!-- Service 1: Master AI Mailbox Re-Classification -->
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-icon">🧠</div>
-          <div class="service-details">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385     <div class="services-layout-wrap">
+      <!-- Service 1: Hero Card (Master AI Mailbox Re-Classification) -->
+      <div class="service-hero-card">
+        <div class="service-hero-top">
+          <div class="service-icon-hero">🧠</div>
+          <div class="service-hero-content">
             <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
               <h3>Master AI Mailbox Re-Classification</h3>
               <span class="pill" style="font-weight:700;background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;">
@@ -1514,61 +1495,63 @@ function renderServices(applications) {
             </div>
             <p>Runs the Master AI Recruitment Auditor prompt taxonomy across your selected scope using <strong>${escapeHtml(currentModel.name)}</strong>. Analyzes recruiter inquiries, interview invitations, ATS receipts, and saves AI decision reasoning tags directly to Supabase.</p>
             <div class="service-meta-badges">
-              <span class="pill">Model: ${escapeHtml(currentModel.name.split(" ")[1] || "Gemini")}</span>
+              <span class="pill">Engine: ${escapeHtml(currentModel.name)}</span>
               <span class="pill">Parallel Streams: 6</span>
-              <span class="pill">Batch: 25 / req</span>
-            </div>
-
-            <!-- Re-Classification Scope & Filter Controls -->
-            <div class="reclassify-scope-card">
-              <div class="scope-header-row">
-                <div class="scope-title-label">
-                  <span>🎯 Audit Target Scope:</span>
-                </div>
-                <div id="reclassifyTargetBadge" class="scope-target-badge">
-                  Targeting: ${targetedApps.length} of ${totalApps} applications (${Math.round((targetedApps.length / Math.max(1, totalApps)) * 100)}%)
-                </div>
-              </div>
-              
-              <div class="scope-controls-grid">
-                <div class="scope-inputs-row">
-                  <select id="reclassifyScopeType" class="scope-select">
-                    <option value="recent_n" ${currentScopeType === "recent_n" ? "selected" : ""}>Most Recent N Applications</option>
-                    <option value="days" ${currentScopeType === "days" ? "selected" : ""}>Time Window (Past N Days)</option>
-                    <option value="unclassified" ${currentScopeType === "unclassified" ? "selected" : ""}>Only Unaudited / Unclassified</option>
-                    <option value="all" ${currentScopeType === "all" ? "selected" : ""}>Entire Mailbox (All ${totalApps} Apps)</option>
-                  </select>
-
-                  <div id="reclassifyScopeValWrap" style="display:${currentScopeType === "all" || currentScopeType === "unclassified" ? "none" : "inline-flex"};align-items:center;gap:6px;">
-                    <input type="number" id="reclassifyScopeValue" min="1" max="${totalApps}" value="${currentScopeVal}" class="scope-num-input" />
-                    <span id="reclassifyScopeUnit" style="font-size:12px;color:var(--muted);font-weight:600;">
-                      ${currentScopeType === "days" ? "days" : "apps"}
-                    </span>
-                  </div>
-                </div>
-
-                <div class="scope-presets-row">
-                  <span style="font-size:11px;color:var(--muted);font-weight:600;">Presets:</span>
-                  <button type="button" class="btn-scope-preset" data-type="recent_n" data-val="25">Recent 25</button>
-                  <button type="button" class="btn-scope-preset" data-type="recent_n" data-val="50">Recent 50</button>
-                  <button type="button" class="btn-scope-preset" data-type="days" data-val="7">Last 7d</button>
-                  <button type="button" class="btn-scope-preset" data-type="days" data-val="30">Last 30d</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Dynamic Progress Bar (Active during execution) -->
-            <div id="reclassifyProgressWrap" class="service-progress-wrap" style="display:none;">
-              <div class="service-progress-header">
-                <span id="reclassifyProgressLabel" style="color:var(--accent);">Auditing application 0 of ${targetedApps.length}...</span>
-                <span id="reclassifyProgressPct" style="color:var(--text);font-weight:700;">0%</span>
-              </div>
-              <div class="service-progress-track">
-                <div id="reclassifyProgressFill" class="service-progress-fill"></div>
-              </div>
+              <span class="pill">Batch Size: 25 / req</span>
             </div>
           </div>
         </div>
+
+        <!-- Re-Classification Scope & Filter Controls -->
+        <div class="reclassify-scope-card">
+          <div class="scope-header-row">
+            <div class="scope-title-label">
+              <span>🎯 Target Audit Scope:</span>
+            </div>
+            <div id="reclassifyTargetBadge" class="scope-target-badge">
+              Targeting: ${targetedApps.length} of ${totalApps} applications (${Math.round((targetedApps.length / Math.max(1, totalApps)) * 100)}%)
+            </div>
+          </div>
+          
+          <div class="scope-controls-row">
+            <div class="scope-inputs-group">
+              <select id="reclassifyScopeType" class="scope-select">
+                <option value="recent_n" ${currentScopeType === "recent_n" ? "selected" : ""}>Most Recent N Applications</option>
+                <option value="days" ${currentScopeType === "days" ? "selected" : ""}>Time Window (Past N Days)</option>
+                <option value="unclassified" ${currentScopeType === "unclassified" ? "selected" : ""}>Only Unaudited / Unclassified</option>
+                <option value="all" ${currentScopeType === "all" ? "selected" : ""}>Entire Mailbox (All ${totalApps} Apps)</option>
+              </select>
+
+              <div id="reclassifyScopeValWrap" style="display:${currentScopeType === "all" || currentScopeType === "unclassified" ? "none" : "inline-flex"};align-items:center;gap:6px;">
+                <input type="number" id="reclassifyScopeValue" min="1" max="${totalApps}" value="${currentScopeVal}" class="scope-num-input" />
+                <span id="reclassifyScopeUnit" style="font-size:12px;color:var(--muted);font-weight:600;">
+                  ${currentScopeType === "days" ? "days" : "apps"}
+                </span>
+              </div>
+            </div>
+
+            <div class="scope-presets-group">
+              <span style="font-size:11px;color:var(--muted);font-weight:600;">Presets:</span>
+              <button type="button" class="btn-scope-preset ${currentScopeType === "recent_n" && currentScopeVal == 25 ? "active" : ""}" data-type="recent_n" data-val="25">Recent 25</button>
+              <button type="button" class="btn-scope-preset ${currentScopeType === "recent_n" && currentScopeVal == 50 ? "active" : ""}" data-type="recent_n" data-val="50">Recent 50</button>
+              <button type="button" class="btn-scope-preset ${currentScopeType === "days" && currentScopeVal == 7 ? "active" : ""}" data-type="days" data-val="7">Last 7d</button>
+              <button type="button" class="btn-scope-preset ${currentScopeType === "days" && currentScopeVal == 30 ? "active" : ""}" data-type="days" data-val="30">Last 30d</button>
+              <button type="button" class="btn-scope-preset ${currentScopeType === "all" ? "active" : ""}" data-type="all" data-val="0">All Apps</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Progress Bar (Active during execution) -->
+        <div id="reclassifyProgressWrap" class="service-progress-wrap" style="display:none;">
+          <div class="service-progress-header">
+            <span id="reclassifyProgressLabel" style="color:var(--accent);">Auditing application 0 of ${targetedApps.length}...</span>
+            <span id="reclassifyProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+          </div>
+          <div class="service-progress-track">
+            <div id="reclassifyProgressFill" class="service-progress-fill"></div>
+          </div>
+        </div>
+
         <div class="service-action-wrap">
           <button id="btnRunReclassify" class="btn-service-run">
             <span>⚡ Run AI Re-Classification</span>
@@ -1576,95 +1559,96 @@ function renderServices(applications) {
         </div>
       </div>
 
-      <!-- Service 2: Live Gmail Synchronization -->
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-icon">🔄</div>
-          <div class="service-details">
-            <h3>Incremental Gmail Mailbox Sync</h3>
-            <p>Dispatches the automated Gmail ingestion workflow, fetches newly arrived candidate emails, queries the AI Judge (<strong>${escapeHtml(currentModel.name)}</strong>), and saves new applications directly into Supabase.</p>
-            <div class="service-meta-badges">
-              <span class="pill">Serverless Proxy</span>
-              <span class="pill">GitHub Actions</span>
-              <span class="pill">Auto-Merge</span>
-            </div>
-            <!-- Dynamic Progress Bar (Active during sync) -->
-            <div id="syncProgressWrap" class="service-progress-wrap" style="display:none;">
-              <div class="service-progress-header">
-                <span id="syncProgressLabel" style="color:#0284c7;">Initiating sync...</span>
-                <span id="syncProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+      <!-- Subgrid for Services 2, 3, 4 -->
+      <div class="services-subgrid">
+        <!-- Service 2: Live Gmail Synchronization -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-icon" style="color:#0284c7;background:#e0f2fe;">🔄</div>
+            <div class="service-details">
+              <h3>Incremental Gmail Sync</h3>
+              <p>Dispatches the automated Gmail ingestion workflow, fetches newly arrived candidate emails, queries the AI Judge, and saves new applications directly into Supabase.</p>
+              <div class="service-meta-badges">
+                <span class="pill">Serverless Proxy</span>
+                <span class="pill">Auto-Merge</span>
               </div>
-              <div class="service-progress-track">
-                <div id="syncProgressFill" class="service-progress-fill" style="background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%);"></div>
+              <!-- Dynamic Progress Bar (Active during sync) -->
+              <div id="syncProgressWrap" class="service-progress-wrap" style="display:none;">
+                <div class="service-progress-header">
+                  <span id="syncProgressLabel" style="color:#0284c7;">Initiating sync...</span>
+                  <span id="syncProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+                </div>
+                <div class="service-progress-track">
+                  <div id="syncProgressFill" class="service-progress-fill" style="background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%);"></div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="service-action-wrap">
+            <button id="btnRunSync" class="btn-service-run" style="background:#0284c7;border-color:#0284c7;">
+              <span>🔄 Sync Mailbox</span>
+            </button>
+          </div>
         </div>
-        <div class="service-action-wrap">
-          <button id="btnRunSync" class="btn-service-run" style="background:#0284c7;border-color:#0284c7;">
-            <span>🔄 Sync New Messages</span>
-          </button>
-        </div>
-      </div>
 
-      <!-- Service 3: Noise & OTP Filter Cleanup -->
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-icon">🧹</div>
-          <div class="service-details">
-            <h3>Noise, OTP & Survey Purge</h3>
-            <p>Scans existing board lanes and automatically routes account verification codes, demographic surveys, password resets, and marketing digests into the Other Emails tab with clear AI decision tags.</p>
-            <div class="service-meta-badges">
-              <span class="pill">Instant Scanner</span>
-              <span class="pill">AI Tagged</span>
-              <span class="pill">Zero Data Loss</span>
-            </div>
-            <!-- Dynamic Progress Bar (Active during purge) -->
-            <div id="purgeProgressWrap" class="service-progress-wrap" style="display:none;">
-              <div class="service-progress-header">
-                <span id="purgeProgressLabel" style="color:#64748b;">Scanning communications...</span>
-                <span id="purgeProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+        <!-- Service 3: Noise & OTP Filter Cleanup -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-icon" style="color:#475569;background:#f1f5f9;">🧹</div>
+            <div class="service-details">
+              <h3>Noise & OTP Purge</h3>
+              <p>Scans existing board lanes and automatically routes account verification codes, demographic surveys, password resets, and marketing digests into the Other Emails tab.</p>
+              <div class="service-meta-badges">
+                <span class="pill">Instant Scanner</span>
+                <span class="pill">Zero Data Loss</span>
               </div>
-              <div class="service-progress-track">
-                <div id="purgeProgressFill" class="service-progress-fill" style="background: linear-gradient(90deg, #64748b 0%, #94a3b8 100%);"></div>
+              <!-- Dynamic Progress Bar (Active during purge) -->
+              <div id="purgeProgressWrap" class="service-progress-wrap" style="display:none;">
+                <div class="service-progress-header">
+                  <span id="purgeProgressLabel" style="color:#64748b;">Scanning communications...</span>
+                  <span id="purgeProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+                </div>
+                <div class="service-progress-track">
+                  <div id="purgeProgressFill" class="service-progress-fill" style="background: linear-gradient(90deg, #64748b 0%, #94a3b8 100%);"></div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="service-action-wrap">
+            <button id="btnRunNoisePurge" class="btn-service-run" style="background:#475569;border-color:#475569;">
+              <span>🧹 Run Noise Purge</span>
+            </button>
+          </div>
         </div>
-        <div class="service-action-wrap">
-          <button id="btnRunNoisePurge" class="btn-service-run" style="background:#64748b;border-color:#64748b;">
-            <span>🧹 Run Noise Purge</span>
-          </button>
-        </div>
-      </div>
 
-      <!-- Service 4: Reset Local Done/Ignore Overrides -->
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-icon">↩️</div>
-          <div class="service-details">
-            <h3>Reset Manual Done & Ignored Overrides</h3>
-            <p>Clears all client-side 'Mark Done' and 'Ignored' overrides stored in your browser localStorage, restoring cards to their default AI-assigned pipeline stages.</p>
-            <div class="service-meta-badges">
-              <span class="pill">Client Reset</span>
-              <span class="pill">Real-Time Refresh</span>
-            </div>
-            <!-- Dynamic Progress Bar (Active during reset) -->
-            <div id="resetProgressWrap" class="service-progress-wrap" style="display:none;">
-              <div class="service-progress-header">
-                <span id="resetProgressLabel" style="color:#dc2626;">Resetting overrides...</span>
-                <span id="resetProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+        <!-- Service 4: Reset Local Done/Ignore Overrides -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-icon" style="color:#b45309;background:#fef3c7;">↩️</div>
+            <div class="service-details">
+              <h3>Reset Local Overrides</h3>
+              <p>Clears all client-side 'Mark Done' and 'Ignored' overrides stored in browser localStorage, restoring cards to default AI pipeline stages.</p>
+              <div class="service-meta-badges">
+                <span class="pill">Client Reset</span>
+                <span class="pill">Real-Time Refresh</span>
               </div>
-              <div class="service-progress-track">
-                <div id="resetProgressFill" class="service-progress-fill" style="background: linear-gradient(90deg, #dc2626 0%, #f87171 100%);"></div>
+              <!-- Dynamic Progress Bar (Active during reset) -->
+              <div id="resetProgressWrap" class="service-progress-wrap" style="display:none;">
+                <div class="service-progress-header">
+                  <span id="resetProgressLabel" style="color:#b45309;">Resetting overrides...</span>
+                  <span id="resetProgressPct" style="color:var(--text);font-weight:700;">0%</span>
+                </div>
+                <div class="service-progress-track">
+                  <div id="resetProgressFill" class="service-progress-fill" style="background: linear-gradient(90deg, #b45309 0%, #f59e0b 100%);"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="service-action-wrap">
-          <button id="btnResetOverrides" class="btn-service-run" style="background:#dc2626;border-color:#dc2626;">
-            <span>↩️ Reset Local Overrides</span>
-          </button>
+          <div class="service-action-wrap">
+            <button id="btnResetOverrides" class="btn-service-run" style="background:#b45309;border-color:#b45309;">
+              <span>↩️ Reset Overrides</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1764,7 +1748,7 @@ function attachServicesListeners(applications) {
         scopeValWrap.style.display = e.target.value === "all" || e.target.value === "unclassified" ? "none" : "inline-flex";
       }
       if (scopeUnit) {
-        scopeUnit.textContent = e.target.value === "days" ? "days" : "applications";
+        scopeUnit.textContent = e.target.value === "days" ? "days" : "apps";
       }
       if (scopeValInput && e.target.value === "days" && (!state.reclassifyScopeVal || state.reclassifyScopeVal > 90)) {
         state.reclassifyScopeVal = 7;
