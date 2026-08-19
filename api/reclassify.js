@@ -82,27 +82,38 @@ export default async function handler(req, res) {
   }));
 
   try {
-    const aiResponse = await fetch(OPENROUTER_API_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-        "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
-        "X-Title": "Job Tracker Master AI Auditor"
-      },
-      body: JSON.stringify({
-        model: chosenModel,
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT },
-          {
-            role: "user",
-            content: `Analyze and classify the following batch of ${inputPayload.length} job applications:\n${JSON.stringify(inputPayload, null, 2)}`
-          }
-        ],
-        temperature: 0.1,
-        response_format: { type: "json_object" }
-      })
-    });
+    let aiResponse;
+    let attempts = 0;
+    while (attempts < 3) {
+      attempts++;
+      aiResponse = await fetch(OPENROUTER_API_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
+          "X-Title": "Job Tracker Master AI Auditor"
+        },
+        body: JSON.stringify({
+          model: chosenModel,
+          messages: [
+            { role: "system", content: SYSTEM_PROMPT },
+            {
+              role: "user",
+              content: `Analyze and classify the following batch of ${inputPayload.length} job applications:\n${JSON.stringify(inputPayload, null, 2)}`
+            }
+          ],
+          temperature: 0.1,
+          response_format: { type: "json_object" }
+        })
+      });
+
+      if (aiResponse.status === 429 && attempts < 3) {
+        await new Promise((r) => setTimeout(r, 1500 * attempts));
+        continue;
+      }
+      break;
+    }
 
     if (!aiResponse.ok) {
       const errText = await aiResponse.text();

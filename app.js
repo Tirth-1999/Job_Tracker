@@ -1678,10 +1678,12 @@ function attachServicesListeners(applications) {
 
       try {
         const total = state.data.applications.length;
-        const chunkSize = 15; // 15 apps per LLM request for optimal token generation & speed
+        const chunkSize = 25; // 25 applications per LLM request
+        const CONCURRENCY = 6; // 6 parallel streams simultaneously for blazing speed
         let reclassifiedCount = 0;
         let totalTokensUsed = 0;
-        const totalBatches = Math.ceil(total / chunkSize);
+        let completedBatches = 0;
+        let completedApps = 0;
 
         const customOrKey = getOpenRouterKey();
         const reqHeaders = { "Content-Type": "application/json" };
@@ -1689,23 +1691,27 @@ function attachServicesListeners(applications) {
           reqHeaders["Authorization"] = `Bearer ${customOrKey}`;
         }
 
+        // Build batch list
+        const batches = [];
         for (let i = 0; i < total; i += chunkSize) {
-          const end = Math.min(i + chunkSize, total);
-          const batchIndex = Math.floor(i / chunkSize) + 1;
-          const pct = Math.round((end / total) * 100);
+          batches.push({
+            index: Math.floor(i / chunkSize) + 1,
+            startIndex: i,
+            endIndex: Math.min(i + chunkSize, total),
+            chunk: state.data.applications.slice(i, Math.min(i + chunkSize, total))
+          });
+        }
+        const totalBatches = batches.length;
 
-          if (progressLabel) progressLabel.textContent = `Querying ${activeModel.name.split(" ")[1] || "AI"} (batch ${batchIndex}/${totalBatches}, apps ${i + 1}–${end})...`;
-          if (progressPct) progressPct.textContent = `${pct}%`;
-          if (progressFill) progressFill.style.width = `${pct}%`;
+        appendConsole(`Launching ${CONCURRENCY} parallel worker streams across ${totalBatches} batches (${total} apps)...`);
 
-          const chunk = state.data.applications.slice(i, end);
-
-          // Call our Vercel Serverless Function which proxies to OpenRouter securely
+        // Worker processor for each batch
+        async function processBatch(batch) {
           const response = await fetch("/api/reclassify", {
             method: "POST",
             headers: reqHeaders,
             body: JSON.stringify({
-              applications: chunk,
+              applications: batch.chunk,
               model: activeModel.id
             })
           });
@@ -1723,7 +1729,7 @@ function attachServicesListeners(applications) {
           const now = new Date().toISOString();
           const resultMap = new Map(results.map((r) => [r.id, r]));
 
-          for (const app of chunk) {
+          for (const app of batch.chunk) {
             const aiRes = resultMap.get(app.id);
             if (aiRes) {
               if (aiRes.status && aiRes.status !== app.status) {
@@ -1746,15 +1752,38 @@ function attachServicesListeners(applications) {
             app.updatedAt = now;
           }
 
-          appendConsole(`Batch ${batchIndex}/${totalBatches}: OpenRouter returned ${results.length} classifications (${batchTokens} tokens used).`);
-          await new Promise((r) => setTimeout(r, 80));
+          completedBatches++;
+          completedApps += batch.chunk.length;
+          const pct = Math.round((completedApps / total) * 100);
+
+          if (progressLabel) progressLabel.textContent = `Parallel LLM Stream: Completed ${completedBatches}/${totalBatches} batches (${completedApps}/${total} apps)...`;
+          if (progressPct) progressPct.textContent = `${pct}%`;
+          if (progressFill) progressFill.style.width = `${pct}%`;
+
+          appendConsole(`[Parallel Stream] Batch ${batch.index}/${totalBatches} done: ${results.length} classified (~${batchTokens} tokens).`);
         }
 
-        if (progressLabel) progressLabel.textContent = `Completed ${total} applications! Syncing to Supabase...`;
+        // Run worker pool
+        let nextBatchIdx = 0;
+        async function runWorker(workerId) {
+          while (nextBatchIdx < batches.length) {
+            const batchToProcess = batches[nextBatchIdx++];
+            await processBatch(batchToProcess);
+          }
+        }
+
+        const workers = Array.from(
+          { length: Math.min(CONCURRENCY, batches.length) },
+          (_, id) => runWorker(id + 1)
+        );
+
+        await Promise.all(workers);
+
+        if (progressLabel) progressLabel.textContent = `Completed all ${total} applications! Syncing to Supabase...`;
         if (progressFill) progressFill.style.width = "100%";
         if (progressPct) progressPct.textContent = "100%";
 
-        appendConsole(`✅ OpenRouter AI Execution Complete! Processed ${total} items (${reclassifiedCount} adjustments, ~${totalTokensUsed} tokens).`, "success");
+        appendConsole(`✅ Parallel OpenRouter AI Execution Complete! Processed ${total} items (${reclassifiedCount} adjustments, ~${totalTokensUsed} tokens).`, "success");
         appendConsole("Persisting updated classifications & AI Decision tags to Supabase...", "info");
 
         state.data.updatedAt = new Date().toISOString();
