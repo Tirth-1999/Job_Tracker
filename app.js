@@ -120,91 +120,70 @@ async function syncAllAppsToSupabase(apps, label = "batch") {
   console.log(`✅ Supabase batch sync [${label}]: ${ok}/${rows.length} rows committed.`);
 }
 
-// ─── Trigger Gmail Sync via GitHub Actions Workflow Dispatch ──────────────────
+// ─── Trigger Gmail Sync via Vercel Serverless Proxy ──────────────────────────
+// PAT lives in Vercel env vars — never sent to or stored in the browser.
 async function triggerGmailSync(appendConsole) {
-  const token = getGitHubToken();
-  if (!token) {
-    appendConsole("❌ No GitHub PAT saved. Go to Services → GitHub Sync panel and save your token first.", "error");
+  appendConsole("📡 Dispatching Gmail Sync to GitHub Actions...");
+
+  // 1. Ask our Vercel serverless function to trigger the workflow
+  let triggerData;
+  try {
+    const res = await fetch("/api/trigger-sync", { method: "POST" });
+    triggerData = await res.json();
+    if (!res.ok || triggerData.error) {
+      appendConsole(`❌ Trigger failed: ${triggerData.error || "Unknown error"}`, "error");
+      return { success: false };
+    }
+  } catch (err) {
+    appendConsole(`❌ Could not reach /api/trigger-sync: ${err.message}`, "error");
     return { success: false };
   }
 
-  appendConsole("📡 Dispatching Gmail Sync workflow to GitHub Actions...");
-
-  // 1. Trigger workflow dispatch
-  const dispatchRes = await fetch(
-    `https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/gmail-sync.yml/dispatches`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        Accept: "application/vnd.github+json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ ref: "main" })
-    }
-  );
-
-  if (!dispatchRes.ok) {
-    const err = await dispatchRes.json().catch(() => ({}));
-    appendConsole(`❌ Workflow dispatch failed (${dispatchRes.status}): ${err.message || "Unknown error"}`, "error");
-    return { success: false };
-  }
-
-  appendConsole("✅ GitHub Actions workflow dispatched! Waiting for it to start...", "success");
-
-  // 2. Poll for the most recent run to start (up to 30s)
-  let runId = null;
-  for (let attempt = 0; attempt < 12; attempt++) {
-    await new Promise((r) => setTimeout(r, 3000));
-    const runsRes = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/gmail-sync.yml/runs?per_page=1&branch=main`,
-      { headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" } }
-    );
-    if (runsRes.ok) {
-      const runsData = await runsRes.json();
-      const latestRun = runsData.workflow_runs?.[0];
-      if (latestRun && (latestRun.status === "queued" || latestRun.status === "in_progress")) {
-        runId = latestRun.id;
-        appendConsole(`⏳ Workflow run #${runId} started (status: ${latestRun.status})...`);
-        break;
-      }
-    }
-  }
+  const runId = triggerData.run_id;
+  appendConsole(`✅ Workflow dispatched! Run ID: ${runId ?? "detecting..."}`, "success");
 
   if (!runId) {
-    appendConsole("⚠️ Could not detect running workflow. It may still be starting. Check GitHub Actions manually.", "error");
+    appendConsole("⚠️ No run ID returned — GitHub may still be queueing it. Reloading data in 30s...", "error");
+    await new Promise((r) => setTimeout(r, 30000));
     return { success: false };
   }
 
-  // 3. Poll until the run completes (up to 5 minutes)
-  appendConsole("⏳ Polling Gmail Sync workflow... (this typically takes 1–3 minutes)");
+  // 2. Poll /api/sync-status until complete (up to 5 minutes)
+  appendConsole("⏳ Polling workflow status... (Gmail sync typically takes 1–3 minutes)");
   for (let poll = 0; poll < 60; poll++) {
     await new Promise((r) => setTimeout(r, 5000));
-    const runRes = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/actions/runs/${runId}`,
-      { headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" } }
-    );
-    if (!runRes.ok) continue;
-    const run = await runRes.json();
     const elapsed = Math.round((poll + 1) * 5);
 
-    if (run.status === "completed") {
-      if (run.conclusion === "success") {
-        appendConsole(`✅ Gmail Sync workflow completed successfully (${elapsed}s). Reloading from Supabase...`, "success");
-        return { success: true };
-      } else {
-        appendConsole(`❌ Gmail Sync workflow finished with conclusion: ${run.conclusion}. Check GitHub Actions for details.`, "error");
-        return { success: false };
+    try {
+      const statusRes = await fetch(`/api/sync-status?run_id=${runId}`);
+      const statusData = await statusRes.json();
+
+      if (statusData.status === "completed") {
+        if (statusData.conclusion === "success") {
+          appendConsole(`✅ Gmail Sync completed (${elapsed}s). Reloading from Supabase...`, "success");
+          return { success: true };
+        } else {
+          appendConsole(
+            `❌ Workflow finished: ${statusData.conclusion}. <a href="${statusData.html_url}" target="_blank">View run →</a>`,
+            "error"
+          );
+          return { success: false };
+        }
       }
-    }
-    if (poll % 6 === 5) {
-      appendConsole(`⏳ Still running... (${elapsed}s elapsed, status: ${run.status})`);
+
+      if (poll % 6 === 5) {
+        appendConsole(`⏳ Still running... (${elapsed}s, status: ${statusData.status})`);
+      }
+    } catch (err) {
+      // Transient fetch error — keep polling
+      console.warn("Status poll error:", err.message);
     }
   }
 
-  appendConsole("⚠️ Workflow timed out polling after 5 minutes. Will reload data anyway.", "error");
+  appendConsole("⚠️ Workflow still running after 5 minutes. Reloading data from Supabase now.", "error");
   return { success: false };
 }
+
 
 // ─── Optional GitHub file commit (backup) ─────────────────────────────────────
 async function syncToGitHub(commitMessage = "Update applications dataset from Job Tracker Dashboard") {
