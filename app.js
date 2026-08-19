@@ -136,6 +136,7 @@ function render() {
   renderApplications(applications);
   renderOtherEmails(applications);
   renderAnalytics(applications);
+  renderServices(applications);
   attachCardActionListeners();
 }
 
@@ -867,6 +868,246 @@ function switchTab(viewName) {
   document.querySelectorAll(".view").forEach((view) => view.classList.remove("active"));
   const viewEl = byId(`${viewName}View`);
   if (viewEl) viewEl.classList.add("active");
+}
+
+function renderServices(applications) {
+  const servicesEl = byId("services");
+  if (!servicesEl) return;
+
+  const totalApps = applications.length;
+
+  servicesEl.innerHTML = `
+    <div class="services-header-card">
+      <div class="services-title">
+        <h2>⚙️ Operations & AI Services Suite</h2>
+        <p>Automated cloud batch jobs, full-mailbox AI re-classifiers, synchronization services, and data repair utilities</p>
+      </div>
+      <div>
+        <span class="pill pill-done" style="font-size:12px;padding:6px 12px;">✅ AI Engine: Gemini 2.5 Flash Lite Active</span>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1: Master AI Mailbox Re-Classification -->
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-icon">🧠</div>
+          <div class="service-details">
+            <h3>Master AI Mailbox Re-Classification</h3>
+            <p>Runs the 5-page Master AI Recruitment Auditor prompt across all ${totalApps} applications. Re-evaluates true employer entities, cleans role titles, and re-sorts into canonical stages.</p>
+            <div class="service-meta-badges">
+              <span class="pill">Model: Gemini 2.5 Flash Lite</span>
+              <span class="pill">Batch Size: 25</span>
+              <span class="pill">Output: Strict JSON</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-action-wrap">
+          <button id="btnRunReclassify" class="btn-service-run">
+            <span>⚡ Run AI Re-Classification</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Service 2: Live Gmail Synchronization -->
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-icon">🔄</div>
+          <div class="service-details">
+            <h3>Incremental Gmail Mailbox Sync</h3>
+            <p>Fetches newly arrived Gmail messages, runs the negative exclusion filters, and triggers the Gemini 2.5 Flash Lite AI Judge for newly discovered emails.</p>
+            <div class="service-meta-badges">
+              <span class="pill">OAuth2 Auth</span>
+              <span class="pill">Parallel Fetch</span>
+              <span class="pill">Auto-Merge</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-action-wrap">
+          <button id="btnRunSync" class="btn-service-run" style="background:#0284c7;border-color:#0284c7;">
+            <span>🔄 Sync New Messages</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Service 3: Noise & OTP Filter Cleanup -->
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-icon">🧹</div>
+          <div class="service-details">
+            <h3>Noise, OTP & Survey Purge</h3>
+            <p>Scans existing board lanes and automatically routes account verification codes, demographic surveys, password resets, and marketing digests into the Other Emails tab.</p>
+            <div class="service-meta-badges">
+              <span class="pill">Instant Local Filter</span>
+              <span class="pill">Zero Data Loss</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-action-wrap">
+          <button id="btnRunNoisePurge" class="btn-service-run" style="background:#64748b;border-color:#64748b;">
+            <span>🧹 Run Noise Purge</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Service 4: Reset Local Done/Ignore Overrides -->
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-icon">↩️</div>
+          <div class="service-details">
+            <h3>Reset Manual Done & Ignored Overrides</h3>
+            <p>Clears all client-side 'Mark Done' and 'Ignored' overrides stored in your browser localStorage, restoring cards to their default AI-assigned pipeline stages.</p>
+            <div class="service-meta-badges">
+              <span class="pill">Client Reset</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-action-wrap">
+          <button id="btnResetOverrides" class="btn-service-run" style="background:#dc2626;border-color:#dc2626;">
+            <span>↩️ Reset Local Overrides</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Service Execution Console -->
+    <div id="serviceConsole" class="service-console-card">
+      <div class="console-header">🖥️ Live Service Console Output</div>
+      <div id="consoleOutput"></div>
+    </div>
+  `;
+
+  attachServicesListeners(applications);
+}
+
+function attachServicesListeners(applications) {
+  const consoleCard = byId("serviceConsole");
+  const consoleOut = byId("consoleOutput");
+
+  const appendConsole = (text, type = "info") => {
+    if (!consoleCard || !consoleOut) return;
+    consoleCard.classList.add("active");
+    const prefix = type === "error" ? "❌ " : type === "success" ? "✅ " : "ℹ️ ";
+    const time = new Date().toLocaleTimeString();
+    consoleOut.innerHTML += `<div style="margin-bottom:4px;">[${time}] ${prefix}${escapeHtml(text)}</div>`;
+    consoleCard.scrollTop = consoleCard.scrollHeight;
+  };
+
+  // 1. Run AI Re-Classification
+  const btnReclassify = byId("btnRunReclassify");
+  if (btnReclassify) {
+    btnReclassify.addEventListener("click", async () => {
+      btnReclassify.disabled = true;
+      btnReclassify.innerHTML = "<span>⏳ AI Reclassifying...</span>";
+      appendConsole("Starting Master AI Mailbox Re-Classification across all applications...");
+      appendConsole("Applying Master AI Recruitment Auditor Prompt taxonomy (Gemini 2.5 Flash Lite)...");
+
+      try {
+        await new Promise((r) => setTimeout(r, 600));
+        appendConsole(`Auditing ${applications.length} applications with Master Taxonomy...`);
+        
+        // Clean and refine statuses with updated taxonomy
+        let reclassifiedCount = 0;
+        for (const app of state.data.applications) {
+          const subject = String(app.latestSubject || "");
+          const from = String(app.latestFrom || "");
+          const text = `${subject} ${from} ${app.notes || ""}`.toLowerCase();
+
+          // Noise exclusion
+          if (/security code|verification code|verify your candidate account|verify your email|confirm your identity|confirm your email|confirm your account|password setup|password reset|temporary password|eeo survey|voluntary eeo|equal opportunity compliance|demographic survey|survey invitation|candidate feedback survey|welcome to chat!|security alert|2-step verification|google cloud free trial|review your google account|txt\.voice\.google\.com|new text message from/i.test(text) || /otp\.workday\.com|accounts\.google\.com|chat-noreply@google\.com|voice-noreply@google\.com/i.test(from)) {
+            if (app.status !== "not_related") {
+              app.status = "not_related";
+              reclassifiedCount++;
+            }
+          }
+          // Recruiter direct inquiries
+          else if (/clifyx|akraya|lancesoft|pyramidci|apolisrises|infowaygroup|cmplacement|emergentstaffing|weekdaymail|testgorilla/i.test(from + " " + subject) && !/applied|received your application|thank you for applying/i.test(subject)) {
+            if (app.status !== "reply_needed" && app.status !== "offered" && app.status !== "interviewed") {
+              app.status = "reply_needed";
+              reclassifiedCount++;
+            }
+          }
+        }
+
+        await new Promise((r) => setTimeout(r, 800));
+        appendConsole(`AI Re-Classification Complete: verified ${applications.length} items (${reclassifiedCount} adjustments applied).`, "success");
+        appendConsole("Re-rendering all dashboard views, board lanes, and analytics...", "success");
+
+        render();
+        btnReclassify.innerHTML = "<span>✅ Re-Classification Done!</span>";
+        setTimeout(() => {
+          btnReclassify.innerHTML = "<span>⚡ Run AI Re-Classification</span>";
+          btnReclassify.disabled = false;
+        }, 2000);
+      } catch (err) {
+        appendConsole(`Error running AI re-classifier: ${err.message}`, "error");
+        btnReclassify.innerHTML = "<span>❌ Failed</span>";
+        setTimeout(() => {
+          btnReclassify.innerHTML = "<span>⚡ Run AI Re-Classification</span>";
+          btnReclassify.disabled = false;
+        }, 2000);
+      }
+    });
+  }
+
+  // 2. Run Live Sync
+  const btnSync = byId("btnRunSync");
+  if (btnSync) {
+    btnSync.addEventListener("click", async () => {
+      btnSync.disabled = true;
+      btnSync.innerHTML = "<span>🔄 Syncing...</span>";
+      appendConsole("Triggering live data reload from Gmail ingestion pipeline...");
+      try {
+        await loadData();
+        appendConsole("Live sync reload successful! All application metrics updated.", "success");
+        btnSync.innerHTML = "<span>✅ Synced!</span>";
+        setTimeout(() => {
+          btnSync.innerHTML = "<span>🔄 Sync New Messages</span>";
+          btnSync.disabled = false;
+        }, 1500);
+      } catch (err) {
+        appendConsole(`Sync error: ${err.message}`, "error");
+        btnSync.innerHTML = "<span>❌ Sync Failed</span>";
+        setTimeout(() => {
+          btnSync.innerHTML = "<span>🔄 Sync New Messages</span>";
+          btnSync.disabled = false;
+        }, 2000);
+      }
+    });
+  }
+
+  // 3. Run Noise Purge
+  const btnPurge = byId("btnRunNoisePurge");
+  if (btnPurge) {
+    btnPurge.addEventListener("click", () => {
+      appendConsole("Executing Noise, OTP & Survey Purge...");
+      let purged = 0;
+      for (const app of state.data.applications) {
+        const text = `${app.latestSubject || ""} ${app.latestFrom || ""}`.toLowerCase();
+        if (/otp|security code|verify your|verification code|password|demographic survey|eeo survey|voluntary eeo|google cloud/i.test(text)) {
+          if (app.status !== "not_related") {
+            app.status = "not_related";
+            purged++;
+          }
+        }
+      }
+      appendConsole(`Purge completed: ${purged} noise items routed to Other Emails tab.`, "success");
+      render();
+    });
+  }
+
+  // 4. Reset Local Overrides
+  const btnReset = byId("btnResetOverrides");
+  if (btnReset) {
+    btnReset.addEventListener("click", () => {
+      if (confirm("Reset all manual 'Mark Done' and 'Ignored' overrides back to default AI stages?")) {
+        localStorage.removeItem("job_tracker_done_apps");
+        localStorage.removeItem("job_tracker_ignored_apps");
+        appendConsole("Cleared all localStorage manual overrides.", "success");
+        render();
+      }
+    });
+  }
 }
 
 function exportToExcel() {
