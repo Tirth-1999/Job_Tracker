@@ -9,23 +9,33 @@ const LANES = [
 const GITHUB_REPO = "Tirth-1999/Job_Tracker";
 const GITHUB_FILE_PATH = "data/applications.json";
 
-// Supabase Direct API Configuration
+// ─── Supabase Configuration ───────────────────────────────────────────────────
 const SUPABASE_URL = "https://dykamjxudtxkwgfllxxy.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_b2SuLtxZgeR-LGQRzMa3_A_lxV0bn75";
 let supabaseClient = null;
 
 function initSupabase() {
-  if (typeof window !== "undefined" && window.supabase && !supabaseClient) {
-    try {
-      supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-      console.log("Supabase Client initialized successfully with dykamjxudtxkwgfllxxy");
-    } catch (err) {
-      console.warn("Failed to init Supabase client:", err.message);
-    }
+  // Already created — reuse
+  if (supabaseClient) return supabaseClient;
+  // CDN exports as window.supabase
+  const lib = window.supabase ?? window.supabaseJs;
+  if (!lib) {
+    console.error("Supabase CDN library not found on window.supabase");
+    return null;
+  }
+  try {
+    supabaseClient = lib.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      realtime: { params: { eventsPerSecond: 10 } }
+    });
+    console.log("✅ Supabase client initialized:", SUPABASE_URL);
+  } catch (err) {
+    console.error("Failed to create Supabase client:", err.message);
+    return null;
   }
   return supabaseClient;
 }
 
+// ─── GitHub Token Helpers ─────────────────────────────────────────────────────
 function getGitHubToken() {
   return localStorage.getItem("job_tracker_gh_token") || "";
 }
@@ -38,106 +48,105 @@ function setGitHubToken(token) {
   }
 }
 
-// Unified Cloud Sync: Directly updates Supabase PostgreSQL DB and commits to GitHub
-async function syncToCloud(commitMessage = "Update applications dataset from Job Tracker Dashboard", updatedApp = null) {
-  const results = { supabase: false, github: false };
-
-  // 1. Supabase Direct Upsert / Update
-  const sb = initSupabase();
-  if (sb && updatedApp) {
-    try {
-      const { error } = await sb.from("applications").upsert({
-        id: updatedApp.id,
-        company: updatedApp.company || "Unknown",
-        role: updatedApp.role || "General Application",
-        status: updatedApp.status || "applied",
-        confidence: updatedApp.confidence || "high",
-        last_activity_at: updatedApp.lastActivityAt || new Date().toISOString(),
-        latest_subject: updatedApp.latestSubject || "",
-        latest_from: updatedApp.latestFrom || "",
-        gmail_thread_id: updatedApp.gmailThreadId || null,
-        gmail_message_ids: updatedApp.gmailMessageIds || [],
-        notes: updatedApp.notes || "",
-        updated_at: new Date().toISOString()
-      });
-      if (error) {
-        console.warn("Supabase upsert note:", error.message);
-      } else {
-        console.log(`✅ Synced ${updatedApp.company} to Supabase PostgreSQL!`);
-        results.supabase = true;
-      }
-    } catch (sbErr) {
-      console.warn("Supabase sync error:", sbErr.message);
-    }
-  }
-
-  // 2. GitHub Contents API Commit
-  const ghRes = await syncToGitHub(commitMessage);
-  results.github = ghRes.success;
-
-  return results;
+// ─── Map in-memory app object → Supabase row ─────────────────────────────────
+function appToSupabaseRow(app) {
+  const now = new Date().toISOString();
+  return {
+    id: app.id,
+    company: app.company || "Unknown",
+    role: app.role || "General Application",
+    status: app.status,
+    confidence: app.confidence || "high",
+    last_activity_at: app.lastActivityAt || now,
+    latest_subject: app.latestSubject || "",
+    latest_from: app.latestFrom || "",
+    gmail_thread_id: app.gmailThreadId || null,
+    gmail_message_ids: app.gmailMessageIds || [],
+    notes: app.notes || "",
+    updated_at: now   // ← always stamp the exact moment of mutation
+  };
 }
 
-// Directly commit and persist modified applications.json to GitHub Repository
+// ─── Primary sync function: upsert ONE row to Supabase ───────────────────────
+// Always awaited at call sites so errors surface immediately
+async function syncAppToSupabase(app) {
+  const sb = initSupabase();
+  if (!sb) {
+    console.warn("syncAppToSupabase: Supabase not available, skipping cloud write.");
+    return false;
+  }
+  if (!app || !app.id) {
+    console.warn("syncAppToSupabase: called with null/missing app id.");
+    return false;
+  }
+
+  const row = appToSupabaseRow(app);
+  const { error } = await sb.from("applications").upsert(row, { onConflict: "id" });
+
+  if (error) {
+    console.error(`❌ Supabase upsert failed for ${app.id}:`, error.message);
+    return false;
+  }
+
+  console.log(`✅ Supabase synced: ${app.company} → status="${app.status}", updated_at=${row.updated_at}`);
+  return true;
+}
+
+// ─── Batch upsert many rows (used by AI re-classify / noise purge) ────────────
+async function syncAllAppsToSupabase(apps, label = "batch") {
+  const sb = initSupabase();
+  if (!sb || !apps?.length) return;
+
+  const rows = apps.map(appToSupabaseRow);
+  const CHUNK = 50;
+  let ok = 0;
+
+  for (let i = 0; i < rows.length; i += CHUNK) {
+    const { error } = await sb.from("applications").upsert(rows.slice(i, i + CHUNK), { onConflict: "id" });
+    if (error) {
+      console.error(`❌ Supabase batch upsert chunk ${i / CHUNK + 1} failed [${label}]:`, error.message);
+    } else {
+      ok += Math.min(CHUNK, rows.length - i);
+    }
+  }
+  console.log(`✅ Supabase batch sync [${label}]: ${ok}/${rows.length} rows committed.`);
+}
+
+// ─── Optional GitHub fallback commit ─────────────────────────────────────────
 async function syncToGitHub(commitMessage = "Update applications dataset from Job Tracker Dashboard") {
   const token = getGitHubToken();
-  if (!token) {
-    return { success: false, reason: "no_token" };
-  }
+  if (!token) return { success: false, reason: "no_token" };
 
   try {
     const getRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        Accept: "application/vnd.github+json"
-      }
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" }
     });
-
-    if (!getRes.ok) {
-      const err = await getRes.json();
-      throw new Error(err.message || `HTTP ${getRes.status}`);
-    }
-
-    const fileMeta = await getRes.json();
-    const currentSha = fileMeta.sha;
+    if (!getRes.ok) throw new Error((await getRes.json()).message || `HTTP ${getRes.status}`);
+    const { sha } = await getRes.json();
 
     const jsonStr = JSON.stringify(state.data, null, 2) + "\n";
     const utf8Bytes = new TextEncoder().encode(jsonStr);
     let binary = "";
-    const len = utf8Bytes.byteLength;
-    for (let i = 0; i < len; i++) {
-      binary += String.fromCharCode(utf8Bytes[i]);
-    }
+    for (let i = 0; i < utf8Bytes.byteLength; i++) binary += String.fromCharCode(utf8Bytes[i]);
     const contentBase64 = btoa(binary);
 
     const putRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`, {
       method: "PUT",
       headers: {
-        Authorization: `Bearer ${token}`,
-        Accept: "application/vnd.github+json",
-        "Content-Type": "application/json"
+        Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json"
       },
-      body: JSON.stringify({
-        message: `${commitMessage} [skip ci]`,
-        content: contentBase64,
-        sha: currentSha,
-        branch: "main"
-      })
+      body: JSON.stringify({ message: `${commitMessage} [skip ci]`, content: contentBase64, sha, branch: "main" })
     });
-
-    if (!putRes.ok) {
-      const err = await putRes.json();
-      throw new Error(err.message || `HTTP ${putRes.status}`);
-    }
-
-    console.log("Successfully committed and synced updated data directly to GitHub repo!");
+    if (!putRes.ok) throw new Error((await putRes.json()).message || `HTTP ${putRes.status}`);
+    console.log("✅ GitHub committed:", commitMessage);
     return { success: true };
-  } catch (error) {
-    console.error("Failed to sync directly to GitHub API:", error);
-    return { success: false, error: error.message };
+  } catch (err) {
+    console.error("GitHub sync error:", err.message);
+    return { success: false, error: err.message };
   }
 }
 
+// ─── Helpers ─────────────────────────────────────────────────────────────────
 function getTodayDateStr() {
   return new Date().toLocaleDateString("en-CA"); // "YYYY-MM-DD"
 }
@@ -158,22 +167,17 @@ const state = {
 const byId = (id) => document.getElementById(id);
 let realtimeChannel = null;
 
+// ─── Load: Supabase is the EXCLUSIVE source of truth ─────────────────────────
 async function loadData() {
   const sb = initSupabase();
-  if (!sb) {
-    throw new Error("Supabase client not initialized.");
-  }
+  if (!sb) throw new Error("Supabase client could not be initialized.");
 
-  // 1. Fetch live data from Supabase
   const { data: sbData, error } = await sb
     .from("applications")
     .select("*")
     .order("last_activity_at", { ascending: false });
 
-  if (error) {
-    console.error("Supabase load error:", error);
-    throw new Error(`Failed to load applications from Supabase: ${error.message}`);
-  }
+  if (error) throw new Error(`Supabase SELECT failed: ${error.message}`);
 
   state.data = {
     applications: (sbData || []).map((row) => ({
@@ -187,23 +191,25 @@ async function loadData() {
       latestFrom: row.latest_from,
       gmailThreadId: row.gmail_thread_id,
       gmailMessageIds: row.gmail_message_ids || [],
-      notes: row.notes
+      notes: row.notes,
+      updatedAt: row.updated_at   // ← carry updated_at per-row from Supabase
     })),
     updatedAt: new Date().toISOString()
   };
 
-  console.log(`✅ Loaded ${state.data.applications.length} applications directly from Supabase Cloud Database!`);
+  console.log(`✅ Loaded ${state.data.applications.length} applications from Supabase.`);
 
-  // 2. Setup Realtime WebSocket Listener (if not already listening)
+  // ─── Realtime channel (subscribe once) ───────────────────────────────────
   if (!realtimeChannel) {
-    try {
-      realtimeChannel = sb
-        .channel("public:applications")
-        .on("postgres_changes", { event: "*", schema: "public", table: "applications" }, (payload) => {
-          console.log("⚡ Realtime change received from Supabase:", payload.eventType);
-          if (payload.eventType === "UPDATE" || payload.eventType === "INSERT") {
+    realtimeChannel = sb
+      .channel("applications-changes")
+      .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "applications" },
+        (payload) => {
+          console.log("⚡ Realtime:", payload.eventType, payload.new?.id ?? payload.old?.id);
+          if (payload.eventType === "INSERT" || payload.eventType === "UPDATE") {
             const row = payload.new;
-            const idx = state.data.applications.findIndex((a) => a.id === row.id);
             const mapped = {
               id: row.id,
               company: row.company,
@@ -215,94 +221,84 @@ async function loadData() {
               latestFrom: row.latest_from,
               gmailThreadId: row.gmail_thread_id,
               gmailMessageIds: row.gmail_message_ids || [],
-              notes: row.notes
+              notes: row.notes,
+              updatedAt: row.updated_at
             };
+            const idx = state.data.applications.findIndex((a) => a.id === row.id);
             if (idx !== -1) {
               state.data.applications[idx] = mapped;
             } else {
               state.data.applications.unshift(mapped);
             }
+            state.data.updatedAt = row.updated_at;
             render();
           } else if (payload.eventType === "DELETE") {
             state.data.applications = state.data.applications.filter((a) => a.id !== payload.old.id);
             render();
           }
-        })
-        .subscribe();
-      console.log("⚡ Supabase Realtime channel subscribed successfully.");
-    } catch (realtimeErr) {
-      console.warn("Realtime subscription note:", realtimeErr.message);
-    }
+        }
+      )
+      .subscribe((status, err) => {
+        if (err) console.error("Realtime subscribe error:", err);
+        else console.log("⚡ Realtime channel status:", status);
+      });
   }
 
   render();
 }
 
+// ─── getDoneApps / getIgnoredApps ─────────────────────────────────────────────
 function getDoneApps() {
-  try {
-    return new Set(JSON.parse(localStorage.getItem("job_tracker_done_apps") || "[]"));
-  } catch {
-    return new Set();
-  }
+  try { return new Set(JSON.parse(localStorage.getItem("job_tracker_done_apps") || "[]")); }
+  catch { return new Set(); }
 }
 
 function getIgnoredApps() {
-  try {
-    return new Set(JSON.parse(localStorage.getItem("job_tracker_ignored_apps") || "[]"));
-  } catch {
-    return new Set();
-  }
+  try { return new Set(JSON.parse(localStorage.getItem("job_tracker_ignored_apps") || "[]")); }
+  catch { return new Set(); }
 }
 
-function setAppDone(appId, isDone) {
+// ─── setAppDone ────────────────────────────────────────────────────────────────
+async function setAppDone(appId, isDone) {
   const doneSet = getDoneApps();
   const ignoredSet = getIgnoredApps();
-  if (isDone) {
-    doneSet.add(appId);
-    ignoredSet.delete(appId);
-  } else {
-    doneSet.delete(appId);
-  }
+  if (isDone) { doneSet.add(appId); ignoredSet.delete(appId); }
+  else { doneSet.delete(appId); }
   localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
   localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
-  
-  // Update state.data and sync to Supabase + GitHub Cloud
+
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
-    if (isDone && app.status === "reply_needed") {
-      app.status = "applied";
-    }
-    state.data.updatedAt = new Date().toISOString();
-    syncToCloud(`Mark application ${app.company || appId} as done`, app);
+    // Mutate status FIRST, then sync so Supabase gets the new value
+    if (isDone && app.status === "reply_needed") app.status = "applied";
+    app.updatedAt = new Date().toISOString();
+    state.data.updatedAt = app.updatedAt;
+    render();   // Instant local UI update
+    await syncAppToSupabase(app);   // Persist to Supabase with correct status + updated_at
   }
-
-  render();
 }
 
-function setAppIgnored(appId, isIgnored) {
+// ─── setAppIgnored ─────────────────────────────────────────────────────────────
+async function setAppIgnored(appId, isIgnored) {
   const ignoredSet = getIgnoredApps();
   const doneSet = getDoneApps();
-  if (isIgnored) {
-    ignoredSet.add(appId);
-    doneSet.delete(appId);
-  } else {
-    ignoredSet.delete(appId);
-  }
+  if (isIgnored) { ignoredSet.add(appId); doneSet.delete(appId); }
+  else { ignoredSet.delete(appId); }
   localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
   localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
-  
-  // Update state.data and sync to Supabase + GitHub Cloud
+
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
-    if (isIgnored && app.status === "reply_needed") {
-      app.status = "not_related";
-    }
-    state.data.updatedAt = new Date().toISOString();
-    syncToCloud(`Ignore application ${app.company || appId}`, app);
+    // Mutate status FIRST, then sync
+    if (isIgnored && app.status === "reply_needed") app.status = "not_related";
+    else if (!isIgnored && app.status === "not_related") app.status = "reply_needed";
+    app.updatedAt = new Date().toISOString();
+    state.data.updatedAt = app.updatedAt;
+    render();
+    await syncAppToSupabase(app);
   }
-
-  render();
 }
+
 
 function filteredApplications() {
   const rawApps = state.data?.applications ?? [];
@@ -557,11 +553,13 @@ function moveApplicationLane(appId, targetStatus) {
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (!app) return;
 
-  promptConfirmMove(app, targetStatus, () => {
+  promptConfirmMove(app, targetStatus, async () => {
+    // Mutate status FIRST so Supabase row gets the new value
     app.status = targetStatus;
     app.effectiveStatus = targetStatus;
-    
-    // Clear manual overrides if explicitly moved to another status
+    app.updatedAt = new Date().toISOString();
+
+    // Clear localStorage overrides
     const doneSet = getDoneApps();
     const ignoredSet = getIgnoredApps();
     doneSet.delete(appId);
@@ -569,10 +567,11 @@ function moveApplicationLane(appId, targetStatus) {
     localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
     localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
 
-    // Record change timestamp & sync directly to Supabase + GitHub
-    state.data.updatedAt = new Date().toISOString();
-    syncToCloud(`Move ${app.company || appId} to ${targetStatus}`, app);
-    render();
+    state.data.updatedAt = app.updatedAt;
+    render();   // Instant local update
+
+    // Persist to Supabase — awaited so errors surface
+    await syncAppToSupabase(app);
   });
 }
 
@@ -1526,11 +1525,15 @@ function attachServicesListeners(applications) {
         if (progressPct) progressPct.textContent = "100%";
 
         appendConsole(`AI Re-Classification Complete (${activeModel.name}): verified ${total} items (${reclassifiedCount} adjustments applied).`, "success");
-        appendConsole("Re-rendering all dashboard views, board lanes, and analytics...", "success");
+        appendConsole(`Syncing ${reclassifiedCount} changed rows to Supabase...`, "info");
 
-        state.data.updatedAt = new Date().toISOString();
-        syncToGitHub(`Full AI Re-Classification audit with ${activeModel.name}`);
+        // Stamp updated_at on every modified app, then batch-upsert to Supabase
+        const now = new Date().toISOString();
+        state.data.updatedAt = now;
+        state.data.applications.forEach((app) => { app.updatedAt = now; });
+        await syncAllAppsToSupabase(state.data.applications, `AI Re-Classification (${activeModel.name})`);
 
+        appendConsole("✅ Supabase sync complete. Re-rendering dashboard...", "success");
         render();
         btnReclassify.innerHTML = "<span>✅ Re-Classification Done!</span>";
         setTimeout(() => {
@@ -1550,16 +1553,16 @@ function attachServicesListeners(applications) {
     });
   }
 
-  // 2. Run Live Sync
+  // 2. Run Live Sync (reload from Supabase)
   const btnSync = byId("btnRunSync");
   if (btnSync) {
     btnSync.addEventListener("click", async () => {
       btnSync.disabled = true;
       btnSync.innerHTML = "<span>🔄 Syncing...</span>";
-      appendConsole("Triggering live data reload from Gmail ingestion pipeline...");
+      appendConsole("Reloading live data from Supabase Cloud Database...");
       try {
         await loadData();
-        appendConsole("Live sync reload successful! All application metrics updated.", "success");
+        appendConsole("✅ Live sync reload successful! All application metrics refreshed from Supabase.", "success");
         btnSync.innerHTML = "<span>✅ Synced!</span>";
         setTimeout(() => {
           btnSync.innerHTML = "<span>🔄 Sync New Messages</span>";
@@ -1579,21 +1582,24 @@ function attachServicesListeners(applications) {
   // 3. Run Noise Purge
   const btnPurge = byId("btnRunNoisePurge");
   if (btnPurge) {
-    btnPurge.addEventListener("click", () => {
+    btnPurge.addEventListener("click", async () => {
       appendConsole("Executing Noise, OTP & Survey Purge...");
       let purged = 0;
+      const purgednow = new Date().toISOString();
       for (const app of state.data.applications) {
         const text = `${app.latestSubject || ""} ${app.latestFrom || ""}`.toLowerCase();
         if (/otp|security code|verify your|verification code|password|demographic survey|eeo survey|voluntary eeo|google cloud/i.test(text)) {
           if (app.status !== "not_related") {
             app.status = "not_related";
+            app.updatedAt = purgednow;  // ← stamp updated_at on each changed row
             purged++;
           }
         }
       }
-      appendConsole(`Purge completed: ${purged} noise items routed to Other Emails tab.`, "success");
-      state.data.updatedAt = new Date().toISOString();
-      syncToGitHub("Execute Noise, OTP and Survey purge");
+      appendConsole(`Purge identified ${purged} noise items. Syncing to Supabase...`, "info");
+      state.data.updatedAt = purgednow;
+      await syncAllAppsToSupabase(state.data.applications, "Noise Purge");
+      appendConsole(`✅ Purge complete: ${purged} noise items routed to Other Emails tab and saved to Supabase.`, "success");
       render();
     });
   }
