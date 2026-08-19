@@ -530,6 +530,18 @@ tr:last-child td {
   border-color: #059669;
 }
 
+.btn-ignore {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.btn-ignore:hover {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+}
+
 .btn-reopen {
   background: #f1f5f9;
   color: #475569;
@@ -546,6 +558,256 @@ tr:last-child td {
   color: #065f46;
   border-color: #a7f3d0;
   font-weight: 600;
+}
+
+.pill-ignored {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+  font-weight: 600;
+}
+
+/* Analytics View Styling */
+.analytics-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.analytics-header-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.analytics-title h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.analytics-title p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.date-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.date-input {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-date-nav {
+  height: 36px;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-date-nav:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-date-today {
+  background: #f0f4ff;
+  color: var(--accent);
+  border-color: #c7d9fe;
+}
+
+.btn-date-today:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.date-pills-bar {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 0 8px;
+}
+
+.date-pill-btn {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--panel);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.date-pill-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.date-pill-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 2px 4px rgba(47, 107, 246, 0.25);
+}
+
+.analytics-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(130px, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 1000px) {
+  .analytics-kpi-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .analytics-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.kpi-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kpi-card strong {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.kpi-card span {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.kpi-total { border-top: 4px solid #6366f1; }
+.kpi-applied { border-top: 4px solid var(--applied); }
+.kpi-reply { border-top: 4px solid var(--reply); }
+.kpi-interviewed { border-top: 4px solid var(--interviewed); }
+.kpi-offered { border-top: 4px solid var(--offered); }
+.kpi-rejected { border-top: 4px solid var(--rejected); }
+
+/* Timeline Chart */
+.chart-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.chart-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.chart-bars-wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 160px;
+  padding-top: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.chart-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  cursor: pointer;
+  position: relative;
+}
+
+.chart-bar-fill {
+  width: 100%;
+  max-width: 36px;
+  background: #cbd5e1;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.2s ease;
+  position: relative;
+  min-height: 4px;
+}
+
+.chart-col:hover .chart-bar-fill {
+  background: #93c5fd;
+}
+
+.chart-col.active .chart-bar-fill {
+  background: var(--accent);
+}
+
+.chart-col-val {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.chart-col.active .chart-col-val {
+  color: var(--accent);
+}
+
+.chart-col-label {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.chart-col.active .chart-col-label {
+  color: var(--text);
+  font-weight: 700;
 }
 
 .btn-gmail-icon {

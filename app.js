@@ -6,6 +6,10 @@ const LANES = [
   ["rejected", "Rejected", "lane-rejected"]
 ];
 
+function getTodayDateStr() {
+  return new Date().toLocaleDateString("en-CA"); // "YYYY-MM-DD"
+}
+
 const state = {
   data: null,
   query: "",
@@ -15,7 +19,8 @@ const state = {
   pageCompanies: 1,
   pageSizeCompanies: 50,
   pageOther: 1,
-  pageSizeOther: 50
+  pageSizeOther: 50,
+  selectedDate: getTodayDateStr()
 };
 
 const byId = (id) => document.getElementById(id);
@@ -35,13 +40,38 @@ function getDoneApps() {
   }
 }
 
+function getIgnoredApps() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem("job_tracker_ignored_apps") || "[]"));
+  } catch {
+    return new Set();
+  }
+}
+
 function setAppDone(appId, isDone) {
   const doneSet = getDoneApps();
+  const ignoredSet = getIgnoredApps();
   if (isDone) {
     doneSet.add(appId);
+    ignoredSet.delete(appId);
   } else {
     doneSet.delete(appId);
   }
+  localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
+  localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
+  render();
+}
+
+function setAppIgnored(appId, isIgnored) {
+  const ignoredSet = getIgnoredApps();
+  const doneSet = getDoneApps();
+  if (isIgnored) {
+    ignoredSet.add(appId);
+    doneSet.delete(appId);
+  } else {
+    ignoredSet.delete(appId);
+  }
+  localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
   localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
   render();
 }
@@ -49,13 +79,19 @@ function setAppDone(appId, isDone) {
 function filteredApplications() {
   const rawApps = state.data?.applications ?? [];
   const doneSet = getDoneApps();
+  const ignoredSet = getIgnoredApps();
 
   const applications = rawApps.map((app) => {
     const isDone = doneSet.has(app.id);
+    const isIgnored = ignoredSet.has(app.id);
+
     if (isDone && app.status === "reply_needed") {
-      return { ...app, effectiveStatus: "applied", isDone: true };
+      return { ...app, effectiveStatus: "applied", isDone: true, isIgnored: false };
     }
-    return { ...app, effectiveStatus: app.status, isDone };
+    if (isIgnored && app.status === "reply_needed") {
+      return { ...app, effectiveStatus: "not_related", isDone: false, isIgnored: true };
+    }
+    return { ...app, effectiveStatus: app.status, isDone, isIgnored };
   });
 
   const query = state.query.trim();
@@ -99,6 +135,7 @@ function render() {
   renderCompanies(applications);
   renderApplications(applications);
   renderOtherEmails(applications);
+  renderAnalytics(applications);
   attachCardActionListeners();
 }
 
@@ -154,6 +191,7 @@ function renderBoard(applications) {
 }
 
 function getGmailUrl(app) {
+  if (!app) return "https://mail.google.com/mail/u/0/#inbox";
   if (app.gmailThreadId) {
     return `https://mail.google.com/mail/u/0/#inbox/${encodeURIComponent(app.gmailThreadId)}`;
   }
@@ -172,18 +210,26 @@ function renderCard(app) {
   const gmailUrl = getGmailUrl(app);
 
   const doneBadge = app.isDone ? `<span class="pill pill-done">✅ Action Completed</span>` : "";
+  const ignoredBadge = app.isIgnored ? `<span class="pill pill-ignored">🚫 Ignored</span>` : "";
 
   let actionButton = "";
-  if (app.status === "reply_needed" && !app.isDone) {
+  if (app.status === "reply_needed" && !app.isDone && !app.isIgnored) {
     actionButton = `
       <div class="card-actions">
-        <button class="btn-action btn-mark-done" data-id="${app.id}">✅ Mark Done</button>
+        <button class="btn-action btn-mark-done" data-id="${app.id}" title="Mark this assessment or reply as completed">✅ Mark Done</button>
+        <button class="btn-action btn-ignore" data-id="${app.id}" title="Ignore this email and move it to Other Emails">🚫 Ignore</button>
       </div>
     `;
   } else if (app.isDone) {
     actionButton = `
       <div class="card-actions">
         <button class="btn-action btn-reopen" data-id="${app.id}">↩ Reopen to Reply Needed</button>
+      </div>
+    `;
+  } else if (app.isIgnored) {
+    actionButton = `
+      <div class="card-actions">
+        <button class="btn-action btn-reopen" data-id="${app.id}">↩ Move Back to Reply Needed</button>
       </div>
     `;
   }
@@ -204,6 +250,7 @@ function renderCard(app) {
       <div class="meta">
         <span class="pill status-pill ${statusClass(status)}">${escapeHtml(labelForStatus(status))}</span>
         ${doneBadge}
+        ${ignoredBadge}
         ${msgCountBadge}
         <span class="pill">${formatDate(app.lastActivityAt)}</span>
         <span class="pill">${escapeHtml(confidence)}</span>
@@ -222,10 +269,18 @@ function attachCardActionListeners() {
     });
   });
 
+  document.querySelectorAll(".btn-ignore").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setAppIgnored(btn.dataset.id, true);
+    });
+  });
+
   document.querySelectorAll(".btn-reopen").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       setAppDone(btn.dataset.id, false);
+      setAppIgnored(btn.dataset.id, false);
     });
   });
 }
@@ -353,33 +408,296 @@ function renderApplications(applications) {
 }
 
 function renderOtherEmails(applications) {
-  const otherApps = applications.filter((app) => normalizeStatus(app.status) === "not_related");
+  const otherApps = applications.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === "not_related");
   const allRows = [...otherApps].sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
   const pagedRows = paginateArray(allRows, state.pageOther, state.pageSizeOther);
 
   byId("otherEmails").innerHTML = allRows.length ? `
     <div style="padding: 14px 18px; border-bottom: 1px solid var(--border); background: #f8fafc; font-size: 13px; color: var(--muted);">
-      <strong>Catch-All Inbox:</strong> Showing ${allRows.length} miscellaneous communications, portal account verifications, non-standard notifications, and recruiter digests.
+      <strong>Catch-All Inbox:</strong> Showing ${allRows.length} miscellaneous communications, portal account verifications, ignored recruiter messages, and notification receipts.
     </div>
     ${renderPaginationBar(allRows.length, state.pageOther, state.pageSizeOther, "other", "top")}
     <table>
       <thead><tr><th>Sender / Organization</th><th>Subject</th><th>Classification</th><th>Date</th><th>Action</th></tr></thead>
       <tbody>
-        ${pagedRows.map((app) => `
-          <tr>
-            <td><strong>${escapeHtml(app.company || "Other")}</strong></td>
-            <td>${escapeHtml(app.latestSubject || "No subject")}</td>
-            <td><span class="pill status-pill status-not-related">Other / Review</span></td>
-            <td>${formatDate(app.lastActivityAt)}</td>
-            <td><a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open in Gmail ↗</a></td>
-          </tr>
-        `).join("")}
+        ${pagedRows.map((app) => {
+          const ignoredTag = app.isIgnored ? `<span class="pill pill-ignored">🚫 Ignored</span>` : `<span class="pill status-pill status-not-related">Other / Review</span>`;
+          const reopenBtn = app.isIgnored ? `<button class="btn-action btn-reopen" data-id="${app.id}" style="margin-left:6px;">↩ Reopen</button>` : "";
+          return `
+            <tr>
+              <td><strong>${escapeHtml(app.company || "Other")}</strong></td>
+              <td>${escapeHtml(app.latestSubject || "No subject")}</td>
+              <td>${ignoredTag}</td>
+              <td>${formatDate(app.lastActivityAt)}</td>
+              <td>
+                <a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open in Gmail ↗</a>
+                ${reopenBtn}
+              </td>
+            </tr>
+          `;
+        }).join("")}
       </tbody>
     </table>
     ${renderPaginationBar(allRows.length, state.pageOther, state.pageSizeOther, "other", "bottom")}
   ` : `<div class="empty">No other emails found</div>`;
 
   attachPaginationListeners("other", allRows.length, "pageOther", "pageSizeOther", () => renderOtherEmails(applications));
+}
+
+function getLocalDateKey(dateInput) {
+  if (!dateInput) return "";
+  const d = new Date(dateInput);
+  if (isNaN(d.getTime())) return "";
+  return d.toLocaleDateString("en-CA"); // "YYYY-MM-DD"
+}
+
+function renderAnalytics(applications) {
+  const analyticsEl = byId("analytics");
+  if (!analyticsEl) return;
+
+  const currentSelectedDate = state.selectedDate || getTodayDateStr();
+
+  // 1. Group applications by date
+  const dateMap = new Map();
+  for (const app of applications) {
+    if (!app.lastActivityAt) continue;
+    const dateKey = getLocalDateKey(app.lastActivityAt);
+    if (!dateKey) continue;
+    if (!dateMap.has(dateKey)) {
+      dateMap.set(dateKey, []);
+    }
+    dateMap.get(dateKey).push(app);
+  }
+
+  // 2. Compute metrics for selected date
+  const dayApps = dateMap.get(currentSelectedDate) || [];
+  let totalEmailsReceived = 0;
+  let appliedCount = 0;
+  let replyNeededCount = 0;
+  let interviewCount = 0;
+  let offeredCount = 0;
+  let rejectedCount = 0;
+
+  for (const app of dayApps) {
+    const emailCount = app.gmailMessageIds?.length || 1;
+    totalEmailsReceived += emailCount;
+    const status = normalizeStatus(app.effectiveStatus || app.status);
+    if (status === "applied") appliedCount += 1;
+    else if (status === "reply_needed") replyNeededCount += 1;
+    else if (status === "interviewed") interviewCount += 1;
+    else if (status === "offered") offeredCount += 1;
+    else if (status === "rejected") rejectedCount += 1;
+  }
+
+  // 3. Build ±5 Days Navigation Window around selected date
+  const selDateObj = new Date(currentSelectedDate + "T12:00:00");
+  const pillDays = [];
+  for (let i = -5; i <= 5; i++) {
+    const d = new Date(selDateObj);
+    d.setDate(d.getDate() + i);
+    const key = d.toLocaleDateString("en-CA");
+    const count = (dateMap.get(key) || []).length;
+    const label = d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+    const isToday = key === getTodayDateStr();
+    pillDays.push({ key, label, count, isToday, isSelected: key === currentSelectedDate });
+  }
+
+  // 4. Build 14-Day Activity Bar Chart
+  const chartDays = [];
+  const todayObj = new Date(getTodayDateStr() + "T12:00:00");
+  for (let i = 13; i >= 0; i--) {
+    const d = new Date(todayObj);
+    d.setDate(d.getDate() - i);
+    const key = d.toLocaleDateString("en-CA");
+    const appsList = dateMap.get(key) || [];
+    const count = appsList.length;
+    const label = d.toLocaleDateString("en-US", { month: "numeric", day: "numeric" });
+    const weekday = d.toLocaleDateString("en-US", { weekday: "narrow" });
+    chartDays.push({ key, label: `${weekday} ${label}`, count, isSelected: key === currentSelectedDate });
+  }
+
+  const maxDailyCount = Math.max(...chartDays.map((c) => c.count), 1);
+
+  // Format header title
+  const formattedSelectedDate = selDateObj.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+  const isSelectedToday = currentSelectedDate === getTodayDateStr();
+
+  analyticsEl.innerHTML = `
+    <div class="analytics-header-card">
+      <div class="analytics-title">
+        <h2>${formattedSelectedDate} ${isSelectedToday ? '<span class="pill pill-done" style="font-size:12px;vertical-align:middle;margin-left:6px;">Today</span>' : ''}</h2>
+        <p>Daily tracking of job applications, recruiter outreaches, and email activity</p>
+      </div>
+      <div class="date-controls">
+        <button class="btn-date-nav btn-prev-day" title="View previous day">◀ Prev Day</button>
+        <input type="date" class="date-input" id="analyticsDatePicker" value="${currentSelectedDate}" max="${getTodayDateStr()}" />
+        <button class="btn-date-nav btn-date-today" title="Go to today">📅 Today</button>
+        <button class="btn-date-nav btn-next-day" title="View next day" ${isSelectedToday ? "disabled" : ""}>Next Day ▶</button>
+      </div>
+    </div>
+
+    <div class="date-pills-bar">
+      ${pillDays
+        .map(
+          (p) => `
+        <button class="date-pill-btn ${p.isSelected ? "active" : ""}" data-date="${p.key}">
+          ${escapeHtml(p.label)} ${p.isToday ? "<strong>(Today)</strong>" : ""} — <strong>${p.count}</strong>
+        </button>
+      `
+        )
+        .join("")}
+    </div>
+
+    <div class="analytics-kpi-grid">
+      <div class="kpi-card kpi-total">
+        <strong>${totalEmailsReceived}</strong>
+        <span>📬 Total Emails Received</span>
+      </div>
+      <div class="kpi-card kpi-applied">
+        <strong>${appliedCount}</strong>
+        <span>📝 Applications Applied</span>
+      </div>
+      <div class="kpi-card kpi-reply">
+        <strong>${replyNeededCount}</strong>
+        <span>💬 Recruiter Outreach / Tests</span>
+      </div>
+      <div class="kpi-card kpi-interviewed">
+        <strong>${interviewCount}</strong>
+        <span>🎯 Interviews Scheduled</span>
+      </div>
+      <div class="kpi-card kpi-offered">
+        <strong>${offeredCount}</strong>
+        <span>🏆 Offers Received</span>
+      </div>
+      <div class="kpi-card kpi-rejected">
+        <strong>${rejectedCount}</strong>
+        <span>❌ Rejections</span>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <h3>14-Day Activity Trend (Click any day to inspect)</h3>
+        <span style="font-size:12px;color:var(--muted);">Peak: <strong>${maxDailyCount}</strong> items/day</span>
+      </div>
+      <div class="chart-bars-wrap">
+        ${chartDays
+          .map((c) => {
+            const pct = Math.max(Math.round((c.count / maxDailyCount) * 100), 4);
+            return `
+            <div class="chart-col ${c.isSelected ? "active" : ""}" data-date="${c.key}" title="${c.label}: ${c.count} communications">
+              <span class="chart-col-val">${c.count}</span>
+              <div class="chart-bar-fill" style="height: ${pct}%;"></div>
+              <span class="chart-col-label">${c.label}</span>
+            </div>
+          `;
+          })
+          .join("")}
+      </div>
+    </div>
+
+    <div class="table-shell">
+      <div style="padding: 14px 18px; border-bottom: 1px solid var(--border); background: #f8fafc; font-size: 14px; font-weight: 700; display:flex; justify-content:space-between; align-items:center;">
+        <span>Activity Log for ${formattedSelectedDate} (${dayApps.length} entries)</span>
+      </div>
+      ${
+        dayApps.length
+          ? `
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Email Subject</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${dayApps
+              .sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""))
+              .map((app) => {
+                const status = normalizeStatus(app.effectiveStatus || app.status);
+                const timeStr = app.lastActivityAt ? new Date(app.lastActivityAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : "";
+                return `
+                <tr>
+                  <td style="color:var(--muted);font-size:12px;white-space:nowrap;">${timeStr}</td>
+                  <td><strong>${escapeHtml(app.company || "Other")}</strong></td>
+                  <td>${escapeHtml(app.role || "General Application")}</td>
+                  <td><span class="pill status-pill ${statusClass(status)}">${escapeHtml(labelForStatus(status))}</span></td>
+                  <td>${escapeHtml(app.latestSubject || "No subject")}</td>
+                  <td><a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open in Gmail ↗</a></td>
+                </tr>
+              `;
+              })
+              .join("")}
+          </tbody>
+        </table>
+      `
+          : `<div class="empty">No activity recorded on ${formattedSelectedDate}</div>`
+      }
+    </div>
+  `;
+
+  attachAnalyticsListeners(applications);
+}
+
+function attachAnalyticsListeners(applications) {
+  const datePicker = byId("analyticsDatePicker");
+  if (datePicker) {
+    datePicker.addEventListener("change", (e) => {
+      if (e.target.value) {
+        state.selectedDate = e.target.value;
+        renderAnalytics(applications);
+      }
+    });
+  }
+
+  document.querySelectorAll(".btn-prev-day").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const d = new Date((state.selectedDate || getTodayDateStr()) + "T12:00:00");
+      d.setDate(d.getDate() - 1);
+      state.selectedDate = d.toLocaleDateString("en-CA");
+      renderAnalytics(applications);
+    });
+  });
+
+  document.querySelectorAll(".btn-next-day").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const d = new Date((state.selectedDate || getTodayDateStr()) + "T12:00:00");
+      d.setDate(d.getDate() + 1);
+      state.selectedDate = d.toLocaleDateString("en-CA");
+      renderAnalytics(applications);
+    });
+  });
+
+  document.querySelectorAll(".btn-date-today").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state.selectedDate = getTodayDateStr();
+      renderAnalytics(applications);
+    });
+  });
+
+  document.querySelectorAll(".date-pill-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state.selectedDate = btn.dataset.date;
+      renderAnalytics(applications);
+    });
+  });
+
+  document.querySelectorAll(".chart-col").forEach((col) => {
+    col.addEventListener("click", () => {
+      state.selectedDate = col.dataset.date;
+      renderAnalytics(applications);
+    });
+  });
 }
 
 function attachPaginationListeners(prefix, totalItems, pageKey, pageSizeKey, rerenderFn) {
