@@ -503,32 +503,40 @@ function renderBoard(applications) {
 }
 
 function getGmailUrl(app) {
-  if (!app) return "https://mail.google.com/mail/u/0/#all";
+  if (!app) return "https://mail.google.com/mail/#all";
 
-  // 1. Primary: Open exact thread from All Mail (works for all inbox, archived, labeled & tabbed emails)
-  if (app.gmailThreadId && String(app.gmailThreadId).trim()) {
-    return `https://mail.google.com/mail/u/0/#all/${encodeURIComponent(String(app.gmailThreadId).trim())}`;
-  }
+  const subject = String(app.latestSubject || "").trim();
+  const from = String(app.latestFrom || "").trim();
+  const company = String(app.company || "").trim();
 
-  // 2. Secondary: Message ID lookup in All Mail
-  if (app.gmailMessageIds && Array.isArray(app.gmailMessageIds) && app.gmailMessageIds.length > 0 && String(app.gmailMessageIds[0]).trim()) {
-    return `https://mail.google.com/mail/u/0/#all/${encodeURIComponent(String(app.gmailMessageIds[0]).trim())}`;
-  }
+  // 1. Primary & most reliable across all Gmail web accounts: Exact Subject & Sender Search
+  if (subject) {
+    const cleanSubj = subject.replace(/^(re|fwd|fw|fwd\[\d+\]):\s*/gi, "").trim();
+    const safeSubj = cleanSubj.replace(/"/g, " ").replace(/\s+/g, " ").trim();
+    
+    // Extract clean email from sender header if present
+    const emailMatch = from.match(/<([^>]+)>/) || from.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
+    const senderEmail = emailMatch ? emailMatch[1] : "";
 
-  // 3. Fallback: Search query by exact subject
-  if (app.latestSubject && String(app.latestSubject).trim()) {
-    const cleanSubj = String(app.latestSubject).replace(/^(re|fwd|fw):\s*/gi, "").trim();
-    if (cleanSubj) {
-      return `https://mail.google.com/mail/u/0/#search/subject%3A%22${encodeURIComponent(cleanSubj)}%22`;
+    // If we have a specific sender email (excluding generic multi-tenant ATS domains)
+    if (senderEmail && !senderEmail.includes("myworkday.com") && !senderEmail.includes("greenhouse.io") && !senderEmail.includes("lever.co")) {
+      return `https://mail.google.com/mail/#search/${encodeURIComponent(`from:${senderEmail} subject:("${safeSubj}")`)}`;
     }
+    
+    return `https://mail.google.com/mail/#search/${encodeURIComponent(`subject:("${safeSubj}")`)}`;
   }
 
-  // 4. Fallback: Search by company
-  if (app.company && String(app.company).trim() && app.company !== "Unknown") {
-    return `https://mail.google.com/mail/u/0/#search/${encodeURIComponent(String(app.company).trim())}`;
+  // 2. Secondary fallback: thread ID if present
+  if (app.gmailThreadId && String(app.gmailThreadId).trim()) {
+    return `https://mail.google.com/mail/#all/${encodeURIComponent(String(app.gmailThreadId).trim())}`;
   }
 
-  return "https://mail.google.com/mail/u/0/#all";
+  // 3. Tertiary fallback: Company query
+  if (company && company !== "Unknown" && company !== "Other") {
+    return `https://mail.google.com/mail/#search/${encodeURIComponent(`"${company}" application OR interview OR offer`)}`;
+  }
+
+  return "https://mail.google.com/mail/#all";
 }
 
 function renderCard(app) {
