@@ -1,6 +1,96 @@
 {
-  "updatedAt": "2026-08-19T21:25:01.872Z",
+  "updatedAt": "2026-08-19T21:32:15.593Z",
   "applications": [
+    {
+      "id": "general-motors-financial-risk-analyst-ii-portfolio-analytics",
+      "company": "General Motors Financial",
+      "role": "Risk Analyst II - Portfolio Analytics",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your recent job application for Risk Analyst II - Portfolio Analytics - 260758",
+      "latestFrom": "exvu.fa.sender@oracle.gmfinancial.com",
+      "lastActivityAt": "2026-08-19T21:30:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01bef3506aafee",
+      "gmailMessageIds": [
+        "1a01bef3506aafee"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "cloudflare-senior-data-engineer",
+      "company": "Cloudflare",
+      "role": "Senior Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Cloudflare Recruiting | Application Received - Senior Data Engineer",
+      "latestFrom": "no-reply@cloudflare.com",
+      "lastActivityAt": "2026-08-19T21:28:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01bed2775d02e2",
+      "gmailMessageIds": [
+        "1a01bed2775d02e2"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "cloudflare-senior-machine-learning-engineer",
+      "company": "Cloudflare",
+      "role": "Senior Machine Learning Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Cloudflare Recruiting | Application Received - Senior Machine Learning Engineer",
+      "latestFrom": "no-reply@cloudflare.com",
+      "lastActivityAt": "2026-08-19T21:28:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01beca2b7bf878",
+      "gmailMessageIds": [
+        "1a01beca2b7bf878"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "general-motors-financial-general-application",
+      "company": "General Motors Financial",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "exvu.fa.sender@oracle.gmfinancial.com",
+      "lastActivityAt": "2026-08-19T21:28:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01bec92c1ce7cd",
+      "gmailMessageIds": [
+        "1a01bec92c1ce7cd"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "taskrabbit-senior-data-engineer",
+      "company": "Taskrabbit",
+      "role": "Senior Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Taskrabbit Application | Tirth Shah",
+      "latestFrom": "no-reply@taskrabbit.com",
+      "lastActivityAt": "2026-08-19T21:26:40.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01beb4ef314f51",
+      "gmailMessageIds": [
+        "1a01beb4ef314f51"
+      ],
+      "notes": ""
+    },
     {
       "id": "toyota-general-application",
       "company": "Toyota",
