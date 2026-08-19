@@ -1377,6 +1377,27 @@ function setOpenRouterKey(key) {
   }
 }
 
+// ─── Scope filtering helper for AI Re-Classification ──────────────────────────
+function getTargetApplicationsForReclassify(applications) {
+  const scopeType = state.reclassifyScopeType || "recent_n";
+  const scopeVal = parseInt(state.reclassifyScopeVal) || 50;
+
+  if (scopeType === "all") {
+    return [...applications];
+  } else if (scopeType === "recent_n") {
+    return applications.slice(0, Math.min(scopeVal, applications.length));
+  } else if (scopeType === "days") {
+    const cutoff = Date.now() - scopeVal * 24 * 60 * 60 * 1000;
+    return applications.filter((app) => {
+      const ts = new Date(app.lastActivityAt || app.updatedAt || 0).getTime();
+      return !isNaN(ts) && ts >= cutoff;
+    });
+  } else if (scopeType === "unclassified") {
+    return applications.filter((app) => !app.aiDecision || app.aiDecision.startsWith("Audited:"));
+  }
+  return [...applications];
+}
+
 function renderServices(applications) {
   const servicesEl = byId("services");
   if (!servicesEl) return;
@@ -1385,6 +1406,9 @@ function renderServices(applications) {
   const currentModelId = getSelectedModel();
   const currentModel = AI_MODELS.find((m) => m.id === currentModelId) || AI_MODELS[0];
   const orKey = getOpenRouterKey();
+  const targetedApps = getTargetApplicationsForReclassify(applications);
+  const currentScopeType = state.reclassifyScopeType || "recent_n";
+  const currentScopeVal = state.reclassifyScopeVal ?? 50;
 
   servicesEl.innerHTML = `
     <!-- Combined Header & Active Model Selector Card -->
@@ -1455,17 +1479,59 @@ function renderServices(applications) {
         <div class="service-card-top">
           <div class="service-icon">🧠</div>
           <div class="service-details">
-            <h3>Master AI Mailbox Re-Classification</h3>
-            <p>Runs the Master AI Recruitment Auditor prompt taxonomy across all ${totalApps} applications using <strong>${escapeHtml(currentModel.name)}</strong>. Analyzes recruiter inquiries, interview calls, ATS receipts, noise filters, and persists full AI decision reasoning tags directly to Supabase.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+              <h3>Master AI Mailbox Re-Classification</h3>
+              <span class="pill" style="font-weight:700;background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;">
+                Mailbox Total: ${totalApps} Applications
+              </span>
+            </div>
+            <p>Runs the Master AI Recruitment Auditor prompt taxonomy across your selected scope using <strong>${escapeHtml(currentModel.name)}</strong>. Analyzes recruiter inquiries, interview invitations, ATS receipts, and saves AI decision reasoning tags directly to Supabase.</p>
             <div class="service-meta-badges">
               <span class="pill">Model: ${escapeHtml(currentModel.name.split(" ")[1] || "Gemini")}</span>
-              <span class="pill">Batch Size: 25</span>
-              <span class="pill">Output: Decision Tags & Schema</span>
+              <span class="pill">Parallel Streams: 6</span>
+              <span class="pill">Batch: 25 / req</span>
             </div>
+
+            <!-- Re-Classification Scope & Filter Controls -->
+            <div class="reclassify-scope-card" style="margin-top:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:10px 14px;display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+                <div style="font-size:12px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:6px;">
+                  <span>🎯 Audit Target Scope:</span>
+                </div>
+                <div id="reclassifyTargetBadge" class="pill pill-done" style="font-size:11px;font-weight:700;">
+                  Targeting: ${targetedApps.length} of ${totalApps} applications (${Math.round((targetedApps.length / Math.max(1, totalApps)) * 100)}%)
+                </div>
+              </div>
+              
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                <select id="reclassifyScopeType" class="model-select" style="font-size:12px;padding:5px 8px;">
+                  <option value="recent_n" ${currentScopeType === "recent_n" ? "selected" : ""}>Most Recent N Applications</option>
+                  <option value="days" ${currentScopeType === "days" ? "selected" : ""}>Time Window (Past N Days)</option>
+                  <option value="unclassified" ${currentScopeType === "unclassified" ? "selected" : ""}>Only Unaudited / Unclassified</option>
+                  <option value="all" ${currentScopeType === "all" ? "selected" : ""}>Entire Mailbox (All ${totalApps} Apps)</option>
+                </select>
+
+                <div id="reclassifyScopeValWrap" style="display:${currentScopeType === "all" || currentScopeType === "unclassified" ? "none" : "inline-flex"};align-items:center;gap:6px;">
+                  <input type="number" id="reclassifyScopeValue" min="1" max="${totalApps}" value="${currentScopeVal}" class="token-input" style="width:75px;padding:4px 8px;font-size:12px;margin:0;" />
+                  <span id="reclassifyScopeUnit" style="font-size:12px;color:var(--muted);font-weight:600;">
+                    ${currentScopeType === "days" ? "days" : "applications"}
+                  </span>
+                </div>
+
+                <!-- Quick Preset Shortcuts -->
+                <div style="display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;">
+                  <button type="button" class="btn-scope-preset" data-type="recent_n" data-val="25" style="padding:3px 8px;font-size:11px;border:1px solid var(--border);border-radius:4px;background:#fff;cursor:pointer;">Recent 25</button>
+                  <button type="button" class="btn-scope-preset" data-type="recent_n" data-val="50" style="padding:3px 8px;font-size:11px;border:1px solid var(--border);border-radius:4px;background:#fff;cursor:pointer;">Recent 50</button>
+                  <button type="button" class="btn-scope-preset" data-type="days" data-val="7" style="padding:3px 8px;font-size:11px;border:1px solid var(--border);border-radius:4px;background:#fff;cursor:pointer;">Last 7 Days</button>
+                  <button type="button" class="btn-scope-preset" data-type="days" data-val="30" style="padding:3px 8px;font-size:11px;border:1px solid var(--border);border-radius:4px;background:#fff;cursor:pointer;">Last 30 Days</button>
+                </div>
+              </div>
+            </div>
+
             <!-- Dynamic Progress Bar (Active during execution) -->
             <div id="reclassifyProgressWrap" class="service-progress-wrap" style="display:none;">
               <div class="service-progress-header">
-                <span id="reclassifyProgressLabel" style="color:var(--accent);">Auditing application 0 of ${totalApps}...</span>
+                <span id="reclassifyProgressLabel" style="color:var(--accent);">Auditing application 0 of ${targetedApps.length}...</span>
                 <span id="reclassifyProgressPct" style="color:var(--text);font-weight:700;">0%</span>
               </div>
               <div class="service-progress-track">
@@ -1647,6 +1713,57 @@ function attachServicesListeners(applications) {
     });
   }
 
+  // Scope selector & input event handlers
+  const scopeTypeSelect = byId("reclassifyScopeType");
+  const scopeValInput = byId("reclassifyScopeValue");
+  const scopeValWrap = byId("reclassifyScopeValWrap");
+  const scopeUnit = byId("reclassifyScopeUnit");
+  const targetBadge = byId("reclassifyTargetBadge");
+
+  function updateTargetBadgeDisplay() {
+    const targetApps = getTargetApplicationsForReclassify(applications);
+    const total = applications.length;
+    if (targetBadge) {
+      targetBadge.textContent = `Targeting: ${targetApps.length} of ${total} applications (${Math.round((targetApps.length / Math.max(1, total)) * 100)}%)`;
+    }
+  }
+
+  if (scopeTypeSelect) {
+    scopeTypeSelect.addEventListener("change", (e) => {
+      state.reclassifyScopeType = e.target.value;
+      if (scopeValWrap) {
+        scopeValWrap.style.display = e.target.value === "all" || e.target.value === "unclassified" ? "none" : "inline-flex";
+      }
+      if (scopeUnit) {
+        scopeUnit.textContent = e.target.value === "days" ? "days" : "applications";
+      }
+      if (scopeValInput && e.target.value === "days" && (!state.reclassifyScopeVal || state.reclassifyScopeVal > 90)) {
+        state.reclassifyScopeVal = 7;
+        scopeValInput.value = 7;
+      }
+      updateTargetBadgeDisplay();
+    });
+  }
+
+  if (scopeValInput) {
+    scopeValInput.addEventListener("input", (e) => {
+      const val = parseInt(e.target.value) || 1;
+      state.reclassifyScopeVal = val;
+      updateTargetBadgeDisplay();
+    });
+  }
+
+  // Quick Scope Preset Buttons
+  document.querySelectorAll(".btn-scope-preset").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const type = btn.getAttribute("data-type");
+      const val = parseInt(btn.getAttribute("data-val")) || 50;
+      state.reclassifyScopeType = type;
+      state.reclassifyScopeVal = val;
+      renderServices(applications);
+    });
+  });
+
   // Model Selector change handler
   const modelSelect = byId("modelSelectorDropdown");
   if (modelSelect) {
@@ -1664,20 +1781,34 @@ function attachServicesListeners(applications) {
   if (btnReclassify) {
     btnReclassify.addEventListener("click", async () => {
       const activeModel = AI_MODELS.find((m) => m.id === getSelectedModel()) || AI_MODELS[0];
+      const targetApps = getTargetApplicationsForReclassify(state.data.applications);
+      const total = targetApps.length;
       const progressWrap = byId("reclassifyProgressWrap");
       const progressLabel = byId("reclassifyProgressLabel");
       const progressPct = byId("reclassifyProgressPct");
       const progressFill = byId("reclassifyProgressFill");
 
+      if (total === 0) {
+        appendConsole("No applications match the selected scope filter.", "error");
+        return;
+      }
+
       btnReclassify.disabled = true;
       btnReclassify.innerHTML = "<span>⏳ AI Reclassifying...</span>";
       if (progressWrap) progressWrap.style.display = "flex";
 
+      const scopeLabel = state.reclassifyScopeType === "days"
+        ? `past ${state.reclassifyScopeVal || 7} days`
+        : state.reclassifyScopeType === "recent_n"
+        ? `most recent ${state.reclassifyScopeVal || 50} apps`
+        : state.reclassifyScopeType === "unclassified"
+        ? "unaudited apps"
+        : "entire mailbox";
+
       appendConsole(`Starting Live AI Mailbox Re-Classification with ${activeModel.name}...`);
-      appendConsole(`Connecting to OpenRouter API (model: ${activeModel.id})...`);
+      appendConsole(`Scope: ${scopeLabel} (${total} targeted apps) | Connecting to OpenRouter API (model: ${activeModel.id})...`);
 
       try {
-        const total = state.data.applications.length;
         const chunkSize = 25; // 25 applications per LLM request
         const CONCURRENCY = 6; // 6 parallel streams simultaneously for blazing speed
         let reclassifiedCount = 0;
@@ -1691,19 +1822,19 @@ function attachServicesListeners(applications) {
           reqHeaders["Authorization"] = `Bearer ${customOrKey}`;
         }
 
-        // Build batch list
+        // Build batch list from targeted applications
         const batches = [];
         for (let i = 0; i < total; i += chunkSize) {
           batches.push({
             index: Math.floor(i / chunkSize) + 1,
             startIndex: i,
             endIndex: Math.min(i + chunkSize, total),
-            chunk: state.data.applications.slice(i, Math.min(i + chunkSize, total))
+            chunk: targetApps.slice(i, Math.min(i + chunkSize, total))
           });
         }
         const totalBatches = batches.length;
 
-        appendConsole(`Launching ${CONCURRENCY} parallel worker streams across ${totalBatches} batches (${total} apps)...`);
+        appendConsole(`Launching ${Math.min(CONCURRENCY, totalBatches)} parallel worker streams across ${totalBatches} batches (${total} targeted apps)...`);
 
         // Worker processor for each batch
         async function processBatch(batch) {
@@ -1783,11 +1914,11 @@ function attachServicesListeners(applications) {
         if (progressFill) progressFill.style.width = "100%";
         if (progressPct) progressPct.textContent = "100%";
 
-        appendConsole(`✅ Parallel OpenRouter AI Execution Complete! Processed ${total} items (${reclassifiedCount} adjustments, ~${totalTokensUsed} tokens).`, "success");
-        appendConsole("Persisting updated classifications & AI Decision tags to Supabase...", "info");
+        appendConsole(`✅ Parallel OpenRouter AI Execution Complete! Processed ${total} targeted items (${reclassifiedCount} adjustments, ~${totalTokensUsed} tokens).`, "success");
+        appendConsole(`Persisting ${total} updated application rows to Supabase...`, "info");
 
         state.data.updatedAt = new Date().toISOString();
-        await syncAllAppsToSupabase(state.data.applications, `Live AI Re-Classification (${activeModel.name})`);
+        await syncAllAppsToSupabase(targetApps, `Live AI Re-Classification (${activeModel.name})`);
 
         appendConsole("✅ Supabase cloud database updated! Re-rendering dashboard with AI tags...", "success");
         render();
