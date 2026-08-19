@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-19T03:47:43.270Z",
+  "updatedAt": "2026-08-19T05:31:51.909Z",
   "applications": [
+    {
+      "id": "faith-general-application",
+      "company": "Faith",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in FTI",
+      "latestFrom": "Faith Technologies <faithtechnologies@myworkday.com>",
+      "lastActivityAt": "2026-08-19T05:18:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a018752e02bc11c",
+      "gmailMessageIds": [
+        "1a018752e02bc11c"
+      ],
+      "notes": ""
+    },
     {
       "id": "whoop-analytics-engineer-ii",
       "company": "WHOOP",
