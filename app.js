@@ -449,6 +449,7 @@ function render() {
   renderAnalytics(applications);
   renderServices(applications);
   attachCardActionListeners();
+  switchTab(state.view || "board");
 }
 
 function renderStatus() {
