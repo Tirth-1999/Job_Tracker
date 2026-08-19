@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-08-19T22:26:06.963Z",
+  "updatedAt": "2026-08-19T22:52:20.101Z",
   "applications": [
+    {
+      "id": "uci-data-engineer-4",
+      "company": "UCI",
+      "role": "Data Engineer 4",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "UCI - Your Recent Job Interest",
+      "latestFrom": "A Do Not Reply <uci+email+ahb5-af1429e72a@talent.icims.com>",
+      "lastActivityAt": "2026-08-19T22:48:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01c35dd3454429",
+      "gmailMessageIds": [
+        "1a01c35dd3454429"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "jobright-cloud-data-architect",
+      "company": "Jobright",
+      "role": "Cloud Data Architect",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Eastwall just posted a 90% match Cloud Data Architect role 46 minutes ago",
+      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
+      "lastActivityAt": "2026-08-19T22:46:25.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01c34506576d91",
+      "gmailMessageIds": [
+        "1a01c34506576d91"
+      ],
+      "notes": ""
+    },
     {
       "id": "clifyx-ai-ml-data-engineer",
       "company": "Clifyx",
