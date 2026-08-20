@@ -439,14 +439,25 @@ async function loadData() {
   const sb = initSupabase();
   if (!sb) throw new Error("Supabase client could not be initialized.");
 
-  const { data: sbData, error } = await sb
-    .from("applications")
-    .select("*")
-    .order("last_activity_at", { ascending: false });
+  let allRows = [];
+  let from = 0;
+  const PAGE_SIZE = 1000;
 
-  if (error) throw new Error(`Supabase SELECT failed: ${error.message}`);
+  while (true) {
+    const { data: page, error } = await sb
+      .from("applications")
+      .select("*")
+      .order("last_activity_at", { ascending: false })
+      .range(from, from + PAGE_SIZE - 1);
 
-  const rawMapped = (sbData || []).map(rowToApp);
+    if (error) throw new Error(`Supabase SELECT failed: ${error.message}`);
+    if (!page || page.length === 0) break;
+    allRows.push(...page);
+    if (page.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+
+  const rawMapped = allRows.map(rowToApp);
   const deduplicated = deduplicateAndConsolidateApplications(rawMapped);
 
   state.data = {
@@ -454,7 +465,7 @@ async function loadData() {
     updatedAt: new Date().toISOString()
   };
 
-  console.log(`[Supabase] Loaded ${state.data.applications.length} consolidated applications.`);
+  console.log(`[Supabase] Loaded ${allRows.length} raw rows -> ${state.data.applications.length} consolidated applications.`);
 
   // ─── Realtime channel (subscribe once) ───────────────────────────────────
   if (!realtimeChannel) {
