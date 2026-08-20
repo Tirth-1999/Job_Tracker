@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-20T06:47:51.897Z",
+  "updatedAt": "2026-08-20T07:41:56.518Z",
   "applications": [
+    {
+      "id": "seek-transformation-business-analyst",
+      "company": "SEEK",
+      "role": "Transformation Business Analyst",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Transformation business Analyst + 11 new jobs",
+      "latestFrom": "SEEK Recommendations <noreply@s.seek.com.au>",
+      "lastActivityAt": "2026-08-20T07:20:55.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01e0b618dbade5",
+      "gmailMessageIds": [
+        "1a01e0b618dbade5"
+      ],
+      "notes": ""
+    },
     {
       "id": "sheerid-general-application",
       "company": "Sheerid",
