@@ -1,7 +1,7 @@
 const LANES = [
   ["applied", "Applied", "lane-applied"],
   ["reply_needed", "Reply Needed", "lane-reply"],
-  ["interviewed", "Interviewed", "lane-interviewed"],
+  ["interviewed", "Interview / Assessment", "lane-interviewed"],
   ["offered", "Offered", "lane-offered"],
   ["rejected", "Rejected", "lane-rejected"]
 ];
@@ -596,7 +596,7 @@ function renderCard(app) {
   const manualActionLabels = {
     move_to_applied: "Moved → Applied",
     move_to_reply_needed: "Moved → Reply Needed",
-    move_to_interviewed: "Moved → Interviewed",
+    move_to_interviewed: "Moved → Interview / Assessment",
     move_to_offered: "Moved → Offered",
     move_to_rejected: "Moved → Rejected",
     move_to_not_related: "Moved → Other",
@@ -640,7 +640,7 @@ function renderCard(app) {
   const MOVE_OPTIONS = [
     { key: "applied", label: "Move to: Applied" },
     { key: "reply_needed", label: "Move to: Reply Needed" },
-    { key: "interviewed", label: "Move to: Interviewed" },
+    { key: "interviewed", label: "Move to: Interview / Assessment" },
     { key: "offered", label: "Move to: Offered" },
     { key: "rejected", label: "Move to: Rejected" },
     { key: "not_related", label: "Move to: Other Emails" }
@@ -925,7 +925,7 @@ function renderApplications(applications) {
                     <option value="" disabled selected>Move ▾</option>
                     <option value="applied" ${status === "applied" ? "disabled" : ""}>Applied</option>
                     <option value="reply_needed" ${status === "reply_needed" ? "disabled" : ""}>Reply Needed</option>
-                    <option value="interviewed" ${status === "interviewed" ? "disabled" : ""}>Interviewed</option>
+                    <option value="interviewed" ${status === "interviewed" ? "disabled" : ""}>Interview / Assessment</option>
                     <option value="offered" ${status === "offered" ? "disabled" : ""}>Offered</option>
                     <option value="rejected" ${status === "rejected" ? "disabled" : ""}>Rejected</option>
                     <option value="not_related" ${status === "not_related" ? "disabled" : ""}>Other Emails</option>
@@ -979,7 +979,7 @@ function renderOtherEmails(applications) {
                     <option value="" disabled selected>Move to Lane ▾</option>
                     <option value="applied">Applied</option>
                     <option value="reply_needed">Reply Needed</option>
-                    <option value="interviewed">Interviewed</option>
+                    <option value="interviewed">Interview / Assessment</option>
                     <option value="offered">Offered</option>
                     <option value="rejected">Rejected</option>
                   </select>
@@ -1049,7 +1049,7 @@ function renderAnalytics(applications) {
   const aggCategories = [
     { key: "applied", label: "Applied", icon: "📝", color: "var(--applied)" },
     { key: "reply_needed", label: "Reply Needed", icon: "💬", color: "var(--reply)" },
-    { key: "interviewed", label: "Interviewed", icon: "🎯", color: "var(--interviewed)" },
+    { key: "interviewed", label: "Interview / Assessment", icon: "🎯", color: "var(--interviewed)" },
     { key: "offered", label: "Offered", icon: "🏆", color: "var(--offered)" },
     { key: "rejected", label: "Rejected", icon: "❌", color: "var(--rejected)" },
     { key: "not_related", label: "Other Emails", icon: "📁", color: "#64748b" }
@@ -1144,11 +1144,11 @@ function renderAnalytics(applications) {
       </div>
       <div class="kpi-card kpi-reply">
         <strong>${replyNeededCount}</strong>
-        <span>💬 Recruiter Outreach / Tests</span>
+        <span>💬 Recruiter Outreach / Inquiries</span>
       </div>
       <div class="kpi-card kpi-interviewed">
         <strong>${interviewCount}</strong>
-        <span>🎯 Interviews Scheduled</span>
+        <span>🎯 Interviews & Assessments</span>
       </div>
       <div class="kpi-card kpi-offered">
         <strong>${offeredCount}</strong>
@@ -1394,7 +1394,7 @@ function normalizeCompany(company) {
 const STATUS_LABELS = {
   applied: "Applied",
   reply_needed: "Reply Needed",
-  interviewed: "Interviewed",
+  interviewed: "Interview / Assessment",
   offered: "Offered",
   rejected: "Rejected",
   not_related: "Other Emails"

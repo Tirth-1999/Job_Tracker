@@ -188,7 +188,7 @@ async function main() {
           gmail_thread_id: app.gmailThreadId,
           gmail_message_ids: app.gmailMessageIds || [],
           notes: app.notes || "",
-          ai_decision: app.aiDecision || app.reason || (app.status === 'applied' ? 'ATS Application Receipt' : app.status === 'reply_needed' ? 'Recruiter Outreach' : app.status === 'interviewed' ? 'Interview Invitation' : app.status === 'offered' ? 'Job Offer' : app.status === 'rejected' ? 'Rejection' : 'Other Communication'),
+          ai_decision: app.aiDecision || app.reason || (app.status === 'applied' ? 'ATS Application Receipt' : app.status === 'reply_needed' ? 'Recruiter Outreach' : app.status === 'interviewed' ? 'Interview / Assessment' : app.status === 'offered' ? 'Job Offer' : app.status === 'rejected' ? 'Rejection' : 'Other Communication'),
           ai_model: app.aiModel || app.classifier || process.env.OPENROUTER_MODEL || "Google Gemini 3.7 Flash",
           ai_classified_at: app.aiClassifiedAt || new Date().toISOString(),
           ai_confidence: app.aiConfidence || app.confidence || "high",
@@ -484,42 +484,37 @@ ANTI-PATTERNS (DO NOT CLASSIFY AS "offered"):
 - "We are offering an online webinar" -> This is marketing spam.
 
 --------------------------------------------------------------------------------
-2. "interviewed" (Confirmed Live Human Conversation)
+2. "interviewed" (Confirmed Live Human Interview OR Technical Assessment / Coding Test)
 --------------------------------------------------------------------------------
 CRITERIA:
-- A live spoken or video conversation with a human interviewer has been scheduled or invited.
-- Recruiter phone screens, technical panel rounds, hiring manager video interviews (Zoom, Google Meet, Microsoft Teams, Webex), onsite interview agendas, or live calendar scheduling links (Calendly, GoodTime, Prelude, Cronofi).
-EXAMPLES:
-- "Invitation to Interview: Video Screen with Technical Hiring Manager"
-- "Schedule your 30-minute phone screen with [Company] Recruiting"
-- "Your interview with [Company] is confirmed for [Date/Time] on Google Meet"
-- "Next Round: Virtual Technical Panel Interview Agenda"
-ANTI-PATTERNS (DO NOT CLASSIFY AS "interviewed"):
-- Automated, asynchronous coding tests or recorded one-way video prompts where no human is live on the call (e.g., HackerRank, TestGorilla, HireVue asynchronous recording) -> Belongs in "reply_needed".
+Covers both live scheduled conversations and technical evaluations / tests:
+A. Live Spoken or Video Human Interviews:
+   - Recruiter phone screens, technical panel rounds, hiring manager video interviews (Zoom, Google Meet, Microsoft Teams, Webex), onsite interview agendas, or live calendar scheduling links (Calendly, GoodTime, Prelude, Cronofi).
+   - Examples: "Invitation to Interview: Video Screen with Technical Hiring Manager", "Schedule your 30-minute phone screen with [Company] Recruiting", "Your interview with [Company] is confirmed for [Date/Time] on Google Meet", "Next Round: Virtual Technical Panel Interview Agenda".
+
+B. Technical Assessments, Coding Tests & Take-Homes:
+   - Automated online coding challenges, take-home exercises, skill challenges, cognitive assessments, or one-way recorded video prompts (e.g., HackerRank, TestGorilla, Codility, Byteboard, CodeSignal, Coderbyte, HireVue, Karat, SHL, Glider AI, IBM Assessments, Red Bull Wingfinder).
+   - Examples: "Action Required: Complete your Online Technical Assessment on HackerRank", "You have been invited to take the [Company] Coding Challenge via TestGorilla", "Emergent Online Assessment Invite", "Complete your technical skill evaluation on Codility".
 
 --------------------------------------------------------------------------------
-3. "reply_needed" (Explicit Candidate Action / Response Required)
+3. "reply_needed" (Explicit Candidate Action / Recruiter Outreach / Forms)
 --------------------------------------------------------------------------------
 CRITERIA:
-Any recruitment communication that requires the candidate to take action, reply, provide information, or complete a task. Covers 4 distinct sub-categories:
+Recruitment communication requiring candidate text reply, basic information, or administrative forms (NOT coding tests):
 
 A. Direct Recruiter Outreach & Inquiries:
    - A technical recruiter, headhunter, or sourcing specialist writes directly to the candidate pitching a job opportunity and explicitly asking for availability, resume, interest, or rate.
    - Examples: "Are you open to new opportunities?", "We reviewed your profile and have an urgent contract opening. Let me know if you are interested in discussing.", "Following up on the Data Engineer role in Richardson, TX - please share your updated resume and phone number."
 
-B. Technical Assessments & Online Coding Tests:
-   - Automated online coding tests, take-home exercises, skill challenges, or cognitive assessments sent to the candidate.
-   - Platforms: HackerRank, TestGorilla, Codility, Byteboard, CodeSignal, Coderbyte, IBM Assessments, Red Bull Wingfinder, Glider AI, Karat, SHL.
-   - Examples: "Action Required: Complete your Online Technical Assessment", "You have been invited to take the [Company] Coding Challenge", "Emergent Online Assessment Invite via TestGorilla".
-
-C. Candidate Prescreen Forms, Questionnaires & Document Requests:
-   - Action items sent by companies requesting additional candidate data to advance the application.
+B. Candidate Prescreen Forms, Questionnaires & Document Requests:
+   - Action items sent by companies requesting candidate data to advance the application.
    - Examples: "Complete your Meta prescreen form", "Additional Information Needed - [Company] Talent Acquisition", "Next Required Application Step", "Action Needed to Complete Your Application", "Please upload your work authorization / visa documents".
 
-D. Recruiter Follow-ups / Clarifications:
+C. Recruiter Follow-ups / Clarifications:
    - Inquiries asking to confirm location preference, expected compensation, work authorization status (US Citizen / Green Card / STEM OPT / H1B), or earliest start date.
 
 ANTI-PATTERNS (DO NOT CLASSIFY AS "reply_needed"):
+- Technical assessments and online coding tests -> MUST be "interviewed" (Interview / Assessment lane).
 - Standard submission receipts ("Thank you for applying - we received your submission") with no assessment or requested action -> MUST be "applied".
 - One-Time Password (OTP) security codes, login verification codes, or password setup emails -> MUST be "not_related".
 
@@ -598,11 +593,17 @@ Example 4: Workday Account Verification (OTP / Security Noise)
 - SNIPPET: "Your one-time verification security code is 849204. Enter this code to access your candidate home."
 -> OUTPUT: {"is_job": false, "company": "News Corp", "role": "General Application", "status": "not_related", "confidence": "high"}
 
-Example 5: Interview Invitation
+Example 5A: Interview Invitation (Live Conversation)
 - FROM: "Talent Team <recruiting@atc.com>"
 - SUBJECT: "Interview Invitation: Video Technical Screening with ATC"
 - SNIPPET: "We would like to invite you to a 45-minute technical video interview with our lead data architect. Please select a time on our calendar link."
 -> OUTPUT: {"is_job": true, "company": "ATC", "role": "Data Engineer", "status": "interviewed", "confidence": "high"}
+
+Example 5B: Online Technical Assessment / Coding Test
+- FROM: "HackerRank <support@hackerrank.net>"
+- SUBJECT: "Action Required: Complete your Data Engineer Technical Assessment for Capital One"
+- SNIPPET: "Capital One has invited you to complete an online coding challenge on HackerRank for the Data Engineer opening. Please complete this 60-minute test within 5 days."
+-> OUTPUT: {"is_job": true, "company": "Capital One", "role": "Data Engineer", "status": "interviewed", "confidence": "high"}
 
 Example 6: Official Job Offer Letter
 - FROM: "HR Director <hr@company.com>"
@@ -839,14 +840,14 @@ function extractWithHeuristics(item) {
     status = "offered";
     confidence = "high";
     reason = "offer keywords";
-  } else if (/availability|schedule a call|schedule an interview|next steps|please reply|please respond/i.test(haystack)) {
+  } else if (/interview confirmation|interview scheduled|technical screen|phone screen|final round|technical interview|panel interview|video interview|hackerrank|testgorilla|codility|codesignal|coderbyte|hirevue|online assessment|coding challenge|technical assessment|take-home|skill test|online test|assessment invitation/i.test(haystack)) {
+    status = "interviewed";
+    confidence = "high";
+    reason = "interview or assessment scheduled";
+  } else if (/availability|schedule a call|schedule an interview|next steps|please reply|please respond|prescreen form|questionnaire|prescreen/i.test(haystack)) {
     status = "reply_needed";
     confidence = "medium";
     reason = "action requested";
-  } else if (/interview confirmation|interview scheduled|technical screen|phone screen|final round/i.test(haystack)) {
-    status = "interviewed";
-    confidence = "medium";
-    reason = "interview scheduled";
   } else if (/thank you for applying|application received|received your application|your application was sent/i.test(haystack)) {
     status = "applied";
     confidence = "high";

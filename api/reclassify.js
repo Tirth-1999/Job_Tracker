@@ -19,13 +19,13 @@ For every input application, output:
 3. "role" (string): The standardized job position title (e.g., "Data Engineer", "Senior Analytics Engineer", "Software Engineer", "Business Analyst", "Data Scientist"). Strip email artifacts like "Fwd:", "Re:", "Job Opening:". If general, output "General Application".
 4. "status" (string): Exactly one of the 6 canonical stages:
    - "offered": Formal employment offer, compensation package, or offer letter extended.
-   - "interviewed": Scheduled or confirmed live human conversation (phone screen, technical interview, panel, hiring manager screen, Zoom/Meet call).
-   - "reply_needed": Requires candidate action (direct recruiter outreach pitching role and asking for availability/rate, online coding assessments like HackerRank/TestGorilla, prescreen forms, document requests).
+   - "interviewed": Scheduled or confirmed live human conversation (phone screen, technical interview, panel, hiring manager screen, Zoom/Meet call) OR technical assessments / online coding tests (HackerRank, TestGorilla, Codility, CodeSignal, take-home challenges).
+   - "reply_needed": Requires candidate administrative action or response (direct recruiter outreach pitching role and asking for availability/rate, prescreen questionnaires, document requests).
    - "applied": Standard application acknowledgement / ATS receipt ("thank you for applying", "received your application").
    - "rejected": Formal notice of non-selection ("not moving forward", "credentials of other candidates better fit", "decided to pursue other candidates", "position has been filled", "status update - not selected").
    - "not_related": Account security OTPs, password resets, demographic surveys, Google Voice SMS, general marketing digests.
 5. "confidence" (string): "high", "medium", or "low".
-6. "reason" (string): Concise explanation of why this status was chosen (e.g. "Candidate rejection notice: credentials of other candidates better fit", "Application Status Update: non-selection", "Confirmed Zoom interview invitation with hiring manager", "Application confirmation receipt from ATS").
+6. "reason" (string): Concise explanation of why this status was chosen (e.g. "Candidate rejection notice: credentials of other candidates better fit", "Application Status Update: non-selection", "Confirmed Zoom interview invitation with hiring manager", "Online technical assessment / coding challenge on HackerRank", "Application confirmation receipt from ATS").
 
 ================================================================================
 SECTION 2: CANONICAL STATUS TAXONOMY & STRICT CRITERIA
@@ -37,14 +37,16 @@ SECTION 2: CANONICAL STATUS TAXONOMY & STRICT CRITERIA
 CRITERIA: Formal offer of employment extended (offer letters, compensation packages, signing requests via DocuSign/PandaDoc).
 
 --------------------------------------------------------------------------------
-2. "interviewed" (Confirmed Live Human Conversation)
+2. "interviewed" (Confirmed Live Human Conversation OR Technical Assessment)
 --------------------------------------------------------------------------------
-CRITERIA: Live spoken/video conversation scheduled or confirmed (phone screens, technical panel interviews, hiring manager Zoom/Google Meet/Teams calls).
+CRITERIA:
+- Live spoken/video conversation scheduled or confirmed (phone screens, technical panel interviews, hiring manager Zoom/Google Meet/Teams calls).
+- Technical assessments, online coding tests, take-home exercises, skill challenges, or asynchronous video prompts (HackerRank, TestGorilla, Codility, Byteboard, CodeSignal, Coderbyte, HireVue, Karat, SHL).
 
 --------------------------------------------------------------------------------
-3. "reply_needed" (Candidate Action / Response Required)
+3. "reply_needed" (Recruiter Outreach / Candidate Inquiry / Prescreen Forms)
 --------------------------------------------------------------------------------
-CRITERIA: Direct recruiter outreach pitching role and asking for availability/rate, technical assessments (HackerRank, TestGorilla), or candidate prescreen questionnaires.
+CRITERIA: Direct recruiter outreach pitching role and asking for availability/rate/resume, or candidate prescreen questionnaires / visa document requests.
 
 --------------------------------------------------------------------------------
 4. "applied" (Application Submission Acknowledgment)
@@ -99,6 +101,10 @@ Example 4 (Workday / PNC Position Closed / Filled):
 Example 5 (Standard Application Receipt):
 - INPUT: {"id": "stripe-data-infra", "company": "Stripe", "role": "Data Infrastructure Engineer", "latest_subject": "Thank you for applying to Stripe!", "latest_from": "no-reply@us.greenhouse-mail.io", "notes": "Thanks for applying. We have received your application and our team is currently reviewing it."}
 -> OUTPUT: {"id": "stripe-data-infra", "company": "Stripe", "role": "Data Infrastructure Engineer", "status": "applied", "confidence": "high", "reason": "ATS Application Receipt"}
+
+Example 6 (Online Coding Assessment / Technical Challenge):
+- INPUT: {"id": "capital-one-de", "company": "Capital One", "role": "Data Engineer", "latest_subject": "Action Required: Complete your Data Engineer Technical Assessment for Capital One", "latest_from": "HackerRank <support@hackerrank.net>", "notes": "Capital One has invited you to complete an online coding challenge on HackerRank for the Data Engineer opening. Please complete this 60-minute test within 5 days."}
+-> OUTPUT: {"id": "capital-one-de", "company": "Capital One", "role": "Data Engineer", "status": "interviewed", "confidence": "high", "reason": "Online technical assessment / coding challenge on HackerRank"}
 
 ================================================================================
 OUTPUT FORMAT:
