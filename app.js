@@ -1047,12 +1047,12 @@ function renderAnalytics(applications) {
 
   // 3. Compute Overall Category Aggregates across the entire dataset
   const aggCategories = [
-    { key: "applied", label: "Applied", icon: "📝", color: "var(--applied)" },
-    { key: "reply_needed", label: "Reply Needed", icon: "💬", color: "var(--reply)" },
-    { key: "interviewed", label: "Interview / Assessment", icon: "🎯", color: "var(--interviewed)" },
-    { key: "offered", label: "Offered", icon: "🏆", color: "var(--offered)" },
-    { key: "rejected", label: "Rejected", icon: "❌", color: "var(--rejected)" },
-    { key: "not_related", label: "Other Emails", icon: "📁", color: "#64748b" }
+    { key: "applied", label: "Applied", color: "var(--applied)" },
+    { key: "reply_needed", label: "Reply Needed", color: "var(--reply)" },
+    { key: "interviewed", label: "Interview / Assessment", color: "var(--interviewed)" },
+    { key: "offered", label: "Offered", color: "var(--offered)" },
+    { key: "rejected", label: "Rejected", color: "var(--rejected)" },
+    { key: "not_related", label: "Other Emails", color: "#64748b" }
   ];
 
   const totalAllApps = applications.length || 1;
@@ -1116,7 +1116,7 @@ function renderAnalytics(applications) {
       <div class="date-controls">
         <button class="btn-date-nav btn-prev-day" title="View previous day">◀ Prev Day</button>
         <input type="date" class="date-input" id="analyticsDatePicker" value="${currentSelectedDate}" max="${getTodayDateStr()}" />
-        <button class="btn-date-nav btn-date-today" title="Go to today">📅 Today</button>
+        <button class="btn-date-nav btn-date-today" title="Go to today">Today</button>
         <button class="btn-date-nav btn-next-day" title="View next day" ${isSelectedToday ? "disabled" : ""}>Next Day ▶</button>
       </div>
     </div>
@@ -1136,34 +1136,34 @@ function renderAnalytics(applications) {
     <div class="analytics-kpi-grid">
       <div class="kpi-card kpi-total">
         <strong>${totalEmailsReceived}</strong>
-        <span>📬 Total Emails Received</span>
+        <span>Total Emails Received</span>
       </div>
       <div class="kpi-card kpi-applied">
         <strong>${appliedCount}</strong>
-        <span>📝 Applications Applied</span>
+        <span>Applications Applied</span>
       </div>
       <div class="kpi-card kpi-reply">
         <strong>${replyNeededCount}</strong>
-        <span>💬 Recruiter Outreach / Inquiries</span>
+        <span>Recruiter Outreach / Inquiries</span>
       </div>
       <div class="kpi-card kpi-interviewed">
         <strong>${interviewCount}</strong>
-        <span>🎯 Interviews & Assessments</span>
+        <span>Interviews & Assessments</span>
       </div>
       <div class="kpi-card kpi-offered">
         <strong>${offeredCount}</strong>
-        <span>🏆 Offers Received</span>
+        <span>Offers Received</span>
       </div>
       <div class="kpi-card kpi-rejected">
         <strong>${rejectedCount}</strong>
-        <span>❌ Rejections</span>
+        <span>Rejections</span>
       </div>
     </div>
 
     <!-- Aggregate Category Bar Graph -->
     <div class="aggregate-card">
       <div class="aggregate-header">
-        <h3>📊 Aggregate Category Distribution (${applications.length} Total Entries)</h3>
+        <h3>Aggregate Category Distribution (${applications.length} Total Entries)</h3>
         <span style="font-size:12px;color:var(--muted);">Click any bar to filter the activity table below</span>
       </div>
       <div class="aggregate-bars-list">
@@ -1177,7 +1177,7 @@ function renderAnalytics(applications) {
             <div class="agg-row ${isActive ? "active" : ""}" data-category="${cat.key}" title="Click to filter by ${cat.label}">
               <div class="agg-label">
                 <span class="agg-dot" style="background: ${cat.color};"></span>
-                <span>${cat.icon} ${cat.label}</span>
+                <span>${cat.label}</span>
               </div>
               <div class="agg-bar-track">
                 <div class="agg-bar-fill" style="width: ${barPct}%; background: ${cat.color};"></div>
@@ -1196,7 +1196,7 @@ function renderAnalytics(applications) {
     <!-- 14-Day Activity Trend Bar Chart -->
     <div class="chart-card">
       <div class="chart-header">
-        <h3>📈 14-Day Activity Trend (Click any day to inspect)</h3>
+        <h3>14-Day Activity Trend (Click any day to inspect)</h3>
         <span style="font-size:12px;color:var(--muted);">Peak: <strong>${maxDailyCount}</strong> items/day</span>
       </div>
       <div class="chart-bars-wrap">
@@ -1217,10 +1217,10 @@ function renderAnalytics(applications) {
 
     <!-- Quick Category Filter Tags -->
     <div class="category-filter-tags-card">
-      <span class="filter-tags-label">🏷️ Filter Activity Log by Category:</span>
+      <span class="filter-tags-label">Filter Activity Log by Category:</span>
       <div class="category-filter-tags">
         <button class="cat-tag-btn ${currentCategoryFilter === "all" ? "active" : ""}" data-category="all">
-          🌐 All Activity <span class="cat-tag-count">${dayApps.length}</span>
+          All Activity <span class="cat-tag-count">${dayApps.length}</span>
         </button>
         ${aggCategories
           .map((cat) => {
@@ -1228,7 +1228,7 @@ function renderAnalytics(applications) {
             const isActive = currentCategoryFilter === cat.key;
             return `
             <button class="cat-tag-btn ${isActive ? "active" : ""}" data-category="${cat.key}">
-              ${cat.icon} ${cat.label} <span class="cat-tag-count">${dayCount}</span>
+              ${cat.label} <span class="cat-tag-count">${dayCount}</span>
             </button>
           `;
           })
@@ -1456,42 +1456,42 @@ const AI_MODELS = [
   {
     id: "google/gemini-2.5-flash-lite",
     name: "Google Gemini 2.5 Flash Lite",
-    badge: "⚡ Blazing Fast · High Volume Default",
+    badge: "Blazing Fast · High Volume Default",
     provider: "Google (via OpenRouter)",
     description: "Ultra-fast latency, high throughput JSON structured output. Ideal for rapid multi-batch classification."
   },
   {
     id: "google/gemini-3.7-flash",
     name: "Google Gemini 3.7 Flash",
-    badge: "🔥 75% Off Promo · Next-Gen Frontier",
+    badge: "75% Off Promo · Next-Gen Frontier",
     provider: "Google (via OpenRouter)",
     description: "Google's newest frontier Flash model. Deep reasoning with lightning speed and advanced semantic precision."
   },
   {
     id: "anthropic/claude-3.5-haiku",
     name: "Anthropic Claude 3.5 Haiku",
-    badge: "🎯 High Precision · Fast Reasoning",
+    badge: "High Precision · Fast Reasoning",
     provider: "Anthropic (via OpenRouter)",
     description: "Anthropic's fastest intelligence model. Exceptional precision in natural language parsing and recruiter intent extraction."
   },
   {
     id: "anthropic/claude-3.7-sonnet",
     name: "Anthropic Claude 3.7 Sonnet",
-    badge: "🧠 Frontier Reasoning · Complex Auditor",
+    badge: "Frontier Reasoning · Complex Auditor",
     provider: "Anthropic (via OpenRouter)",
     description: "Gold standard for complex multi-turn reasoning and nuanced contract/offer letter analysis."
   },
   {
     id: "openai/gpt-4o-mini",
     name: "OpenAI GPT-4o Mini",
-    badge: "🌐 Balanced & Reliable",
+    badge: "Balanced & Reliable",
     provider: "OpenAI (via OpenRouter)",
     description: "OpenAI's compact flagship. Highly consistent schema adherence and robust extraction."
   },
   {
     id: "deepseek/deepseek-chat",
     name: "DeepSeek V3 / V4 Flash",
-    badge: "💰 Maximum Cost Efficiency",
+    badge: "Maximum Cost Efficiency",
     provider: "DeepSeek (via OpenRouter)",
     description: "High-performance open weights model with state-of-the-art benchmark scores at ultra-low token cost."
   }
@@ -1521,9 +1521,12 @@ function setOpenRouterKey(key) {
 function getTargetApplicationsForReclassify(applications) {
   const scopeType = state.reclassifyScopeType || "recent_n";
   const scopeVal = parseInt(state.reclassifyScopeVal) || 50;
+  const scopeLane = state.reclassifyScopeLane || "applied";
 
   if (scopeType === "all") {
     return [...applications];
+  } else if (scopeType === "lane") {
+    return applications.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === scopeLane);
   } else if (scopeType === "recent_n") {
     return applications.slice(0, Math.min(scopeVal, applications.length));
   } else if (scopeType === "days") {
@@ -1549,13 +1552,24 @@ function renderServices(applications) {
   const targetedApps = getTargetApplicationsForReclassify(applications);
   const currentScopeType = state.reclassifyScopeType || "recent_n";
   const currentScopeVal = state.reclassifyScopeVal ?? 50;
+  const currentScopeLane = state.reclassifyScopeLane || "applied";
+
+  // Lane count helpers for dropdown badges
+  const laneCounts = {
+    applied: applications.filter(a => normalizeStatus(a.effectiveStatus || a.status) === 'applied').length,
+    reply_needed: applications.filter(a => normalizeStatus(a.effectiveStatus || a.status) === 'reply_needed').length,
+    interviewed: applications.filter(a => normalizeStatus(a.effectiveStatus || a.status) === 'interviewed').length,
+    offered: applications.filter(a => normalizeStatus(a.effectiveStatus || a.status) === 'offered').length,
+    rejected: applications.filter(a => normalizeStatus(a.effectiveStatus || a.status) === 'rejected').length,
+    not_related: applications.filter(a => normalizeStatus(a.effectiveStatus || a.status) === 'not_related').length
+  };
 
   servicesEl.innerHTML = `
     <!-- Combined Header & Active Model Selector Card -->
     <div class="services-header-card">
       <div class="services-header-top">
         <div class="services-title">
-          <h2>⚙️ Operations & AI Services Suite</h2>
+          <h2>Operations & AI Services Suite</h2>
           <p>Automated cloud batch jobs, live LLM AI re-classifiers, synchronization services, and data repair utilities</p>
         </div>
         <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
@@ -1593,7 +1607,7 @@ function renderServices(applications) {
       <!-- Service 1: Hero Card (Master AI Mailbox Re-Classification) -->
       <div class="service-hero-card">
         <div class="service-hero-top">
-          <div class="service-icon-hero">🧠</div>
+          <div class="service-icon-hero" style="font-size:13px;font-weight:700;letter-spacing:0.5px;">AI</div>
           <div class="service-hero-content">
             <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
               <h3>Master AI Mailbox Re-Classification</h3>
@@ -1614,7 +1628,7 @@ function renderServices(applications) {
         <div class="reclassify-scope-card">
           <div class="scope-header-row">
             <div class="scope-title-label">
-              <span>🎯 Target Audit Scope:</span>
+              <span>Target Audit Scope:</span>
             </div>
             <div id="reclassifyTargetBadge" class="scope-target-badge">
               Targeting: ${targetedApps.length} of ${totalApps} applications (${Math.round((targetedApps.length / Math.max(1, totalApps)) * 100)}%)
@@ -1624,13 +1638,27 @@ function renderServices(applications) {
           <div class="scope-controls-row">
             <div class="scope-inputs-group">
               <select id="reclassifyScopeType" class="scope-select">
+                <option value="lane" ${currentScopeType === "lane" ? "selected" : ""}>Specific Lane / Pipeline Stage</option>
                 <option value="recent_n" ${currentScopeType === "recent_n" ? "selected" : ""}>Most Recent N Applications</option>
                 <option value="days" ${currentScopeType === "days" ? "selected" : ""}>Time Window (Past N Days)</option>
                 <option value="unclassified" ${currentScopeType === "unclassified" ? "selected" : ""}>Only Unaudited / Unclassified</option>
                 <option value="all" ${currentScopeType === "all" ? "selected" : ""}>Entire Mailbox (All ${totalApps} Apps)</option>
               </select>
 
-              <div id="reclassifyScopeValWrap" style="display:${currentScopeType === "all" || currentScopeType === "unclassified" ? "none" : "inline-flex"};align-items:center;gap:6px;">
+              <!-- Lane Selector (visible when scopeType === 'lane') -->
+              <div id="reclassifyScopeLaneWrap" style="display:${currentScopeType === "lane" ? "inline-flex" : "none"};align-items:center;gap:6px;">
+                <select id="reclassifyScopeLane" class="scope-select" style="font-weight:600;">
+                  <option value="applied" ${currentScopeLane === "applied" ? "selected" : ""}>Applied (${laneCounts.applied})</option>
+                  <option value="reply_needed" ${currentScopeLane === "reply_needed" ? "selected" : ""}>Reply Needed (${laneCounts.reply_needed})</option>
+                  <option value="interviewed" ${currentScopeLane === "interviewed" ? "selected" : ""}>Interview / Assessment (${laneCounts.interviewed})</option>
+                  <option value="offered" ${currentScopeLane === "offered" ? "selected" : ""}>Offered (${laneCounts.offered})</option>
+                  <option value="rejected" ${currentScopeLane === "rejected" ? "selected" : ""}>Rejected (${laneCounts.rejected})</option>
+                  <option value="not_related" ${currentScopeLane === "not_related" ? "selected" : ""}>Other Emails (${laneCounts.not_related})</option>
+                </select>
+              </div>
+
+              <!-- Number Input (visible when scopeType === 'recent_n' or 'days') -->
+              <div id="reclassifyScopeValWrap" style="display:${currentScopeType === "recent_n" || currentScopeType === "days" ? "inline-flex" : "none"};align-items:center;gap:6px;">
                 <input type="number" id="reclassifyScopeValue" min="1" max="${totalApps}" value="${currentScopeVal}" class="scope-num-input" />
                 <span id="reclassifyScopeUnit" style="font-size:12px;color:var(--muted);font-weight:600;">
                   ${currentScopeType === "days" ? "days" : "apps"}
@@ -1639,11 +1667,16 @@ function renderServices(applications) {
             </div>
 
             <div class="scope-presets-group">
-              <span style="font-size:11px;color:var(--muted);font-weight:600;">Presets:</span>
+              <span style="font-size:11px;color:var(--muted);font-weight:600;">Lane Presets:</span>
+              <button type="button" class="btn-scope-preset ${currentScopeType === "lane" && currentScopeLane === "applied" ? "active" : ""}" data-type="lane" data-lane="applied">Applied</button>
+              <button type="button" class="btn-scope-preset ${currentScopeType === "lane" && currentScopeLane === "reply_needed" ? "active" : ""}" data-type="lane" data-lane="reply_needed">Reply Needed</button>
+              <button type="button" class="btn-scope-preset ${currentScopeType === "lane" && currentScopeLane === "interviewed" ? "active" : ""}" data-type="lane" data-lane="interviewed">Interview / Assessment</button>
+              <button type="button" class="btn-scope-preset ${currentScopeType === "lane" && currentScopeLane === "rejected" ? "active" : ""}" data-type="lane" data-lane="rejected">Rejected</button>
+              <button type="button" class="btn-scope-preset ${currentScopeType === "lane" && currentScopeLane === "not_related" ? "active" : ""}" data-type="lane" data-lane="not_related">Other Emails</button>
+              <span style="font-size:11px;color:var(--muted);font-weight:600;margin-left:6px;">Volume / Time:</span>
               <button type="button" class="btn-scope-preset ${currentScopeType === "recent_n" && currentScopeVal == 25 ? "active" : ""}" data-type="recent_n" data-val="25">Recent 25</button>
               <button type="button" class="btn-scope-preset ${currentScopeType === "recent_n" && currentScopeVal == 50 ? "active" : ""}" data-type="recent_n" data-val="50">Recent 50</button>
               <button type="button" class="btn-scope-preset ${currentScopeType === "days" && currentScopeVal == 7 ? "active" : ""}" data-type="days" data-val="7">Last 7d</button>
-              <button type="button" class="btn-scope-preset ${currentScopeType === "days" && currentScopeVal == 30 ? "active" : ""}" data-type="days" data-val="30">Last 30d</button>
               <button type="button" class="btn-scope-preset ${currentScopeType === "all" ? "active" : ""}" data-type="all" data-val="0">All Apps</button>
             </div>
           </div>
@@ -1662,7 +1695,7 @@ function renderServices(applications) {
 
         <div class="service-action-wrap">
           <button id="btnRunReclassify" class="btn-service-run">
-            <span>⚡ Run AI Re-Classification</span>
+            <span>Run AI Re-Classification</span>
           </button>
         </div>
       </div>
@@ -1672,7 +1705,9 @@ function renderServices(applications) {
         <!-- Service 2: Live Gmail Synchronization -->
         <div class="service-card">
           <div class="service-card-top">
-            <div class="service-icon" style="color:#0284c7;background:#e0f2fe;">🔄</div>
+            <div class="service-icon" style="color:#0284c7;background:#e0f2fe;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+            </div>
             <div class="service-details">
               <h3>Incremental Gmail Sync</h3>
               <p>Dispatches the automated Gmail ingestion workflow, fetches newly arrived candidate emails, queries the AI Judge, and saves new applications directly into Supabase.</p>
@@ -1694,7 +1729,7 @@ function renderServices(applications) {
           </div>
           <div class="service-action-wrap">
             <button id="btnRunSync" class="btn-service-run" style="background:#0284c7;border-color:#0284c7;">
-              <span>🔄 Sync Mailbox</span>
+              <span>Sync Mailbox</span>
             </button>
           </div>
         </div>
@@ -1702,7 +1737,9 @@ function renderServices(applications) {
         <!-- Service 3: Noise & OTP Filter Cleanup -->
         <div class="service-card">
           <div class="service-card-top">
-            <div class="service-icon" style="color:#475569;background:#f1f5f9;">🧹</div>
+            <div class="service-icon" style="color:#475569;background:#f1f5f9;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+            </div>
             <div class="service-details">
               <h3>Noise & OTP Purge</h3>
               <p>Scans existing board lanes and automatically routes account verification codes, demographic surveys, password resets, and marketing digests into the Other Emails tab.</p>
@@ -1724,7 +1761,7 @@ function renderServices(applications) {
           </div>
           <div class="service-action-wrap">
             <button id="btnRunNoisePurge" class="btn-service-run" style="background:#475569;border-color:#475569;">
-              <span>🧹 Run Noise Purge</span>
+              <span>Run Noise Purge</span>
             </button>
           </div>
         </div>
@@ -1732,7 +1769,9 @@ function renderServices(applications) {
         <!-- Service 4: Reset Local Done/Ignore Overrides -->
         <div class="service-card">
           <div class="service-card-top">
-            <div class="service-icon" style="color:#b45309;background:#fef3c7;">↩️</div>
+            <div class="service-icon" style="color:#b45309;background:#fef3c7;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            </div>
             <div class="service-details">
               <h3>Reset Local Overrides</h3>
               <p>Clears all client-side 'Mark Done' and 'Ignored' overrides stored in browser localStorage, restoring cards to default AI pipeline stages.</p>
@@ -1754,7 +1793,7 @@ function renderServices(applications) {
           </div>
           <div class="service-action-wrap">
             <button id="btnResetOverrides" class="btn-service-run" style="background:#b45309;border-color:#b45309;">
-              <span>↩️ Reset Overrides</span>
+              <span>Reset Overrides</span>
             </button>
           </div>
         </div>
@@ -1763,7 +1802,7 @@ function renderServices(applications) {
 
     <!-- Live Service Execution Console -->
     <div id="serviceConsole" class="service-console-card">
-      <div class="console-header">🖥️ Live Service Console Output</div>
+      <div class="console-header">Live Service Console Output</div>
       <div id="consoleOutput"></div>
     </div>
   `;
@@ -1778,7 +1817,7 @@ function attachServicesListeners(applications) {
   const appendConsole = (text, type = "info") => {
     if (!consoleCard || !consoleOut) return;
     consoleCard.classList.add("active");
-    const prefix = type === "error" ? "❌ " : type === "success" ? "✅ " : "ℹ️ ";
+    const prefix = type === "error" ? "[ERROR] " : type === "success" ? "[OK] " : "[INFO] ";
     const time = new Date().toLocaleTimeString();
     consoleOut.innerHTML += `<div style="margin-bottom:4px;">[${time}] ${prefix}${escapeHtml(text)}</div>`;
     consoleCard.scrollTop = consoleCard.scrollHeight;
@@ -1838,6 +1877,8 @@ function attachServicesListeners(applications) {
   const scopeTypeSelect = byId("reclassifyScopeType");
   const scopeValInput = byId("reclassifyScopeValue");
   const scopeValWrap = byId("reclassifyScopeValWrap");
+  const scopeLaneSelect = byId("reclassifyScopeLane");
+  const scopeLaneWrap = byId("reclassifyScopeLaneWrap");
   const scopeUnit = byId("reclassifyScopeUnit");
   const targetBadge = byId("reclassifyTargetBadge");
 
@@ -1853,7 +1894,10 @@ function attachServicesListeners(applications) {
     scopeTypeSelect.addEventListener("change", (e) => {
       state.reclassifyScopeType = e.target.value;
       if (scopeValWrap) {
-        scopeValWrap.style.display = e.target.value === "all" || e.target.value === "unclassified" ? "none" : "inline-flex";
+        scopeValWrap.style.display = e.target.value === "recent_n" || e.target.value === "days" ? "inline-flex" : "none";
+      }
+      if (scopeLaneWrap) {
+        scopeLaneWrap.style.display = e.target.value === "lane" ? "inline-flex" : "none";
       }
       if (scopeUnit) {
         scopeUnit.textContent = e.target.value === "days" ? "days" : "apps";
@@ -1862,6 +1906,13 @@ function attachServicesListeners(applications) {
         state.reclassifyScopeVal = 7;
         scopeValInput.value = 7;
       }
+      updateTargetBadgeDisplay();
+    });
+  }
+
+  if (scopeLaneSelect) {
+    scopeLaneSelect.addEventListener("change", (e) => {
+      state.reclassifyScopeLane = e.target.value;
       updateTargetBadgeDisplay();
     });
   }
@@ -1879,8 +1930,13 @@ function attachServicesListeners(applications) {
     btn.addEventListener("click", () => {
       const type = btn.getAttribute("data-type");
       const val = parseInt(btn.getAttribute("data-val")) || 50;
+      const lane = btn.getAttribute("data-lane");
       state.reclassifyScopeType = type;
-      state.reclassifyScopeVal = val;
+      if (type === "lane" && lane) {
+        state.reclassifyScopeLane = lane;
+      } else {
+        state.reclassifyScopeVal = val;
+      }
       renderServices(applications);
     });
   });
@@ -1915,7 +1971,7 @@ function attachServicesListeners(applications) {
       }
 
       btnReclassify.disabled = true;
-      btnReclassify.innerHTML = "<span>⏳ AI Reclassifying...</span>";
+      btnReclassify.innerHTML = "<span>AI Reclassifying...</span>";
       if (progressWrap) progressWrap.style.display = "flex";
 
       const scopeLabel = state.reclassifyScopeType === "days"
@@ -2035,28 +2091,28 @@ function attachServicesListeners(applications) {
         if (progressFill) progressFill.style.width = "100%";
         if (progressPct) progressPct.textContent = "100%";
 
-        appendConsole(`✅ Parallel OpenRouter AI Execution Complete! Processed ${total} targeted items (${reclassifiedCount} adjustments, ~${totalTokensUsed} tokens).`, "success");
+        appendConsole(`Parallel OpenRouter AI Execution Complete! Processed ${total} targeted items (${reclassifiedCount} adjustments, ~${totalTokensUsed} tokens).`, "success");
         appendConsole(`Persisting ${total} updated application rows to Supabase...`, "info");
 
         state.data.updatedAt = new Date().toISOString();
         await syncAllAppsToSupabase(targetApps, `Live AI Re-Classification (${activeModel.name})`);
 
-        appendConsole("✅ Supabase cloud database updated! Re-rendering dashboard with AI tags...", "success");
+        appendConsole("Supabase cloud database updated! Re-rendering dashboard with AI tags...", "success");
         render();
-        btnReclassify.innerHTML = "<span>✅ Re-Classification Done!</span>";
+        btnReclassify.innerHTML = "<span>Re-Classification Done!</span>";
         setTimeout(() => {
-          btnReclassify.innerHTML = "<span>⚡ Run AI Re-Classification</span>";
+          btnReclassify.innerHTML = "<span>Run AI Re-Classification</span>";
           btnReclassify.disabled = false;
           if (progressWrap) progressWrap.style.display = "none";
         }, 3000);
       } catch (err) {
-        appendConsole(`❌ OpenRouter Re-Classification Error: ${err.message}`, "error");
+        appendConsole(`OpenRouter Re-Classification Error: ${err.message}`, "error");
         if (err.message.includes("OPENROUTER_API_KEY")) {
-          appendConsole("💡 Tip: Add OPENROUTER_API_KEY to your Vercel Project Settings → Environment Variables and redeploy.", "error");
+          appendConsole("Tip: Add OPENROUTER_API_KEY to your Vercel Project Settings → Environment Variables and redeploy.", "error");
         }
-        btnReclassify.innerHTML = "<span>❌ Failed</span>";
+        btnReclassify.innerHTML = "<span>Failed</span>";
         setTimeout(() => {
-          btnReclassify.innerHTML = "<span>⚡ Run AI Re-Classification</span>";
+          btnReclassify.innerHTML = "<span>Run AI Re-Classification</span>";
           btnReclassify.disabled = false;
           if (progressWrap) progressWrap.style.display = "none";
         }, 3000);
@@ -2074,7 +2130,7 @@ function attachServicesListeners(applications) {
       const progressFill = byId("syncProgressFill");
 
       btnSync.disabled = true;
-      btnSync.innerHTML = "<span>⏳ Syncing Gmail...</span>";
+      btnSync.innerHTML = "<span>Syncing Gmail...</span>";
       if (progressWrap) progressWrap.style.display = "flex";
 
       const onProgress = (label, pct) => {
@@ -2091,19 +2147,19 @@ function attachServicesListeners(applications) {
         onProgress("Sync complete!", 100);
 
         if (result.success) {
-          appendConsole("✅ Gmail sync complete! New emails ingested and dashboard refreshed.", "success");
-          btnSync.innerHTML = "<span>✅ Synced!</span>";
+          appendConsole("Gmail sync complete! New emails ingested and dashboard refreshed.", "success");
+          btnSync.innerHTML = "<span>Synced!</span>";
         } else {
-          appendConsole("⚠️ Workflow execution finished. Supabase dataset refreshed.", "error");
-          btnSync.innerHTML = "<span>⚠️ Refreshed</span>";
+          appendConsole("Workflow execution finished. Supabase dataset refreshed.", "error");
+          btnSync.innerHTML = "<span>Refreshed</span>";
         }
       } catch (err) {
-        appendConsole(`❌ Sync error: ${err.message}`, "error");
-        btnSync.innerHTML = "<span>❌ Failed</span>";
+        appendConsole(`Sync error: ${err.message}`, "error");
+        btnSync.innerHTML = "<span>Failed</span>";
       }
 
       setTimeout(() => {
-        btnSync.innerHTML = "<span>🔄 Sync New Messages</span>";
+        btnSync.innerHTML = "<span>Sync Mailbox</span>";
         btnSync.disabled = false;
         if (progressWrap) progressWrap.style.display = "none";
       }, 3000);
@@ -2120,7 +2176,7 @@ function attachServicesListeners(applications) {
       const progressFill = byId("purgeProgressFill");
 
       btnPurge.disabled = true;
-      btnPurge.innerHTML = "<span>⏳ Purging Noise...</span>";
+      btnPurge.innerHTML = "<span>Purging Noise...</span>";
       if (progressWrap) progressWrap.style.display = "flex";
 
       appendConsole("Executing Noise, OTP & Survey Purge across mailbox...");
@@ -2161,12 +2217,12 @@ function attachServicesListeners(applications) {
       appendConsole(`Purge identified ${purged} noise items. Syncing to Supabase...`, "info");
       state.data.updatedAt = purgednow;
       await syncAllAppsToSupabase(state.data.applications, "Noise Purge");
-      appendConsole(`✅ Purge complete: ${purged} noise items routed to Other Emails tab and saved to Supabase.`, "success");
+      appendConsole(`Purge complete: ${purged} noise items routed to Other Emails tab and saved to Supabase.`, "success");
       render();
 
-      btnPurge.innerHTML = "<span>✅ Purge Done!</span>";
+      btnPurge.innerHTML = "<span>Purge Done!</span>";
       setTimeout(() => {
-        btnPurge.innerHTML = "<span>🧹 Run Noise Purge</span>";
+        btnPurge.innerHTML = "<span>Run Noise Purge</span>";
         btnPurge.disabled = false;
         if (progressWrap) progressWrap.style.display = "none";
       }, 3000);
@@ -2200,9 +2256,9 @@ function attachServicesListeners(applications) {
         appendConsole("Cleared all localStorage manual overrides. Restored default AI stages.", "success");
         render();
 
-        btnReset.innerHTML = "<span>✅ Overrides Reset!</span>";
+        btnReset.innerHTML = "<span>Overrides Reset!</span>";
         setTimeout(() => {
-          btnReset.innerHTML = "<span>↩️ Reset Local Overrides</span>";
+          btnReset.innerHTML = "<span>Reset Overrides</span>";
           btnReset.disabled = false;
           if (progressWrap) progressWrap.style.display = "none";
         }, 2000);
