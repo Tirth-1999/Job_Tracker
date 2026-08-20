@@ -2266,13 +2266,6 @@ function attachServicesListeners(applications) {
                   app.isManualOverride = false;
                   app.manualAction = null;
                   app.manualChangedAt = null;
-
-                  const ignoredSet = getIgnoredApps();
-                  const doneSet = getDoneApps();
-                  ignoredSet.delete(app.id);
-                  doneSet.delete(app.id);
-                  localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
-                  localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
                 }
               }
               if (aiRes.company && aiRes.company !== "Unknown" && !aiRes.company.includes("Workday")) {
