@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-20T20:29:55.004Z",
+  "updatedAt": "2026-08-20T23:33:10.920Z",
   "applications": [
+    {
+      "id": "toshiba-data-scientist-analyst",
+      "company": "Toshiba",
+      "role": "Data Scientist/analyst",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Toshiba Electronic Devices & Storage Corporation just posted a 97% match 5017 Data Scientist/Analyst role 31 minutes ago",
+      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
+      "lastActivityAt": "2026-08-20T23:32:37.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02184faab9f5b8",
+      "gmailMessageIds": [
+        "1a02184faab9f5b8"
+      ],
+      "notes": ""
+    },
     {
       "id": "state-street-agentic-ai-builder-officer",
       "company": "State Street",
