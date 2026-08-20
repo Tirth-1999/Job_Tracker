@@ -6,6 +6,8 @@ const LANES = [
   ["rejected", "Rejected", "lane-rejected"]
 ];
 
+const ALLOWED_STATUSES = new Set(["applied", "reply_needed", "interviewed", "offered", "rejected", "not_related"]);
+
 const GITHUB_REPO = "Tirth-1999/Job_Tracker";
 const GITHUB_FILE_PATH = "data/applications.json";
 
