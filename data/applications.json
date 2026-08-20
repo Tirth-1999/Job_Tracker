@@ -1,6 +1,44 @@
 {
-  "updatedAt": "2026-08-20T04:38:41.781Z",
+  "updatedAt": "2026-08-20T05:32:22.700Z",
   "applications": [
+    {
+      "id": "infosys-general-application",
+      "company": "Infosys",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirmation of password change",
+      "latestFrom": "Infosys Talent Acquisition <Password_Security@trm.brassring.com>",
+      "lastActivityAt": "2026-08-20T05:14:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f8b12fa3141501",
+      "gmailMessageIds": [
+        "19f8b12fa3141501",
+        "1a01d97d3e6d0444"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sheerid-general-application",
+      "company": "Sheerid",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verification update for Google student offers",
+      "latestFrom": "SheerID Verification <Verify@sheerid.com>",
+      "lastActivityAt": "2026-08-20T04:46:12.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01d7db8dfaf159",
+      "gmailMessageIds": [
+        "1a01d884fd206630",
+        "1a01d7db8dfaf159"
+      ],
+      "notes": ""
+    },
     {
       "id": "acrisure-general-application",
       "company": "Acrisure",
@@ -17754,24 +17792,6 @@
         "19f8b2151158b08d"
       ],
       "notes": "Click this link to confirm your email address and complete setup for your candidate account https://accenture.wd103.myworkdayjobs.com/accenturecareers/activate/"
-    },
-    {
-      "id": "infosys-general-application",
-      "company": "Infosys",
-      "role": "General Application",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Steps to Create Profile",
-      "latestFrom": "\"InfosysTalentAcquisition@Infosys.com\" <donotreply@brassring.com>",
-      "lastActivityAt": "2026-07-22T18:25:02.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19f8b12fa3141501",
-      "gmailMessageIds": [
-        "19f8b12fa3141501"
-      ],
-      "notes": ""
     },
     {
       "id": "msg-19f8b0b1fc50c1ea",
