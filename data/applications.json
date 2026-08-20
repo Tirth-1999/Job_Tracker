@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-20T07:41:56.518Z",
+  "updatedAt": "2026-08-20T08:40:08.302Z",
   "applications": [
+    {
+      "id": "google-general-application",
+      "company": "Google",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verification reminder for Google student offers",
+      "latestFrom": "SheerID Verification <Verify@sheerid.com>",
+      "lastActivityAt": "2026-08-20T08:11:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01db628aa2dbc0",
+      "gmailMessageIds": [
+        "1a01e395121b2909"
+      ],
+      "notes": ""
+    },
     {
       "id": "seek-transformation-business-analyst",
       "company": "SEEK",
