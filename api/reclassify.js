@@ -166,7 +166,8 @@ export default async function handler(req, res) {
     current_status: app.status,
     latest_subject: app.latestSubject || app.subject || "",
     latest_from: app.latestFrom || app.from || "",
-    notes: app.notes || ""
+    email_body_snippet: (app.notes || app.email_body || app.snippet || "").slice(0, 3000),
+    notes: (app.notes || "").slice(0, 3000)
   }));
 
   try {

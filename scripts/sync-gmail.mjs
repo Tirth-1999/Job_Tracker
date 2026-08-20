@@ -138,7 +138,7 @@ async function main() {
       source: "gmail",
       gmailThreadId: item.message.threadId,
       gmailMessageIds: [item.message.id],
-      notes: ""
+      notes: (item.parsed.body || item.parsed.snippet || "").slice(0, 3000)
     });
     changed = true;
     totalSaved += 1;
