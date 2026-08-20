@@ -1,6 +1,44 @@
 {
-  "updatedAt": "2026-08-20T05:32:22.700Z",
+  "updatedAt": "2026-08-20T06:47:51.897Z",
   "applications": [
+    {
+      "id": "sheerid-general-application",
+      "company": "Sheerid",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verification reminder for Google student offers",
+      "latestFrom": "SheerID Verification <Verify@sheerid.com>",
+      "lastActivityAt": "2026-08-20T05:47:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01d7db8dfaf159",
+      "gmailMessageIds": [
+        "1a01d884fd206630",
+        "1a01d7db8dfaf159",
+        "1a01db628aa2dbc0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "caterpillar-general-application",
+      "company": "Caterpillar",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in Caterpillar Inc.",
+      "latestFrom": "cat@myworkday.com",
+      "lastActivityAt": "2026-08-20T05:44:37.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01db330c12717b",
+      "gmailMessageIds": [
+        "1a01db330c12717b"
+      ],
+      "notes": ""
+    },
     {
       "id": "infosys-general-application",
       "company": "Infosys",
@@ -17,25 +55,6 @@
       "gmailMessageIds": [
         "19f8b12fa3141501",
         "1a01d97d3e6d0444"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "sheerid-general-application",
-      "company": "Sheerid",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Verification update for Google student offers",
-      "latestFrom": "SheerID Verification <Verify@sheerid.com>",
-      "lastActivityAt": "2026-08-20T04:46:12.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a01d7db8dfaf159",
-      "gmailMessageIds": [
-        "1a01d884fd206630",
-        "1a01d7db8dfaf159"
       ],
       "notes": ""
     },
