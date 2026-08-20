@@ -1,6 +1,352 @@
 {
-  "updatedAt": "2026-08-20T11:55:14.459Z",
+  "updatedAt": "2026-08-20T12:52:07.458Z",
   "applications": [
+    {
+      "id": "optomi-data-engineer",
+      "company": "Optomi",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Optomi",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-20T12:33:36.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019f55f2eb1e1f",
+      "gmailMessageIds": [
+        "1a019f55f2eb1e1f",
+        "1a01f299e854686f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "brooksource-data-engineer",
+      "company": "Brooksource",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Brooksource",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-20T12:33:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f2927a93838f",
+      "gmailMessageIds": [
+        "1a01f2927a93838f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "new-york-technology-partners-data-engineer",
+      "company": "New York Technology Partners",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to New York Technology Partners",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-20T12:32:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f28cfadae334",
+      "gmailMessageIds": [
+        "1a01f28cfadae334"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "total-performance-consulting-general-application",
+      "company": "Total Performance Consulting",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Total Performance Consulting",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-20T12:32:15.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f286b18b0b39",
+      "gmailMessageIds": [
+        "1a01f286b18b0b39"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "treohm-analytics-data-engineer",
+      "company": "Treohm Analytics",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Treohm Analytics",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-20T12:32:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f283a9964582",
+      "gmailMessageIds": [
+        "1a01f283a9964582"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "enhanced-staffing-data-engineer",
+      "company": "Enhanced Staffing",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Enhanced Staffing, Inc.",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-20T12:31:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f27edc9569d5",
+      "gmailMessageIds": [
+        "1a01f27edc9569d5"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "perform-data-engineer",
+      "company": "Perform",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Perform",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-20T12:31:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f2759ad25445",
+      "gmailMessageIds": [
+        "1a01f2759ad25445"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "crossing-hurdles-data-engineer",
+      "company": "Crossing Hurdles",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Crossing Hurdles",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-20T12:30:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f266effa769f",
+      "gmailMessageIds": [
+        "1a01f266effa769f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "vaco-data-engineer",
+      "company": "Vaco",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Vaco by Highspring",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-20T12:29:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f25e502af746",
+      "gmailMessageIds": [
+        "1a01f25e502af746"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tech-consulting-junior-data-engineer",
+      "company": "Tech Consulting",
+      "role": "Junior Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Tech Consulting",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-20T12:29:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f258a462f066",
+      "gmailMessageIds": [
+        "1a01f258a462f066"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "avenue-code-data-engineer",
+      "company": "Avenue Code",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Avenue Code",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-20T12:28:44.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f252a9daabea",
+      "gmailMessageIds": [
+        "1a01f252a9daabea"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "doordash-analytics-engineer-data-science",
+      "company": "Doordash",
+      "role": "Analytics Engineer, Data Science",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to DoorDash",
+      "latestFrom": "no-reply@doordash.com",
+      "lastActivityAt": "2026-08-20T12:27:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f23ac83f0b8c",
+      "gmailMessageIds": [
+        "1a01f23ac83f0b8c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "industrial-electric-manufacturing-data-analyst-iem360",
+      "company": "Industrial Electric Manufacturing",
+      "role": "Data Analyst, IEM360",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We Received Your Application — Data Analyst, IEM360 at Industrial Electric Manufacturing",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-20T12:25:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f220d0ee37b8",
+      "gmailMessageIds": [
+        "1a01f220d0ee37b8"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "worth-ai-data-platform-engineer",
+      "company": "Worth AI",
+      "role": "Data Platform Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to Worth AI",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-08-20T12:15:57.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f278432091ff",
+      "gmailMessageIds": [
+        "1a01f278432091ff",
+        "1a01f1dfdb8a9e59",
+        "1a01f197919b12e9"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "imc-data-platform-operations-engineer-performance",
+      "company": "IMC",
+      "role": "Data Platform Operations Engineer – Performance",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We've got it! Your application for Data Platform Operations Engineer – Performance at IMC is underway",
+      "latestFrom": "no-reply@imc.com",
+      "lastActivityAt": "2026-08-20T12:15:08.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f18bcc21d4c9",
+      "gmailMessageIds": [
+        "1a01f18bcc21d4c9"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "quicklaunch-analytics-general-application",
+      "company": "Quicklaunch Analytics",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying at QuickLaunch Analytics",
+      "latestFrom": "QuickLaunch Analytics <notifications@app.bamboohr.com>",
+      "lastActivityAt": "2026-08-20T12:10:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f14d2ee755d5",
+      "gmailMessageIds": [
+        "1a01f14d2ee755d5"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "royal-electric-data-engineer",
+      "company": "Royal Electric",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to Royal Electric",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-08-20T12:08:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f20eacfa3ead",
+      "gmailMessageIds": [
+        "1a01f20eacfa3ead",
+        "1a01f12b24f5e8dc"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "mondo-data-engineer",
+      "company": "Mondo",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We have recieved your application for Data Engineer job",
+      "latestFrom": "\"Quinn @ Mondo\" <quinn.vr@mondo.com>",
+      "lastActivityAt": "2026-08-20T12:04:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f0e9525d2688",
+      "gmailMessageIds": [
+        "1a01f0e9525d2688"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "oracle-data-engineer-cloud-ai",
+      "company": "Oracle",
+      "role": "Data Engineer - Cloud/ai",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your recent job application for Data Engineer - Cloud/AI - 20266423",
+      "latestFrom": "egup.fa.sender.1@workflow.email.us-phoenix-1.ocs.oraclecloud.com",
+      "lastActivityAt": "2026-08-20T11:59:36.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f0a83e9f3c9d",
+      "gmailMessageIds": [
+        "1a01f0a83e9f3c9d"
+      ],
+      "notes": ""
+    },
     {
       "id": "ascot-data-engineer",
       "company": "Ascot",
@@ -939,24 +1285,6 @@
       "gmailThreadId": "1a01a02520123613",
       "gmailMessageIds": [
         "1a01a02520123613"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "optomi-data-engineer",
-      "company": "Optomi",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Tirth Chirayu, your application was sent to Optomi",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-08-19T12:18:25.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a019f55f2eb1e1f",
-      "gmailMessageIds": [
-        "1a019f55f2eb1e1f"
       ],
       "notes": ""
     },
