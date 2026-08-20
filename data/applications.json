@@ -1,6 +1,61 @@
 {
-  "updatedAt": "2026-08-20T16:02:42.422Z",
+  "updatedAt": "2026-08-20T16:36:37.849Z",
   "applications": [
+    {
+      "id": "openrouter-applied-ai-engineer",
+      "company": "Openrouter",
+      "role": "Data Scientist",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to OpenRouter!",
+      "latestFrom": "OpenRouter Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-20T16:27:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01fec49f86c6d5",
+      "gmailMessageIds": [
+        "1a01fffef548ae16",
+        "1a01fec49f86c6d5"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "google-cloud-general-application",
+      "company": "Google Cloud",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Launch and learn with interactive, prebuilt solutions",
+      "latestFrom": "Google Cloud <googlecloud@google.com>",
+      "lastActivityAt": "2026-08-20T16:25:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01ffdfeb001787",
+      "gmailMessageIds": [
+        "1a01ffdfeb001787"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "newsela-general-application",
+      "company": "Newsela",
+      "role": "General Application",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Important information about your application to Newsela",
+      "latestFrom": "do-not-reply@newsela.com",
+      "lastActivityAt": "2026-08-20T15:50:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01fddc152bc12e",
+      "gmailMessageIds": [
+        "1a01fddc152bc12e"
+      ],
+      "notes": ""
+    },
     {
       "id": "theoris-junior-data-engineer",
       "company": "Theoris",
@@ -1070,33 +1125,6 @@
         "1a01bddccf140a9d",
         "1a01bdd7d2646129",
         "1a01bdc7d40b1417"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "unknown-data-engineer",
-      "company": "Unknown Company",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "lastActivityAt": "2026-08-19T19:21:04.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a01b78ce91908a0",
-      "gmailMessageIds": [
-        "1a01b78ce91908a0",
-        "1a01b78b70ebb4cc",
-        "1a01b78b1b1c2f49",
-        "1a01b789e730f62c",
-        "1a01b789ae6742a6",
-        "1a01b78838951bde",
-        "1a01b78723ead4f4",
-        "1a01b7864e246983",
-        "1a01b7850cebf3f0",
-        "1a01b784ee04b0a1"
       ],
       "notes": ""
     },
@@ -3989,24 +4017,6 @@
         "19ff80713a604f23"
       ],
       "notes": "Turn your result into a verified, portable profile for free. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ | Unbiased proof for your job search ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ | Let your job search start by showcasing your skills. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ | See how to make them work for you. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ | Verify your email address Hi there, To complete the creation of your TestGorilla Profile, you can click the link below to verify your email address Verify email If the above button does not work, copy"
-    },
-    {
-      "id": "msg-1a0115b7446f5fdc",
-      "company": "Unknown Company",
-      "role": "Business Analyst",
-      "status": "not_related",
-      "confidence": "high",
-      "classifier": "rules_1to1",
-      "reason": "Classified as not_related",
-      "latestSubject": "Business Analyst -Tirth Shah",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "lastActivityAt": "2026-08-17T20:13:21.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0115af7bc5ee43",
-      "gmailMessageIds": [
-        "1a0115b7446f5fdc"
-      ],
-      "notes": "I have tried calling you. Let me know if you can give me a call."
     },
     {
       "id": "msg-1a010ba7024d3626",
@@ -11790,26 +11800,6 @@
         "19fd3ae3788e7b1f"
       ],
       "notes": "Dear Candidate, This message is to acknowledge receipt of your resume. We greatly appreciate your interest in the position. Your resume will be considered for our current and future opportunities."
-    },
-    {
-      "id": "msg-19fd3bc61b053eda",
-      "company": "Unknown Company",
-      "role": "Data Engineer",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "lastActivityAt": "2026-08-05T20:36:25.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fd3a443570917a",
-      "gmailMessageIds": [
-        "19fd3bc61b053eda",
-        "19fd3a443570917a",
-        "19fb5141f28e1697"
-      ],
-      "notes": "Job Title: AWS Data Engineer Location: Dallas, TX (Hybrid – 3 days onsite per week) Experience Level: 6–12 years Interview Process: Includes final in-person client interview (mandatory) We are hiring"
     },
     {
       "id": "msg-19fd3994c5bc6700",
@@ -22812,29 +22802,6 @@
         "19f485bf67e86635"
       ],
       "notes": "Hello Tirth, Thank you again for your application for the Data Engineer, Employee Technology Support position and your interest in Bloomberg. Unfortunately, we have decided not to proceed with your"
-    },
-    {
-      "id": "unknown-general-application",
-      "company": "Unknown Company",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Are you looking for full time Opportunity",
-      "latestFrom": "Pavan Prajapati <pavanbde359@gmail.com>",
-      "lastActivityAt": "2026-07-09T18:10:35.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19ffd4a94a7cfdc4",
-      "gmailMessageIds": [
-        "19ffd4a94a7cfdc4",
-        "19ff73204355f170",
-        "19fba34e2ccb3302",
-        "19f8fe8c8aa26099",
-        "1a0111d7a6eadefe",
-        "19f48133cb613899"
-      ],
-      "notes": ""
     },
     {
       "id": "msg-19f4292d63cb563f",
