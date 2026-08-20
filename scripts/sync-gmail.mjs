@@ -955,10 +955,13 @@ function sanitizeCompanyName(company, subject = "", from = "", notes = "") {
   const combined = `${cleaned} ${subject || ""} ${notes || ""} ${from || ""}`;
 
   // Direct Staffing / Employer Domain & Sender Pattern Matching
+  if (/Emergent/i.test(combined)) return "Emergent Software";
   if (/infoway|infowaygroup\.com/i.test(combined)) return "Infoway Group";
-  if (/\bATC\b|divya@atc\.xyz|atc\.xyz|Offer Rollout|ATC-\s*VIDEO/i.test(combined)) return "ATC";
+  if (/\bATC\b|divya@atc\.xyz|atc\.xyz|Offer Rollout|ATC-\s*VIDEO|ATC Data Engineering|Shakthi/i.test(combined)) return "ATC";
   if (/Randstad|Randstand|Shreyang Joshi|randstadusa\.com/i.test(combined)) return "Randstad";
   if (/NC State/i.test(combined)) return "NC State";
+  if (/Nodveta|nodveta\.com/i.test(combined)) return "Nodveta";
+  if (/IBM|talent@ibm\.com/i.test(combined)) return "IBM";
   if (/Tsenta/i.test(combined)) return "Tsenta";
   if (/TestGorilla/i.test(combined)) return "TestGorilla";
   if (/Shield AI/i.test(combined)) return "Shield AI";
@@ -1029,7 +1032,7 @@ function slugify(value) {
 
 function extractRequisitionId(text) {
   if (!text) return null;
-  const reqMatch = text.match(/\b(?:req(?:uisition)?|job\s*id|job\s*#|posting\s*#)\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
+  const reqMatch = text.match(/\b(?:req(?:uisition)?|ref|reference|job\s*id|job\s*#|posting\s*#)\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
   if (reqMatch && !/^(?:uired|uire|uest|uirements|uests)$/i.test(reqMatch[1])) return reqMatch[1];
   const numDash = text.match(/[-–]\s*([0-9]{5,8})\s*(?:[-–\s]|$)/);
   if (numDash) return numDash[1];
@@ -1067,7 +1070,7 @@ function upsertApplication(data, incoming) {
 
   const STATUS_PRIORITY = { offered: 6, interviewed: 5, reply_needed: 4, applied: 3, rejected: 2, not_related: 1 };
 
-  // Match existing by ID, threadId, messageId overlap, requisition ID, or high-touch company
+  // Match existing by ID, threadId, messageId overlap, requisition ID, or active stages for same company
   const existing = data.applications.find((app) => {
     if (app.id === incoming.id) return true;
     if (incoming.gmailThreadId && app.gmailThreadId && app.gmailThreadId === incoming.gmailThreadId) return true;
@@ -1078,6 +1081,7 @@ function upsertApplication(data, incoming) {
       if (appReqId && incomingReqId && appReqId === incomingReqId) return true;
       if (app.status === "offered" || incoming.status === "offered") return true;
       if (app.status === "interviewed" && incoming.status === "interviewed") return true;
+      if ((app.status === "interviewed" || incoming.status === "interviewed") && (app.status === "reply_needed" || incoming.status === "reply_needed" || app.status === "applied" || incoming.status === "applied")) return true;
     }
     return false;
   });

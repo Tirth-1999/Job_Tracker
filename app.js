@@ -252,10 +252,13 @@ function sanitizeCompanyName(name, subject = "", from = "", notes = "") {
   const combined = `${c} ${subject || ""} ${notes || ""} ${from || ""}`;
 
   // Direct Staffing / Employer Domain & Sender Pattern Matching
+  if (/Emergent/i.test(combined)) return "Emergent Software";
   if (/infoway|infowaygroup\.com/i.test(combined)) return "Infoway Group";
-  if (/\bATC\b|divya@atc\.xyz|atc\.xyz|Offer Rollout|ATC-\s*VIDEO/i.test(combined)) return "ATC";
+  if (/\bATC\b|divya@atc\.xyz|atc\.xyz|Offer Rollout|ATC-\s*VIDEO|ATC Data Engineering|Shakthi/i.test(combined)) return "ATC";
   if (/Randstad|Randstand|Shreyang Joshi|randstadusa\.com/i.test(combined)) return "Randstad";
   if (/NC State/i.test(combined)) return "NC State";
+  if (/Nodveta|nodveta\.com/i.test(combined)) return "Nodveta";
+  if (/IBM|talent@ibm\.com/i.test(combined)) return "IBM";
   if (/Tsenta/i.test(combined)) return "Tsenta";
   if (/TestGorilla/i.test(combined)) return "TestGorilla";
   if (/Shield AI/i.test(combined)) return "Shield AI";
@@ -277,7 +280,7 @@ function sanitizeCompanyName(name, subject = "", from = "", notes = "") {
 
 function extractRequisitionId(text) {
   if (!text) return null;
-  const reqMatch = text.match(/\b(?:req(?:uisition)?|job\s*id|job\s*#|posting\s*#)\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
+  const reqMatch = text.match(/\b(?:req(?:uisition)?|ref|reference|job\s*id|job\s*#|posting\s*#)\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
   if (reqMatch && !/^(?:uired|uire|uest|uirements|uests)$/i.test(reqMatch[1])) return reqMatch[1];
   const numDash = text.match(/[-–]\s*([0-9]{5,8})\s*(?:[-–\s]|$)/);
   if (numDash) return numDash[1];
@@ -329,7 +332,7 @@ function deduplicateAndConsolidateApplications(appList) {
   const threadMap = new Map();
   const msgMap = new Map();
   const reqMap = new Map();
-  const highTouchCompMap = new Map();
+  const compMap = new Map();
   const groups = [];
 
   for (let i = 0; i < prepared.length; i++) {
@@ -359,17 +362,16 @@ function deduplicateAndConsolidateApplications(appList) {
       }
     }
 
-    // 4. Match Same Company for active high-touch stages (offered, interviewed, reply_needed)
+    // 4. Match Same Company for active stages (offered, interviewed, reply_needed)
     if (!targetGroup && item.normComp && item.normComp !== "unknown") {
       const isHighTouch = item.app.status === "offered" || item.app.status === "interviewed" || item.app.status === "reply_needed";
-      if (isHighTouch && highTouchCompMap.has(item.normComp)) {
-        const candidateGroup = highTouchCompMap.get(item.normComp);
+      if (isHighTouch && compMap.has(item.normComp)) {
+        const candidateGroup = compMap.get(item.normComp);
         const hasMatch = candidateGroup.some((other) => {
           if (item.app.status === "offered" || other.app.status === "offered") return true;
           if (item.app.status === "interviewed" && other.app.status === "interviewed") return true;
-          if (item.app.status === "reply_needed" && other.app.status === "reply_needed") {
-            return item.app.role === other.app.role || item.app.role === "General Application" || other.app.role === "General Application";
-          }
+          if ((item.app.status === "interviewed" || other.app.status === "interviewed") && (item.app.status === "reply_needed" || other.app.status === "reply_needed" || item.app.status === "applied" || other.app.status === "applied")) return true;
+          if (item.app.status === "reply_needed" && other.app.status === "reply_needed") return true;
           return false;
         });
         if (hasMatch) {
@@ -392,7 +394,7 @@ function deduplicateAndConsolidateApplications(appList) {
       reqMap.set(`${item.normComp}:${item.reqId}`, targetGroup);
     }
     if (item.normComp && item.normComp !== "unknown") {
-      highTouchCompMap.set(item.normComp, targetGroup);
+      compMap.set(item.normComp, targetGroup);
     }
   }
 
@@ -937,6 +939,15 @@ function initCardActionDelegation() {
     if (tabBtn && tabBtn.dataset.view) {
       e.preventDefault();
       switchTab(tabBtn.dataset.view);
+      return;
+    }
+
+    const dismissAuditBtn = e.target.closest(".btn-dismiss-audit");
+    if (dismissAuditBtn) {
+      e.preventDefault();
+      state.latestAuditReport = null;
+      localStorage.removeItem("job_tracker_latest_reclassify_audit");
+      render();
       return;
     }
 
@@ -1867,8 +1878,11 @@ function renderServices(applications) {
                     <span>Latest AI Re-Classification Audit Log</span>
                     <span class="pill pill-done" style="font-size:11px;">${auditReport.changedCount} status change${auditReport.changedCount > 1 ? "s" : ""} applied</span>
                   </div>
-                  <div class="reclassify-audit-time">
-                    Audited ${auditReport.totalAudited} apps (${escapeHtml(auditReport.scopeDescription || "")}) with <strong>${escapeHtml(auditReport.modelName || "")}</strong> &mdash; ${formattedTime}
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <div class="reclassify-audit-time">
+                      Audited ${auditReport.totalAudited} apps (${escapeHtml(auditReport.scopeDescription || "")}) with <strong>${escapeHtml(auditReport.modelName || "")}</strong> &mdash; ${formattedTime}
+                    </div>
+                    <button class="btn-dismiss-audit" style="background:none;border:1px solid var(--border);border-radius:4px;cursor:pointer;font-size:11px;padding:3px 8px;color:var(--muted);" title="Dismiss audit log">✕ Dismiss</button>
                   </div>
                 </div>
                 <div class="reclassify-changes-list">
@@ -1896,7 +1910,10 @@ function renderServices(applications) {
                     <span>Latest AI Re-Classification Audit Log</span>
                     <span class="pill" style="font-size:11px;background:#f0fdf4;color:#166534;border-color:#bbf7d0;">0 changes needed</span>
                   </div>
-                  <div class="reclassify-audit-time">${formattedTime}</div>
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <div class="reclassify-audit-time">${formattedTime}</div>
+                    <button class="btn-dismiss-audit" style="background:none;border:1px solid var(--border);border-radius:4px;cursor:pointer;font-size:11px;padding:3px 8px;color:var(--muted);" title="Dismiss audit log">✕ Dismiss</button>
+                  </div>
                 </div>
                 <div style="font-size:12px;color:#475569;line-height:1.5;">
                   Audited <strong>${auditReport.totalAudited}</strong> applications (${escapeHtml(auditReport.scopeDescription || "")}) using <strong>${escapeHtml(auditReport.modelName || "")}</strong>. All targeted applications were confirmed to already be in their correct pipeline stages.
