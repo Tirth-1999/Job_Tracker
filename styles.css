@@ -1422,6 +1422,96 @@ tr:last-child td {
   color: #fff;
 }
 
+/* Reclassification Audit Report / Change Log Box */
+.reclassify-audit-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reclassify-audit-card.has-changes {
+  border-color: #93c5fd;
+  background: #f8fafc;
+}
+
+.reclassify-audit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.reclassify-audit-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reclassify-audit-time {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.reclassify-changes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.reclassify-change-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  font-size: 12px;
+}
+
+.reclassify-change-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.reclassify-change-company {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.reclassify-change-reason {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.reclassify-change-transition {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+}
+
 /* Subgrid for Services 2, 3, 4 */
 .services-subgrid {
   display: grid;

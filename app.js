@@ -1682,6 +1682,57 @@ function renderServices(applications) {
           </div>
         </div>
 
+        ${(() => {
+          const auditReport = state.latestAuditReport || JSON.parse(localStorage.getItem("job_tracker_latest_reclassify_audit") || "null");
+          if (!auditReport) return "";
+          const formattedTime = new Date(auditReport.timestamp).toLocaleString();
+          if (auditReport.changedCount > 0) {
+            return `
+              <div class="reclassify-audit-card has-changes">
+                <div class="reclassify-audit-header">
+                  <div class="reclassify-audit-title">
+                    <span>Latest AI Re-Classification Audit Log</span>
+                    <span class="pill pill-done" style="font-size:11px;">${auditReport.changedCount} status change${auditReport.changedCount > 1 ? "s" : ""} applied</span>
+                  </div>
+                  <div class="reclassify-audit-time">
+                    Audited ${auditReport.totalAudited} apps (${escapeHtml(auditReport.scopeDescription || "")}) with <strong>${escapeHtml(auditReport.modelName || "")}</strong> &mdash; ${formattedTime}
+                  </div>
+                </div>
+                <div class="reclassify-changes-list">
+                  ${(auditReport.changes || []).map((ch) => `
+                    <div class="reclassify-change-item">
+                      <div class="reclassify-change-details">
+                        <div class="reclassify-change-company">${escapeHtml(ch.company || "Unknown")} <span style="font-weight:normal;color:#64748b;">— ${escapeHtml(ch.role || "General Application")}</span></div>
+                        <div class="reclassify-change-reason">${escapeHtml(ch.reason || "")}</div>
+                      </div>
+                      <div class="reclassify-change-transition">
+                        <span class="pill status-pill ${statusClass(ch.fromStatus)}">${escapeHtml(labelForStatus(ch.fromStatus))}</span>
+                        <span>➔</span>
+                        <span class="pill status-pill ${statusClass(ch.toStatus)}" style="font-weight:700;">${escapeHtml(labelForStatus(ch.toStatus))}</span>
+                      </div>
+                    </div>
+                  `).join("")}
+                </div>
+              </div>
+            `;
+          } else {
+            return `
+              <div class="reclassify-audit-card">
+                <div class="reclassify-audit-header">
+                  <div class="reclassify-audit-title">
+                    <span>Latest AI Re-Classification Audit Log</span>
+                    <span class="pill" style="font-size:11px;background:#f0fdf4;color:#166534;border-color:#bbf7d0;">0 changes needed</span>
+                  </div>
+                  <div class="reclassify-audit-time">${formattedTime}</div>
+                </div>
+                <div style="font-size:12px;color:#475569;line-height:1.5;">
+                  Audited <strong>${auditReport.totalAudited}</strong> applications (${escapeHtml(auditReport.scopeDescription || "")}) using <strong>${escapeHtml(auditReport.modelName || "")}</strong>. All targeted applications were confirmed to already be in their correct pipeline stages.
+                </div>
+              </div>
+            `;
+          }
+        })()}
+
         <!-- Dynamic Progress Bar (Active during execution) -->
         <div id="reclassifyProgressWrap" class="service-progress-wrap" style="display:none;">
           <div class="service-progress-header">
@@ -1974,7 +2025,9 @@ function attachServicesListeners(applications) {
       btnReclassify.innerHTML = "<span>AI Reclassifying...</span>";
       if (progressWrap) progressWrap.style.display = "flex";
 
-      const scopeLabel = state.reclassifyScopeType === "days"
+      const scopeLabel = state.reclassifyScopeType === "lane"
+        ? `${labelForStatus(state.reclassifyScopeLane || 'applied')} lane`
+        : state.reclassifyScopeType === "days"
         ? `past ${state.reclassifyScopeVal || 7} days`
         : state.reclassifyScopeType === "recent_n"
         ? `most recent ${state.reclassifyScopeVal || 50} apps`
@@ -1992,6 +2045,7 @@ function attachServicesListeners(applications) {
         let totalTokensUsed = 0;
         let completedBatches = 0;
         let completedApps = 0;
+        const changesMade = [];
 
         const customOrKey = getOpenRouterKey();
         const reqHeaders = { "Content-Type": "application/json" };
@@ -2040,9 +2094,20 @@ function attachServicesListeners(applications) {
           for (const app of batch.chunk) {
             const aiRes = resultMap.get(app.id);
             if (aiRes) {
-              if (aiRes.status && aiRes.status !== app.status) {
-                reclassifiedCount++;
-                app.status = aiRes.status;
+              if (aiRes.status && ALLOWED_STATUSES.has(aiRes.status)) {
+                if (aiRes.status !== app.status) {
+                  reclassifiedCount++;
+                  changesMade.push({
+                    id: app.id,
+                    company: aiRes.company || app.company,
+                    role: aiRes.role || app.role,
+                    fromStatus: app.status,
+                    toStatus: aiRes.status,
+                    reason: aiRes.reason || `Reclassified from ${labelForStatus(app.status)} to ${labelForStatus(aiRes.status)}`
+                  });
+                  app.status = aiRes.status;
+                  app.effectiveStatus = aiRes.status;
+                }
               }
               if (aiRes.company && aiRes.company !== "Unknown" && !aiRes.company.includes("Workday")) {
                 app.company = aiRes.company;
@@ -2090,6 +2155,18 @@ function attachServicesListeners(applications) {
         if (progressLabel) progressLabel.textContent = `Completed all ${total} applications! Syncing to Supabase...`;
         if (progressFill) progressFill.style.width = "100%";
         if (progressPct) progressPct.textContent = "100%";
+
+        const auditReport = {
+          timestamp: new Date().toISOString(),
+          modelName: activeModel.name,
+          modelId: activeModel.id,
+          scopeDescription: scopeLabel,
+          totalAudited: total,
+          changedCount: changesMade.length,
+          changes: changesMade
+        };
+        localStorage.setItem("job_tracker_latest_reclassify_audit", JSON.stringify(auditReport));
+        state.latestAuditReport = auditReport;
 
         appendConsole(`Parallel OpenRouter AI Execution Complete! Processed ${total} targeted items (${reclassifiedCount} adjustments, ~${totalTokensUsed} tokens).`, "success");
         appendConsole(`Persisting ${total} updated application rows to Supabase...`, "info");
