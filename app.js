@@ -305,111 +305,127 @@ function deduplicateAndConsolidateApplications(appList) {
     not_related: 1
   };
 
-  const prepared = appList.map((app) => {
-    const cleanComp = sanitizeCompanyName(app.company, app.latestSubject, app.latestFrom, app.notes);
-    let s = app.status;
-    if (cleanComp.toLowerCase() === "tirth shah" && s === "offered") {
-      s = "not_related";
-    }
-    return { ...app, company: cleanComp, status: s };
-  });
+  // Step 1: Pre-process metadata once in O(N) linear pass
+  const prepared = new Array(appList.length);
+  for (let i = 0; i < appList.length; i++) {
+    const a = appList[i];
+    const cleanComp = sanitizeCompanyName(a.company, a.latestSubject, a.latestFrom, a.notes);
+    let s = a.status;
+    if (cleanComp.toLowerCase() === "tirth shah" && s === "offered") s = "not_related";
+    const normComp = normalizeCompany(cleanComp);
+    const reqId = extractRequisitionId(`${a.latestSubject || ""} ${a.notes || ""}`);
+    const msgIds = (a.gmailMessageIds || []).concat(a.id ? [a.id.replace(/^msg-/, "")] : []);
 
-  const consolidated = [];
-  const processed = new Set();
+    prepared[i] = {
+      app: { ...a, company: cleanComp, status: s },
+      normComp,
+      reqId,
+      msgIds,
+      threadId: a.gmailThreadId || null
+    };
+  }
+
+  // Step 2: Group using O(1) Hash Map indices
+  const threadMap = new Map();
+  const msgMap = new Map();
+  const reqMap = new Map();
+  const highTouchCompMap = new Map();
+  const groups = [];
 
   for (let i = 0; i < prepared.length; i++) {
-    if (processed.has(i)) continue;
-    const current = prepared[i];
-    const group = [current];
-    processed.add(i);
+    const item = prepared[i];
+    let targetGroup = null;
 
-    const currThread = current.gmailThreadId;
-    const currMsgIds = new Set(current.gmailMessageIds || []);
-    if (current.id) currMsgIds.add(current.id.replace(/^msg-/, ""));
-    const currCompNorm = normalizeCompany(current.company);
-    const currReqId = extractRequisitionId(`${current.latestSubject || ""} ${current.notes || ""}`);
+    // 1. Match Thread ID
+    if (item.threadId && threadMap.has(item.threadId)) {
+      targetGroup = threadMap.get(item.threadId);
+    }
 
-    for (let j = i + 1; j < prepared.length; j++) {
-      if (processed.has(j)) continue;
-      const other = prepared[j];
-      const otherThread = other.gmailThreadId;
-      const otherMsgIds = (other.gmailMessageIds || []).concat(other.id ? [other.id.replace(/^msg-/, "")] : []);
-      const otherCompNorm = normalizeCompany(other.company);
-      const otherReqId = extractRequisitionId(`${other.latestSubject || ""} ${other.notes || ""}`);
-
-      let isMatch = false;
-
-      // Condition 1: Same Gmail Thread ID
-      if (currThread && otherThread && currThread === otherThread) {
-        isMatch = true;
-      }
-      // Condition 2: Overlapping Message IDs
-      else if (otherMsgIds.some((mid) => currMsgIds.has(mid))) {
-        isMatch = true;
-      }
-      // Condition 3: Same Company + Same Job / Requisition ID
-      else if (currCompNorm && currCompNorm !== "unknown" && currCompNorm === otherCompNorm && currReqId && otherReqId && currReqId === otherReqId) {
-        isMatch = true;
-      }
-      // Condition 4: Same Company for active high-touch stages (offered, interviewed/assessment)
-      else if (
-        currCompNorm &&
-        currCompNorm !== "unknown" &&
-        currCompNorm === otherCompNorm &&
-        (
-          current.status === "offered" || other.status === "offered" ||
-          (current.status === "interviewed" && other.status === "interviewed") ||
-          (current.status === "reply_needed" && other.status === "reply_needed" && (current.role === other.role || current.role === "General Application" || other.role === "General Application"))
-        )
-      ) {
-        isMatch = true;
-      }
-
-      if (isMatch) {
-        group.push(other);
-        processed.add(j);
-        for (const mid of otherMsgIds) currMsgIds.add(mid);
+    // 2. Match Message IDs
+    if (!targetGroup) {
+      for (const mid of item.msgIds) {
+        if (msgMap.has(mid)) {
+          targetGroup = msgMap.get(mid);
+          break;
+        }
       }
     }
 
-    if (group.length === 1) {
-      consolidated.push(current);
+    // 3. Match Same Company + Same Requisition ID
+    if (!targetGroup && item.normComp && item.normComp !== "unknown" && item.reqId) {
+      const reqKey = `${item.normComp}:${item.reqId}`;
+      if (reqMap.has(reqKey)) {
+        targetGroup = reqMap.get(reqKey);
+      }
+    }
+
+    // 4. Match Same Company for active high-touch stages (offered, interviewed, reply_needed)
+    if (!targetGroup && item.normComp && item.normComp !== "unknown") {
+      const isHighTouch = item.app.status === "offered" || item.app.status === "interviewed" || item.app.status === "reply_needed";
+      if (isHighTouch && highTouchCompMap.has(item.normComp)) {
+        const candidateGroup = highTouchCompMap.get(item.normComp);
+        const hasMatch = candidateGroup.some((other) => {
+          if (item.app.status === "offered" || other.app.status === "offered") return true;
+          if (item.app.status === "interviewed" && other.app.status === "interviewed") return true;
+          if (item.app.status === "reply_needed" && other.app.status === "reply_needed") {
+            return item.app.role === other.app.role || item.app.role === "General Application" || other.app.role === "General Application";
+          }
+          return false;
+        });
+        if (hasMatch) {
+          targetGroup = candidateGroup;
+        }
+      }
+    }
+
+    if (!targetGroup) {
+      targetGroup = [];
+      groups.push(targetGroup);
+    }
+
+    targetGroup.push(item);
+
+    // Register all indices for fast O(1) matching of subsequent items
+    if (item.threadId) threadMap.set(item.threadId, targetGroup);
+    for (const mid of item.msgIds) msgMap.set(mid, targetGroup);
+    if (item.normComp && item.normComp !== "unknown" && item.reqId) {
+      reqMap.set(`${item.normComp}:${item.reqId}`, targetGroup);
+    }
+    if (item.normComp && item.normComp !== "unknown") {
+      highTouchCompMap.set(item.normComp, targetGroup);
+    }
+  }
+
+  // Step 3: Consolidate each group into a single application
+  const consolidated = new Array(groups.length);
+  for (let g = 0; g < groups.length; g++) {
+    const cluster = groups[g];
+    if (cluster.length === 1) {
+      consolidated[g] = cluster[0].app;
     } else {
-      // Pick highest priority status
-      group.sort((a, b) => (STATUS_PRIORITY[b.status] || 0) - (STATUS_PRIORITY[a.status] || 0));
-      const bestStatus = group[0].status;
+      const appCluster = cluster.map((c) => c.app);
+      appCluster.sort((a, b) => (STATUS_PRIORITY[b.status] || 0) - (STATUS_PRIORITY[a.status] || 0));
+      const bestStatus = appCluster[0].status;
+      const cleanComp = appCluster.find((a) => a.company && a.company.toLowerCase() !== "tirth shah" && a.company.toLowerCase() !== "unknown")?.company || appCluster[0].company;
+      const cleanRole = appCluster.find((a) => a.role && a.role !== "General Application" && a.role !== "Unknown role")?.role || appCluster[0].role || "General Application";
+      appCluster.sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
+      const latest = appCluster[0];
+      const allMsgIds = [...new Set(cluster.flatMap((c) => c.msgIds))];
+      const manualApp = appCluster.find((a) => a.isManualOverride);
 
-      // Pick cleanest company name
-      const cleanComp = group.find((g) => g.company && g.company.toLowerCase() !== "tirth shah" && g.company.toLowerCase() !== "unknown")?.company || group[0].company;
-
-      // Pick cleanest role
-      const cleanRole = group.find((g) => g.role && g.role !== "General Application" && g.role !== "Unknown role")?.role || group[0].role || "General Application";
-
-      // Most recent activity
-      group.sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
-      const latestApp = group[0];
-
-      // Combine message IDs
-      const allMsgIds = [...new Set(group.flatMap((g) => g.gmailMessageIds || []))];
-
-      // Preserve manual override
-      const manualOverrideApp = group.find((g) => g.isManualOverride);
-
-      const merged = {
-        ...latestApp,
-        id: group.find((g) => g.status === bestStatus)?.id || latestApp.id,
+      consolidated[g] = {
+        ...latest,
+        id: appCluster.find((a) => a.status === bestStatus)?.id || latest.id,
         company: cleanComp,
         role: cleanRole,
         status: bestStatus,
         effectiveStatus: bestStatus,
         gmailMessageIds: allMsgIds,
-        gmailThreadId: latestApp.gmailThreadId || group.find((g) => g.gmailThreadId)?.gmailThreadId || null,
+        gmailThreadId: latest.gmailThreadId || appCluster.find((a) => a.gmailThreadId)?.gmailThreadId || null,
         confidence: "high",
-        isManualOverride: manualOverrideApp ? true : false,
-        manualAction: manualOverrideApp ? manualOverrideApp.manualAction : null
+        isManualOverride: Boolean(manualApp),
+        manualAction: manualApp ? manualApp.manualAction : null
       };
-
-      consolidated.push(merged);
     }
   }
 
@@ -436,7 +452,7 @@ async function loadData() {
     updatedAt: new Date().toISOString()
   };
 
-  console.log(`✅ Loaded ${state.data.applications.length} consolidated applications from Supabase.`);
+  console.log(`[Supabase] Loaded ${state.data.applications.length} consolidated applications.`);
 
   // ─── Realtime channel (subscribe once) ───────────────────────────────────
   if (!realtimeChannel) {
@@ -446,7 +462,7 @@ async function loadData() {
         "postgres_changes",
         { event: "*", schema: "public", table: "applications" },
         (payload) => {
-          console.log("⚡ Realtime:", payload.eventType, payload.new?.id ?? payload.old?.id);
+          console.log("[Realtime]", payload.eventType, payload.new?.id ?? payload.old?.id);
           if (payload.eventType === "INSERT" || payload.eventType === "UPDATE") {
             const mapped = rowToApp(payload.new);
             const idx = state.data.applications.findIndex((a) => a.id === payload.new.id);
@@ -466,7 +482,7 @@ async function loadData() {
       )
       .subscribe((status, err) => {
         if (err) console.error("Realtime subscribe error:", err);
-        else console.log("⚡ Realtime channel status:", status);
+        else console.log("[Realtime] Channel status:", status);
       });
   }
 
@@ -496,13 +512,11 @@ async function setAppDone(appId, isDone) {
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
     if (isDone) {
-      // Move from reply_needed → applied, mark as manual override
       if (app.status === "reply_needed") app.status = "applied";
       app.isManualOverride = true;
       app.manualAction = "mark_done";
       app.manualChangedAt = new Date().toISOString();
     } else {
-      // Reopen: restore to reply_needed, clear override so Gmail sync can manage it again
       app.status = "reply_needed";
       app.isManualOverride = false;
       app.manualAction = null;
@@ -527,13 +541,11 @@ async function setAppIgnored(appId, isIgnored) {
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
     if (isIgnored) {
-      // Move from reply_needed → not_related, mark as manual override
       if (app.status === "reply_needed") app.status = "not_related";
       app.isManualOverride = true;
       app.manualAction = "ignore";
       app.manualChangedAt = new Date().toISOString();
     } else {
-      // Reopen: restore to reply_needed, clear override so Gmail sync can manage it again
       app.status = "reply_needed";
       app.isManualOverride = false;
       app.manualAction = null;
@@ -546,15 +558,13 @@ async function setAppIgnored(appId, isIgnored) {
   }
 }
 
-// ─── Compute effectiveStatus for every app (no search filter applied) ────────
-// Used by stats/analytics so totals always reflect full dataset, not just search results.
-function computeEffectiveStatuses(rawApps) {
-  const deduplicated = deduplicateAndConsolidateApplications(rawApps);
+// ─── Compute effectiveStatus for apps — O(N) linear & lightning fast ─────────
+function computeEffectiveStatuses(apps) {
+  if (!apps || !apps.length) return [];
   const doneSet = getDoneApps();
   const ignoredSet = getIgnoredApps();
 
-  return deduplicated.map((app) => {
-    // Drive isDone/isIgnored from Supabase manual_action (survives reload & cross-device) OR localStorage (in-session)
+  return apps.map((app) => {
     const isDoneFromDb = app.isManualOverride && app.manualAction === "mark_done";
     const isIgnoredFromDb = app.isManualOverride && app.manualAction === "ignore";
     const isDone = doneSet.has(app.id) || isDoneFromDb;
@@ -573,27 +583,24 @@ function computeEffectiveStatuses(rawApps) {
 }
 
 // ─── Apply search query filter on top of effective-status-decorated apps ─────
-function filteredApplications() {
-  const allApps = computeEffectiveStatuses(state.data?.applications ?? []);
-
+function filteredApplications(allApps) {
+  const sourceApps = allApps || computeEffectiveStatuses(state.data?.applications ?? []);
   const query = state.query.trim();
-  if (!query) return allApps;
+  if (!query) return sourceApps;
 
   const lowerQuery = query.toLowerCase();
   const wordRegex = new RegExp(`\\b${query.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}\\b`, "i");
 
-  return allApps.filter((app) => {
+  return sourceApps.filter((app) => {
     const company = String(app.company || "");
     const role = String(app.role || "");
     const subject = String(app.latestSubject || "");
     const from = String(app.latestFrom || "");
 
-    // 1. Exact or whole-word match on Company, Role, Subject, or From
     if (wordRegex.test(company) || wordRegex.test(role) || wordRegex.test(subject) || wordRegex.test(from)) {
       return true;
     }
 
-    // 2. Substring match on company or role or subject if query is 4+ characters
     if (lowerQuery.length > 3) {
       if (
         company.toLowerCase().includes(lowerQuery) ||
@@ -609,21 +616,30 @@ function filteredApplications() {
   });
 }
 
+// ─── Lazy Active View Renderer: Renders ONLY the currently visible tab ──────
 function render() {
-  // allApps: full dataset with effectiveStatus applied — used for stats/analytics totals
-  // filteredApps: same but narrowed by the current search query — used for board/lists
+  const currentView = state.view || "board";
   const allApps = computeEffectiveStatuses(state.data?.applications ?? []);
-  const filteredApps = filteredApplications();
+  const filteredApps = filteredApplications(allApps);
+
   renderStatus();
   renderStats(allApps);
-  renderBoard(filteredApps);
-  renderCompanies(filteredApps);
-  renderApplications(filteredApps);
-  renderOtherEmails(filteredApps);
-  renderAnalytics(allApps);
-  renderServices(filteredApps);
+
+  if (currentView === "board") {
+    renderBoard(filteredApps);
+  } else if (currentView === "companies") {
+    renderCompanies(filteredApps);
+  } else if (currentView === "applications") {
+    renderApplications(filteredApps);
+  } else if (currentView === "otherEmails") {
+    renderOtherEmails(filteredApps);
+  } else if (currentView === "analytics") {
+    renderAnalytics(allApps);
+  } else if (currentView === "services") {
+    renderServices(filteredApps);
+  }
+
   attachCardActionListeners();
-  switchTab(state.view || "board");
 }
 
 function renderStatus() {
@@ -1576,8 +1592,8 @@ function switchTab(viewName) {
     view.style.display = isTarget ? "block" : "none";
   });
 
-  // 3. Re-bind listeners for newly visible view
-  attachCardActionListeners();
+  // 3. Render active view content immediately
+  render();
 }
 
 const AI_MODELS = [
@@ -2520,12 +2536,17 @@ function exportToExcel() {
   URL.revokeObjectURL(url);
 }
 
+let searchDebounceTimer = null;
 byId("searchInput").addEventListener("input", (event) => {
-  state.query = event.target.value;
-  state.pageApps = 1;
-  state.pageCompanies = 1;
-  state.pageOther = 1;
-  render();
+  clearTimeout(searchDebounceTimer);
+  const val = event.target.value;
+  searchDebounceTimer = setTimeout(() => {
+    state.query = val;
+    state.pageApps = 1;
+    state.pageCompanies = 1;
+    state.pageOther = 1;
+    render();
+  }, 80);
 });
 
 byId("refreshButton").addEventListener("click", async () => {
