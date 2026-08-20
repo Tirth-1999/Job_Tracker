@@ -648,6 +648,16 @@ Example 8: Candidate Questionnaire / Prescreen Form
 - SNIPPET: "Action required: To proceed with your candidacy for Data Engineer, please complete our voluntary prescreen form."
 -> OUTPUT: {"is_job": true, "company": "Meta", "role": "Data Engineer", "status": "reply_needed", "confidence": "high"}
 
+Example 9: Online Candidate Assessment / Outmatch / Harver
+- FROM: "HCA Healthcare Talent Acquisition <HCAJobApplication@hcacareers.com>"
+- SUBJECT: "Next Required Application Step Data Engineer - GCP 4750460 at HCA Healthcare"
+- SNIPPET: "In order to complete your application for Data Engineer - GCP, 4750460 at HCA Healthcare you must click the link below to participate in an assessment that will help us get to know you a little better as we proceed in the selection process. It should take 30 - 45 minutes to complete. [CLICK HERE TO BEGIN ASSESSMENT]"
+-> OUTPUT: {"is_job": true, "company": "HCA Healthcare", "role": "Data Engineer - GCP", "status": "interviewed", "confidence": "high"}
+
+CRITICAL PRECEDENCE RULE (ASSESSMENT VS REPLY NEEDED):
+- Any email directing the candidate to take an online assessment, screening quiz, behavioral evaluation, or video interview prompt (Outmatch, Harver, TestGorilla, HackerRank, pymetrics) MUST ALWAYS be classified as "interviewed", NEVER "reply_needed"!
+- "reply_needed" is strictly reserved for direct human recruiter emails asking for text replies (e.g. salary expectation, availability, visa questions) or simple administrative forms.
+
 ================================================================================
 SECTION 4: EXECUTION
 ================================================================================
@@ -841,7 +851,7 @@ function extractWithHeuristics(item) {
     status = "offered";
     confidence = "high";
     reason = "offer keywords";
-  } else if (/interview confirmation|interview scheduled|technical screen|phone screen|final round|technical interview|panel interview|video interview|hackerrank|testgorilla|codility|codesignal|coderbyte|hirevue|online assessment|coding challenge|technical assessment|take-home|skill test|online test|assessment invitation/i.test(haystack)) {
+  } else if (/interview confirmation|interview scheduled|technical screen|phone screen|final round|technical interview|panel interview|video interview|hackerrank|testgorilla|codility|codesignal|coderbyte|hirevue|outmatch|harver|glider|pymetrics|wonderlic|online assessment|coding challenge|technical assessment|take-home|skill test|online test|assessment invitation|participate in an assessment|begin assessment|take the assessment/i.test(haystack)) {
     status = "interviewed";
     confidence = "high";
     reason = "interview or assessment scheduled";

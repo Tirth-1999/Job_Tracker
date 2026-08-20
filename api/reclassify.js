@@ -107,6 +107,14 @@ Example 6 (Online Coding Assessment / Technical Challenge):
 - INPUT: {"id": "capital-one-de", "company": "Capital One", "role": "Data Engineer", "latest_subject": "Action Required: Complete your Data Engineer Technical Assessment for Capital One", "latest_from": "HackerRank <support@hackerrank.net>", "notes": "Capital One has invited you to complete an online coding challenge on HackerRank for the Data Engineer opening. Please complete this 60-minute test within 5 days."}
 -> OUTPUT: {"id": "capital-one-de", "company": "Capital One", "role": "Data Engineer", "status": "interviewed", "confidence": "high", "reason": "Online technical assessment / coding challenge on HackerRank"}
 
+Example 7 (Next Step Online Candidate Assessment - Outmatch / Harver / HCA):
+- INPUT: {"id": "hca-data-engineer", "company": "HCA Healthcare", "role": "Data Engineer - GCP", "latest_subject": "Next Required Application Step Data Engineer - GCP 4750460 at HCA Healthcare", "latest_from": "HCAJobApplication@hcacareers.com", "notes": "In order to complete your application for Data Engineer - GCP, 4750460 at HCA Healthcare you must click the link below to participate in an assessment that will help us get to know you a little better as we proceed in the selection process. It should take 30 - 45 minutes to complete. [CLICK HERE TO BEGIN ASSESSMENT]"}
+-> OUTPUT: {"id": "hca-data-engineer", "company": "HCA Healthcare", "role": "Data Engineer - GCP", "status": "interviewed", "confidence": "high", "reason": "Online candidate assessment (Outmatch/Harver) required to proceed in selection process"}
+
+CRITICAL RULE (ASSESSMENTS VS REPLY NEEDED):
+- Any email directing the candidate to take an online assessment, coding challenge, screening quiz, or video response test MUST ALWAYS be classified as "interviewed", NEVER "reply_needed" or "applied"!
+- "reply_needed" is strictly reserved for human recruiter emails asking for text responses (e.g., salary expectation, work authorization, availability to chat).
+
 ================================================================================
 OUTPUT FORMAT:
 Output ONLY valid JSON matching this schema:
