@@ -1,14 +1,161 @@
 {
   "applications": [
     {
+      "id": "at-t-ai-software-engineer",
+      "company": "At&t",
+      "role": "AI Software Engineer",
+      "status": "interviewed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "You are invited to a pre-employment assessment with AT&T",
+      "latestFrom": "\"AT&T Recruiting Team\" <noreply@mail.modernhire.com>",
+      "lastActivityAt": "2026-08-20T18:14:37.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02061d4176c28e",
+      "gmailMessageIds": [
+        "1a02061d4176c28e",
+        "1a02061c6d6933c1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "global-hr-senior-data-engineer",
+      "company": "Global HR",
+      "role": "Senior Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We’ve received your application for the Sr Data Engineer position",
+      "latestFrom": "Global HR Workday <ghr@myworkday.com>",
+      "lastActivityAt": "2026-08-20T18:12:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020603d3f4f190",
+      "gmailMessageIds": [
+        "1a020603d3f4f190"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "asana-general-application",
+      "company": "Asana",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Asana!",
+      "latestFrom": "no-reply@asana.com",
+      "lastActivityAt": "2026-08-20T18:12:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0205f7aa490b81",
+      "gmailMessageIds": [
+        "1a0205f7aa490b81"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "abs-data-engineer",
+      "company": "ABS",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your recent job application for Data Engineer - 4661",
+      "latestFrom": "ABS Careers <no-reply@eagle.org>",
+      "lastActivityAt": "2026-08-20T18:11:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0205f086fec53a",
+      "gmailMessageIds": [
+        "1a0205f086fec53a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "global-hr-general-application",
+      "company": "Global HR",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "Global HR Workday <ghr@otp.workday.com>",
+      "lastActivityAt": "2026-08-20T18:11:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0205e75d27b4b0",
+      "gmailMessageIds": [
+        "1a0205e8cbece795",
+        "1a0205e75d27b4b0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tsenta-general-application",
+      "company": "Tsenta",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Thanks for subscribing to Tsenta!",
+      "latestFrom": "Tsenta <billing@mail.tsenta.com>",
+      "lastActivityAt": "2026-08-20T18:09:50.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0205d746713549",
+      "gmailMessageIds": [
+        "1a0205d746713549",
+        "1a0205d6e7e7564e"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "dodo-payments-general-application",
+      "company": "Tsenta",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Payment Successful for order at Tsenta",
+      "latestFrom": "Dodo Payments <noreply@dodopayments.com>",
+      "lastActivityAt": "2026-08-20T18:09:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0205d6dcd563ba",
+      "gmailMessageIds": [
+        "1a0205d6dcd563ba"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "general-application-lead-data-engineer",
+      "company": "General Application",
+      "role": "Lead Data Engineer",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Lead Data Engineer - Python, SQL, Snowflake, AWS and Airflow",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "lastActivityAt": "2026-08-20T18:02:29.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020557de0c361c",
+      "gmailMessageIds": [
+        "1a02056b8ab01883"
+      ],
+      "notes": ""
+    },
+    {
       "id": "salesforce-general-application",
       "company": "Salesforce",
       "role": "General Application",
       "status": "not_related",
       "confidence": "medium",
       "lastActivityAt": "2026-08-20T17:29:21.000Z",
-      "latestSubject": "Welcome to Tableau Public! Your First Viz Is Just a Click Away",
-      "latestFrom": "Tableau from Salesforce <email@mail.salesforce.com>",
+      "latestSubject": "Your top sessions lineup is now on Salesforce+.",
+      "latestFrom": "Dreamforce <email@mail.salesforce.com>",
       "gmailThreadId": "1a01ae0aca1bb84f",
       "gmailMessageIds": [
         "1a01ae0aca1bb84f",
@@ -16,7 +163,8 @@
         "19f6bc75a98a8029",
         "19f6179cc7f6fb27",
         "19f4cdf764ae6a26",
-        "19f4292d63cb563f"
+        "19f4292d63cb563f",
+        "1a0203dccea32718"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.183+00:00",
@@ -1505,6 +1653,31 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high"
+    },
+    {
+      "id": "general-application-data-engineer",
+      "company": "General Application",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "lastActivityAt": "2026-08-19T19:21:37.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01b78ce91908a0",
+      "gmailMessageIds": [
+        "1a01b78ce91908a0",
+        "1a01b78b70ebb4cc",
+        "1a01b78b1b1c2f49",
+        "1a01b789e730f62c",
+        "1a01b789ae6742a6",
+        "1a01b78838951bde",
+        "1a01b78723ead4f4",
+        "1a01b7864e246983"
+      ],
+      "notes": ""
     },
     {
       "id": "varite-data-engineer",
@@ -27376,5 +27549,5 @@
       "notes": ""
     }
   ],
-  "updatedAt": "2026-08-20T17:30:57.735Z"
+  "updatedAt": "2026-08-20T18:40:40.920Z"
 }
