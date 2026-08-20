@@ -71,15 +71,20 @@ function appToSupabaseRow(app, manualAction = null) {
     ai_classified_at: app.aiClassifiedAt || null,
     ai_confidence: app.aiConfidence || app.confidence || "high"
   };
-  // Audit trail columns (only written if columns exist — safe to include always)
-  if (manualAction) {
+  // Audit trail columns
+  if (manualAction === "reopen") {
+    // Reopen explicitly clears the override so Gmail sync can manage it again
+    row.is_manual_override = false;
+    row.manual_action = null;
+    row.manual_changed_at = null;
+  } else if (manualAction) {
     row.is_manual_override = true;
     row.manual_action = manualAction;
     row.manual_changed_at = now;
   } else {
     row.is_manual_override = app.isManualOverride || false;
     row.manual_action = app.manualAction || null;
-    if (app.manualChangedAt) row.manual_changed_at = app.manualChangedAt;
+    row.manual_changed_at = app.manualChangedAt || null;
   }
   return row;
 }
@@ -357,7 +362,19 @@ async function setAppDone(appId, isDone) {
 
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
-    if (isDone && app.status === "reply_needed") app.status = "applied";
+    if (isDone) {
+      // Move from reply_needed → applied, mark as manual override
+      if (app.status === "reply_needed") app.status = "applied";
+      app.isManualOverride = true;
+      app.manualAction = "mark_done";
+      app.manualChangedAt = new Date().toISOString();
+    } else {
+      // Reopen: restore to reply_needed, clear override so Gmail sync can manage it again
+      app.status = "reply_needed";
+      app.isManualOverride = false;
+      app.manualAction = null;
+      app.manualChangedAt = null;
+    }
     app.updatedAt = new Date().toISOString();
     state.data.updatedAt = app.updatedAt;
     render();
@@ -376,8 +393,19 @@ async function setAppIgnored(appId, isIgnored) {
 
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
-    if (isIgnored && app.status === "reply_needed") app.status = "not_related";
-    else if (!isIgnored && app.status === "not_related") app.status = "reply_needed";
+    if (isIgnored) {
+      // Move from reply_needed → not_related, mark as manual override
+      if (app.status === "reply_needed") app.status = "not_related";
+      app.isManualOverride = true;
+      app.manualAction = "ignore";
+      app.manualChangedAt = new Date().toISOString();
+    } else {
+      // Reopen: restore to reply_needed, clear override so Gmail sync can manage it again
+      app.status = "reply_needed";
+      app.isManualOverride = false;
+      app.manualAction = null;
+      app.manualChangedAt = null;
+    }
     app.updatedAt = new Date().toISOString();
     state.data.updatedAt = app.updatedAt;
     render();
@@ -387,12 +415,13 @@ async function setAppIgnored(appId, isIgnored) {
 
 
 
-function filteredApplications() {
-  const rawApps = state.data?.applications ?? [];
+// ─── Compute effectiveStatus for every app (no search filter applied) ────────
+// Used by stats/analytics so totals always reflect full dataset, not just search results.
+function computeEffectiveStatuses(rawApps) {
   const doneSet = getDoneApps();
   const ignoredSet = getIgnoredApps();
 
-  const applications = rawApps.map((app) => {
+  return rawApps.map((app) => {
     // Drive isDone/isIgnored from Supabase manual_action (survives reload & cross-device) OR localStorage (in-session)
     const isDoneFromDb = app.isManualOverride && app.manualAction === "mark_done";
     const isIgnoredFromDb = app.isManualOverride && app.manualAction === "ignore";
@@ -400,25 +429,28 @@ function filteredApplications() {
     const isIgnored = !isDone && (ignoredSet.has(app.id) || isIgnoredFromDb);
 
     if (isDone) {
-      // status was already mutated to "applied" by setAppDone — use it as effectiveStatus directly
       const eff = app.status === "reply_needed" ? "applied" : app.status;
       return { ...app, effectiveStatus: eff, isDone: true, isIgnored: false };
     }
     if (isIgnored) {
-      // status was already mutated to "not_related" by setAppIgnored — use it as effectiveStatus directly
       const eff = app.status === "reply_needed" ? "not_related" : app.status;
       return { ...app, effectiveStatus: eff, isDone: false, isIgnored: true };
     }
     return { ...app, effectiveStatus: app.status, isDone, isIgnored };
   });
+}
+
+// ─── Apply search query filter on top of effective-status-decorated apps ─────
+function filteredApplications() {
+  const allApps = computeEffectiveStatuses(state.data?.applications ?? []);
 
   const query = state.query.trim();
-  if (!query) return applications;
+  if (!query) return allApps;
 
   const lowerQuery = query.toLowerCase();
   const wordRegex = new RegExp(`\\b${query.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}\\b`, "i");
 
-  return applications.filter((app) => {
+  return allApps.filter((app) => {
     const company = String(app.company || "");
     const role = String(app.role || "");
     const subject = String(app.latestSubject || "");
@@ -446,15 +478,18 @@ function filteredApplications() {
 }
 
 function render() {
-  const applications = filteredApplications();
+  // allApps: full dataset with effectiveStatus applied — used for stats/analytics totals
+  // filteredApps: same but narrowed by the current search query — used for board/lists
+  const allApps = computeEffectiveStatuses(state.data?.applications ?? []);
+  const filteredApps = filteredApplications();
   renderStatus();
-  renderStats(applications);
-  renderBoard(applications);
-  renderCompanies(applications);
-  renderApplications(applications);
-  renderOtherEmails(applications);
-  renderAnalytics(applications);
-  renderServices(applications);
+  renderStats(allApps);
+  renderBoard(filteredApps);
+  renderCompanies(filteredApps);
+  renderApplications(filteredApps);
+  renderOtherEmails(filteredApps);
+  renderAnalytics(allApps);
+  renderServices(filteredApps);
   attachCardActionListeners();
   switchTab(state.view || "board");
 }
@@ -467,11 +502,12 @@ function renderStatus() {
 }
 
 function renderStats(applications) {
-  const allApps = state.data?.applications || applications || [];
+  // `applications` is already decorated with effectiveStatus by computeEffectiveStatuses() —
+  // use it directly so the top-bar numbers always match the lane counts.
   const counts = Object.fromEntries(LANES.map(([key]) => [key, 0]));
   let otherCount = 0;
 
-  for (const app of allApps) {
+  for (const app of applications) {
     const status = normalizeStatus(app.effectiveStatus || app.status);
     if (status === "not_related") {
       otherCount += 1;
@@ -577,7 +613,7 @@ function renderCard(app) {
     : "";
 
   let actionButton = "";
-  if (app.status === "reply_needed" && !app.isDone && !app.isIgnored) {
+  if (status === "reply_needed" && !app.isDone && !app.isIgnored) {
     actionButton = `
       <div class="card-actions">
         <button class="btn-action btn-mark-done" data-id="${app.id}" title="Mark this assessment or reply as completed">✅ Mark Done</button>
