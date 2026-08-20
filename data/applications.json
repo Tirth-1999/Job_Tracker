@@ -1,6 +1,210 @@
 {
   "applications": [
     {
+      "id": "humana-data-engineer",
+      "company": "Humana",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "An Update on Your Humana Application: R-423155 Data Engineer - Platform Innovation and Engineering",
+      "latestFrom": "humana@myworkday.com",
+      "lastActivityAt": "2026-08-20T19:32:27.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020a916e97574a",
+      "gmailMessageIds": [
+        "1a020a916e97574a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "comcast-general-application",
+      "company": "Comcast",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Your Interest",
+      "latestFrom": "comcast@myworkday.com",
+      "lastActivityAt": "2026-08-20T19:29:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02086a00a9bf4f",
+      "gmailMessageIds": [
+        "1a02086ba1cc8d51",
+        "1a02086a00a9bf4f",
+        "1a02083951f49ebd",
+        "1a02083527883eb7",
+        "1a020830a76dcc6a",
+        "1a020a69884199d7"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "jobgether-senior-data-engineer",
+      "company": "Jobgether",
+      "role": "Senior Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Next Steps for Your Job Application: DATA111: Senior Data Engineer - ETL | Data Integration at Jobgether",
+      "latestFrom": "Jobgether Talent Team <shortlist@jobgether.com>",
+      "lastActivityAt": "2026-08-20T19:27:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020a42407d107c",
+      "gmailMessageIds": [
+        "1a020a42407d107c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "zapier-general-application",
+      "company": "Zapier",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Delivery Status Notification (Failure)",
+      "latestFrom": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "lastActivityAt": "2026-08-20T19:26:44.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020a3dd3da1a2f",
+      "gmailMessageIds": [
+        "1a020a3dd3da1a2f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "american-express-general-application",
+      "company": "American Express",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Delivery Status Notification (Failure)",
+      "latestFrom": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "lastActivityAt": "2026-08-20T19:26:21.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020a37644d9f24",
+      "gmailMessageIds": [
+        "1a020a381832c59a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "general-application-data-engineer",
+      "company": "General Application",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "lastActivityAt": "2026-08-20T19:26:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01b78ce91908a0",
+      "gmailMessageIds": [
+        "1a01b78ce91908a0",
+        "1a01b78b70ebb4cc",
+        "1a01b78b1b1c2f49",
+        "1a01b789e730f62c",
+        "1a01b789ae6742a6",
+        "1a01b78838951bde",
+        "1a01b78723ead4f4",
+        "1a01b7864e246983",
+        "1a020a37644d9f24",
+        "1a020a368d4337f5",
+        "1a020a35becdf6f5",
+        "1a020a359ad84f11",
+        "1a020a348b9a79eb",
+        "1a020a34659f5a2e",
+        "1a020a3389b34114",
+        "1a020a335c62a27c",
+        "1a020a3305abcb77",
+        "1a01b7850cebf3f0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "varite-ai-data-engineer",
+      "company": "Varite",
+      "role": "AI Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Hiring for -AI Data Engineer- Remote",
+      "latestFrom": "Sreyashi Dutta <Sreyashi.Dutta@varite.com>",
+      "lastActivityAt": "2026-08-20T19:21:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020a5e60764b5a",
+      "gmailMessageIds": [
+        "1a020a5e60764b5a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "otter-ai-senior-data-engineer",
+      "company": "Otter.ai",
+      "role": "Senior Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on Your Application for Senior Data Engineer at Otter.ai",
+      "latestFrom": "no-reply@otter.ai",
+      "lastActivityAt": "2026-08-20T19:20:46.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0208342e09f307",
+      "gmailMessageIds": [
+        "1a0208342e09f307",
+        "1a0209e690bcd4e5"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "axon-senior-machine-learning-engineer",
+      "company": "Axon",
+      "role": "Senior Machine Learning Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Axon!",
+      "latestFrom": "no-reply-talent@axon.com",
+      "lastActivityAt": "2026-08-20T19:06:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020913f6345751",
+      "gmailMessageIds": [
+        "1a020913f6345751"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "dyno-therapeutics-general-application",
+      "company": "Dyno Therapeutics",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Dyno Therapeutics",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-20T19:05:48.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0209031b788491",
+      "gmailMessageIds": [
+        "1a02090b0980b43e",
+        "1a0209031b788491"
+      ],
+      "notes": ""
+    },
+    {
       "id": "blue-river-technology-general-application",
       "company": "Blue River Technology",
       "role": "General Application",
@@ -217,28 +421,6 @@
       "gmailMessageIds": [
         "1a02086da6be4b72",
         "1a020832f3d63a8b"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "comcast-general-application",
-      "company": "Comcast",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Verify your candidate account",
-      "latestFrom": "comcast@otp.workday.com",
-      "lastActivityAt": "2026-08-20T18:54:55.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a02086a00a9bf4f",
-      "gmailMessageIds": [
-        "1a02086ba1cc8d51",
-        "1a02086a00a9bf4f",
-        "1a02083951f49ebd",
-        "1a02083527883eb7",
-        "1a020830a76dcc6a"
       ],
       "notes": ""
     },
@@ -620,24 +802,6 @@
       "gmailThreadId": "1a020834cdba4f6e",
       "gmailMessageIds": [
         "1a020834cdba4f6e"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "otter-ai-senior-data-engineer",
-      "company": "Otter.ai",
-      "role": "Senior Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thank you for applying to Otter.ai, Tirth!",
-      "latestFrom": "talent@otter.ai",
-      "lastActivityAt": "2026-08-20T18:51:08.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0208342e09f307",
-      "gmailMessageIds": [
-        "1a0208342e09f307"
       ],
       "notes": ""
     },
@@ -2285,31 +2449,6 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high"
-    },
-    {
-      "id": "general-application-data-engineer",
-      "company": "General Application",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "lastActivityAt": "2026-08-19T19:21:37.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a01b78ce91908a0",
-      "gmailMessageIds": [
-        "1a01b78ce91908a0",
-        "1a01b78b70ebb4cc",
-        "1a01b78b1b1c2f49",
-        "1a01b789e730f62c",
-        "1a01b789ae6742a6",
-        "1a01b78838951bde",
-        "1a01b78723ead4f4",
-        "1a01b7864e246983"
-      ],
-      "notes": ""
     },
     {
       "id": "varite-data-engineer",
@@ -28131,5 +28270,5 @@
       "notes": ""
     }
   ],
-  "updatedAt": "2026-08-20T19:05:16.480Z"
+  "updatedAt": "2026-08-20T19:32:56.213Z"
 }
