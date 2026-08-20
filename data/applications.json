@@ -1,6 +1,61 @@
 {
-  "updatedAt": "2026-08-20T19:53:34.438Z",
+  "updatedAt": "2026-08-20T20:29:55.004Z",
   "applications": [
+    {
+      "id": "state-street-agentic-ai-builder-officer",
+      "company": "State Street",
+      "role": "Agentic AI Builder, Officer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Job Application to State Street: Agentic AI Builder, Officer - State Street Investment Management",
+      "latestFrom": "\"myworkday.com\" <statestreet@myworkday.com>",
+      "lastActivityAt": "2026-08-20T20:24:13.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020d87f2473123",
+      "gmailMessageIds": [
+        "1a020d87f2473123"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "shannon-wilson-general-application",
+      "company": "Shannon & Wilson",
+      "role": "General Application",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for your time",
+      "latestFrom": "\"Shannon & Wilson Inc\" <do-not-reply@mail.paylocity.com>",
+      "lastActivityAt": "2026-08-20T20:09:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020c9e245bc4b0",
+      "gmailMessageIds": [
+        "1a020cae7e9f22cb",
+        "1a020c9e245bc4b0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "corewell-health-data-engineer",
+      "company": "Corewell Health",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on the Data Engineer ( Job ID R218104 ) opportunity at Corewell Health",
+      "latestFrom": "Corewell Health Workday <spectrumhealth@myworkday.com>",
+      "lastActivityAt": "2026-08-20T20:04:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a020c6c66ca133d",
+      "gmailMessageIds": [
+        "1a020c6c66ca133d"
+      ],
+      "notes": ""
+    },
     {
       "id": "humana-data-engineer",
       "company": "Humana",
@@ -2567,37 +2622,6 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high"
-    },
-    {
-      "id": "unknown-data-engineer",
-      "company": "Unknown Company",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-19T19:21:04+00:00",
-      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "gmailThreadId": "1a01b78ce91908a0",
-      "gmailMessageIds": [
-        "1a01b78ce91908a0",
-        "1a01b78b70ebb4cc",
-        "1a01b78b1b1c2f49",
-        "1a01b789e730f62c",
-        "1a01b789ae6742a6",
-        "1a01b78838951bde",
-        "1a01b78723ead4f4",
-        "1a01b7864e246983",
-        "1a01b7850cebf3f0",
-        "1a01b784ee04b0a1"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": null,
-      "aiModel": null,
-      "aiClassifiedAt": null,
-      "aiConfidence": "medium"
     },
     {
       "id": "varite-data-engineer",
@@ -6078,28 +6102,6 @@
       "aiDecision": "Classified as reply_needed",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-1a0115b7446f5fdc",
-      "company": "Unknown Company",
-      "role": "Business Analyst",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-17T20:13:21+00:00",
-      "latestSubject": "Business Analyst -Tirth Shah",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "gmailThreadId": "1a0115af7bc5ee43",
-      "gmailMessageIds": [
-        "1a0115b7446f5fdc"
-      ],
-      "notes": "I have tried calling you. Let me know if you can give me a call.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": null,
-      "aiModel": null,
-      "aiClassifiedAt": null,
       "aiConfidence": "high"
     },
     {
@@ -15562,30 +15564,6 @@
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19fd3bc61b053eda",
-      "company": "Unknown Company",
-      "role": "Data Engineer",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-05T20:36:25+00:00",
-      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "gmailThreadId": "19fd3a443570917a",
-      "gmailMessageIds": [
-        "19fd3bc61b053eda",
-        "19fd3a443570917a",
-        "19fb5141f28e1697"
-      ],
-      "notes": "Job Title: AWS Data Engineer Location: Dallas, TX (Hybrid – 3 days onsite per week) Experience Level: 6–12 years Interview Process: Includes final in-person client interview (mandatory) We are hiring",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": null,
-      "aiModel": null,
-      "aiClassifiedAt": null,
-      "aiConfidence": "medium"
     },
     {
       "id": "msg-19fd3994c5bc6700",
@@ -33613,33 +33591,6 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:32:56.704+00:00",
       "aiConfidence": "high"
-    },
-    {
-      "id": "unknown-general-application",
-      "company": "Unknown Company",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-07-09T18:10:35+00:00",
-      "latestSubject": "Are you looking for full time Opportunity",
-      "latestFrom": "Pavan Prajapati <pavanbde359@gmail.com>",
-      "gmailThreadId": "19ffd4a94a7cfdc4",
-      "gmailMessageIds": [
-        "19ffd4a94a7cfdc4",
-        "19ff73204355f170",
-        "19fba34e2ccb3302",
-        "19f8fe8c8aa26099",
-        "1a0111d7a6eadefe",
-        "19f48133cb613899"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": null,
-      "aiModel": null,
-      "aiClassifiedAt": null,
-      "aiConfidence": "medium"
     },
     {
       "id": "msg-19f4292d63cb563f",
