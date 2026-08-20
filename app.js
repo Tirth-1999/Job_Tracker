@@ -393,14 +393,21 @@ function filteredApplications() {
   const ignoredSet = getIgnoredApps();
 
   const applications = rawApps.map((app) => {
-    const isDone = doneSet.has(app.id);
-    const isIgnored = ignoredSet.has(app.id);
+    // Drive isDone/isIgnored from Supabase manual_action (survives reload & cross-device) OR localStorage (in-session)
+    const isDoneFromDb = app.isManualOverride && app.manualAction === "mark_done";
+    const isIgnoredFromDb = app.isManualOverride && app.manualAction === "ignore";
+    const isDone = doneSet.has(app.id) || isDoneFromDb;
+    const isIgnored = !isDone && (ignoredSet.has(app.id) || isIgnoredFromDb);
 
-    if (isDone && app.status === "reply_needed") {
-      return { ...app, effectiveStatus: "applied", isDone: true, isIgnored: false };
+    if (isDone) {
+      // status was already mutated to "applied" by setAppDone — use it as effectiveStatus directly
+      const eff = app.status === "reply_needed" ? "applied" : app.status;
+      return { ...app, effectiveStatus: eff, isDone: true, isIgnored: false };
     }
-    if (isIgnored && app.status === "reply_needed") {
-      return { ...app, effectiveStatus: "not_related", isDone: false, isIgnored: true };
+    if (isIgnored) {
+      // status was already mutated to "not_related" by setAppIgnored — use it as effectiveStatus directly
+      const eff = app.status === "reply_needed" ? "not_related" : app.status;
+      return { ...app, effectiveStatus: eff, isDone: false, isIgnored: true };
     }
     return { ...app, effectiveStatus: app.status, isDone, isIgnored };
   });

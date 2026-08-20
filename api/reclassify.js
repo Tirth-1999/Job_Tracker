@@ -22,10 +22,83 @@ For every input application, output:
    - "interviewed": Scheduled or confirmed live human conversation (phone screen, technical interview, panel, hiring manager screen, Zoom/Meet call).
    - "reply_needed": Requires candidate action (direct recruiter outreach pitching role and asking for availability/rate, online coding assessments like HackerRank/TestGorilla, prescreen forms, document requests).
    - "applied": Standard application acknowledgement / ATS receipt ("thank you for applying", "received your application").
-   - "rejected": Formal notice of non-selection ("not moving forward", "decided to pursue other candidates", "position has been filled").
+   - "rejected": Formal notice of non-selection ("not moving forward", "credentials of other candidates better fit", "decided to pursue other candidates", "position has been filled", "status update - not selected").
    - "not_related": Account security OTPs, password resets, demographic surveys, Google Voice SMS, general marketing digests.
 5. "confidence" (string): "high", "medium", or "low".
-6. "reason" (string): Concise explanation of why this status was chosen (e.g. "Direct recruiter outreach from staffing agency asking for availability", "Confirmed Zoom interview invitation with hiring manager", "Application confirmation receipt from ATS", "Candidate rejection notice").
+6. "reason" (string): Concise explanation of why this status was chosen (e.g. "Candidate rejection notice: credentials of other candidates better fit", "Application Status Update: non-selection", "Confirmed Zoom interview invitation with hiring manager", "Application confirmation receipt from ATS").
+
+================================================================================
+SECTION 2: CANONICAL STATUS TAXONOMY & STRICT CRITERIA
+================================================================================
+
+--------------------------------------------------------------------------------
+1. "offered" (Highest Stage - Official Job Offer)
+--------------------------------------------------------------------------------
+CRITERIA: Formal offer of employment extended (offer letters, compensation packages, signing requests via DocuSign/PandaDoc).
+
+--------------------------------------------------------------------------------
+2. "interviewed" (Confirmed Live Human Conversation)
+--------------------------------------------------------------------------------
+CRITERIA: Live spoken/video conversation scheduled or confirmed (phone screens, technical panel interviews, hiring manager Zoom/Google Meet/Teams calls).
+
+--------------------------------------------------------------------------------
+3. "reply_needed" (Candidate Action / Response Required)
+--------------------------------------------------------------------------------
+CRITERIA: Direct recruiter outreach pitching role and asking for availability/rate, technical assessments (HackerRank, TestGorilla), or candidate prescreen questionnaires.
+
+--------------------------------------------------------------------------------
+4. "applied" (Application Submission Acknowledgment)
+--------------------------------------------------------------------------------
+CRITERIA: Initial submission receipt acknowledging receipt of application with NO rejection decision ("Thank you for applying to [Company]", "We received your application").
+
+--------------------------------------------------------------------------------
+5. "rejected" (Terminal Negative Outcome / Not Moving Forward)
+--------------------------------------------------------------------------------
+CRITERIA:
+- Formal notification that the candidate will not be progressing further.
+- Position closed, position filled, candidate not selected after application review or after interview.
+- Phrasings include:
+  - "credentials of other candidates better fit the requirements"
+  - "decided not to move forward with your application" / "will not be moving forward"
+  - "decided to pursue other candidates" / "narrowed our search to other candidates"
+  - "extremely competitive candidate pool / high volume of applications" + "unable to offer / decided not to advance"
+  - "position has been filled" / "position has been cancelled" / "no longer active"
+  - "keep your resume/profile on file for future openings" (when not selected for current opening)
+  - "we wish you all the best in your job search" / "best of luck in your search"
+  - "Application Status Update" informing candidate of non-selection.
+
+CRITICAL PRECEDENCE RULE (REJECTION OVERRIDE RULE):
+- Rejection emails frequently begin with polite opening pleasantries such as "Thank you for your interest in...", "Thank you for submitting your application...", or "We appreciate the time you took to apply...".
+- If an email or note contains BOTH a polite "thank you for applying / interest" phrase AND ANY rejection or non-selection statement ("decided not to move forward", "credentials of other candidates better fit", "pursue other candidates", "position has been filled", "not selected", "wish you best in your search"), it MUST ALWAYS be classified as "rejected", NEVER "applied"! The presence of non-selection language completely supersedes application receipt phrasing.
+
+--------------------------------------------------------------------------------
+6. "not_related" (System Noise, Security, Surveys & Platform Emails)
+--------------------------------------------------------------------------------
+CRITERIA: OTP verification codes, password resets, EEO surveys, general job alert digests.
+
+================================================================================
+SECTION 3: FEW-SHOT EXAMPLES
+================================================================================
+
+Example 1 (Tesla Rejection - Competitive Pool / Credentials Better Fit):
+- INPUT: {"id": "tesla-data-engineer", "company": "Tesla", "role": "Data Engineer", "latest_subject": "Thank you – we’ve received your Tesla application", "latest_from": "Tesla <noreply@tesla.com>", "notes": "Thank you for your interest in the Data Engineer position at Tesla. We were fortunate to have received a high volume of applications... After carefully reviewing your application, we have determined that the credentials of other candidates better fit the requirements of the position. For this reason, we have decided not to move forward with your application at this time. We wish you all the best in your job search."}
+-> OUTPUT: {"id": "tesla-data-engineer", "company": "Tesla", "role": "Data Engineer", "status": "rejected", "confidence": "high", "reason": "Candidate rejection notice: credentials of other candidates better fit"}
+
+Example 2 (CSpring Rejection - Application Status Update):
+- INPUT: {"id": "cspring-general-application", "company": "Cspring", "role": "General Application", "latest_subject": "CSpring Application Status Update", "latest_from": "Greg Weisiger <reply-to-sender@mail.paylocity.com>", "notes": "CSpring Application Status Update - not moving forward with application"}
+-> OUTPUT: {"id": "cspring-general-application", "company": "CSpring", "role": "General Application", "status": "rejected", "confidence": "high", "reason": "Candidate rejection notice: Application Status Update"}
+
+Example 3 (Ashby / Talkiatry / Parafin / Livefront Rejection):
+- INPUT: {"id": "talkiatry-data-engineer", "company": "Talkiatry Hiring", "role": "Data Engineer", "latest_subject": "Update from Talkiatry", "latest_from": "Talkiatry <no-reply@ashbyhq.com>", "notes": "Thank you again for your interest in Talkiatry... After careful review, we have decided not to move forward with your candidacy at this time."}
+-> OUTPUT: {"id": "talkiatry-data-engineer", "company": "Talkiatry", "role": "Data Engineer", "status": "rejected", "confidence": "high", "reason": "Candidate rejection notice: decided not to move forward"}
+
+Example 4 (Workday / PNC Position Closed / Filled):
+- INPUT: {"id": "pnc-data-engineer", "company": "PNC", "role": "Data Engineer", "latest_subject": "Update on your job submission", "latest_from": "pnc@myworkday.com", "notes": "We have narrowed the search for this position to other candidates who more closely match the specific requirements. At this time the position has been filled."}
+-> OUTPUT: {"id": "pnc-data-engineer", "company": "PNC", "role": "Data Engineer", "status": "rejected", "confidence": "high", "reason": "Candidate rejection notice: position filled / search narrowed"}
+
+Example 5 (Standard Application Receipt):
+- INPUT: {"id": "stripe-data-infra", "company": "Stripe", "role": "Data Infrastructure Engineer", "latest_subject": "Thank you for applying to Stripe!", "latest_from": "no-reply@us.greenhouse-mail.io", "notes": "Thanks for applying. We have received your application and our team is currently reviewing it."}
+-> OUTPUT: {"id": "stripe-data-infra", "company": "Stripe", "role": "Data Infrastructure Engineer", "status": "applied", "confidence": "high", "reason": "ATS Application Receipt"}
 
 ================================================================================
 OUTPUT FORMAT:

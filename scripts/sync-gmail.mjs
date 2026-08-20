@@ -156,8 +156,27 @@ async function main() {
 
     if (sbUrl && sbKey && data.applications.length > 0) {
       try {
-        console.log(`Syncing ${data.applications.length} applications to Supabase Cloud Database...`);
-        const sbPayload = data.applications.map((app) => ({
+        // ── Fetch the set of records the user manually overrode — we MUST NOT overwrite those ──
+        const manualOverrideIds = new Set();
+        try {
+          const moRes = await fetch(
+            `${sbUrl}/rest/v1/applications?select=id&is_manual_override=eq.true`,
+            { headers: { apikey: sbKey, Authorization: `Bearer ${sbKey}`, Accept: "application/json" } }
+          );
+          if (moRes.ok) {
+            const moRows = await moRes.json();
+            if (Array.isArray(moRows)) moRows.forEach((r) => manualOverrideIds.add(r.id));
+            if (manualOverrideIds.size > 0) {
+              console.log(`⚠️  Excluding ${manualOverrideIds.size} manually overridden records from batch sync.`);
+            }
+          }
+        } catch (moErr) {
+          console.warn("Could not fetch manual override IDs:", moErr.message);
+        }
+
+        const appsToSync = data.applications.filter((app) => !manualOverrideIds.has(app.id));
+        console.log(`Syncing ${appsToSync.length} applications to Supabase Cloud Database (${manualOverrideIds.size} manually overridden records protected)...`);
+        const sbPayload = appsToSync.map((app) => ({
           id: app.id,
           company: app.company,
           role: app.role,
@@ -521,12 +540,20 @@ EXAMPLES:
 --------------------------------------------------------------------------------
 CRITERIA:
 - Explicit formal notification that the application or candidacy will not be progressing further.
-- Position closed, position cancelled, or candidate not selected after review or interview.
-EXAMPLES:
-- "Update on your application to [Company]" ("...after careful consideration, we have decided to pursue other candidates...")
-- "Thank you for interviewing with [Company] - unfortunately, we are not moving forward at this time"
-- "The position of [Role] has been filled / cancelled"
-- "We will keep your resume on file for future openings"
+- Position closed, position cancelled, candidate not selected after review, or candidate not selected after interview.
+- Phrasings include:
+  - "credentials of other candidates better fit the requirements"
+  - "decided not to move forward with your application" / "will not be moving forward"
+  - "decided to pursue other candidates" / "narrowed our search to other candidates"
+  - "extremely competitive candidate pool" / "high volume of applications" + "unable to offer" / "decided not to advance"
+  - "position has been filled" / "position has been cancelled" / "no longer active"
+  - "keep your resume/profile on file for future openings" (when not selected for current opening)
+  - "we wish you all the best in your job search" / "best of luck in your search"
+  - "Application Status Update" informing candidate of non-selection.
+
+CRITICAL PRECEDENCE RULE (REJECTION OVERRIDE RULE):
+- Rejection emails frequently begin with polite opening pleasantries such as "Thank you for your interest in...", "Thank you for submitting your application...", or "We appreciate the time you took to apply...".
+- If an email contains BOTH a polite "thank you for applying / interest" phrase AND ANY rejection or non-selection statement ("decided not to move forward", "credentials of other candidates better fit", "pursue other candidates", "position has been filled", "not selected", "wish you best in your search"), it MUST ALWAYS be classified as "rejected", NEVER "applied"! The presence of non-selection language completely supersedes application receipt phrasing.
 
 --------------------------------------------------------------------------------
 6. "not_related" (System Noise, Security, Surveys & Platform Emails)
@@ -583,10 +610,34 @@ Example 6: Official Job Offer Letter
 - SNIPPET: "We are thrilled to offer you the position of Senior Data Engineer at [Company]. Please review the attached offer letter and compensation agreement."
 -> OUTPUT: {"is_job": true, "company": "Company", "role": "Senior Data Engineer", "status": "offered", "confidence": "high"}
 
-Example 7: Formal Rejection Notice
+Example 7A: Formal Rejection Notice (Tesla Style - Competitive Pool / Credentials of other candidates)
+- FROM: "Tesla Recruiting <noreply@tesla.com>"
+- SUBJECT: "Thank you – we’ve received your Tesla application"
+- SNIPPET: "Hello Tirth, Thank you for your interest in the Data Engineer, Applications Engineering & Manufacturing position at Tesla. We were fortunate to have received a high volume of applications, resulting in an extremely competitive candidate pool. After carefully reviewing your application, we have determined that the credentials of other candidates better fit the requirements of the position. For this reason, we have decided not to move forward with your application at this time. We encourage you to keep an eye on our careers site and apply for other opportunities... Thank you again, and we wish you all the best in your job search."
+-> OUTPUT: {"is_job": true, "company": "Tesla", "role": "Data Engineer", "status": "rejected", "confidence": "high"}
+
+Example 7B: Formal Rejection Notice (CSpring / Paylocity Style - Application Status Update)
+- FROM: "Greg Weisiger <reply-to-sender@mail.paylocity.com>"
+- SUBJECT: "CSpring Application Status Update"
+- SNIPPET: "Thank you for your interest in CSpring. After review of your application for the Data Engineer position, we have decided not to move forward with your candidacy at this time. We wish you the best in your job search."
+-> OUTPUT: {"is_job": true, "company": "CSpring", "role": "Data Engineer", "status": "rejected", "confidence": "high"}
+
+Example 7C: Formal Rejection Notice (Ashby / Talkiatry / Parafin / Profound Style)
+- FROM: "Talkiatry Hiring Team <no-reply@ashbyhq.com>"
+- SUBJECT: "Update from Talkiatry"
+- SNIPPET: "Hello Tirth, Thank you again for your interest in Talkiatry and for taking the time to apply for the Data Engineer role. After careful review, we have decided not to move forward with your candidacy at this time. We appreciate you sharing your experience with us."
+-> OUTPUT: {"is_job": true, "company": "Talkiatry", "role": "Data Engineer", "status": "rejected", "confidence": "high"}
+
+Example 7D: Formal Rejection Notice (PNC / Workday Closed Role / Filled Position Style)
+- FROM: "PNC Recruiting <pnc@myworkday.com>"
+- SUBJECT: "Update on your job submission - Data Engineer"
+- SNIPPET: "Dear Tirth, Thank you for your interest in the Data Engineer position at PNC. We have narrowed the search for this position to other candidates who more closely match the specific requirements. At this time the position has been filled. We will keep your resume on file."
+-> OUTPUT: {"is_job": true, "company": "PNC", "role": "Data Engineer", "status": "rejected", "confidence": "high"}
+
+Example 7E: Post-Interview Rejection Notice
 - FROM: "Spotify Talent <no-reply@spotify.com>"
-- SUBJECT: "Update on your Spotify application"
-- SNIPPET: "Thank you for your interest in Spotify. While your background is impressive, we have decided to move forward with other candidates whose experience more closely matches this opening."
+- SUBJECT: "Update on your Spotify interview"
+- SNIPPET: "Thank you for taking the time to interview with our engineering team. While your background is impressive, we have decided to move forward with other candidates whose experience more closely matches this opening."
 -> OUTPUT: {"is_job": true, "company": "Spotify", "role": "Data Engineer", "status": "rejected", "confidence": "high"}
 
 Example 8: Candidate Questionnaire / Prescreen Form
@@ -607,7 +658,7 @@ Carefully evaluate the provided batch of emails according to all the above rules
       id: item.message.id,
       from: item.parsed.from.slice(0, 100),
       subject: item.parsed.subject.slice(0, 140),
-      snippet: item.parsed.body.slice(0, 500)
+      snippet: item.parsed.body.slice(0, 2000)
     }));
 
     try {
@@ -776,7 +827,11 @@ function extractWithHeuristics(item) {
   let confidence = "low";
   let reason = "keyword heuristic";
 
-  if (/unfortunately|not moving forward|other candidates|will not be proceeding|not selected|decided not to move forward/i.test(haystack)) {
+  if (
+    /unfortunately|not moving forward|will not be moving forward|decided not to move forward|decided not to proceed|will not be proceeding|not selected|credentials of other candidates|pursue other candidates|pursuing other candidates|pursuing other applicants|selected other candidates|selected another candidate|chosen another candidate|position has been filled|position is filled|position has been cancelled|position was cancelled|no longer under consideration|not selected for this role|not selected for an interview|unable to offer you an interview|cannot offer you an interview|wish you (all )?the best in your (job )?search|best of luck in your (job )?search|keep your (resume|information|profile) on file|decided to proceed with other candidates|decided to proceed with another candidate|narrowed (our|the) search/i.test(
+      haystack
+    )
+  ) {
     status = "rejected";
     confidence = "high";
     reason = "rejection keywords";
@@ -963,6 +1018,17 @@ function upsertApplication(data, incoming) {
 
   if (!existing) {
     data.applications.push(incoming);
+    return;
+  }
+
+  // If the user manually overrode this record's status (via Mark Done / Ignore / Move Lane),
+  // preserve their decision — only refresh metadata so the card stays up to date.
+  if (existing.isManualOverride) {
+    if (incoming.latestSubject) existing.latestSubject = incoming.latestSubject;
+    if (incoming.latestFrom) existing.latestFrom = incoming.latestFrom;
+    if (incoming.lastActivityAt > (existing.lastActivityAt || "")) existing.lastActivityAt = incoming.lastActivityAt;
+    existing.gmailMessageIds = [...new Set([...(existing.gmailMessageIds ?? []), ...incoming.gmailMessageIds])];
+    console.log(`⚠️  Skipping AI status overwrite for manually overridden record: ${existing.id} (${existing.company})`);
     return;
   }
 
