@@ -1,6 +1,97 @@
 {
-  "updatedAt": "2026-08-20T12:52:07.458Z",
+  "updatedAt": "2026-08-20T13:49:02.781Z",
   "applications": [
+    {
+      "id": "purdue-for-life-foundation-data-operations-engineer",
+      "company": "Purdue For Life Foundation",
+      "role": "Data Operations Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Data Operations Engineer position",
+      "latestFrom": "Purdue for Life Foundation <f1316a8d-2556-491e-9a0d-469d65bc8a8b@pinpoint.email>",
+      "lastActivityAt": "2026-08-20T13:48:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f6e182e9b3ce",
+      "gmailMessageIds": [
+        "1a01f6e182e9b3ce"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "visionairy-general-application",
+      "company": "Visionairy",
+      "role": "General Application",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on Your Visionairy Application",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-20T13:41:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a019a581589976d",
+      "gmailMessageIds": [
+        "1a019a581589976d",
+        "1a01f67a3ced8b53"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "axogen-senior-analytics-engineer",
+      "company": "Axogen",
+      "role": "Senior Analytics Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update from Axogen",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-20T13:28:00.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f5b70338c475",
+      "gmailMessageIds": [
+        "1a01f5b70338c475"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "k1x-data-engineer",
+      "company": "K1X",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Data Engineer - K1X",
+      "latestFrom": "K1X <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-08-20T13:14:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f4effd2200de",
+      "gmailMessageIds": [
+        "1a01f4effd2200de"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "synergenx-general-application",
+      "company": "Synergenx",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "SynergenX/ LowT/ HerKare Candidate Feedback Survey",
+      "latestFrom": "\"mtadros@synergenx.com via SurveyMonkey\" <member@surveymonkeyuser.com>",
+      "lastActivityAt": "2026-08-20T13:13:53.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f4e81978abf1",
+      "gmailMessageIds": [
+        "1a01f4e81978abf1"
+      ],
+      "notes": ""
+    },
     {
       "id": "optomi-data-engineer",
       "company": "Optomi",
@@ -1923,24 +2014,6 @@
       "gmailMessageIds": [
         "19fb2f6af3dee10c",
         "1a019a6feb0a2fa6"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "visionairy-general-application",
-      "company": "Visionairy",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thank you for applying to Visionairy",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-19T10:51:11.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a019a581589976d",
-      "gmailMessageIds": [
-        "1a019a581589976d"
       ],
       "notes": ""
     },
