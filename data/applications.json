@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-19T22:52:20.101Z",
+  "updatedAt": "2026-08-20T04:38:41.781Z",
   "applications": [
+    {
+      "id": "acrisure-general-application",
+      "company": "Acrisure",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Your Interest in Acrisure",
+      "latestFrom": "acrisure@myworkday.com",
+      "lastActivityAt": "2026-08-20T04:21:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01d66eb4a2d942",
+      "gmailMessageIds": [
+        "1a01d66eb4a2d942"
+      ],
+      "notes": ""
+    },
     {
       "id": "uci-data-engineer-4",
       "company": "UCI",
