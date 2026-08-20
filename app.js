@@ -37,19 +37,6 @@ function initSupabase() {
   return supabaseClient;
 }
 
-// ─── GitHub Token Helpers ─────────────────────────────────────────────────────
-function getGitHubToken() {
-  return localStorage.getItem("job_tracker_gh_token") || "";
-}
-
-function setGitHubToken(token) {
-  if (token) {
-    localStorage.setItem("job_tracker_gh_token", token.trim());
-  } else {
-    localStorage.removeItem("job_tracker_gh_token");
-  }
-}
-
 // ─── Map in-memory app object → Supabase row ─────────────────────────────────
 // manualAction: string like "move_to_interviewed" | "mark_done" | "ignore" | "reopen" | null
 function appToSupabaseRow(app, manualAction = null) {
@@ -105,10 +92,10 @@ async function syncAppToSupabase(app, manualAction = null) {
     .single();
 
   if (error) {
-    console.error(`❌ Supabase upsert failed [${app.id}]:`, error.message);
+    console.error(`[Supabase] Upsert failed [${app.id}]:`, error.message);
     return false;
   }
-  console.log(`✅ Supabase row confirmed: ${app.company} → status="${data?.status}", updated_at=${data?.updated_at}, manual=${data?.is_manual_override}, action=${data?.manual_action}`);
+  console.log(`[Supabase] Row confirmed: ${app.company} → status="${data?.status}", updated_at=${data?.updated_at}, manual=${data?.is_manual_override}, action=${data?.manual_action}`);
   return true;
 }
 
@@ -124,12 +111,12 @@ async function syncAllAppsToSupabase(apps, label = "batch") {
   for (let i = 0; i < rows.length; i += CHUNK) {
     const { error } = await sb.from("applications").upsert(rows.slice(i, i + CHUNK), { onConflict: "id" });
     if (error) {
-      console.error(`❌ Batch chunk ${Math.floor(i / CHUNK) + 1} failed [${label}]:`, error.message);
+      console.error(`[Supabase] Batch chunk ${Math.floor(i / CHUNK) + 1} failed [${label}]:`, error.message);
     } else {
       ok += Math.min(CHUNK, rows.length - i);
     }
   }
-  console.log(`✅ Supabase batch sync [${label}]: ${ok}/${rows.length} rows committed.`);
+  console.log(`[Supabase] Batch sync [${label}]: ${ok}/${rows.length} rows committed.`);
 }
 
 // ─── Trigger Gmail Sync via Vercel Serverless Proxy ──────────────────────────
@@ -140,7 +127,7 @@ async function triggerGmailSync(appendConsole, onProgress = null) {
   };
 
   setProgress("Dispatching workflow to GitHub Actions...", 15);
-  appendConsole("📡 Dispatching Gmail Sync to GitHub Actions...");
+  appendConsole("Dispatching Gmail Sync to GitHub Actions...");
 
   // 1. Ask our Vercel serverless function to trigger the workflow
   let triggerData;
@@ -148,28 +135,28 @@ async function triggerGmailSync(appendConsole, onProgress = null) {
     const res = await fetch("/api/trigger-sync", { method: "POST" });
     triggerData = await res.json();
     if (!res.ok || triggerData.error) {
-      appendConsole(`❌ Trigger failed: ${triggerData.error || "Unknown error"}`, "error");
+      appendConsole(`Trigger failed: ${triggerData.error || "Unknown error"}`, "error");
       setProgress("Failed to dispatch workflow", 0);
       return { success: false };
     }
   } catch (err) {
-    appendConsole(`❌ Could not reach /api/trigger-sync: ${err.message}`, "error");
+    appendConsole(`Could not reach /api/trigger-sync: ${err.message}`, "error");
     setProgress("Network error reaching serverless endpoint", 0);
     return { success: false };
   }
 
   const runId = triggerData.run_id;
-  appendConsole(`✅ Workflow dispatched! Run ID: ${runId ?? "detecting..."}`, "success");
+  appendConsole(`Workflow dispatched. Run ID: ${runId ?? "detecting..."}`, "success");
   setProgress("GitHub Actions runner initialized. Executing Gmail ingestion pipeline...", 30);
 
   if (!runId) {
-    appendConsole("⚠️ No run ID returned — GitHub may still be queueing it. Reloading data in 30s...", "error");
+    appendConsole("No run ID returned — GitHub may still be queueing it. Reloading data in 30s...", "error");
     await new Promise((r) => setTimeout(r, 30000));
     return { success: false };
   }
 
   // 2. Poll /api/sync-status until complete (up to 5 minutes)
-  appendConsole("⏳ Polling workflow status... (Gmail sync typically takes 1–3 minutes)");
+  appendConsole("Polling workflow status... (Gmail sync typically takes 1–3 minutes)");
   for (let poll = 0; poll < 60; poll++) {
     await new Promise((r) => setTimeout(r, 5000));
     const elapsed = Math.round((poll + 1) * 5);
@@ -183,12 +170,12 @@ async function triggerGmailSync(appendConsole, onProgress = null) {
       if (statusData.status === "completed") {
         if (statusData.conclusion === "success") {
           setProgress("Sync complete! Refreshing dataset from Supabase...", 95);
-          appendConsole(`✅ Gmail Sync completed (${elapsed}s). Reloading from Supabase...`, "success");
+          appendConsole(`Gmail Sync completed (${elapsed}s). Reloading from Supabase...`, "success");
           return { success: true };
         } else {
           setProgress(`Workflow ${statusData.conclusion}`, 100);
           appendConsole(
-            `❌ Workflow finished: ${statusData.conclusion}. <a href="${statusData.html_url}" target="_blank">View run →</a>`,
+            `Workflow finished: ${statusData.conclusion}. <a href="${statusData.html_url}" target="_blank">View run →</a>`,
             "error"
           );
           return { success: false };
@@ -196,7 +183,7 @@ async function triggerGmailSync(appendConsole, onProgress = null) {
       }
 
       if (poll % 6 === 5) {
-        appendConsole(`⏳ Still running... (${elapsed}s, status: ${statusData.status})`);
+        appendConsole(`Still running... (${elapsed}s, status: ${statusData.status})`);
       }
     } catch (err) {
       // Transient fetch error — keep polling
@@ -205,42 +192,8 @@ async function triggerGmailSync(appendConsole, onProgress = null) {
   }
 
   setProgress("Workflow timed out polling after 5 minutes", 90);
-  appendConsole("⚠️ Workflow still running after 5 minutes. Reloading data from Supabase now.", "error");
+  appendConsole("Workflow still running after 5 minutes. Reloading data from Supabase now.", "error");
   return { success: false };
-}
-
-
-
-// ─── Optional GitHub file commit (backup) ─────────────────────────────────────
-async function syncToGitHub(commitMessage = "Update applications dataset from Job Tracker Dashboard") {
-  const token = getGitHubToken();
-  if (!token) return { success: false, reason: "no_token" };
-
-  try {
-    const getRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`, {
-      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" }
-    });
-    if (!getRes.ok) throw new Error((await getRes.json()).message || `HTTP ${getRes.status}`);
-    const { sha } = await getRes.json();
-
-    const jsonStr = JSON.stringify(state.data, null, 2) + "\n";
-    const utf8Bytes = new TextEncoder().encode(jsonStr);
-    let binary = "";
-    for (let i = 0; i < utf8Bytes.byteLength; i++) binary += String.fromCharCode(utf8Bytes[i]);
-    const contentBase64 = btoa(binary);
-
-    const putRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`, {
-      method: "PUT",
-      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" },
-      body: JSON.stringify({ message: `${commitMessage} [skip ci]`, content: contentBase64, sha, branch: "main" })
-    });
-    if (!putRes.ok) throw new Error((await putRes.json()).message || `HTTP ${putRes.status}`);
-    console.log("✅ GitHub committed:", commitMessage);
-    return { success: true };
-  } catch (err) {
-    console.error("GitHub sync error:", err.message);
-    return { success: false, error: err.message };
-  }
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -320,9 +273,9 @@ function extractRequisitionId(text) {
   return null;
 }
 
-function normalizeComp(name) {
+function normalizeCompany(name) {
   if (!name) return "";
-  let n = name.toLowerCase().trim();
+  let n = String(name).toLowerCase().trim();
   n = n.replace(/\b(inc\.?|llc\.?|corp\.?|corporation|co\.?|ltd\.?|hiring team|recruiting team|hiring|recruiting|careers|ta|talent acquisition)\b/gi, "").trim();
   return n.replace(/[^a-z0-9]/g, "");
 }
@@ -360,7 +313,7 @@ function deduplicateAndConsolidateApplications(appList) {
     const currThread = current.gmailThreadId;
     const currMsgIds = new Set(current.gmailMessageIds || []);
     if (current.id) currMsgIds.add(current.id.replace(/^msg-/, ""));
-    const currCompNorm = normalizeComp(current.company);
+    const currCompNorm = normalizeCompany(current.company);
     const currReqId = extractRequisitionId(`${current.latestSubject || ""} ${current.notes || ""}`);
 
     for (let j = i + 1; j < prepared.length; j++) {
@@ -368,7 +321,7 @@ function deduplicateAndConsolidateApplications(appList) {
       const other = prepared[j];
       const otherThread = other.gmailThreadId;
       const otherMsgIds = (other.gmailMessageIds || []).concat(other.id ? [other.id.replace(/^msg-/, "")] : []);
-      const otherCompNorm = normalizeComp(other.company);
+      const otherCompNorm = normalizeCompany(other.company);
       const otherReqId = extractRequisitionId(`${other.latestSubject || ""} ${other.notes || ""}`);
 
       let isMatch = false;
@@ -755,8 +708,8 @@ function renderCard(app) {
   const status = normalizeStatus(app.effectiveStatus || app.status);
   const gmailUrl = getGmailUrl(app);
 
-  const doneBadge = app.isDone ? `<span class="pill pill-done">✅ Action Completed</span>` : "";
-  const ignoredBadge = app.isIgnored ? `<span class="pill pill-ignored">🚫 Ignored</span>` : "";
+  const doneBadge = app.isDone ? `<span class="pill pill-done">Action Completed</span>` : "";
+  const ignoredBadge = app.isIgnored ? `<span class="pill pill-ignored">Ignored</span>` : "";
 
   // Manual override audit badge — shows when a human moved this card
   const manualActionLabels = {
@@ -771,36 +724,36 @@ function renderCard(app) {
     reopen: "Reopened"
   };
   const manualBadge = app.isManualOverride
-    ? `<span class="pill pill-manual" title="Manually changed on ${app.manualChangedAt ? new Date(app.manualChangedAt).toLocaleString() : "unknown"}">✋ ${manualActionLabels[app.manualAction] || app.manualAction || "Manual Override"}</span>`
+    ? `<span class="pill pill-manual" title="Manually changed on ${app.manualChangedAt ? new Date(app.manualChangedAt).toLocaleString() : "unknown"}">Manual: ${manualActionLabels[app.manualAction] || app.manualAction || "Manual Override"}</span>`
     : "";
 
   const aiBadge = app.aiDecision
-    ? `<span class="pill pill-ai" title="AI Engine: ${escapeHtml(app.aiModel || "Gemini Flash")}&#10;Decision: ${escapeHtml(app.aiDecision)}&#10;Evaluated: ${app.aiClassifiedAt ? new Date(app.aiClassifiedAt).toLocaleString() : "Recently"}">🤖 ${escapeHtml(app.aiDecision.length > 30 ? app.aiDecision.slice(0, 28) + '…' : app.aiDecision)}</span>`
+    ? `<span class="pill pill-ai" title="AI Engine: ${escapeHtml(app.aiModel || "Gemini Flash")}&#10;Decision: ${escapeHtml(app.aiDecision)}&#10;Evaluated: ${app.aiClassifiedAt ? new Date(app.aiClassifiedAt).toLocaleString() : "Recently"}">AI: ${escapeHtml(app.aiDecision.length > 30 ? app.aiDecision.slice(0, 28) + '…' : app.aiDecision)}</span>`
     : "";
 
   let actionButton = "";
   if (status === "reply_needed" && !app.isDone && !app.isIgnored) {
     actionButton = `
       <div class="card-actions">
-        <button class="btn-action btn-mark-done" data-id="${app.id}" title="Mark this assessment or reply as completed">✅ Mark Done</button>
-        <button class="btn-action btn-ignore" data-id="${app.id}" title="Ignore this email and move it to Other Emails">🚫 Ignore</button>
+        <button class="btn-action btn-mark-done" data-id="${app.id}" title="Mark this assessment or reply as completed">Mark Done</button>
+        <button class="btn-action btn-ignore" data-id="${app.id}" title="Ignore this email and move it to Other Emails">Ignore</button>
       </div>
     `;
   } else if (app.isDone) {
     actionButton = `
       <div class="card-actions">
-        <button class="btn-action btn-reopen" data-id="${app.id}">↩ Reopen to Reply Needed</button>
+        <button class="btn-action btn-reopen" data-id="${app.id}">Reopen to Reply Needed</button>
       </div>
     `;
   } else if (app.isIgnored) {
     actionButton = `
       <div class="card-actions">
-        <button class="btn-action btn-reopen" data-id="${app.id}">↩ Move Back to Reply Needed</button>
+        <button class="btn-action btn-reopen" data-id="${app.id}">Move Back to Reply Needed</button>
       </div>
     `;
   }
 
-  const msgCountBadge = app.gmailMessageIds?.length > 1 ? `<span class="pill" title="${app.gmailMessageIds.length} emails in this thread">📬 ${app.gmailMessageIds.length} emails</span>` : "";
+  const msgCountBadge = app.gmailMessageIds?.length > 1 ? `<span class="pill" title="${app.gmailMessageIds.length} emails in this thread">${app.gmailMessageIds.length} emails</span>` : "";
 
   // Dropdown options for moving cards across all pipeline stages
   const MOVE_OPTIONS = [
@@ -1074,7 +1027,7 @@ function renderApplications(applications) {
         ${pagedRows.map((app) => {
           const status = normalizeStatus(app.effectiveStatus || app.status);
           const aiTag = app.aiDecision
-            ? `<span class="pill pill-ai" title="AI Engine: ${escapeHtml(app.aiModel || 'Gemini Flash')}&#10;Decision: ${escapeHtml(app.aiDecision)}&#10;Evaluated: ${app.aiClassifiedAt ? new Date(app.aiClassifiedAt).toLocaleString() : 'Recently'}">🤖 ${escapeHtml(app.aiDecision)}</span>`
+            ? `<span class="pill pill-ai" title="AI Engine: ${escapeHtml(app.aiModel || 'Gemini Flash')}&#10;Decision: ${escapeHtml(app.aiDecision)}&#10;Evaluated: ${app.aiClassifiedAt ? new Date(app.aiClassifiedAt).toLocaleString() : 'Recently'}">AI: ${escapeHtml(app.aiDecision)}</span>`
             : `<span style="color:var(--muted);font-size:11px;">Default</span>`;
           return `
             <tr>
@@ -1126,11 +1079,11 @@ function renderOtherEmails(applications) {
       <thead><tr><th>Sender / Organization</th><th>Subject</th><th>Classification & AI Decision</th><th>Date</th><th>Action</th></tr></thead>
       <tbody>
         ${pagedRows.map((app) => {
-          const ignoredTag = app.isIgnored ? `<span class="pill pill-ignored">🚫 Ignored</span>` : `<span class="pill status-pill status-not-related">Other / Review</span>`;
+          const ignoredTag = app.isIgnored ? `<span class="pill pill-ignored">Ignored</span>` : `<span class="pill status-pill status-not-related">Other / Review</span>`;
           const aiTag = app.aiDecision
-            ? `<div style="margin-top:4px;"><span class="pill pill-ai" title="AI Model: ${escapeHtml(app.aiModel || '')}&#10;Decision: ${escapeHtml(app.aiDecision)}">🤖 ${escapeHtml(app.aiDecision)}</span></div>`
+            ? `<div style="margin-top:4px;"><span class="pill pill-ai" title="AI Model: ${escapeHtml(app.aiModel || '')}&#10;Decision: ${escapeHtml(app.aiDecision)}">AI: ${escapeHtml(app.aiDecision)}</span></div>`
             : "";
-          const reopenBtn = app.isIgnored ? `<button class="btn-action btn-reopen" data-id="${app.id}">↩ Reopen</button>` : "";
+          const reopenBtn = app.isIgnored ? `<button class="btn-action btn-reopen" data-id="${app.id}">Reopen</button>` : "";
           return `
             <tr>
               <td><strong>${escapeHtml(app.company || "Other")}</strong></td>
@@ -1408,7 +1361,7 @@ function renderAnalytics(applications) {
         <span>Activity Log for ${formattedSelectedDate} (${filteredDayApps.length} ${currentCategoryFilter === "all" ? "entries" : `"${currentCategoryFilter.replace("_", " ")}" entries`})</span>
         ${
           currentCategoryFilter !== "all"
-            ? `<button class="cat-tag-btn" data-category="all" style="font-size:11px;padding:3px 8px;">✕ Clear Filter</button>`
+            ? `<button class="cat-tag-btn" data-category="all" style="font-size:11px;padding:3px 8px;">Clear Filter</button>`
             : ""
         }
       </div>
@@ -1551,10 +1504,6 @@ function attachPaginationListeners(prefix, totalItems, pageKey, pageSizeKey, rer
       rerenderFn();
     });
   });
-}
-
-function normalizeCompany(company) {
-  return String(company || "unknown").trim().toLowerCase();
 }
 
 const STATUS_LABELS = {
@@ -2039,31 +1988,6 @@ function attachServicesListeners(applications) {
     consoleOut.innerHTML += `<div style="margin-bottom:4px;">[${time}] ${prefix}${escapeHtml(text)}</div>`;
     consoleCard.scrollTop = consoleCard.scrollHeight;
   };
-
-  // GitHub Token Handlers
-  const btnSaveToken = byId("btnSaveGhToken");
-  const tokenInput = byId("ghTokenInput");
-  if (btnSaveToken && tokenInput) {
-    btnSaveToken.addEventListener("click", () => {
-      const val = tokenInput.value.trim();
-      if (val && !val.includes("••")) {
-        setGitHubToken(val);
-        appendConsole("GitHub Cloud Token saved. Automatic direct cloud sync is now ACTIVE.", "success");
-        renderServices(applications);
-      } else if (!val) {
-        appendConsole("Please enter a valid GitHub Personal Access Token (PAT).", "error");
-      }
-    });
-  }
-
-  const btnClearToken = byId("btnClearGhToken");
-  if (btnClearToken) {
-    btnClearToken.addEventListener("click", () => {
-      setGitHubToken("");
-      appendConsole("GitHub Cloud Token disconnected. Tracker reverted to local mode.", "info");
-      renderServices(applications);
-    });
-  }
 
   // OpenRouter API Key Handlers
   const btnSaveOrKey = byId("btnSaveOrKey");
@@ -2582,17 +2506,17 @@ byId("searchInput").addEventListener("input", (event) => {
 byId("refreshButton").addEventListener("click", async () => {
   const btn = byId("refreshButton");
   const origText = btn.textContent;
-  btn.textContent = "🔄 Refreshing...";
+  btn.textContent = "Refreshing...";
   btn.disabled = true;
   try {
     await loadData();
-    btn.textContent = "✅ Updated!";
+    btn.textContent = "Updated";
     setTimeout(() => {
       btn.textContent = origText;
       btn.disabled = false;
     }, 1200);
   } catch (err) {
-    btn.textContent = "❌ Failed";
+    btn.textContent = "Failed";
     setTimeout(() => {
       btn.textContent = origText;
       btn.disabled = false;

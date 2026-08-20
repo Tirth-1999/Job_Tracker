@@ -53,6 +53,7 @@ const server = http.createServer(async (req, res) => {
     res.end("Refresh token created successfully! You can close this tab and return to the terminal.");
 
     const refreshToken = token.refresh_token;
+    if (refreshToken) {
       const currentKey = process.env.OPENROUTER_API_KEY || "your_openrouter_api_key_here";
       const envContent = [
         `GMAIL_CLIENT_ID=${clientId}`,
