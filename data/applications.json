@@ -1,6 +1,187 @@
 {
-  "updatedAt": "2026-08-20T11:27:49.126Z",
+  "updatedAt": "2026-08-20T11:55:14.459Z",
   "applications": [
+    {
+      "id": "ascot-data-engineer",
+      "company": "Ascot",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your recent job application for Data Engineer - 897",
+      "latestFrom": "Talent Acquisition at Ascot Group <emkq.fa.sender@workflow.mail.em2.cloud.oracle.com>",
+      "lastActivityAt": "2026-08-20T11:54:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f05b5130c5ae",
+      "gmailMessageIds": [
+        "1a01f05b5130c5ae"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ascot-general-application",
+      "company": "Ascot",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "Talent Acquisition at Ascot Group <emkq.fa.sender@workflow.mail.em2.cloud.oracle.com>",
+      "lastActivityAt": "2026-08-20T11:53:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f047be9a0d73",
+      "gmailMessageIds": [
+        "1a01f047be9a0d73"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "auger-general-application",
+      "company": "Auger",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Your Application - Auger",
+      "latestFrom": "Auger Recruiting <no-reply@gem.com>",
+      "lastActivityAt": "2026-08-20T11:48:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01f00b86e6d932",
+      "gmailMessageIds": [
+        "1a01f00b86e6d932"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "omegahires-general-application",
+      "company": "Omegahires",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, we've received your resume",
+      "latestFrom": "OmegaHires <noreply@applytojob.com>",
+      "lastActivityAt": "2026-08-20T11:44:48.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01efcf1315b530",
+      "gmailMessageIds": [
+        "1a01efcf1315b530"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "glyphic-biotechnologies-data-infrastructure-engineer",
+      "company": "Glyphic Biotechnologies",
+      "role": "Data Infrastructure Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Glyphic Biotechnologies!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-20T11:42:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01efabdf84efb1",
+      "gmailMessageIds": [
+        "1a01efabdf84efb1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "wingify-software-big-data-engineer",
+      "company": "Wingify Software",
+      "role": "Big Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application for Big Data Engineer received, Thank you!",
+      "latestFrom": "\"Wingify Software Pvt. Ltd. Hiring team\" <no-reply@kekamail.com>",
+      "lastActivityAt": "2026-08-20T11:39:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01ef82b66f0f3e",
+      "gmailMessageIds": [
+        "1a01ef82b66f0f3e"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "freedman-healthcare-general-application",
+      "company": "Freedman Healthcare",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying at Freedman HealthCare",
+      "latestFrom": "Freedman HealthCare <notifications@app.bamboohr.com>",
+      "lastActivityAt": "2026-08-20T11:36:13.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01ef51df4188bb",
+      "gmailMessageIds": [
+        "1a01ef51df4188bb"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "xtreme-solutions-general-application",
+      "company": "Xtreme Solutions",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying!",
+      "latestFrom": "Xtreme Solutions Inc <do-not-reply@mail.paylocity.com>",
+      "lastActivityAt": "2026-08-20T11:32:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01ef218e64594a",
+      "gmailMessageIds": [
+        "1a01ef218e64594a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "artech-general-application",
+      "company": "Artech",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Job #26-32805",
+      "latestFrom": "HumanResources@artechinfo.com",
+      "lastActivityAt": "2026-08-20T11:32:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fb82e68a5c75c6",
+      "gmailMessageIds": [
+        "19fb82e68a5c75c6",
+        "1a01ef8daa85e1a9"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tekfortune-general-application",
+      "company": "Tekfortune",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Job #26-06665",
+      "latestFrom": "HumanResources@tekfortune.com",
+      "lastActivityAt": "2026-08-20T11:21:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01eeefb5385aad",
+      "gmailMessageIds": [
+        "1a01eeefb5385aad"
+      ],
+      "notes": ""
+    },
     {
       "id": "mill-data-engineer-data-platform",
       "company": "Mill",
@@ -14110,24 +14291,6 @@
         "19fb827f67d5323d"
       ],
       "notes": "Hi Tirth, We are pleased to inform you that we have received your application for the Mid/Senior Data Engineer position at Yassir. Thanks for considering us in your job search. Our team is reviewing"
-    },
-    {
-      "id": "artech-general-application",
-      "company": "ARTECH",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Application Received for Job #26-26721",
-      "latestFrom": "HumanResources@artechinfo.com",
-      "lastActivityAt": "2026-07-31T12:30:10.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fb82e68a5c75c6",
-      "gmailMessageIds": [
-        "19fb82e68a5c75c6"
-      ],
-      "notes": ""
     },
     {
       "id": "msg-19fb827511f83ded",
