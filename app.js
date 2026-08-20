@@ -243,23 +243,36 @@ function rowToApp(row) {
 }
 
 // ─── Deduplication & Merging Engine ──────────────────────────────────────────
-function sanitizeCompanyName(name, subject, from, notes) {
+function sanitizeCompanyName(name, subject = "", from = "", notes = "") {
   let c = String(name || "").trim();
   c = c.replace(/,\s*Tirth\b.*$/i, "").trim();
   c = c.replace(/^Welcome to your\s+/i, "").replace(/^Welcome to\s+/i, "").trim();
+  c = c.replace(/\s+(LLC|Inc|Corp|Corporation|Technologies|Services|Group|Co)\b/gi, "").trim();
+
+  const combined = `${c} ${subject || ""} ${notes || ""} ${from || ""}`;
+
+  // Direct Staffing / Employer Domain & Sender Pattern Matching
+  if (/infoway|infowaygroup\.com/i.test(combined)) return "Infoway Group";
+  if (/\bATC\b|divya@atc\.xyz|atc\.xyz|Offer Rollout|ATC-\s*VIDEO/i.test(combined)) return "ATC";
+  if (/Randstad|Randstand|Shreyang Joshi|randstadusa\.com/i.test(combined)) return "Randstad";
+  if (/NC State/i.test(combined)) return "NC State";
+  if (/Tsenta/i.test(combined)) return "Tsenta";
+  if (/TestGorilla/i.test(combined)) return "TestGorilla";
+  if (/Shield AI/i.test(combined)) return "Shield AI";
+  if (/Akraya/i.test(combined)) return "Akraya";
+  if (/Collabera/i.test(combined)) return "Collabera";
+  if (/Kforce/i.test(combined)) return "Kforce";
+  if (/Insight Global/i.test(combined)) return "Insight Global";
+  if (/TEKsystems/i.test(combined)) return "TEKsystems";
+  if (/Apex Systems/i.test(combined)) return "Apex Systems";
+  if (/CyberCoders/i.test(combined)) return "CyberCoders";
+  if (/Robert Half/i.test(combined)) return "Robert Half";
 
   const cNorm = c.toLowerCase();
   if (["tirth shah", "tirth", "tirthcshah", "unknown company", "unknown", ""].includes(cNorm)) {
-    const combined = `${subject || ""} ${notes || ""} ${from || ""}`;
-    if (/\bATC\b/i.test(combined) || /divya@atc\.xyz/i.test(combined) || /Offer Rollout/i.test(combined) || /ATC-\s*VIDEO/i.test(combined) || /ATC Data Engineering/i.test(combined)) return "ATC";
-    if (/Randstad|Randstand|Shreyang Joshi/i.test(combined)) return "Randstad";
-    if (/NC State/i.test(combined)) return "NC State";
-    if (/Infoway/i.test(combined)) return "Infoway Group";
-    if (/Tsenta/i.test(combined)) return "Tsenta";
-    if (/TestGorilla/i.test(combined)) return "TestGorilla";
-    if (/Shield AI/i.test(combined)) return "Shield AI";
+    return "Unknown Company";
   }
-  return c || "Unknown company";
+  return c || "Unknown Company";
 }
 
 function extractRequisitionId(text) {
@@ -2197,6 +2210,17 @@ function attachServicesListeners(applications) {
                   });
                   app.status = aiRes.status;
                   app.effectiveStatus = aiRes.status;
+                  // Clear stale manual overrides so AI reclassification takes full effect cleanly
+                  app.isManualOverride = false;
+                  app.manualAction = null;
+                  app.manualChangedAt = null;
+
+                  const ignoredSet = getIgnoredApps();
+                  const doneSet = getDoneApps();
+                  ignoredSet.delete(app.id);
+                  doneSet.delete(app.id);
+                  localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
+                  localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
                 }
               }
               if (aiRes.company && aiRes.company !== "Unknown" && !aiRes.company.includes("Workday")) {
@@ -2264,6 +2288,7 @@ function attachServicesListeners(applications) {
         state.data.updatedAt = new Date().toISOString();
         await syncAllAppsToSupabase(targetApps, `Live AI Re-Classification (${activeModel.name})`);
 
+        state.data.applications = deduplicateAndConsolidateApplications(state.data.applications);
         appendConsole("Supabase cloud database updated! Re-rendering dashboard with AI tags...", "success");
         render();
         btnReclassify.innerHTML = "<span>Re-Classification Done!</span>";
