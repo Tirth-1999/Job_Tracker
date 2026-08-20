@@ -500,26 +500,8 @@ async function loadData() {
   render();
 }
 
-// ─── getDoneApps / getIgnoredApps ─────────────────────────────────────────────
-function getDoneApps() {
-  try { return new Set(JSON.parse(localStorage.getItem("job_tracker_done_apps") || "[]")); }
-  catch { return new Set(); }
-}
-
-function getIgnoredApps() {
-  try { return new Set(JSON.parse(localStorage.getItem("job_tracker_ignored_apps") || "[]")); }
-  catch { return new Set(); }
-}
-
-// ─── setAppDone ────────────────────────────────────────────────────────────────
+// ─── setAppDone (Synchronized directly with Supabase) ──────────────────────────
 async function setAppDone(appId, isDone) {
-  const doneSet = getDoneApps();
-  const ignoredSet = getIgnoredApps();
-  if (isDone) { doneSet.add(appId); ignoredSet.delete(appId); }
-  else { doneSet.delete(appId); }
-  localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
-  localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
-
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
     if (isDone) {
@@ -541,15 +523,8 @@ async function setAppDone(appId, isDone) {
   }
 }
 
-// ─── setAppIgnored ─────────────────────────────────────────────────────────────
+// ─── setAppIgnored (Synchronized directly with Supabase) ───────────────────────
 async function setAppIgnored(appId, isIgnored) {
-  const ignoredSet = getIgnoredApps();
-  const doneSet = getDoneApps();
-  if (isIgnored) { ignoredSet.add(appId); doneSet.delete(appId); }
-  else { ignoredSet.delete(appId); }
-  localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
-  localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
-
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (app) {
     if (isIgnored) {
@@ -571,17 +546,13 @@ async function setAppIgnored(appId, isIgnored) {
   }
 }
 
-// ─── Compute effectiveStatus for apps — O(N) linear & lightning fast ─────────
+// ─── Compute effectiveStatus directly from authoritative database record ───────
 function computeEffectiveStatuses(apps) {
   if (!apps || !apps.length) return [];
-  const doneSet = getDoneApps();
-  const ignoredSet = getIgnoredApps();
 
   return apps.map((app) => {
-    const isDoneFromDb = app.isManualOverride && app.manualAction === "mark_done";
-    const isIgnoredFromDb = app.isManualOverride && app.manualAction === "ignore";
-    const isDone = doneSet.has(app.id) || isDoneFromDb;
-    const isIgnored = !isDone && (ignoredSet.has(app.id) || isIgnoredFromDb);
+    const isDone = app.isManualOverride && app.manualAction === "mark_done";
+    const isIgnored = app.isManualOverride && app.manualAction === "ignore";
 
     if (isDone) {
       const eff = app.status === "reply_needed" ? "applied" : app.status;
@@ -591,7 +562,7 @@ function computeEffectiveStatuses(apps) {
       const eff = app.status === "reply_needed" ? "not_related" : app.status;
       return { ...app, effectiveStatus: eff, isDone: false, isIgnored: true };
     }
-    return { ...app, effectiveStatus: app.status, isDone, isIgnored };
+    return { ...app, effectiveStatus: app.status, isDone: false, isIgnored: false };
   });
 }
 
@@ -908,25 +879,11 @@ function moveApplicationLane(appId, targetStatus) {
     app.manualAction = targetStatus === "not_related" ? "move_to_not_related" : `move_to_${targetStatus}`;
     app.manualChangedAt = now;
 
-    // Clear localStorage overrides
-    const doneSet = getDoneApps();
-    const ignoredSet = getIgnoredApps();
-    doneSet.delete(appId);
-    ignoredSet.delete(appId);
-    for (const mid of app.gmailMessageIds || []) {
-      doneSet.delete(mid);
-      ignoredSet.delete(mid);
-      doneSet.delete(`msg-${mid}`);
-      ignoredSet.delete(`msg-${mid}`);
-    }
-    localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
-    localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
-
     state.data.updatedAt = now;
     state.data.applications = deduplicateAndConsolidateApplications(state.data.applications);
     render();
 
-    // Instant background sync without UI blocking
+    // Instant background sync directly to Supabase
     syncAppToSupabase(app, app.manualAction).catch((err) => {
       console.error("Supabase lane move sync error:", err);
     });
@@ -2082,23 +2039,23 @@ function renderServices(applications) {
           </div>
         </div>
 
-        <!-- Service 4: Reset Local Done/Ignore Overrides -->
+        <!-- Service 4: Reset Supabase Manual Overrides -->
         <div class="service-card">
           <div class="service-card-top">
             <div class="service-icon" style="color:#b45309;background:#fef3c7;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
             </div>
             <div class="service-details">
-              <h3>Reset Local Overrides</h3>
-              <p>Clears all client-side 'Mark Done' and 'Ignored' overrides stored in browser localStorage, restoring cards to default AI pipeline stages.</p>
+              <h3>Reset Supabase Manual Overrides</h3>
+              <p>Resets all manual moves, 'Mark Done', and 'Ignored' overrides directly in Supabase, restoring applications back to authoritative AI stages.</p>
               <div class="service-meta-badges">
-                <span class="pill">Client Reset</span>
+                <span class="pill">Supabase Cloud Sync</span>
                 <span class="pill">Real-Time Refresh</span>
               </div>
               <!-- Dynamic Progress Bar (Active during reset) -->
               <div id="resetProgressWrap" class="service-progress-wrap" style="display:none;">
                 <div class="service-progress-header">
-                  <span id="resetProgressLabel" style="color:#b45309;">Resetting overrides...</span>
+                  <span id="resetProgressLabel" style="color:#b45309;">Resetting overrides in Supabase...</span>
                   <span id="resetProgressPct" style="color:var(--text);font-weight:700;">0%</span>
                 </div>
                 <div class="service-progress-track">
@@ -2516,11 +2473,11 @@ function attachServicesListeners(applications) {
     });
   }
 
-  // 4. Reset Local Overrides with live progress bar
+  // 4. Reset Supabase Manual Overrides with live progress bar
   const btnReset = byId("btnResetOverrides");
   if (btnReset) {
     btnReset.addEventListener("click", async () => {
-      if (confirm("Reset all manual 'Mark Done' and 'Ignored' overrides back to default AI stages?")) {
+      if (confirm("Reset all manual moves, 'Mark Done', and 'Ignored' overrides directly in Supabase back to default AI stages?")) {
         const progressWrap = byId("resetProgressWrap");
         const progressLabel = byId("resetProgressLabel");
         const progressPct = byId("resetProgressPct");
@@ -2528,27 +2485,70 @@ function attachServicesListeners(applications) {
 
         btnReset.disabled = true;
         if (progressWrap) progressWrap.style.display = "flex";
-        if (progressLabel) progressLabel.textContent = "Clearing browser localStorage overrides...";
-        if (progressPct) progressPct.textContent = "50%";
-        if (progressFill) progressFill.style.width = "50%";
+        if (progressLabel) progressLabel.textContent = "Connecting to Supabase...";
+        if (progressPct) progressPct.textContent = "25%";
+        if (progressFill) progressFill.style.width = "25%";
 
-        localStorage.removeItem("job_tracker_done_apps");
-        localStorage.removeItem("job_tracker_ignored_apps");
-        await new Promise((r) => setTimeout(r, 300));
+        try {
+          const sbUrl = getSupabaseUrl();
+          const sbKey = getSupabaseKey();
+          if (sbUrl && sbKey) {
+            if (progressLabel) progressLabel.textContent = "Resetting override records in Supabase...";
+            if (progressPct) progressPct.textContent = "50%";
+            if (progressFill) progressFill.style.width = "50%";
 
-        if (progressLabel) progressLabel.textContent = "Restoring default AI pipeline stages...";
-        if (progressPct) progressPct.textContent = "100%";
-        if (progressFill) progressFill.style.width = "100%";
+            await fetch(`${sbUrl}/rest/v1/applications?is_manual_override=eq.true`, {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+                apikey: sbKey,
+                Authorization: `Bearer ${sbKey}`,
+                Prefer: "return=minimal"
+              },
+              body: JSON.stringify({
+                is_manual_override: false,
+                manual_action: null,
+                manual_changed_at: null
+              })
+            });
+          }
 
-        appendConsole("Cleared all localStorage manual overrides. Restored default AI stages.", "success");
-        render();
+          if (progressLabel) progressLabel.textContent = "Restoring default AI pipeline stages...";
+          if (progressPct) progressPct.textContent = "85%";
+          if (progressFill) progressFill.style.width = "85%";
 
-        btnReset.innerHTML = "<span>Overrides Reset!</span>";
-        setTimeout(() => {
-          btnReset.innerHTML = "<span>Reset Overrides</span>";
-          btnReset.disabled = false;
-          if (progressWrap) progressWrap.style.display = "none";
-        }, 2000);
+          // Reset local in-memory application override state
+          (state.data?.applications || []).forEach((app) => {
+            if (app.isManualOverride) {
+              app.isManualOverride = false;
+              app.manualAction = null;
+              app.manualChangedAt = null;
+            }
+          });
+
+          // Clean legacy browser storage if any existed
+          try {
+            localStorage.removeItem("job_tracker_done_apps");
+            localStorage.removeItem("job_tracker_ignored_apps");
+          } catch {}
+
+          if (progressLabel) progressLabel.textContent = "All overrides reset in Supabase!";
+          if (progressPct) progressPct.textContent = "100%";
+          if (progressFill) progressFill.style.width = "100%";
+
+          appendConsole("Successfully reset all manual overrides directly in Supabase.", "success");
+          render();
+
+          btnReset.innerHTML = "<span>Overrides Reset!</span>";
+        } catch (err) {
+          appendConsole(`Failed to reset Supabase overrides: ${err.message}`, "error");
+        } finally {
+          setTimeout(() => {
+            btnReset.innerHTML = "<span>Reset Overrides</span>";
+            btnReset.disabled = false;
+            if (progressWrap) progressWrap.style.display = "none";
+          }, 2000);
+        }
       }
     });
   }
