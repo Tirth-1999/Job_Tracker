@@ -1702,27 +1702,80 @@ function setOpenRouterKey(key) {
 }
 
 // ─── Scope filtering helper for AI Re-Classification ──────────────────────────
+// ─── Multi-Filter Scope Filtering for Master AI Re-Classification ─────────────
 function getTargetApplicationsForReclassify(applications) {
-  const scopeType = state.reclassifyScopeType || "recent_n";
-  const scopeVal = parseInt(state.reclassifyScopeVal) || 50;
-  const scopeLane = state.reclassifyScopeLane || "applied";
+  const filters = state.reclassifyFilters || {
+    lane: "all",
+    timeRange: "all",
+    auditState: "all",
+    limit: 0
+  };
 
-  if (scopeType === "all") {
-    return [...applications];
-  } else if (scopeType === "lane") {
-    return applications.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === scopeLane);
-  } else if (scopeType === "recent_n") {
-    return applications.slice(0, Math.min(scopeVal, applications.length));
-  } else if (scopeType === "days") {
-    const cutoff = Date.now() - scopeVal * 24 * 60 * 60 * 1000;
-    return applications.filter((app) => {
-      const ts = new Date(app.lastActivityAt || app.updatedAt || 0).getTime();
-      return !isNaN(ts) && ts >= cutoff;
-    });
-  } else if (scopeType === "unclassified") {
-    return applications.filter((app) => !app.aiDecision || app.aiDecision.startsWith("Audited:"));
+  let matching = [...applications];
+
+  // 1. Filter by Pipeline Stage / Lane
+  if (filters.lane && filters.lane !== "all") {
+    matching = matching.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === filters.lane);
   }
-  return [...applications];
+
+  // 2. Filter by Time Window / Age
+  if (filters.timeRange && filters.timeRange !== "all") {
+    let days = 0;
+    if (filters.timeRange === "24h") days = 1;
+    else if (filters.timeRange === "3d") days = 3;
+    else if (filters.timeRange === "7d") days = 7;
+    else if (filters.timeRange === "14d") days = 14;
+    else if (filters.timeRange === "30d") days = 30;
+    else if (filters.timeRange === "60d") days = 60;
+    else if (Number(filters.timeRange) > 0) days = Number(filters.timeRange);
+
+    if (days > 0) {
+      const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
+      matching = matching.filter((app) => {
+        const ts = new Date(app.lastActivityAt || app.updatedAt || 0).getTime();
+        return !isNaN(ts) && ts >= cutoff;
+      });
+    }
+  }
+
+  // 3. Filter by Audit State
+  if (filters.auditState === "unclassified") {
+    matching = matching.filter((app) => !app.aiDecision || app.aiDecision.startsWith("Audited:"));
+  } else if (filters.auditState === "ai_classified") {
+    matching = matching.filter((app) => app.aiDecision && !app.aiDecision.startsWith("Audited:"));
+  } else if (filters.auditState === "manual_override") {
+    matching = matching.filter((app) => app.isManualOverride);
+  }
+
+  // 4. Slice by Volume Limit (if specified)
+  if (filters.limit && Number(filters.limit) > 0) {
+    matching = matching.slice(0, Number(filters.limit));
+  }
+
+  return matching;
+}
+
+function getReclassifyScopeDescription(filters) {
+  const f = filters || { lane: "all", timeRange: "all", auditState: "all", limit: 0 };
+  const parts = [];
+
+  if (f.lane && f.lane !== "all") parts.push(`${labelForStatus(f.lane)} lane`);
+  else parts.push("all lanes");
+
+  if (f.timeRange && f.timeRange !== "all") {
+    const timeLabels = { "24h": "past 24h", "3d": "past 3 days", "7d": "past 7 days", "14d": "past 14 days", "30d": "past 30 days", "60d": "past 60 days" };
+    parts.push(timeLabels[f.timeRange] || `past ${f.timeRange}d`);
+  } else {
+    parts.push("all time");
+  }
+
+  if (f.auditState === "unclassified") parts.push("unaudited only");
+  else if (f.auditState === "ai_classified") parts.push("AI classified only");
+  else if (f.auditState === "manual_override") parts.push("manual overrides only");
+
+  if (f.limit && Number(f.limit) > 0) parts.push(`max ${f.limit} apps`);
+
+  return parts.join(" · ");
 }
 
 function renderServices(applications) {
@@ -1733,10 +1786,16 @@ function renderServices(applications) {
   const currentModelId = getSelectedModel();
   const currentModel = AI_MODELS.find((m) => m.id === currentModelId) || AI_MODELS[0];
   const orKey = getOpenRouterKey();
+
+  state.reclassifyFilters = state.reclassifyFilters || {
+    lane: "all",
+    timeRange: "all",
+    auditState: "all",
+    limit: 0
+  };
+  const filters = state.reclassifyFilters;
   const targetedApps = getTargetApplicationsForReclassify(applications);
-  const currentScopeType = state.reclassifyScopeType || "recent_n";
-  const currentScopeVal = state.reclassifyScopeVal ?? 50;
-  const currentScopeLane = state.reclassifyScopeLane || "applied";
+  const scopeDescription = getReclassifyScopeDescription(filters);
 
   // Lane count helpers for dropdown badges
   const laneCounts = {
@@ -1808,61 +1867,77 @@ function renderServices(applications) {
           </div>
         </div>
 
-        <!-- Re-Classification Scope & Filter Controls -->
+        <!-- Multi-Filter Scope Controls -->
         <div class="reclassify-scope-card">
           <div class="scope-header-row">
             <div class="scope-title-label">
-              <span>Target Audit Scope:</span>
+              <span>Target Scope Filters:</span>
             </div>
             <div id="reclassifyTargetBadge" class="scope-target-badge">
-              Targeting: ${targetedApps.length} of ${totalApps} applications (${Math.round((targetedApps.length / Math.max(1, totalApps)) * 100)}%)
+              Targeting: <strong>${targetedApps.length}</strong> of ${totalApps} applications (${Math.round((targetedApps.length / Math.max(1, totalApps)) * 100)}%) <span style="color:var(--muted);font-weight:normal;">[${escapeHtml(scopeDescription)}]</span>
             </div>
           </div>
           
-          <div class="scope-controls-row">
-            <div class="scope-inputs-group">
-              <select id="reclassifyScopeType" class="scope-select">
-                <option value="lane" ${currentScopeType === "lane" ? "selected" : ""}>Specific Lane / Pipeline Stage</option>
-                <option value="recent_n" ${currentScopeType === "recent_n" ? "selected" : ""}>Most Recent N Applications</option>
-                <option value="days" ${currentScopeType === "days" ? "selected" : ""}>Time Window (Past N Days)</option>
-                <option value="unclassified" ${currentScopeType === "unclassified" ? "selected" : ""}>Only Unaudited / Unclassified</option>
-                <option value="all" ${currentScopeType === "all" ? "selected" : ""}>Entire Mailbox (All ${totalApps} Apps)</option>
+          <!-- 4-Column Multi-Filter Grid -->
+          <div class="scope-filter-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:12px;margin:12px 0 14px 0;">
+            <div class="scope-filter-col">
+              <label style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;margin-bottom:5px;display:block;">Pipeline Stage / Lane</label>
+              <select id="reclassifyFilterLane" class="scope-select" style="width:100%;font-weight:600;">
+                <option value="all" ${filters.lane === "all" ? "selected" : ""}>All Lanes (${totalApps})</option>
+                <option value="applied" ${filters.lane === "applied" ? "selected" : ""}>Applied (${laneCounts.applied})</option>
+                <option value="reply_needed" ${filters.lane === "reply_needed" ? "selected" : ""}>Reply Needed (${laneCounts.reply_needed})</option>
+                <option value="interviewed" ${filters.lane === "interviewed" ? "selected" : ""}>Interview / Assessment (${laneCounts.interviewed})</option>
+                <option value="offered" ${filters.lane === "offered" ? "selected" : ""}>Offered (${laneCounts.offered})</option>
+                <option value="rejected" ${filters.lane === "rejected" ? "selected" : ""}>Rejected (${laneCounts.rejected})</option>
+                <option value="not_related" ${filters.lane === "not_related" ? "selected" : ""}>Other Emails (${laneCounts.not_related})</option>
               </select>
-
-              <!-- Lane Selector (visible when scopeType === 'lane') -->
-              <div id="reclassifyScopeLaneWrap" style="display:${currentScopeType === "lane" ? "inline-flex" : "none"};align-items:center;gap:6px;">
-                <select id="reclassifyScopeLane" class="scope-select" style="font-weight:600;">
-                  <option value="applied" ${currentScopeLane === "applied" ? "selected" : ""}>Applied (${laneCounts.applied})</option>
-                  <option value="reply_needed" ${currentScopeLane === "reply_needed" ? "selected" : ""}>Reply Needed (${laneCounts.reply_needed})</option>
-                  <option value="interviewed" ${currentScopeLane === "interviewed" ? "selected" : ""}>Interview / Assessment (${laneCounts.interviewed})</option>
-                  <option value="offered" ${currentScopeLane === "offered" ? "selected" : ""}>Offered (${laneCounts.offered})</option>
-                  <option value="rejected" ${currentScopeLane === "rejected" ? "selected" : ""}>Rejected (${laneCounts.rejected})</option>
-                  <option value="not_related" ${currentScopeLane === "not_related" ? "selected" : ""}>Other Emails (${laneCounts.not_related})</option>
-                </select>
-              </div>
-
-              <!-- Number Input (visible when scopeType === 'recent_n' or 'days') -->
-              <div id="reclassifyScopeValWrap" style="display:${currentScopeType === "recent_n" || currentScopeType === "days" ? "inline-flex" : "none"};align-items:center;gap:6px;">
-                <input type="number" id="reclassifyScopeValue" min="1" max="${totalApps}" value="${currentScopeVal}" class="scope-num-input" />
-                <span id="reclassifyScopeUnit" style="font-size:12px;color:var(--muted);font-weight:600;">
-                  ${currentScopeType === "days" ? "days" : "apps"}
-                </span>
-              </div>
             </div>
 
-            <div class="scope-presets-group">
-              <span style="font-size:11px;color:var(--muted);font-weight:600;">Lane Presets:</span>
-              <button type="button" class="btn-scope-preset ${currentScopeType === "lane" && currentScopeLane === "applied" ? "active" : ""}" data-type="lane" data-lane="applied">Applied</button>
-              <button type="button" class="btn-scope-preset ${currentScopeType === "lane" && currentScopeLane === "reply_needed" ? "active" : ""}" data-type="lane" data-lane="reply_needed">Reply Needed</button>
-              <button type="button" class="btn-scope-preset ${currentScopeType === "lane" && currentScopeLane === "interviewed" ? "active" : ""}" data-type="lane" data-lane="interviewed">Interview / Assessment</button>
-              <button type="button" class="btn-scope-preset ${currentScopeType === "lane" && currentScopeLane === "rejected" ? "active" : ""}" data-type="lane" data-lane="rejected">Rejected</button>
-              <button type="button" class="btn-scope-preset ${currentScopeType === "lane" && currentScopeLane === "not_related" ? "active" : ""}" data-type="lane" data-lane="not_related">Other Emails</button>
-              <span style="font-size:11px;color:var(--muted);font-weight:600;margin-left:6px;">Volume / Time:</span>
-              <button type="button" class="btn-scope-preset ${currentScopeType === "recent_n" && currentScopeVal == 25 ? "active" : ""}" data-type="recent_n" data-val="25">Recent 25</button>
-              <button type="button" class="btn-scope-preset ${currentScopeType === "recent_n" && currentScopeVal == 50 ? "active" : ""}" data-type="recent_n" data-val="50">Recent 50</button>
-              <button type="button" class="btn-scope-preset ${currentScopeType === "days" && currentScopeVal == 7 ? "active" : ""}" data-type="days" data-val="7">Last 7d</button>
-              <button type="button" class="btn-scope-preset ${currentScopeType === "all" ? "active" : ""}" data-type="all" data-val="0">All Apps</button>
+            <div class="scope-filter-col">
+              <label style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;margin-bottom:5px;display:block;">Time Window / Age</label>
+              <select id="reclassifyFilterTime" class="scope-select" style="width:100%;font-weight:600;">
+                <option value="all" ${filters.timeRange === "all" ? "selected" : ""}>All Time (Entire History)</option>
+                <option value="24h" ${filters.timeRange === "24h" ? "selected" : ""}>Last 24 Hours</option>
+                <option value="3d" ${filters.timeRange === "3d" ? "selected" : ""}>Last 3 Days</option>
+                <option value="7d" ${filters.timeRange === "7d" ? "selected" : ""}>Last 7 Days</option>
+                <option value="14d" ${filters.timeRange === "14d" ? "selected" : ""}>Last 14 Days</option>
+                <option value="30d" ${filters.timeRange === "30d" ? "selected" : ""}>Last 30 Days</option>
+                <option value="60d" ${filters.timeRange === "60d" ? "selected" : ""}>Last 60 Days</option>
+              </select>
             </div>
+
+            <div class="scope-filter-col">
+              <label style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;margin-bottom:5px;display:block;">Audit Status</label>
+              <select id="reclassifyFilterAudit" class="scope-select" style="width:100%;font-weight:600;">
+                <option value="all" ${filters.auditState === "all" ? "selected" : ""}>All Items</option>
+                <option value="unclassified" ${filters.auditState === "unclassified" ? "selected" : ""}>Only Unaudited / Unclassified</option>
+                <option value="ai_classified" ${filters.auditState === "ai_classified" ? "selected" : ""}>Only AI Classified</option>
+                <option value="manual_override" ${filters.auditState === "manual_override" ? "selected" : ""}>Only Manually Overridden</option>
+              </select>
+            </div>
+
+            <div class="scope-filter-col">
+              <label style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;margin-bottom:5px;display:block;">Max Volume Limit</label>
+              <select id="reclassifyFilterLimit" class="scope-select" style="width:100%;font-weight:600;">
+                <option value="0" ${!filters.limit || filters.limit === 0 ? "selected" : ""}>All Matching (No Limit)</option>
+                <option value="25" ${filters.limit === 25 ? "selected" : ""}>Top 25 Most Recent</option>
+                <option value="50" ${filters.limit === 50 ? "selected" : ""}>Top 50 Most Recent</option>
+                <option value="100" ${filters.limit === 100 ? "selected" : ""}>Top 100 Most Recent</option>
+                <option value="250" ${filters.limit === 250 ? "selected" : ""}>Top 250 Most Recent</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Quick Multi-Filter Preset Combinations -->
+          <div class="scope-presets-row" style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding-top:10px;border-top:1px solid var(--border);">
+            <span style="font-size:11px;color:var(--muted);font-weight:600;">Popular Combinations:</span>
+            <button type="button" class="btn-scope-preset ${filters.lane === 'applied' && filters.timeRange === '7d' ? 'active' : ''}" data-lane="applied" data-time="7d" data-audit="all" data-limit="0">Applied (Last 7d)</button>
+            <button type="button" class="btn-scope-preset ${filters.lane === 'reply_needed' && filters.timeRange === '7d' ? 'active' : ''}" data-lane="reply_needed" data-time="7d" data-audit="all" data-limit="0">Reply Needed (Last 7d)</button>
+            <button type="button" class="btn-scope-preset ${filters.lane === 'applied' && filters.timeRange === '30d' ? 'active' : ''}" data-lane="applied" data-time="30d" data-audit="all" data-limit="0">Applied (Last 30d)</button>
+            <button type="button" class="btn-scope-preset ${filters.lane === 'not_related' && filters.timeRange === 'all' ? 'active' : ''}" data-lane="not_related" data-time="all" data-audit="all" data-limit="0">Other Emails (All)</button>
+            <button type="button" class="btn-scope-preset ${filters.lane === 'all' && filters.auditState === 'unclassified' ? 'active' : ''}" data-lane="all" data-time="all" data-audit="unclassified" data-limit="0">Unaudited Only</button>
+            <button type="button" class="btn-scope-preset ${filters.lane === 'all' && filters.timeRange === 'all' && filters.limit === 50 ? 'active' : ''}" data-lane="all" data-time="all" data-audit="all" data-limit="50">Recent 50</button>
+            <button type="button" class="btn-scope-preset ${filters.lane === 'all' && filters.timeRange === 'all' && filters.limit === 0 && filters.auditState === 'all' ? 'active' : ''}" data-lane="all" data-time="all" data-audit="all" data-limit="0">Entire Mailbox</button>
           </div>
         </div>
 
@@ -2089,70 +2164,36 @@ function attachServicesListeners(applications) {
     });
   }
 
-  // Scope selector & input event handlers
-  const scopeTypeSelect = byId("reclassifyScopeType");
-  const scopeValInput = byId("reclassifyScopeValue");
-  const scopeValWrap = byId("reclassifyScopeValWrap");
-  const scopeLaneSelect = byId("reclassifyScopeLane");
-  const scopeLaneWrap = byId("reclassifyScopeLaneWrap");
-  const scopeUnit = byId("reclassifyScopeUnit");
-  const targetBadge = byId("reclassifyTargetBadge");
+  // Multi-Filter Scope Event Handlers
+  const filterLaneSelect = byId("reclassifyFilterLane");
+  const filterTimeSelect = byId("reclassifyFilterTime");
+  const filterAuditSelect = byId("reclassifyFilterAudit");
+  const filterLimitSelect = byId("reclassifyFilterLimit");
 
-  function updateTargetBadgeDisplay() {
-    const targetApps = getTargetApplicationsForReclassify(applications);
-    const total = applications.length;
-    if (targetBadge) {
-      targetBadge.textContent = `Targeting: ${targetApps.length} of ${total} applications (${Math.round((targetApps.length / Math.max(1, total)) * 100)}%)`;
-    }
+  function onFilterChange() {
+    state.reclassifyFilters = {
+      lane: filterLaneSelect ? filterLaneSelect.value : "all",
+      timeRange: filterTimeSelect ? filterTimeSelect.value : "all",
+      auditState: filterAuditSelect ? filterAuditSelect.value : "all",
+      limit: filterLimitSelect ? parseInt(filterLimitSelect.value) || 0 : 0
+    };
+    renderServices(applications);
   }
 
-  if (scopeTypeSelect) {
-    scopeTypeSelect.addEventListener("change", (e) => {
-      state.reclassifyScopeType = e.target.value;
-      if (scopeValWrap) {
-        scopeValWrap.style.display = e.target.value === "recent_n" || e.target.value === "days" ? "inline-flex" : "none";
-      }
-      if (scopeLaneWrap) {
-        scopeLaneWrap.style.display = e.target.value === "lane" ? "inline-flex" : "none";
-      }
-      if (scopeUnit) {
-        scopeUnit.textContent = e.target.value === "days" ? "days" : "apps";
-      }
-      if (scopeValInput && e.target.value === "days" && (!state.reclassifyScopeVal || state.reclassifyScopeVal > 90)) {
-        state.reclassifyScopeVal = 7;
-        scopeValInput.value = 7;
-      }
-      updateTargetBadgeDisplay();
-    });
-  }
+  if (filterLaneSelect) filterLaneSelect.addEventListener("change", onFilterChange);
+  if (filterTimeSelect) filterTimeSelect.addEventListener("change", onFilterChange);
+  if (filterAuditSelect) filterAuditSelect.addEventListener("change", onFilterChange);
+  if (filterLimitSelect) filterLimitSelect.addEventListener("change", onFilterChange);
 
-  if (scopeLaneSelect) {
-    scopeLaneSelect.addEventListener("change", (e) => {
-      state.reclassifyScopeLane = e.target.value;
-      updateTargetBadgeDisplay();
-    });
-  }
-
-  if (scopeValInput) {
-    scopeValInput.addEventListener("input", (e) => {
-      const val = parseInt(e.target.value) || 1;
-      state.reclassifyScopeVal = val;
-      updateTargetBadgeDisplay();
-    });
-  }
-
-  // Quick Scope Preset Buttons
+  // Quick Multi-Filter Preset Buttons
   document.querySelectorAll(".btn-scope-preset").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const type = btn.getAttribute("data-type");
-      const val = parseInt(btn.getAttribute("data-val")) || 50;
-      const lane = btn.getAttribute("data-lane");
-      state.reclassifyScopeType = type;
-      if (type === "lane" && lane) {
-        state.reclassifyScopeLane = lane;
-      } else {
-        state.reclassifyScopeVal = val;
-      }
+      state.reclassifyFilters = {
+        lane: btn.getAttribute("data-lane") || "all",
+        timeRange: btn.getAttribute("data-time") || "all",
+        auditState: btn.getAttribute("data-audit") || "all",
+        limit: parseInt(btn.getAttribute("data-limit")) || 0
+      };
       renderServices(applications);
     });
   });
@@ -2182,7 +2223,7 @@ function attachServicesListeners(applications) {
       const progressFill = byId("reclassifyProgressFill");
 
       if (total === 0) {
-        appendConsole("No applications match the selected scope filter.", "error");
+        appendConsole("No applications match the selected scope filter criteria.", "error");
         return;
       }
 
@@ -2190,15 +2231,7 @@ function attachServicesListeners(applications) {
       btnReclassify.innerHTML = "<span>AI Reclassifying...</span>";
       if (progressWrap) progressWrap.style.display = "flex";
 
-      const scopeLabel = state.reclassifyScopeType === "lane"
-        ? `${labelForStatus(state.reclassifyScopeLane || 'applied')} lane`
-        : state.reclassifyScopeType === "days"
-        ? `past ${state.reclassifyScopeVal || 7} days`
-        : state.reclassifyScopeType === "recent_n"
-        ? `most recent ${state.reclassifyScopeVal || 50} apps`
-        : state.reclassifyScopeType === "unclassified"
-        ? "unaudited apps"
-        : "entire mailbox";
+      const scopeLabel = getReclassifyScopeDescription(state.reclassifyFilters);
 
       appendConsole(`Starting Live AI Mailbox Re-Classification with ${activeModel.name}...`);
       appendConsole(`Scope: ${scopeLabel} (${total} targeted apps) | Connecting to OpenRouter API (model: ${activeModel.id})...`);
