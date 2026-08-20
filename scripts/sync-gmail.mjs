@@ -937,12 +937,15 @@ const COMPANY_MAP = {
   "eli lilly": "Eli Lilly"
 };
 
-function sanitizeCompanyName(company) {
+function sanitizeCompanyName(company, subject = "", from = "", notes = "") {
   if (!company) return "Unknown Company";
-  let cleaned = company
+  let cleaned = String(company)
     .replace(/["'<>®™]/g, "")
     .replace(/&amp;/gi, "&")
     .replace(/\S+@\S+/g, "")
+    .replace(/,\s*Tirth\b.*$/i, "")
+    .replace(/^Welcome to your\s+/i, "")
+    .replace(/^Welcome to\s+/i, "")
     .replace(/\b(hiring team|careers|recruiting team|recruiting|recruiter|talent acquisition|talent|jobs|notifications|no.?reply|noreply|workday|greenhouse|lever|ashby|smartrecruiters|bamboohr|admin|inbox|human resources|the)\b/gi, "")
     .replace(/\s+(LLC|Inc|Corp|Corporation|Technologies|Services|Group|Co)\b/gi, "")
     .replace(/\s+/g, " ")
@@ -952,6 +955,17 @@ function sanitizeCompanyName(company) {
   const lower = cleaned.toLowerCase();
   if (COMPANY_MAP[lower]) {
     return COMPANY_MAP[lower];
+  }
+
+  if (["tirth shah", "tirth", "tirthcshah", "unknown company", "unknown", ""].includes(lower)) {
+    const combined = `${subject || ""} ${notes || ""} ${from || ""}`;
+    if (/\bATC\b/i.test(combined) || /divya@atc\.xyz/i.test(combined) || /Offer Rollout/i.test(combined) || /ATC-\s*VIDEO/i.test(combined) || /ATC Data Engineering/i.test(combined)) return "ATC";
+    if (/Randstad|Randstand|Shreyang Joshi/i.test(combined)) return "Randstad";
+    if (/NC State/i.test(combined)) return "NC State";
+    if (/Infoway/i.test(combined)) return "Infoway Group";
+    if (/Tsenta/i.test(combined)) return "Tsenta";
+    if (/TestGorilla/i.test(combined)) return "TestGorilla";
+    if (/Shield AI/i.test(combined)) return "Shield AI";
   }
 
   if (!cleaned || cleaned.length < 2) return "Unknown Company";
@@ -1001,6 +1015,24 @@ function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || `app-${Date.now()}`;
 }
 
+function extractRequisitionId(text) {
+  if (!text) return null;
+  const reqMatch = text.match(/\b(?:req(?:uisition)?|job\s*id|job\s*#|posting\s*#)\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
+  if (reqMatch && !/^(?:uired|uire|uest|uirements|uests)$/i.test(reqMatch[1])) return reqMatch[1];
+  const numDash = text.match(/[-–]\s*([0-9]{5,8})\s*(?:[-–\s]|$)/);
+  if (numDash) return numDash[1];
+  const hashNum = text.match(/#\s*([0-9]{5,8})\b/);
+  if (hashNum) return hashNum[1];
+  return null;
+}
+
+function normalizeComp(name) {
+  if (!name) return "";
+  let n = name.toLowerCase().trim();
+  n = n.replace(/\b(inc\.?|llc\.?|corp\.?|corporation|co\.?|ltd\.?|hiring team|recruiting team|hiring|recruiting|careers|ta|talent acquisition)\b/gi, "").trim();
+  return n.replace(/[^a-z0-9]/g, "");
+}
+
 function isGenericCompany(company) {
   const normalized = String(company || "").trim().toLowerCase();
   const genericWords = new Set([
@@ -1012,10 +1044,31 @@ function isGenericCompany(company) {
 }
 
 function upsertApplication(data, incoming) {
-  // Check matching by threadId or canonical id
-  const existing = data.applications.find(
-    (app) => app.id === incoming.id || (incoming.gmailThreadId && app.gmailThreadId === incoming.gmailThreadId)
-  );
+  incoming.company = sanitizeCompanyName(incoming.company, incoming.latestSubject, incoming.latestFrom, incoming.notes);
+  if (incoming.company.toLowerCase() === "tirth shah" && incoming.status === "offered") {
+    incoming.status = "not_related";
+  }
+
+  const incomingReqId = extractRequisitionId(`${incoming.latestSubject || ""} ${incoming.notes || ""}`);
+  const incomingCompNorm = normalizeComp(incoming.company);
+  const incomingMsgIds = new Set(incoming.gmailMessageIds || []);
+
+  const STATUS_PRIORITY = { offered: 6, interviewed: 5, reply_needed: 4, applied: 3, rejected: 2, not_related: 1 };
+
+  // Match existing by ID, threadId, messageId overlap, requisition ID, or high-touch company
+  const existing = data.applications.find((app) => {
+    if (app.id === incoming.id) return true;
+    if (incoming.gmailThreadId && app.gmailThreadId && app.gmailThreadId === incoming.gmailThreadId) return true;
+    if ((app.gmailMessageIds || []).some((mid) => incomingMsgIds.has(mid))) return true;
+    const appCompNorm = normalizeComp(app.company);
+    if (appCompNorm && incomingCompNorm && appCompNorm === incomingCompNorm) {
+      const appReqId = extractRequisitionId(`${app.latestSubject || ""} ${app.notes || ""}`);
+      if (appReqId && incomingReqId && appReqId === incomingReqId) return true;
+      if (app.status === "offered" || incoming.status === "offered") return true;
+      if (app.status === "interviewed" && incoming.status === "interviewed") return true;
+    }
+    return false;
+  });
 
   if (!existing) {
     data.applications.push(incoming);
@@ -1033,18 +1086,27 @@ function upsertApplication(data, incoming) {
     return;
   }
 
-  existing.company = incoming.company || existing.company;
-  if (incoming.role && incoming.role !== "General Application") {
+  const currRank = STATUS_PRIORITY[existing.status] || 0;
+  const inRank = STATUS_PRIORITY[incoming.status] || 0;
+  if (inRank >= currRank || (incoming.lastActivityAt && incoming.lastActivityAt > (existing.lastActivityAt || ""))) {
+    existing.status = inRank >= currRank ? incoming.status : existing.status;
+  }
+
+  if (incoming.company && !isGenericCompany(incoming.company) && incoming.company.toLowerCase() !== "tirth shah") {
+    existing.company = incoming.company;
+  }
+  if (incoming.role && incoming.role !== "General Application" && incoming.role !== "Unknown role") {
     existing.role = incoming.role;
   }
-  existing.status = incoming.status;
-  existing.confidence = incoming.confidence;
-  existing.classifier = incoming.classifier;
-  existing.reason = incoming.reason;
-  existing.latestSubject = incoming.latestSubject;
-  existing.latestFrom = incoming.latestFrom;
-  existing.lastActivityAt = incoming.lastActivityAt;
-  existing.gmailMessageIds = [...new Set([...(existing.gmailMessageIds ?? []), ...incoming.gmailMessageIds])];
+  existing.confidence = incoming.confidence || existing.confidence;
+  existing.classifier = incoming.classifier || existing.classifier;
+  existing.reason = incoming.reason || existing.reason;
+  existing.latestSubject = incoming.latestSubject || existing.latestSubject;
+  existing.latestFrom = incoming.latestFrom || existing.latestFrom;
+  if (incoming.lastActivityAt && incoming.lastActivityAt > (existing.lastActivityAt || "")) {
+    existing.lastActivityAt = incoming.lastActivityAt;
+  }
+  existing.gmailMessageIds = [...new Set([...(existing.gmailMessageIds ?? []), ...(incoming.gmailMessageIds ?? [])])];
 }
 
 function cleanupApplications(applications) {

@@ -366,23 +366,36 @@ button:hover {
 .meta {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 6px;
   margin-top: 10px;
   color: var(--muted);
   font-size: 12px;
   max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .pill {
-  padding: 3px 7px;
+  padding: 3px 8px;
   background: #f2f4f8;
   border: 1px solid var(--border);
   border-radius: 999px;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-flex;
+  align-items: center;
 }
 
 .status-pill {
   border-left: 4px solid var(--accent);
   background: #fff;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .table-shell {
@@ -1688,10 +1701,13 @@ tr:last-child td {
   display: inline-flex;
   align-items: center;
   position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .select-move-lane {
   height: 24px;
+  max-width: 100%;
   padding: 0 8px;
   font-size: 11px;
   font-weight: 600;
@@ -1702,6 +1718,7 @@ tr:last-child td {
   cursor: pointer;
   outline: none;
   transition: all 0.15s ease;
+  box-sizing: border-box;
 }
 
 .select-move-lane:hover {

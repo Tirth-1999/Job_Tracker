@@ -287,6 +287,167 @@ function rowToApp(row) {
   };
 }
 
+// ─── Deduplication & Merging Engine ──────────────────────────────────────────
+function sanitizeCompanyName(name, subject, from, notes) {
+  let c = String(name || "").trim();
+  c = c.replace(/,\s*Tirth\b.*$/i, "").trim();
+  c = c.replace(/^Welcome to your\s+/i, "").replace(/^Welcome to\s+/i, "").trim();
+
+  const cNorm = c.toLowerCase();
+  if (["tirth shah", "tirth", "tirthcshah", "unknown company", "unknown", ""].includes(cNorm)) {
+    const combined = `${subject || ""} ${notes || ""} ${from || ""}`;
+    if (/\bATC\b/i.test(combined) || /divya@atc\.xyz/i.test(combined) || /Offer Rollout/i.test(combined) || /ATC-\s*VIDEO/i.test(combined) || /ATC Data Engineering/i.test(combined)) return "ATC";
+    if (/Randstad|Randstand|Shreyang Joshi/i.test(combined)) return "Randstad";
+    if (/NC State/i.test(combined)) return "NC State";
+    if (/Infoway/i.test(combined)) return "Infoway Group";
+    if (/Tsenta/i.test(combined)) return "Tsenta";
+    if (/TestGorilla/i.test(combined)) return "TestGorilla";
+    if (/Shield AI/i.test(combined)) return "Shield AI";
+  }
+  return c || "Unknown company";
+}
+
+function extractRequisitionId(text) {
+  if (!text) return null;
+  const reqMatch = text.match(/\b(?:req(?:uisition)?|job\s*id|job\s*#|posting\s*#)\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
+  if (reqMatch && !/^(?:uired|uire|uest|uirements|uests)$/i.test(reqMatch[1])) return reqMatch[1];
+  const numDash = text.match(/[-–]\s*([0-9]{5,8})\s*(?:[-–\s]|$)/);
+  if (numDash) return numDash[1];
+  const hashNum = text.match(/#\s*([0-9]{5,8})\b/);
+  if (hashNum) return hashNum[1];
+  return null;
+}
+
+function normalizeComp(name) {
+  if (!name) return "";
+  let n = name.toLowerCase().trim();
+  n = n.replace(/\b(inc\.?|llc\.?|corp\.?|corporation|co\.?|ltd\.?|hiring team|recruiting team|hiring|recruiting|careers|ta|talent acquisition)\b/gi, "").trim();
+  return n.replace(/[^a-z0-9]/g, "");
+}
+
+function deduplicateAndConsolidateApplications(appList) {
+  if (!Array.isArray(appList) || appList.length === 0) return [];
+
+  const STATUS_PRIORITY = {
+    offered: 6,
+    interviewed: 5,
+    reply_needed: 4,
+    applied: 3,
+    rejected: 2,
+    not_related: 1
+  };
+
+  const prepared = appList.map((app) => {
+    const cleanComp = sanitizeCompanyName(app.company, app.latestSubject, app.latestFrom, app.notes);
+    let s = app.status;
+    if (cleanComp.toLowerCase() === "tirth shah" && s === "offered") {
+      s = "not_related";
+    }
+    return { ...app, company: cleanComp, status: s };
+  });
+
+  const consolidated = [];
+  const processed = new Set();
+
+  for (let i = 0; i < prepared.length; i++) {
+    if (processed.has(i)) continue;
+    const current = prepared[i];
+    const group = [current];
+    processed.add(i);
+
+    const currThread = current.gmailThreadId;
+    const currMsgIds = new Set(current.gmailMessageIds || []);
+    if (current.id) currMsgIds.add(current.id.replace(/^msg-/, ""));
+    const currCompNorm = normalizeComp(current.company);
+    const currReqId = extractRequisitionId(`${current.latestSubject || ""} ${current.notes || ""}`);
+
+    for (let j = i + 1; j < prepared.length; j++) {
+      if (processed.has(j)) continue;
+      const other = prepared[j];
+      const otherThread = other.gmailThreadId;
+      const otherMsgIds = (other.gmailMessageIds || []).concat(other.id ? [other.id.replace(/^msg-/, "")] : []);
+      const otherCompNorm = normalizeComp(other.company);
+      const otherReqId = extractRequisitionId(`${other.latestSubject || ""} ${other.notes || ""}`);
+
+      let isMatch = false;
+
+      // Condition 1: Same Gmail Thread ID
+      if (currThread && otherThread && currThread === otherThread) {
+        isMatch = true;
+      }
+      // Condition 2: Overlapping Message IDs
+      else if (otherMsgIds.some((mid) => currMsgIds.has(mid))) {
+        isMatch = true;
+      }
+      // Condition 3: Same Company + Same Job / Requisition ID
+      else if (currCompNorm && currCompNorm !== "unknown" && currCompNorm === otherCompNorm && currReqId && otherReqId && currReqId === otherReqId) {
+        isMatch = true;
+      }
+      // Condition 4: Same Company for active high-touch stages (offered, interviewed/assessment)
+      else if (
+        currCompNorm &&
+        currCompNorm !== "unknown" &&
+        currCompNorm === otherCompNorm &&
+        (
+          current.status === "offered" || other.status === "offered" ||
+          (current.status === "interviewed" && other.status === "interviewed") ||
+          (current.status === "reply_needed" && other.status === "reply_needed" && (current.role === other.role || current.role === "General Application" || other.role === "General Application"))
+        )
+      ) {
+        isMatch = true;
+      }
+
+      if (isMatch) {
+        group.push(other);
+        processed.add(j);
+        for (const mid of otherMsgIds) currMsgIds.add(mid);
+      }
+    }
+
+    if (group.length === 1) {
+      consolidated.push(current);
+    } else {
+      // Pick highest priority status
+      group.sort((a, b) => (STATUS_PRIORITY[b.status] || 0) - (STATUS_PRIORITY[a.status] || 0));
+      const bestStatus = group[0].status;
+
+      // Pick cleanest company name
+      const cleanComp = group.find((g) => g.company && g.company.toLowerCase() !== "tirth shah" && g.company.toLowerCase() !== "unknown")?.company || group[0].company;
+
+      // Pick cleanest role
+      const cleanRole = group.find((g) => g.role && g.role !== "General Application" && g.role !== "Unknown role")?.role || group[0].role || "General Application";
+
+      // Most recent activity
+      group.sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
+      const latestApp = group[0];
+
+      // Combine message IDs
+      const allMsgIds = [...new Set(group.flatMap((g) => g.gmailMessageIds || []))];
+
+      // Preserve manual override
+      const manualOverrideApp = group.find((g) => g.isManualOverride);
+
+      const merged = {
+        ...latestApp,
+        id: group.find((g) => g.status === bestStatus)?.id || latestApp.id,
+        company: cleanComp,
+        role: cleanRole,
+        status: bestStatus,
+        effectiveStatus: bestStatus,
+        gmailMessageIds: allMsgIds,
+        gmailThreadId: latestApp.gmailThreadId || group.find((g) => g.gmailThreadId)?.gmailThreadId || null,
+        confidence: "high",
+        isManualOverride: manualOverrideApp ? true : false,
+        manualAction: manualOverrideApp ? manualOverrideApp.manualAction : null
+      };
+
+      consolidated.push(merged);
+    }
+  }
+
+  return consolidated;
+}
+
 // ─── Load: Supabase is the EXCLUSIVE source of truth ─────────────────────────
 async function loadData() {
   const sb = initSupabase();
@@ -299,12 +460,15 @@ async function loadData() {
 
   if (error) throw new Error(`Supabase SELECT failed: ${error.message}`);
 
+  const rawMapped = (sbData || []).map(rowToApp);
+  const deduplicated = deduplicateAndConsolidateApplications(rawMapped);
+
   state.data = {
-    applications: (sbData || []).map(rowToApp),
+    applications: deduplicated,
     updatedAt: new Date().toISOString()
   };
 
-  console.log(`✅ Loaded ${state.data.applications.length} applications from Supabase.`);
+  console.log(`✅ Loaded ${state.data.applications.length} consolidated applications from Supabase.`);
 
   // ─── Realtime channel (subscribe once) ───────────────────────────────────
   if (!realtimeChannel) {
@@ -323,6 +487,7 @@ async function loadData() {
             } else {
               state.data.applications.unshift(mapped);
             }
+            state.data.applications = deduplicateAndConsolidateApplications(state.data.applications);
             state.data.updatedAt = payload.new.updated_at;
             render();
           } else if (payload.eventType === "DELETE") {
@@ -413,15 +578,14 @@ async function setAppIgnored(appId, isIgnored) {
   }
 }
 
-
-
 // ─── Compute effectiveStatus for every app (no search filter applied) ────────
 // Used by stats/analytics so totals always reflect full dataset, not just search results.
 function computeEffectiveStatuses(rawApps) {
+  const deduplicated = deduplicateAndConsolidateApplications(rawApps);
   const doneSet = getDoneApps();
   const ignoredSet = getIgnoredApps();
 
-  return rawApps.map((app) => {
+  return deduplicated.map((app) => {
     // Drive isDone/isIgnored from Supabase manual_action (survives reload & cross-device) OR localStorage (in-session)
     const isDoneFromDb = app.isManualOverride && app.manualAction === "mark_done";
     const isIgnoredFromDb = app.isManualOverride && app.manualAction === "ignore";
@@ -672,7 +836,7 @@ function renderCard(app) {
         <span class="pill">${escapeHtml(confidence)}</span>
         <div class="move-select-wrapper">
           <select class="select-move-lane" data-id="${app.id}" data-current="${status}" title="Move application to a different lane">
-            <option value="" disabled selected>📂 Move Lane ▾</option>
+            <option value="" disabled selected>Move Lane ▾</option>
             ${MOVE_OPTIONS.map(
               (opt) => `
               <option value="${opt.key}" ${opt.key === status ? 'disabled style="color:#94a3b8;"' : ""}>
