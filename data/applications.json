@@ -1,6 +1,72 @@
 {
   "applications": [
     {
+      "id": "salesforce-general-application",
+      "company": "Salesforce",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-20T17:29:21.000Z",
+      "latestSubject": "Welcome to Tableau Public! Your First Viz Is Just a Click Away",
+      "latestFrom": "Tableau from Salesforce <email@mail.salesforce.com>",
+      "gmailThreadId": "1a01ae0aca1bb84f",
+      "gmailMessageIds": [
+        "1a01ae0aca1bb84f",
+        "1a020386c92e08e6",
+        "19f6bc75a98a8029",
+        "19f6179cc7f6fb27",
+        "19f4cdf764ae6a26",
+        "19f4292d63cb563f"
+      ],
+      "notes": "",
+      "updatedAt": "2026-08-20T16:59:56.183+00:00",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "jobright-data-engineer-ii",
+      "company": "Jobright",
+      "role": "Data Engineer II",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Latest “Data Engineer II - ETL / ELT” jobs you might like — 98% match from Jobright - 08/20/2026",
+      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
+      "lastActivityAt": "2026-08-20T17:19:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0202f02aa4fb12",
+      "gmailMessageIds": [
+        "1a0202f02aa4fb12"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sagent-general-application",
+      "company": "Sagent",
+      "role": "General Application",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Verify your identity for Sagent with CLEAR®",
+      "latestFrom": "no-reply@sagent.com",
+      "lastActivityAt": "2026-08-20T17:16:42.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0202cd1e9d2cd0",
+      "gmailMessageIds": [
+        "1a0202cd1e9d2cd0"
+      ],
+      "notes": ""
+    },
+    {
       "id": "openrouter-applied-ai-engineer",
       "company": "Openrouter",
       "role": "Forward Deployed Engineer",
@@ -732,7 +798,8 @@
       "latestFrom": "Auger Recruiting <no-reply@gem.com>",
       "gmailThreadId": "1a01f00b86e6d932",
       "gmailMessageIds": [
-        "1a01f00b86e6d932"
+        "1a01f00b86e6d932",
+        "19f6568f7b200032"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.183+00:00",
@@ -742,7 +809,9 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "omegahires-general-application",
@@ -1052,14 +1121,16 @@
       "status": "not_related",
       "confidence": "medium",
       "lastActivityAt": "2026-08-20T04:46:12+00:00",
-      "latestSubject": "Summary of failures for Google Apps Script: Untitled project",
-      "latestFrom": "noreply-apps-scripts-notifications@google.com",
+      "latestSubject": "Unable to verify your identity",
+      "latestFrom": "Google <verification-noreply@google.com>",
       "gmailThreadId": "1a01db628aa2dbc0",
       "gmailMessageIds": [
         "1a01e395121b2909",
         "1a01d884fd206630",
         "1a01d7db8dfaf159",
-        "19fba34e2ccb3302"
+        "19fba34e2ccb3302",
+        "19f2a5455927c4e8",
+        "19f1ca6aeedff88d"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.183+00:00",
@@ -1069,7 +1140,9 @@
       "aiDecision": "Review / Other",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium"
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
     },
     {
       "id": "acrisure-general-application",
@@ -1078,11 +1151,12 @@
       "status": "applied",
       "confidence": "high",
       "lastActivityAt": "2026-08-20T04:21:19+00:00",
-      "latestSubject": "Thank You for Your Interest in Acrisure",
+      "latestSubject": "Thank You For Applying!",
       "latestFrom": "acrisure@myworkday.com",
       "gmailThreadId": "1a01d66eb4a2d942",
       "gmailMessageIds": [
-        "1a01d66eb4a2d942"
+        "1a01d66eb4a2d942",
+        "19f8475be79753f9"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.183+00:00",
@@ -1092,7 +1166,9 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "university-of-california-irvine-data-engineer-4",
@@ -1431,38 +1507,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "unknown-data-engineer",
-      "company": "Unknown Company",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-19T19:21:04+00:00",
-      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "gmailThreadId": "1a01b78ce91908a0",
-      "gmailMessageIds": [
-        "1a01b78ce91908a0",
-        "1a01b78b70ebb4cc",
-        "1a01b78b1b1c2f49",
-        "1a01b789e730f62c",
-        "1a01b789ae6742a6",
-        "1a01b78838951bde",
-        "1a01b78723ead4f4",
-        "1a01b7864e246983",
-        "1a01b7850cebf3f0",
-        "1a01b784ee04b0a1"
-      ],
-      "notes": null,
-      "updatedAt": "2026-08-20T16:02:42.445+00:00",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": null,
-      "aiModel": null,
-      "aiClassifiedAt": null,
-      "aiConfidence": "medium"
-    },
-    {
       "id": "varite-data-engineer",
       "company": "Varite",
       "role": "Data Engineer",
@@ -1652,14 +1696,15 @@
       "id": "stitch-fix-data-engineer",
       "company": "Stitch Fix",
       "role": "Data Engineer",
-      "status": "rejected",
+      "status": "applied",
       "confidence": "high",
       "lastActivityAt": "2026-08-19T17:15:41+00:00",
-      "latestSubject": "Update on Data Engineer position with Stitch Fix",
+      "latestSubject": "Tirth, thank you for applying to Stitch Fix | Data Engineer",
       "latestFrom": "no-reply@stitchfix.com",
       "gmailThreadId": "1a01b05845a7834b",
       "gmailMessageIds": [
-        "1a01b05845a7834b"
+        "1a01b05845a7834b",
+        "19f655aebbf3f2d5"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.183+00:00",
@@ -1669,7 +1714,9 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "resume-worded-general-application",
@@ -1704,11 +1751,12 @@
       "status": "not_related",
       "confidence": "medium",
       "lastActivityAt": "2026-08-19T16:39:48+00:00",
-      "latestSubject": "Edgecore Digital Infrastructure is hiring for “Data Engineer” like you — 97% match from Jobright - 08/19/2026",
+      "latestSubject": "iROW9 INC just posted a 98% match Data Engineer – Microsoft Fabric role 46 minutes ago",
       "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
       "gmailThreadId": "1a01ae4aae922d79",
       "gmailMessageIds": [
-        "1a01ae4aae922d79"
+        "1a01ae4aae922d79",
+        "19f6b2c7726f9e62"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.183+00:00",
@@ -1718,30 +1766,9 @@
       "aiDecision": "Review / Other",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium"
-    },
-    {
-      "id": "salesforce-general-application",
-      "company": "Salesforce",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-19T16:34:40+00:00",
-      "latestSubject": "Ending Tomorrow: Save $400 and lock in your sessions",
-      "latestFrom": "Dreamforce <email@mail.salesforce.com>",
-      "gmailThreadId": "1a01ae0aca1bb84f",
-      "gmailMessageIds": [
-        "1a01ae0aca1bb84f"
-      ],
-      "notes": "",
-      "updatedAt": "2026-08-20T16:59:56.183+00:00",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium"
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
     },
     {
       "id": "supabase-general-application",
@@ -1939,11 +1966,12 @@
       "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-19T12:32:33+00:00",
-      "latestSubject": "Thank You",
-      "latestFrom": "CapTech Consulting Hiring Team <notifications@captechcareers.com>",
+      "latestSubject": "Thank you for your interest in CapTech",
+      "latestFrom": "Laura Massa from CapTech Consulting <notifications@captechcareers.com>",
       "gmailThreadId": "1a01a02520123613",
       "gmailMessageIds": [
-        "1a01a02520123613"
+        "1a01a02520123613",
+        "19f80458969a06c1"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.183+00:00",
@@ -1953,7 +1981,9 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "oremda-infotech-data-engineer",
@@ -2152,7 +2182,8 @@
       "latestFrom": "no-reply@us.greenhouse-mail.io",
       "gmailThreadId": "1a019f087a6a63c0",
       "gmailMessageIds": [
-        "1a019f087a6a63c0"
+        "1a019f087a6a63c0",
+        "19f6fdbd8153d198"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.183+00:00",
@@ -2162,7 +2193,9 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "rysun-labs-data-engineer",
@@ -5119,29 +5152,6 @@
       "aiDecision": "Classified as reply_needed",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-1a0115b7446f5fdc",
-      "company": "Unknown Company",
-      "role": "Business Analyst",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-17T20:13:21+00:00",
-      "latestSubject": "Business Analyst -Tirth Shah",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "gmailThreadId": "1a0115af7bc5ee43",
-      "gmailMessageIds": [
-        "1a0115b7446f5fdc"
-      ],
-      "notes": "I have tried calling you. Let me know if you can give me a call.",
-      "updatedAt": "2026-08-20T16:02:42.445+00:00",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": null,
-      "aiModel": null,
-      "aiClassifiedAt": null,
       "aiConfidence": "high"
     },
     {
@@ -15015,31 +15025,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19fd3bc61b053eda",
-      "company": "Unknown Company",
-      "role": "Data Engineer",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-05T20:36:25+00:00",
-      "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "gmailThreadId": "19fd3a443570917a",
-      "gmailMessageIds": [
-        "19fd3bc61b053eda",
-        "19fd3a443570917a",
-        "19fb5141f28e1697"
-      ],
-      "notes": "Job Title: AWS Data Engineer Location: Dallas, TX (Hybrid – 3 days onsite per week) Experience Level: 6–12 years Interview Process: Includes final in-person client interview (mandatory) We are hiring",
-      "updatedAt": "2026-08-20T16:02:42.446+00:00",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": null,
-      "aiModel": null,
-      "aiClassifiedAt": null,
-      "aiConfidence": "medium"
-    },
-    {
       "id": "msg-19fd3994c5bc6700",
       "company": "Se",
       "role": "General Application",
@@ -17967,6 +17952,26 @@
       "aiConfidence": "high"
     },
     {
+      "id": "celigo-analytics-engineer",
+      "company": "Celigo",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Celigo",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-31T13:23:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fb857c5dfc81cb",
+      "gmailMessageIds": [
+        "19fb857c5dfc81cb",
+        "19f84a5ce6fe2efd",
+        "19f6230b5553dc40"
+      ],
+      "notes": ""
+    },
+    {
       "id": "msg-19fb84f9e407153b",
       "company": "Lean Layer",
       "role": "General Application",
@@ -20340,6 +20345,26 @@
       "aiConfidence": "high"
     },
     {
+      "id": "mckesson-general-application",
+      "company": "Mckesson",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying",
+      "latestFrom": "Workday Notifications <mckesson@myworkday.com>",
+      "lastActivityAt": "2026-07-29T07:59:31.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19face2c878d5c7e",
+      "gmailMessageIds": [
+        "19face2c878d5c7e",
+        "19f941a8d54401f9",
+        "19f72121bdaf83b7"
+      ],
+      "notes": ""
+    },
+    {
       "id": "msg-19facb2617fd15eb",
       "company": "LPL Financial People",
       "role": "Data Engineer",
@@ -21227,14 +21252,17 @@
       "id": "recurly-analytics-engineer",
       "company": "Recurly",
       "role": "Analytics Engineer",
-      "status": "rejected",
+      "status": "applied",
       "confidence": "high",
       "lastActivityAt": "2026-07-27T14:29:54+00:00",
-      "latestSubject": "Analytics Engineer - Recurly",
-      "latestFrom": "\"Diego Andrés Botero\" <dboteromontoya@recurly.com>",
+      "latestSubject": "Thanks for applying to Recurly",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
       "gmailThreadId": "19fa3fbf89d7cd18",
       "gmailMessageIds": [
-        "19fa3fbf89d7cd18"
+        "19fa3fbf89d7cd18",
+        "19f700374d0469d0",
+        "19f6fae96867a4dd",
+        "19f6fae4b11a34e4"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.184+00:00",
@@ -21244,7 +21272,9 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "msg-19fa3b3871123a6b",
@@ -21350,7 +21380,8 @@
       "latestFrom": "Atyeti <notifications@app.bamboohr.com>",
       "gmailThreadId": "19fa3a134a3ea647",
       "gmailMessageIds": [
-        "19fa3a134a3ea647"
+        "19fa3a134a3ea647",
+        "19f7f7638109a017"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.184+00:00",
@@ -21360,7 +21391,9 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "msg-19fa39d0bc1f26d0",
@@ -22726,7 +22759,8 @@
       "latestFrom": "BLN24 <noreply@applytojob.com>",
       "gmailThreadId": "19f8f5ba13de761a",
       "gmailMessageIds": [
-        "19f8fe8c8aa26099"
+        "19f8fe8c8aa26099",
+        "19f65879cf0f3f13"
       ],
       "notes": "",
       "updatedAt": "2026-08-20T16:59:56.184+00:00",
@@ -22736,7 +22770,9 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "msg-19f8fe638b715a86",
@@ -24058,7 +24094,3287 @@
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
+    },
+    {
+      "id": "grant-street-data-engineer",
+      "company": "Grant Street",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Grant Street Group",
+      "latestFrom": "Grant Street Group <mail@hire.lever.co>",
+      "lastActivityAt": "2026-07-21T13:15:21.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84d11273b8279",
+      "gmailMessageIds": [
+        "19f84d11273b8279"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "elevate-aviation-general-application",
+      "company": "Elevate Aviation",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Elevate Aviation Group - Thank you for applying!",
+      "latestFrom": "ELEVATE AVIATION GROUP LLC <do-not-reply@mail.paylocity.com>",
+      "lastActivityAt": "2026-07-21T13:11:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84cdcf6f7116b",
+      "gmailMessageIds": [
+        "19f84cdcf6f7116b",
+        "19f8467f6556811d"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "patient-funding-alternatives-founding-data-engineer",
+      "company": "Patient Funding Alternatives",
+      "role": "Founding Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Patient Funding Alternatives",
+      "latestFrom": "Patient Funding Alternatives <notification@insidepfa.com>",
+      "lastActivityAt": "2026-07-21T13:04:53.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84c77c846b3f7",
+      "gmailMessageIds": [
+        "19f84c77c846b3f7",
+        "19f7f6c9ec9b25ca"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "one-park-financial-analytics-engineer",
+      "company": "One Park Financial",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to One Park Financial",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-07-21T12:36:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84ad885a1dd3c",
+      "gmailMessageIds": [
+        "19f84ad885a1dd3c",
+        "19f6ac5249f5fd49",
+        "19f6ab6e854c0614",
+        "19f6ab67fda9a2fd"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gabb-wireless-general-application",
+      "company": "Gabb Wireless",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application was submitted successfully! 🎉",
+      "latestFrom": "Gabb Wireless <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-21T12:32:42.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84aa036f8afbe",
+      "gmailMessageIds": [
+        "19f84aa036f8afbe"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "creatoriq-analytics-engineer",
+      "company": "Creatoriq",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to CreatorIQ",
+      "latestFrom": "CreatorIQ Talent Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-21T12:31:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84a931bb28ee5",
+      "gmailMessageIds": [
+        "19f84a931bb28ee5"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "openloop-health-data-analyst-ii",
+      "company": "Openloop Health",
+      "role": "Data Analyst II",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in OpenLoop Health!",
+      "latestFrom": "OpenLoop Health Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-21T12:21:58.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84a0338db633a",
+      "gmailMessageIds": [
+        "19f84a0338db633a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "super-com-senior-analytics-engineer",
+      "company": "Super.com",
+      "role": "Senior Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying, Tirth!",
+      "latestFrom": "\"Super.com Hiring Team\" <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-21T12:20:58.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f849f491c0f040",
+      "gmailMessageIds": [
+        "19f849f491c0f040"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sprinter-health-senior-analytics-engineer",
+      "company": "Sprinter Health",
+      "role": "Senior Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for Applying to Analytics Engineer (Senior)",
+      "latestFrom": "Sprinter Health Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-21T12:19:38.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f849e0dbb41403",
+      "gmailMessageIds": [
+        "19f849e0dbb41403"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "bloomerang-data-engineer",
+      "company": "Bloomerang",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks For Applying To Bloomerang!",
+      "latestFrom": "careers@bloomerang.com",
+      "lastActivityAt": "2026-07-21T12:16:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f849acd0ddd459",
+      "gmailMessageIds": [
+        "19f849acd0ddd459"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "summit-utilities-general-application",
+      "company": "Summit Utilities",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Your Application to Summit Utilities, Inc.",
+      "latestFrom": "<SummitUtilitiesInc.hr@adp.com>",
+      "lastActivityAt": "2026-07-21T12:06:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84926cd394716",
+      "gmailMessageIds": [
+        "19f84926cd394716"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "interval-general-application",
+      "company": "Interval",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Interval",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-21T12:02:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f848e07ac56f12",
+      "gmailMessageIds": [
+        "19f848e07ac56f12"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "blr-general-application",
+      "company": "BLR",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, we've received your resume",
+      "latestFrom": "\"BLR | Leadership Platforms | CCMI\" <noreply@applytojob.com>",
+      "lastActivityAt": "2026-07-21T11:47:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f8480d10a1dc23",
+      "gmailMessageIds": [
+        "19f8480d10a1dc23"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "whatnot-data-engineer",
+      "company": "Whatnot",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "👋 Thank you for applying to Whatnot!",
+      "latestFrom": "Whatnot Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-21T11:45:21.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f847eace22002b",
+      "gmailMessageIds": [
+        "19f847eace22002b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fanatics-data-engineer-ii",
+      "company": "Fanatics",
+      "role": "Data Engineer II",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to the Data Engineer II - (Remote) at Fanatics",
+      "latestFrom": "no-reply@fanaticsinc.com",
+      "lastActivityAt": "2026-07-21T11:40:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f8479f12c5767b",
+      "gmailMessageIds": [
+        "19f8479f12c5767b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "crosscountry-mortgage-general-application",
+      "company": "Crosscountry Mortgage",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received",
+      "latestFrom": "Crosscountry Mortgage <crosscountrymortgage@myworkday.com>",
+      "lastActivityAt": "2026-07-21T11:40:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f8479d975392d4",
+      "gmailMessageIds": [
+        "19f8479d975392d4"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "oncohealth-data-engineer",
+      "company": "Oncohealth",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for Applying to OncoHealth!",
+      "latestFrom": "HR <careers@oncohealth.us>",
+      "lastActivityAt": "2026-07-21T11:32:30.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f8472eba159c87",
+      "gmailMessageIds": [
+        "19f8472eba159c87"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "burjline-builders-data-engineer",
+      "company": "Burjline Builders",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We have received your application!",
+      "latestFrom": "Abdul Rafay - Burjline Builders <abdul.rafay@abdulrauf1.teamtailor-email.com>",
+      "lastActivityAt": "2026-07-21T11:30:38.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f847133abdad7c",
+      "gmailMessageIds": [
+        "19f847133abdad7c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "kimley-horn-data-engineer",
+      "company": "Kimley-horn",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Kimley-Horn!",
+      "latestFrom": "\"Kimley-Horn @ icims\" <kimley-horn+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-07-21T11:30:25.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f8471018a5c0ca",
+      "gmailMessageIds": [
+        "19f8471018a5c0ca"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sep-general-application",
+      "company": "SEP",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to SEP",
+      "latestFrom": "SEP <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-21T11:28:37.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f846f5c4885013",
+      "gmailMessageIds": [
+        "19f846f5c4885013"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "quoris-general-application",
+      "company": "Quoris",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "We invite you to join our candidate portal | Quoris, LLC",
+      "latestFrom": "Tom Sjostedt <thomas.sjostedt@quoris.com>",
+      "lastActivityAt": "2026-07-21T11:15:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f8463366646596",
+      "gmailMessageIds": [
+        "19f8463366646596"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "metlife-data-engineer-ii",
+      "company": "Metlife",
+      "role": "Data Engineer II",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to the Data Engineer II - Job ID:19059 role at MetLife!",
+      "latestFrom": "MetLife Global Talent Acquisition <recruiting@metlifecareers.com>",
+      "lastActivityAt": "2026-07-21T10:58:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84544aecd07fd",
+      "gmailMessageIds": [
+        "19f84544aecd07fd"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "bdg-general-application",
+      "company": "BDG",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to BDG!",
+      "latestFrom": "BDG <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-21T10:47:00.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84493ef4cfb45",
+      "gmailMessageIds": [
+        "19f84493ef4cfb45"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "paper-store-general-application",
+      "company": "Paper Store",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "The Paper Store Password setup",
+      "latestFrom": "The Paper Store <donotreply@msg.paycomonline.com>",
+      "lastActivityAt": "2026-07-21T10:41:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f84441ac9959e1",
+      "gmailMessageIds": [
+        "19f84441ac9959e1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "baseten-data-engineer",
+      "company": "Baseten",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to Baseten!",
+      "latestFrom": "Baseten Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-20T21:10:39.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f815ddd8a5145b",
+      "gmailMessageIds": [
+        "19f815ddd8a5145b",
+        "19f7f55ba1def57c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "permitflow-analytics-engineer",
+      "company": "Permitflow",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to PermitFlow!",
+      "latestFrom": "PermitFlow Recruiting Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-20T20:46:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f81474e86f806c",
+      "gmailMessageIds": [
+        "19f81474e86f806c",
+        "19f6ab4ea6618910"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "inland-empire-health-plan-data-engineer-ii",
+      "company": "Inland Empire Health Plan",
+      "role": "Data Engineer II",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "IEHP: Thank you for applying to Data Engineer II (2026-6523)",
+      "latestFrom": "\"Inland Empire Health Plan @ icims\" <iehp+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-07-20T18:07:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f80b69ec7c5791",
+      "gmailMessageIds": [
+        "19f80b69ec7c5791",
+        "19f6f8c16b5242a6"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "rhythm-energy-analytics-engineer-ii",
+      "company": "Rhythm Energy",
+      "role": "Analytics Engineer II",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Rhythm Energy – Analytics Engineer II",
+      "latestFrom": "Rhythm Energy <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-20T14:05:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7fd83b721c2cd",
+      "gmailMessageIds": [
+        "19f7fd83b721c2cd"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "heliocampus-analytics-engineer",
+      "company": "Heliocampus",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying at HelioCampus!",
+      "latestFrom": "Carolina Bartolome-Pate - HelioCampus <carolina.bartolome-pate@heliocampus.teamtailor-mail.com>",
+      "lastActivityAt": "2026-07-20T13:00:16.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f9ce772d94b5",
+      "gmailMessageIds": [
+        "19f7f9ce772d94b5",
+        "19f6ab7fd147347d"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "emed-general-application",
+      "company": "Emed",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, we've received your resume",
+      "latestFrom": "\"eMed, LLC\" <noreply@applytojob.com>",
+      "lastActivityAt": "2026-07-20T12:15:15.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f51f5dd59905",
+      "gmailMessageIds": [
+        "19f7f73aea4d486e"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "techop-solutions-international-data-analytics-developer",
+      "company": "Techop Solutions International",
+      "role": "Data Analytics Developer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to TechOp Solutions International",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-07-20T12:15:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f738d9bf9f5f",
+      "gmailMessageIds": [
+        "19f7f738d9bf9f5f",
+        "19f7f6496003ae05"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sono-bello-general-application",
+      "company": "Sono Bello",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Sono Bello",
+      "latestFrom": "no-reply@sonobello.com",
+      "lastActivityAt": "2026-07-20T12:10:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f6efac3ad5b7",
+      "gmailMessageIds": [
+        "19f7f6efac3ad5b7"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fluidstack-data-engineer",
+      "company": "Fluidstack",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received - Data Engineer at Fluidstack",
+      "latestFrom": "Fluidstack Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-20T12:00:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f65c5ecd7584",
+      "gmailMessageIds": [
+        "19f7f65c5ecd7584"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "hubspot-senior-analytics-engineer",
+      "company": "Hubspot",
+      "role": "Senior Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to HubSpot!",
+      "latestFrom": "no-reply@hubspot.com",
+      "lastActivityAt": "2026-07-20T11:51:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f5d880c066bb",
+      "gmailMessageIds": [
+        "19f7f5d880c066bb"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "spring-financial-general-application",
+      "company": "Spring Financial",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying at Spring Financial.",
+      "latestFrom": "\"Spring Financial Inc.\" <notifications@app.bamboohr.com>",
+      "lastActivityAt": "2026-07-20T11:34:31.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f4e65cf35cd3",
+      "gmailMessageIds": [
+        "19f7f4e65cf35cd3"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "wellsky-general-application",
+      "company": "Wellsky",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Applying with WellSky!",
+      "latestFrom": "WellSky <wellsky@myworkday.com>",
+      "lastActivityAt": "2026-07-20T11:32:46.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f4ccac48b395",
+      "gmailMessageIds": [
+        "19f7f4ccac48b395"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "priority-management-general-application",
+      "company": "PRIORITY MANAGEMENT",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "PRIORITY MANAGEMENT Password setup",
+      "latestFrom": "PRIORITY MANAGEMENT <donotreply@msg.paycomonline.com>",
+      "lastActivityAt": "2026-07-20T11:31:55.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f4c061a090fc",
+      "gmailMessageIds": [
+        "19f7f4c061a090fc"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "humble-robotics-general-application",
+      "company": "Humble Robotics",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Humble Robotics",
+      "latestFrom": "Humble Robotics <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-20T11:27:57.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f48611c79297",
+      "gmailMessageIds": [
+        "19f7f48611c79297"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "wmed-general-application",
+      "company": "WMED",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application!",
+      "latestFrom": "wmed-noreply@saashr.com",
+      "lastActivityAt": "2026-07-20T11:25:57.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f468d0bd2667",
+      "gmailMessageIds": [
+        "19f7f468d0bd2667"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "mactores-general-application",
+      "company": "Mactores",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Mactores",
+      "latestFrom": "Mactores <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-20T11:22:27.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f435d3914028",
+      "gmailMessageIds": [
+        "19f7f435d3914028"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "echostar-data-engineer-ii",
+      "company": "Echostar",
+      "role": "Data Engineer II",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to EchoStar!",
+      "latestFrom": "\"EchoStar @ icims\" <echostar+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-07-20T11:18:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f4012d04f509",
+      "gmailMessageIds": [
+        "19f7f4012d04f509"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "curtin-maritime-general-application",
+      "company": "Curtin Maritime",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying at Curtin Maritime",
+      "latestFrom": "Curtin Maritime <notifications@app.bamboohr.com>",
+      "lastActivityAt": "2026-07-20T11:13:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f3b185a95a66",
+      "gmailMessageIds": [
+        "19f7f3b185a95a66"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "veev-general-application",
+      "company": "Veev",
+      "role": "General Application",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Re: Opportunity at Veev",
+      "latestFrom": "Hiring Team <no-reply@breezy-mail.com>",
+      "lastActivityAt": "2026-07-20T11:03:53.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f3259efb59ba",
+      "gmailMessageIds": [
+        "19f7f3259efb59ba"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "constant-contact-analytics-engineer",
+      "company": "Constant Contact",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Applying to Constant Contact",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-20T11:00:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f2f105bd4b59",
+      "gmailMessageIds": [
+        "19f7f2f105bd4b59"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "rjw-logistics-general-application",
+      "company": "RJW Logistics",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Employment Update - RJW Logistics Group",
+      "latestFrom": "RJW Logistics Group Career Opportunities <jobs@adp.com>",
+      "lastActivityAt": "2026-07-20T10:59:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f2df95da2484",
+      "gmailMessageIds": [
+        "19f7f2df95da2484"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "drivewealth-data-engineer-ii",
+      "company": "Drivewealth",
+      "role": "Data Engineer II",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to DriveWealth!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-20T10:58:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f2d1c9b67f91",
+      "gmailMessageIds": [
+        "19f7f2d1c9b67f91"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "bankunited-general-application",
+      "company": "Bankunited",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Employment Update - BankUnited",
+      "latestFrom": "BankUnited Career Opportunities <jobs@adp.com>",
+      "lastActivityAt": "2026-07-20T10:55:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f2a496249225",
+      "gmailMessageIds": [
+        "19f7f2a496249225"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "direct-travel-general-application",
+      "company": "Direct Travel",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Employment Update - DIRECT TRAVEL INC",
+      "latestFrom": "DIRECT TRAVEL INC - Talent Acquisition <jobs@adp.com>",
+      "lastActivityAt": "2026-07-20T10:38:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f1adc3a7de00",
+      "gmailMessageIds": [
+        "19f7f1adc3a7de00"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "grant-street-general-application",
+      "company": "Grant Street",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We received your application!",
+      "latestFrom": "Grant Street Group <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-20T10:35:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f17ee1c3555b",
+      "gmailMessageIds": [
+        "19f7f17ee1c3555b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "knit-health-general-application",
+      "company": "Knit Health",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Knit Health",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-20T10:29:08.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7f128a7d0087b",
+      "gmailMessageIds": [
+        "19f7f128a7d0087b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "everforth-ecs-mid-level-data-engineer",
+      "company": "Everforth ECS",
+      "role": "Mid-level Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Additional Information Needed for the Position of 3786 - Mid-Level Data Engineer",
+      "latestFrom": "Everforth ECS Career Opportunities <jobs+43f441a0599043d98060075dd05bd145@adp.com>",
+      "lastActivityAt": "2026-07-19T10:46:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f79fbb4a74a53a",
+      "gmailMessageIds": [
+        "19f79fbb4a74a53a",
+        "19f6faf0698930d0",
+        "19f6abf89da76f35"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "blain-s-farm-fleet-general-application",
+      "company": "Blain's Farm & Fleet",
+      "role": "General Application",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your job application is incomplete!",
+      "latestFrom": "\"Blain's Farm & Fleet @ icims\" <blainsupplyff+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-07-19T06:15:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f79038842bb03b",
+      "gmailMessageIds": [
+        "19f79038842bb03b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "jobright-general-application",
+      "company": "Jobright",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Welcome to Jobright!",
+      "latestFrom": "Jobright <support@jobright.ai>",
+      "lastActivityAt": "2026-07-18T21:58:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f773cbea507658",
+      "gmailMessageIds": [
+        "19f773cbea507658",
+        "19f720970dbfa457",
+        "19f6d21f200fbc4e",
+        "19f67b75994556e7",
+        "19f62247a27f3144"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "beghou-consulting-general-application",
+      "company": "Beghou Consulting",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Beghou Consulting",
+      "latestFrom": "Beghou Consulting <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-18T15:36:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f75decc202fa3e",
+      "gmailMessageIds": [
+        "19f75decc202fa3e",
+        "19f676ae2baed0ba"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "core-bts-gcp-data-engineer",
+      "company": "Core BTS",
+      "role": "GCP Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on Your Application",
+      "latestFrom": "\"'Matthew Winkler'\" <matthew.winkler@corebts.com>",
+      "lastActivityAt": "2026-07-18T15:30:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f75d9a0aff4601",
+      "gmailMessageIds": [
+        "19f75d9a0aff4601"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "coinbase-analytics-engineer",
+      "company": "Coinbase",
+      "role": "Analytics Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Important information about your application to Coinbase",
+      "latestFrom": "no-reply@coinbase.com",
+      "lastActivityAt": "2026-07-18T14:00:13.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f75871121760e0",
+      "gmailMessageIds": [
+        "19f75871121760e0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "obra-data-engineer-for-asset-management",
+      "company": "Obra",
+      "role": "Data Engineer For Asset Management",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Track your Data Engineer for Asset Management application at Virginia Passenger Rail Authority with Obra.",
+      "latestFrom": "Obra Jobs <hello@obrajobs.com>",
+      "lastActivityAt": "2026-07-18T12:01:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f751acff8453a1",
+      "gmailMessageIds": [
+        "19f751acff8453a1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "contexture-general-application",
+      "company": "Contexture",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying at Contexture",
+      "latestFrom": "Contexture <notifications@app.bamboohr.com>",
+      "lastActivityAt": "2026-07-18T10:26:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f74c34d598e423",
+      "gmailMessageIds": [
+        "19f74c34d598e423",
+        "19f6f983cc5619ab"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "spacexai-data-engineer",
+      "company": "Spacexai",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application to SpaceXAI",
+      "latestFrom": "no-reply@x.ai",
+      "lastActivityAt": "2026-07-18T04:52:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f739141a0e92cf",
+      "gmailMessageIds": [
+        "19f739141a0e92cf"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sap-senior-agentic-ai-engineer",
+      "company": "SAP",
+      "role": "Senior Agentic AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Application for Senior Agentic AI Engineer 448944",
+      "latestFrom": "SAP Careers <system@successfactors.eu>",
+      "lastActivityAt": "2026-07-18T01:32:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f72da4456e1b69",
+      "gmailMessageIds": [
+        "19f72da4456e1b69"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "covista-data-engineer",
+      "company": "Covista",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Covista",
+      "latestFrom": "Covista <notification@careers.covista.com>",
+      "lastActivityAt": "2026-07-17T23:00:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f724f2690ac41d",
+      "gmailMessageIds": [
+        "19f724f2690ac41d",
+        "19f628b0309a7bee"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "eli-lilly-general-application",
+      "company": "Eli Lilly",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to the Lilly Team!",
+      "latestFrom": "lilly@myworkday.com",
+      "lastActivityAt": "2026-07-17T21:59:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f7217bb7be0756",
+      "gmailMessageIds": [
+        "19f7217bb7be0756"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "aptean-data-engineer",
+      "company": "Aptean",
+      "role": "Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "You've started your job application!",
+      "latestFrom": "\"Aptean @ icims\" <aptean+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-07-17T21:56:00.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f72144df5d51a9",
+      "gmailMessageIds": [
+        "19f72144df5d51a9",
+        "19f7213b3cf5b54d"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "preferred-credit-data-engineer",
+      "company": "Preferred Credit",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Data Engineer at PCI",
+      "latestFrom": "careers@preferredcredit.com",
+      "lastActivityAt": "2026-07-17T21:51:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f720fbf5daa651",
+      "gmailMessageIds": [
+        "19f720fbf5daa651"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "evolved-aerospace-general-application",
+      "company": "Evolved Aerospace",
+      "role": "General Application",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in Evolved Aerospace",
+      "latestFrom": "Connor Hird <connor.hird@evolved.aero>",
+      "lastActivityAt": "2026-07-17T16:12:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f70d9751d42573",
+      "gmailMessageIds": [
+        "19f70d9751d42573"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "cadence-senior-software-engineer-agentic-ai",
+      "company": "Cadence",
+      "role": "Senior Software Engineer, Agentic AI",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Cadence Application",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-17T16:00:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f70cf07055499d",
+      "gmailMessageIds": [
+        "19f70cf07055499d"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "rippling-analytics-engineer",
+      "company": "Rippling",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Rippling",
+      "latestFrom": "Rippling <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-17T12:12:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6ffdb3511fae8",
+      "gmailMessageIds": [
+        "19f6ffdb3511fae8"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "podium-analytics-engineer",
+      "company": "Podium",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to Podium!",
+      "latestFrom": "no-reply@podium.com",
+      "lastActivityAt": "2026-07-17T12:04:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6ff65d857a35b",
+      "gmailMessageIds": [
+        "19f6ff65d857a35b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "10a-labs-general-application",
+      "company": "10a Labs",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to 10a Labs",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-17T11:52:12.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6feb803fdc84d",
+      "gmailMessageIds": [
+        "19f6feb803fdc84d",
+        "19f62a61b66b81c0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "redwood-materials-general-application",
+      "company": "Redwood Materials",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Redwood Materials",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-17T11:48:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fe7c805e3e9c",
+      "gmailMessageIds": [
+        "19f6fe7c805e3e9c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "virginia-passenger-rail-authority-data-engineer",
+      "company": "Virginia Passenger Rail Authority",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying with Virginia Passenger Rail Authority",
+      "latestFrom": "Virginia Passenger Rail Authority <hello@send.applicantemails.com>",
+      "lastActivityAt": "2026-07-17T11:44:36.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fe48c9a8e85f",
+      "gmailMessageIds": [
+        "19f6fe48c9a8e85f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "virginia-passenger-rail-authority-general-application",
+      "company": "Virginia Passenger Rail Authority",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Virginia Passenger Rail Authority Application Account Information",
+      "latestFrom": "\"Virginia Passenger Rail Authority (isolved Applicant Tracking)\" <hello@send.applicantemails.com>",
+      "lastActivityAt": "2026-07-17T11:36:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fdd5d474e806",
+      "gmailMessageIds": [
+        "19f6fdd5d474e806"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "omnicell-data-engineer-analytics-engineer",
+      "company": "Omnicell",
+      "role": "Data Engineer / Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for Applying! - Data Engineer / Analytics Engineer – People Analytics (5257)",
+      "latestFrom": "Omnicell Talent Acquisition <NoReply@omnicell.com>",
+      "lastActivityAt": "2026-07-17T11:35:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fdca95f0093d",
+      "gmailMessageIds": [
+        "19f6fdca95f0093d"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "arva-intelligence-data-engineer",
+      "company": "Arva Intelligence",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Arva Intelligence",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-17T11:29:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fd659e3d1965",
+      "gmailMessageIds": [
+        "19f6fd659e3d1965"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ace-relocation-systems-general-application",
+      "company": "Ace Relocation Systems",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Ace Relocation Systems, Inc. Password setup",
+      "latestFrom": "\"Ace Relocation Systems, Inc.\" <donotreply@msg.paycomonline.com>",
+      "lastActivityAt": "2026-07-17T11:26:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fd40ba3a57a1",
+      "gmailMessageIds": [
+        "19f6fd40ba3a57a1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "physicians-mutual-insurance-associate-data-engineer",
+      "company": "Physicians Mutual Insurance",
+      "role": "Associate Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Your Application",
+      "latestFrom": "\"Physicians Mutual Insurance Company, Inc. @ icims\" <physiciansmutual+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-07-17T11:25:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fd36841ab961",
+      "gmailMessageIds": [
+        "19f6fd36841ab961"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "jpmorgan-chase-general-application",
+      "company": "Jpmorgan Chase",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Take action to confirm your identity",
+      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
+      "lastActivityAt": "2026-07-17T11:20:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fce601891af7",
+      "gmailMessageIds": [
+        "19f6fce601891af7"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "digital-realty-data-workflow-engineer",
+      "company": "Digital Realty",
+      "role": "Data Workflow Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Digital Realty Careers - Your recent job application for Data Workflow Engineer – AI & Automation Focus",
+      "latestFrom": "Digital Realty <do_not_reply@talent.digitalrealty.com>",
+      "lastActivityAt": "2026-07-17T11:18:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fcc8aba4b307",
+      "gmailMessageIds": [
+        "19f6fcc8aba4b307"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "carmax-engineer-ii-data",
+      "company": "Carmax",
+      "role": "Engineer Ii, Data",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "CarMax incomplete application for Engineer II, Data",
+      "latestFrom": "noreply@carmax.com",
+      "lastActivityAt": "2026-07-17T11:11:15.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fc604b94ea14",
+      "gmailMessageIds": [
+        "19f6fc604b94ea14"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "qvc-general-application",
+      "company": "QVC",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "QVC Group Application Update",
+      "latestFrom": "QVC Group <qvc@myworkday.com>",
+      "lastActivityAt": "2026-07-17T11:11:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fc5dba5bf62d",
+      "gmailMessageIds": [
+        "19f6fc5dba5bf62d"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "hca-healthcare-data-engineer",
+      "company": "HCA Healthcare",
+      "role": "Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Next Required Application Step Data Engineer - GCP 4750460 at HCA Healthcare",
+      "latestFrom": "HCAJobApplication@hcacareers.com",
+      "lastActivityAt": "2026-07-17T11:09:54.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fc4cbdba8c6e",
+      "gmailMessageIds": [
+        "19f6fc4cbdba8c6e"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "hca-healthcare-general-application",
+      "company": "HCA Healthcare",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Welcome to the HCA Healthcare Candidate Portal!",
+      "latestFrom": "HCAJobApplication@hcacareers.com",
+      "lastActivityAt": "2026-07-17T11:08:50.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fc3cd6e8a111",
+      "gmailMessageIds": [
+        "19f6fc3cd6e8a111",
+        "19f6fc3cc6f5232f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "mphasis-general-application",
+      "company": "Mphasis",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Job application successful.",
+      "latestFrom": "Mphasis <noreply@ripplehire.com>",
+      "lastActivityAt": "2026-07-17T11:08:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fc3106693902",
+      "gmailMessageIds": [
+        "19f6fc3106693902"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "continental-data-engineer",
+      "company": "Continental",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received",
+      "latestFrom": "Continental Services <continentalserves@pinpoint.email>",
+      "lastActivityAt": "2026-07-17T11:06:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fc2134ba41ad",
+      "gmailMessageIds": [
+        "19f6fc2134ba41ad"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "abra-data-engineer",
+      "company": "Abra",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying for the Data engineer position at abra",
+      "latestFrom": "abra <no-reply@abra.rnd.comeet-notifications.com>",
+      "lastActivityAt": "2026-07-17T10:40:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fa9e3f9ffe58",
+      "gmailMessageIds": [
+        "19f6fa9e3f9ffe58",
+        "19f6fa9e3287869b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pacific-life-general-application",
+      "company": "Pacific Life",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your job application!",
+      "latestFrom": "WorkdayHR <pacificlife@myworkday.com>",
+      "lastActivityAt": "2026-07-17T10:34:29.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6fa45a26b1986",
+      "gmailMessageIds": [
+        "19f6fa45a26b1986"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "globallogic-general-application",
+      "company": "Globallogic",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Submitted - Thank you for applying at GlobalLogic",
+      "latestFrom": "GlobalLogic <careers@globallogic.com>",
+      "lastActivityAt": "2026-07-17T10:17:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6f948be44ecda",
+      "gmailMessageIds": [
+        "19f6f948be44ecda"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tealinc-analytics-engineer",
+      "company": "Tealinc",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your Application at Tealinc",
+      "latestFrom": "Tealinc <do_not_reply@clearcompany.com>",
+      "lastActivityAt": "2026-07-17T10:16:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6f93c2abf26ac",
+      "gmailMessageIds": [
+        "19f6f93c2abf26ac"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "eneba-general-application",
+      "company": "Eneba",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Eneba",
+      "latestFrom": "Eneba <no-reply@hire.eu.lever.co>",
+      "lastActivityAt": "2026-07-17T08:39:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6f3aa4d0e01bf",
+      "gmailMessageIds": [
+        "19f6f3aa4d0e01bf",
+        "19f6a8223976eb50"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "data-device-quality-engineer",
+      "company": "Data Device",
+      "role": "Quality Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received",
+      "latestFrom": "ClearCompany <do_not_reply@clearcompany.com>",
+      "lastActivityAt": "2026-07-17T05:53:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6ea37063c12d3",
+      "gmailMessageIds": [
+        "19f6ea37063c12d3"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "hollstadt-consulting-curated-data-integration-engineer",
+      "company": "Hollstadt Consulting",
+      "role": "Curated Data Integration Engineer",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Hollstadt Consulting Application Update: Curated Data Integration Engineer",
+      "latestFrom": "Hollstadt <hello@hollstadt.com>",
+      "lastActivityAt": "2026-07-16T20:05:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6c890a13cfa5a",
+      "gmailMessageIds": [
+        "19f6c890a13cfa5a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "infinitive-senior-consultant-data-engineer",
+      "company": "Infinitive",
+      "role": "Senior Consultant, Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Infinitive Inc - Senior Consultant, Data Engineer (Python/PySpark/AWS)",
+      "latestFrom": "Infinitive Inc <recruiting+428610348-385a25b0@applytojob.com>",
+      "lastActivityAt": "2026-07-16T13:14:57.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6b10e63702060",
+      "gmailMessageIds": [
+        "19f6b10e63702060"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "purple-carrot-analytics-engineer",
+      "company": "Purple Carrot",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to Purple Carrot",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-07-16T12:03:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6acfaa5e8f8d1",
+      "gmailMessageIds": [
+        "19f6acfaa5e8f8d1",
+        "19f6ac89952a386c",
+        "19f6ac1eb3954c30"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "rogo-analytics-engineer",
+      "company": "Rogo",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Rogo",
+      "latestFrom": "Rogo Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-16T11:51:36.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6ac49799cccb8",
+      "gmailMessageIds": [
+        "19f6ac49799cccb8"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "rightway-analytics-engineer",
+      "company": "Rightway",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Rightway",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-16T11:47:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6ac08a8bd360a",
+      "gmailMessageIds": [
+        "19f6ac08a8bd360a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "counsel-health-analytics-engineer",
+      "company": "Counsel Health",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Counsel Health",
+      "latestFrom": "Counsel Health Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-16T11:43:37.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6abd46b46f586",
+      "gmailMessageIds": [
+        "19f6abd46b46f586"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "brattle-data-and-ai-engineer",
+      "company": "Brattle",
+      "role": "Data And AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to The Brattle Group",
+      "latestFrom": "no-reply@brattle.com",
+      "lastActivityAt": "2026-07-16T11:32:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6ab2caab31b11",
+      "gmailMessageIds": [
+        "19f6ab2caab31b11"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gridsight-customer-data-engineer",
+      "company": "Gridsight",
+      "role": "Customer Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "You're on our radar -- thanks for applying to Gridsight!⚡️",
+      "latestFrom": "Gridsight <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-16T11:30:51.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6ab19cd9f7ca3",
+      "gmailMessageIds": [
+        "19f6ab19cd9f7ca3"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "wings-credit-union-data-engineer-i",
+      "company": "Wings Credit Union",
+      "role": "Data Engineer I",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Wings Credit Union - Thank you for your application!",
+      "latestFrom": "Wings Credit Union <notification@smartrecruiters.com>",
+      "lastActivityAt": "2026-07-16T11:29:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6ab0a15ac897e",
+      "gmailMessageIds": [
+        "19f6ab0a15ac897e",
+        "19f6a7aa370e2134"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "epam-data-engineer",
+      "company": "EPAM",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application results",
+      "latestFrom": "EPAM Hiring Team <noreply@epam.com>",
+      "lastActivityAt": "2026-07-16T11:02:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a97de4767509",
+      "gmailMessageIds": [
+        "19f6a97de4767509"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "david-protein-data-engineer",
+      "company": "David Protein",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to David Protein",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-07-16T11:01:55.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a971d5ce5c4a",
+      "gmailMessageIds": [
+        "19f6a971d5ce5c4a",
+        "19f6a7d598762943"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "office-of-illinois-state-treasurer-general-application",
+      "company": "Office Of Illinois State Treasurer",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, we've received your application",
+      "latestFrom": "Office of the Illinois State Treasurer <noreply@applytojob.com>",
+      "lastActivityAt": "2026-07-16T10:55:49.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a9189a990f17",
+      "gmailMessageIds": [
+        "19f6a9189a990f17"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "qcells-data-engineer",
+      "company": "Qcells",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application for Data Engineer at Qcells",
+      "latestFrom": "Qcells Recruiting Team <notification@jobvite.com>",
+      "lastActivityAt": "2026-07-16T10:51:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a8d7c38e771b",
+      "gmailMessageIds": [
+        "19f6a8d7c38e771b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "evolved-aerospace-data-engineer",
+      "company": "Evolved Aerospace",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Evolved Aerospace Application",
+      "latestFrom": "\"Evolved Aerospace Holdings Ltd.\" <no-reply@hire.eu.lever.co>",
+      "lastActivityAt": "2026-07-16T10:48:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a8abd6bb3000",
+      "gmailMessageIds": [
+        "19f6a8abd6bb3000"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "coinbase-general-application",
+      "company": "Coinbase",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Coinbase",
+      "latestFrom": "no-reply@coinbase.com",
+      "lastActivityAt": "2026-07-16T10:45:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a87b8eaa65ae",
+      "gmailMessageIds": [
+        "19f6a87b8eaa65ae",
+        "19f6298301c4a519"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "astrana-health-data-engineer",
+      "company": "Astrana Health",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received",
+      "latestFrom": "Astrana Health Inc <astranahealth@pinpoint.email>",
+      "lastActivityAt": "2026-07-16T10:42:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a84efdb3cad3",
+      "gmailMessageIds": [
+        "19f6a84efdb3cad3"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "infoblox-associate-data-engineer",
+      "company": "Infoblox",
+      "role": "Associate Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application for Associate Data Engineer - 7837",
+      "latestFrom": "Infoblox Careers <noreply@talent.infoblox.com>",
+      "lastActivityAt": "2026-07-16T10:40:37.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a83a44340cd6",
+      "gmailMessageIds": [
+        "19f6a83a44340cd6"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "synacy-general-application",
+      "company": "Synacy",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, we have received your application",
+      "latestFrom": "Synacy <noreply@applytojob.com>",
+      "lastActivityAt": "2026-07-16T10:35:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a7edcd90cee4",
+      "gmailMessageIds": [
+        "19f6a7edcd90cee4"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "metropolitan-companies-data-engineer",
+      "company": "Metropolitan Companies",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received",
+      "latestFrom": "Metropolitan Companies <mmgapts@pinpoint.email>",
+      "lastActivityAt": "2026-07-16T10:33:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a7cec77e70d0",
+      "gmailMessageIds": [
+        "19f6a7cec77e70d0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fanatics-collectibles-analytics-engineer",
+      "company": "Fanatics Collectibles",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to the Analytics Engineer role at Fanatics Collectibles",
+      "latestFrom": "no-reply@collectfanatics.com",
+      "lastActivityAt": "2026-07-16T10:31:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a7af1c21e91a",
+      "gmailMessageIds": [
+        "19f6a7af1c21e91a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "epam-general-application",
+      "company": "EPAM",
+      "role": "General Application",
+      "status": "reply_needed",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "EPAM Applicant Privacy Notice",
+      "latestFrom": "privacy_notice@epam.com",
+      "lastActivityAt": "2026-07-16T10:25:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6a759b0a67c7a",
+      "gmailMessageIds": [
+        "19f6a759b0a67c7a",
+        "19f6a7597692707b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "grace-hill-general-application",
+      "company": "IRIUM",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, we've received your resume",
+      "latestFrom": "IRIUM - Spain <noreply@applytojob.com>",
+      "lastActivityAt": "2026-07-16T03:52:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f655de800e6835",
+      "gmailMessageIds": [
+        "19f690e0b2695bb9",
+        "19f6734640fd7b98",
+        "19f655de800e6835"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "linkedin-general-application",
+      "company": "Linkedin",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Tirth Chirayu, please verify your new device",
+      "latestFrom": "LinkedIn <security-noreply@linkedin.com>",
+      "lastActivityAt": "2026-07-15T22:17:15.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f643d02f72dea1",
+      "gmailMessageIds": [
+        "19f67db07a6b01ce"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "hollstadt-consulting-general-application",
+      "company": "Hollstadt Consulting",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Hollstadt Consulting: Thank you for your application!",
+      "latestFrom": "Hollstadt <hello@hollstadt.com>",
+      "lastActivityAt": "2026-07-15T19:45:13.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f674fd8a459e12",
+      "gmailMessageIds": [
+        "19f674fd8a459e12"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "syncreon-consulting-data-engineer",
+      "company": "Syncreon Consulting",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Syncreon Consulting",
+      "latestFrom": "Syncreon Consulting <notification@smartrecruiters.com>",
+      "lastActivityAt": "2026-07-15T19:28:49.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6740d22da6a15",
+      "gmailMessageIds": [
+        "19f6740d22da6a15"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "vytalize-health-associate-data-engineer",
+      "company": "Vytalize Health",
+      "role": "Associate Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Associate Data Engineer at Vytalize Health",
+      "latestFrom": "Vytalize Health Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-15T19:12:29.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6731e15212938",
+      "gmailMessageIds": [
+        "19f6731e15212938"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "faire-senior-analytics-engineer",
+      "company": "Faire",
+      "role": "Senior Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Faire!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-15T16:24:21.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6697f2123444b",
+      "gmailMessageIds": [
+        "19f6697f2123444b",
+        "19f628d5e30584c1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "samara-living-data-engineer",
+      "company": "Samara Living",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Samara Living Inc.",
+      "latestFrom": "\"Samara Living Inc.\" <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-15T11:47:29.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f659a7b17dc888",
+      "gmailMessageIds": [
+        "19f659a7b17dc888"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gei-consultants-data-engineer",
+      "company": "GEI Consultants",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application for Data Engineer at GEI Consultants",
+      "latestFrom": "GEI Consultants Recruiting Team <notification@jobvite.com>",
+      "lastActivityAt": "2026-07-15T11:46:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f65997a7ed0853",
+      "gmailMessageIds": [
+        "19f65997a7ed0853"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "institute-of-foundation-models-general-application",
+      "company": "Institute Of Foundation Models",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to the Institute of Foundation Models",
+      "latestFrom": "Institute of Foundation Models <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-15T11:41:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f65956ffeaf5e3",
+      "gmailMessageIds": [
+        "19f65956ffeaf5e3"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "edgestream-general-application",
+      "company": "Edgestream",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Edgestream",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-15T11:38:08.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6591e99bda1a6",
+      "gmailMessageIds": [
+        "19f6591e99bda1a6"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "verse-medical-general-application",
+      "company": "Verse Medical",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Verse Medical | Your Application Has Been Received!",
+      "latestFrom": "Verse Medical Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-15T11:35:38.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f658f9c8915857",
+      "gmailMessageIds": [
+        "19f658f9c8915857"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sennos-data-engineer",
+      "company": "Sennos",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received",
+      "latestFrom": "Sennos <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-15T11:34:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f658e3cba72215",
+      "gmailMessageIds": [
+        "19f658e3cba72215"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "exl-service-data-engineer",
+      "company": "EXL Service",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity for job Data Engineer - 17055",
+      "latestFrom": "EXL-Fusion-Notification <EXL-Fusion-Notification@exlservice.com>",
+      "lastActivityAt": "2026-07-15T10:57:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f656c8de6a0370",
+      "gmailMessageIds": [
+        "19f656c8de6a0370",
+        "19f656b8a53ee9d1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "healthfirst-data-engineer",
+      "company": "Healthfirst",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application!",
+      "latestFrom": "Opportunities <opportunities@careeralerts.healthfirst.org>",
+      "lastActivityAt": "2026-07-15T10:51:42.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f656764a8b1b61",
+      "gmailMessageIds": [
+        "19f656764a8b1b61"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "free-market-health-data-engineer",
+      "company": "Free Market Health",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Free Market Health",
+      "latestFrom": "Free Market Health <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-15T10:51:16.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f656701004d393",
+      "gmailMessageIds": [
+        "19f656701004d393"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "brevian-data-engineer",
+      "company": "BREVIAN",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to BREVIAN",
+      "latestFrom": "BREVIAN <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-15T10:49:49.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6565ac1a2ba93",
+      "gmailMessageIds": [
+        "19f6565ac1a2ba93"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "hartford-general-application",
+      "company": "Hartford",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "My Workday <myworkday@thehartford.com>",
+      "lastActivityAt": "2026-07-15T10:39:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f655c1d620c49b",
+      "gmailMessageIds": [
+        "19f655c1d620c49b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "together-ai-general-application",
+      "company": "Together AI",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Together AI",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-15T10:37:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f655a099138ba1",
+      "gmailMessageIds": [
+        "19f655a099138ba1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "moneta-general-application",
+      "company": "Moneta",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Moneta",
+      "latestFrom": "<MonetaGroupInvestmentAdvisorsLLC.hr@adp.com>",
+      "lastActivityAt": "2026-07-15T10:36:27.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f65596e53dddd5",
+      "gmailMessageIds": [
+        "19f65596e53dddd5"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "neighbor-general-application",
+      "company": "Neighbor",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Neighbor",
+      "latestFrom": "Neighbor <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-15T10:34:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f655753b5f4c71",
+      "gmailMessageIds": [
+        "19f655753b5f4c71"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pie-insurance-data-engineer",
+      "company": "Pie Insurance",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Pie Insurance",
+      "latestFrom": "no-reply@pieinsurance.com",
+      "lastActivityAt": "2026-07-15T10:34:08.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f655750c70c020",
+      "gmailMessageIds": [
+        "19f655750c70c020"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "major-league-baseball-data-engineer",
+      "company": "Major League Baseball",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Major League Baseball!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-15T10:29:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6552b0cbe4b6b",
+      "gmailMessageIds": [
+        "19f6552b0cbe4b6b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "security-first-insurance-general-application",
+      "company": "Security First Insurance",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Sign-in link for your application at Security First Insurance Company (Security First Managers)",
+      "latestFrom": "ClearCompany <do_not_reply@clearcompany.com>",
+      "lastActivityAt": "2026-07-15T10:22:40.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f654cd2a0dfe70",
+      "gmailMessageIds": [
+        "19f654cd2a0dfe70"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "autosavvy-general-application",
+      "company": "Autosavvy",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "AutoSavvy Password setup",
+      "latestFrom": "AutoSavvy <donotreply@msg.paycomonline.com>",
+      "lastActivityAt": "2026-07-15T10:19:31.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6549ef79c1308",
+      "gmailMessageIds": [
+        "19f6549ef79c1308"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gdit-agentic-ai-engineer",
+      "company": "GDIT",
+      "role": "Agentic AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your GDIT Job Application for RQ217958 Agentic AI Engineer",
+      "latestFrom": "GDIT Workday <GDIT@myworkday.com>",
+      "lastActivityAt": "2026-07-15T04:39:58.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6413102b819b6",
+      "gmailMessageIds": [
+        "19f6413102b819b6"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "utah-transit-authority-general-application",
+      "company": "Utah Transit Authority",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to UTA!",
+      "latestFrom": "rideuta@myworkday.com",
+      "lastActivityAt": "2026-07-14T22:23:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f62baa78877624",
+      "gmailMessageIds": [
+        "19f62baa78877624"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "vistrada-general-application",
+      "company": "Vistrada",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, we've received your resume",
+      "latestFrom": "VISTRADA <noreply@applytojob.com>",
+      "lastActivityAt": "2026-07-14T22:15:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f625f5f8f0d2c2",
+      "gmailMessageIds": [
+        "19f62b2d42cb6240"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ust-general-application",
+      "company": "UST",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Job application successful.",
+      "latestFrom": "UST Talent Acquisition <USTCareers.noreply@ust.com>",
+      "lastActivityAt": "2026-07-14T22:12:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f62aff371d7fa4",
+      "gmailMessageIds": [
+        "19f62aff371d7fa4"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "eptura-data-engineering-analyst",
+      "company": "Eptura",
+      "role": "Data Engineering Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Eptura Application Received - Thank you",
+      "latestFrom": "Eptura <3dba20ac-c411-4a75-90ae-e51deafe22c9@pinpoint.email>",
+      "lastActivityAt": "2026-07-14T22:08:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f62acb1a8afb14",
+      "gmailMessageIds": [
+        "19f62acb1a8afb14"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "oracle-data-engineer-ai-systems-engineer",
+      "company": "Oracle",
+      "role": "Data Engineer, AI Systems Engineer",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity for job Data Engineer, AI Systems Engineer - 1080",
+      "latestFrom": "exvv.fa.sender@workflow.mail.us2.cloud.oracle.com",
+      "lastActivityAt": "2026-07-14T21:53:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f629e8f6060ede",
+      "gmailMessageIds": [
+        "19f629e8f6060ede"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gap-solutions-general-application",
+      "company": "GAP Solutions",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "GAP SOLUTIONS INC Password setup",
+      "latestFrom": "GAP SOLUTIONS INC <donotreply@msg.paycomonline.com>",
+      "lastActivityAt": "2026-07-14T21:49:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f629ad7541a6e3",
+      "gmailMessageIds": [
+        "19f629ad7541a6e3"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "xylem-general-application",
+      "company": "Xylem",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in Xylem! Your application has been received.",
+      "latestFrom": "Xylem Workday <xylem@myworkday.com>",
+      "lastActivityAt": "2026-07-14T21:39:28.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6292181f894f1",
+      "gmailMessageIds": [
+        "19f6292181f894f1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "armada-supply-chain-solutions-data-engineer",
+      "company": "Armada Supply Chain Solutions",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application for Data Engineer has been received",
+      "latestFrom": "jobs@armada.net",
+      "lastActivityAt": "2026-07-14T21:29:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6288e5926ace6",
+      "gmailMessageIds": [
+        "19f6288e5926ace6"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "e-logic-data-engineer",
+      "company": "E Logic",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Submission received",
+      "latestFrom": "Jeanette Cardenas <jcardenas774055.hr@mg.thehiretalent.com>",
+      "lastActivityAt": "2026-07-14T21:25:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f62851e00ad195",
+      "gmailMessageIds": [
+        "19f62851e00ad195"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "betterup-general-application",
+      "company": "Betterup",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for Applying!",
+      "latestFrom": "BetterUp Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-14T21:22:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f62829f839c494",
+      "gmailMessageIds": [
+        "19f62829f839c494"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "yes-energy-general-application",
+      "company": "Yes Energy",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Yes Energy",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-14T21:01:15.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f626f275d0f428",
+      "gmailMessageIds": [
+        "19f626f275d0f428"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "edgesource-data-engineer",
+      "company": "Edgesource",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Profile submitted to Edgesource for Data Engineer / #904139",
+      "latestFrom": "Edgesource <system@hirebridgemail.com>",
+      "lastActivityAt": "2026-07-14T20:39:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f625b963b1f676",
+      "gmailMessageIds": [
+        "19f625b963b1f676"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "american-institutes-for-research-data-engineer-associate",
+      "company": "American Institutes For Research",
+      "role": "Data Engineer Associate",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Your Application to AIR",
+      "latestFrom": "no-replyrecruitment@air.org",
+      "lastActivityAt": "2026-07-14T20:36:16.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f62583a2c2df34",
+      "gmailMessageIds": [
+        "19f62583a2c2df34"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "plusai-general-application",
+      "company": "Plusai",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to PlusAI",
+      "latestFrom": "PlusAI <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-14T20:36:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f62580f256435c",
+      "gmailMessageIds": [
+        "19f62580f256435c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "urban-sdk-data-engineer",
+      "company": "Urban SDK",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Urban SDK",
+      "latestFrom": "Urban SDK <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-14T20:29:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f625233ce61872",
+      "gmailMessageIds": [
+        "19f625233ce61872"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "reup-education-data-engineer-ii",
+      "company": "Reup Education",
+      "role": "Data Engineer II",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "ReUp Education | Data Engineer II | Application Received - Thank You!",
+      "latestFrom": "ReUp Education <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-14T20:25:51.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f624eafd09b9dc",
+      "gmailMessageIds": [
+        "19f624eafd09b9dc"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "genlogs-data-engineer",
+      "company": "Genlogs",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to GenLogs Corporation",
+      "latestFrom": "GenLogs Corporation <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-14T20:18:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6247c46022355",
+      "gmailMessageIds": [
+        "19f6247c46022355"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sumersports-data-engineer",
+      "company": "Sumersports",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Sumer Sports Mgr LLC",
+      "latestFrom": "SumerSports LLC <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-07-14T20:17:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6246de75454ad",
+      "gmailMessageIds": [
+        "19f6246de75454ad"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "hmh-data-engineer",
+      "company": "HMH",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Data Engineer at HMH",
+      "latestFrom": "HMH Talent Acquisition <system@successfactors.com>",
+      "lastActivityAt": "2026-07-14T20:14:21.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f6244296437092",
+      "gmailMessageIds": [
+        "19f6244296437092"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "city-fund-analytics-engineer",
+      "company": "City Fund",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to City Fund",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-07-14T19:52:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f62303c7a26aa4",
+      "gmailMessageIds": [
+        "19f62303c7a26aa4"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pwc-general-application",
+      "company": "PwC",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Confirming your PwC job application",
+      "latestFrom": "pwc@myworkday.com",
+      "lastActivityAt": "2026-07-13T20:16:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5d1f86611a431",
+      "gmailMessageIds": [
+        "19f5d1f86611a431"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "servicenow-machine-learning-engineer-agentic-application",
+      "company": "Servicenow",
+      "role": "Machine Learning Engineer, Agentic Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Applying to ServiceNow!",
+      "latestFrom": "ServiceNow <notification@smartrecruiters.com>",
+      "lastActivityAt": "2026-07-13T20:06:48.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5d16e2cc50fe1",
+      "gmailMessageIds": [
+        "19f5d16e2cc50fe1"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "american-express-senior-ai-engineer-ii-agentic-ai",
+      "company": "American Express",
+      "role": "Senior AI Engineer II - Agentic AI",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Senior AI Engineer II - Agentic AI - 26002765",
+      "latestFrom": "Amex Careers <careers@recruitment.americanexpress.com>",
+      "lastActivityAt": "2026-07-13T20:02:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5d1331aba5330",
+      "gmailMessageIds": [
+        "19f5d1331aba5330"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "vytwo-genai-agentic-ai-engineer",
+      "company": "Vytwo",
+      "role": "Genai & Agentic AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Your Application",
+      "latestFrom": "notifications@careerplug.com",
+      "lastActivityAt": "2026-07-13T20:00:46.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5d115d3fb3999",
+      "gmailMessageIds": [
+        "19f5d115d3fb3999"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "eigen-labs-senior-agentic-ai-engineer",
+      "company": "Eigen Labs",
+      "role": "Senior Agentic AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Eigen Labs!",
+      "latestFrom": "Eigen Labs Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-07-13T19:59:15.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5d0ff8fe01453",
+      "gmailMessageIds": [
+        "19f5d0ff8fe01453"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "nextgen-federal-systems-general-application",
+      "company": "Nextgen Federal Systems",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to NextGen Federal Systems",
+      "latestFrom": "NextGen Federal Systems <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-07-13T19:58:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5d0fa1f78df1e",
+      "gmailMessageIds": [
+        "19f5d0fa1f78df1e"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "benchling-agentic-ai-engineer",
+      "company": "Benchling",
+      "role": "Agentic AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Benchling!",
+      "latestFrom": "No-reply <no-reply@benchling.com>",
+      "lastActivityAt": "2026-07-13T19:45:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5cfd7774434ec",
+      "gmailMessageIds": [
+        "19f5d038ccc8f2dd",
+        "19f5cfd7774434ec"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "taxbit-agentic-ai-engineer",
+      "company": "Taxbit",
+      "role": "Agentic AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application to TaxBit Received!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-13T19:39:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5ce7bf485900b",
+      "gmailMessageIds": [
+        "19f5cfdd16b40c7f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "dayforce-agentic-ai-engineer",
+      "company": "Dayforce",
+      "role": "Agentic AI Engineer",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Engineering - Agentic AI Engineer (Junior) Application Update",
+      "latestFrom": "notify@dayforce.com",
+      "lastActivityAt": "2026-07-13T19:29:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5cf4a6e7f2405",
+      "gmailMessageIds": [
+        "19f5cf4a6e7f2405"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gdit-general-application",
+      "company": "GDIT",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your GDIT Employment Submission",
+      "latestFrom": "GDIT Workday <GDIT@myworkday.com>",
+      "lastActivityAt": "2026-07-13T19:24:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5cf00fb5e166c",
+      "gmailMessageIds": [
+        "19f5cf00fb5e166c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "zillow-general-application",
+      "company": "Zillow",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application!",
+      "latestFrom": "Workday <zillow@myworkday.com>",
+      "lastActivityAt": "2026-07-13T19:22:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5cee38abae268",
+      "gmailMessageIds": [
+        "19f5cee38abae268"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ampcus-general-application",
+      "company": "Ampcus",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Job #26-01937",
+      "latestFrom": "HumanResources@ampcus.com",
+      "lastActivityAt": "2026-07-13T19:18:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5cf2109a612c5",
+      "gmailMessageIds": [
+        "19f5cf2109a612c5"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fairmarkit-agentic-ai-engineer",
+      "company": "Fairmarkit",
+      "role": "Agentic AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Fairmarkit!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-13T19:14:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5ce6e931faf48",
+      "gmailMessageIds": [
+        "19f5ce6e931faf48"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "american-express-senior-ai-engineer",
+      "company": "American Express",
+      "role": "Senior AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Senior AI Engineer I - Agentic AI - 26002766",
+      "latestFrom": "Amex Careers <careers@recruitment.americanexpress.com>",
+      "lastActivityAt": "2026-07-13T18:52:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5cd326e7bc747",
+      "gmailMessageIds": [
+        "19f5cd326e7bc747"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "camber-morris-general-application",
+      "company": "Camber Morris",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application to Camber Morris",
+      "latestFrom": "\"Lisa, Alfa AI\" <lisa@welovealfa.ai>",
+      "lastActivityAt": "2026-07-13T18:52:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5cd2efd21685e",
+      "gmailMessageIds": [
+        "19f5cd2efd21685e"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "addison-general-application",
+      "company": "Addison",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Addison Group",
+      "latestFrom": "Addison Group <noreply@careernotifications.addisongroup.com>",
+      "lastActivityAt": "2026-07-13T18:48:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5ccf161425b89",
+      "gmailMessageIds": [
+        "19f5ccf161425b89"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "collabera-agentic-ai-engineer",
+      "company": "Collabera",
+      "role": "Agentic AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Applying to - Agentic AI Engineer  - 31311",
+      "latestFrom": "JOB ALERT <JOB-ALERT@collabera.com>",
+      "lastActivityAt": "2026-07-13T18:47:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5ccde57b141d6",
+      "gmailMessageIds": [
+        "19f5ccde57b141d6"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "kargo-general-application",
+      "company": "Kargo",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Kargo",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-13T18:45:28.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5ccc6ea271f47",
+      "gmailMessageIds": [
+        "19f5ccc6ea271f47"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "machinify-general-application",
+      "company": "Machinify",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Machinify",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-07-13T18:45:23.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f5ccc5aca00fdf",
+      "gmailMessageIds": [
+        "19f5ccc5aca00fdf"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "bloomberg-data-engineer",
+      "company": "Bloomberg",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Bloomberg- Thank you for your Application (Data Engineer, Employee Technology Support - 10052396)",
+      "latestFrom": "Bloomberg Recruiting <blprecruiting@recruiting.bloomberg.com>",
+      "lastActivityAt": "2026-07-09T19:30:13.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f485bf67e86635",
+      "gmailMessageIds": [
+        "19f485bf67e86635",
+        "19f24dfb47b69f2e"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pavan-prajapati-general-application",
+      "company": "Pavan Prajapati",
+      "role": "General Application",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Are you looking for full time Opportunity",
+      "latestFrom": "Pavan Prajapati <pavanbde359@gmail.com>",
+      "lastActivityAt": "2026-07-09T18:10:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f48133cb613899",
+      "gmailMessageIds": [
+        "19f48133cb613899"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "amazon-web-general-application",
+      "company": "Amazon Web",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Welcome to AWS - Your account with Free plan is ready",
+      "latestFrom": "Amazon Web Services <no-reply@amazonaws.com>",
+      "lastActivityAt": "2026-07-07T20:21:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f3e3dc8acb4392",
+      "gmailMessageIds": [
+        "19f3e3dc8acb4392",
+        "19f3b31e25134a77",
+        "19f2a4baa2366bb0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tableau-general-application",
+      "company": "Tableau",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Tableau Software Account Activation",
+      "latestFrom": "Tableau <reghelp@tableau.com>",
+      "lastActivityAt": "2026-07-07T06:23:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f3b3f0a09cebce",
+      "gmailMessageIds": [
+        "19f3b3f0a09cebce"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "aws-general-application",
+      "company": "AWS",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your identity",
+      "latestFrom": "no-reply@verify.signin.aws",
+      "lastActivityAt": "2026-07-07T03:43:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19f3aac8a7bd7aa4",
+      "gmailMessageIds": [
+        "19f3aac8a7bd7aa4",
+        "19f3a8d9b343f520",
+        "19f2a4e2c960d7d7"
+      ],
+      "notes": ""
     }
   ],
-  "updatedAt": "2026-08-20T17:15:10.363Z"
+  "updatedAt": "2026-08-20T17:30:57.735Z"
 }
