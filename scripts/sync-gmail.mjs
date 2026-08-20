@@ -493,8 +493,9 @@ A. Live Spoken or Video Human Interviews:
    - Examples: "Invitation to Interview: Video Screen with Technical Hiring Manager", "Schedule your 30-minute phone screen with [Company] Recruiting", "Your interview with [Company] is confirmed for [Date/Time] on Google Meet", "Next Round: Virtual Technical Panel Interview Agenda".
 
 B. Technical Assessments, Coding Tests & Take-Homes:
-   - Automated online coding challenges, take-home exercises, skill challenges, cognitive assessments, or one-way recorded video prompts (e.g., HackerRank, TestGorilla, Codility, Byteboard, CodeSignal, Coderbyte, HireVue, Karat, SHL, Glider AI, IBM Assessments, Red Bull Wingfinder).
-   - Examples: "Action Required: Complete your Online Technical Assessment on HackerRank", "You have been invited to take the [Company] Coding Challenge via TestGorilla", "Emergent Online Assessment Invite", "Complete your technical skill evaluation on Codility".
+   - Automated online coding challenges, take-home exercises, skill challenges, cognitive/behavioral assessments, or one-way recorded video prompts (e.g., HackerRank, TestGorilla, Outmatch, Harver, Codility, Byteboard, CodeSignal, Coderbyte, HireVue, Karat, SHL, Glider AI, IBM Assessments, Red Bull Wingfinder).
+   - Candidate assessment invitations required in the selection process.
+   - Examples: "Action Required: Complete your Online Technical Assessment on HackerRank", "Next Required Application Step ... assessment that will help us get to know you", "You have been invited to take the [Company] Coding Challenge via TestGorilla", "Emergent Online Assessment Invite", "Complete your technical skill evaluation on Codility", "Please click the link below to participate in an assessment".
 
 --------------------------------------------------------------------------------
 3. "reply_needed" (Explicit Candidate Action / Recruiter Outreach / Forms)

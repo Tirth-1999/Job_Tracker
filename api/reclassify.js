@@ -37,11 +37,12 @@ SECTION 2: CANONICAL STATUS TAXONOMY & STRICT CRITERIA
 CRITERIA: Formal offer of employment extended (offer letters, compensation packages, signing requests via DocuSign/PandaDoc).
 
 --------------------------------------------------------------------------------
-2. "interviewed" (Confirmed Live Human Conversation OR Technical Assessment)
+2. "interviewed" (Confirmed Live Human Conversation OR Technical/Behavioral Assessment)
 --------------------------------------------------------------------------------
 CRITERIA:
 - Live spoken/video conversation scheduled or confirmed (phone screens, technical panel interviews, hiring manager Zoom/Google Meet/Teams calls).
-- Technical assessments, online coding tests, take-home exercises, skill challenges, or asynchronous video prompts (HackerRank, TestGorilla, Codility, Byteboard, CodeSignal, Coderbyte, HireVue, Karat, SHL).
+- Technical assessments, online behavioral/skill tests, take-home exercises, or asynchronous video prompts (HackerRank, TestGorilla, Outmatch, Harver, Codility, Byteboard, CodeSignal, Coderbyte, HireVue, Karat, SHL, Wonderlic, pymetrics).
+- Candidate assessment invitations required to advance in the selection process (e.g. "click the link below to participate in an assessment", "Next Required Application Step ... Assessment", "Take the assessment to complete your application").
 
 --------------------------------------------------------------------------------
 3. "reply_needed" (Recruiter Outreach / Candidate Inquiry / Prescreen Forms)
