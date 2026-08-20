@@ -1,6 +1,60 @@
 {
-  "updatedAt": "2026-08-20T08:40:08.302Z",
+  "updatedAt": "2026-08-20T11:27:49.126Z",
   "applications": [
+    {
+      "id": "mill-data-engineer-data-platform",
+      "company": "Mill",
+      "role": "Data Engineer - Data Platform",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Mill",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-20T11:00:08.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01ed417373ff87",
+      "gmailMessageIds": [
+        "1a01ed417373ff87"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gr-ns-general-application",
+      "company": "Grüns",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Grüns",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-20T10:58:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01ed231b254fe4",
+      "gmailMessageIds": [
+        "1a01ed231b254fe4"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "bounteous-x-accolite-general-application",
+      "company": "Bounteous X Accolite",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Bounteous x Accolite | Thank you for your application, Tirth!",
+      "latestFrom": "Bounteous <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-08-20T10:54:50.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a01ecf32e312e09",
+      "gmailMessageIds": [
+        "1a01ecf32e312e09"
+      ],
+      "notes": ""
+    },
     {
       "id": "google-general-application",
       "company": "Google",
