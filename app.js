@@ -467,6 +467,15 @@ async function loadData() {
             const mapped = rowToApp(payload.new);
             const idx = state.data.applications.findIndex((a) => a.id === payload.new.id);
             if (idx !== -1) {
+              const current = state.data.applications[idx];
+              if (
+                current.status === mapped.status &&
+                current.role === mapped.role &&
+                current.company === mapped.company &&
+                current.isManualOverride === mapped.isManualOverride
+              ) {
+                return;
+              }
               state.data.applications[idx] = mapped;
             } else {
               state.data.applications.unshift(mapped);
@@ -524,8 +533,9 @@ async function setAppDone(appId, isDone) {
     }
     app.updatedAt = new Date().toISOString();
     state.data.updatedAt = app.updatedAt;
+    state.data.applications = deduplicateAndConsolidateApplications(state.data.applications);
     render();
-    await syncAppToSupabase(app, isDone ? "mark_done" : "reopen");
+    syncAppToSupabase(app, isDone ? "mark_done" : "reopen").catch(console.error);
   }
 }
 
@@ -553,8 +563,9 @@ async function setAppIgnored(appId, isIgnored) {
     }
     app.updatedAt = new Date().toISOString();
     state.data.updatedAt = app.updatedAt;
+    state.data.applications = deduplicateAndConsolidateApplications(state.data.applications);
     render();
-    await syncAppToSupabase(app, isIgnored ? "ignore" : "reopen");
+    syncAppToSupabase(app, isIgnored ? "ignore" : "reopen").catch(console.error);
   }
 }
 
@@ -638,8 +649,6 @@ function render() {
   } else if (currentView === "services") {
     renderServices(filteredApps);
   }
-
-  attachCardActionListeners();
 }
 
 function renderStatus() {
@@ -888,9 +897,8 @@ function moveApplicationLane(appId, targetStatus) {
   const app = state.data?.applications?.find((a) => a.id === appId);
   if (!app) return;
 
-  promptConfirmMove(app, targetStatus, async () => {
+  promptConfirmMove(app, targetStatus, () => {
     const now = new Date().toISOString();
-    // Mutate status FIRST so Supabase row gets the new value
     app.status = targetStatus;
     app.effectiveStatus = targetStatus;
     app.updatedAt = now;
@@ -903,49 +911,72 @@ function moveApplicationLane(appId, targetStatus) {
     const ignoredSet = getIgnoredApps();
     doneSet.delete(appId);
     ignoredSet.delete(appId);
+    for (const mid of app.gmailMessageIds || []) {
+      doneSet.delete(mid);
+      ignoredSet.delete(mid);
+      doneSet.delete(`msg-${mid}`);
+      ignoredSet.delete(`msg-${mid}`);
+    }
     localStorage.setItem("job_tracker_done_apps", JSON.stringify([...doneSet]));
     localStorage.setItem("job_tracker_ignored_apps", JSON.stringify([...ignoredSet]));
 
     state.data.updatedAt = now;
+    state.data.applications = deduplicateAndConsolidateApplications(state.data.applications);
     render();
 
-    await syncAppToSupabase(app, app.manualAction);
+    // Instant background sync without UI blocking
+    syncAppToSupabase(app, app.manualAction).catch((err) => {
+      console.error("Supabase lane move sync error:", err);
+    });
   });
 }
 
-function attachCardActionListeners() {
-  document.querySelectorAll(".btn-mark-done").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+function initCardActionDelegation() {
+  document.addEventListener("click", (e) => {
+    const tabBtn = e.target.closest(".tab");
+    if (tabBtn && tabBtn.dataset.view) {
+      e.preventDefault();
+      switchTab(tabBtn.dataset.view);
+      return;
+    }
+
+    const markDoneBtn = e.target.closest(".btn-mark-done");
+    if (markDoneBtn) {
+      e.preventDefault();
       e.stopPropagation();
-      setAppDone(btn.dataset.id, true);
-    });
+      setAppDone(markDoneBtn.dataset.id, true);
+      return;
+    }
+
+    const ignoreBtn = e.target.closest(".btn-ignore");
+    if (ignoreBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      setAppIgnored(ignoreBtn.dataset.id, true);
+      return;
+    }
+
+    const reopenBtn = e.target.closest(".btn-reopen");
+    if (reopenBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      setAppDone(reopenBtn.dataset.id, false);
+      setAppIgnored(reopenBtn.dataset.id, false);
+      return;
+    }
   });
 
-  document.querySelectorAll(".btn-ignore").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+  document.addEventListener("change", (e) => {
+    const select = e.target.closest(".select-move-lane");
+    if (select) {
       e.stopPropagation();
-      setAppIgnored(btn.dataset.id, true);
-    });
-  });
-
-  document.querySelectorAll(".btn-reopen").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      setAppDone(btn.dataset.id, false);
-      setAppIgnored(btn.dataset.id, false);
-    });
-  });
-
-  document.querySelectorAll(".select-move-lane").forEach((select) => {
-    select.addEventListener("change", (e) => {
-      e.stopPropagation();
-      const targetStatus = e.target.value;
+      const targetStatus = select.value;
       const appId = select.dataset.id;
       if (targetStatus && appId) {
         moveApplicationLane(appId, targetStatus);
       }
-      select.value = ""; // Reset dropdown to placeholder
-    });
+      select.value = "";
+    }
   });
 }
 
@@ -1090,7 +1121,6 @@ function renderApplications(applications) {
 
   attachPaginationListeners("apps", allRows.length, "pageApps", "pageSizeApps", () => {
     renderApplications(applications);
-    attachCardActionListeners();
   });
 }
 
@@ -1143,7 +1173,6 @@ function renderOtherEmails(applications) {
 
   attachPaginationListeners("other", allRows.length, "pageOther", "pageSizeOther", () => {
     renderOtherEmails(applications);
-    attachCardActionListeners();
   });
 }
 
@@ -2577,14 +2606,8 @@ if (exportBtn) {
   });
 }
 
-// Tab click handler with document event delegation for guaranteed reactivity
-document.addEventListener("click", (e) => {
-  const tabBtn = e.target.closest(".tab");
-  if (tabBtn && tabBtn.dataset.view) {
-    e.preventDefault();
-    switchTab(tabBtn.dataset.view);
-  }
-});
+// Initialize global event delegation for card buttons and lane select dropdowns
+initCardActionDelegation();
 
 loadData().catch((error) => {
   byId("syncStatus").textContent = error.message;
