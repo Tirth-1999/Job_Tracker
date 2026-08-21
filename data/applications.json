@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-21T22:26:48.599Z",
+  "updatedAt": "2026-08-21T22:52:37.687Z",
   "applications": [
+    {
+      "id": "exl-service-healthcare-data-engineer",
+      "company": "EXL Service",
+      "role": "Healthcare Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your recent job application for Healthcare Data Engineer - HEDIS & Quality (US) - 19103",
+      "latestFrom": "EXL-Fusion-Notification <EXL-Fusion-Notification@exlservice.com>",
+      "lastActivityAt": "2026-08-21T22:27:57.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02670223c50ab4",
+      "gmailMessageIds": [
+        "1a02670223c50ab4"
+      ],
+      "notes": ""
+    },
     {
       "id": "exl-general-application",
       "company": "EXL",
