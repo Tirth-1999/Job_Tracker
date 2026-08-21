@@ -1,6 +1,143 @@
 {
-  "updatedAt": "2026-08-21T16:35:58.307Z",
+  "updatedAt": "2026-08-21T17:30:00.905Z",
   "applications": [
+    {
+      "id": "google-general-application",
+      "company": "Google",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-21T17:18:52.000Z",
+      "latestSubject": "topic=jobseeker",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "gmailThreadId": "1a01db628aa2dbc0",
+      "gmailMessageIds": [
+        "1a01e395121b2909",
+        "1a01d884fd206630",
+        "1a01d7db8dfaf159",
+        "19fba34e2ccb3302",
+        "19f2a5455927c4e8",
+        "19f1ca6aeedff88d",
+        "1a0255525a14b9d1"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "jobright-ai-data-engineer",
+      "company": "Jobright",
+      "role": "AI Data Engineer",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Your Top Job matches for “AI Data Engineer” — 98% match from Jobright - 08/21/2026",
+      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
+      "lastActivityAt": "2026-08-21T17:16:36.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02553168034c7f",
+      "gmailMessageIds": [
+        "1a02553168034c7f"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "built-in-general-application",
+      "company": "Built In",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-21T17:14:50.000Z",
+      "latestSubject": "New Engineering Job Matches",
+      "latestFrom": "Built In <support@builtin.com>",
+      "gmailThreadId": "1a01b0aab9a5ca15",
+      "gmailMessageIds": [
+        "1a01b0aab9a5ca15",
+        "1a02551740e516b7"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "gilead-sr-manager-it-data-engineering",
+      "company": "Gilead",
+      "role": "Sr Manager, IT Data Engineering",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "ACTION REQUIRED: R0054145 Sr Manager, IT Data Engineering (Open) : Sr Manager, IT Data Engineering",
+      "latestFrom": "Workday at Gilead <gilead@myworkday.com>",
+      "lastActivityAt": "2026-08-21T17:01:36.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0254559131e399",
+      "gmailMessageIds": [
+        "1a0254559131e399"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "teamwork-online-general-application",
+      "company": "Teamwork Online",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Ready for the Houston Sports & Ent. Career Expo?",
+      "latestFrom": "Davis Filippell <davis@teamworkonline.com>",
+      "lastActivityAt": "2026-08-21T16:44:00.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a025353d3418d7b",
+      "gmailMessageIds": [
+        "1a025353d3418d7b"
+      ],
+      "notes": "September 9th - Learn from and network with sports business employers in Houston. Don’t miss out on this great opportunity. https://www.eventbrite.com/e/2026-houston-sports-entertainment-career-expo-tickets-1988838649940?aff=oddtdtcreator&keep_tld=true Hi Tirth, Still interested in joining us for the Houston Sports & Entertainment Career Expo https://www.eventbrite.com/e/2026-houston-sports-entertainment-career-expo-tickets-1988838649940?aff=oddtdtcreator&keep_tld=true on September 9th? Hiring managers want to meet YOU! Whether you're ready for an internship or for a full-time job, here's your chance. Plus, hear from industry leaders at the Executive Panel! Organizations Scheduled to Attend:​ 🏈 Houston Texans ⚽️ Houston Dynamo ⚽️ Houston Dash ⚽️ San Antonio FC ⚾️ Sugar Land Space Cowboys ⛳️ AJGA 🏟️ SPORTSKIND 💻 TeamWork Online and more! Executive Panel Featuring:​ Valerie Holland - Director of Team Environment (Houston Dynamo) Jake Goodman - Sr. Director, Ticket Sales & Service (Houston Dynamo) Bianca Verar - Director of Social and Content (Houston Dynamo) Kirsten Boyd - Digital Media Senior Specialist (Houston Dynamo) ​ 🎟 Attendees will receive a ticket to the Houston Dynamo game after the event! SAVE MY SEAT https://www.eventbrite.com/e/2026-houston-sports-entertainment-career-expo-tickets-1988838649940?aff=oddtdtcreator&keep_tld=true Tickets will sell out. Save your seat today while the event is still open. See you there! Davis Filippell President TeamWork Online https://www.facebook.com/TeamWorkOnline https://www.instagram.com/teamworkonline https://www.linkedin.com/company/455167 Unsubscribe http://em.TeamWorkOnline.com/asm/unsubscribe/?user_id=1551270&data=pUNAeC4kJdkEBV-MJ8dP9qt5lT8VU5rLqSFvCXT9FDloMDAwdTAwMLxaFoLoKtYF41WZFaAP__gUFAx6TAXACNPR1ms3-lcJa-PAAdI8-O1Q3rn4LT8nrNtYFVSt8ycLezHchgb6ag9Co_G12dV3-hWphUGm9GhOtzL_vSPft3uGHT9qzQI779xi4NcQyoZDodcf7ek5jHfzHntSHNdtAz-MVSOBIcUqfM32tj8lddWRmOizqPEB68pTbfQhpIMLORpdDXYkaUlU8uhZBfHs5lHzAb9tse80XK7mmCr2dYb7lwt12NBGL74M29K5MGLHfAbnNjLiTpVooI68Xmfu028y5esmGLxslFLFZbHdfKSlqhaH6PTboRMR3Jmvi0BD4TV47JI4JEbLHH-FOSGafmimUw0rW7929EnyjKjh0s2IOwOxNu5gQqafAYWHDri0WvJPp1IpJf2cSj_YfvNRXamLJ9lhXEjL3aO7zyX68Js306qPR7W9vhovV-0Y7LeBqcPvzj_FlUrj6GKQcwLnQ0E5DXaGxYvyLrBQnVT-0VuHVgwcdcz8mtLSqv8R92Bhqb8LpzSI2zNnHfiB2kRgU0OX5SBa9nAKRTTLVlTpMCvSGhAkFty2ihVA9mF2mCDB4SQ5f5wfy3qJ5UDFVShbEGKQ2xFVrHOSXaNgyMfn7iJtFKWd23jVJw== - Unsubscribe Preferences http://em.TeamWorkOnline.com/asm/?user_id=1551270&data=NEyFJElVL6Ee7BIoOgRxcBWYbC1nO1Q0pzW711Nj9GFoMDAwdTAwMOzbDxDNX8b421FlHOYEpKMoiVTFnnJcbOENbEyeI8CZW2YMXfC5JKwPnbuFyKgxKesGUDUPfnhTk07VQ30cuPqh6zUkVfQVldWvE0KaMe646yTfa59LhnAxcQ0Dwll2WoNdyIkSuFJKUHu8G16v4BSnhx5kCm0OuMz-bX8D9hpg9wtGQIpNIEjGuxoEyOPjNj91aLBJuMokRogro_srEhXt1EEp8PoRx7KpWXwmtSR41Erg9AaPxBjHFR3omduCNGfhqFI0kZFXitnPgGJu1p_xpeAVnC9WjBbLLo7vPpvKcyVUPoE8Rg4eg2oFOZfsRrUZ2V9H1YTe7CUVR_vIflXKA52p1owMpsjYLLjBMGHJvvqhT9x87c2tOgO4I9aVJ-ZM9AB1K3IOpZ0tOBbjS2On0fhp_9CMRgxdPDVF3anf3wDqhXj3p2LDKX8oiw1kN9ihj78yOp4c6XU_iHAbwP9oBdb"
+    },
+    {
+      "id": "resume-worded-general-application",
+      "company": "Resume Worded",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-21T16:39:31.000Z",
+      "latestSubject": "Coached: A short story on reinvention (+ more)",
+      "latestFrom": "Resume Worded <contact@mautem.resumeworded.com>",
+      "gmailThreadId": "1a010b8769e5c5fd",
+      "gmailMessageIds": [
+        "1a010b8769e5c5fd",
+        "1a00b91ce0faed8e",
+        "1a0014586c32acd1",
+        "1a01b050c47248ee",
+        "1a0253120a56d32e"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
     {
       "id": "google-cloud-general-application",
       "company": "Google Cloud",
@@ -3168,33 +3305,6 @@
       "aiConfidence": "medium"
     },
     {
-      "id": "google-general-application",
-      "company": "Google",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-20T04:46:12+00:00",
-      "latestSubject": "Unable to verify your identity",
-      "latestFrom": "Google <verification-noreply@google.com>",
-      "gmailThreadId": "1a01db628aa2dbc0",
-      "gmailMessageIds": [
-        "1a01e395121b2909",
-        "1a01d884fd206630",
-        "1a01d7db8dfaf159",
-        "19fba34e2ccb3302",
-        "19f2a5455927c4e8",
-        "19f1ca6aeedff88d"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium"
-    },
-    {
       "id": "acrisure-general-application",
       "company": "Acrisure",
       "role": "General Application",
@@ -3653,28 +3763,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "built-in-general-application",
-      "company": "Built In",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-19T17:21:18+00:00",
-      "latestSubject": "New Engineering Job Matches",
-      "latestFrom": "Built In <support@builtin.com>",
-      "gmailThreadId": "1a01b0aab9a5ca15",
-      "gmailMessageIds": [
-        "1a01b0aab9a5ca15"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium"
-    },
-    {
       "id": "corewell-health-general-application",
       "company": "Corewell Health",
       "role": "General Application",
@@ -3740,31 +3828,6 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high"
-    },
-    {
-      "id": "resume-worded-general-application",
-      "company": "Resume Worded",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-19T17:15:10+00:00",
-      "latestSubject": "Tirth, something I noticed on your resume",
-      "latestFrom": "\"Kim @ Resume Worded\" <team@team.resumeworded.com>",
-      "gmailThreadId": "1a010b8769e5c5fd",
-      "gmailMessageIds": [
-        "1a010b8769e5c5fd",
-        "1a00b91ce0faed8e",
-        "1a0014586c32acd1",
-        "1a01b050c47248ee"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium"
     },
     {
       "id": "jobright-data-engineer",
