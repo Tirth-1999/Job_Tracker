@@ -1,6 +1,152 @@
 {
-  "updatedAt": "2026-08-21T20:52:27.412Z",
+  "updatedAt": "2026-08-21T22:26:48.599Z",
   "applications": [
+    {
+      "id": "exl-general-application",
+      "company": "EXL",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "EXL-Fusion-Notification <EXL-Fusion-Notification@exlservice.com>",
+      "lastActivityAt": "2026-08-21T22:26:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0266ed8d81eb86",
+      "gmailMessageIds": [
+        "1a0266ed8d81eb86"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "google-general-application",
+      "company": "Google",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-21T22:25:26.000Z",
+      "latestSubject": "Thanks for applying to Google",
+      "latestFrom": "noreply@google.com",
+      "gmailThreadId": "1a01db628aa2dbc0",
+      "gmailMessageIds": [
+        "1a01e395121b2909",
+        "1a01d884fd206630",
+        "1a01d7db8dfaf159",
+        "19fba34e2ccb3302",
+        "19f2a5455927c4e8",
+        "19f1ca6aeedff88d",
+        "1a0255525a14b9d1",
+        "1a0266dd56492955"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "amida-technology-solutions-data-quality-engineer",
+      "company": "Amida Technology Solutions",
+      "role": "Data Quality Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying with Amida Technology Solutions",
+      "latestFrom": "Amida Technology Solutions <hello@send.applicantemails.com>",
+      "lastActivityAt": "2026-08-21T22:18:25.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a026676b8d326c6",
+      "gmailMessageIds": [
+        "1a026676b8d326c6"
+      ],
+      "notes": "Dear Tirth, Thank you for applying for the Quality Engineering (QE) Data Quality Engineer position with Amida. Your application has been forwarded to our HR Department and they may request additional information if needed. We appreciate you taking the time to apply. Sincerely, Amida Recruiting This email has automatically been generated. Please do not reply to this email message. -------------------------------------------------------- This communication (including any attachments) may contain privileged or confidential information and is intended for a specific individual. If you are not the intended recipient, you should delete this communication, including any attachments without reading or saving them in any manner, and you are hereby notified that any disclosure, copying, or distribution of this communication, or the taking of any action based on it, is strictly prohibited. To unsubscribe click the following link below: https://email.send.applicantemails.com/u/eJwcyUGugyAQBuDTyNIMv4MyCxbvKCODDxK1RknP37Trz5J51c1HV5OuGWEibzbTIhHBlqmIEC9gBrFrCYSZIjzgI8IYthUcKBTLZRLeBqannDbqde0t69nLoW1_xvw63J16u3vNT9XqRWRg-v_qD3sa8OfeCZ8AAAD__0ZgKho "
+    },
+    {
+      "id": "isolved-general-application",
+      "company": "Isolved",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Secure Authentication Code",
+      "latestFrom": "isolved Applicant Tracking <hello@send.applicantemails.com>",
+      "lastActivityAt": "2026-08-21T22:09:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0265f049d9448d",
+      "gmailMessageIds": [
+        "1a0265f049d9448d"
+      ],
+      "notes": "Your isolved Applicant Tracking Two Factor Authentication code is: 389404 You will need to enter this code to fully authenticate your account. This code expires 1 hour after receiving this message. If you feel you have received this request in error, please contact support. This is an automated message. Please do not reply. To unsubscribe click the following link below: https://email.send.applicantemails.com/u/eJwcyUGuhCAMANDTyNK0tShdsPhHaUE-JOoYIXP-ycz65ZhRtWBwNRIvVtbsg_fJDHyAkLSIFMNtlS25FglohUBIBAI8ZzLkYKRGSAvzxND3K89630dLeo391Hb0Ob1O98TRnlFTr1pRRCaG_6_-cMSJ_tw70icAAP__kekqpA "
+    },
+    {
+      "id": "guild-mortgage-data-engineer",
+      "company": "Guild Mortgage",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Guild Mortgage Company- Data Engineer",
+      "latestFrom": "noreplycareers@guildmortgage.net",
+      "lastActivityAt": "2026-08-21T22:08:15.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0265e192540299",
+      "gmailMessageIds": [
+        "1a0265e192540299"
+      ],
+      "notes": "Dear Tirth Shah, We have received your application for the position of Data Engineer on 08/21/2026. Thank you for your interest in joining our amazing team at Guild Mortgage Company. We are working hard to select the person with the right credentials for this position. Guild Mortgage Company LLC thoroughly reviews every candidate making sure all aspects of the application are taken into consideration. If selected to advance to the next step, we will contact you directly. In the meantime, feel free to check our website to learn more about our Company, culture and people who currently work at Guild, review other exciting opportunities we have posted on our website, or update your presence (profile) with any new skills, references or other pertinent information. Please visit https://www.guildmortgage.com/privacy-policy/, which includes our notice at collection, for more information on how your information is used and protected. Thanks again from the Guild Mortgage Recruiting Team!"
+    },
+    {
+      "id": "verizon-general-application",
+      "company": "Verizon",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-21T22:03:48.000Z",
+      "latestSubject": "Verizon Experience Feedback: Application",
+      "latestFrom": "Verizon Talent Acquisition <verizon-noreply@qemailserver.com>",
+      "gmailThreadId": "1a016e3ed79445d7",
+      "gmailMessageIds": [
+        "1a016e3ed79445d7",
+        "1a0265a0430a70e7"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "innorev-ai-data-architect",
+      "company": "Innorev",
+      "role": "AI Data Architect",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Innorev Technologies Inc",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-21T22:00:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a026573ab6bf5f8",
+      "gmailMessageIds": [
+        "1a026573ab6bf5f8"
+      ],
+      "notes": "Your application was sent to Innorev Technologies Inc AI Data Architect Innorev Technologies Inc Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4456283259/?trackingId=v4GxbQzMSEyEVFpg6nUqRg%3D%3D&refId=itrW5NFmQqaxOVnft8tUfw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BfwBX6DBPStqWjqK8IFScqA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=27CErs6nTEyYo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt3htw7j~93-null-null&eid=a06oc2-mt3htw7j-93&otpToken=ZWI5Nzc1NjVkMmY4MDU1MWUwZDQ0MDI0ODcxZDIwODFhODAyMWYzNzUwYjkyNDU1NGJmYmMyOTc3NTA3ZTQ5OTEyNGIwNTg2ZTJkMzVlZGM0YWJmZTk4MGE4ODJkYzRkYjQ1Mjg2ZmFkZDI1ZGU5NmQ3M2MwYTE1YmZkNjE0ZjFjOTJlZGUxMzlkNWQwNjYzLDIsMQ%3D%3D --------------------------------------------------------- Applied on August 21, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Product Manager I HSI Frisco, TX 1 company alum 4 school alumni Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4431157052/?trackingId=mudHpjdvQGGA2YTVs%2BDlew%3D%3D&refId=ORmXRCJ%2FT0qDGpcnOvNCOg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BfwBX6DBPStqWjqK8IFScqA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=27CErs6nTEyYo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt3htw7j~93-null-null&eid=a06oc2-mt3htw7j-93&otpToken=ZWI5Nzc1NjVkMmY4MDU1MWUwZDQ0MDI0ODcxZDIwODFhODAyMWYzNzUwYjkyNDU1NGJmYmMyOTc3NTA3ZTQ5OTEyNGIwNTg2ZTJkMzVlZGM0YWJmZTk4MGE4ODJkYzRkYjQ1Mjg2ZmFkZDI1ZGU5NmQ3M2MwYTE1YmZkNjE0ZjFjOTJlZGUxMzlkNWQwNjYzLDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4383372025/?trackingId=4q%2BgnwK6T8%2BxOeLaJDuUxg%3D%3D&refId=uu3y8mbKScCsSULrWAbdUQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BfwBX6DBPStqWjqK8IFScqA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=27CErs6nTEyYo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt3htw7j~93-null-null&eid=a06oc2-mt3htw7j-93&otpToken=ZWI5Nzc1NjVkMmY4MDU1MWUwZDQ0MDI0ODcxZDIwODFhODAyMWYzNzUwYjkyNDU1NGJmYmMyOTc3NTA3ZTQ5OTEyNGIwNTg2ZTJkMzVlZGM0YWJmZTk4MGE4ODJkYzRkYjQ1Mjg2ZmFkZDI1ZGU5NmQ3M2MwYTE1YmZkNjE0ZjFjOTJlZGUxMzlkNWQwNjYzLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Applied Systems Lewisville, TX 3 connections 12 company alumni 10 school alumni View job: https://www.linkedin.com/comm/jobs/view/4440780268/?trackingId=yF%2BRG"
+    },
     {
       "id": "supio-general-application",
       "company": "Supio",
@@ -157,36 +303,6 @@
         "1a01a15c5915dc79",
         "1a024628269bf229",
         "1a0257bf5ebffede"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
-    },
-    {
-      "id": "google-general-application",
-      "company": "Google",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-21T17:18:52.000Z",
-      "latestSubject": "topic=jobseeker",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "gmailThreadId": "1a01db628aa2dbc0",
-      "gmailMessageIds": [
-        "1a01e395121b2909",
-        "1a01d884fd206630",
-        "1a01d7db8dfaf159",
-        "19fba34e2ccb3302",
-        "19f2a5455927c4e8",
-        "19f1ca6aeedff88d",
-        "1a0255525a14b9d1"
       ],
       "notes": "",
       "isManualOverride": false,
@@ -5089,28 +5205,6 @@
       "aiModel": "rules",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "low"
-    },
-    {
-      "id": "verizon-general-application",
-      "company": "Tsenta",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-18T22:00:30+00:00",
-      "latestSubject": "Reminder: Verizon Experience Feedback: Application",
-      "latestFrom": "Tsenta Inbox <inbox@mail.tsenta.com>",
-      "gmailThreadId": "1a016e3ed79445d7",
-      "gmailMessageIds": [
-        "1a016e3ed79445d7"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium"
     },
     {
       "id": "abacus-insights-associate-data-qa-engineer",
