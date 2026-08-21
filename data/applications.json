@@ -1,6 +1,31 @@
 {
-  "updatedAt": "2026-08-20T23:33:10.920Z",
+  "updatedAt": "2026-08-21T01:21:47.140Z",
   "applications": [
+    {
+      "id": "quicklaunch-analytics-general-application",
+      "company": "Quicklaunch Analytics",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-21T00:15:57.000Z",
+      "latestSubject": "Thank you for your interest in QuickLaunch Analytics",
+      "latestFrom": "Olivia Wilson <notifications@app.bamboohr.com>",
+      "gmailThreadId": "1a01f14d2ee755d5",
+      "gmailMessageIds": [
+        "1a01f14d2ee755d5",
+        "1a021acaaadee98d"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "toshiba-data-scientist-analyst",
       "company": "Toshiba",
@@ -1858,28 +1883,6 @@
       "gmailThreadId": "1a01f18bcc21d4c9",
       "gmailMessageIds": [
         "1a01f18bcc21d4c9"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "quicklaunch-analytics-general-application",
-      "company": "Quicklaunch Analytics",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T12:10:52+00:00",
-      "latestSubject": "Thank you for applying at QuickLaunch Analytics",
-      "latestFrom": "QuickLaunch Analytics <notifications@app.bamboohr.com>",
-      "gmailThreadId": "1a01f14d2ee755d5",
-      "gmailMessageIds": [
-        "1a01f14d2ee755d5"
       ],
       "notes": "",
       "isManualOverride": false,
