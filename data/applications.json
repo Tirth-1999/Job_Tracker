@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-08-21T20:27:13.324Z",
+  "updatedAt": "2026-08-21T20:52:27.412Z",
   "applications": [
+    {
+      "id": "supio-general-application",
+      "company": "Supio",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you from Supio",
+      "latestFrom": "Supio Recruiting <no-reply@appreview.gem.com>",
+      "lastActivityAt": "2026-08-21T20:45:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0261228fd1f74e",
+      "gmailMessageIds": [
+        "1a0261228fd1f74e"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "infoway-group-aws-workspaces-migration-architect",
+      "company": "Infoway Group",
+      "role": "AWS Workspaces Migration Architect",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "🚨 Hiring: AWS WorkSpaces Migration Architect | Remote / Hybrid",
+      "latestFrom": "Vraj Macchi <Vraj@infowaygroup.com>",
+      "lastActivityAt": "2026-08-21T20:38:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02612db4e518eb",
+      "gmailMessageIds": [
+        "1a02612db4e518eb"
+      ],
+      "notes": ""
+    },
     {
       "id": "fanduel-general-application",
       "company": "Fanduel",
