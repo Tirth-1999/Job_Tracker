@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-21T08:42:14.236Z",
+  "updatedAt": "2026-08-21T09:37:46.995Z",
   "applications": [
+    {
+      "id": "pave-analytics-engineer",
+      "company": "Pave",
+      "role": "Analytics Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in Pave!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-21T09:32:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a023a9d10ffeec9",
+      "gmailMessageIds": [
+        "1a023a9d10ffeec9"
+      ],
+      "notes": "Hi Tirth, Thank you so much for taking the time to apply to Pave. We really appreciate the effort that goes into submitting an application and your interest in what we’re building here. After careful consideration, we won’t be moving forward with your application at this time for the Analytics Engineer role. These decisions are never easy, and we’re grateful you took the time to put yourself forward. We’re continuing to grow and share new roles throughout the year, so we’d love for you to stay connected and keep an eye out for opportunities that might be a stronger fit down the line. Wishing you the very best in your search, and thank you again for your interest in Pave. Warmly,Talent @ Pave"
+    },
     {
       "id": "dexcom-data-engineer-2",
       "company": "Dexcom",
