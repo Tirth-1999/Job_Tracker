@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-08-21T04:39:23.468Z",
+  "updatedAt": "2026-08-21T05:33:56.489Z",
   "applications": [
+    {
+      "id": "crossing-hurdles-data-engineer",
+      "company": "Crossing Hurdles",
+      "role": "Data Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-21T05:04:27.000Z",
+      "latestSubject": "Tirth Chirayu, your application was sent to Crossing Hurdles",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "gmailThreadId": "1a01f266effa769f",
+      "gmailMessageIds": [
+        "1a01f266effa769f",
+        "1a022b4cab144dd4",
+        "1a022b4bd156be8a"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "symetra-general-application",
       "company": "Symetra",
@@ -1731,28 +1757,6 @@
       "gmailThreadId": "1a01f2759ad25445",
       "gmailMessageIds": [
         "1a01f2759ad25445"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "crossing-hurdles-data-engineer",
-      "company": "Crossing Hurdles",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T12:30:07+00:00",
-      "latestSubject": "Tirth Chirayu, your application was sent to Crossing Hurdles",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "gmailThreadId": "1a01f266effa769f",
-      "gmailMessageIds": [
-        "1a01f266effa769f"
       ],
       "notes": "",
       "isManualOverride": false,
