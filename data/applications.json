@@ -1,6 +1,49 @@
 {
-  "updatedAt": "2026-08-21T15:48:23.877Z",
+  "updatedAt": "2026-08-21T16:35:58.307Z",
   "applications": [
+    {
+      "id": "google-cloud-general-application",
+      "company": "Google Cloud",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-21T16:25:34.000Z",
+      "latestSubject": "Explore the power of AI with Gemini Enterprise Agent Platform",
+      "latestFrom": "Google Cloud <googlecloud@google.com>",
+      "gmailThreadId": "1a01ffdfeb001787",
+      "gmailMessageIds": [
+        "1a01ffdfeb001787",
+        "1a0252458dbbb006"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "costar-general-application",
+      "company": "Costar",
+      "role": "General Application",
+      "status": "reply_needed",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, following up from CoStar Group",
+      "latestFrom": "CoStar Group <careers@costar.com>",
+      "lastActivityAt": "2026-08-21T16:01:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0250e2a6a6cfe5",
+      "gmailMessageIds": [
+        "1a0250e2a6a6cfe5"
+      ],
+      "notes": ""
+    },
     {
       "id": "axon-senior-machine-learning-engineer",
       "company": "Axon",
@@ -504,6 +547,24 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
+    },
+    {
+      "id": "career-general-application",
+      "company": "Career",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application!",
+      "latestFrom": "career <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-08-21T12:07:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02437b5c516196",
+      "gmailMessageIds": [
+        "1a02437b5c516196"
+      ],
+      "notes": ""
     },
     {
       "id": "is3-solutions-general-application",
@@ -1160,7 +1221,7 @@
       "company": "General Application",
       "role": "Data Engineer",
       "status": "applied",
-      "confidence": "low",
+      "confidence": "medium",
       "lastActivityAt": "2026-08-20T19:26:18+00:00",
       "latestSubject": "Data Engineer | Python, SQL & Cloud Experience",
       "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
@@ -1183,7 +1244,10 @@
         "1a020a3389b34114",
         "1a020a335c62a27c",
         "1a020a3305abcb77",
-        "1a01b7850cebf3f0"
+        "1a01b7850cebf3f0",
+        "1a01b784ee04b0a1",
+        "19fd3a443570917a",
+        "19fb5141f28e1697"
       ],
       "notes": "",
       "isManualOverride": false,
@@ -1192,7 +1256,9 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:32:56.702+00:00",
-      "aiConfidence": "low"
+      "aiConfidence": "low",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "varite-ai-data-engineer",
@@ -2278,28 +2344,6 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high"
-    },
-    {
-      "id": "google-cloud-general-application",
-      "company": "Google Cloud",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-20T16:25:34+00:00",
-      "latestSubject": "Launch and learn with interactive, prebuilt solutions",
-      "latestFrom": "Google Cloud <googlecloud@google.com>",
-      "gmailThreadId": "1a01ffdfeb001787",
-      "gmailMessageIds": [
-        "1a01ffdfeb001787"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium"
     },
     {
       "id": "newsela-general-application",
@@ -6954,6 +6998,24 @@
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high"
+    },
+    {
+      "id": "general-application-business-analyst",
+      "company": "General Application",
+      "role": "Business Analyst",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Business Analyst -Tirth Shah",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "lastActivityAt": "2026-08-17T20:13:21.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0115af7bc5ee43",
+      "gmailMessageIds": [
+        "1a0115b7446f5fdc"
+      ],
+      "notes": "I have tried calling you. Let me know if you can give me a call. "
     },
     {
       "id": "paylocity-general-application",
