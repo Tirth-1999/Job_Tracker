@@ -1,6 +1,60 @@
 {
-  "updatedAt": "2026-08-21T09:37:46.995Z",
+  "updatedAt": "2026-08-21T11:27:28.344Z",
   "applications": [
+    {
+      "id": "bob-general-application",
+      "company": "Bob",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application was received",
+      "latestFrom": "\"No-reply (via Bob)\" <no-reply@hibob.com>",
+      "lastActivityAt": "2026-08-21T11:25:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a024117df13d506",
+      "gmailMessageIds": [
+        "1a024117df13d506"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "trupanion-data-engineer",
+      "company": "Trupanion",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Trupanion!",
+      "latestFrom": "Trupanion <notification@recruiting.trupanion.com>",
+      "lastActivityAt": "2026-08-21T11:23:42.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0240ffedfde074",
+      "gmailMessageIds": [
+        "1a0240ffedfde074"
+      ],
+      "notes": " Hi&nbsp;Tirth, Thank you for your interest in a career at&nbsp;Trupanion! We&#39;re excited that you&#39;re considering joining our team and wanted to let you know that we&#39;ve received your application for our&nbsp;Data Engineer position. Although this is an automated message, your application is being carefully reviewed by a member of our Talent Acquisition team. We appreciate your patience as we review each submission and will get in touch directly by email.&nbsp; In the meantime, we&rsquo;d love for you to get to know us better! Here are a few places you can explore more about who we are and what we stand for:@lifeattrupanion Instagram2025 Corporate Social Responsibility Report&nbsp;Our Profile on The Muse Thanks again for your interest in joining us! Warm wishes, Trupanion Talent Acquisition Team Access My Application: https://link.recruiting.trupanion.com/c/eJxskLuO2zoYhJ9G6miIP-8FC-PYwjEQJEHgFKmMnzeLC4sSSO4GfvtgN8U26efDfDN-W3csz0uwkqWoQ0KuVJCeUxd84lKEMVjNAOIYLVVaMUo5wBhXzI__c-tb_YBRayZYROO4cdpNCY1GgX9z1-ce7X_Hr6fL6Xg9344_r99uP87fv_waFytkkG7yDqmbAqcOvI8qUS5AS2YYG7MFpkFOXEwHwYUR7PDpYage-PRRQlosIVbiuOEhKEW61i-_x4ddet_bwI4DzAPML5trh7Zi7TX6-pp7rO3gt3WAeX0S3PdH9tjzVtoA87W-7ljyVugAs4MQtNaKINdIuBSRGCMUSTBNSVBHYaIDm4OvN58HdvqExzW2hvd4CdZIShHAEKUdJRwNJ8awQFzSSWnlQEg3bjXfczmXt1y3ssbSbapYxmp7rn3xbcGFGmMGPt3fl7_rj_3fB79Z-BMAAP__NYaTaw If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application "
+    },
+    {
+      "id": "resonate-general-application",
+      "company": "Resonate",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Applying to Resonate",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-21T10:57:08.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a023f7ab9a21280",
+      "gmailMessageIds": [
+        "1a023f7ab9a21280"
+      ],
+      "notes": "Hi Tirth Shah, Thank you for your interest in joining Resonate. We're excited to learn more about you! Your application has been successfully received and is now with our hiring team. If your experience is a good match for the role, we will be in touch soon to discuss next steps. At Resonate, we are passionate about uncovering what drives people and applying that same curiosity to how we build our team. We look for thoughtful, collaborative individuals who are excited to be part of an innovative and fast-moving company. If you'd like to explore more about who we are and what we do, check out the links below: Visit our Website ( https://www.resonate.com/about ) Follow us on LinkedIn ( https://www.linkedin.com/company/resonate-networks ) We appreciate the time and effort you put into your application. Thank you again for considering Resonate. All the best, The Resonate Hiring Team"
+    },
     {
       "id": "pave-analytics-engineer",
       "company": "Pave",
