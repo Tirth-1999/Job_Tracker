@@ -1,6 +1,352 @@
 {
-  "updatedAt": "2026-08-21T11:54:54.129Z",
+  "updatedAt": "2026-08-21T12:50:30.241Z",
   "applications": [
+    {
+      "id": "coinbase-general-application",
+      "company": "Coinbase",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-21T12:49:09.000Z",
+      "latestSubject": "Thank you for applying to Coinbase",
+      "latestFrom": "no-reply@coinbase.com",
+      "gmailThreadId": "19f6a87b8eaa65ae",
+      "gmailMessageIds": [
+        "19f6a87b8eaa65ae",
+        "19f6298301c4a519",
+        "1a0245e36998b94d"
+      ],
+      "notes": "Hi Tirth, Thank you for showing interest in joining our team and taking the time to apply to Coinbase. We'll be reviewing your application shortly and will reach out to you on any next steps if your qualifications match our needs for the role. Join our Stand with Crypto ( https://www.coinbase.com/public-policy/advocacy/standwithcrypto ) campaign and become an advocate. Global Data Privacy Notice for Job Candidates and Applicants Depending on your location, the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA) may regulate the way we manage the data of job applicants. Our full notice outlining how data will be processed as part of the application procedure for applicable locations is available here ( https://www.coinbase.com/legal/applicant_privacy_notice ). By submitting your application, you are agreeing to our use and processing of your data as required. Regards, Coinbase ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "direct-travel-general-application",
+      "company": "Direct Travel",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-21T12:39:13.000Z",
+      "latestSubject": "Employment Update - DIRECT TRAVEL INC",
+      "latestFrom": "DIRECT TRAVEL INC - Talent Acquisition <jobs@adp.com>",
+      "gmailThreadId": "19f7f1adc3a7de00",
+      "gmailMessageIds": [
+        "19f7f1adc3a7de00",
+        "1a0245520be34896"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "openai-general-application",
+      "company": "Openai",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to OpenAI",
+      "latestFrom": "OpenAI Hiring Team <no-reply@openai.com>",
+      "lastActivityAt": "2026-08-21T12:30:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0244cd9d7454f0",
+      "gmailMessageIds": [
+        "1a0244cd9d7454f0"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to OpenAI. Your application has been received and our recruiting team will review it for the role you applied to, along with any similar roles we have open. If we find a match, we'll reach out to you to discuss the next steps. In the meantime, we invite you to learn more about our hiring philosophy and interview process https://openai.com/interview-guide/. Regards, OpenAI Team Please note: This email is sent from an unattended mailbox."
+    },
+    {
+      "id": "pedestal-health-general-application",
+      "company": "Pedestal Health",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-21T12:29:09.000Z",
+      "latestSubject": "Thank you for applying to Pedestal Health",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19fb84658be0c6f3",
+      "gmailMessageIds": [
+        "19fb84658be0c6f3",
+        "19fb2f8bfa09f17c",
+        "19f6552a6fbbe100",
+        "1a0244bef6aef158"
+      ],
+      "notes": "Tirth Shah, Thanks for applying to Pedestal Health. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "discord-data-engineer",
+      "company": "Discord",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Discord!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-21T12:27:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0244a42ef13a47",
+      "gmailMessageIds": [
+        "1a0244a42ef13a47"
+      ],
+      "notes": "Hey Tirth, Thanks so much for your interest in Discord! We successfully received your application for the Data Engineer role and are pumped to look over it. Our team will review your application and be in touch if your experiences are a fit for our role(s). If not, don't dismay - we always have new roles opening up so keep on checking back and trying! Thank you for applying! Discord"
+    },
+    {
+      "id": "focus-financial-partners-general-application",
+      "company": "Focus Financial Partners",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-21T12:25:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0244855d98ed9d",
+      "gmailMessageIds": [
+        "1a0244855d98ed9d"
+      ],
+      "notes": "Hello Tirth, Thank you for applying to Focus Financial Partners. Our team is currently reviewing your application. If your experience aligns with the role, we will be in touch to schedule next steps. We appreciate your interest in joining the Focus team! Best, The Talent Acquisition Team Focus Partners"
+    },
+    {
+      "id": "dsider-data-analytics-engineer",
+      "company": "Dsider",
+      "role": "Data Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Dsider",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-21T12:19:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a024432949cd22a",
+      "gmailMessageIds": [
+        "1a024432949cd22a"
+      ],
+      "notes": "Your application was sent to Dsider Data Analytics Engineer Dsider Texas, United States View job: https://www.linkedin.com/comm/jobs/view/4456222540/?trackingId=hvWvD4kESQ%2BYFyuBramtbA%3D%3D&refId=WvcreeIpRvqWUYf4e5ZVZw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BPx6zZUH2SYWZLEMgLrwKhg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=15LbMIalqzyso1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt2x2int~tr-null-null&eid=a06oc2-mt2x2int-tr&otpToken=NTMwMDUwMzVjMDhhYWM5MWViYzI2MjhiNDIwMjlhYmU2MGZmODFkZjcyNGFiODk0MGZjMTVlZDM0MzFhZGYzNjYxMzc3ZTc0YWNhYzY5ZjZkYTQ3M2UxNzZlMWYwOTRjNTVkMTIwNjQ4YmNmNGZiNjg5YWZhNzMxNjVmNTA3MTM0YzIzMGRjMmI2NTg5Y2U4LDIsMQ%3D%3D --------------------------------------------------------- Applied on August 21, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4383372025/?trackingId=oZziqb0YQDqV9k5WYslB%2Bw%3D%3D&refId=UQYRMhL6S6KtE914AlQZvA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BPx6zZUH2SYWZLEMgLrwKhg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=15LbMIalqzyso1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt2x2int~tr-null-null&eid=a06oc2-mt2x2int-tr&otpToken=NTMwMDUwMzVjMDhhYWM5MWViYzI2MjhiNDIwMjlhYmU2MGZmODFkZjcyNGFiODk0MGZjMTVlZDM0MzFhZGYzNjYxMzc3ZTc0YWNhYzY5ZjZkYTQ3M2UxNzZlMWYwOTRjNTVkMTIwNjQ4YmNmNGZiNjg5YWZhNzMxNjVmNTA3MTM0YzIzMGRjMmI2NTg5Y2U4LDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=ZoLlEviDSjORCeuU3jRa1g%3D%3D&refId=9ppGh%2F%2FOS4%2BYL1sDCZ3Pkw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BPx6zZUH2SYWZLEMgLrwKhg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=15LbMIalqzyso1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt2x2int~tr-null-null&eid=a06oc2-mt2x2int-tr&otpToken=NTMwMDUwMzVjMDhhYWM5MWViYzI2MjhiNDIwMjlhYmU2MGZmODFkZjcyNGFiODk0MGZjMTVlZDM0MzFhZGYzNjYxMzc3ZTc0YWNhYzY5ZjZkYTQ3M2UxNzZlMWYwOTRjNTVkMTIwNjQ4YmNmNGZiNjg5YWZhNzMxNjVmNTA3MTM0YzIzMGRjMmI2NTg5Y2U4LDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager I HSI Frisco, TX 1 company alum 4 school alumni Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4431157052/?trackingId=ij6Vh2KCTkadA0L%2B9E%2Bupg%3D%3D&refId=q9z3Ab9MSwSgPEoEhJv%2Bmw%3D%3D&lipi=urn%3Ali%3Apage"
+    },
+    {
+      "id": "genius-road-data-engineer",
+      "company": "Genius Road",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Genius Road Application has been Received",
+      "latestFrom": "\"resumes@geniusroad.com\" <resumes@geniusroad.com>",
+      "lastActivityAt": "2026-08-21T12:15:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0243f0fa9a383e",
+      "gmailMessageIds": [
+        "1a0243f0fa9a383e"
+      ],
+      "notes": "Tirth, Boom! You did it! Your application for&nbsp;Data Engineer #3351&nbsp;has been successfully received.&nbsp;If you&rsquo;re a fit, our team will carefully review your details and reach out. &nbsp; Need to update anything or tweak your contact info? No problem! Just reply to this email, and we&rsquo;ll take care of it. &nbsp; And hey, why not check out all the other amazing roles we&rsquo;re looking to fill? You can bookmark our website, subscribe to our RSS feed, or follow us on LinkedIn because there may be a new opportunity that&rsquo;s even more&nbsp;suited for&nbsp;you. &nbsp; Stay tuned, and thanks for your interest in Genius Road! &nbsp; Regards, The Genius Road Team "
+    },
+    {
+      "id": "rethink-first-general-application",
+      "company": "Rethink First",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying at Rethink First",
+      "latestFrom": "RethinkFirst <noreply@applytojob.com>",
+      "lastActivityAt": "2026-08-21T12:13:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0243da393582ab",
+      "gmailMessageIds": [
+        "1a0243da393582ab"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "bamm-general-application",
+      "company": "BAMM",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Job #26-00242",
+      "latestFrom": "HumanResources@bammusa.com",
+      "lastActivityAt": "2026-08-21T12:12:42.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0244422577c4a2",
+      "gmailMessageIds": [
+        "1a0244422577c4a2"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "collegis-education-general-application",
+      "company": "Collegis Education",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying!",
+      "latestFrom": "Collegis Education <do-not-reply@mail.paylocity.com>",
+      "lastActivityAt": "2026-08-21T12:11:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0243b6f9d6f39b",
+      "gmailMessageIds": [
+        "1a0243b6f9d6f39b"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "artech-general-application",
+      "company": "Artech",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-21T12:08:50.000Z",
+      "latestSubject": "Application Received for Job #26-33253",
+      "latestFrom": "HumanResources@artechinfo.com",
+      "gmailThreadId": "19fb82e68a5c75c6",
+      "gmailMessageIds": [
+        "19fb82e68a5c75c6",
+        "1a01ef8daa85e1a9",
+        "1a024409b467eb9b",
+        "1a0242ede2e482a0"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "is3-solutions-general-application",
+      "company": "IS3 Solutions",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Job #26-00502",
+      "latestFrom": "HumanResources@is3sol.com",
+      "lastActivityAt": "2026-08-21T12:04:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0243c37dae7f7c",
+      "gmailMessageIds": [
+        "1a0243c37dae7f7c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "verse-medical-general-application",
+      "company": "Verse Medical",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-21T12:01:16.000Z",
+      "latestSubject": "Verse Medical | Your Application Has Been Received!",
+      "latestFrom": "Verse Medical Hiring Team <no-reply@ashbyhq.com>",
+      "gmailThreadId": "19f658f9c8915857",
+      "gmailMessageIds": [
+        "19f658f9c8915857",
+        "1a0243263939cf58"
+      ],
+      "notes": "Thank you for applying to Verse Medical! We’ve received your application and will be reviewing it shortly. If there’s a potential match, a member of our team will be in touch with next steps. We truly appreciate your interest in joining our team and thank you for taking the time to apply! Warm Regards, Verse Medical Talent Team [https://app.ashbyhq.com/api/images/user-content/739313a7-bae5-427b-a1ee-2e423c85abcf/124470c3-134a-46fc-b8d4-7419f18cb9f8/VM_logo.png]",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "fhlbank-topeka-data-engineer-ii",
+      "company": "Fhlbank Topeka",
+      "role": "Data Engineer II",
+      "status": "rejected",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "FHLBank Topeka Status Update for the Data Engineer II Position",
+      "latestFrom": "fhlbtopeka@myworkday.com",
+      "lastActivityAt": "2026-08-21T11:58:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0243030fff4101",
+      "gmailMessageIds": [
+        "1a0243030fff4101"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fhlbank-topeka-general-application",
+      "company": "Fhlbank Topeka",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Applying!",
+      "latestFrom": "fhlbtopeka@myworkday.com",
+      "lastActivityAt": "2026-08-21T11:58:51.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a024302d3ba6ef9",
+      "gmailMessageIds": [
+        "1a024302d3ba6ef9"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "elmington-general-application",
+      "company": "Elmington",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for Applying to Elmington!",
+      "latestFrom": "\"Elmington/Fortress\" <reply_ok@echo.newtonsoftware.com>",
+      "lastActivityAt": "2026-08-21T11:54:28.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0242c2aae76f30",
+      "gmailMessageIds": [
+        "1a0242c2aae76f30"
+      ],
+      "notes": "Hello Tirth, We are very pleased to receive your application! Elmington/Fortress is a commercial real estate investment, development, construction, affordable housing, and property management firm headquartered in Nashville. Our nearly 1,000 employees operate, acquire, develop, and construct properties throughout 18 states. Elmington/Fortess has been named a top workplace by the Tennessean 7 times and top workplace by USA Today in 2024. Our philosophy is simple: People are the difference. We encourage you to check out our website and social media to learn more about the company before the next steps. If you are selected for an interview, our Talent Acquisition Team will be in contact with you. Elmington Talent Acquisition"
+    },
     {
       "id": "us-mobile-general-application",
       "company": "US Mobile",
@@ -2423,29 +2769,6 @@
       "gmailThreadId": "1a01ef218e64594a",
       "gmailMessageIds": [
         "1a01ef218e64594a"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "artech-general-application",
-      "company": "Artech",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T11:32:23+00:00",
-      "latestSubject": "Application Received for Job #26-32805",
-      "latestFrom": "HumanResources@artechinfo.com",
-      "gmailThreadId": "19fb82e68a5c75c6",
-      "gmailMessageIds": [
-        "19fb82e68a5c75c6",
-        "1a01ef8daa85e1a9"
       ],
       "notes": "",
       "isManualOverride": false,
@@ -18798,30 +19121,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "pedestal-health-general-application",
-      "company": "Pedestal Health",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-31T13:04:05+00:00",
-      "latestSubject": "Thank you for applying to Pedestal Health",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19fb84658be0c6f3",
-      "gmailMessageIds": [
-        "19fb84658be0c6f3",
-        "19fb2f8bfa09f17c",
-        "19f6552a6fbbe100"
-      ],
-      "notes": "Tirth Shah, Thanks for applying to Pedestal Health. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19fb84638ef31415",
       "company": "Life.Church",
       "role": "General Application",
@@ -27704,28 +28003,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "direct-travel-general-application",
-      "company": "Direct Travel",
-      "role": "General Application",
-      "status": "rejected",
-      "confidence": "medium",
-      "lastActivityAt": "2026-07-20T10:38:14+00:00",
-      "latestSubject": "Employment Update - DIRECT TRAVEL INC",
-      "latestFrom": "DIRECT TRAVEL INC - Talent Acquisition <jobs@adp.com>",
-      "gmailThreadId": "19f7f1adc3a7de00",
-      "gmailMessageIds": [
-        "19f7f1adc3a7de00"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "medium"
-    },
-    {
       "id": "grant-street-general-application",
       "company": "Grant Street",
       "role": "General Application",
@@ -30504,29 +30781,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "coinbase-general-application",
-      "company": "Coinbase",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-16T10:45:07+00:00",
-      "latestSubject": "Thank you for applying to Coinbase",
-      "latestFrom": "no-reply@coinbase.com",
-      "gmailThreadId": "19f6a87b8eaa65ae",
-      "gmailMessageIds": [
-        "19f6a87b8eaa65ae",
-        "19f6298301c4a519"
-      ],
-      "notes": "Hi Tirth, Thank you for showing interest in joining our team and taking the time to apply to Coinbase. We'll be reviewing your application shortly and will reach out to you on any next steps if your qualifications match our needs for the role. Join our Stand with Crypto ( https://www.coinbase.com/public-policy/advocacy/standwithcrypto ) campaign and become an advocate. Global Data Privacy Notice for Job Candidates and Applicants Depending on your location, the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA) may regulate the way we manage the data of job applicants. Our full notice outlining how data will be processed as part of the application procedure for applicable locations is available here ( https://www.coinbase.com/legal/applicant_privacy_notice ). By submitting your application, you are agreeing to our use and processing of your data as required. Regards, Coinbase ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f6a86aafb1a14b",
       "company": "Coinbase",
       "role": "General Application",
@@ -31323,28 +31577,6 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "verse-medical-general-application",
-      "company": "Verse Medical",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-15T11:35:38+00:00",
-      "latestSubject": "Verse Medical | Your Application Has Been Received!",
-      "latestFrom": "Verse Medical Hiring Team <no-reply@ashbyhq.com>",
-      "gmailThreadId": "19f658f9c8915857",
-      "gmailMessageIds": [
-        "19f658f9c8915857"
-      ],
-      "notes": "Thank you for applying to Verse Medical! We’ve received your application and will be reviewing it shortly. If there’s a potential match, a member of our team will be in touch with next steps. We truly appreciate your interest in joining our team and thank you for taking the time to apply! Warm Regards, Verse Medical Talent Team [https://app.ashbyhq.com/api/images/user-content/739313a7-bae5-427b-a1ee-2e423c85abcf/124470c3-134a-46fc-b8d4-7419f18cb9f8/VM_logo.png]",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
