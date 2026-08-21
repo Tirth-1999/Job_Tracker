@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-08-21T01:21:47.140Z",
+  "updatedAt": "2026-08-21T04:39:23.468Z",
   "applications": [
+    {
+      "id": "symetra-general-application",
+      "company": "Symetra",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-21T04:21:02.000Z",
+      "latestSubject": "Employment Update - Symetra Talent Acquisition",
+      "latestFrom": "Symetra Talent Acquisition - Career Opportunities <jobs@adp.com>",
+      "gmailThreadId": "19fc7a2ab7907cbb",
+      "gmailMessageIds": [
+        "19fc7a2ab7907cbb",
+        "19f8fce521eeadd0",
+        "1a0228d06f697b4e"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "quicklaunch-analytics-general-application",
       "company": "Quicklaunch Analytics",
@@ -23073,29 +23099,6 @@
       "manualChangedAt": null,
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "symetra-general-application",
-      "company": "Symetra",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-23T16:28:11+00:00",
-      "latestSubject": "Tirth, we have received your application",
-      "latestFrom": "careers@careers.symetra.com",
-      "gmailThreadId": "19fc7a2ab7907cbb",
-      "gmailMessageIds": [
-        "19fc7a2ab7907cbb",
-        "19f8fce521eeadd0"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
