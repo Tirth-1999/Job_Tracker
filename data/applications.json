@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-21T07:43:15.907Z",
+  "updatedAt": "2026-08-21T08:42:14.236Z",
   "applications": [
+    {
+      "id": "dexcom-data-engineer-2",
+      "company": "Dexcom",
+      "role": "Data Engineer 2",
+      "status": "rejected",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on your Application for JR120228 , Data Engineer 2",
+      "latestFrom": "dexcom@myworkday.com",
+      "lastActivityAt": "2026-08-21T07:43:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a023466a326bf25",
+      "gmailMessageIds": [
+        "1a023466a326bf25"
+      ],
+      "notes": ""
+    },
     {
       "id": "seek-business-improvement-analyst",
       "company": "SEEK",
