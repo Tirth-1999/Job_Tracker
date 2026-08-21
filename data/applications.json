@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-21T13:47:02.582Z",
+  "updatedAt": "2026-08-21T14:36:50.642Z",
   "applications": [
+    {
+      "id": "jobright-data-reporting-analyst-developer",
+      "company": "Jobright",
+      "role": "Data Reporting Analyst/developer",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "FedTec just posted a 87% match Data Reporting Analyst/Developer role 42 minutes ago",
+      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
+      "lastActivityAt": "2026-08-21T14:25:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a024b6c25c09ccf",
+      "gmailMessageIds": [
+        "1a024b6c25c09ccf"
+      ],
+      "notes": ""
+    },
     {
       "id": "kodeva-data-engineer",
       "company": "Kodeva",
