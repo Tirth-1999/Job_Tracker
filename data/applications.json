@@ -1,6 +1,49 @@
 {
-  "updatedAt": "2026-08-21T15:34:56.469Z",
+  "updatedAt": "2026-08-21T15:48:23.877Z",
   "applications": [
+    {
+      "id": "axon-senior-machine-learning-engineer",
+      "company": "Axon",
+      "role": "Senior Machine Learning Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-21T15:45:10.000Z",
+      "latestSubject": "Thank you for your interest in Axon!",
+      "latestFrom": "no-reply-talent@axon.com",
+      "gmailThreadId": "1a020913f6345751",
+      "gmailMessageIds": [
+        "1a020913f6345751",
+        "1a024ff600fa302f"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:32:56.702+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "tekfortune-aws-automation-engineer",
+      "company": "Tekfortune",
+      "role": "AWS Automation Engineer",
+      "status": "reply_needed",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Contract Hiring for AWS Automation Engineer_ Local Only",
+      "latestFrom": "Suneel Kumar <suneel.kumar@tekfortune.com>",
+      "lastActivityAt": "2026-08-21T15:30:27.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a024f9312524f29",
+      "gmailMessageIds": [
+        "1a024f9312524f29"
+      ],
+      "notes": ""
+    },
     {
       "id": "spectrum-senior-business-planning-analyst",
       "company": "Spectrum",
@@ -1186,28 +1229,6 @@
       "gmailMessageIds": [
         "1a0208342e09f307",
         "1a0209e690bcd4e5"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:32:56.702+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "axon-senior-machine-learning-engineer",
-      "company": "Axon",
-      "role": "Senior Machine Learning Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T19:06:23+00:00",
-      "latestSubject": "Thank you for applying to Axon!",
-      "latestFrom": "no-reply-talent@axon.com",
-      "gmailThreadId": "1a020913f6345751",
-      "gmailMessageIds": [
-        "1a020913f6345751"
       ],
       "notes": "",
       "isManualOverride": false,
