@@ -1,6 +1,49 @@
 {
-  "updatedAt": "2026-08-21T18:50:25.488Z",
+  "updatedAt": "2026-08-21T19:49:42.485Z",
   "applications": [
+    {
+      "id": "fanduel-general-application",
+      "company": "Fanduel",
+      "role": "General Application",
+      "status": "rejected",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update from FanDuel",
+      "latestFrom": "FanDuel Recruiting <no-reply@appreview.gem.com>",
+      "lastActivityAt": "2026-08-21T19:36:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a025d2f5a205a5a",
+      "gmailMessageIds": [
+        "1a025d2f5a205a5a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "jobgether-senior-data-engineer",
+      "company": "Jobgether",
+      "role": "Senior Data Engineer",
+      "status": "reply_needed",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-21T19:27:04.000Z",
+      "latestSubject": "Follow-up on your application to DATA111: Senior Data Engineer - ETL | Data Integration",
+      "latestFrom": "Jobgether Talent Team <shortlist@jobgether.com>",
+      "gmailThreadId": "1a020a42407d107c",
+      "gmailMessageIds": [
+        "1a020a42407d107c",
+        "1a025ca856e9283c"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Next steps requested for job application",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-20T19:40:04.271+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "nearwater-capital-data-engineer",
       "company": "Nearwater Capital",
@@ -1349,28 +1392,6 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:32:56.702+00:00",
       "aiConfidence": "medium"
-    },
-    {
-      "id": "jobgether-senior-data-engineer",
-      "company": "Jobgether",
-      "role": "Senior Data Engineer",
-      "status": "reply_needed",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T19:27:03+00:00",
-      "latestSubject": "Next Steps for Your Job Application: DATA111: Senior Data Engineer - ETL | Data Integration at Jobgether",
-      "latestFrom": "Jobgether Talent Team <shortlist@jobgether.com>",
-      "gmailThreadId": "1a020a42407d107c",
-      "gmailMessageIds": [
-        "1a020a42407d107c"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Next steps requested for job application",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-20T19:40:04.271+00:00",
-      "aiConfidence": "high"
     },
     {
       "id": "zapier-general-application",
