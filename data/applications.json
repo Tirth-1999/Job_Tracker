@@ -1,6 +1,35 @@
 {
-  "updatedAt": "2026-08-22T20:50:00.117Z",
+  "updatedAt": "2026-08-22T21:22:35.779Z",
   "applications": [
+    {
+      "id": "amazon-general-application",
+      "company": "Amazon",
+      "role": "Software Development Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-22T21:11:56.000Z",
+      "latestSubject": "Your Amazon job application is incomplete!",
+      "latestFrom": "noreply@mail.amazon.jobs",
+      "gmailThreadId": "1a01bdd7d2646129",
+      "gmailMessageIds": [
+        "1a01be63a54ca56d",
+        "1a01be5e4e67d32e",
+        "1a01bddccf140a9d",
+        "1a01bdd7d2646129",
+        "1a01bdc7d40b1417",
+        "1a02b50e54992c55"
+      ],
+      "notes": "96 Your Amazon job application is incomplete! Hi Tirth, We noticed that your application for the position of Software Development Engineer, Specialist AI Tooling, Specialist Technology Team (ID: 10503639) is incomplete . We can't consider you for the role until we've received your completed application. Complete my application now If you'd like to learn more about our culture and peculiar ways, visit amazon.jobs . Or you can get the latest Amazon news and stories by following our Day One blog . Best regards, Amazon Recruiting Team Amazon is an equal opportunity employer. Protecting your privacy and the security of your data are longstanding top priorities for Amazon. If you are an external candidate, please consult our Privacy Notice to know more about how we collect, use, and transfer the personal data of our candidates. You can let us know if you do not want to be contacted for recruitment purposes. Please refer to the \"What are my rights under applicable data protection laws?\" section of the Notice for more information. If you are an internal candidate, please consult the Employee Privacy Notice . Please don't reply to this email, as we can't review or respond to messages at this address.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "ATS application submission confirmation receipt",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:02:20.15+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "acquia-staff-ai-engineer",
       "company": "Acquia",
@@ -5247,32 +5276,6 @@
       "manualAction": null,
       "manualChangedAt": null,
       "aiDecision": "Candidate rejection notice: Thank you for your interest",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:02:20.15+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "amazon-general-application",
-      "company": "Amazon",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-19T21:10:29+00:00",
-      "latestSubject": "Keep track of your application",
-      "latestFrom": "noreply@mail.amazon.jobs",
-      "gmailThreadId": "1a01bdd7d2646129",
-      "gmailMessageIds": [
-        "1a01be63a54ca56d",
-        "1a01be5e4e67d32e",
-        "1a01bddccf140a9d",
-        "1a01bdd7d2646129",
-        "1a01bdc7d40b1417"
-      ],
-      "notes": "96 Thank you for Applying to Amazon! Hi Tirth, Thanks for applying to Amazon! We've received your application for the Data Engineer, Marketplace (ID: 10496061) position. What happens next? If we decide to move forward with your application, the Amazon recruiting team will reach out to discuss next steps. Any updates to your application status will be reflected on your Application dashboard, so be sure to check back regularly. Go to your application dashboard Explore our interview resources for more information on the hiring process and how to prepare for interviews. To learn more about our peculiar culture, visit Amazon.jobs , and get the latest Amazon news and stories by following our Day One blog . Best regards, Amazon Recruiting Team Amazon is an equal opportunity employer. Protecting your privacy and the security of your data are longstanding top priorities for Amazon. If you are an external candidate, please consult our Privacy Notice to know more about how we collect, use, and transfer the personal data of our candidates. You can let us know if you do not want to be contacted for recruitment purposes. Please refer to the \"What are my rights under applicable data protection laws?\" section of the Notice for more information. If you are an internal candidate, please consult the Employee Privacy Notice . Please don't reply to this email, as we can't review or respond to messages at this address. 96 Keep track of your application Hi Tirth, Thank you for your interest in Data Engineer, Marketplace (ID: 10496061). If you have completed the application: Great! You can now check the application status here . If you are still working on the application: Don't worry! You can complete it here when you're ready. If you'd like to learn more about our culture and peculiar ways, visit amazon.jobs . Or you can get the latest Amazon news and stories by following our Day One blog . Best regards, Amazon Recruiting Team Amazon is an equal opportunity employer. Protecting your privacy and the security of your data are longstanding top priorities for Amazon. If you are an external candidate, please consult our Privacy Notice to know more about how we collect, use, and transfer the personal data of our candidates. You can let us know if you do not want to be contacted for recruitment purposes. Please refer to the \"What are my rights under applicable data protection laws?\" section of the Notice for more information. If you are an internal candidate, please consult the Employee Privacy Notice . Please don't reply to this email, as we can't review or respond to messages at this address. 96 Keep track of your application Hi Tirth, Thank you for your interest in Software Development Engineer, Specialist AI Tooling, Specialist Technology Team (ID: 10503639). If you have completed the application: Great! You can now check the application status here . If you are still working on the application: Don't worry! You can complete it here when you're ready. If you'd like to learn more about our culture and peculiar ways, visit amazon.jobs . Or you can get the latest Amazon news and stories by following our Day One blog . Best regards, Amazon Recruiting Team Amazon is an equal opportunity employer. Protecting your privacy and the security of your data are longstanding top priorities for Amazon. If you are an external candidate, please consult our Privacy Notice to know more about how we collect, use, and transfer the personal data of our candidates. You can let us know if you do not want to be contacted for recruitment purposes. Please refer to the \"What are my rights under applicable data protection laws?\" section of the Notice for more information. If you are an internal candidate, please consult the Employee Privacy Notice . Please don't reply to this email, as we can't review or respond to messages at this address. 96 Thank you for Applying to Amazon! Hi Tirth, Thanks for applying to Amazon! We've received your application for the Data Engineer, Data Pl",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "ATS application submission confirmation receipt",
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:02:20.15+00:00",
       "aiConfidence": "high"
