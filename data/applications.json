@@ -1,6 +1,50 @@
 {
-  "updatedAt": "2026-08-22T05:59:56.581Z",
+  "updatedAt": "2026-08-22T07:32:50.739Z",
   "applications": [
+    {
+      "id": "seek-general-application",
+      "company": "SEEK",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-22T07:20:55.000Z",
+      "latestSubject": "Aviation Data & Research Analyst + 11 new jobs",
+      "latestFrom": "SEEK Recommendations <noreply@s.seek.com.au>",
+      "gmailThreadId": "1a01e0b618dbade5",
+      "gmailMessageIds": [
+        "1a01e0b618dbade5",
+        "1a028581445b94b4"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "seedlegals-data-engineer",
+      "company": "Seedlegals",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Data Engineer (3-6 month contract) - SeedLegals",
+      "latestFrom": "SeedLegals <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-08-22T06:51:38.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02804312f242e4",
+      "gmailMessageIds": [
+        "1a02804312f242e4",
+        "1a0283d46c303e12"
+      ],
+      "notes": "SeedLegals ------------------------------------------------------------------------------- Your application for the Data Engineer (3-6 month contract) job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: Data Engineer with 4+ years of building scalable Python and SQL pipelines, modern data warehouses, and automation tools across finance, energy, and education sectors Phone: +19796352045 ** PROFILE ** Resume: Tirth_Shah_Resume.pdf What are your salary expectations for this role?: 0 Withdraw this application https://seedlegals.workable.com/jobs/6047030/candidates/d050yzGjdRzhdovS-tAMWvEeyvRFLqvef1PYfa-r_ME ------------------------------------------------------------------------------- Jobs by Workable https://jobs.workable.com/ "
+    },
     {
       "id": "n26-data-engineer-platform-engineering",
       "company": "N26",
@@ -379,24 +423,6 @@
         "1a02804d8f89f397"
       ],
       "notes": "Tirth, Thanks for applying to MetTel. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, MetTel ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
-    },
-    {
-      "id": "seedlegals-data-engineer",
-      "company": "Seedlegals",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thanks for applying to SeedLegals",
-      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
-      "lastActivityAt": "2026-08-22T05:49:17.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a02804312f242e4",
-      "gmailMessageIds": [
-        "1a02804312f242e4"
-      ],
-      "notes": "SeedLegals ------------------------------------------------------------------------------- Your application for the Data Engineer (3-6 month contract) job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: Data Engineer with 4+ years of building scalable Python and SQL pipelines, modern data warehouses, and automation tools across finance, energy, and education sectors Phone: +19796352045 ** PROFILE ** Resume: Tirth_Shah_Resume.pdf What are your salary expectations for this role?: 0 Withdraw this application https://seedlegals.workable.com/jobs/6047030/candidates/d050yzGjdRzhdovS-tAMWvEeyvRFLqvef1PYfa-r_ME ------------------------------------------------------------------------------- Jobs by Workable https://jobs.workable.com/ "
     },
     {
       "id": "istari-digital-general-application",
@@ -3909,28 +3935,6 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high"
-    },
-    {
-      "id": "seek-general-application",
-      "company": "SEEK",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-20T07:20:55+00:00",
-      "latestSubject": "Transformation business Analyst + 11 new jobs",
-      "latestFrom": "SEEK Recommendations <noreply@s.seek.com.au>",
-      "gmailThreadId": "1a01e0b618dbade5",
-      "gmailMessageIds": [
-        "1a01e0b618dbade5"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium"
     },
     {
       "id": "caterpillar-general-application",
