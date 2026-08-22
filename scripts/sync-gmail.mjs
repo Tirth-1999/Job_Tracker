@@ -654,6 +654,16 @@ Example 9: Online Candidate Assessment / Outmatch / Harver
 - SNIPPET: "In order to complete your application for Data Engineer - GCP, 4750460 at HCA Healthcare you must click the link below to participate in an assessment that will help us get to know you a little better as we proceed in the selection process. It should take 30 - 45 minutes to complete. [CLICK HERE TO BEGIN ASSESSMENT]"
 -> OUTPUT: {"is_job": true, "company": "HCA Healthcare", "role": "Data Engineer - GCP", "status": "interviewed", "confidence": "high"}
 
+Example 10: Polite Corporate Rejection with Neutral Subject / ParetoHealth
+- FROM: "ParetoHealth Talent Team <no-reply@paretohealth.com>"
+- SUBJECT: "Important information about your application to ParetoHealth"
+- SNIPPET: "Dear Tirth, Thank you for taking the time to apply for the Data Engineer position here at ParetoHealth. After careful consideration of your application and qualifications, we regret to inform you that we have chosen to move forward with other candidates whose skills and experiences more closely align with the requirements of the role. While we are unable to offer you a position at this time, we encourage you to explore future opportunities with us. We wish you all the best in your job search."
+-> OUTPUT: {"is_job": true, "company": "ParetoHealth", "role": "Data Engineer", "status": "rejected", "confidence": "high"}
+
+CRITICAL PRECEDENCE RULE (REJECTION OVERRIDE RULE):
+- Rejection emails frequently begin with polite phrases or have neutral subjects ("Important information about your application", "Update on your application", "Thank you for applying").
+- ALWAYS inspect the body: If the email states "regret to inform", "chosen to move forward with other candidates", "skills and experiences more closely align", "unable to offer you a position", "decided not to advance", or "wish you the best in your search", it MUST ALWAYS be classified as "rejected", NEVER "applied"!
+
 CRITICAL PRECEDENCE RULE (ASSESSMENT VS REPLY NEEDED):
 - Any email directing the candidate to take an online assessment, screening quiz, behavioral evaluation, or video interview prompt (Outmatch, Harver, TestGorilla, HackerRank, pymetrics) MUST ALWAYS be classified as "interviewed", NEVER "reply_needed"!
 - "reply_needed" is strictly reserved for direct human recruiter emails asking for text replies (e.g. salary expectation, availability, visa questions) or simple administrative forms.
@@ -840,7 +850,7 @@ function extractWithHeuristics(item) {
   let reason = "keyword heuristic";
 
   if (
-    /unfortunately|not moving forward|will not be moving forward|decided not to move forward|decided not to proceed|will not be proceeding|not selected|credentials of other candidates|pursue other candidates|pursuing other candidates|pursuing other applicants|selected other candidates|selected another candidate|chosen another candidate|position has been filled|position is filled|position has been cancelled|position was cancelled|no longer under consideration|not selected for this role|not selected for an interview|unable to offer you an interview|cannot offer you an interview|wish you (all )?the best in your (job )?search|best of luck in your (job )?search|keep your (resume|information|profile) on file|decided to proceed with other candidates|decided to proceed with another candidate|narrowed (our|the) search/i.test(
+    /unfortunately|not moving forward|will not be moving forward|decided not to move forward|decided not to proceed|will not be proceeding|not selected|credentials of other candidates|pursue other candidates|pursuing other candidates|pursuing other applicants|selected other candidates|selected another candidate|chosen another candidate|position has been filled|position is filled|position has been cancelled|position was cancelled|no longer under consideration|not selected for this role|not selected for an interview|unable to offer you an interview|cannot offer you an interview|regret to inform|chosen to move forward with other candidates|more closely align|unable to offer you a position|decision was not made lightly|explore future opportunities|wish you (all )?the best in your (job )?search|best of luck in your (job )?search|keep your (resume|information|profile) on file|decided to proceed with other candidates|decided to proceed with another candidate|narrowed (our|the) search/i.test(
       haystack
     )
   ) {
@@ -1107,16 +1117,37 @@ function upsertApplication(data, incoming) {
   if (existing.isManualOverride) {
     if (incoming.latestSubject) existing.latestSubject = incoming.latestSubject;
     if (incoming.latestFrom) existing.latestFrom = incoming.latestFrom;
+    if (incoming.notes) existing.notes = incoming.notes;
     if (incoming.lastActivityAt > (existing.lastActivityAt || "")) existing.lastActivityAt = incoming.lastActivityAt;
     existing.gmailMessageIds = [...new Set([...(existing.gmailMessageIds ?? []), ...incoming.gmailMessageIds])];
     console.log(`⚠️  Skipping AI status overwrite for manually overridden record: ${existing.id} (${existing.company})`);
     return;
   }
 
-  const currRank = STATUS_PRIORITY[existing.status] || 0;
-  const inRank = STATUS_PRIORITY[incoming.status] || 0;
-  if (inRank >= currRank || (incoming.lastActivityAt && incoming.lastActivityAt > (existing.lastActivityAt || ""))) {
-    existing.status = inRank >= currRank ? incoming.status : existing.status;
+  // Lifecycle status resolution:
+  const isIncomingNewer = Boolean(incoming.lastActivityAt && incoming.lastActivityAt >= (existing.lastActivityAt || ""));
+
+  if (incoming.status === "offered") {
+    existing.status = "offered";
+  } else if (existing.status === "offered" && incoming.status !== "offered") {
+    // Keep confirmed offer
+  } else if (incoming.status === "rejected") {
+    // Rejection ALWAYS supersedes applied, and supersedes interviewed/reply_needed if newer
+    if (existing.status === "applied" || isIncomingNewer) {
+      existing.status = "rejected";
+    }
+  } else if (incoming.status === "interviewed") {
+    if (existing.status === "applied" || existing.status === "reply_needed" || isIncomingNewer) {
+      existing.status = "interviewed";
+    }
+  } else if (incoming.status === "reply_needed") {
+    if (existing.status === "applied" || isIncomingNewer) {
+      existing.status = "reply_needed";
+    }
+  } else if (incoming.status === "applied") {
+    if (existing.status === "not_related") {
+      existing.status = "applied";
+    }
   }
 
   if (incoming.company && !isGenericCompany(incoming.company) && incoming.company.toLowerCase() !== "tirth shah") {
@@ -1130,6 +1161,7 @@ function upsertApplication(data, incoming) {
   existing.reason = incoming.reason || existing.reason;
   existing.latestSubject = incoming.latestSubject || existing.latestSubject;
   existing.latestFrom = incoming.latestFrom || existing.latestFrom;
+  if (incoming.notes) existing.notes = incoming.notes;
   if (incoming.lastActivityAt && incoming.lastActivityAt > (existing.lastActivityAt || "")) {
     existing.lastActivityAt = incoming.lastActivityAt;
   }

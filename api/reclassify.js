@@ -111,6 +111,14 @@ Example 7 (Next Step Online Candidate Assessment - Outmatch / Harver / HCA):
 - INPUT: {"id": "hca-data-engineer", "company": "HCA Healthcare", "role": "Data Engineer - GCP", "latest_subject": "Next Required Application Step Data Engineer - GCP 4750460 at HCA Healthcare", "latest_from": "HCAJobApplication@hcacareers.com", "notes": "In order to complete your application for Data Engineer - GCP, 4750460 at HCA Healthcare you must click the link below to participate in an assessment that will help us get to know you a little better as we proceed in the selection process. It should take 30 - 45 minutes to complete. [CLICK HERE TO BEGIN ASSESSMENT]"}
 -> OUTPUT: {"id": "hca-data-engineer", "company": "HCA Healthcare", "role": "Data Engineer - GCP", "status": "interviewed", "confidence": "high", "reason": "Online candidate assessment (Outmatch/Harver) required to proceed in selection process"}
 
+Example 8 (Polite Corporate Rejection with Neutral Subject - ParetoHealth):
+- INPUT: {"id": "paretohealth-data-engineer", "company": "ParetoHealth", "role": "Data Engineer", "latest_subject": "Important information about your application to ParetoHealth", "latest_from": "no-reply@paretohealth.com", "notes": "Dear Tirth, Thank you for taking the time to apply for the Data Engineer position here at ParetoHealth. After careful consideration of your application and qualifications, we regret to inform you that we have chosen to move forward with other candidates whose skills and experiences more closely align with the requirements of the role. While we are unable to offer you a position at this time, we encourage you to explore future opportunities with us. We wish you all the best in your job search."}
+-> OUTPUT: {"id": "paretohealth-data-engineer", "company": "ParetoHealth", "role": "Data Engineer", "status": "rejected", "confidence": "high", "reason": "Candidate rejection notice: regret to inform chosen to move forward with other candidates"}
+
+CRITICAL RULE (REJECTIONS WITH NEUTRAL OR APPLICATION-LIKE SUBJECTS):
+- Rejection emails often have vague, neutral, or misleading subjects like "Important information about your application", "Update on your application", "Thank you for applying", or "Your application status".
+- ALWAYS inspect the body/notes: If the body contains "regret to inform you", "chosen to move forward with other candidates", "skills and experiences more closely align with", "unable to offer you a position", "decided not to advance", or "wish you the best in your search", it is 100% "rejected", NEVER "applied"!
+
 CRITICAL RULE (ASSESSMENTS VS REPLY NEEDED):
 - Any email directing the candidate to take an online assessment, coding challenge, screening quiz, or video response test MUST ALWAYS be classified as "interviewed", NEVER "reply_needed" or "applied"!
 - "reply_needed" is strictly reserved for human recruiter emails asking for text responses (e.g., salary expectation, work authorization, availability to chat).

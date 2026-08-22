@@ -398,6 +398,51 @@ function deduplicateAndConsolidateApplications(appList) {
     }
   }
 
+function resolveClusterStatus(appCluster) {
+  if (!appCluster || appCluster.length === 0) return "applied";
+  if (appCluster.length === 1) return appCluster[0].status;
+
+  // 1. Any confirmed employment offer wins
+  if (appCluster.some((a) => a.status === "offered")) return "offered";
+
+  // 2. Sort by date descending (latest activity first)
+  const sorted = [...appCluster].sort((a, b) =>
+    (b.lastActivityAt || b.last_activity_at || "").localeCompare(a.lastActivityAt || a.last_activity_at || "")
+  );
+  const latest = sorted[0];
+
+  // 3. If the most recent communication is a formal rejection, the application is rejected
+  if (latest.status === "rejected") return "rejected";
+
+  // 4. If any communication is an active interview/assessment, check if a rejection happened after
+  const interviewApp = sorted.find((a) => a.status === "interviewed");
+  if (interviewApp) {
+    const rejectionAfter = sorted.find(
+      (a) => a.status === "rejected" && (a.lastActivityAt || a.last_activity_at || "") > (interviewApp.lastActivityAt || interviewApp.last_activity_at || "")
+    );
+    if (rejectionAfter) return "rejected";
+    return "interviewed";
+  }
+
+  // 5. If any communication is reply_needed, check if rejection happened after
+  const replyApp = sorted.find((a) => a.status === "reply_needed");
+  if (replyApp) {
+    const rejectionAfter = sorted.find(
+      (a) => a.status === "rejected" && (a.lastActivityAt || a.last_activity_at || "") > (replyApp.lastActivityAt || replyApp.last_activity_at || "")
+    );
+    if (rejectionAfter) return "rejected";
+    return "reply_needed";
+  }
+
+  // 6. Between applied and rejected: rejected ALWAYS supersedes applied
+  if (appCluster.some((a) => a.status === "rejected")) return "rejected";
+
+  // 7. Standard applied if present
+  if (appCluster.some((a) => a.status === "applied")) return "applied";
+
+  return latest.status || "not_related";
+}
+
   // Step 3: Consolidate each group into a single application
   const consolidated = new Array(groups.length);
   for (let g = 0; g < groups.length; g++) {
@@ -406,8 +451,7 @@ function deduplicateAndConsolidateApplications(appList) {
       consolidated[g] = cluster[0].app;
     } else {
       const appCluster = cluster.map((c) => c.app);
-      appCluster.sort((a, b) => (STATUS_PRIORITY[b.status] || 0) - (STATUS_PRIORITY[a.status] || 0));
-      const bestStatus = appCluster[0].status;
+      const bestStatus = resolveClusterStatus(appCluster);
       const cleanComp = appCluster.find((a) => a.company && a.company.toLowerCase() !== "tirth shah" && a.company.toLowerCase() !== "unknown")?.company || appCluster[0].company;
       const cleanRole = appCluster.find((a) => a.role && a.role !== "General Application" && a.role !== "Unknown role")?.role || appCluster[0].role || "General Application";
       appCluster.sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
