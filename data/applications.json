@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-22T08:32:05.368Z",
+  "updatedAt": "2026-08-22T09:27:36.276Z",
   "applications": [
+    {
+      "id": "lindblad-expeditions-analytics-engineer",
+      "company": "Lindblad Expeditions",
+      "role": "Analytics Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for your interest in Lindblad Expeditions",
+      "latestFrom": "Lindblad Expeditions <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-08-22T09:03:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a028b592817e5ba",
+      "gmailMessageIds": [
+        "1a028b592817e5ba"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in the Analytics Engineer position with Lindblad Expeditions and for taking the time to submit your application. After careful review of your background and experience, we have decided not to move forward with your application at this time. This was a competitive process with many qualified candidates, and we have chosen to proceed with applicants whose experience more closely aligns with our current needs for the role. We appreciate your interest in Lindblad Expeditions and the opportunity to learn more about your professional background. We would like to keep your information on file and may reach out should a future opportunity arise that aligns with your experience and qualifications. Thank you again for your interest in joining our team. We wish you continued success in your job search and future career endeavors. Best regards, The Lindblad Expeditions Recruiting Team"
+    },
     {
       "id": "milwaukee-tool-senior-data-engineer",
       "company": "Tsenta",
