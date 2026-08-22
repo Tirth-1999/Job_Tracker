@@ -660,9 +660,15 @@ Example 10: Polite Corporate Rejection with Neutral Subject / ParetoHealth
 - SNIPPET: "Dear Tirth, Thank you for taking the time to apply for the Data Engineer position here at ParetoHealth. After careful consideration of your application and qualifications, we regret to inform you that we have chosen to move forward with other candidates whose skills and experiences more closely align with the requirements of the role. While we are unable to offer you a position at this time, we encourage you to explore future opportunities with us. We wish you all the best in your job search."
 -> OUTPUT: {"is_job": true, "company": "ParetoHealth", "role": "Data Engineer", "status": "rejected", "confidence": "high"}
 
+Example 11: Rejection with 'Regarding your Application' Subject / Gusto
+- FROM: "Gusto Talent <careers@gusto.com>"
+- SUBJECT: "Regarding your Application to Gusto, Tirth"
+- SNIPPET: "Hi Tirth, Thank you for your interest in Senior Data Engineer role at Gusto. After reviewing your application, we won't be moving forward at this time. We appreciate the time you took to apply. New roles are posted regularly on our Careers Page, and we encourage you to check back. Thank you again, and best of luck in your search."
+-> OUTPUT: {"is_job": true, "company": "Gusto", "role": "Senior Data Engineer", "status": "rejected", "confidence": "high"}
+
 CRITICAL PRECEDENCE RULE (REJECTION OVERRIDE RULE):
-- Rejection emails frequently begin with polite phrases or have neutral subjects ("Important information about your application", "Update on your application", "Thank you for applying").
-- ALWAYS inspect the body: If the email states "regret to inform", "chosen to move forward with other candidates", "skills and experiences more closely align", "unable to offer you a position", "decided not to advance", or "wish you the best in your search", it MUST ALWAYS be classified as "rejected", NEVER "applied"!
+- Rejection emails frequently begin with polite phrases or have neutral subjects ("Regarding your Application to [Company]", "Important information about your application", "Update on your application", "Thank you for applying").
+- ALWAYS inspect the body: If the email states "won't be moving forward", "will not be moving forward", "decided not to move forward", "regret to inform", "chosen to move forward with other candidates", "skills and experiences more closely align", "unable to offer you a position", "decided not to advance", or "wish you the best in your search", it MUST ALWAYS be classified as "rejected", NEVER "applied"!
 
 CRITICAL PRECEDENCE RULE (ASSESSMENT VS REPLY NEEDED):
 - Any email directing the candidate to take an online assessment, screening quiz, behavioral evaluation, or video interview prompt (Outmatch, Harver, TestGorilla, HackerRank, pymetrics) MUST ALWAYS be classified as "interviewed", NEVER "reply_needed"!
