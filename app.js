@@ -362,16 +362,22 @@ function deduplicateAndConsolidateApplications(appList) {
       }
     }
 
-    // 4. Match Same Company for active stages (offered, interviewed, reply_needed)
+    // 4. Match Same Company across pipeline stages (including applied + rejected pairs)
     if (!targetGroup && item.normComp && item.normComp !== "unknown") {
-      const isHighTouch = item.app.status === "offered" || item.app.status === "interviewed" || item.app.status === "reply_needed";
-      if (isHighTouch && compMap.has(item.normComp)) {
+      if (compMap.has(item.normComp)) {
         const candidateGroup = compMap.get(item.normComp);
+        // Consolidate if there is stage interaction (offers, interviews, replies, or applied + rejection updates)
         const hasMatch = candidateGroup.some((other) => {
           if (item.app.status === "offered" || other.app.status === "offered") return true;
-          if (item.app.status === "interviewed" && other.app.status === "interviewed") return true;
-          if ((item.app.status === "interviewed" || other.app.status === "interviewed") && (item.app.status === "reply_needed" || other.app.status === "reply_needed" || item.app.status === "applied" || other.app.status === "applied")) return true;
-          if (item.app.status === "reply_needed" && other.app.status === "reply_needed") return true;
+          if (item.app.status === "interviewed" || other.app.status === "interviewed") return true;
+          if (item.app.status === "reply_needed" || other.app.status === "reply_needed") return true;
+          if ((item.app.status === "rejected" && other.app.status === "applied") || (item.app.status === "applied" && other.app.status === "rejected")) return true;
+          if (item.app.status === "applied" && other.app.status === "applied") {
+            // Same role or generic role at same company -> merge
+            const r1 = (item.app.role || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+            const r2 = (other.app.role || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+            if (r1 === r2 || r1.includes("general") || r2.includes("general") || r1.includes("data") && r2.includes("data")) return true;
+          }
           return false;
         });
         if (hasMatch) {

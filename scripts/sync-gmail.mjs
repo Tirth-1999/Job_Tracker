@@ -322,6 +322,21 @@ function extractBody(part) {
 function collectTextParts(part, chunks) {
   if (part.mimeType === "text/plain" && part.body?.data) {
     chunks.push(Buffer.from(part.body.data, "base64url").toString("utf8"));
+  } else if (part.mimeType === "text/html" && part.body?.data) {
+    const rawHtml = Buffer.from(part.body.data, "base64url").toString("utf8");
+    const cleanText = rawHtml
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, " ")
+      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&nbsp;/gi, " ")
+      .replace(/&amp;/gi, "&")
+      .replace(/&lt;/gi, "<")
+      .replace(/&gt;/gi, ">")
+      .replace(/&quot;/gi, '"')
+      .replace(/&#39;/gi, "'")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (cleanText) chunks.push(cleanText);
   }
   for (const child of part.parts ?? []) collectTextParts(child, chunks);
 }
@@ -1107,8 +1122,10 @@ function upsertApplication(data, incoming) {
       const appReqId = extractRequisitionId(`${app.latestSubject || ""} ${app.notes || ""}`);
       if (appReqId && incomingReqId && appReqId === incomingReqId) return true;
       if (app.status === "offered" || incoming.status === "offered") return true;
-      if (app.status === "interviewed" && incoming.status === "interviewed") return true;
-      if ((app.status === "interviewed" || incoming.status === "interviewed") && (app.status === "reply_needed" || incoming.status === "reply_needed" || app.status === "applied" || incoming.status === "applied")) return true;
+      if (app.status === "interviewed" || incoming.status === "interviewed") return true;
+      if (app.status === "reply_needed" || incoming.status === "reply_needed") return true;
+      if ((app.status === "rejected" && incoming.status === "applied") || (app.status === "applied" && incoming.status === "rejected")) return true;
+      if (app.status === "applied" && incoming.status === "applied") return true;
     }
     return false;
   });
