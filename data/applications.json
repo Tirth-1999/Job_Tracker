@@ -1,6 +1,49 @@
 {
-  "updatedAt": "2026-08-22T15:21:59.052Z",
+  "updatedAt": "2026-08-22T15:47:39.034Z",
   "applications": [
+    {
+      "id": "jobright-database-engineer",
+      "company": "Jobright",
+      "role": "Database Engineer",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Your job matches for “Database Engineer” — curated for you from Jobright - 08/22/2026",
+      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
+      "lastActivityAt": "2026-08-22T15:45:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02a266f9a6fae7",
+      "gmailMessageIds": [
+        "1a02a266f9a6fae7"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "motive-gtm-ai-engineer",
+      "company": "Motive",
+      "role": "GTM AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-22T15:30:15.000Z",
+      "latestSubject": "Motive | Following up on your application for GTM AI Engineer",
+      "latestFrom": "no-reply@gomotive.com",
+      "gmailThreadId": "1a02083bbe9fe1e6",
+      "gmailMessageIds": [
+        "1a02083bbe9fe1e6",
+        "1a02a18146872be4"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:32:56.702+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "glyphic-biotechnologies-data-infrastructure-engineer",
       "company": "Glyphic Biotechnologies",
@@ -3183,28 +3226,6 @@
       "gmailThreadId": "1a02083b9ec31692",
       "gmailMessageIds": [
         "1a02083b9ec31692"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:32:56.702+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "motive-gtm-ai-engineer",
-      "company": "Motive",
-      "role": "GTM AI Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T18:51:38+00:00",
-      "latestSubject": "Thank you for applying to Motive",
-      "latestFrom": "no-reply@gomotive.com",
-      "gmailThreadId": "1a02083bbe9fe1e6",
-      "gmailMessageIds": [
-        "1a02083bbe9fe1e6"
       ],
       "notes": "",
       "isManualOverride": false,
