@@ -1,6 +1,242 @@
 {
-  "updatedAt": "2026-08-22T07:32:50.739Z",
+  "updatedAt": "2026-08-22T08:32:05.368Z",
   "applications": [
+    {
+      "id": "milwaukee-tool-senior-data-engineer",
+      "company": "Tsenta",
+      "role": "Senior Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest at Milwaukee Tool! Sr Data Engineer R76586",
+      "latestFrom": "Tsenta Inbox <inbox@mail.tsenta.com>",
+      "lastActivityAt": "2026-08-22T08:13:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a028884539c4b50",
+      "gmailMessageIds": [
+        "1a028884539c4b50"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "blackrock-general-application",
+      "company": "Blackrock",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "blackrock@otp.workday.com",
+      "lastActivityAt": "2026-08-22T08:01:38.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0287a9d40ccd54",
+      "gmailMessageIds": [
+        "1a0287d59700b9c3",
+        "1a0287a9d40ccd54"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "t-mobile-general-application",
+      "company": "T-mobile",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "MyWorkday T-Mobile <tmobile@otp.workday.com>",
+      "lastActivityAt": "2026-08-22T08:01:25.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0286dd8cce94d6",
+      "gmailMessageIds": [
+        "1a0287d2863a1dd6",
+        "1a0286dd8cce94d6"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "northrop-grumman-general-application",
+      "company": "Northrop Grumman",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for your application to Northrop Grumman",
+      "latestFrom": "ngc@myworkday.com",
+      "lastActivityAt": "2026-08-22T07:59:12.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0287b1fa46ee6c",
+      "gmailMessageIds": [
+        "1a0287b1fa46ee6c"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "corewell-health-general-application",
+      "company": "Corewell Health",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-22T07:59:10.000Z",
+      "latestSubject": "Thank you for your interest in a career with Corewell Health",
+      "latestFrom": "Corewell Health Workday <spectrumhealth@myworkday.com>",
+      "gmailThreadId": "1a01b085a3e7efe1",
+      "gmailMessageIds": [
+        "1a01b085a3e7efe1",
+        "1a0287b168dd7e71"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "sailpoint-general-application",
+      "company": "Sailpoint",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We’ve Received Your Application — What Happens Next at SailPoint",
+      "latestFrom": "sailpoint@myworkday.com",
+      "lastActivityAt": "2026-08-22T07:58:25.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0287a69c148089",
+      "gmailMessageIds": [
+        "1a0287a69c148089"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "capital-one-general-application",
+      "company": "Capital One",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-22T07:58:04.000Z",
+      "latestSubject": "Thank you for your interest",
+      "latestFrom": "CapitalOneHRWorkday <capitalone@myworkday.com>",
+      "gmailThreadId": "1a02082ecd71cd81",
+      "gmailMessageIds": [
+        "1a02082f9c43c8b8",
+        "1a02082ecd71cd81",
+        "1a0287a1613ef906"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:32:56.702+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "newrez-general-application",
+      "company": "Newrez",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Applying",
+      "latestFrom": "newrez@myworkday.com",
+      "lastActivityAt": "2026-08-22T07:57:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a028772d0f36012",
+      "gmailMessageIds": [
+        "1a028796bba22447",
+        "1a028772d0f36012"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "credit-acceptance-general-application",
+      "company": "Credit Acceptance",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "Credit Acceptance <creditacceptance@otp.workday.com>",
+      "lastActivityAt": "2026-08-22T07:56:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0286bb39f21aab",
+      "gmailMessageIds": [
+        "1a02878849874225",
+        "1a0286bb39f21aab"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "western-alliance-bank-general-application",
+      "company": "Western Alliance Bank",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "Workday Notification <westernalliancebank@otp.workday.com>",
+      "lastActivityAt": "2026-08-22T07:35:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02865025b62302",
+      "gmailMessageIds": [
+        "1a0286502bdd06de",
+        "1a02865025b62302"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "allina-health-general-application",
+      "company": "Allina Health",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Allina Health!",
+      "latestFrom": "Workday <allina@myworkday.com>",
+      "lastActivityAt": "2026-08-22T07:34:16.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a028644cdea4c28",
+      "gmailMessageIds": [
+        "1a028644cdea4c28"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "imf-economic-data-system-engineer",
+      "company": "IMF",
+      "role": "Economic Data System Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "IMF: 26-R9694 Economic Data System Engineer/Sr. Economic Data System Engineer-ITDDPED - Application Confirmation",
+      "latestFrom": "imf@myworkday.com",
+      "lastActivityAt": "2026-08-22T07:32:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02862e1087a3d0",
+      "gmailMessageIds": [
+        "1a02862e1087a3d0"
+      ],
+      "notes": ""
+    },
     {
       "id": "seek-general-application",
       "company": "SEEK",
@@ -2907,29 +3143,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "capital-one-general-application",
-      "company": "Capital One",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-20T18:50:49+00:00",
-      "latestSubject": "Verify your candidate account",
-      "latestFrom": "CapitalOneHRWorkday <capitalone@otp.workday.com>",
-      "gmailThreadId": "1a02082ecd71cd81",
-      "gmailMessageIds": [
-        "1a02082f9c43c8b8",
-        "1a02082ecd71cd81"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:32:56.702+00:00",
-      "aiConfidence": "medium"
-    },
-    {
       "id": "global-hr-senior-data-engineer",
       "company": "Global HR",
       "role": "Senior Data Engineer",
@@ -4438,28 +4651,6 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:36:38.578+00:00",
       "aiConfidence": "high"
-    },
-    {
-      "id": "corewell-health-general-application",
-      "company": "Corewell Health",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-19T17:18:46+00:00",
-      "latestSubject": "Thinking about a change? Join Corewell Health",
-      "latestFrom": "Corewell Health <talent@careeralerts.corewellhealth.org>",
-      "gmailThreadId": "1a01b085a3e7efe1",
-      "gmailMessageIds": [
-        "1a01b085a3e7efe1"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium"
     },
     {
       "id": "corewell-health-epic-data-engineer",
