@@ -1,6 +1,49 @@
 {
-  "updatedAt": "2026-08-22T17:21:51.265Z",
+  "updatedAt": "2026-08-22T18:32:01.897Z",
   "applications": [
+    {
+      "id": "mill-general-application",
+      "company": "Mill",
+      "role": "General Application",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Important information about your application to Mill",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-22T18:24:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02ab7d7925e56b",
+      "gmailMessageIds": [
+        "1a02ab7d7925e56b"
+      ],
+      "notes": "Tirth, Thank you so much for applying to Mill. We are excited that you are excited about what we are doing! Unfortunately, we have decided not to proceed with your candidacy for the current opening. We received many qualified applicants and have decided to move ahead with other candidates who we feel are a better match for this particular position. Thanks again for your interest in Mill and we wish you luck in your search. Regards, Mill"
+    },
+    {
+      "id": "major-league-baseball-data-engineer-league-analytics-infrastructure",
+      "company": "Major League Baseball",
+      "role": "Data Engineer, League Analytics & Infrastructure",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-22T18:00:36.000Z",
+      "latestSubject": "Regarding Your Application with Major League Baseball",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19f6552b0cbe4b6b",
+      "gmailMessageIds": [
+        "19f6552b0cbe4b6b",
+        "1a02aa1b8c7cebd7"
+      ],
+      "notes": "MLB Logo Hi Tirth, Thank you for applying to the Data Engineer, League Analytics & Infrastructure position at Major League Baseball. After careful consideration, we’ve decided to move forward with other candidates whose experience more closely aligns with the needs of the role at this time. We encourage you to continue exploring future opportunities with Major League Baseball at MLB Careers ( https://www.mlb.com/careers/opportunities?gh_jid=5505269MLB%20Careers ). Thank you again for your interest in MLB. We wish you the best of luck in your job search! Regards, MLB Talent Acquisition Team",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "focus-financial-partners-bi-data-engineer",
       "company": "Focus Financial Partners",
@@ -33769,28 +33812,6 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "major-league-baseball-data-engineer-league-analytics-infrastructure",
-      "company": "Major League Baseball",
-      "role": "Data Engineer, League Analytics & Infrastructure",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-15T10:29:05+00:00",
-      "latestSubject": "Thank you for applying to Major League Baseball!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19f6552b0cbe4b6b",
-      "gmailMessageIds": [
-        "19f6552b0cbe4b6b"
-      ],
-      "notes": "MLB Logo Hi Tirth, Thank you for applying to the Data Engineer, League Analytics & Infrastructure position with Major League Baseball. What's next? Our Talent Acquisition team is reviewing your qualifications and will directly contact you if there is a match. In the meantime, we encourage you to visit MLB Careers ( https://www.mlb.com/careers/home ) for additional information about Major League Baseball's culture and the League. We appreciate your interest in MLB and wish you the best of luck in your job search. Best, MLB Talent Acquisition MLB Keep up with MLB news and stories on MLB.com ( https://www.mlb.com/ ) and LinkedIn ( https://www.linkedin.com/company/major-league-baseball/ ). Please note: This email is sent from an unattended mailbox. Replies will not be read.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
