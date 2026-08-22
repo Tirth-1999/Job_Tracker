@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-08-22T21:22:35.779Z",
+  "updatedAt": "2026-08-22T22:23:16.406Z",
   "applications": [
+    {
+      "id": "verizon-general-application",
+      "company": "Verizon",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-22T22:00:29.000Z",
+      "latestSubject": "Reminder: Verizon Experience Feedback: Application",
+      "latestFrom": "Verizon Talent Acquisition <noreply@qemailserver.com>",
+      "gmailThreadId": "1a016e3ed79445d7",
+      "gmailMessageIds": [
+        "1a016e3ed79445d7",
+        "1a0265a0430a70e7",
+        "1a02b7d58d7ad48c"
+      ],
+      "notes": "Thanks for your interest in Verizon. We’re always seeking to understand and improve how we connect with candidates. As a recent applicant, our team is interested in your thoughts and opinions on our process and would appreciate your participation in a brief survey. Take the Survey <https://verizonex.sjc1.qualtrics.com/jfe/form/SV_0PbKfJKsuCjrxUq?Q_DL=INuA50aohqwk5Ly_0PbKfJKsuCjrxUq_CTR_IQUocK8rCxMP0oR&Q_RD=EMD_kYuTSYwKKNzqdww&Q_CHL=email> Your responses will have no impact on your status as a current or future job applicant. Data collected through this survey is confidential and will not be shared with those responsible for making hiring decisions. Be sure to stay connected to Verizon and check out ourCareer areas <https://www.verizon.com/about/careers/career-areas>, Verizon Works Careers blog <https://www.verizon.com/about/careers-blog>, and Up to Speed <https://www.verizon.com/about/news/speed-uts-live> daily news program for employees. Please stay in touch! No longer want to receive requests for feedback? Opt Out <https://verizonex.sjc1.qualtrics.com/subscription/manage/confirmation?recipientId=CTR_IQUocK8rCxMP0oR&distributionId=EMD_kYuTSYwKKNzqdww&BT=dmVyaXpvbmV4> Thanks for your interest in Verizon. We’re always seeking to understand and improve how we connect with candidates. As a recent applicant, our team is interested in your thoughts and opinions on our process and would appreciate your participation in a brief survey. Take the Survey Your responses will have no impact on your status as a current or future job applicant. Data collected through this survey is confidential and will not be shared with those responsible for making hiring decisions. Be sure to stay connected to Verizon and check out our Career areas , Verizon Works Careers blog , and Up to Speed daily news program for employees. Please stay in touch! No longer want to receive requests for feedback? Opt Out",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Candidate application experience feedback survey",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:21.332+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
     {
       "id": "amazon-general-application",
       "company": "Amazon",
@@ -1501,29 +1527,6 @@
       "manualAction": null,
       "manualChangedAt": null,
       "aiDecision": "Two-Factor Authentication (2FA) OTP code email",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:21.332+00:00",
-      "aiConfidence": "medium"
-    },
-    {
-      "id": "verizon-general-application",
-      "company": "Verizon",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-21T22:03:48+00:00",
-      "latestSubject": "Verizon Experience Feedback: Application",
-      "latestFrom": "Verizon Talent Acquisition <verizon-noreply@qemailserver.com>",
-      "gmailThreadId": "1a016e3ed79445d7",
-      "gmailMessageIds": [
-        "1a016e3ed79445d7",
-        "1a0265a0430a70e7"
-      ],
-      "notes": "Thanks for your interest in Verizon. We’re always seeking to understand and improve how we connect with candidates. As a recent applicant, our team is interested in your thoughts and opinions on our process and would appreciate your participation in a brief survey. Take the Survey Your responses will have no impact on your status as a current or future job applicant. Data collected through this survey is confidential and will not be shared with those responsible for making hiring decisions. Be sure to stay connected to Verizon and check out our Career areas , Verizon Works Careers blog , and Up to Speed daily news program for employees. Please stay in touch! No longer want to receive requests for feedback? Opt Out ↩️ Reply from your Tsenta inbox so the company recognizes you. Replying from your own email sends from an address they don't have on file. This is your Tsenta Managed Email. Forwarding to: tirthcshah1999@gmail.com Sent From: verizon-noreply@qemailserver.com Stay awesome out there Thanks for your interest in Verizon. We’re always seeking to understand and improve how we connect with candidates. As a recent applicant, our team is interested in your thoughts and opinions on our process and would appreciate your participation in a brief survey. Take the Survey <https://verizonex.sjc1.qualtrics.com/jfe/form/SV_0PbKfJKsuCjrxUq?Q_DL=INuA50aohqwk5Ly_0PbKfJKsuCjrxUq_CTR_IQUocK8rCxMP0oR&Q_CHL=email> Your responses will have no impact on your status as a current or future job applicant. Data collected through this survey is confidential and will not be shared with those responsible for making hiring decisions. Be sure to stay connected to Verizon and check out ourCareer areas <https://www.verizon.com/about/careers/career-areas>, Verizon Works Careers blog <https://www.verizon.com/about/careers-blog>, and Up to Speed <https://www.verizon.com/about/news/speed-uts-live> daily news program for employees. Please stay in touch! No longer want to receive requests for feedback? Opt Out <https://verizonex.sjc1.qualtrics.com/subscription/manage/confirmation?recipientId=CTR_IQUocK8rCxMP0oR&distributionId=EMD_INuA50aohqwk5Ly&BT=dmVyaXpvbmV4> Thanks for your interest in Verizon. We’re always seeking to understand and improve how we connect with candidates. As a recent applicant, our team is interested in your thoughts and opinions on our process and would appreciate your participation in a brief survey. Take the Survey Your responses will have no impact on your status as a current or future job applicant. Data collected through this survey is confidential and will not be shared with those responsible for making hiring decisions. Be sure to stay connected to Verizon and check out our Career areas , Verizon Works Careers blog , and Up to Speed daily news program for employees. Please stay in touch! No longer want to receive requests for feedback? Opt Out",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Candidate application experience feedback survey",
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:01:21.332+00:00",
       "aiConfidence": "medium"
