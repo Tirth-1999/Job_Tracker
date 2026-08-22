@@ -135,25 +135,53 @@ Example 12 (Application receipt with CONDITIONAL disclaimer — NOT a rejection 
 - INPUT: {"id": "jbs-international-data-ops", "company": "JBS International", "role": "Data Operations Specialist", "latest_subject": "Application Received for Data Operations Specialist with JBS International", "latest_from": "careers@jbsinternational.com", "notes": "Dear Tirth, Thank you for applying to Data Operations Specialist with JBS International. Your candidacy will be reviewed by the hiring team. If you have not heard from the hiring team or the position is no longer listed on our careers page, it means the hiring team has either decided to pursue other candidates that more closely align to their needs, or the position has been filled or canceled."}
 -> OUTPUT: {"id": "jbs-international-data-ops", "company": "JBS International", "role": "Data Operations Specialist", "status": "applied", "confidence": "high", "reason": "Application receipt — rejection phrase is inside a hypothetical conditional clause (if you do not hear from us), not a definitive decision"}
 
-CRITICAL RULE (REJECTIONS — WHAT TO LOOK FOR):
-- Rejection emails frequently begin with polite phrases or have neutral/misleading subjects like "Thank you for applying", "Application Update", "Regarding your Application to [Company]", "Important information about your application".
-- ALWAYS inspect the body. The following phrases ALWAYS mean the candidate was rejected:
-  - "won't be moving forward" / "will not be moving forward" / "decided not to move forward" / "decided not to proceed"
-  - "will not be progressing your" / "not be progressing your application"
-  - "after careful consideration, we [decided / won't / have chosen / regret / are unable / will not]"
-  - "after careful review, we [decided / won't / have chosen / regret]"
-  - "we've decided to move forward with another candidate" / "with other candidates"
-  - "regret to inform you" / "chosen to move forward with other candidates"
-  - "skills and experiences more closely align" / "experience more closely aligns"
-  - "unable to offer you a position" / "you have not been selected"
+CRITICAL RULE (EXHAUSTIVE GUIDE TO REJECTION 'SOFT LINES' & CORPORATE EUPHEMISMS):
+Rejection emails almost NEVER use harsh words like 'rejected' or 'denied'. Instead, companies use courteous, diplomatic, and softened phrasing. You MUST classify ANY email containing any of the following soft lines or euphemisms as "rejected", even if the subject is neutral or polite (e.g. "Application Update", "Regarding your Application", "Thank you for applying"):
 
-CRITICAL RULE — EXCEPTION (CONDITIONAL DISCLAIMER, NOT A REJECTION):
-- Do NOT classify as rejected if the rejection phrase appears INSIDE a hypothetical or conditional clause in what is otherwise an application receipt:
+1. 'FIT' & 'AT THIS TIME' SOFT LINES:
+   - "there isn't a fit at this time" / "not a fit at this time" / "not the right fit" / "not a match for this role"
+   - "we will not be moving forward with your candidacy" / "won't be moving forward with your application"
+   - "won't be able to continue with your candidacy at this time" / "not able to continue with your application"
+   - "we've decided that we will not move you forward in the hiring process" / "will not be progressing your application"
+   - "decided not to advance your application" / "decided against continuing"
+
+2. 'OTHER CANDIDATES / CLOSER ALIGNMENT' EUPHEMISMS:
+   - "chosen to move forward with other candidates whose skills and experiences more closely align"
+   - "decided to move forward with candidates whose experience is more closely aligned"
+   - "moving forward with another candidate whose background is a closer match"
+   - "decided to pursue other candidates at this time" / "will be pursuing other applicants"
+   - "selected other candidates who more closely meet our current needs"
+   - "proceeding with a subset of candidates who better align with what we are looking for"
+
+3. 'CAREFUL CONSIDERATION' OPENERS:
+   - "After careful consideration of your application / background, we have decided..."
+   - "After careful review of your qualifications, we will not be..."
+   - "After reviewing your materials / submission, we've determined that..."
+
+4. 'COMPLIMENT + LET DOWN' DIPLOMATIC PHRASING:
+   - "Although your background is impressive, we regret to inform you that..."
+   - "While your qualifications are strong, we have chosen..."
+   - "In the spirit of transparency, we wanted to let you know that we have had a number of qualified applicants and we won't be able to..."
+   - "This decision was not made lightly, given the strength of the applicant pool..."
+   - "Due to an overwhelming response / competitive selection process, we cannot offer you an interview..."
+
+5. 'FUTURE OPPORTUNITIES / KEEP ON FILE' SOFT CLOSINGS:
+   - "While we are unable to offer you a position at this time, we encourage you to explore future opportunities"
+   - "We will keep your resume / profile on file in our database for future openings"
+   - "We wish you all the best in your job search and future endeavors"
+   - "We hope our paths cross again soon" / "wishing you the best in your search"
+
+6. 'SCREENING / ELIGIBILITY' SOFT NOTICES:
+   - "One or more responses you provided to screening questions has deemed you ineligible for the role"
+   - "Due to work authorization / visa / export control requirements, we are unable to consider your candidacy"
+
+CRITICAL RULE — EXCEPTION (CONDITIONAL DISCLAIMERS IN RECEIPTS):
+- Do NOT classify as rejected if the rejection phrase appears INSIDE a hypothetical or conditional clause in an application receipt:
   - "If you do not hear from us within 30 days, it is likely that we have decided to move forward with other candidates..."
   - "If the position is no longer listed, it means the hiring team has decided to pursue other candidates..."
   - "If you are not selected for this position, please keep an eye on our jobs page..."
   - "We will be in touch only if your qualifications match..."
-  In these cases, the email IS an application receipt. Classify as "applied".
+  In these cases, the email is an initial receipt. Classify as "applied".
 
 CRITICAL RULE (ASSESSMENTS VS REPLY NEEDED):
 - Any email directing the candidate to take an online assessment, coding challenge, screening quiz, or video response test MUST ALWAYS be classified as "interviewed", NEVER "reply_needed" or "applied"!
