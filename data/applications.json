@@ -1,6 +1,31 @@
 {
-  "updatedAt": "2026-08-22T09:27:36.276Z",
+  "updatedAt": "2026-08-22T10:24:43.841Z",
   "applications": [
+    {
+      "id": "roark-capital-general-application",
+      "company": "Roark Capital",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-22T10:00:05.000Z",
+      "latestSubject": "Important information about your application to Roark Capital",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "1a0208a861afd0f3",
+      "gmailMessageIds": [
+        "1a0208a861afd0f3",
+        "1a028e9cee8f3ce3"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:32:56.702+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "lindblad-expeditions-analytics-engineer",
       "company": "Lindblad Expeditions",
@@ -2497,28 +2522,6 @@
       "gmailThreadId": "1a0208ba43bcf1e9",
       "gmailMessageIds": [
         "1a0208ba43bcf1e9"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:32:56.702+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "roark-capital-general-application",
-      "company": "Roark Capital",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T18:59:04+00:00",
-      "latestSubject": "Thank you for applying to Roark Capital",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "1a0208a861afd0f3",
-      "gmailMessageIds": [
-        "1a0208a861afd0f3"
       ],
       "notes": "",
       "isManualOverride": false,
