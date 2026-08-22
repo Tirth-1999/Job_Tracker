@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-08-22T10:24:43.841Z",
+  "updatedAt": "2026-08-22T12:40:43.818Z",
   "applications": [
+    {
+      "id": "cfs-brands-general-application",
+      "company": "CFS Brands",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application, Tirth",
+      "latestFrom": "<CFSBrandsLLC.hr@adp.com>",
+      "lastActivityAt": "2026-08-22T12:40:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0297c7a8261f47",
+      "gmailMessageIds": [
+        "1a0297c7a8261f47"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "aarp-general-application",
+      "company": "AARP",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Tirth, how has your AARP application experience been so far?",
+      "latestFrom": "AARP <erecruiting@aarp.org>",
+      "lastActivityAt": "2026-08-22T12:27:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02970b56c070bd",
+      "gmailMessageIds": [
+        "1a02970b56c070bd"
+      ],
+      "notes": ""
+    },
     {
       "id": "roark-capital-general-application",
       "company": "Roark Capital",
