@@ -1,6 +1,284 @@
 {
-  "updatedAt": "2026-08-22T05:28:41.091Z",
+  "updatedAt": "2026-08-22T05:56:09.738Z",
   "applications": [
+    {
+      "id": "reply-general-application",
+      "company": "Reply",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Reply",
+      "latestFrom": "Reply <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-08-22T05:55:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02809af5545aaf",
+      "gmailMessageIds": [
+        "1a02809af5545aaf"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "dept-general-application",
+      "company": "Dept",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Whoo! We've received your application!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-22T05:55:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0280973967ba75",
+      "gmailMessageIds": [
+        "1a0280973967ba75"
+      ],
+      "notes": "Whoo! We've received your application! Thank you for your interest in opportunities at DEPT®. We are humbled and appreciative of your curiosity. We are always searching for fresh perspectives, attention to craft, and passionate candidates to help our clients tell beautiful stories and create impactful work. At DEPT®, we believe in and continually work towards providing a work environment where every employee feels valued and respected, and this begins with our applicants. We know your search takes effort, self-reflection, and courage. At DEPT® personally review each application that is received and try to get back to all applicants with more information on next steps. Keep an eye out for a response from our team! In the meantime, learn more about our diversity, equity, and inclusion efforts here ( https://www.deptagency.com/the-good-company/ )! Lastly, we value your feedback! Take a quick minute to submit the applicant survey you’ll receive so that we can continuously improve the experience for our applicants and candidates. Best, The DEPT® US TA Team"
+    },
+    {
+      "id": "pilot-company-sr-engineer-data-engineering",
+      "company": "Pilot Company",
+      "role": "Sr Engineer, Data Engineering",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your​ Pilot Company (SSC) submission was successfully received for the ​ Sr Engineer, Data Engineering",
+      "latestFrom": "\"Pilot Company (SSC)\" <notification@smartrecruiters.com>",
+      "lastActivityAt": "2026-08-22T05:54:42.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02809250b9848f",
+      "gmailMessageIds": [
+        "1a02809250b9848f"
+      ],
+      "notes": " Hi&nbsp;Tirth, Thank&nbsp;you for your interest in&nbsp;Pilot Company (SSC).&nbsp;Pilot Company (SSC)&nbsp;prides itself on hiring great Team Members, and it appreciates you applying for the&nbsp;Sr Engineer, Data Engineering&nbsp;position.&nbsp; Pilot Company (SSC)&nbsp;is currently reviewing applications for this position. If your qualifications meet the company's needs, we will be in touch. At that time, you will be informed of the next steps in the hiring process.&nbsp; if&nbsp;Pilot Company (SSC)&nbsp;has not contacted you within the 90 day time frame, please revisit jobs.pilotflyingj.com to apply for additional opportunities. Your application will remain active in&nbsp;Pilot Company (SSC)'s system for 90 days.&nbsp; Thank you again for your interest in joining our team.&nbsp; The&nbsp;Pilot Company (SSC)&nbsp;Team Access My Application: https://jobs.smartrecruiters.com/my-applications/PilotCompany/72d98d86-e1dd-44ab-bc60-1edadac07c19?dcr_ci=PilotCompany If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application "
+    },
+    {
+      "id": "guild-mortgage-data-engineer",
+      "company": "Guild Mortgage",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Guild Mortgage Company- Data Engineer",
+      "latestFrom": "noreplycareers@guildmortgage.net",
+      "lastActivityAt": "2026-08-22T05:54:31.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0265e192540299",
+      "gmailMessageIds": [
+        "1a0265e192540299",
+        "1a02808fa2f412f6"
+      ],
+      "notes": "Dear Tirth Shah, We have received your application for the position of Data Engineer on 08/21/2026. Thank you for your interest in joining our amazing team at Guild Mortgage Company. We are working hard to select the person with the right credentials for this position. Guild Mortgage Company LLC thoroughly reviews every candidate making sure all aspects of the application are taken into consideration. If selected to advance to the next step, we will contact you directly. In the meantime, feel free to check our website to learn more about our Company, culture and people who currently work at Guild, review other exciting opportunities we have posted on our website, or update your presence (profile) with any new skills, references or other pertinent information. Please visit https://www.guildmortgage.com/privacy-policy/, which includes our notice at collection, for more information on how your information is used and protected. Thanks again from the Guild Mortgage Recruiting Team!"
+    },
+    {
+      "id": "dayforce-business-intelligence-data-engineer",
+      "company": "Dayforce",
+      "role": "Business Intelligence - Data Engineer",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Business Intelligence - Data Engineer 133-2016 Application Update\"",
+      "latestFrom": "notify@dayforce.com",
+      "lastActivityAt": "2026-08-22T05:52:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02807316a68df4",
+      "gmailMessageIds": [
+        "1a02807316a68df4"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "aspire-general-insurance-general-application",
+      "company": "Aspire General Insurance",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying at Aspire!",
+      "latestFrom": "Aspire General Insurance Services <do-not-reply@mail.paylocity.com>",
+      "lastActivityAt": "2026-08-22T05:50:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a028058d1a6d7b8",
+      "gmailMessageIds": [
+        "1a028058d1a6d7b8"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "nielseniq-forward-deployed-ai-engineer",
+      "company": "Nielseniq",
+      "role": "Forward Deployed AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to ​Forward Deployed AI Engineer (USA Based)​ at ​NielsenIQ​",
+      "latestFrom": "NielsenIQ <notification@smartrecruiters.com>",
+      "lastActivityAt": "2026-08-22T05:50:42.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02805783d3f5ee",
+      "gmailMessageIds": [
+        "1a02805783d3f5ee"
+      ],
+      "notes": " ​Hi&nbsp;Tirth, Good choice! We just received your application for our&nbsp;Forward Deployed AI Engineer (USA Based)&nbsp;role and we&#39;re happy that you want to join the team. We&#39;re definitely biased, but NielsenIQ is an awesome place to work. So now what? We&#39;ll take a look at your experience and qualifications and, if you meet the requirements, a member of our Talent Acquisition team will be in touch to discuss the next steps.&nbsp; If you want to make changes to your profile or check the status of your application, you can sign in to your account&nbsp;here. You can also browse our other job openings while you&#39;re there--we&#39;re adding new opportunities all the time. We&#39;re always on the lookout for progressive thinkers who want to help us innovate and tackle what&#39;s next, so we&#39;re excited to check out your application. Thanks and good luck!&nbsp; The Talent Acquisition Team at NielsenIQ Access My Application: https://jobs.smartrecruiters.com/my-applications/NielsenIQ/155b37c7-7a7a-4806-9796-963caa0b016e?dcr_ci=NielsenIQ If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application "
+    },
+    {
+      "id": "spacex-data-engineer-starlink",
+      "company": "Spacex",
+      "role": "Data Engineer (starlink)",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to SpaceX",
+      "latestFrom": "no-reply-recruiting@spacex.com",
+      "lastActivityAt": "2026-08-22T05:50:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02804e73f78ceb",
+      "gmailMessageIds": [
+        "1a02804e73f78ceb"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in a future with SpaceX. We appreciate you taking the time to apply for the Data Engineer (Starlink) position. Our team will review your qualifications and contact you if we choose to move forward. In the meantime, we encourage you to visit spacex.com ( http://www.spacex.com ) and starlink.com ( https://www.starlink.com/ ) to learn more about our company history, culture, and vision. To Mars! SpaceX Recruiting **Replies to this email will not be received. This email is sent from an unattended mailbox.**"
+    },
+    {
+      "id": "mercari-software-engineer-data",
+      "company": "Mercari",
+      "role": "Software Engineer, Data",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Mercari",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-22T05:50:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02804e088aec32",
+      "gmailMessageIds": [
+        "1a02804e088aec32"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to the Software Engineer, Data role. We truly appreciate your interest in our company and will make sure to review your resume quickly. In the meantime, be sure to follow us on LinkedIn ( https://www.linkedin.com/company/mercarius ) to receive company updates. And please try the Mercari app, available via download in the Google Play ( https://play.google.com/store/apps/details?id=com.mercariapp.mercari ) store or the App Store ( https://apps.apple.com/us/app/mercari-the-selling-app/id896130944 ). We look forward to connecting with you. Mercari Talent Acquisition Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
+    },
+    {
+      "id": "golden-state-warriors-data-engineer",
+      "company": "Golden State Warriors",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Golden State Warriors!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-22T05:50:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02804de851d43e",
+      "gmailMessageIds": [
+        "1a02804de851d43e"
+      ],
+      "notes": "Tirth, Thank you for applying to the Data Engineer position at Golden State Warriors! Our Talent Acquisition Team has received your resume and will review your qualifications. If there is a match, we will contact you to schedule a phone interview. Due to the large volume of applications we receive, we are unable to reply to everyone individually, but we will do our best to do so. Regards, Golden State Warriors *Please do not reply to this email. This is a system-generated email with no return inbox.*"
+    },
+    {
+      "id": "mettel-general-application",
+      "company": "Mettel",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to MetTel",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-22T05:50:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02804d8f89f397",
+      "gmailMessageIds": [
+        "1a02804d8f89f397"
+      ],
+      "notes": "Tirth, Thanks for applying to MetTel. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, MetTel ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
+    },
+    {
+      "id": "seedlegals-data-engineer",
+      "company": "Seedlegals",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to SeedLegals",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-08-22T05:49:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02804312f242e4",
+      "gmailMessageIds": [
+        "1a02804312f242e4"
+      ],
+      "notes": "SeedLegals ------------------------------------------------------------------------------- Your application for the Data Engineer (3-6 month contract) job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: Data Engineer with 4+ years of building scalable Python and SQL pipelines, modern data warehouses, and automation tools across finance, energy, and education sectors Phone: +19796352045 ** PROFILE ** Resume: Tirth_Shah_Resume.pdf What are your salary expectations for this role?: 0 Withdraw this application https://seedlegals.workable.com/jobs/6047030/candidates/d050yzGjdRzhdovS-tAMWvEeyvRFLqvef1PYfa-r_ME ------------------------------------------------------------------------------- Jobs by Workable https://jobs.workable.com/ "
+    },
+    {
+      "id": "istari-digital-general-application",
+      "company": "Istari Digital",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Istari Digital",
+      "latestFrom": "Istari Digital <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-08-22T05:49:12.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a028041bfd1b6c8",
+      "gmailMessageIds": [
+        "1a028041bfd1b6c8"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "mercury-insurance-associate-data-engineer",
+      "company": "Mercury Insurance",
+      "role": "Associate Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Your Application",
+      "latestFrom": "\"Mercury Insurance Services, LLC @ icims\" <mercuryinsurance+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-08-22T05:48:51.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02803ca5adc478",
+      "gmailMessageIds": [
+        "1a02803ca5adc478"
+      ],
+      "notes": "Dear Tirth, We have received your application for the Associate Data Engineer (2026-6750) position and are excited that you are interested in exploring opportunities at Mercury Insurance! We appreciate your interest in joining our team and considering us as a potential employer. Your application demonstrates your qualifications, skills, and enthusiasm for the position, and we value the time and effort you invested in applying. Our hiring team is currently reviewing all applications carefully, and we will reach out to you directly if your qualifications align with what we are looking for in this role. In the meantime, please visit our website to learn what makes Mercury Insurance an amazing place to work. Thank you once again for considering Mercury Insurance. We appreciate your interest, and we wish you the best of luck in your job search. Sincerely, Mercury Insurance Services LLC/MIS Talent Acquisition Team This is an automated email response. Please do not reply. ************************************************** This message was sent to tirthcshah1999+icims-mercuryinsurance@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/KZPn7aG8YQ4Gtt77h6o7Bg~~/AAIB5hA~/44QlUlnZs9IIKlWZ7U7I5-4Vb2AEdxyxy91nAY79hfdN2csGUzYJF4np94y-r-Uq5wqA-fYeY05jAQ_ML3YdjQE7nUmqs-4tZNmHIk8POfxq_sQQTExDINbn-4R8jP_1uGM8jl2SoSbG6M801SLmrYmbTFtpX6FFjRAs-kgw74ioz_vplG92OHCB9isJY-QHPNDzxTVjOjqh59GDoZcEO4JQ6KPe6kxjyK33cDXBitc~ /n &#169; Mercury Insurance Services, LLC, Los Angeles, California, United States/n "
+    },
+    {
+      "id": "syncreon-consulting-data-engineer",
+      "company": "Syncreon Consulting",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-22T05:48:39.000Z",
+      "latestSubject": "Thank you for applying to Syncreon Consulting",
+      "latestFrom": "Syncreon Consulting <notification@smartrecruiters.com>",
+      "gmailThreadId": "19f6740d22da6a15",
+      "gmailMessageIds": [
+        "19f6740d22da6a15",
+        "1a028039ded09621"
+      ],
+      "notes": "Dear Tirth, Thank you for submitting your application for the position of Data Engineer - Snowflake, Databrick, DBT, ETL- W2 position - Independent consultant. Your application is queued for review and we will contact you shortly. Best regards, Syncreon Consulting Hiring Team Access My Application: https://jobs.smartrecruiters.com/my-applications/SyncreonConsulting/7e4f84cc-be78-42b7-a7fc-76184873d384?dcr_ci=SyncreonConsulting If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application ",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "built-in-general-application",
       "company": "Built In",
@@ -129,24 +407,6 @@
         "1a0265f049d9448d"
       ],
       "notes": "Your isolved Applicant Tracking Two Factor Authentication code is: 389404 You will need to enter this code to fully authenticate your account. This code expires 1 hour after receiving this message. If you feel you have received this request in error, please contact support. This is an automated message. Please do not reply. To unsubscribe click the following link below: https://email.send.applicantemails.com/u/eJwcyUGuhCAMANDTyNK0tShdsPhHaUE-JOoYIXP-ycz65ZhRtWBwNRIvVtbsg_fJDHyAkLSIFMNtlS25FglohUBIBAI8ZzLkYKRGSAvzxND3K89630dLeo391Hb0Ob1O98TRnlFTr1pRRCaG_6_-cMSJ_tw70icAAP__kekqpA "
-    },
-    {
-      "id": "guild-mortgage-data-engineer",
-      "company": "Guild Mortgage",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Guild Mortgage Company- Data Engineer",
-      "latestFrom": "noreplycareers@guildmortgage.net",
-      "lastActivityAt": "2026-08-21T22:08:15.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0265e192540299",
-      "gmailMessageIds": [
-        "1a0265e192540299"
-      ],
-      "notes": "Dear Tirth Shah, We have received your application for the position of Data Engineer on 08/21/2026. Thank you for your interest in joining our amazing team at Guild Mortgage Company. We are working hard to select the person with the right credentials for this position. Guild Mortgage Company LLC thoroughly reviews every candidate making sure all aspects of the application are taken into consideration. If selected to advance to the next step, we will contact you directly. In the meantime, feel free to check our website to learn more about our Company, culture and people who currently work at Guild, review other exciting opportunities we have posted on our website, or update your presence (profile) with any new skills, references or other pertinent information. Please visit https://www.guildmortgage.com/privacy-policy/, which includes our notice at collection, for more information on how your information is used and protected. Thanks again from the Guild Mortgage Recruiting Team!"
     },
     {
       "id": "verizon-general-application",
@@ -31816,28 +32076,6 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "syncreon-consulting-data-engineer",
-      "company": "Syncreon Consulting",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-15T19:28:49+00:00",
-      "latestSubject": "Thank you for applying to Syncreon Consulting",
-      "latestFrom": "Syncreon Consulting <notification@smartrecruiters.com>",
-      "gmailThreadId": "19f6740d22da6a15",
-      "gmailMessageIds": [
-        "19f6740d22da6a15"
-      ],
-      "notes": "Dear Tirth, Thank you for submitting your application for the position of Data Engineer - Snowflake, Databrick, DBT, ETL- W2 position - Independent consultant. Your application is queued for review and we will contact you shortly. Best regards, Syncreon Consulting Hiring Team Access My Application: https://jobs.smartrecruiters.com/my-applications/SyncreonConsulting/7e4f84cc-be78-42b7-a7fc-76184873d384?dcr_ci=SyncreonConsulting If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application ",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
