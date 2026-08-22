@@ -1,6 +1,56 @@
 {
-  "updatedAt": "2026-08-22T14:22:19.231Z",
+  "updatedAt": "2026-08-22T15:21:59.052Z",
   "applications": [
+    {
+      "id": "glyphic-biotechnologies-data-infrastructure-engineer",
+      "company": "Glyphic Biotechnologies",
+      "role": "Data Infrastructure Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-22T15:15:11.000Z",
+      "latestSubject": "Glyphic Biotechnologies Application Update",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "1a01efabdf84efb1",
+      "gmailMessageIds": [
+        "1a01efabdf84efb1",
+        "1a02a0a478e00c68"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "ford-data-engineer",
+      "company": "Ford",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-22T15:01:12.000Z",
+      "latestSubject": "Reminder: Tell us about your experience applying for Data Engineer at Ford",
+      "latestFrom": "Ford Candidate Experience <noreplycandex@qualtrics-survey.com>",
+      "gmailThreadId": "1a0194b336e8ec27",
+      "gmailMessageIds": [
+        "1a0194b336e8ec27",
+        "1a029fd7aa64065c"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
     {
       "id": "jobright-associate-games-data-demand-model-and-code-set",
       "company": "Jobright",
@@ -4107,28 +4157,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "glyphic-biotechnologies-data-infrastructure-engineer",
-      "company": "Glyphic Biotechnologies",
-      "role": "Data Infrastructure Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T11:42:23+00:00",
-      "latestSubject": "Thank you for applying to Glyphic Biotechnologies!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "1a01efabdf84efb1",
-      "gmailMessageIds": [
-        "1a01efabdf84efb1"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "wingify-big-data-engineer",
       "company": "Wingify",
       "role": "Big Data Engineer",
@@ -5807,28 +5835,6 @@
       "gmailThreadId": "1a01998ebd5879b8",
       "gmailMessageIds": [
         "1a01998ebd5879b8"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "ford-data-engineer",
-      "company": "Ford",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-19T09:12:33+00:00",
-      "latestSubject": "Tell us about your experience applying for Data Engineer at Ford",
-      "latestFrom": "Ford Candidate Experience <noreplycandex@qualtrics-survey.com>",
-      "gmailThreadId": "1a0194b336e8ec27",
-      "gmailMessageIds": [
-        "1a0194b336e8ec27"
       ],
       "notes": "",
       "isManualOverride": false,
