@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T19:54:42.923Z",
+  "updatedAt": "2026-08-22T20:12:19.207Z",
   "applications": [
     {
       "id": "parts-town-business-analyst",
@@ -3784,28 +3784,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "cordance-general-application",
-      "company": "Cordance",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T18:51:10+00:00",
-      "latestSubject": "Thank you for applying to Cordance",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "1a020834cdba4f6e",
-      "gmailMessageIds": [
-        "1a020834cdba4f6e"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Application confirmation receipt from ATS",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:42.559+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "guild-mortgage-senior-data-engineer",
       "company": "Guild Mortgage",
       "role": "Senior Data Engineer",
@@ -3817,6 +3795,28 @@
       "gmailThreadId": "1a020834f6d593a7",
       "gmailMessageIds": [
         "1a020834f6d593a7"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Application confirmation receipt from ATS",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:42.559+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "cordance-general-application",
+      "company": "Cordance",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-20T18:51:10+00:00",
+      "latestSubject": "Thank you for applying to Cordance",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "1a020834cdba4f6e",
+      "gmailMessageIds": [
+        "1a020834cdba4f6e"
       ],
       "notes": "",
       "isManualOverride": false,
@@ -4882,30 +4882,6 @@
       "aiConfidence": "medium"
     },
     {
-      "id": "acrisure-general-application",
-      "company": "Acrisure",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T04:21:19+00:00",
-      "latestSubject": "Thank You for Your Interest in Acrisure",
-      "latestFrom": "acrisure@myworkday.com",
-      "gmailThreadId": "1a01d66eb4a2d942",
-      "gmailMessageIds": [
-        "1a01d66eb4a2d942",
-        "19f8475be79753f9",
-        "19f8d3fe97e54d7e"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f8d3fe97e54d7e",
       "company": "Acrisure",
       "role": "Software Engineer",
@@ -4928,6 +4904,30 @@
       "aiDecision": "Candidate rejection notice: Thank you for your interest",
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:02:20.15+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "acrisure-general-application",
+      "company": "Acrisure",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-20T04:21:19+00:00",
+      "latestSubject": "Thank You for Your Interest in Acrisure",
+      "latestFrom": "acrisure@myworkday.com",
+      "gmailThreadId": "1a01d66eb4a2d942",
+      "gmailMessageIds": [
+        "1a01d66eb4a2d942",
+        "19f8475be79753f9",
+        "19f8d3fe97e54d7e"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high"
     },
     {
@@ -6909,7 +6909,7 @@
       "id": "msg-1a01072229d0ca6d",
       "company": "Ford",
       "role": "Data Engineer",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-18T15:15:09+00:00",
       "latestSubject": "Thank you for your interest in Ford Motor Company",
@@ -6926,8 +6926,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: decided to move forward with another candidate",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high"
     },
@@ -7802,7 +7802,7 @@
       "id": "msg-1a014cb24d97db71",
       "company": "SpaceXAI",
       "role": "General Application",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-18T12:14:11+00:00",
       "latestSubject": "Thank you for applying to SpaceXAI",
@@ -7821,8 +7821,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: team has decided not to move the application forward",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high"
     },
@@ -8609,28 +8609,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "general-application-business-analyst",
-      "company": "General Application",
-      "role": "Business Analyst",
-      "status": "applied",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-17T20:13:21+00:00",
-      "latestSubject": "Business Analyst -Tirth Shah",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "gmailThreadId": "1a0115af7bc5ee43",
-      "gmailMessageIds": [
-        "1a0115b7446f5fdc"
-      ],
-      "notes": "I have tried calling you. Let me know if you can give me a call. ",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-22T16:25:51.009+00:00",
-      "aiConfidence": "medium"
-    },
-    {
       "id": "msg-1a0115b7446f5fdc",
       "company": "Unknown Company",
       "role": "Business Analyst",
@@ -8651,6 +8629,28 @@
       "aiModel": null,
       "aiClassifiedAt": null,
       "aiConfidence": "high"
+    },
+    {
+      "id": "general-application-business-analyst",
+      "company": "General Application",
+      "role": "Business Analyst",
+      "status": "applied",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-17T20:13:21+00:00",
+      "latestSubject": "Business Analyst -Tirth Shah",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "gmailThreadId": "1a0115af7bc5ee43",
+      "gmailMessageIds": [
+        "1a0115b7446f5fdc"
+      ],
+      "notes": "I have tried calling you. Let me know if you can give me a call. ",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-22T16:25:51.009+00:00",
+      "aiConfidence": "medium"
     },
     {
       "id": "paylocity-general-application",
@@ -10825,7 +10825,7 @@
       "id": "msg-1a00236b7331c6f5",
       "company": "Home Chef",
       "role": "General Application",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-14T21:38:55+00:00",
       "latestSubject": "Update on Your Application to Home Chef",
@@ -10839,8 +10839,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: decided to move forward with another candidate",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -12045,7 +12045,7 @@
       "id": "msg-19ffe2a322db1f15",
       "company": "Roddy Jones - Swish Analytics",
       "role": "Data Engineer",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-14T02:46:45+00:00",
       "latestSubject": "Thank you for your job application!",
@@ -12059,8 +12059,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: after careful consideration, decided not to proceed",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -12430,7 +12430,7 @@
       "id": "msg-19ffb6ef515c4a6b",
       "company": "Teza Hiring",
       "role": "Data Engineer",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-13T14:02:59+00:00",
       "latestSubject": "Concerning your application - Teza Technologies",
@@ -12443,8 +12443,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: after careful consideration, won't be moving forward",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -13780,7 +13780,7 @@
       "id": "msg-19ff603d5df134bf",
       "company": "Howmet Aerospace  Acquisition",
       "role": "Data Engineer",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-12T12:47:52+00:00",
       "latestSubject": "Howmet Aerospace - Data Engineer Application Update",
@@ -13793,8 +13793,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: we are writing to inform that you have not been selected",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -14121,7 +14121,7 @@
       "id": "msg-19ff5d857cf41028",
       "company": "B Lab",
       "role": "Data Engineer",
-      "status": "not_related",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-12T12:00:16+00:00",
       "latestSubject": "B Lab - thank you for your application",
@@ -14135,8 +14135,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: unable to move forward with your application (location preference mismatch)",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -14349,7 +14349,7 @@
       "id": "msg-19ff4e40d2383f34",
       "company": "Amazon",
       "role": "Data Engineer",
-      "status": "not_related",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-12T07:33:33+00:00",
       "latestSubject": "Amazon application: Status update",
@@ -14365,8 +14365,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: after careful consideration, did not select",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -14418,7 +14418,7 @@
       "id": "msg-19ff2af5409424f8",
       "company": "Focuspartners",
       "role": "General Application",
-      "status": "not_related",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-11T21:16:44+00:00",
       "latestSubject": "Thank You from Focus Financial Partners",
@@ -14431,8 +14431,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: will not be moving you to the next stage",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -14573,7 +14573,7 @@
       "id": "msg-19ff1e3263852dcf",
       "company": "Thatch",
       "role": "General Application",
-      "status": "not_related",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-11T17:33:42+00:00",
       "latestSubject": "Following up from Thatch",
@@ -14590,8 +14590,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: after careful consideration, decided not to proceed",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -16168,7 +16168,7 @@
       "id": "msg-19fdd7d8c5439ea9",
       "company": "Tyler",
       "role": "General Application",
-      "status": "not_related",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-07T18:30:19+00:00",
       "latestSubject": "Your application for Conversion Engineer at Tyler Technologies",
@@ -16181,8 +16181,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: won't be moving forward with your application",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -17196,7 +17196,7 @@
       "id": "msg-19fd73307ec5fda3",
       "company": "Abacusinsights",
       "role": "Data Engineer",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-06T13:11:12+00:00",
       "latestSubject": "Application Update- Abacus Insights",
@@ -17209,8 +17209,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: after careful review, decided not to move forward",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -18301,7 +18301,7 @@
       "id": "msg-19fd2708caa26d6e",
       "company": "Paige McKowen",
       "role": "General Application",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-05T15:00:11+00:00",
       "latestSubject": "GrowthLoop - Data Services Engineer, Strategic Projects  - Application Update",
@@ -18314,8 +18314,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: after careful consideration, decided not to proceed",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -19832,7 +19832,7 @@
       "id": "msg-19fcb3432b4655bd",
       "company": "7-Eleven",
       "role": "Data Engineer",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-04T05:17:03+00:00",
       "latestSubject": "Application Update",
@@ -19846,8 +19846,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: we will not be progressing your application",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -20631,7 +20631,7 @@
       "id": "msg-19fc763846655401",
       "company": "Particle41",
       "role": "General Application",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-08-03T11:30:15+00:00",
       "latestSubject": "Important information about your application to Particle41",
@@ -20645,8 +20645,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: after careful consideration, decided not to proceed",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -21565,7 +21565,7 @@
       "id": "msg-19fb719ae568f980",
       "company": "workdayemail cae",
       "role": "Data Engineer",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-07-31T07:35:41+00:00",
       "latestSubject": "Thank You for Your Application",
@@ -21578,8 +21578,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: after careful consideration, decided to move forward with others",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -21609,7 +21609,7 @@
       "id": "msg-19fb4aaa8ad2864e",
       "company": "Motional",
       "role": "Data Engineer",
-      "status": "not_related",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-07-30T20:15:08+00:00",
       "latestSubject": "Update from Motional - Senior Data Engineer",
@@ -21622,8 +21622,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: regret to inform, not moving forward",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -23238,7 +23238,7 @@
       "id": "msg-19facb2617fd15eb",
       "company": "LPL Financial People",
       "role": "Data Engineer",
-      "status": "not_related",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-07-29T07:06:38+00:00",
       "latestSubject": "LPL Financial – Update on Your Application",
@@ -23251,8 +23251,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: after careful review, decided not to proceed",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -23260,7 +23260,7 @@
       "id": "msg-19fac239dced6ba9",
       "company": "Eli Lilly",
       "role": "Data Engineer",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-07-29T04:30:42+00:00",
       "latestSubject": "Eli Lilly - Application Update",
@@ -23273,8 +23273,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: decided to pursue other candidates",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -25854,28 +25854,6 @@
       "aiConfidence": "medium"
     },
     {
-      "id": "msg-19f8b6b1883c7dae",
-      "company": "ClearpointCo.",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-22T20:01:19+00:00",
-      "latestSubject": "Thank you for applying!",
-      "latestFrom": "\"ClearpointCo.\" <noreply@recruiterflowmail.com>",
-      "gmailThreadId": "19f8b6b1883c7dae",
-      "gmailMessageIds": [
-        "19f8b6b1883c7dae"
-      ],
-      "notes": "Hi Tirth, Thank you for applying to the Data Engineer role. We will review your application and get back to you shortly. Regards, Team ClearpointCo. Powered by Please do not reply to this email. It is",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "clearpointco-general-application",
       "company": "Clearpointco",
       "role": "General Application",
@@ -25895,6 +25873,28 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "msg-19f8b6b1883c7dae",
+      "company": "ClearpointCo.",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-22T20:01:19+00:00",
+      "latestSubject": "Thank you for applying!",
+      "latestFrom": "\"ClearpointCo.\" <noreply@recruiterflowmail.com>",
+      "gmailThreadId": "19f8b6b1883c7dae",
+      "gmailMessageIds": [
+        "19f8b6b1883c7dae"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to the Data Engineer role. We will review your application and get back to you shortly. Regards, Team ClearpointCo. Powered by Please do not reply to this email. It is",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
     {
@@ -25920,28 +25920,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f8b5eea5c251e0",
-      "company": "Rothera",
-      "role": "Data Engineer",
-      "status": "rejected",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-22T19:48:00+00:00",
-      "latestSubject": "Important information about your application to Rothera",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19f8b5eea5c251e0",
-      "gmailMessageIds": [
-        "19f8b5eea5c251e0"
-      ],
-      "notes": "Tirth Shah, Unfortunately, we have decided not to proceed with your candidacy for the Senior Associate, Engineering - Data Engineering &amp; Analytics opening at Rothera. We received many qualified",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as rejected",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "rothera-senior-associate-engineering-data-engineering-analytics",
       "company": "Rothera",
       "role": "Senior Associate, Engineering - Data Engineering & Analytics",
@@ -25961,6 +25939,28 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "msg-19f8b5eea5c251e0",
+      "company": "Rothera",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-22T19:48:00+00:00",
+      "latestSubject": "Important information about your application to Rothera",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19f8b5eea5c251e0",
+      "gmailMessageIds": [
+        "19f8b5eea5c251e0"
+      ],
+      "notes": "Tirth Shah, Unfortunately, we have decided not to proceed with your candidacy for the Senior Associate, Engineering - Data Engineering &amp; Analytics opening at Rothera. We received many qualified",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as rejected",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
     {
@@ -26008,28 +26008,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f8b35a1c728f39",
-      "company": "Hcacareers",
-      "role": "Data Engineer",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-22T19:02:54+00:00",
-      "latestSubject": "HCA Recruiting Thanks You for Applying",
-      "latestFrom": "HCAJobApplication@hcacareers.com",
-      "gmailThreadId": "19f8b35a1c728f39",
-      "gmailMessageIds": [
-        "19f8b35a1c728f39"
-      ],
-      "notes": "HCA Healthcare- 4750460 Dear Tirth, Thank you for submitting your application for consideration for the Data Engineer - APIs position at HCA Healthcare. We appreciate your interest in our organization",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "hca-healthcare-general-application",
       "company": "HCA Healthcare",
       "role": "Data Engineer - GCP",
@@ -26053,6 +26031,28 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "medium"
+    },
+    {
+      "id": "msg-19f8b35a1c728f39",
+      "company": "Hcacareers",
+      "role": "Data Engineer",
+      "status": "not_related",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-22T19:02:54+00:00",
+      "latestSubject": "HCA Recruiting Thanks You for Applying",
+      "latestFrom": "HCAJobApplication@hcacareers.com",
+      "gmailThreadId": "19f8b35a1c728f39",
+      "gmailMessageIds": [
+        "19f8b35a1c728f39"
+      ],
+      "notes": "HCA Healthcare- 4750460 Dear Tirth, Thank you for submitting your application for consideration for the Data Engineer - APIs position at HCA Healthcare. We appreciate your interest in our organization",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as not_related",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high"
     },
     {
       "id": "msg-19f8b2151158b08d",
@@ -26099,29 +26099,6 @@
       "aiConfidence": "medium"
     },
     {
-      "id": "msg-19f8b0b1fc50c1ea",
-      "company": "SynergenX Health Holdings",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-22T18:16:29+00:00",
-      "latestSubject": "Tirth, we've received your resume",
-      "latestFrom": "SynergenX Health Holdings LLC <noreply@applytojob.com>",
-      "gmailThreadId": "19f89b77b82ee311",
-      "gmailMessageIds": [
-        "19f8b0b1fc50c1ea",
-        "19f89b77b82ee311"
-      ],
-      "notes": "Hello Tirth, Thank you for your interest in employment at SynergenX Health Holdings LLC. If your qualifications match our needs, we will contact you to learn more about your fit in this position.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "synergenx-health-general-application",
       "company": "Simis",
       "role": "General Application",
@@ -26145,25 +26122,26 @@
       "aiConfidence": "high"
     },
     {
-      "id": "yes-energy-data-engineer-i",
-      "company": "Yes Energy",
-      "role": "Data Engineer I",
-      "status": "rejected",
+      "id": "msg-19f8b0b1fc50c1ea",
+      "company": "SynergenX Health Holdings",
+      "role": "General Application",
+      "status": "applied",
       "confidence": "high",
-      "lastActivityAt": "2026-07-22T17:21:20+00:00",
-      "latestSubject": "Update on your application with Yes Energy",
-      "latestFrom": "careers@yesenergy.com",
-      "gmailThreadId": "19f8ad8a3e109080",
+      "lastActivityAt": "2026-07-22T18:16:29+00:00",
+      "latestSubject": "Tirth, we've received your resume",
+      "latestFrom": "SynergenX Health Holdings LLC <noreply@applytojob.com>",
+      "gmailThreadId": "19f89b77b82ee311",
       "gmailMessageIds": [
-        "19f8ad8a3e109080"
+        "19f8b0b1fc50c1ea",
+        "19f89b77b82ee311"
       ],
-      "notes": "Dear Tirth, Thank you for your interest in the Data Engineer I role at Yes Energy. After carefully reviewing your application, we have decided to move forward with other candidates whose experience more closely aligns with the requirements of the position. Please know this was not an easy decision, as we deeply appreciate the time and effort you put into your application. Although this role may not be the right fit at this time, we encourage you to keep an eye on future opportunities with Yes Energy that may better match your background and skills. We sincerely wish you all the best in your job search and future endeavors. Warm regards, People Operations Yes Energy",
+      "notes": "Hello Tirth, Thank you for your interest in employment at SynergenX Health Holdings LLC. If your qualifications match our needs, we will contact you to learn more about your fit in this position.",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
     {
@@ -26189,20 +26167,19 @@
       "aiConfidence": "high"
     },
     {
-      "id": "counsel-health-analytics-engineer",
-      "company": "Counsel Health",
-      "role": "Analytics Engineer",
-      "status": "applied",
+      "id": "yes-energy-data-engineer-i",
+      "company": "Yes Energy",
+      "role": "Data Engineer I",
+      "status": "rejected",
       "confidence": "high",
-      "lastActivityAt": "2026-07-22T17:15:51+00:00",
-      "latestSubject": "Thank you for applying to Counsel Health",
-      "latestFrom": "Counsel Health Hiring Team <no-reply@ashbyhq.com>",
-      "gmailThreadId": "19f8ad39c620c68f",
+      "lastActivityAt": "2026-07-22T17:21:20+00:00",
+      "latestSubject": "Update on your application with Yes Energy",
+      "latestFrom": "careers@yesenergy.com",
+      "gmailThreadId": "19f8ad8a3e109080",
       "gmailMessageIds": [
-        "19f8ad39c620c68f",
-        "19f6abd46b46f586"
+        "19f8ad8a3e109080"
       ],
-      "notes": "Hi Tirth, Thank you for submitting your resume to the Analytics Engineer position at Counsel Health. We are fortunate to have many qualified candidates apply to each of our positions. We have reviewed the qualifications of each candidate, and after careful consideration, we have decided to move forward with a subset of candidates who better align with what we are looking for in this position. Please accept our best wishes and thank you for your interest in Counsel Health! Please don't hesitate to apply to other openings in the future. The Talent team @ Counsel Health",
+      "notes": "Dear Tirth, Thank you for your interest in the Data Engineer I role at Yes Energy. After carefully reviewing your application, we have decided to move forward with other candidates whose experience more closely aligns with the requirements of the position. Please know this was not an easy decision, as we deeply appreciate the time and effort you put into your application. Although this role may not be the right fit at this time, we encourage you to keep an eye on future opportunities with Yes Energy that may better match your background and skills. We sincerely wish you all the best in your job search and future endeavors. Warm regards, People Operations Yes Energy",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -26234,10 +26211,33 @@
       "aiConfidence": "high"
     },
     {
+      "id": "counsel-health-analytics-engineer",
+      "company": "Counsel Health",
+      "role": "Analytics Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-22T17:15:51+00:00",
+      "latestSubject": "Thank you for applying to Counsel Health",
+      "latestFrom": "Counsel Health Hiring Team <no-reply@ashbyhq.com>",
+      "gmailThreadId": "19f8ad39c620c68f",
+      "gmailMessageIds": [
+        "19f8ad39c620c68f",
+        "19f6abd46b46f586"
+      ],
+      "notes": "Hi Tirth, Thank you for submitting your resume to the Analytics Engineer position at Counsel Health. We are fortunate to have many qualified candidates apply to each of our positions. We have reviewed the qualifications of each candidate, and after careful consideration, we have decided to move forward with a subset of candidates who better align with what we are looking for in this position. Please accept our best wishes and thank you for your interest in Counsel Health! Please don't hesitate to apply to other openings in the future. The Talent team @ Counsel Health",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Candidate rejection notice: decided to move forward with a subset of candidates who better align",
+      "aiModel": "rule-based-scan",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
       "id": "msg-19f8ab090ef99e3f",
       "company": "Fieldwire",
       "role": "Data Engineer",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-07-22T16:37:34+00:00",
       "latestSubject": "Important information about your application to Fieldwire",
@@ -26250,30 +26250,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19f8a7603e9d30e0",
-      "company": "SEP",
-      "role": "General Application",
-      "status": "rejected",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-22T15:33:37+00:00",
-      "latestSubject": "Thanks for your interest in SEP, Tirth",
-      "latestFrom": "SEP <no-reply@hire.lever.co>",
-      "gmailThreadId": "19f8a7603e9d30e0",
-      "gmailMessageIds": [
-        "19f8a7603e9d30e0"
-      ],
-      "notes": "Tirth, Thank you for reaching out to us. Unfortunately, due to some of the work we perform that deals with export controlled data, we are not able to hire individuals whose work authorization is via",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as rejected",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: decided to move forward with another candidate whose experience more closely aligns",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
@@ -26298,6 +26276,28 @@
       "aiDecision": "Candidate rejection notice: unable to hire / work authorization OPT/CPT ineligibility",
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "msg-19f8a7603e9d30e0",
+      "company": "SEP",
+      "role": "General Application",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-22T15:33:37+00:00",
+      "latestSubject": "Thanks for your interest in SEP, Tirth",
+      "latestFrom": "SEP <no-reply@hire.lever.co>",
+      "gmailThreadId": "19f8a7603e9d30e0",
+      "gmailMessageIds": [
+        "19f8a7603e9d30e0"
+      ],
+      "notes": "Tirth, Thank you for reaching out to us. Unfortunately, due to some of the work we perform that deals with export controlled data, we are not able to hire individuals whose work authorization is via",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as rejected",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
     {
@@ -26438,28 +26438,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "innovative-rocket-data-engineer",
-      "company": "Innovative Rocket",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-22T12:26:17+00:00",
-      "latestSubject": "Thanks for applying to Innovative Rocket Technologies Inc.",
-      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
-      "gmailThreadId": "19f89ca822dfd985",
-      "gmailMessageIds": [
-        "19f89ca822dfd985"
-      ],
-      "notes": "Innovative Rocket Technologies Inc. ------------------------------------------------------------------------------- Your application for the Data Engineer job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: Data Engineer | Analytics Engineer Phone: +14157411711 Address: 601 Luther St W, Apt 1321 D, College Station, 77840, United States ** PROFILE ** Education 2024 - 2026 Master of Science Management Information Systems at Texas A&amp;M University 2017 - 2021 Bachelor of Engineering Computer Engineering at Sardar Vallabhbhai Patel Institute of Technology Experience 2026 - 2026 Global Engagement Management Intern at HCLTech (4 months) * Analyzed Verizon leadership, Frontier integration, FIFA World Cup 2026 readiness, enterprise slice assurance, and first-responder QoS priorities to identify proposal opportunities * Translated telecom automation concepts into KPI narratives covering service quality, operational effort, risk reduction, field readiness, and human-approved network operations. 2025 - 2026 Graduate Student Assistant at Mays Business School - Texas A&amp;M University (4 months) * Engineered a modular Python/Streamlit codebase of 15,000+ lines across 50+ files, separating business logic, data-processing utilities, UI components, model code, and deployment configuration * Designed optimized SQLite schemas, indexing, incremental updates, validation mechanisms, and data lineage tracking for 2,400+ admissions records, 600+ marketing records, and 100+ AI chat records * Implemented Gemini + ChromaDB retrieval, SELECT-only SQL validation, rate limiting, caching, and conversation-memory workflows for governed natural-language analytics. 2025 - 2025 Data &amp; AI Product Strategy Intern at Black Tie Concierge, Inc (4 months) * Designed Supabase Postgres tables, triggers, role-based permissions, real-time listeners, and lightweight ETL flows that loaded Stripe transaction and booking-form data into reporting-ready structures * Authored serverless endpoints, API key handling, webhook integrations, GitHub Actions CI/CD, and technical documentation for scalable booking, payment, receipt, and notification operations 2025 - 2025 Data Engineer Student Worker at Texas A&amp;M University - Utilities &amp; Energy Services (10 months) * Orchestrated Python ETL pipelines ingesting 50,000+ daily records from 15+ heterogeneous sources into SQL Server with schema validation, quality-flag filtering, feature engineering, and automated reporting that saved 10+ hours/week * Built an 8-stage CHP operations automation pipeline with data validation gates, ERCOT pricing injection, solar integration, PDF generation, log monitoring, retry logic, and email distribution, reducing a 2.5-3 hour daily workflow to 5 minutes * Consolidated 3 operational silos into a SQL Server star",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f89ca822dfd985",
       "company": "Innovative Rocket.",
       "role": "Data Engineer",
@@ -26479,6 +26457,28 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "innovative-rocket-data-engineer",
+      "company": "Innovative Rocket",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-22T12:26:17+00:00",
+      "latestSubject": "Thanks for applying to Innovative Rocket Technologies Inc.",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "gmailThreadId": "19f89ca822dfd985",
+      "gmailMessageIds": [
+        "19f89ca822dfd985"
+      ],
+      "notes": "Innovative Rocket Technologies Inc. ------------------------------------------------------------------------------- Your application for the Data Engineer job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: Data Engineer | Analytics Engineer Phone: +14157411711 Address: 601 Luther St W, Apt 1321 D, College Station, 77840, United States ** PROFILE ** Education 2024 - 2026 Master of Science Management Information Systems at Texas A&amp;M University 2017 - 2021 Bachelor of Engineering Computer Engineering at Sardar Vallabhbhai Patel Institute of Technology Experience 2026 - 2026 Global Engagement Management Intern at HCLTech (4 months) * Analyzed Verizon leadership, Frontier integration, FIFA World Cup 2026 readiness, enterprise slice assurance, and first-responder QoS priorities to identify proposal opportunities * Translated telecom automation concepts into KPI narratives covering service quality, operational effort, risk reduction, field readiness, and human-approved network operations. 2025 - 2026 Graduate Student Assistant at Mays Business School - Texas A&amp;M University (4 months) * Engineered a modular Python/Streamlit codebase of 15,000+ lines across 50+ files, separating business logic, data-processing utilities, UI components, model code, and deployment configuration * Designed optimized SQLite schemas, indexing, incremental updates, validation mechanisms, and data lineage tracking for 2,400+ admissions records, 600+ marketing records, and 100+ AI chat records * Implemented Gemini + ChromaDB retrieval, SELECT-only SQL validation, rate limiting, caching, and conversation-memory workflows for governed natural-language analytics. 2025 - 2025 Data &amp; AI Product Strategy Intern at Black Tie Concierge, Inc (4 months) * Designed Supabase Postgres tables, triggers, role-based permissions, real-time listeners, and lightweight ETL flows that loaded Stripe transaction and booking-form data into reporting-ready structures * Authored serverless endpoints, API key handling, webhook integrations, GitHub Actions CI/CD, and technical documentation for scalable booking, payment, receipt, and notification operations 2025 - 2025 Data Engineer Student Worker at Texas A&amp;M University - Utilities &amp; Energy Services (10 months) * Orchestrated Python ETL pipelines ingesting 50,000+ daily records from 15+ heterogeneous sources into SQL Server with schema validation, quality-flag filtering, feature engineering, and automated reporting that saved 10+ hours/week * Built an 8-stage CHP operations automation pipeline with data validation gates, ERCOT pricing injection, solar integration, PDF generation, log monitoring, retry logic, and email distribution, reducing a 2.5-3 hour daily workflow to 5 minutes * Consolidated 3 operational silos into a SQL Server star",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -26727,28 +26727,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "chewy-general-application",
-      "company": "Chewy",
-      "role": "General Application",
-      "status": "reply_needed",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-22T12:06:53+00:00",
-      "latestSubject": "Thank you for applying to Chewy! Action Needed to Complete Your Chewy Application",
-      "latestFrom": "chewy@myworkday.com",
-      "gmailThreadId": "19f89b8bf8f95d9c",
-      "gmailMessageIds": [
-        "19f89b8bf8f95d9c"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f89b8bf8f95d9c",
       "company": "Chewy",
       "role": "General Application",
@@ -26768,6 +26746,28 @@
       "aiDecision": "Classified as reply_needed",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:36:38.58+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "chewy-general-application",
+      "company": "Chewy",
+      "role": "General Application",
+      "status": "reply_needed",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-22T12:06:53+00:00",
+      "latestSubject": "Thank you for applying to Chewy! Action Needed to Complete Your Chewy Application",
+      "latestFrom": "chewy@myworkday.com",
+      "gmailThreadId": "19f89b8bf8f95d9c",
+      "gmailMessageIds": [
+        "19f89b8bf8f95d9c"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -26795,28 +26795,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f89b1f57c875c9",
-      "company": "Gopuff",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-22T11:59:28+00:00",
-      "latestSubject": "Thank you for applying at Gopuff!",
-      "latestFrom": "Gopuff <no-reply@hire.lever.co>",
-      "gmailThreadId": "19f89b1f57c875c9",
-      "gmailMessageIds": [
-        "19f89b1f57c875c9"
-      ],
-      "notes": "Dear Tirth, Thank you very much for your recent application to Data Engineer. Your submission will be reviewed by our Recruiting team, and we will contact you soon, should we feel that your experience",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "gopuff-general-application",
       "company": "Gopuff",
       "role": "General Application",
@@ -26836,6 +26814,28 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "msg-19f89b1f57c875c9",
+      "company": "Gopuff",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-22T11:59:28+00:00",
+      "latestSubject": "Thank you for applying at Gopuff!",
+      "latestFrom": "Gopuff <no-reply@hire.lever.co>",
+      "gmailThreadId": "19f89b1f57c875c9",
+      "gmailMessageIds": [
+        "19f89b1f57c875c9"
+      ],
+      "notes": "Dear Tirth, Thank you very much for your recent application to Data Engineer. Your submission will be reviewed by our Recruiting team, and we will contact you soon, should we feel that your experience",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
     {
@@ -27082,6 +27082,28 @@
       "aiConfidence": "high"
     },
     {
+      "id": "medvet-data-engineer",
+      "company": "Medvet",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-22T11:34:01+00:00",
+      "latestSubject": "Your Application for Data Engineer at MedVet",
+      "latestFrom": "MedVet Recruiting Team <notification@jobvite.com>",
+      "gmailThreadId": "19f899aa6a91dad1",
+      "gmailMessageIds": [
+        "19f899aa6a91dad1"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
       "id": "msg-19f899aa6a91dad1",
       "company": "MedVet",
       "role": "Data Engineer",
@@ -27104,17 +27126,17 @@
       "aiConfidence": "high"
     },
     {
-      "id": "medvet-data-engineer",
-      "company": "Medvet",
-      "role": "Data Engineer",
+      "id": "gridware-general-application",
+      "company": "Gridware",
+      "role": "General Application",
       "status": "applied",
       "confidence": "high",
-      "lastActivityAt": "2026-07-22T11:34:01+00:00",
-      "latestSubject": "Your Application for Data Engineer at MedVet",
-      "latestFrom": "MedVet Recruiting Team <notification@jobvite.com>",
-      "gmailThreadId": "19f899aa6a91dad1",
+      "lastActivityAt": "2026-07-22T11:32:40+00:00",
+      "latestSubject": "Thank you for your application to Gridware",
+      "latestFrom": "Gridware <no-reply@hire.lever.co>",
+      "gmailThreadId": "19f89996ac0428e6",
       "gmailMessageIds": [
-        "19f899aa6a91dad1"
+        "19f89996ac0428e6"
       ],
       "notes": "",
       "isManualOverride": false,
@@ -27145,28 +27167,6 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "gridware-general-application",
-      "company": "Gridware",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-22T11:32:40+00:00",
-      "latestSubject": "Thank you for your application to Gridware",
-      "latestFrom": "Gridware <no-reply@hire.lever.co>",
-      "gmailThreadId": "19f89996ac0428e6",
-      "gmailMessageIds": [
-        "19f89996ac0428e6"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -27259,29 +27259,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "ninja-holdings-data-engineer",
-      "company": "Ninja Holdings",
-      "role": "Data Engineer",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-22T11:23:46+00:00",
-      "latestSubject": "Complete your application for Data Engineer",
-      "latestFrom": "NinjaHoldings <no-reply@ninjaholdings.breezy-mail.com>",
-      "gmailThreadId": "19f8991438c56e5b",
-      "gmailMessageIds": [
-        "19f8991438c56e5b",
-        "ninja-holdings-data-engineer"
-      ],
-      "notes": "",
-      "isManualOverride": true,
-      "manualAction": "ignore",
-      "manualChangedAt": "2026-08-20T19:57:00.076+00:00",
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f8991438c56e5b",
       "company": "Ninja Holdings",
       "role": "Data Engineer",
@@ -27304,22 +27281,23 @@
       "aiConfidence": "high"
     },
     {
-      "id": "rothera-general-application",
-      "company": "Rothera",
-      "role": "General Application",
-      "status": "applied",
+      "id": "ninja-holdings-data-engineer",
+      "company": "Ninja Holdings",
+      "role": "Data Engineer",
+      "status": "not_related",
       "confidence": "high",
-      "lastActivityAt": "2026-07-22T11:22:12+00:00",
-      "latestSubject": "Thank you for applying to Rothera",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19f898fd4bdd51bf",
+      "lastActivityAt": "2026-07-22T11:23:46+00:00",
+      "latestSubject": "Complete your application for Data Engineer",
+      "latestFrom": "NinjaHoldings <no-reply@ninjaholdings.breezy-mail.com>",
+      "gmailThreadId": "19f8991438c56e5b",
       "gmailMessageIds": [
-        "19f898fd4bdd51bf"
+        "19f8991438c56e5b",
+        "ninja-holdings-data-engineer"
       ],
-      "notes": "Tirth Shah, Thanks for applying to Rothera. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, Rothera ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
+      "notes": "",
+      "isManualOverride": true,
+      "manualAction": "ignore",
+      "manualChangedAt": "2026-08-20T19:57:00.076+00:00",
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
@@ -27348,19 +27326,19 @@
       "aiConfidence": "high"
     },
     {
-      "id": "accordion-general-application",
-      "company": "Accordion",
+      "id": "rothera-general-application",
+      "company": "Rothera",
       "role": "General Application",
       "status": "applied",
       "confidence": "high",
-      "lastActivityAt": "2026-07-22T11:22:04+00:00",
-      "latestSubject": "Thank You for Applying to Accordion",
-      "latestFrom": "no-reply@accordion.com",
-      "gmailThreadId": "19f898fb529669dd",
+      "lastActivityAt": "2026-07-22T11:22:12+00:00",
+      "latestSubject": "Thank you for applying to Rothera",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19f898fd4bdd51bf",
       "gmailMessageIds": [
-        "19f898fb529669dd"
+        "19f898fd4bdd51bf"
       ],
-      "notes": "Tirth, Thank you for your interest in Accordion. We appreciate you taking the time to submit an application. Now that you have applied, our Talent Acquisition Team will review your resume and contact you should your background and experience meet the requirements for this specific role. In the meantime, please feel free to learn more about Accordion by visiting the links below - Solutions Overview ( https://www.accordion.com/solutions/ ) Representative Clients ( https://www.accordion.com/experience/clients/ ) Why Accordion ( https://www.accordion.com/careers/why-accordion/ ) Our Offices ( https://www.accordion.com/careers/office-locations/ ) Please do not reply to this message. This mailbox is not monitored.",
+      "notes": "Tirth Shah, Thanks for applying to Rothera. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, Rothera ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -27389,6 +27367,28 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "accordion-general-application",
+      "company": "Accordion",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-22T11:22:04+00:00",
+      "latestSubject": "Thank You for Applying to Accordion",
+      "latestFrom": "no-reply@accordion.com",
+      "gmailThreadId": "19f898fb529669dd",
+      "gmailMessageIds": [
+        "19f898fb529669dd"
+      ],
+      "notes": "Tirth, Thank you for your interest in Accordion. We appreciate you taking the time to submit an application. Now that you have applied, our Talent Acquisition Team will review your resume and contact you should your background and experience meet the requirements for this specific role. In the meantime, please feel free to learn more about Accordion by visiting the links below - Solutions Overview ( https://www.accordion.com/solutions/ ) Representative Clients ( https://www.accordion.com/experience/clients/ ) Why Accordion ( https://www.accordion.com/careers/why-accordion/ ) Our Offices ( https://www.accordion.com/careers/office-locations/ ) Please do not reply to this message. This mailbox is not monitored.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -27619,7 +27619,7 @@
       "id": "msg-19f850fb1ef21248",
       "company": "Cloudforce",
       "role": "General Application",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-07-21T14:23:44+00:00",
       "latestSubject": "Thanks for your interest in Cloudforce",
@@ -27633,8 +27633,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: after careful consideration, decided not to proceed",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
@@ -28417,28 +28417,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "crosscountry-mortgage-general-application",
-      "company": "Crosscountry Mortgage",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-21T11:40:05+00:00",
-      "latestSubject": "Application Received",
-      "latestFrom": "Crosscountry Mortgage <crosscountrymortgage@myworkday.com>",
-      "gmailThreadId": "19f8479d975392d4",
-      "gmailMessageIds": [
-        "19f8479d975392d4"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f8479d975392d4",
       "company": "Crosscountry Mortgage",
       "role": "Data Engineer",
@@ -28458,6 +28436,28 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "crosscountry-mortgage-general-application",
+      "company": "Crosscountry Mortgage",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-21T11:40:05+00:00",
+      "latestSubject": "Application Received",
+      "latestFrom": "Crosscountry Mortgage <crosscountrymortgage@myworkday.com>",
+      "gmailThreadId": "19f8479d975392d4",
+      "gmailMessageIds": [
+        "19f8479d975392d4"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -28681,28 +28681,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f8463366646596",
-      "company": "Tom Sjostedt",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-21T11:15:19+00:00",
-      "latestSubject": "We invite you to join our candidate portal | Quoris, LLC",
-      "latestFrom": "Tom Sjostedt <thomas.sjostedt@quoris.com>",
-      "gmailThreadId": "19f8463366646596",
-      "gmailMessageIds": [
-        "19f8463366646596"
-      ],
-      "notes": "Welcome to Quoris, LLC Hello Tirth Shah, We are pleased to invite you to join the Quoris, LLC Candidate Portal. Through your portal account, you can update and manage your profile, track the progress",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "quoris-general-application",
       "company": "Quoris",
       "role": "General Application",
@@ -28723,6 +28701,28 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "medium"
+    },
+    {
+      "id": "msg-19f8463366646596",
+      "company": "Tom Sjostedt",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-21T11:15:19+00:00",
+      "latestSubject": "We invite you to join our candidate portal | Quoris, LLC",
+      "latestFrom": "Tom Sjostedt <thomas.sjostedt@quoris.com>",
+      "gmailThreadId": "19f8463366646596",
+      "gmailMessageIds": [
+        "19f8463366646596"
+      ],
+      "notes": "Welcome to Quoris, LLC Hello Tirth Shah, We are pleased to invite you to join the Quoris, LLC Candidate Portal. Through your portal account, you can update and manage your profile, track the progress",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as not_related",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
     },
     {
       "id": "metlife-data-engineer-ii",
@@ -28974,7 +28974,7 @@
       "id": "msg-19f7fd83b721c2cd",
       "company": "Rhythm Energy",
       "role": "General Application",
-      "status": "not_related",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-07-20T14:05:04+00:00",
       "latestSubject": "Rhythm Energy – Analytics Engineer II",
@@ -28987,8 +28987,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: decided to move forward with other candidates",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
@@ -29523,28 +29523,6 @@
       "aiConfidence": "medium"
     },
     {
-      "id": "mactores-general-application",
-      "company": "Mactores",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-20T11:22:27+00:00",
-      "latestSubject": "Thank you for your application to Mactores",
-      "latestFrom": "Mactores <no-reply@hire.lever.co>",
-      "gmailThreadId": "19f7f435d3914028",
-      "gmailMessageIds": [
-        "19f7f435d3914028"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f7f435d3914028",
       "company": "Mactores",
       "role": "Data Engineer",
@@ -29564,6 +29542,28 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "mactores-general-application",
+      "company": "Mactores",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-20T11:22:27+00:00",
+      "latestSubject": "Thank you for your application to Mactores",
+      "latestFrom": "Mactores <no-reply@hire.lever.co>",
+      "gmailThreadId": "19f7f435d3914028",
+      "gmailMessageIds": [
+        "19f7f435d3914028"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -29611,28 +29611,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f7f3b185a95a66",
-      "company": "Curtin Maritime",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-20T11:13:26+00:00",
-      "latestSubject": "Thank you for applying at Curtin Maritime",
-      "latestFrom": "Curtin Maritime <notifications@app.bamboohr.com>",
-      "gmailThreadId": "19f7f3b185a95a66",
-      "gmailMessageIds": [
-        "19f7f3b185a95a66"
-      ],
-      "notes": "Thanks Tirth! We received your application. Hi Tirth, Thank you for your interest in Curtin Maritime and for taking the time to apply for the Data Engineer position. We have received your application",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "curtin-maritime-general-application",
       "company": "Curtin Maritime",
       "role": "General Application",
@@ -29652,6 +29630,28 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "msg-19f7f3b185a95a66",
+      "company": "Curtin Maritime",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-20T11:13:26+00:00",
+      "latestSubject": "Thank you for applying at Curtin Maritime",
+      "latestFrom": "Curtin Maritime <notifications@app.bamboohr.com>",
+      "gmailThreadId": "19f7f3b185a95a66",
+      "gmailMessageIds": [
+        "19f7f3b185a95a66"
+      ],
+      "notes": "Thanks Tirth! We received your application. Hi Tirth, Thank you for your interest in Curtin Maritime and for taking the time to apply for the Data Engineer position. We have received your application",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
     {
@@ -30103,28 +30103,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f75d9a0aff4601",
-      "company": "Matthew Winkler",
-      "role": "Data Engineer",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-18T15:30:24+00:00",
-      "latestSubject": "Update on Your Application",
-      "latestFrom": "\"'Matthew Winkler'\" <matthew.winkler@corebts.com>",
-      "gmailThreadId": "19f75d9a0aff4601",
-      "gmailMessageIds": [
-        "19f75d9a0aff4601"
-      ],
-      "notes": "Dear Tirth, I appreciate your interest in the GCP Data Engineer. After careful consideration, we have decided to move forward with another candidate. We appreciate your time and effort and encourage",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "core-bts-gcp-data-engineer",
       "company": "Core BTS",
       "role": "GCP Data Engineer",
@@ -30147,25 +30125,25 @@
       "aiConfidence": "high"
     },
     {
-      "id": "coinbase-analytics-engineer-gfco-analytics",
-      "company": "Coinbase",
-      "role": "Analytics Engineer, GFCO Analytics",
+      "id": "msg-19f75d9a0aff4601",
+      "company": "Matthew Winkler",
+      "role": "Data Engineer",
       "status": "rejected",
       "confidence": "high",
-      "lastActivityAt": "2026-07-18T14:00:13+00:00",
-      "latestSubject": "Important information about your application to Coinbase",
-      "latestFrom": "no-reply@coinbase.com",
-      "gmailThreadId": "19f75871121760e0",
+      "lastActivityAt": "2026-07-18T15:30:24+00:00",
+      "latestSubject": "Update on Your Application",
+      "latestFrom": "\"'Matthew Winkler'\" <matthew.winkler@corebts.com>",
+      "gmailThreadId": "19f75d9a0aff4601",
       "gmailMessageIds": [
-        "19f75871121760e0"
+        "19f75d9a0aff4601"
       ],
-      "notes": "Hi Tirth, Thank you for applying to the Analytics Engineer, GFCO Analytics role at Coinbase. We’re truly inspired by the talented people interested in building an open financial system for the world. While this is never easy news to share, we've decided not to move forward with your candidacy. We appreciate you sharing your qualifications; however, we currently have other candidates with experience that align more closely with our needs at this time. Please keep an eye out for future positions that might be of interest to you, and we will continue to keep your information on file for new openings. We wish you the very best in your job search and future adventures! Coinbase Recruiting Join our Stand with Crypto ( https://www.coinbase.com/public-policy/advocacy/standwithcrypto ) campaign and become an advocate today.",
+      "notes": "Dear Tirth, I appreciate your interest in the GCP Data Engineer. After careful consideration, we have decided to move forward with another candidate. We appreciate your time and effort and encourage",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiDecision": "Candidate rejection notice: decided to move forward with another candidate",
+      "aiModel": "rule-based-scan",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
     {
@@ -30189,6 +30167,28 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "coinbase-analytics-engineer-gfco-analytics",
+      "company": "Coinbase",
+      "role": "Analytics Engineer, GFCO Analytics",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-18T14:00:13+00:00",
+      "latestSubject": "Important information about your application to Coinbase",
+      "latestFrom": "no-reply@coinbase.com",
+      "gmailThreadId": "19f75871121760e0",
+      "gmailMessageIds": [
+        "19f75871121760e0"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to the Analytics Engineer, GFCO Analytics role at Coinbase. We’re truly inspired by the talented people interested in building an open financial system for the world. While this is never easy news to share, we've decided not to move forward with your candidacy. We appreciate you sharing your qualifications; however, we currently have other candidates with experience that align more closely with our needs at this time. Please keep an eye out for future positions that might be of interest to you, and we will continue to keep your information on file for new openings. We wish you the very best in your job search and future adventures! Coinbase Recruiting Join our Stand with Crypto ( https://www.coinbase.com/public-policy/advocacy/standwithcrypto ) campaign and become an advocate today.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -30236,28 +30236,6 @@
       "aiConfidence": "medium"
     },
     {
-      "id": "msg-19f74c34d598e423",
-      "company": "Caitlyn White",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-18T10:26:23+00:00",
-      "latestSubject": "Contexture Status Update",
-      "latestFrom": "Caitlyn White <notifications@app.bamboohr.com>",
-      "gmailThreadId": "19f74c34d598e423",
-      "gmailMessageIds": [
-        "19f74c34d598e423"
-      ],
-      "notes": "##- Yes! You can reply directly to this email within 30 days and Caitlyn will get it. Just make sure it&#39;s above this line so we can read it right. -## Hello Tirth, Thank you for your interest in",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "contexture-general-application",
       "company": "Contexture",
       "role": "General Application",
@@ -30281,6 +30259,50 @@
       "aiConfidence": "high"
     },
     {
+      "id": "msg-19f74c34d598e423",
+      "company": "Caitlyn White",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-18T10:26:23+00:00",
+      "latestSubject": "Contexture Status Update",
+      "latestFrom": "Caitlyn White <notifications@app.bamboohr.com>",
+      "gmailThreadId": "19f74c34d598e423",
+      "gmailMessageIds": [
+        "19f74c34d598e423"
+      ],
+      "notes": "##- Yes! You can reply directly to this email within 30 days and Caitlyn will get it. Just make sure it&#39;s above this line so we can read it right. -## Hello Tirth, Thank you for your interest in",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "msg-19f739141a0e92cf",
+      "company": "SpaceXAI",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-18T04:52:06+00:00",
+      "latestSubject": "Your application to SpaceXAI",
+      "latestFrom": "no-reply@x.ai",
+      "gmailThreadId": "19f739141a0e92cf",
+      "gmailMessageIds": [
+        "19f739141a0e92cf"
+      ],
+      "notes": "Dear Tirth, Thank you for your interest in the Data Engineer position at SpaceXAI. After careful consideration, we&#39;re sorry to notify you that the team has decided not to move your application to",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Candidate rejection notice: team has decided not to move the application forward",
+      "aiModel": "rule-based-scan",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
       "id": "spacexai-data-engineer",
       "company": "Spacexai",
       "role": "Data Engineer",
@@ -30300,28 +30322,6 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19f739141a0e92cf",
-      "company": "SpaceXAI",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-18T04:52:06+00:00",
-      "latestSubject": "Your application to SpaceXAI",
-      "latestFrom": "no-reply@x.ai",
-      "gmailThreadId": "19f739141a0e92cf",
-      "gmailMessageIds": [
-        "19f739141a0e92cf"
-      ],
-      "notes": "Dear Tirth, Thank you for your interest in the Data Engineer position at SpaceXAI. After careful consideration, we&#39;re sorry to notify you that the team has decided not to move your application to",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
     {
@@ -30372,7 +30372,7 @@
       "id": "msg-19f724f2690ac41d",
       "company": "Covista Hiring",
       "role": "Data Engineer",
-      "status": "not_related",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-07-17T23:00:17+00:00",
       "latestSubject": "Covista",
@@ -30385,8 +30385,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
+      "aiDecision": "Candidate rejection notice: decided not to proceed",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
@@ -30394,7 +30394,7 @@
       "id": "covista-data-engineer",
       "company": "Covista",
       "role": "Data Engineer",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "lastActivityAt": "2026-07-17T23:00:17+00:00",
       "latestSubject": "Thank you for applying to Covista",
@@ -30408,8 +30408,8 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
+      "aiDecision": "Candidate rejection notice: decided to move forward with other candidates",
+      "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
@@ -30527,28 +30527,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "evolved-aerospace-general-application",
-      "company": "Evolved Aerospace",
-      "role": "General Application",
-      "status": "rejected",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-17T16:12:04+00:00",
-      "latestSubject": "Thank you for your interest in Evolved Aerospace",
-      "latestFrom": "Connor Hird <connor.hird@evolved.aero>",
-      "gmailThreadId": "19f70d9751d42573",
-      "gmailMessageIds": [
-        "19f70d9751d42573"
-      ],
-      "notes": "Hi Tirth, Thank you for your application to Evolved Aerospace. After reviewing your work and experience, we've made the decision to not move forward at this time. I hope you don't mind if we reach out to you in the future when a position opens up that may be a good fit. We appreciate your interest in Evolved Aerospace and wish you success in your job search. Best, Connor Hird Head of Recruitment Evolve Aerospace ",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f70d9751d42573",
       "company": "Connor Hird",
       "role": "General Application",
@@ -30571,25 +30549,25 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f70cf07055499d",
-      "company": "Us",
-      "role": "Software Engineer",
+      "id": "evolved-aerospace-general-application",
+      "company": "Evolved Aerospace",
+      "role": "General Application",
       "status": "rejected",
       "confidence": "high",
-      "lastActivityAt": "2026-07-17T16:00:43+00:00",
-      "latestSubject": "Your Cadence Application",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19f70cf07055499d",
+      "lastActivityAt": "2026-07-17T16:12:04+00:00",
+      "latestSubject": "Thank you for your interest in Evolved Aerospace",
+      "latestFrom": "Connor Hird <connor.hird@evolved.aero>",
+      "gmailThreadId": "19f70d9751d42573",
       "gmailMessageIds": [
-        "19f70cf07055499d"
+        "19f70d9751d42573"
       ],
-      "notes": "Hi TIRTH, Thank you for your interest in Cadence and taking the time to apply for the Senior Software Engineer, Agentic AI position. At this time, we have decided to move forward with candidates whose",
+      "notes": "Hi Tirth, Thank you for your application to Evolved Aerospace. After reviewing your work and experience, we've made the decision to not move forward at this time. I hope you don't mind if we reach out to you in the future when a position opens up that may be a good fit. We appreciate your interest in Evolved Aerospace and wish you success in your job search. Best, Connor Hird Head of Recruitment Evolve Aerospace ",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Candidate rejection notice: Cadence non-selection",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -30612,6 +30590,28 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "msg-19f70cf07055499d",
+      "company": "Us",
+      "role": "Software Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-17T16:00:43+00:00",
+      "latestSubject": "Your Cadence Application",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19f70cf07055499d",
+      "gmailMessageIds": [
+        "19f70cf07055499d"
+      ],
+      "notes": "Hi TIRTH, Thank you for your interest in Cadence and taking the time to apply for the Senior Software Engineer, Agentic AI position. At this time, we have decided to move forward with candidates whose",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Candidate rejection notice: Cadence non-selection",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
     {
@@ -30661,28 +30661,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "rippling-analytics-engineer-payments",
-      "company": "Rippling",
-      "role": "Analytics Engineer - Payments",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-17T12:12:04+00:00",
-      "latestSubject": "Thank you for applying to Rippling",
-      "latestFrom": "Rippling <no-reply@ats.rippling.com>",
-      "gmailThreadId": "19f6ffdb3511fae8",
-      "gmailMessageIds": [
-        "19f6ffdb3511fae8"
-      ],
-      "notes": "Hi Tirth , Thank you for applying to Rippling! We have received your application for Analytics Engineer - Payments and will review it promptly. If we think there is a good fit, we will reach out to you at this email address. Thank you, Rippling Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "rippling-analytics-engineer",
       "company": "Rippling",
       "role": "Analytics Engineer",
@@ -30702,6 +30680,28 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:32:56.703+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "rippling-analytics-engineer-payments",
+      "company": "Rippling",
+      "role": "Analytics Engineer - Payments",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-17T12:12:04+00:00",
+      "latestSubject": "Thank you for applying to Rippling",
+      "latestFrom": "Rippling <no-reply@ats.rippling.com>",
+      "gmailThreadId": "19f6ffdb3511fae8",
+      "gmailMessageIds": [
+        "19f6ffdb3511fae8"
+      ],
+      "notes": "Hi Tirth , Thank you for applying to Rippling! We have received your application for Analytics Engineer - Payments and will review it promptly. If we think there is a good fit, we will reach out to you at this email address. Thank you, Rippling Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -30840,28 +30840,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f6fe7c805e3e9c",
-      "company": "Redwood Materials",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-17T11:48:07+00:00",
-      "latestSubject": "Thank you for applying to Redwood Materials",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19f6fe7c805e3e9c",
-      "gmailMessageIds": [
-        "19f6fe7c805e3e9c"
-      ],
-      "notes": "Hi Tirth, Thank you for your interest in Redwood Materials! Your email has been received and we&#39;re excited that you would consider joining our team. Redwood&#39;s goal is to develop and deploy new",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "redwood-materials-general-application",
       "company": "Redwood Materials",
       "role": "General Application",
@@ -30881,6 +30859,28 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "msg-19f6fe7c805e3e9c",
+      "company": "Redwood Materials",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-17T11:48:07+00:00",
+      "latestSubject": "Thank you for applying to Redwood Materials",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19f6fe7c805e3e9c",
+      "gmailMessageIds": [
+        "19f6fe7c805e3e9c"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in Redwood Materials! Your email has been received and we&#39;re excited that you would consider joining our team. Redwood&#39;s goal is to develop and deploy new",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
     {
@@ -30972,28 +30972,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "virginia-passenger-rail-authority-general-application",
-      "company": "Virginia Passenger Rail Authority",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-07-17T11:36:45+00:00",
-      "latestSubject": "Virginia Passenger Rail Authority Application Account Information",
-      "latestFrom": "\"Virginia Passenger Rail Authority (isolved Applicant Tracking)\" <hello@send.applicantemails.com>",
-      "gmailThreadId": "19f6fdd5d474e806",
-      "gmailMessageIds": [
-        "19f6fdd5d474e806"
-      ],
-      "notes": "Dear Tirth, Thank you for starting an application for Virginia Passenger Rail Authority. You have set up an account that will allow you to log back in to print (not edit) complete applications, finish incomplete applications, update your contact information, or apply for future jobs with Virginia Passenger Rail Authority and other companies using the same system! If you would like to log back into your account, simply visit the link below. Your username is your email address. https://vapassengerrailauthority.isolvedhire.com/account/login.php?email=tirthcshah1999%40gmail.com When you first created your account, you were asked to create a password. This password will get you back into the system. If you do not remember your password, click on the link below, enter your email address and a new password reset link will be forwarded to you. https://vapassengerrailauthority.isolvedhire.com/account/forgot_password.php?email=tirthcshah1999%40gmail.com Thank you, Virginia Passenger Rail Authority This is an automated message. Please do not reply to this message. To unsubscribe click the following link below: https://email.send.applicantemails.com/u/eJwcyUGuhCAMANDTyNLQAgUWLP5RaosfEnWMkDn_ZGb9tCgw75BMK6KbEFKm4Gjfa8JECCE4rzYibGp6QYtkI0QARz6sqQbZfOWIQX2ObvF21EtXvu-jC1-zntyPscrrNE-Z_ZlNRuMGOefF2_-v_nCWBf_Mu-AnAAD__4C-Ko4 ",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "medium"
-    },
-    {
       "id": "msg-19f6fdd5d474e806",
       "company": "Send",
       "role": "General Application",
@@ -31014,6 +30992,28 @@
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
+    },
+    {
+      "id": "virginia-passenger-rail-authority-general-application",
+      "company": "Virginia Passenger Rail Authority",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-07-17T11:36:45+00:00",
+      "latestSubject": "Virginia Passenger Rail Authority Application Account Information",
+      "latestFrom": "\"Virginia Passenger Rail Authority (isolved Applicant Tracking)\" <hello@send.applicantemails.com>",
+      "gmailThreadId": "19f6fdd5d474e806",
+      "gmailMessageIds": [
+        "19f6fdd5d474e806"
+      ],
+      "notes": "Dear Tirth, Thank you for starting an application for Virginia Passenger Rail Authority. You have set up an account that will allow you to log back in to print (not edit) complete applications, finish incomplete applications, update your contact information, or apply for future jobs with Virginia Passenger Rail Authority and other companies using the same system! If you would like to log back into your account, simply visit the link below. Your username is your email address. https://vapassengerrailauthority.isolvedhire.com/account/login.php?email=tirthcshah1999%40gmail.com When you first created your account, you were asked to create a password. This password will get you back into the system. If you do not remember your password, click on the link below, enter your email address and a new password reset link will be forwarded to you. https://vapassengerrailauthority.isolvedhire.com/account/forgot_password.php?email=tirthcshah1999%40gmail.com Thank you, Virginia Passenger Rail Authority This is an automated message. Please do not reply to this message. To unsubscribe click the following link below: https://email.send.applicantemails.com/u/eJwcyUGuhCAMANDTyNLQAgUWLP5RaosfEnWMkDn_ZGb9tCgw75BMK6KbEFKm4Gjfa8JECCE4rzYibGp6QYtkI0QARz6sqQbZfOWIQX2ObvF21EtXvu-jC1-zntyPscrrNE-Z_ZlNRuMGOefF2_-v_nCWBf_Mu-AnAAD__4C-Ko4 ",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "medium"
     },
     {
       "id": "msg-19f6fdca95f0093d",
@@ -31038,28 +31038,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "omnicell-data-engineer-analytics-engineer-people-analytics",
-      "company": "Omnicell",
-      "role": "Data Engineer / Analytics Engineer – People Analytics",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-17T11:35:59+00:00",
-      "latestSubject": "Thanks for Applying! - Data Engineer / Analytics Engineer – People Analytics (5257)",
-      "latestFrom": "Omnicell Talent Acquisition <NoReply@omnicell.com>",
-      "gmailThreadId": "19f6fdca95f0093d",
-      "gmailMessageIds": [
-        "19f6fdca95f0093d"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "omnicell-data-engineer-analytics-engineer",
       "company": "Omnicell",
       "role": "Data Engineer / Analytics Engineer",
@@ -31079,6 +31057,28 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:32:56.703+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "omnicell-data-engineer-analytics-engineer-people-analytics",
+      "company": "Omnicell",
+      "role": "Data Engineer / Analytics Engineer – People Analytics",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-17T11:35:59+00:00",
+      "latestSubject": "Thanks for Applying! - Data Engineer / Analytics Engineer – People Analytics (5257)",
+      "latestFrom": "Omnicell Talent Acquisition <NoReply@omnicell.com>",
+      "gmailThreadId": "19f6fdca95f0093d",
+      "gmailMessageIds": [
+        "19f6fdca95f0093d"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -31126,28 +31126,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "arva-intelligence-data-engineer",
-      "company": "Arva Intelligence",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-17T11:29:05+00:00",
-      "latestSubject": "Thank you for applying to Arva Intelligence",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19f6fd659e3d1965",
-      "gmailMessageIds": [
-        "19f6fd659e3d1965"
-      ],
-      "notes": "Tirth, Thanks for applying to Arva Intelligence! We have received your application for the Data Engineer role and will review it shortly. If we think there is a good fit, we will reach out to you at this email address. Regards, Arva Intelligence ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f6fd659e3d1965",
       "company": "Arva Intelligence",
       "role": "Data Engineer",
@@ -31167,6 +31145,28 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "arva-intelligence-data-engineer",
+      "company": "Arva Intelligence",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-17T11:29:05+00:00",
+      "latestSubject": "Thank you for applying to Arva Intelligence",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19f6fd659e3d1965",
+      "gmailMessageIds": [
+        "19f6fd659e3d1965"
+      ],
+      "notes": "Tirth, Thanks for applying to Arva Intelligence! We have received your application for the Data Engineer role and will review it shortly. If we think there is a good fit, we will reach out to you at this email address. Regards, Arva Intelligence ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -31236,6 +31236,28 @@
       "aiConfidence": "medium"
     },
     {
+      "id": "physicians-mutual-insurance-associate-data-engineers",
+      "company": "Physicians Mutual Insurance",
+      "role": "Associate Data Engineers",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-17T11:25:52+00:00",
+      "latestSubject": "Thank You For Your Application",
+      "latestFrom": "\"Physicians Mutual Insurance Company, Inc. @ icims\" <physiciansmutual+autoreply@talent.icims.com>",
+      "gmailThreadId": "19f6fd36841ab961",
+      "gmailMessageIds": [
+        "19f6fd36841ab961"
+      ],
+      "notes": "Hi Tirth, Thank you for your recent application to the Associate Data Engineers (2026-2088) position at Physicians Mutual Insurance Company, Inc.. Your submission will be reviewed, and we may reach out for more information if needed. Thank you again for your interest in our company. Sincerely, Physicians Mutual Insurance Company, Inc. This is an automated email response. Please do not reply. ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/DdjrNS3uXFxQjZeRSgeYJw~~/AAIB5hA~/ZhYdzwDbFrf-6vUMN59uF04Qqvv9Dqdxbu0zx1LWKjLjpYJdIalsW0-hyAg09H2HyLcLmw7mQyho9-ETlUpyIWgFWatro3Xq1VbWYW55cZDAMZq3GvWtzcQ6Fz_h9YOi6Xf-Hda7xydGTR6jQC6XL7tz4keVkG6oVjIrdNi8Tyvqf7A3nrX6VvjGaJ0td30f /n &#169; Physicians Mutual Insurance Company, Inc. Nebraska USA/n ",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
       "id": "physicians-mutual-insurance-associate-data-engineer",
       "company": "Physicians Mutual Insurance",
       "role": "Associate Data Engineer",
@@ -31277,28 +31299,6 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "physicians-mutual-insurance-associate-data-engineers",
-      "company": "Physicians Mutual Insurance",
-      "role": "Associate Data Engineers",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-17T11:25:52+00:00",
-      "latestSubject": "Thank You For Your Application",
-      "latestFrom": "\"Physicians Mutual Insurance Company, Inc. @ icims\" <physiciansmutual+autoreply@talent.icims.com>",
-      "gmailThreadId": "19f6fd36841ab961",
-      "gmailMessageIds": [
-        "19f6fd36841ab961"
-      ],
-      "notes": "Hi Tirth, Thank you for your recent application to the Associate Data Engineers (2026-2088) position at Physicians Mutual Insurance Company, Inc.. Your submission will be reviewed, and we may reach out for more information if needed. Thank you again for your interest in our company. Sincerely, Physicians Mutual Insurance Company, Inc. This is an automated email response. Please do not reply. ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/DdjrNS3uXFxQjZeRSgeYJw~~/AAIB5hA~/ZhYdzwDbFrf-6vUMN59uF04Qqvv9Dqdxbu0zx1LWKjLjpYJdIalsW0-hyAg09H2HyLcLmw7mQyho9-ETlUpyIWgFWatro3Xq1VbWYW55cZDAMZq3GvWtzcQ6Fz_h9YOi6Xf-Hda7xydGTR6jQC6XL7tz4keVkG6oVjIrdNi8Tyvqf7A3nrX6VvjGaJ0td30f /n &#169; Physicians Mutual Insurance Company, Inc. Nebraska USA/n ",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -31390,6 +31390,28 @@
       "aiConfidence": "high"
     },
     {
+      "id": "msg-19f6fc604b94ea14",
+      "company": "Carmax",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-17T11:11:15+00:00",
+      "latestSubject": "CarMax incomplete application for Engineer II, Data",
+      "latestFrom": "noreply@carmax.com",
+      "gmailThreadId": "19f6fc604b94ea14",
+      "gmailMessageIds": [
+        "19f6fc604b94ea14"
+      ],
+      "notes": "Hello Tirth Shah, We need additional information from you to complete your CarMax application. We appreciate your interest in CarMax and our Engineer II, Data JR-175272 position. To move forward with",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as not_related",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
       "id": "carmax-engineer-ii-data",
       "company": "Carmax",
       "role": "Engineer Ii, Data",
@@ -31410,28 +31432,6 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19f6fc604b94ea14",
-      "company": "Carmax",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-17T11:11:15+00:00",
-      "latestSubject": "CarMax incomplete application for Engineer II, Data",
-      "latestFrom": "noreply@carmax.com",
-      "gmailThreadId": "19f6fc604b94ea14",
-      "gmailMessageIds": [
-        "19f6fc604b94ea14"
-      ],
-      "notes": "Hello Tirth Shah, We need additional information from you to complete your CarMax application. We appreciate your interest in CarMax and our Engineer II, Data JR-175272 position. To move forward with",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
     {
@@ -31545,28 +31545,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "continental-data-engineer",
-      "company": "Continental",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-17T11:06:56+00:00",
-      "latestSubject": "Application Received",
-      "latestFrom": "Continental Services <continentalserves@pinpoint.email>",
-      "gmailThreadId": "19f6fc2134ba41ad",
-      "gmailMessageIds": [
-        "19f6fc2134ba41ad"
-      ],
-      "notes": "Hi Tirth, Thank you for applying for Data Engineer at Continental. We’re excited that you’re interested in joining us! Our recruiting team carefully reviews every application, so if your background aligns with what we’re looking for, we’ll reach out soon to talk about next steps. In the meantime, you can start getting to know more about who we are by [hearing from our team members here](https://cdn.brandfolder.io/VGDDRCVN/as/5p5qxf99sk8gvjscnf5v844/Career_Growth_Video.mp4). The Continental Services Recruiting Team -------------------------------------------------- If you have any questions or would like to give us some feedback, you can reply to this email and it will go to the hiring team responsible for this role. -------------------------------------------------- Want to stop receiving communications from us? Manage your communication preferences. https://continentalserves.pinpointhq.com/candidates/communication_preferences/JADcyivDZLZ9BMCXRDJ2CWSt ",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f6fc2134ba41ad",
       "company": "Continental",
       "role": "Data Engineer",
@@ -31589,25 +31567,48 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f6fa9e3f9ffe58",
-      "company": "abra",
+      "id": "continental-data-engineer",
+      "company": "Continental",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-17T11:06:56+00:00",
+      "latestSubject": "Application Received",
+      "latestFrom": "Continental Services <continentalserves@pinpoint.email>",
+      "gmailThreadId": "19f6fc2134ba41ad",
+      "gmailMessageIds": [
+        "19f6fc2134ba41ad"
+      ],
+      "notes": "Hi Tirth, Thank you for applying for Data Engineer at Continental. We’re excited that you’re interested in joining us! Our recruiting team carefully reviews every application, so if your background aligns with what we’re looking for, we’ll reach out soon to talk about next steps. In the meantime, you can start getting to know more about who we are by [hearing from our team members here](https://cdn.brandfolder.io/VGDDRCVN/as/5p5qxf99sk8gvjscnf5v844/Career_Growth_Video.mp4). The Continental Services Recruiting Team -------------------------------------------------- If you have any questions or would like to give us some feedback, you can reply to this email and it will go to the hiring team responsible for this role. -------------------------------------------------- Want to stop receiving communications from us? Manage your communication preferences. https://continentalserves.pinpointhq.com/candidates/communication_preferences/JADcyivDZLZ9BMCXRDJ2CWSt ",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "abra-data-engineer",
+      "company": "Abra",
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "high",
       "lastActivityAt": "2026-07-17T10:40:32+00:00",
-      "latestSubject": "We Got It: Thanks for applying for Data engineer",
+      "latestSubject": "Thank you for applying for the Data engineer position at abra",
       "latestFrom": "abra <no-reply@abra.rnd.comeet-notifications.com>",
       "gmailThreadId": "19f6fa9e3f9ffe58",
       "gmailMessageIds": [
-        "19f6fa9e3f9ffe58"
+        "19f6fa9e3f9ffe58",
+        "19f6fa9e3287869b"
       ],
-      "notes": "Hi, Thank you for applying for a position at abra. We received your information and will contact you if there is a good match. Regards, abra&#39;s hiring team Sent via Spark Hire Recruit",
+      "notes": "",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -31633,26 +31634,25 @@
       "aiConfidence": "high"
     },
     {
-      "id": "abra-data-engineer",
-      "company": "Abra",
+      "id": "msg-19f6fa9e3f9ffe58",
+      "company": "abra",
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "high",
       "lastActivityAt": "2026-07-17T10:40:32+00:00",
-      "latestSubject": "Thank you for applying for the Data engineer position at abra",
+      "latestSubject": "We Got It: Thanks for applying for Data engineer",
       "latestFrom": "abra <no-reply@abra.rnd.comeet-notifications.com>",
       "gmailThreadId": "19f6fa9e3f9ffe58",
       "gmailMessageIds": [
-        "19f6fa9e3f9ffe58",
-        "19f6fa9e3287869b"
+        "19f6fa9e3f9ffe58"
       ],
-      "notes": "",
+      "notes": "Hi, Thank you for applying for a position at abra. We received your information and will contact you if there is a good match. Regards, abra&#39;s hiring team Sent via Spark Hire Recruit",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
     {
@@ -31722,28 +31722,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "globallogic-general-application",
-      "company": "Globallogic",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-17T10:17:11+00:00",
-      "latestSubject": "Application Submitted - Thank you for applying at GlobalLogic",
-      "latestFrom": "GlobalLogic <careers@globallogic.com>",
-      "gmailThreadId": "19f6f948be44ecda",
-      "gmailMessageIds": [
-        "19f6f948be44ecda"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f6f948be44ecda",
       "company": "GlobalLogic",
       "role": "General Application",
@@ -31763,6 +31741,28 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "globallogic-general-application",
+      "company": "Globallogic",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-17T10:17:11+00:00",
+      "latestSubject": "Application Submitted - Thank you for applying at GlobalLogic",
+      "latestFrom": "GlobalLogic <careers@globallogic.com>",
+      "gmailThreadId": "19f6f948be44ecda",
+      "gmailMessageIds": [
+        "19f6f948be44ecda"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -31877,28 +31877,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "data-device-quality-engineer",
-      "company": "Data Device",
-      "role": "Quality Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-17T05:53:52+00:00",
-      "latestSubject": "Application Received",
-      "latestFrom": "ClearCompany <do_not_reply@clearcompany.com>",
-      "gmailThreadId": "19f6ea37063c12d3",
-      "gmailMessageIds": [
-        "19f6ea37063c12d3"
-      ],
-      "notes": " Dear Tirth, Thank you for your interest in Data Device Corporation and the Quality Engineer position. We have received your application and it is currently under review. If your qualifications fit the specifications of the position, we will follow up with you regarding the next steps. We appreciate your interest in employment with Data Device Corporation. Sincerely, Data Device Corporation Recruiting Team ",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f6ea37063c12d3",
       "company": "ClearCompany",
       "role": "General Application",
@@ -31918,6 +31896,28 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "data-device-quality-engineer",
+      "company": "Data Device",
+      "role": "Quality Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-17T05:53:52+00:00",
+      "latestSubject": "Application Received",
+      "latestFrom": "ClearCompany <do_not_reply@clearcompany.com>",
+      "gmailThreadId": "19f6ea37063c12d3",
+      "gmailMessageIds": [
+        "19f6ea37063c12d3"
+      ],
+      "notes": " Dear Tirth, Thank you for your interest in Data Device Corporation and the Quality Engineer position. We have received your application and it is currently under review. If your qualifications fit the specifications of the position, we will follow up with you regarding the next steps. We appreciate your interest in employment with Data Device Corporation. Sincerely, Data Device Corporation Recruiting Team ",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -31943,28 +31943,6 @@
       "aiConfidence": "medium"
     },
     {
-      "id": "msg-19f6c890a13cfa5a",
-      "company": "Hollstadt",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-16T20:05:47+00:00",
-      "latestSubject": "Hollstadt Consulting Application Update: Curated Data Integration Engineer",
-      "latestFrom": "Hollstadt <hello@hollstadt.com>",
-      "gmailThreadId": "19f6c890a13cfa5a",
-      "gmailMessageIds": [
-        "19f6c890a13cfa5a"
-      ],
-      "notes": "Dear Tirth , Thank you for your interest in the Curated Data Integration Engineer position. We really appreciate your interest in joining the Hollstadt team. After careful consideration, we regret to",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "hollstadt-consulting-curated-data-integration-engineer",
       "company": "Hollstadt Consulting",
       "role": "Curated Data Integration Engineer",
@@ -31985,6 +31963,28 @@
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "medium"
+    },
+    {
+      "id": "msg-19f6c890a13cfa5a",
+      "company": "Hollstadt",
+      "role": "General Application",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-16T20:05:47+00:00",
+      "latestSubject": "Hollstadt Consulting Application Update: Curated Data Integration Engineer",
+      "latestFrom": "Hollstadt <hello@hollstadt.com>",
+      "gmailThreadId": "19f6c890a13cfa5a",
+      "gmailMessageIds": [
+        "19f6c890a13cfa5a"
+      ],
+      "notes": "Dear Tirth , Thank you for your interest in the Curated Data Integration Engineer position. We really appreciate your interest in joining the Hollstadt team. After careful consideration, we regret to",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Candidate rejection notice: after careful consideration, regret to inform",
+      "aiModel": "rule-based-scan",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
     },
     {
       "id": "msg-19f6bc75a98a8029",
@@ -32191,28 +32191,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f6ac08a8bd360a",
-      "company": "Rightway",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-16T11:47:10+00:00",
-      "latestSubject": "Thank you for applying to Rightway",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19f6ac08a8bd360a",
-      "gmailMessageIds": [
-        "19f6ac08a8bd360a"
-      ],
-      "notes": "Hi Tirth, Thanks for applying to the Analytics Engineer, Platform position at Rightway. Your application has been received and we will review it right away. If your application seems like a good fit",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "rightway-analytics-engineer",
       "company": "Rightway",
       "role": "Analytics Engineer",
@@ -32232,6 +32210,28 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "msg-19f6ac08a8bd360a",
+      "company": "Rightway",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-16T11:47:10+00:00",
+      "latestSubject": "Thank you for applying to Rightway",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19f6ac08a8bd360a",
+      "gmailMessageIds": [
+        "19f6ac08a8bd360a"
+      ],
+      "notes": "Hi Tirth, Thanks for applying to the Analytics Engineer, Platform position at Rightway. Your application has been received and we will review it right away. If your application seems like a good fit",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
     {
@@ -32412,6 +32412,28 @@
       "aiConfidence": "high"
     },
     {
+      "id": "epam-data-engineer",
+      "company": "EPAM",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-16T11:02:45+00:00",
+      "latestSubject": "Your application results",
+      "latestFrom": "EPAM Hiring Team <noreply@epam.com>",
+      "gmailThreadId": "19f6a97de4767509",
+      "gmailMessageIds": [
+        "19f6a97de4767509"
+      ],
+      "notes": "Your application results Hello Tirth, <p>Thank you for your interest in the Data Engineer role at EPAM.&nbsp;</p><p>At the moment, there are no open positions that are a good match for your qualifications. We encourage you to apply for any open positions that fit your interests and qualifications in the future.&nbsp;</p><p>Thank you again for your time and we wish you all the best in your career.&nbsp;</p><p>Please follow EPAM community updates on <a href=\"https://www.linkedin.com/company/epam-systems/\" target=\"_self\"><u>LinkedIn</u></a> and <a href=\"https://www.facebook.com/EPAM.Global/\" target=\"_self\"><u>Facebook</u></a>.&nbsp;</p> Thank you, EPAM Talent Acquisition Team © 2026 EPAM Systems, Inc. All Rights Reserved 41 University Drive, Suite 202, Newtown, PA 18940, USA You can unsubscribe (https://hs-20543775.s.hubspotemail.net/hs/preferences-center/en/page?data=W2nXS-N30h-zsW1S4Lzp1_rZHwW45kc3B2THSMYW20Z1FS3F6LtBW49CbsR41Rgy4W43nMxV3T3r5kW2qRh1545DY9nW47LTf845SZ74W3j632y43nn09W2FtxF62CX29WW3jgNC33BMYKcW2Pmj8V1ZdVFbW1T_-vV2FSVfyW2YtbR13JTYJvW2TKXfV3K98rMW3SJn0v1LvDP-W1QkWgz3LYrmPW41yf5249txq_W3j085x32GpMRW49l0S-2PPbh9W4mjHDH22VB4wW3Fd4zN3GFL2vW3LDR6S30rT0tW32sxJx1X1TkQW1YZ5_f2Pt8d7W3674kq3M2kCmW1LhlV13VWRGXW2KRh0S45QSgvW1_pr7p47vB93W237F_F3R4qplW2KGYt-3C83zdW347DGq368gMjW3Z_2X534DVjTW47N6622y2-j0W2KG62f49K4-cW4hJtdn32rgMKW2YP7Tb4hKK7KW4ffySv3_Ly4JW38Ch4s3LXbF-W3Fb3mj2r6X_WW3H7jmx2p4cNcW2FTLPR2WpcGbW21gyVk34hcskW3JQ8J44hFWCKW1S36vw3V_3mgW2C-qQd3CbDXCW3G-Dzj2WsvWXW3ZDpqh36c_WsW368lsl4hy7R4W4cjzs22WhMSMW21rHWc49lrdgW2p9c-D30rWzbW30rvwq2RjGdxW3VzVDF4mrjWDW1QgY_v3gvb9xW2HtJ712HrDbNW2F_36h1QcfFrW1_3zYm43q28vW2TNRdn4kkDF50&_hsenc=p2ANqtz-_6peQlhA9uIGYlEeY_nh1zkX3J9EOU1kf_sy33FxGd1lc0CIK3M6UYgJiJQOl8a6EwJhnBPUuaWklwvSs21O-ccw_Dgw&_hsmi=280474875 ) or ask to delete your profile (mailto:privacy@epam.com?Subject=Request%20to%20delete%20profile)",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
       "id": "msg-19f6a97de4767509",
       "company": "EPAM Hiring",
       "role": "Data Engineer",
@@ -32434,19 +32456,20 @@
       "aiConfidence": "high"
     },
     {
-      "id": "epam-data-engineer",
-      "company": "EPAM",
+      "id": "david-protein-data-engineer",
+      "company": "David Protein",
       "role": "Data Engineer",
-      "status": "rejected",
+      "status": "applied",
       "confidence": "high",
-      "lastActivityAt": "2026-07-16T11:02:45+00:00",
-      "latestSubject": "Your application results",
-      "latestFrom": "EPAM Hiring Team <noreply@epam.com>",
-      "gmailThreadId": "19f6a97de4767509",
+      "lastActivityAt": "2026-07-16T11:01:55+00:00",
+      "latestSubject": "Thanks for applying to David Protein",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "gmailThreadId": "19f6a971d5ce5c4a",
       "gmailMessageIds": [
-        "19f6a97de4767509"
+        "19f6a971d5ce5c4a",
+        "19f6a7d598762943"
       ],
-      "notes": "Your application results Hello Tirth, <p>Thank you for your interest in the Data Engineer role at EPAM.&nbsp;</p><p>At the moment, there are no open positions that are a good match for your qualifications. We encourage you to apply for any open positions that fit your interests and qualifications in the future.&nbsp;</p><p>Thank you again for your time and we wish you all the best in your career.&nbsp;</p><p>Please follow EPAM community updates on <a href=\"https://www.linkedin.com/company/epam-systems/\" target=\"_self\"><u>LinkedIn</u></a> and <a href=\"https://www.facebook.com/EPAM.Global/\" target=\"_self\"><u>Facebook</u></a>.&nbsp;</p> Thank you, EPAM Talent Acquisition Team © 2026 EPAM Systems, Inc. All Rights Reserved 41 University Drive, Suite 202, Newtown, PA 18940, USA You can unsubscribe (https://hs-20543775.s.hubspotemail.net/hs/preferences-center/en/page?data=W2nXS-N30h-zsW1S4Lzp1_rZHwW45kc3B2THSMYW20Z1FS3F6LtBW49CbsR41Rgy4W43nMxV3T3r5kW2qRh1545DY9nW47LTf845SZ74W3j632y43nn09W2FtxF62CX29WW3jgNC33BMYKcW2Pmj8V1ZdVFbW1T_-vV2FSVfyW2YtbR13JTYJvW2TKXfV3K98rMW3SJn0v1LvDP-W1QkWgz3LYrmPW41yf5249txq_W3j085x32GpMRW49l0S-2PPbh9W4mjHDH22VB4wW3Fd4zN3GFL2vW3LDR6S30rT0tW32sxJx1X1TkQW1YZ5_f2Pt8d7W3674kq3M2kCmW1LhlV13VWRGXW2KRh0S45QSgvW1_pr7p47vB93W237F_F3R4qplW2KGYt-3C83zdW347DGq368gMjW3Z_2X534DVjTW47N6622y2-j0W2KG62f49K4-cW4hJtdn32rgMKW2YP7Tb4hKK7KW4ffySv3_Ly4JW38Ch4s3LXbF-W3Fb3mj2r6X_WW3H7jmx2p4cNcW2FTLPR2WpcGbW21gyVk34hcskW3JQ8J44hFWCKW1S36vw3V_3mgW2C-qQd3CbDXCW3G-Dzj2WsvWXW3ZDpqh36c_WsW368lsl4hy7R4W4cjzs22WhMSMW21rHWc49lrdgW2p9c-D30rWzbW30rvwq2RjGdxW3VzVDF4mrjWDW1QgY_v3gvb9xW2HtJ712HrDbNW2F_36h1QcfFrW1_3zYm43q28vW2TNRdn4kkDF50&_hsenc=p2ANqtz-_6peQlhA9uIGYlEeY_nh1zkX3J9EOU1kf_sy33FxGd1lc0CIK3M6UYgJiJQOl8a6EwJhnBPUuaWklwvSs21O-ccw_Dgw&_hsmi=280474875 ) or ask to delete your profile (mailto:privacy@epam.com?Subject=Request%20to%20delete%20profile)",
+      "notes": " ------------------------------------------------------------------------------- Hey Tirth, Thank you for your interest in David Protein. Our team is currently reviewing applications for this role. If there are any next steps, we’ll be in touch with you shortly. We kindly ask that you do not reply directly to this message. Best, Hugh Director of People @ David ------------------------------------------------------------------------------- ------------------------------------------------------------------------------- ",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -32479,26 +32502,25 @@
       "aiConfidence": "high"
     },
     {
-      "id": "david-protein-data-engineer",
-      "company": "David Protein",
-      "role": "Data Engineer",
+      "id": "msg-19f6a9189a990f17",
+      "company": "Applytojob",
+      "role": "General Application",
       "status": "applied",
       "confidence": "high",
-      "lastActivityAt": "2026-07-16T11:01:55+00:00",
-      "latestSubject": "Thanks for applying to David Protein",
-      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
-      "gmailThreadId": "19f6a971d5ce5c4a",
+      "lastActivityAt": "2026-07-16T10:55:49+00:00",
+      "latestSubject": "Tirth, we've received your application",
+      "latestFrom": "Office of the Illinois State Treasurer <noreply@applytojob.com>",
+      "gmailThreadId": "19f6a9189a990f17",
       "gmailMessageIds": [
-        "19f6a971d5ce5c4a",
-        "19f6a7d598762943"
+        "19f6a9189a990f17"
       ],
-      "notes": " ------------------------------------------------------------------------------- Hey Tirth, Thank you for your interest in David Protein. Our team is currently reviewing applications for this role. If there are any next steps, we’ll be in touch with you shortly. We kindly ask that you do not reply directly to this message. Best, Hugh Director of People @ David ------------------------------------------------------------------------------- ------------------------------------------------------------------------------- ",
+      "notes": "Hello Tirth, Thank you for applying for a position at Office of the Illinois State Treasurer. We have received your application. It&#39;s exciting to see so many candidates applying for a position here",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
     {
@@ -32524,25 +32546,25 @@
       "aiConfidence": "medium"
     },
     {
-      "id": "msg-19f6a9189a990f17",
-      "company": "Applytojob",
-      "role": "General Application",
+      "id": "qcells-data-engineer",
+      "company": "Qcells",
+      "role": "Data Engineer",
       "status": "applied",
       "confidence": "high",
-      "lastActivityAt": "2026-07-16T10:55:49+00:00",
-      "latestSubject": "Tirth, we've received your application",
-      "latestFrom": "Office of the Illinois State Treasurer <noreply@applytojob.com>",
-      "gmailThreadId": "19f6a9189a990f17",
+      "lastActivityAt": "2026-07-16T10:51:24+00:00",
+      "latestSubject": "Your application for Data Engineer at Qcells",
+      "latestFrom": "Qcells Recruiting Team <notification@jobvite.com>",
+      "gmailThreadId": "19f6a8d7c38e771b",
       "gmailMessageIds": [
-        "19f6a9189a990f17"
+        "19f6a8d7c38e771b"
       ],
-      "notes": "Hello Tirth, Thank you for applying for a position at Office of the Illinois State Treasurer. We have received your application. It&#39;s exciting to see so many candidates applying for a position here",
+      "notes": "",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -32565,28 +32587,6 @@
       "aiDecision": "Classified as not_related",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "qcells-data-engineer",
-      "company": "Qcells",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-16T10:51:24+00:00",
-      "latestSubject": "Your application for Data Engineer at Qcells",
-      "latestFrom": "Qcells Recruiting Team <notification@jobvite.com>",
-      "gmailThreadId": "19f6a8d7c38e771b",
-      "gmailMessageIds": [
-        "19f6a8d7c38e771b"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -33545,6 +33545,28 @@
       "aiConfidence": "high"
     },
     {
+      "id": "healthfirst-data-engineer",
+      "company": "Healthfirst",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-15T10:51:42+00:00",
+      "latestSubject": "Thank you for your application!",
+      "latestFrom": "Opportunities <opportunities@careeralerts.healthfirst.org>",
+      "gmailThreadId": "19f656764a8b1b61",
+      "gmailMessageIds": [
+        "19f656764a8b1b61"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in Healthfirst and for applying to the Data Engineer role! We appreciate the time and effort you put into your application. Our team will review your application and reach out if your skills and experience are a good fit for the role. Thank you again for your interest in Healthfirst. We look forward to reviewing your application and will be in touch soon. The Healthfirst Careers Team Connect with us on [1] [2] [3] [4] Visit us on our career site at [5] careers.healthfirst.org (c) 2026 Healthfirst Inc. All Rights Reserved. To ensure delivery to your inbox, please add this email address to your address book. You can [6] unsubscribe here and stop receiving these emails. References Visible links 1. http://healthfirst.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NzAzMTMzLCJoYXNoIjoiZDNjY2JkNzFhMjdhYjQ4M2I3Zjg5YWEzN2NjNTY4NGI2NjhmNmJmNGVkYWRmNzhkMzRlZDQ3MjE5NDgyOTg0ZCJ9.cmLq0R3RtlHpOy2e3-wjtX05M1yHgZ7Ao02rghTtRJA 2. http://healthfirst.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NzAzMTMzLCJoYXNoIjoiYzQyZmRkZGY0NzQxMzg1NGU4NGNmNGUxOGMxZjY2YjIyYTU5MDE0NDM5ZDgwNWYwZTFlYjQwMGQwZTg0ZDdlMSJ9.VyFW0ca8M2DDYs0VK3WWPLRAnrtTijmAtfYx4wvKU8E 3. http://healthfirst.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NzAzMTMzLCJoYXNoIjoiM2M3YmZlZTYzYzllYzQyOTY5YmJjOWMwYjNlZTQyYzliM2M2ZWMwMzIxYjVjZmQ5ZjBjYTdlOGI4NDcyMzgxZiJ9.cTetq82qoVYnz0hjlh1QIEbvChcQxwmH7wzWhz4SqWk 4. http://healthfirst.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NzAzMTMzLCJoYXNoIjoiNTI3Y2VmNWI0YTBjNjVmYmY2MWFiODFmMTdkNmIwN2Y1YjJkM2YwODljN2EwZjVjOWJiZjRhN2ExZWJiYTUyZiJ9.0HCiCKhMDzuNarZjatMO23cSjc6tmsawl3QfmJAu46Y 5. http://healthfirst.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NzAzMTMzLCJoYXNoIjoiNGQ0YTc1MzY5NzlhOTdjN2U1MzU0YWFlODhkZmI4MjliY2I5MTVmMTUyNTFhYTZhN2Q3NGEyODU4Y2U3ODk1ZSJ9.F8zrMoK5cbwfREJlrViyytJAVMxCQOpp7yxBC099CJI 6. https://healthfirst.avature.net/unsubscribe.php?uid=6fb209f92b968302c077535b50785c484741398b&code=-cxHedwwS0ssYi6l5SzRMvmNmVplIVUB ",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
       "id": "msg-19f656764a8b1b61",
       "company": "Opportunities",
       "role": "Data Engineer",
@@ -33567,19 +33589,19 @@
       "aiConfidence": "high"
     },
     {
-      "id": "healthfirst-data-engineer",
-      "company": "Healthfirst",
+      "id": "free-market-health-data-engineer",
+      "company": "Free Market Health",
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "high",
-      "lastActivityAt": "2026-07-15T10:51:42+00:00",
-      "latestSubject": "Thank you for your application!",
-      "latestFrom": "Opportunities <opportunities@careeralerts.healthfirst.org>",
-      "gmailThreadId": "19f656764a8b1b61",
+      "lastActivityAt": "2026-07-15T10:51:16+00:00",
+      "latestSubject": "Thank you for applying to Free Market Health",
+      "latestFrom": "Free Market Health <no-reply@ats.rippling.com>",
+      "gmailThreadId": "19f656701004d393",
       "gmailMessageIds": [
-        "19f656764a8b1b61"
+        "19f656701004d393"
       ],
-      "notes": "Hi Tirth, Thank you for your interest in Healthfirst and for applying to the Data Engineer role! We appreciate the time and effort you put into your application. Our team will review your application and reach out if your skills and experience are a good fit for the role. Thank you again for your interest in Healthfirst. We look forward to reviewing your application and will be in touch soon. The Healthfirst Careers Team Connect with us on [1] [2] [3] [4] Visit us on our career site at [5] careers.healthfirst.org (c) 2026 Healthfirst Inc. All Rights Reserved. To ensure delivery to your inbox, please add this email address to your address book. You can [6] unsubscribe here and stop receiving these emails. References Visible links 1. http://healthfirst.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NzAzMTMzLCJoYXNoIjoiZDNjY2JkNzFhMjdhYjQ4M2I3Zjg5YWEzN2NjNTY4NGI2NjhmNmJmNGVkYWRmNzhkMzRlZDQ3MjE5NDgyOTg0ZCJ9.cmLq0R3RtlHpOy2e3-wjtX05M1yHgZ7Ao02rghTtRJA 2. http://healthfirst.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NzAzMTMzLCJoYXNoIjoiYzQyZmRkZGY0NzQxMzg1NGU4NGNmNGUxOGMxZjY2YjIyYTU5MDE0NDM5ZDgwNWYwZTFlYjQwMGQwZTg0ZDdlMSJ9.VyFW0ca8M2DDYs0VK3WWPLRAnrtTijmAtfYx4wvKU8E 3. http://healthfirst.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NzAzMTMzLCJoYXNoIjoiM2M3YmZlZTYzYzllYzQyOTY5YmJjOWMwYjNlZTQyYzliM2M2ZWMwMzIxYjVjZmQ5ZjBjYTdlOGI4NDcyMzgxZiJ9.cTetq82qoVYnz0hjlh1QIEbvChcQxwmH7wzWhz4SqWk 4. http://healthfirst.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NzAzMTMzLCJoYXNoIjoiNTI3Y2VmNWI0YTBjNjVmYmY2MWFiODFmMTdkNmIwN2Y1YjJkM2YwODljN2EwZjVjOWJiZjRhN2ExZWJiYTUyZiJ9.0HCiCKhMDzuNarZjatMO23cSjc6tmsawl3QfmJAu46Y 5. http://healthfirst.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NzAzMTMzLCJoYXNoIjoiNGQ0YTc1MzY5NzlhOTdjN2U1MzU0YWFlODhkZmI4MjliY2I5MTVmMTUyNTFhYTZhN2Q3NGEyODU4Y2U3ODk1ZSJ9.F8zrMoK5cbwfREJlrViyytJAVMxCQOpp7yxBC099CJI 6. https://healthfirst.avature.net/unsubscribe.php?uid=6fb209f92b968302c077535b50785c484741398b&code=-cxHedwwS0ssYi6l5SzRMvmNmVplIVUB ",
+      "notes": "Hi Tirth, Thank you for applying to Free Market Health! We have received your application and will review it promptly. If we think there is a good fit, we will contact you at this email address. *Position:* Data Engineer Thank you, Free Market Health Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read.",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -33611,19 +33633,19 @@
       "aiConfidence": "high"
     },
     {
-      "id": "free-market-health-data-engineer",
-      "company": "Free Market Health",
+      "id": "brevian-data-engineer",
+      "company": "Brevian",
       "role": "Data Engineer",
       "status": "applied",
       "confidence": "high",
-      "lastActivityAt": "2026-07-15T10:51:16+00:00",
-      "latestSubject": "Thank you for applying to Free Market Health",
-      "latestFrom": "Free Market Health <no-reply@ats.rippling.com>",
-      "gmailThreadId": "19f656701004d393",
+      "lastActivityAt": "2026-07-15T10:49:49+00:00",
+      "latestSubject": "Thank you for applying to BREVIAN",
+      "latestFrom": "BREVIAN <no-reply@ats.rippling.com>",
+      "gmailThreadId": "19f6565ac1a2ba93",
       "gmailMessageIds": [
-        "19f656701004d393"
+        "19f6565ac1a2ba93"
       ],
-      "notes": "Hi Tirth, Thank you for applying to Free Market Health! We have received your application and will review it promptly. If we think there is a good fit, we will contact you at this email address. *Position:* Data Engineer Thank you, Free Market Health Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read.",
+      "notes": "Hi Tirth, Thank you for applying to BREVIAN! We have received your application and will review it promptly. If we think there is a good fit, we will contact you at this email address. *Position:* Data Engineer Thank you, BREVIAN Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read.",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -33652,28 +33674,6 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "brevian-data-engineer",
-      "company": "Brevian",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-15T10:49:49+00:00",
-      "latestSubject": "Thank you for applying to BREVIAN",
-      "latestFrom": "BREVIAN <no-reply@ats.rippling.com>",
-      "gmailThreadId": "19f6565ac1a2ba93",
-      "gmailMessageIds": [
-        "19f6565ac1a2ba93"
-      ],
-      "notes": "Hi Tirth, Thank you for applying to BREVIAN! We have received your application and will review it promptly. If we think there is a good fit, we will contact you at this email address. *Position:* Data Engineer Thank you, BREVIAN Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -35596,9 +35596,9 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19f5cd326e7bc747",
-      "company": "Senior AI Engineer I",
-      "role": "General Application",
+      "id": "american-express-senior-ai-engineer",
+      "company": "American Express",
+      "role": "Senior AI Engineer",
       "status": "applied",
       "confidence": "high",
       "lastActivityAt": "2026-07-13T18:52:47+00:00",
@@ -35608,13 +35608,13 @@
       "gmailMessageIds": [
         "19f5cd326e7bc747"
       ],
-      "notes": "Hello TIRTH, Thank you for exploring new career opportunities with American Express! Your application for the position of Senior AI Engineer I - Agentic AI has been received. While we review your",
+      "notes": "",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:32:56.704+00:00",
       "aiConfidence": "high"
     },
     {
@@ -35640,9 +35640,9 @@
       "aiConfidence": "high"
     },
     {
-      "id": "american-express-senior-ai-engineer",
-      "company": "American Express",
-      "role": "Senior AI Engineer",
+      "id": "msg-19f5cd326e7bc747",
+      "company": "Senior AI Engineer I",
+      "role": "General Application",
       "status": "applied",
       "confidence": "high",
       "lastActivityAt": "2026-07-13T18:52:47+00:00",
@@ -35652,29 +35652,7 @@
       "gmailMessageIds": [
         "19f5cd326e7bc747"
       ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:32:56.704+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19f5cd2efd21685e",
-      "company": "Camber Morris",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-13T18:52:35+00:00",
-      "latestSubject": "Your application to Camber Morris",
-      "latestFrom": "\"Lisa, Alfa AI\" <lisa@welovealfa.ai>",
-      "gmailThreadId": "19f5cd2efd21685e",
-      "gmailMessageIds": [
-        "19f5cd2efd21685e"
-      ],
-      "notes": "Your application to Camber Morris ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿",
+      "notes": "Hello TIRTH, Thank you for exploring new career opportunities with American Express! Your application for the position of Senior AI Engineer I - Agentic AI has been received. While we review your",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -35703,6 +35681,28 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "msg-19f5cd2efd21685e",
+      "company": "Camber Morris",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-13T18:52:35+00:00",
+      "latestSubject": "Your application to Camber Morris",
+      "latestFrom": "\"Lisa, Alfa AI\" <lisa@welovealfa.ai>",
+      "gmailThreadId": "19f5cd2efd21685e",
+      "gmailMessageIds": [
+        "19f5cd2efd21685e"
+      ],
+      "notes": "Your application to Camber Morris ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
     },
     {
@@ -35794,28 +35794,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "kargo-general-application",
-      "company": "Kargo",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-13T18:45:28+00:00",
-      "latestSubject": "Thank you for applying to Kargo",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19f5ccc6ea271f47",
-      "gmailMessageIds": [
-        "19f5ccc6ea271f47"
-      ],
-      "notes": "Thank you for submitting your application to Kargo. Your application has been received and will be reviewed. If your background is a fit for our team, we will contact you for next steps. Best, Team Kargo ** Note: Please do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f5ccc6ea271f47",
       "company": "Kargo",
       "role": "General Application",
@@ -35835,6 +35813,28 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "kargo-general-application",
+      "company": "Kargo",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-13T18:45:28+00:00",
+      "latestSubject": "Thank you for applying to Kargo",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19f5ccc6ea271f47",
+      "gmailMessageIds": [
+        "19f5ccc6ea271f47"
+      ],
+      "notes": "Thank you for submitting your application to Kargo. Your application has been received and will be reviewed. If your background is a fit for our team, we will contact you for next steps. Best, Team Kargo ** Note: Please do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -35882,29 +35882,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "bloomberg-data-engineer-employee-technology-support",
-      "company": "Bloomberg",
-      "role": "Data Engineer, Employee Technology Support",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-09T19:30:13+00:00",
-      "latestSubject": "Bloomberg- Thank you for your Application (Data Engineer, Employee Technology Support - 10052396)",
-      "latestFrom": "Bloomberg Recruiting <blprecruiting@recruiting.bloomberg.com>",
-      "gmailThreadId": "19f485bf67e86635",
-      "gmailMessageIds": [
-        "19f485bf67e86635",
-        "19f24dfb47b69f2e"
-      ],
-      "notes": "Hello Tirth, Thank you again for your application for the Data Engineer, Employee Technology Support position and your interest in Bloomberg. Unfortunately, we have decided not to proceed with your candidacy at this time, but we appreciate the time and effort you dedicated to the application process. We will keep you in mind for future openings and encourage you to stay current on new opportunities on our careers site. Best, Global Talent Acquisition Bloomberg LP Note: This mailbox is unmonitored and replies will not reach Bloomberg Talent Acquisition. Please reach out to your recruiting contact instead.​ Bloomberg is an Equal Opportunity Employer, including disabled/veterans. To review our EEO & Accommodations policies, please click [1] here. For questions about your application, please contact AMER_recruit@bloomberg.net (Americas), EMEA_recruit@bloomberg.net (Europe, the Middle East and Africa), or APAC_recruit@bloomberg.net (Asia-Pacific), based on the region you are submitting an application for. For more information about how we collect and use your personal information, or to understand any rights you may have, please see our Careers Privacy Policy [2] here. [3] [4] [5] [6] [7] [8] (c) 2026 Bloomberg Finance L.P. All rights reserved. [9] Privacy | [10] Accommodations & EEO Policy | [11] Additional Policies | [12] Bloomberg References Visible links 1. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6IjRjN2U2M2MxYmRlZDE3MDMyOTY5MWI3YjA5NjMwN2Y5ZWQ2YWVlNGQ0NzlkNjdlMjIwMjIzZjllZWNmZWRjNzMifQ.akHY3SWfdS2ajOxcaP58Z5KzXhYlCleHoTPk1Tk_GLk 2. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6IjM3OGIwYzM1ZjIwM2U0OGMxNDM2ZTljNzVmZjJlOGY3ZTcyM2ZlMWZkMjk0OTlhNzBmN2FmYzIwY2FlOTgyYTEifQ.SoM-z6IVIfMpX8Tx6QGUtT7lIpnAXI-4OJkRum7KG04 3. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6IjhhZmY1OTgxMTI2MTBiN2NkOTFjMWEwNmVkYTQ1NmMyZDdkMmNlMWY3ZjFmMTAxYzA0NGRmZDJjZDQ0YzFmZDkifQ.ZjelPafETBhf2wTKEmWYKWiwj-ctH5p-qtdyhgtzunU 4. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6ImY4NTE1NTJiZDNmZDRmOGI4OWViNjk2ZTk0YzZkYzlmZmNlMjUxOTg0Yzk4OWFkN2UxMDRkMjBkOTZmMjFhZTMifQ._oFfY38DaaAHX2E0liBuLfeC_4nsdvf7Nmeb0gIh_8k 5. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6ImI4YWEwMmFmMjFjNzZkNDlhZDA2NGVmZjMzNzY4MGUzMTUyYzY0Njk0NTUxZWU3MTM1MjhlODdmYjYyMjIxM2MifQ.2znu236a-4H_2LA-d4iQVHPgLqQm12hFFCVxwZMbYxs 6. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6IjgxZjAxMjZiZTIyNWE1MmY3MGRiNDNiZWViZDVmM2Y3ZTIyNGUxYjk0Mjc4MWY3NGU1OGVlYzQ3N2M5Mjk3OTQifQ.cd7q5IG3UFMvebxdv1VWHMQltNPgsQpxHTxU7vcqTN8 7. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6IjY1YTE2NDBkNDkyZTU0NzRhYjg1NmUxMGRiNTdmYTVkM2NhNDUwMjljZWQ5NDQ5ZGVkZTg5ZDY1ZGE0NTUxMTQifQ.lNs3R4T7a",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19f485bf67e86635",
       "company": "Bloomberg",
       "role": "Data Engineer",
@@ -35924,6 +35901,29 @@
       "aiDecision": "Classified as rejected",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high"
+    },
+    {
+      "id": "bloomberg-data-engineer-employee-technology-support",
+      "company": "Bloomberg",
+      "role": "Data Engineer, Employee Technology Support",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-07-09T19:30:13+00:00",
+      "latestSubject": "Bloomberg- Thank you for your Application (Data Engineer, Employee Technology Support - 10052396)",
+      "latestFrom": "Bloomberg Recruiting <blprecruiting@recruiting.bloomberg.com>",
+      "gmailThreadId": "19f485bf67e86635",
+      "gmailMessageIds": [
+        "19f485bf67e86635",
+        "19f24dfb47b69f2e"
+      ],
+      "notes": "Hello Tirth, Thank you again for your application for the Data Engineer, Employee Technology Support position and your interest in Bloomberg. Unfortunately, we have decided not to proceed with your candidacy at this time, but we appreciate the time and effort you dedicated to the application process. We will keep you in mind for future openings and encourage you to stay current on new opportunities on our careers site. Best, Global Talent Acquisition Bloomberg LP Note: This mailbox is unmonitored and replies will not reach Bloomberg Talent Acquisition. Please reach out to your recruiting contact instead.​ Bloomberg is an Equal Opportunity Employer, including disabled/veterans. To review our EEO & Accommodations policies, please click [1] here. For questions about your application, please contact AMER_recruit@bloomberg.net (Americas), EMEA_recruit@bloomberg.net (Europe, the Middle East and Africa), or APAC_recruit@bloomberg.net (Asia-Pacific), based on the region you are submitting an application for. For more information about how we collect and use your personal information, or to understand any rights you may have, please see our Careers Privacy Policy [2] here. [3] [4] [5] [6] [7] [8] (c) 2026 Bloomberg Finance L.P. All rights reserved. [9] Privacy | [10] Accommodations & EEO Policy | [11] Additional Policies | [12] Bloomberg References Visible links 1. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6IjRjN2U2M2MxYmRlZDE3MDMyOTY5MWI3YjA5NjMwN2Y5ZWQ2YWVlNGQ0NzlkNjdlMjIwMjIzZjllZWNmZWRjNzMifQ.akHY3SWfdS2ajOxcaP58Z5KzXhYlCleHoTPk1Tk_GLk 2. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6IjM3OGIwYzM1ZjIwM2U0OGMxNDM2ZTljNzVmZjJlOGY3ZTcyM2ZlMWZkMjk0OTlhNzBmN2FmYzIwY2FlOTgyYTEifQ.SoM-z6IVIfMpX8Tx6QGUtT7lIpnAXI-4OJkRum7KG04 3. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6IjhhZmY1OTgxMTI2MTBiN2NkOTFjMWEwNmVkYTQ1NmMyZDdkMmNlMWY3ZjFmMTAxYzA0NGRmZDJjZDQ0YzFmZDkifQ.ZjelPafETBhf2wTKEmWYKWiwj-ctH5p-qtdyhgtzunU 4. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6ImY4NTE1NTJiZDNmZDRmOGI4OWViNjk2ZTk0YzZkYzlmZmNlMjUxOTg0Yzk4OWFkN2UxMDRkMjBkOTZmMjFhZTMifQ._oFfY38DaaAHX2E0liBuLfeC_4nsdvf7Nmeb0gIh_8k 5. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6ImI4YWEwMmFmMjFjNzZkNDlhZDA2NGVmZjMzNzY4MGUzMTUyYzY0Njk0NTUxZWU3MTM1MjhlODdmYjYyMjIxM2MifQ.2znu236a-4H_2LA-d4iQVHPgLqQm12hFFCVxwZMbYxs 6. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6IjgxZjAxMjZiZTIyNWE1MmY3MGRiNDNiZWViZDVmM2Y3ZTIyNGUxYjk0Mjc4MWY3NGU1OGVlYzQ3N2M5Mjk3OTQifQ.cd7q5IG3UFMvebxdv1VWHMQltNPgsQpxHTxU7vcqTN8 7. http://bloomberg.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mzc0OTc3MywiaGFzaCI6IjY1YTE2NDBkNDkyZTU0NzRhYjg1NmUxMGRiNTdmYTVkM2NhNDUwMjljZWQ5NDQ5ZGVkZTg5ZDY1ZGE0NTUxMTQifQ.lNs3R4T7a",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Candidate rejection notice: decided not to proceed with candidacy at this time",
+      "aiModel": "rule-based-scan",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
@@ -36021,28 +36021,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "aws-free-tier-alert",
-      "company": "AWS",
-      "role": "Free Tier Alert",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-07-07T20:21:03+00:00",
-      "latestSubject": "AWS Free Tier limit alert",
-      "latestFrom": "freetier@costalerts.amazonaws.com",
-      "gmailThreadId": "19f3e3dc8acb4392",
-      "gmailMessageIds": [
-        "19f3e3dc8acb4392"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "medium"
-    },
-    {
       "id": "amazon-web-general-application",
       "company": "Amazon Web",
       "role": "General Application",
@@ -36067,6 +36045,28 @@
       "aiDecision": "Review / Other",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "medium"
+    },
+    {
+      "id": "aws-free-tier-alert",
+      "company": "AWS",
+      "role": "Free Tier Alert",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-07-07T20:21:03+00:00",
+      "latestSubject": "AWS Free Tier limit alert",
+      "latestFrom": "freetier@costalerts.amazonaws.com",
+      "gmailThreadId": "19f3e3dc8acb4392",
+      "gmailMessageIds": [
+        "19f3e3dc8acb4392"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "medium"
     },
     {

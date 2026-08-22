@@ -123,6 +123,38 @@ CRITICAL RULE (REJECTIONS WITH NEUTRAL OR APPLICATION-LIKE SUBJECTS):
 - Rejection emails often have vague, neutral, or misleading subjects like "Regarding your Application to [Company]", "Important information about your application", "Update on your application", "Thank you for applying", or "Your application status".
 - ALWAYS inspect the body/notes: If the body contains "won't be moving forward", "will not be moving forward", "decided not to move forward", "regret to inform you", "chosen to move forward with other candidates", "skills and experiences more closely align with", "unable to offer you a position", "decided not to advance", or "wish you the best in your search", it is 100% "rejected", NEVER "applied"!
 
+Example 10 (Rejection with 'After Careful Consideration' opener - 7-Eleven):
+- INPUT: {"id": "7-eleven-data-engineer", "company": "7-Eleven", "role": "Data Engineer", "latest_subject": "Application Update", "latest_from": "careers@7-eleven.com", "notes": "Dear Tirth, Thank you for the time to submit your application for the Data Engineer - Mark Tech position. After careful consideration, we will not be progressing your application at this time. We appreciate your interest in joining our team and wish you the best in your job search."}
+-> OUTPUT: {"id": "7-eleven-data-engineer", "company": "7-Eleven", "role": "Data Engineer", "status": "rejected", "confidence": "high", "reason": "Candidate rejection notice: after careful consideration, will not be progressing the application"}
+
+Example 11 (Rejection with 'Thank you for applying' subject / Fieldwire):
+- INPUT: {"id": "fieldwire-data-engineer", "company": "Fieldwire", "role": "Data Engineer", "latest_subject": "Important information about your application to Fieldwire", "latest_from": "talent@fieldwire.com", "notes": "Hi Tirth, Thank you for taking the time to apply for the Data Engineer position. After careful consideration, we've decided to move forward with another candidate whose experience more closely aligns with our current needs. We appreciate your interest in Fieldwire and wish you the best in your search."}
+-> OUTPUT: {"id": "fieldwire-data-engineer", "company": "Fieldwire", "role": "Data Engineer", "status": "rejected", "confidence": "high", "reason": "Candidate rejection notice: decided to move forward with another candidate"}
+
+Example 12 (Application receipt with CONDITIONAL disclaimer — NOT a rejection - JBS International):
+- INPUT: {"id": "jbs-international-data-ops", "company": "JBS International", "role": "Data Operations Specialist", "latest_subject": "Application Received for Data Operations Specialist with JBS International", "latest_from": "careers@jbsinternational.com", "notes": "Dear Tirth, Thank you for applying to Data Operations Specialist with JBS International. Your candidacy will be reviewed by the hiring team. If you have not heard from the hiring team or the position is no longer listed on our careers page, it means the hiring team has either decided to pursue other candidates that more closely align to their needs, or the position has been filled or canceled."}
+-> OUTPUT: {"id": "jbs-international-data-ops", "company": "JBS International", "role": "Data Operations Specialist", "status": "applied", "confidence": "high", "reason": "Application receipt — rejection phrase is inside a hypothetical conditional clause (if you do not hear from us), not a definitive decision"}
+
+CRITICAL RULE (REJECTIONS — WHAT TO LOOK FOR):
+- Rejection emails frequently begin with polite phrases or have neutral/misleading subjects like "Thank you for applying", "Application Update", "Regarding your Application to [Company]", "Important information about your application".
+- ALWAYS inspect the body. The following phrases ALWAYS mean the candidate was rejected:
+  - "won't be moving forward" / "will not be moving forward" / "decided not to move forward" / "decided not to proceed"
+  - "will not be progressing your" / "not be progressing your application"
+  - "after careful consideration, we [decided / won't / have chosen / regret / are unable / will not]"
+  - "after careful review, we [decided / won't / have chosen / regret]"
+  - "we've decided to move forward with another candidate" / "with other candidates"
+  - "regret to inform you" / "chosen to move forward with other candidates"
+  - "skills and experiences more closely align" / "experience more closely aligns"
+  - "unable to offer you a position" / "you have not been selected"
+
+CRITICAL RULE — EXCEPTION (CONDITIONAL DISCLAIMER, NOT A REJECTION):
+- Do NOT classify as rejected if the rejection phrase appears INSIDE a hypothetical or conditional clause in what is otherwise an application receipt:
+  - "If you do not hear from us within 30 days, it is likely that we have decided to move forward with other candidates..."
+  - "If the position is no longer listed, it means the hiring team has decided to pursue other candidates..."
+  - "If you are not selected for this position, please keep an eye on our jobs page..."
+  - "We will be in touch only if your qualifications match..."
+  In these cases, the email IS an application receipt. Classify as "applied".
+
 CRITICAL RULE (ASSESSMENTS VS REPLY NEEDED):
 - Any email directing the candidate to take an online assessment, coding challenge, screening quiz, or video response test MUST ALWAYS be classified as "interviewed", NEVER "reply_needed" or "applied"!
 - "reply_needed" is strictly reserved for human recruiter emails asking for text responses (e.g., salary expectation, work authorization, availability to chat).

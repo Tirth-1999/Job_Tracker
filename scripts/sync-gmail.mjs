@@ -681,9 +681,43 @@ Example 11: Rejection with 'Regarding your Application' Subject / Gusto
 - SNIPPET: "Hi Tirth, Thank you for your interest in Senior Data Engineer role at Gusto. After reviewing your application, we won't be moving forward at this time. We appreciate the time you took to apply. New roles are posted regularly on our Careers Page, and we encourage you to check back. Thank you again, and best of luck in your search."
 -> OUTPUT: {"is_job": true, "company": "Gusto", "role": "Senior Data Engineer", "status": "rejected", "confidence": "high"}
 
+Example 12: Rejection with 'After Careful Consideration' opener / 7-Eleven
+- FROM: "7-Eleven Talent <careers@7-eleven.com>"
+- SUBJECT: "Application Update"
+- SNIPPET: "Dear Tirth, Thank you for the time to submit your application for the Data Engineer - Mark Tech position. After careful consideration, we will not be progressing your application at this time. We appreciate your interest in joining our team and wish you the best in your job search."
+-> OUTPUT: {"is_job": true, "company": "7-Eleven", "role": "Data Engineer", "status": "rejected", "confidence": "high"}
+
+Example 13: Rejection with 'Thank you for applying' Subject / Fieldwire
+- FROM: "Fieldwire Talent <talent@fieldwire.com>"
+- SUBJECT: "Important information about your application to Fieldwire"
+- SNIPPET: "Hi Tirth, Thank you for taking the time to apply for the Data Engineer position. After careful consideration, we've decided to move forward with another candidate whose experience more closely aligns with our current needs. We appreciate your interest in Fieldwire and wish you the best in your search."
+-> OUTPUT: {"is_job": true, "company": "Fieldwire", "role": "Data Engineer", "status": "rejected", "confidence": "high"}
+
+Example 14: Application receipt with CONDITIONAL disclaimer — NOT a rejection / JBS International
+- FROM: "JBS International <careers@jbsinternational.com>"
+- SUBJECT: "Application Received for Data Operations Specialist with JBS International"
+- SNIPPET: "Dear Tirth, Thank you for applying to Data Operations Specialist with JBS International. Your candidacy will be reviewed by the hiring team. If you have not heard from the hiring team or the position is no longer listed on our careers page, it means the hiring team has either decided to pursue other candidates that more closely align to their needs, or the position has been filled or canceled."
+-> OUTPUT: {"is_job": true, "company": "JBS International", "role": "Data Operations Specialist", "status": "applied", "confidence": "high"}
+NOTE: Even though this snippet contains the phrase "decided to pursue other candidates", it is explicitly inside a hypothetical conditional clause (\"If you have not heard from us\"). This is a standard receipt disclaimer, NOT a rejection. Classify as "applied".
+
 CRITICAL PRECEDENCE RULE (REJECTION OVERRIDE RULE):
-- Rejection emails frequently begin with polite phrases or have neutral subjects ("Regarding your Application to [Company]", "Important information about your application", "Update on your application", "Thank you for applying").
-- ALWAYS inspect the body: If the email states "won't be moving forward", "will not be moving forward", "decided not to move forward", "regret to inform", "chosen to move forward with other candidates", "skills and experiences more closely align", "unable to offer you a position", "decided not to advance", or "wish you the best in your search", it MUST ALWAYS be classified as "rejected", NEVER "applied"!
+- Rejection emails frequently begin with polite phrases or have neutral subjects ("Regarding your Application to [Company]", "Important information about your application", "Update on your application", "Thank you for applying", "Application Update").
+- ALWAYS inspect the body. The following phrases ALWAYS mean "rejected", regardless of subject:
+  - "won't be moving forward", "will not be moving forward", "decided not to move forward", "decided not to proceed"
+  - "will not be progressing your", "not be progressing your application"
+  - "after careful consideration, we [decided / won't / have chosen / regret / are unable / will not]"
+  - "after careful review, we [decided / won't / have chosen / regret]"
+  - "we've decided to move forward with another candidate"
+  - "we've decided to move forward with other candidates"
+  - "regret to inform", "chosen to move forward with other candidates", "skills and experiences more closely align"
+  - "unable to offer you a position", "decided not to advance", "wish you the best in your search"
+  - "you have not been selected", "we have not selected your application"
+- EXCEPTION — do NOT classify as rejected if the phrase appears INSIDE a hypothetical/conditional clause:
+  - "If you do not hear from us, it is likely that we have decided..."
+  - "If the position is no longer listed, it means the hiring team has decided to pursue other candidates..."
+  - "If you are not selected, please keep an eye on our jobs page..."
+  - "We will be in touch only if your qualifications match..."
+  In these cases, classify as "applied".
 
 CRITICAL PRECEDENCE RULE (ASSESSMENT VS REPLY NEEDED):
 - Any email directing the candidate to take an online assessment, screening quiz, behavioral evaluation, or video interview prompt (Outmatch, Harver, TestGorilla, HackerRank, pymetrics) MUST ALWAYS be classified as "interviewed", NEVER "reply_needed"!
@@ -870,14 +904,26 @@ function extractWithHeuristics(item) {
   let confidence = "low";
   let reason = "keyword heuristic";
 
-  if (
-    /unfortunately|not moving forward|will not be moving forward|decided not to move forward|decided not to proceed|will not be proceeding|not selected|credentials of other candidates|pursue other candidates|pursuing other candidates|pursuing other applicants|selected other candidates|selected another candidate|chosen another candidate|position has been filled|position is filled|position has been cancelled|position was cancelled|no longer under consideration|not selected for this role|not selected for an interview|unable to offer you an interview|cannot offer you an interview|regret to inform|chosen to move forward with other candidates|more closely align|unable to offer you a position|decision was not made lightly|explore future opportunities|wish you (all )?the best in your (job )?search|best of luck in your (job )?search|keep your (resume|information|profile) on file|decided to proceed with other candidates|decided to proceed with another candidate|narrowed (our|the) search/i.test(
-      haystack
-    )
-  ) {
+  // Rejection detection: check for genuine rejection phrases
+  // We test against the full text, then exclude conditional/hypothetical disclaimers
+  const REJECTION_RE = /won.t be moving forward|will not be moving forward|decided not to move forward|decided not to proceed|will not be proceeding|not proceeding with your|will not move you forward|won.t be able to continue with your candidacy|not able to continue with your candidacy|decided to move forward with (candidates|other)|move forward with other candidates whose|moving forward with other candidates|moving forward with another candidate|pursue other candidates|pursuing other candidates|pursuing other applicants|selected other candidates|selected another candidate|chosen another candidate|chosen to move forward with other|not selected for this (role|position|opportunity)|not been selected|was not selected|ineligible for the role|deemed you (as )?ineligible|decided to (pass|decline)|not a (match|fit) for this (role|position)|not the right fit|not a good fit at this time|qualifications more closely align|experience is more closely aligned|experience more closely aligns|more closely align with the requirements|other candidates whose (skills|experience|qualifications)|position has been filled|position (is|has been|was) (filled|closed|cancelled|canceled)|no longer under consideration|unable to offer you (a |the )?position|unable to offer you an interview|unable to extend an offer|cannot offer you an interview|have decided not to move forward|will not be progressing your|not be progressing your application|decided not to move your application|we have not selected|you have not been selected|we are unable to move forward|after careful (review|consideration).{0,120}(decided|won.t|will not|regret|sorry|unable|not|moving)/i;
+
+  // False-positive guards: these look like rejection phrases but are conditional/hypothetical in receipts
+  const FALSE_POSITIVE_RE = /if (you are|you were|we are) not (selected|able).{0,150}(please|check|visit|keep|our|feel|thank)|if we are unable to offer.{0,100}(encourage|invite|visit|thank)|we will (only )?(be )?in touch (only )?if your qualifications|we will reach out (to you )?if your (skills|qualifications|experience|background)|if your (qualifications|skills|experience|background) (match|align|fit)|only if your qualifications|will be in touch if your|will contact you if (your|we)|reach out if (your|we|there)|it is likely that we have decided|if you do not hear from us.{0,100}(likely|decided|moved)|if the position is no longer listed.{0,200}(decided|pursue|filled|canceled)/i;
+
+  if (REJECTION_RE.test(haystack) && !FALSE_POSITIVE_RE.test(haystack)) {
     status = "rejected";
     confidence = "high";
     reason = "rejection keywords";
+  } else if (/unfortunately/i.test(haystack) && !/if unfortunately|in case unfortunately/i.test(haystack) && !FALSE_POSITIVE_RE.test(haystack)) {
+    // "unfortunately" alone can be a receipt disclaimer — only use if NOT in hypothetical context
+    status = "rejected";
+    confidence = "medium";
+    reason = "rejection keyword: unfortunately";
+  } else if (/regret to inform|decision was not made lightly|credentials of other candidates|wish you (all )?the best in your (job )?search|best of luck in your (job )?search/i.test(haystack)) {
+    status = "rejected";
+    confidence = "high";
+    reason = "rejection keywords (terminal phrases)";
   } else if (/pleased to offer|extend an offer|offer letter|employment offer|congratulations on your offer/i.test(haystack)) {
     status = "offered";
     confidence = "high";
