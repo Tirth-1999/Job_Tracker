@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-22T18:32:01.897Z",
+  "updatedAt": "2026-08-22T19:23:23.403Z",
   "applications": [
+    {
+      "id": "parts-town-business-analyst",
+      "company": "Parts Town",
+      "role": "Business Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application for Business Analyst at Parts Town",
+      "latestFrom": "Parts Town Recruiting Team <notification@jobvite.com>",
+      "lastActivityAt": "2026-08-22T18:59:38.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02ad7c674dfdc9",
+      "gmailMessageIds": [
+        "1a02ad7c674dfdc9"
+      ],
+      "notes": ""
+    },
     {
       "id": "mill-general-application",
       "company": "Mill",
