@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-08-21T22:52:37.687Z",
+  "updatedAt": "2026-08-22T05:28:41.091Z",
   "applications": [
+    {
+      "id": "built-in-general-application",
+      "company": "Built In",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-22T05:00:59.000Z",
+      "latestSubject": "What AI Skills Do Managers Actually Look for on a Resume?",
+      "latestFrom": "Built In <support@builtin.com>",
+      "gmailThreadId": "1a01b0aab9a5ca15",
+      "gmailMessageIds": [
+        "1a01b0aab9a5ca15",
+        "1a02551740e516b7",
+        "1a027d7f6d2a35fb"
+      ],
+      "notes": "",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
     {
       "id": "exl-service-healthcare-data-engineer",
       "company": "EXL Service",
@@ -350,31 +376,6 @@
         "1a02553168034c7f"
       ],
       "notes": ""
-    },
-    {
-      "id": "built-in-general-application",
-      "company": "Built In",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-21T17:14:50.000Z",
-      "latestSubject": "New Engineering Job Matches",
-      "latestFrom": "Built In <support@builtin.com>",
-      "gmailThreadId": "1a01b0aab9a5ca15",
-      "gmailMessageIds": [
-        "1a01b0aab9a5ca15",
-        "1a02551740e516b7"
-      ],
-      "notes": "",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
     },
     {
       "id": "gilead-sr-manager-it-data-engineering",
