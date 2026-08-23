@@ -1,6 +1,50 @@
 {
-  "updatedAt": "2026-08-23T05:30:31.263Z",
+  "updatedAt": "2026-08-23T06:42:04.283Z",
   "applications": [
+    {
+      "id": "msg-19fa37ecb23e3507",
+      "company": "Red Bull",
+      "role": "Business Analyst",
+      "status": "interviewed",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-23T06:00:31.000Z",
+      "latestSubject": "Invitation to complete Red Bull Wingfinder - Business Analyst",
+      "latestFrom": "Red Bull Wingfinder <wingfinder@career.redbull.com>",
+      "gmailThreadId": "19fa37ecb23e3507",
+      "gmailMessageIds": [
+        "19fa37ecb23e3507",
+        "19f844370643174e",
+        "1a02d34d4f9f3066"
+      ],
+      "notes": "( https://www.wingfinder.com?utm_source=eauth ) Hi Tirth, Thanks for your interest in joining Red Bull! Red Bull gives you wiiings and we look forward to getting to know you better, starting with Red Bull Wingfinder which gives wings to your career. Red Bull Wingfinder explores your strengths in four key areas of high performance: Connections, Creativity, Drive and Thinking. Upon completing Wingfinder, you'll receive your personalized report and tailored coaching plan, which includes coaching videos from some of our top athletes who share the same strengths as you. *Ready to take Red Bull Wingfinder?* Please set aside 35 minutes within the next four days to complete Wingfinder. To ensure that your results are automatically added to your application, click your personalized invitation link below to start Wingfinder. Take me to Red Bull Wingfinder ( https://www.wingfinder.com/invite/-X9lf3izmTVx8ydcZyLh7R3c68La8u2FEWSex0HsT_LzTf18Qb87NPfGdzTDoOkf ) *Already completed Wingfinder?* Simply click the link above to add your Wingfinder results to your application. Completing Red Bull Wingfinder is voluntary. We hope you'll take the opportunity to learn more about your strengths and give wings to your career. Kind Regards, The Red Bull recruitment team #GivesYouWiiings You can find out more about Red Bull Wingfinder here ( https://policies.redbull.com/policies/0f0d7c6f-f3f5-4f17-9d79-1d45e36f7b0a/202212141234/en/terms.html ) as well as the Wingfinder Terms & Conditions. To find out how we process your personal data in connection with Red Bull Wingfinder, please see the Wingfinder Privacy Policy ( https://policies.redbull.com/r/Red_Bull_Wingfinder_Job_Application/privacy/en ). As always your privacy matters to us. Your data won't be passed on to third parties or used for advertising purposes without your consent. Red Bull is committed to the security, confidentiality, and processing integrity of all information collected. Wingfinder is an example of how Red Bull \"Gives Wings to People and Ideas\" by providing you with valuable personal insight; Giving Wings to your career. This e-mail was generated automatically. Please do not reply to this e-mail as unfortunately it will not be received by us. Invitation to complete Red Bull Wingfinder Hi Tirth, Thanks for your interest in joining Red Bull! Red Bull gives you wiiings and we look forward to getting to know you better, starting with Red Bull Wingfinder which gives wings to your career. Red Bull Wingfinder explores your strengths in four key areas of high performance: Connections, Creativity, Drive and Thinking. Upon completing Wingfinder, you'll receive your personalized report and tailored coaching plan, which includes coaching videos from some of our top athletes who share the same strengths as you. Ready to take Red Bull Wingfinder? Please set aside 35 minutes within the next four days to complete Wingfinder. To ensure that your results are automatically added to your application, click your personalized ",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as not_related",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "ewor-fellowship",
+      "company": "EWOR",
+      "role": "Fellowship",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Complete your application for the EWOR Fellowship",
+      "latestFrom": "Marc Richter <applications@ewor.com>",
+      "lastActivityAt": "2026-08-23T05:55:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02d2fefefaa054",
+      "gmailMessageIds": [
+        "1a02d2fefefaa054"
+      ],
+      "notes": "Hi Tirth, After reviewing your initial application, I believe you could be an excellent fit for the EWOR Fellowship. Think of what you have done so far as just the first step. To complete your application, please fill out the form on our website here . A Little Bit About EWOR EWOR is a fellowship for outlier founders building transformative tech. We back the top 0.1% with up to €500K in funding (Traction Mode) or €300K over the course of the fellowship (Ideation Mode) and weekly 1:1 mentorship from unicorn founders (Adjust, ProGlove, SumUp) who have built companies collectively worth over €12B and now work full-time at EWOR. No standardised playbooks or rigid programming. EWOR’s virtual-first approach is tailored to each founder’s non-linear journey. We review applications and admit fellows on a rolling basis. Once you've submitted your application, you'll hear from us within three weeks regarding any potential next steps. Please let me know if you have any questions. We look forward to reading your full application soon! Best, Marc Richter On behalf of the EWOR Team"
+    },
     {
       "id": "gartner-data-analyst",
       "company": "Gartner",
@@ -24475,29 +24519,6 @@
       "manualAction": null,
       "manualChangedAt": null,
       "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19fa37ecb23e3507",
-      "company": "Red Bull",
-      "role": "Data Engineer",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-27T12:13:43+00:00",
-      "latestSubject": "Your ​Data Engineer ​ application has been received successfully",
-      "latestFrom": "Red Bull <notification@career.redbull.com>",
-      "gmailThreadId": "19fa37ecb23e3507",
-      "gmailMessageIds": [
-        "19fa37ecb23e3507",
-        "19f844370643174e"
-      ],
-      "notes": "Dear Tirth, Thank you for your interest in joining Red Bull. We have received your application for the Data Engineer role. If your strengths, experience, and qualifications match the position",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
