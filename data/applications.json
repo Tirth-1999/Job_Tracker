@@ -1,6 +1,38 @@
 {
-  "updatedAt": "2026-08-23T12:41:52.450Z",
+  "updatedAt": "2026-08-23T14:24:32.187Z",
   "applications": [
+    {
+      "id": "coinbase-general-application",
+      "company": "Coinbase",
+      "role": "Senior Analytics Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-23T14:00:10.000Z",
+      "latestSubject": "Important information about your application to Coinbase",
+      "latestFrom": "no-reply@coinbase.com",
+      "gmailThreadId": "19f6a87b8eaa65ae",
+      "gmailMessageIds": [
+        "19f6a87b8eaa65ae",
+        "19f6298301c4a519",
+        "1a0245e36998b94d",
+        "coinbase-general-application",
+        "19f75871121760e0",
+        "coinbase-analytics-engineer-gfco-analytics",
+        "coinbase-analytics-engineer",
+        "coinbase-data-engineer",
+        "1a02eebf32644ffa"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to the Senior Analytics Engineer, GFCO Analytics role at Coinbase. We’re truly inspired by the talented people interested in building an open financial system for the world. While this is never easy news to share, we've decided not to move forward with your candidacy. We appreciate you sharing your qualifications; however, we currently have other candidates with experience that align more closely with our needs at this time. Please keep an eye out for future positions that might be of interest to you, and we will continue to keep your information on file for new openings. We wish you the very best in your job search and future adventures! Coinbase Recruiting Join our Stand with Crypto ( https://www.coinbase.com/public-policy/advocacy/standwithcrypto ) campaign and become an advocate today. Hi Tirth, Thank you for applying to the Senior Analytics Engineer, GFCO Analytics role at Coinbase. We&rsquo;re truly inspired by the talented people interested in building an open financial system for the world. While this is never easy news to share, we've decided not to move forward with your candidacy. We appreciate you sharing your qualifications; however, we currently have other candidates with experience that align more closely with our needs at this time. Please keep an eye out for future positions that might be of interest to you, and we will continue to keep your information on file for new openings. We wish you the very best in your job search and future adventures! Coinbase Recruiting Join our Stand with Crypto campaign and become an advocate today.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Standard application receipt confirmation",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T16:50:26.07+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "msg-1a014d42766cca87",
       "company": "Stellantis",
@@ -2384,35 +2416,6 @@
       "aiDecision": "LinkedIn Easy Apply application transmission confirmation",
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:01:19.176+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "coinbase-general-application",
-      "company": "Coinbase",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-21T12:49:09+00:00",
-      "latestSubject": "Thank you for applying to Coinbase",
-      "latestFrom": "no-reply@coinbase.com",
-      "gmailThreadId": "19f6a87b8eaa65ae",
-      "gmailMessageIds": [
-        "19f6a87b8eaa65ae",
-        "19f6298301c4a519",
-        "1a0245e36998b94d",
-        "coinbase-general-application",
-        "19f75871121760e0",
-        "coinbase-analytics-engineer-gfco-analytics",
-        "coinbase-analytics-engineer",
-        "coinbase-data-engineer"
-      ],
-      "notes": "Hi Tirth, Thank you for showing interest in joining our team and taking the time to apply to Coinbase. We'll be reviewing your application shortly and will reach out to you on any next steps if your qualifications match our needs for the role. Join our Stand with Crypto ( https://www.coinbase.com/public-policy/advocacy/standwithcrypto ) campaign and become an advocate. Global Data Privacy Notice for Job Candidates and Applicants Depending on your location, the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA) may regulate the way we manage the data of job applicants. Our full notice outlining how data will be processed as part of the application procedure for applicable locations is available here ( https://www.coinbase.com/legal/applicant_privacy_notice ). By submitting your application, you are agreeing to our use and processing of your data as required. Regards, Coinbase ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Standard application receipt confirmation",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T16:50:26.07+00:00",
       "aiConfidence": "high"
     },
     {
