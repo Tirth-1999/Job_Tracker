@@ -1,6 +1,144 @@
 {
-  "updatedAt": "2026-08-22T22:23:16.406Z",
+  "updatedAt": "2026-08-23T02:45:34.156Z",
   "applications": [
+    {
+      "id": "midfirst-bank-ai-process-analyst",
+      "company": "Midfirst Bank",
+      "role": "AI Process Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your recent application!",
+      "latestFrom": "HR-Recruiting@jobs.midfirst.com",
+      "lastActivityAt": "2026-08-23T02:16:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02c6754cfb700a",
+      "gmailMessageIds": [
+        "1a02c6754cfb700a"
+      ],
+      "notes": "Dear Tirth Chirayu, Thank you for your recent application to our AI Process Analyst position. Your application is currently under consideration and someone from our HR team will be in touch regarding next steps. Please monitor your email and voicemail for updates. Sincerely, Human Resources MidFirst Bank Dear Tirth Chirayu, Thank you for your recent application to our AI Process Analyst position. Your application is currently under consideration and someone from our HR team will be in touch regarding next steps. Please monitor your email and voicemail for updates. Sincerely, Human Resources MidFirst Bank"
+    },
+    {
+      "id": "cx-marketing-general-application",
+      "company": "CX Marketing",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Your Password Has Been Reset",
+      "latestFrom": "noreply@saashr.com",
+      "lastActivityAt": "2026-08-23T02:05:46.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02c5de7ad16eaa",
+      "gmailMessageIds": [
+        "1a02c5de9fe0a3a8",
+        "1a02c5de7ad16eaa",
+        "1a02c5c047b7f7c1"
+      ],
+      "notes": "Hi Tirth Shah, Your account password for CX Marketing, LLC has been reset to V6zPy<vx. Please login to your account, Login with the new password. If you have any questions please contact Human Resources. Thank you!"
+    },
+    {
+      "id": "booz-allen-hamilton-general-application",
+      "company": "Booz Allen Hamilton",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-23T01:59:00.000Z",
+      "latestSubject": "Thank you for applying",
+      "latestFrom": "\"workday@bah.com\" <workday@bah.com>",
+      "gmailThreadId": "1a01074e4a49ec41",
+      "gmailMessageIds": [
+        "1a01075196b15dad",
+        "1a01074e4a49ec41",
+        "1a02085685461fd2",
+        "1a02084420eb6bf0",
+        "1a02c57b7a543359"
+      ],
+      "notes": "Subject: Tirth Shah ‎- R0247542 Data Engineer (C02709658) Thanks Tirth Shah! We just received your application for the Data Engineer position. We’re currently reviewing your skills and experience, and if you’re a good fit, we will be in touch. Meanwhile, you can track the status of your application here . We also encourage you to connect with us on LinkedIn , Twitter , Facebook and Instagram . We’re looking forward to changing the world with you. Booz Allen Talent Acquisition This email was intended for tirthcshah1999@gmail.com",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Application confirmation receipt from ATS",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:42.559+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "nationwide-consultant-data-engineer",
+      "company": "Nationwide",
+      "role": "Consultant, Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We are reviewing your application for Consultant, Data Engineer | Databricks",
+      "latestFrom": "nationwide@myworkday.com",
+      "lastActivityAt": "2026-08-23T01:58:29.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02c573ded38586",
+      "gmailMessageIds": [
+        "1a02c573ded38586"
+      ],
+      "notes": "Dear, Tirth, Thank you for submitting your application for the Consultant, Data Engineer | Databricks , position at Nationwide. We have successfully received your application, and our team is working as quickly as possible to review your experience. We appreciate your interest in joining our team and the time you invested in applying. A recruiter will review your qualifications and experience. If you are identified as a leading candidate based on the requirements, we will reach out to you to discuss the next steps as quickly as possible. In the meantime, we invite you to explore our company culture and discover what our employees love most about working at Nationwide by visiting our “Discover life as a Nationwider” page: https://www.nationwide.com/personal/about-us/careers/discover-nationwide Thank you, The Nationwide Talent Acquisition Team Business Process: Job Application: Tirth Shah ‎- 099719 Consultant, Data Engineer | Databricks on 08/22/2026 Subject: Tirth Shah ‎- 099719 Consultant, Data Engineer | Databricks Click here to view the notification details. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "dev-technology-general-application",
+      "company": "Dev Technology",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Dev Technology",
+      "latestFrom": "recruiting@devtechnology.com",
+      "lastActivityAt": "2026-08-23T01:58:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02c56e13322331",
+      "gmailMessageIds": [
+        "1a02c56e13322331"
+      ],
+      "notes": "Tirth, Thank you for applying to Dev Technology. We appreciate your interest in our position. Your application has been received. If your application seems like a good fit for the position, we will schedule a time to speak with you regarding this opportunity. Best Regards, Dev Technology Tirth, Thank you for applying to Dev Technology. We appreciate your interest in our position. Your application has been received. If your application seems like a good fit for the position, we will schedule a time to speak with you regarding this opportunity. Best Regards, Dev Technology"
+    },
+    {
+      "id": "clarity-innovations-general-application",
+      "company": "Clarity Innovations",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Clarity Innovations",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-23T01:58:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02c56d14bd95a0",
+      "gmailMessageIds": [
+        "1a02c56d14bd95a0"
+      ],
+      "notes": "Tirth, Thanks for applying to Clarity Innovations. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, Clarity Innovation's Recruiting Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Tirth, Thanks for applying to Clarity Innovations. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, Clarity Innovation's Recruiting Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
+    },
+    {
+      "id": "ameriprise-financial-data-analytics-reporting-analyst-data-engineering-team",
+      "company": "Ameriprise Financial",
+      "role": "Data, Analytics & Reporting Analyst - Data Engineering Team",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Your Application!",
+      "latestFrom": "no-reply@workday.ameriprise.com",
+      "lastActivityAt": "2026-08-23T01:56:57.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02c55dc43fa349",
+      "gmailMessageIds": [
+        "1a02c55dc43fa349"
+      ],
+      "notes": "Dear Tirth, Thank you for your interest in the Data, Analytics & Reporting Analyst - Data Engineering Team position. We truly appreciate you taking the time to apply and share your background with us. While we’re unable to personally speak with every applicant, our team will reach out if your experience aligns with what we’re looking for. To stay informed, you can check the status of your application at any time by logging into your candidate home account using the link below. https://ameriprise.wd5.myworkdayjobs.com/Ameriprise/login Kind Regards, Talent Acquisition This mailbox is not monitored. Please do not reply to this message. This email was intended for tirthcshah1999@gmail.com"
+    },
     {
       "id": "verizon-general-application",
       "company": "Verizon",
@@ -3626,31 +3764,6 @@
         "1a0208590e9a9783"
       ],
       "notes": "Hi Tirth, Thank you for your interest in Ekimetrics! We wanted to let you know we received your application for Senior Data Engineer, and we are delighted that you would consider joining our team. Our team will review your application and will be in touch if your qualifications match our needs for the role. If you are not selected for this position, keep an eye on our jobs page as we're growing and adding openings. Best, The Ekimetrics Team",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Application confirmation receipt from ATS",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:42.559+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "booz-allen-hamilton-general-application",
-      "company": "Booz Allen Hamilton",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T18:53:28+00:00",
-      "latestSubject": "Thank you for applying",
-      "latestFrom": "\"workday@bah.com\" <workday@bah.com>",
-      "gmailThreadId": "1a01074e4a49ec41",
-      "gmailMessageIds": [
-        "1a01075196b15dad",
-        "1a01074e4a49ec41",
-        "1a02085685461fd2",
-        "1a02084420eb6bf0"
-      ],
-      "notes": "Subject: Tirth Shah ‎- R0246936 AI Developer (C02709658) Thanks Tirth Shah! We just received your application for the AI Developer position. We’re currently reviewing your skills and experience, and if you’re a good fit, we will be in touch. Meanwhile, you can track the status of your application here . We also encourage you to connect with us on LinkedIn , Twitter , Facebook and Instagram . We’re looking forward to changing the world with you. Booz Allen Talent Acquisition This email was intended for tirthcshah1999@gmail.com Subject: Tirth Shah ‎- R0247096 Data Engineer, Senior (C02709658) Thanks Tirth Shah! We just received your application for the Data Engineer, Senior position. We’re currently reviewing your skills and experience, and if you’re a good fit, we will be in touch. Meanwhile, you can track the status of your application here . We also encourage you to connect with us on LinkedIn , Twitter , Facebook and Instagram . We’re looking forward to changing the world with you. Booz Allen Talent Acquisition This email was intended for tirthcshah1999@gmail.com Subject: Tirth Shah ‎- R0247170 Data Engineer, Senior (C02709658) Thanks Tirth Shah! We just received your application for the Data Engineer, Senior position. We’re currently reviewing your skills and experience, and if you’re a good fit, we will be in touch. Meanwhile, you can track the status of your application here . We also encourage you to connect with us on LinkedIn , Twitter , Facebook and Instagram . We’re looking forward to changing the world with you. Booz Allen Talent Acquisition This email was intended for tirthcshah1999@gmail.com Subject: Tirth Shah ‎- R0247120 Data Engineer (C02709658) Thanks Tirth Shah! We just received your application for the Data Engineer position. We’re currently reviewing your skills and experience, and if you’re a good fit, we will be in touch. Meanwhile, you can track the status of your application here . We also encourage you to connect with us on LinkedIn , Twitter , Facebook and Instagram . We’re looking forward to changing the world with you. Booz Allen Talent Acquisition This email was intended for tirthcshah1999@gmail.com",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
