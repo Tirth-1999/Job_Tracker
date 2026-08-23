@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-08-23T10:25:06.828Z",
+  "updatedAt": "2026-08-23T11:47:05.626Z",
   "applications": [
+    {
+      "id": "nationwide-consultant-data-engineer",
+      "company": "Nationwide",
+      "role": "Consultant, Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Your Interest",
+      "latestFrom": "nationwide@myworkday.com",
+      "lastActivityAt": "2026-08-23T11:31:30.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02c573ded38586",
+      "gmailMessageIds": [
+        "1a02c573ded38586",
+        "1a02e63dbf7d95cd"
+      ],
+      "notes": "Dear Tirth, Thank you for your interest in the Consultant, Data Engineer | Databricks position. We appreciate the chance to learn more about your background and qualifications. The recruitment team has reviewed your application, and we truly value the unique skills and experience you bring. However, we are seeking a candidate(s) whose qualifications more closely align with the requirements of this role. We encourage you to explore other opportunities within Nationwide that may align with your career goals. Thank you once again for considering this opportunity with us. We appreciate your interest and wish you success. Best Regards, Nationwide Talent Acquisition Business Process: Job Application: Tirth Shah ‎- 099719 Consultant, Data Engineer | Databricks on 08/22/2026 Subject: Tirth Shah ‎- 099719 Consultant, Data Engineer | Databricks Click here to view the notification details. This email was intended for tirthcshah1999@gmail.com"
+    },
     {
       "id": "altera-ai-engineer-cloud-software-ai-platforms",
       "company": "Altera",
@@ -172,24 +191,6 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
-    },
-    {
-      "id": "nationwide-consultant-data-engineer",
-      "company": "Nationwide",
-      "role": "Consultant, Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "We are reviewing your application for Consultant, Data Engineer | Databricks",
-      "latestFrom": "nationwide@myworkday.com",
-      "lastActivityAt": "2026-08-23T01:58:29.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a02c573ded38586",
-      "gmailMessageIds": [
-        "1a02c573ded38586"
-      ],
-      "notes": "Dear, Tirth, Thank you for submitting your application for the Consultant, Data Engineer | Databricks , position at Nationwide. We have successfully received your application, and our team is working as quickly as possible to review your experience. We appreciate your interest in joining our team and the time you invested in applying. A recruiter will review your qualifications and experience. If you are identified as a leading candidate based on the requirements, we will reach out to you to discuss the next steps as quickly as possible. In the meantime, we invite you to explore our company culture and discover what our employees love most about working at Nationwide by visiting our “Discover life as a Nationwider” page: https://www.nationwide.com/personal/about-us/careers/discover-nationwide Thank you, The Nationwide Talent Acquisition Team Business Process: Job Application: Tirth Shah ‎- 099719 Consultant, Data Engineer | Databricks on 08/22/2026 Subject: Tirth Shah ‎- 099719 Consultant, Data Engineer | Databricks Click here to view the notification details. This email was intended for tirthcshah1999@gmail.com"
     },
     {
       "id": "dev-technology-general-application",
