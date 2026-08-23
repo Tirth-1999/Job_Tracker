@@ -1,6 +1,31 @@
 {
-  "updatedAt": "2026-08-23T14:24:32.187Z",
+  "updatedAt": "2026-08-23T14:50:33.080Z",
   "applications": [
+    {
+      "id": "jobright-database-engineer",
+      "company": "Jobright",
+      "role": "Database Engineer",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-23T14:39:52.000Z",
+      "latestSubject": "Pinnacle Technology just posted a 79% match Data Analyst – Supply Chain / IT role 6 minutes ago",
+      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
+      "gmailThreadId": "1a02a266f9a6fae7",
+      "gmailMessageIds": [
+        "1a02a266f9a6fae7",
+        "1a02f104de483241"
+      ],
+      "notes": "Parsippany-Troy Hills, NJ / 1+ referrals Jobright Instant Alert Always be the first to apply Pinnacle Technology Consulting · Growth Stage 79 % Data Analyst – Supply Chain / IT Parsippany-Troy Hills, NJ 1+ referrals 6 minutes ago · Be an early applicant APPLY NOW &#8203; More Great Matches Posted in the Last 24 Hours Confiar Services Information Technology & Services · Early Stage 95 % Data Engineer $65/hr - $70/hr Irving, TX 23 hours ago · Be an early applicant APPLY NOW &#8203; Dev Technology Group, Inc. Consulting · Growth Stage 93 % Database Developer $100K/yr - $125K/yr Ashburn, VA 5+ referrals 23 hours ago · Be an early applicant APPLY NOW &#8203; Ecommerce Guide Consulting · Early Stage 93 % Data Engineer, Whole Foods Market, E-commerce Analytics $132K/yr - $179K/yr Austin, TX 14 hours ago · Be an early applicant APPLY NOW &#8203; View More Opportunities &#8203; Apply Faster with Autofill Save time by skipping repetitive forms and autofill with your Jobright profile. Save time by skipping repetitive forms Install Autofill Happy Job Hunting, The Jobright.ai Team Update Job Alert Preference | Unsubscribe",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Automated job alert digest",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
     {
       "id": "coinbase-general-application",
       "company": "Coinbase",
@@ -564,28 +589,6 @@
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
       "aiConfidence": "high"
-    },
-    {
-      "id": "jobright-database-engineer",
-      "company": "Jobright",
-      "role": "Database Engineer",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-22T15:45:56+00:00",
-      "latestSubject": "Your job matches for “Database Engineer” — curated for you from Jobright - 08/22/2026",
-      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
-      "gmailThreadId": "1a02a266f9a6fae7",
-      "gmailMessageIds": [
-        "1a02a266f9a6fae7"
-      ],
-      "notes": "Explore this today&#x27;s top matches, curated to align with your preferences, experiences, and skill sets. Tharp Consulting Management Consulting · Early Stage 98% Database Engineer Herndon, VA 14 hours ago · Be an early applicant APPLY NOW Software Technology Inc. Consulting · Growth Stage 98% Data Engineer--US Citizens/Green Card Manassas, VA 2+ referrals 8 hours ago · Be an early applicant APPLY NOW RG&T Solutions Management Consulting · Early Stage 98% Ontology Software Developer Herndon, VA 9 hours ago · Be an early applicant APPLY NOW Alpha Consulting Corp. Consulting · Growth Stage 95% Snowflake + Dbt Data Engineer $65/hr - $70/hr Richardson, TX 1+ referrals 17 hours ago · Be an early applicant APPLY NOW Confiar Services Information Technology & Services · Early Stage 95% Data Engineer $65/hr - $70/hr Irving, TX 23 minutes ago · Be an early applicant APPLY NOW Dev Technology Group, Inc. Consulting · Growth Stage 93% Database Developer $100K/yr - $125K/yr Ashburn, VA 8+ referrals 7 minutes ago · Be an early applicant APPLY NOW neteffects Human Resources · Growth Stage 92% SQL Software Developer $48/hr - $52/hr Bridgeton, MO 2+ referrals 1 hour ago · Be an early applicant APPLY NOW Courier Health Enterprise Software · Growth Stage 91% Business Intelligence Engineer $120K/yr - $150K/yr New York, NY 1+ referrals 17 hours ago · Be an early applicant APPLY NOW Dice Telecom & Communications · Growth Stage 91% Data Engineer - AI and Analytics $79K/yr - $159K/yr Illinois State 1+ referrals 15 hours ago · Be an early applicant APPLY NOW System Inc. Telecom & Communications · Early Stage 89% Data & AI/ML Engineering New York, NY 7 hours ago · Be an early applicant APPLY NOW View More Opportunities Apply Faster with Autofill Save time by skipping repetitive forms and autofill with your Jobright profile. Save time by skipping repetitive forms Install Autofill Happy Job Hunting, The Jobright.ai Team Update Job Alert Preference | Unsubscribe",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Automated job alert digest",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
-      "aiConfidence": "medium"
     },
     {
       "id": "motive-gtm-ai-engineer",
