@@ -1,6 +1,193 @@
 {
-  "updatedAt": "2026-08-24T12:52:54.895Z",
+  "updatedAt": "2026-08-24T13:52:49.066Z",
   "applications": [
+    {
+      "id": "hive-business-analyst-hive-models",
+      "company": "Hive",
+      "role": "Business Analyst, Hive Models",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Hive",
+      "latestFrom": "Hive <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-08-24T13:50:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a034091fdf94c95",
+      "gmailMessageIds": [
+        "1a034091fdf94c95"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in Hive! Our team has received your application for Business Analyst, Hive Models, and we are delighted that you would consider joining our team. If your qualifications match our needs for the role, our team will be in touch to set up next steps. Best, Recruiting Team"
+    },
+    {
+      "id": "exa-general-application",
+      "company": "Exa",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to Exa 🚀",
+      "latestFrom": "Exa Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-24T13:46:54.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0334f9def72350",
+      "gmailMessageIds": [
+        "1a0334f9def72350",
+        "1a034062ae200d0d"
+      ],
+      "notes": "Hi Tirth, Thanks for applying to join Exa! We’ve received your application and our team will be reviewing it shortly. If your background looks like a fit, we’ll be in touch with next steps. Excited that you're interested in building the next generation of search! Best, The Exa Team Hi Tirth , Thanks for applying to join Exa! We’ve received your application and our team will be reviewing it shortly. If your background looks like a fit, we’ll be in touch with next steps. Excited that you're interested in building the next generation of search! Best, The Exa Team"
+    },
+    {
+      "id": "everfi-head-of-data-products",
+      "company": "Everfi",
+      "role": "Head Of Data Products",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Everfi",
+      "latestFrom": "Everfi LLC <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-08-24T13:46:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03405a43d71b86",
+      "gmailMessageIds": [
+        "1a03405a43d71b86"
+      ],
+      "notes": "Hi Tirth , Thank you for applying to Everfi! We have received your application and will review it promptly. If we think there is a good fit, we will contact you at this email address. **Position:** Head of Data Products Thank you, Everfi Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read. 96 Hi Tirth , Thank you for applying to Everfi! We have received your application and will review it promptly. If we think there is a good fit, we will contact you at this email address. Position: Head of Data Products Thank you, Everfi Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read."
+    },
+    {
+      "id": "jobright-database-engineer",
+      "company": "Jobright",
+      "role": "Data Analysis Engineer",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-24T13:40:06.000Z",
+      "latestSubject": "INFT Solutions, Inc just posted a 93% match Data Analysis Engineer role 12 minutes ago",
+      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
+      "gmailThreadId": "1a02a266f9a6fae7",
+      "gmailMessageIds": [
+        "1a02a266f9a6fae7",
+        "1a02f104de483241",
+        "1a02f6ca6c31e787",
+        "1a033fff300d8b05"
+      ],
+      "notes": "Houston, TX / 2+ referrals Jobright Instant Alert Always be the first to apply INFT Solutions, Inc Computer Software · Growth Stage 94 % Data Analysis Engineer Houston, TX 2+ referrals 12 minutes ago · Be an early applicant APPLY NOW &#8203; PTSOL ® - Progressive Technology Solutions Consulting · Growth Stage 84 % Data Analyst Jacksonville, FL 1+ referrals 12 minutes ago · Be an early applicant APPLY NOW &#8203; Eccalon, LLC Enterprise Software · Growth Stage 76 % Machine Learning Engineer Detroit, MI 5+ referrals 2 minutes ago · Be an early applicant APPLY NOW &#8203; More Great Matches Posted in the Last 24 Hours Best Foot Forward Healthcare · Growth Stage 90 % Data Solutions Analyst $65K/yr - $75K/yr Illinois State 1+ referrals 5 hours ago · Be an early applicant APPLY NOW &#8203; BCT Partners Consulting · Growth Stage 89 % BCT Partners – Data Management Specialist $65K/yr - $80K/yr Denver, CO 1+ referrals 12 hours ago · Be an early applicant APPLY NOW &#8203; Auger Artificial Intelligence (AI) · Growth Stage 87 % Software Development Engineer - AI Enablement Bellevue, WA 5+ referrals 2 hours ago · Be an early applicant APPLY NOW &#8203; View More Opportunities &#8203; Apply Faster with Autofill Save time by skipping repetitive forms and autofill with your Jobright profile. Save time by skipping repetitive forms Install Autofill Happy Job Hunting, The Jobright.ai Team Update Job Alert Preference | Unsubscribe",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Automated job alert digest",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "msg-19ff0dc672b09a39",
+      "company": "Resultant",
+      "role": "Data Engineer - Databricks",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-24T13:02:06.000Z",
+      "latestSubject": "Update on your Resultant application",
+      "latestFrom": "Josh Dixon from Resultant <notifications@resultant.com>",
+      "gmailThreadId": "19ff0dc672b09a39",
+      "gmailMessageIds": [
+        "19ff0dc672b09a39",
+        "1a033dd28ffd44e7"
+      ],
+      "notes": " Hi&nbsp;Tirth I just wanted to say thank you for taking the time to apply for the&nbsp;Data Engineer - Databricks&nbsp;position at Resultant. After careful consideration, we have decided not to proceed through to the hiring manager interview stage. Whilst your experience is interesting, we have found other candidates with experience that is closer to our preferences this time. We would be quite happy to see your application again in the future, and recommend you keep an eye on our Careers page since things can change quickly:&nbsp;https://u24008846.ct.sendgrid.net/ls/click?upn=u001.IeDoItKlZBDCTqFwvRrS9ETBpzb-2BUPdiNbuRg0DkguAJ46wDTAP6PuY2P-2F7Skkf7Nqfn_3iIz9nyIoE7WYm9EGmPy-2FHdpg9RX0TMZqeH-2Fa-2FauaY7IG0cUJ34GuiCQsYgpNRQdFyj-2BtdhbumnCF8oVUSNJsiTBxMlMaCQakEoU3ku02zrCNeuQ2VxtI4eO3fHsdVK1DIzwP2ckEnSy1ICjWGQpgBu-2BMMLs79cjpSdlIbVcCNuPn8Pzv-2F1-2Fy9HOgc-2FZRv4PPF6bD-2BiOXip-2BS4xCd9KJdSx-2BPNHCS2Fu9bZrYWcrmxObwNK8glhoMmeSNoURNWceJIVJWrq9UVbvQqgAr9httr2ij4WFtxReYGakYFtEGcYTXl9mVlEUFDiAxlEQVRxZEIage41b9FnHfqyTKco2JIPGeEd-2ByLa9U3XTw3JG-2FMUQCQ07QWM0PAaM5qhlZ-2FoeH9yo-2F1u83hAkUTNt-2FsRXlWkvzsZogEgmyejPZeiCckvsx4TOuQFLUERn-2ByIkhl0jncrG8N9eICvl9-2Bi6b1wHITrVYxobnaupssuHjLh4-2BQcyz0-2BH2fs2EQLVPb-2FWw-2FfsMblQ1yGpEF62B73vU7PDkcOfdNAo2fe7-2BJ83KQz0ZHI41oHUSONj3oK-2BfQr-2B7Imd In the meantime, I wish you well with your job search. Take care, Josh&nbsp;Dixon Resultant &#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203; Hi Tirth I just wanted to say thank you for taking the time to apply for the Data Engineer - Databricks position at Resultant. After careful consideration, we have decided not to proceed through to the hiring manager interview stage. Whilst your experience is interesting, we have found other candidates with experience that is closer to our preferences this time. We would be quite happy to see your application again in the future, and recommend you keep an eye on our Careers page since things can change quickly: https://resultant.com/careers/ In the meantime, I wish you well with your job search. Take care, Josh Dixon Resultant",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "brains-work-data-engineer-crm-support",
+      "company": "Brains Work",
+      "role": "Data Engineer - CRM Support",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Application has been Received",
+      "latestFrom": "Igor Kanda <igork@brainsworkgroup.com>",
+      "lastActivityAt": "2026-08-24T13:01:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a033dc3b4e1c67e",
+      "gmailMessageIds": [
+        "1a033dc3b4e1c67e"
+      ],
+      "notes": "Tirth, This email is to confirm that we have received the application that you recently submitted on our website for the Data Engineer - CRM Support position. Your information has been entered in our system and we will review it at the next earliest opportunity. If you need to update anything (such as how we should contact you), have any questions or are interested in other positions we have available, log in on our website for further instructions or simply reply to this email. You also might want to bookmark our website or subscribe to our RSS feed, as positions we add in the near future may also be of interest to you. Tirth, This email is to confirm that we have received the application that you recently submitted on our website for the Data Engineer - CRM Support position. Your information has been entered in our system and we will review it at the next earliest opportunity. If you need to update anything (such as how we should contact you), have any questions or are interested in other positions we have available, log in on our website for further instructions or simply reply to this email. You also might want to bookmark our website or subscribe to our RSS feed, as positions we add in the near future may also be of interest to you."
+    },
+    {
+      "id": "dev-technology-general-application",
+      "company": "Dev Technology",
+      "role": "Data Visualization Engineer (qlik)",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Important information about your Data Visualization Engineer (Qlik) application to Dev Technology",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-24T13:00:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02c56e13322331",
+      "gmailMessageIds": [
+        "1a02c56e13322331",
+        "1a033db99c9e104d"
+      ],
+      "notes": "Dear Tirth, Thank you for your application for our opportunity here at Dev Technology. We appreciate your time and interest. At this time we will be moving forward with applicants who more closely meet the government requirements for this position. We wish you the best of luck with your job search and hope you will continue to consider Dev in the future. Best Regards, Dev Technology Dear Tirth, Thank you for your application for our opportunity here at Dev Technology. We appreciate your time and interest. At this time we will be moving forward with applicants who more closely meet the government requirements for this position. We wish you the best of luck with your job search and hope you will continue to consider Dev in the future. Best Regards, Dev Technology"
+    },
+    {
+      "id": "pathlabs-general-application",
+      "company": "Pathlabs",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying at Pathlabs!",
+      "latestFrom": "Pathlabs <noreply@applytojob.com>",
+      "lastActivityAt": "2026-08-24T12:56:13.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a033d7c58aefbfa",
+      "gmailMessageIds": [
+        "1a033d7c58aefbfa"
+      ],
+      "notes": "Hello Tirth, Thank you for your interest in employment at Pathlabs. If your qualifications match our needs, we will contact you to learn more about your fit in this position. Thanks again for your inquiry. Pathlabs"
+    },
+    {
+      "id": "bluelabs-data-engineer-i",
+      "company": "Bluelabs",
+      "role": "Data Engineer II",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-24T12:53:10.000Z",
+      "latestSubject": "Thank you for applying to BlueLabs, Inc.",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19f9403e8f23cfe4",
+      "gmailMessageIds": [
+        "19f9403e8f23cfe4",
+        "1a033d4faf10adf3"
+      ],
+      "notes": "Tirth, Thank you so much for your interest in BlueLabs and applying for the Data Engineer II position. We've received your information and we're looking forward to reviewing it. Should your background and experience align with our position, we will reach out to you. Have a great day! If you would like to learn more about us, please see the links below: https://bluelabs.com/ BlueLabs on LinkedIn ( https://www.linkedin.com/company/bluelabsanalytics/ ) BlueLabs on Twitter ( https://twitter.com/blue_labs ) BlueLabs on Instagram ( https://www.instagram.com/bluelabs_/ ) Regards, People Ops BlueLabs ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Tirth, Thank you so much for your interest in BlueLabs and applying for the Data Engineer II position. We've received your information and we're looking forward to reviewing it. Should your background and experience align with our position, we will reach out to you. Have a great day! If you would like to learn more about us, please see the links below: https://bluelabs.com/ BlueLabs on LinkedIn BlueLabs on Twitter BlueLabs on Instagram Regards, People Ops BlueLabs ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "srs-acquiom-data-engineer",
       "company": "SRS Acquiom",
@@ -323,24 +510,6 @@
       "aiConfidence": "medium",
       "classifier": "openrouter",
       "reason": "Review / Other"
-    },
-    {
-      "id": "exa-general-application",
-      "company": "Exa",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thanks for applying to Exa 🚀",
-      "latestFrom": "Exa Hiring Team <no-reply@ashbyhq.com>",
-      "lastActivityAt": "2026-08-24T10:27:30.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0334f9def72350",
-      "gmailMessageIds": [
-        "1a0334f9def72350"
-      ],
-      "notes": "Hi Tirth, Thanks for applying to join Exa! We’ve received your application and our team will be reviewing it shortly. If your background looks like a fit, we’ll be in touch with next steps. Excited that you're interested in building the next generation of search! Best, The Exa Team Hi Tirth , Thanks for applying to join Exa! We’ve received your application and our team will be reviewing it shortly. If your background looks like a fit, we’ll be in touch with next steps. Excited that you're interested in building the next generation of search! Best, The Exa Team"
     },
     {
       "id": "msg-1a00236b7331c6f5",
@@ -1105,32 +1274,6 @@
       "reason": "Review / Other"
     },
     {
-      "id": "jobright-database-engineer",
-      "company": "Jobright",
-      "role": "Database Engineer",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-23T16:20:44.000Z",
-      "latestSubject": "American Association of Motor Vehicle Administrators is hiring for “Software Engineer-Data Engineering, Machine Learning (ML)” like you — 96% match from Jobright - 08/23/2026",
-      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
-      "gmailThreadId": "1a02a266f9a6fae7",
-      "gmailMessageIds": [
-        "1a02a266f9a6fae7",
-        "1a02f104de483241",
-        "1a02f6ca6c31e787"
-      ],
-      "notes": "Explore this today&#x27;s top matches, curated to align with your preferences, experiences, and skill sets. AAMVA (American Association of Motor Vehicle Administrators) Information Technology · Growth Stage 96% Software Engineer-Data Engineering, Machine Learning (ML) $114K/yr - $173K/yr Arlington, VA 3+ referrals 2 hours ago · Be an early applicant APPLY NOW &#8203; Dice Telecom & Communications · Growth Stage 94% Data Engineer Dallas, TX 1+ referrals 15 hours ago · Be an early applicant APPLY NOW &#8203; Ecommerce Guide Consulting · Early Stage 93% Data Engineer, Whole Foods Market, E-commerce Analytics $132K/yr - $179K/yr Austin, TX 15 hours ago · Be an early applicant APPLY NOW &#8203; MedPro Systems Big Data · Growth Stage 91% Data Project Analyst Mount Arlington, NJ 6+ referrals 3 hours ago · Be an early applicant APPLY NOW &#8203; BCT Partners Consulting · Growth Stage 88% BCT Partners – Data Management Specialist $65K/yr - $80K/yr Philadelphia, PA 1+ referrals 18 hours ago · Be an early applicant APPLY NOW &#8203; Meduvi Healthcare · Early Stage 88% Analytics Engineer $100K/yr - $110K/yr Canton, MA 2+ referrals 20 hours ago · Be an early applicant APPLY NOW &#8203; Otter.ai Artificial Intelligence (AI) · Growth Stage 88% Software Engineer, Data Infrastructure $155K/yr - $185K/yr Mountain View, CA 7+ referrals 13 hours ago · Be an early applicant APPLY NOW &#8203; Playsaurus Inc. Gaming · Early Stage 86% LATAM - Data Science Engineer Alameda, CA 3 hours ago · Be an early applicant APPLY NOW &#8203; Payer Sciences Big Data · Growth Stage 84% Associate Director, Analytics $73K/yr - $113K/yr Chicago, IL 5+ referrals 23 hours ago · Be an early applicant APPLY NOW &#8203; Employee Magnets Human Resources · Early Stage 84% Engineer - Digital Transformation Grapevine, TX 13 hours ago · Be an early applicant APPLY NOW &#8203; View More Opportunities &#8203; Apply Faster with Autofill Save time by skipping repetitive forms and autofill with your Jobright profile. Save time by skipping repetitive forms Install Autofill Happy Job Hunting, The Jobright.ai Team Update Job Alert Preference | Unsubscribe",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Automated job alert digest",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
-      "aiConfidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
-    },
-    {
       "id": "northrop-grumman-general-application",
       "company": "Northrop Grumman",
       "role": "General Application",
@@ -1351,24 +1494,6 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
-    },
-    {
-      "id": "dev-technology-general-application",
-      "company": "Dev Technology",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thank you for applying to Dev Technology",
-      "latestFrom": "recruiting@devtechnology.com",
-      "lastActivityAt": "2026-08-23T01:58:05.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a02c56e13322331",
-      "gmailMessageIds": [
-        "1a02c56e13322331"
-      ],
-      "notes": "Tirth, Thank you for applying to Dev Technology. We appreciate your interest in our position. Your application has been received. If your application seems like a good fit for the position, we will schedule a time to speak with you regarding this opportunity. Best Regards, Dev Technology Tirth, Thank you for applying to Dev Technology. We appreciate your interest in our position. Your application has been received. If your application seems like a good fit for the position, we will schedule a time to speak with you regarding this opportunity. Best Regards, Dev Technology"
     },
     {
       "id": "clarity-innovations-general-application",
@@ -15699,28 +15824,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-19ff0dc672b09a39",
-      "company": "Resultant",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-11T12:46:43+00:00",
-      "latestSubject": "Thank you for applying to Resultant!",
-      "latestFrom": "Resultant <notification@resultant.com>",
-      "gmailThreadId": "19ff0dc672b09a39",
-      "gmailMessageIds": [
-        "19ff0dc672b09a39"
-      ],
-      "notes": "Hey Tirth, Thank you for your interest in a career at Resultant. We have received your application and are looking forward to reading more about you. What happens now? We will review your application",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19ff0d59e0f4884d",
       "company": "Bridgeway Benefit",
       "role": "Data Engineer",
@@ -25936,28 +26039,6 @@
       "manualChangedAt": null,
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "bluelabs-data-engineer-i",
-      "company": "Bluelabs",
-      "role": "Data Engineer I",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-24T12:05:09+00:00",
-      "latestSubject": "Thank you for applying to Inroads",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19f9403e8f23cfe4",
-      "gmailMessageIds": [
-        "19f9403e8f23cfe4"
-      ],
-      "notes": "Tirth, Thank you so much for your interest in BlueLabs and applying for the Data Engineer I position. We've received your information and we're looking forward to reviewing it. Should your background and experience align with our position, we will reach out to you. Have a great day! If you would like to learn more about us, please see the links below: https://bluelabs.com/ BlueLabs on LinkedIn ( https://www.linkedin.com/company/bluelabsanalytics/ ) BlueLabs on Twitter ( https://twitter.com/blue_labs ) BlueLabs on Instagram ( https://www.instagram.com/bluelabs_/ ) Regards, People Ops BlueLabs ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Tirth, Thank you so much for your interest in BlueLabs and applying for the Data Engineer I position. We've received your information and we're looking forward to reviewing it. Should your background and experience align with our position, we will reach out to you. Have a great day! If you would like to learn more about us, please see the links below: https://bluelabs.com/ BlueLabs on LinkedIn BlueLabs on Twitter BlueLabs on Instagram Regards, People Ops BlueLabs ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
