@@ -1,6 +1,58 @@
 {
-  "updatedAt": "2026-08-24T05:39:11.330Z",
+  "updatedAt": "2026-08-24T08:11:34.755Z",
   "applications": [
+    {
+      "id": "american-express-general-application",
+      "company": "American Express",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-24T07:50:02.000Z",
+      "latestSubject": "New job opportunities at American Express",
+      "latestFrom": "Amex Careers <careers@recruitment.americanexpress.com>",
+      "gmailThreadId": "1a020a37644d9f24",
+      "gmailMessageIds": [
+        "1a020a381832c59a",
+        "1a032bf80d1fbc02"
+      ],
+      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: Sr AI Engineer I - Agentic AI Senior Data Engineer I - Amex Ads, Offers, and Dining Technology Sr Software Engineer II Staff AI Engineer - Enterprise Architecture Campus Undergraduate Summer Internship Program - 2027 AI Engineer, Enterprise Technology Services- New York, NY See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Automated email delivery bounce notification",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:24.203+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "seek-general-application",
+      "company": "SEEK",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-24T07:20:55.000Z",
+      "latestSubject": "Business Analyst + 11 new jobs",
+      "latestFrom": "SEEK Recommendations <noreply@s.seek.com.au>",
+      "gmailThreadId": "1a01e0b618dbade5",
+      "gmailMessageIds": [
+        "1a01e0b618dbade5",
+        "1a028581445b94b4",
+        "1a02d7e71dafe4d4",
+        "1a032a4cc5ad9965"
+      ],
+      "notes": "View job recommendations just for you %%str_to_replace_open_tracking%% seek [https://seekcdn.com/notifications/apac-mail/shared/seek-logo-white-bg.png]https://au.seek.com/?tracking=PAC-JobRecs-anz-1-logo Hi, we've got new job recommendations for you We want to help find the job that’s right for you – and these roles could be a match. We recommend these jobs based on your profile, past viewed jobs and applications. logo [https://bx-branding-gateway.cloud.seek.com.au/beb3c26b-e500-5bf1-7893-4f4927c456fb.1/serpLogo] Business Analyst City of Stirling Stirling, Perth WA Salary range: AUD 115,452 - 121,527 * Flexible Work Environment - Free Parking - Easy Access to Public Transport * Stirling Gym Membership - Active Social Club - Employee Canteen * Up to 6% Employer-Matched Super - and more! [https://au.seek.com/job/94016727?token=1%7E4fa7c0a3-99ad-43cb-8624-47169afac2d3&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/56bd5382-b14c-412f-a077-331a1a4ac05b.1/serpLogo] AI Data Analyst Phosphate Resources Ltd trading as Christmas Island Phosphates West Perth, Perth WA * Offering competitive salary and benefits; * Working for a diverse and growing company; and * Flexibel working options, supporting work-life balance. Recently posted [https://au.seek.com/job/94123058?token=1%7E4fa7c0a3-99ad-43cb-8624-47169afac2d3&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/a11651a2-d99d-420e-97c0-0ab0a72a6549.1/serpLogo] ERP Data & Reporting Analyst David Moss Corporation Pty Ltd Neerabup, Perth WA * Immediate start available Recently posted [https://au.seek.com/job/94119600?token=1%7E4fa7c0a3-99ad-43cb-8624-47169afac2d3&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/1f09b5ef-404b-4070-8277-cc21b5420707.1/serpLogo] Principal Strategy Analyst Western Power Perth WA Competitive salary including 13.5% super. * Lead strategic analysis shaping WA's future transmission network * Deliver insights on energy markets, regulation and decarbonisation * Influence major infrastructure investments through advanced modelling Recently posted [https://au.seek.com/job/94119782?token=1%7E4fa7c0a3-99ad-43cb-8624-47169afac2d3&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/1f516113-90cb-4a8f-9ba2-9b6e7ebe37e4.1/serpLogo] System Analyst - Success Factors Macmahon Perth WA * Fulltime permanent position - Perth Airport Based * Enjoy benefits including onsite gym, parking, EV charging and retail discounts * Dynamic and supportive team culture [https://au.seek.com/job/94021611?token=1%7E4fa7c0a3-99ad-43cb-8624-47169afac2d3&tracking=PAC-JobRecs-anz-1] [https://image-service-cdn.seek.com.au/9734ad25aeab02d075932f7194359488c5bf6817/1c056a984962480605a20a31bcae496022b57b25] logo [https://image-service-cdn.seek.com.au/ba549909ba057253672706565a9066e91505d355/f3c5292cec0e05e4272d9bf9146f390d366481d0] WesTrac Employees value their colleagues at WesTrac, describing them as genui",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Automated job recommendations digest",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:16.728+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
     {
       "id": "edgewater-federal-solutions-platform-engineer",
       "company": "Edgewater Federal Solutions",
@@ -291,32 +343,6 @@
         "1a02e1343450aa3d"
       ],
       "notes": "Daily Digest for Tirth Shah Sunday, August 23, 2026 1 Notification(s) CLICK HERE to sign-in to Workday Notifications (1) Thank you for applying! Dear Tirth, Thank you for your interest in the position of AI Engineer – Cloud Software & AI Platforms - Contract with Altera. We have received your application and will contact you if more information is needed. You may review the status of your employment application by logging in to your Candidate Home account: https://altera.wd1.myworkdayjobs.com/Altera Kind Regards, Talent Acquisition Business Process: Job Application: Tirth Shah ‎- R03022 AI Engineer – Cloud Software & AI Platforms - Contract (CAND-123215) on 08/22/2026 Subject: Tirth Shah ‎- R03022 AI Engineer – Cloud Software & AI Platforms - Contract (CAND-123215) Click here to view the notification details. This is a post-only email. Please do not reply to this message. This email address is not monitored for responses. This email was intended for tirthcshah1999@gmail.com · Manage Preferences Workday, Inc · 6230 Stoneridge Mall Road, Pleasanton, CA 94588"
-    },
-    {
-      "id": "seek-general-application",
-      "company": "SEEK",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-23T07:20:55.000Z",
-      "latestSubject": "Business Improvement Analyst + 11 new jobs",
-      "latestFrom": "SEEK Recommendations <noreply@s.seek.com.au>",
-      "gmailThreadId": "1a01e0b618dbade5",
-      "gmailMessageIds": [
-        "1a01e0b618dbade5",
-        "1a028581445b94b4",
-        "1a02d7e71dafe4d4"
-      ],
-      "notes": "View job recommendations just for you %%str_to_replace_open_tracking%% seek [https://seekcdn.com/notifications/apac-mail/shared/seek-logo-white-bg.png]https://au.seek.com/?tracking=PAC-JobRecs-anz-1-logo Hi, we've got new job recommendations for you We want to help find the job that’s right for you – and these roles could be a match. We recommend these jobs based on your profile, past viewed jobs and applications. logo [https://bx-branding-gateway.cloud.seek.com.au/31399e2c-7157-934d-0879-12404c192554.1/serpLogo] Business Improvement Analyst Brightwater Inglewood, Perth WA (Hybrid) * Enjoy access to NFP Salary Packaging up to $18,550 p.a * Hybrid work arrangements to support healthy work life balance * BrightwaterPlus discounts at 370+ retailers, including health insurers Recently posted [https://au.seek.com/job/94094061?token=1%7E14671698-8781-4cfc-9e19-48237c1aec74&tracking=PAC-JobRecs-anz-1] Senior Business Analyst Department of Housing and Works WA Osborne Park, Perth WA Recently posted [https://au.seek.com/job/94069902?token=1%7E14671698-8781-4cfc-9e19-48237c1aec74&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/8430f4b4-da7f-49ae-bef5-6da57ab7f4da.1/serpLogo] ICT Business Analyst KHG Contracting Perth WA $80,000 – $90,000 per year Recently posted [https://au.seek.com/job/94095087?token=1%7E14671698-8781-4cfc-9e19-48237c1aec74&tracking=PAC-JobRecs-anz-1] Business Systems & Reporting Analyst DFKPA Partners Pty Ltd Perth WA $80,000 – $90,000 per year [https://au.seek.com/job/94047598?token=1%7E14671698-8781-4cfc-9e19-48237c1aec74&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/98e35541-731e-4ed6-9eed-40d4cb7868a6.1/serpLogo] Analyst, Process and Mining Applications Newmont Australia Subiaco, Perth WA * Work in a dynamic team supporting world class mining operations * Join a collaborative team that values inclusion * Great employer offering an attractive remuneration package Recently posted [https://au.seek.com/job/94104296?token=1%7E14671698-8781-4cfc-9e19-48237c1aec74&tracking=PAC-JobRecs-anz-1] [https://image-service-cdn.seek.com.au/9734ad25aeab02d075932f7194359488c5bf6817/1c056a984962480605a20a31bcae496022b57b25] logo [https://image-service-cdn.seek.com.au/ba549909ba057253672706565a9066e91505d355/f3c5292cec0e05e4272d9bf9146f390d366481d0] WesTrac Employees value their colleagues at WesTrac, describing them as genuine, supportive, and down to earth. The training facilities and WesTrac Institute ... View company [https://au.seek.com/companies/westrac-432425?tracking=PAC-JobRecs-anz-1&solToken=1%7E14671698-8781-4cfc-9e19-48237c1aec74] logo [https://bx-branding-gateway.cloud.seek.com.au/1f09b5ef-404b-4070-8277-cc21b5420707.1/serpLogo] Principal Strategy Analyst Western Power Perth WA Competitive salary including 13.5% super. * Lead strategic analysis shaping WA's future transmission network * Deliver insights on energy markets, regulation and decarbonisation * Influence major infras",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Automated job recommendations digest",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:16.728+00:00",
-      "aiConfidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
     },
     {
       "id": "ewor-fellowship",
@@ -3506,28 +3532,6 @@
         "1a020a3dd3da1a2f"
       ],
       "notes": "** Address not found ** Your message wasn't delivered to dylan.hutchinson@zapier.com because the address couldn't be found, or is unable to receive mail. Learn more here: https://support.google.com/mail/?p=NoSuchUser The response was: The email account that you tried to reach does not exist. Please try double-checking the recipient's email address for typos or unnecessary spaces. For more information, go to https://support.google.com/mail/?p=NoSuchUser Address not found Your message wasn't delivered to dylan.hutchinson@zapier.com because the address couldn't be found, or is unable to receive mail. LEARN MORE The response was: The email account that you tried to reach does not exist. Please try double-checking the recipient's email address for typos or unnecessary spaces. For more information, go to https://support.google.com/mail/?p=NoSuchUser Final-Recipient: rfc822; dylan.hutchinson@zapier.com Action: failed Status: 5.1.3 Diagnostic-Code: smtp; The email account that you tried to reach does not exist. Please try double-checking the recipient's email address for typos or unnecessary spaces. For more information, go to https://support.google.com/mail/?p=NoSuchUser Last-Attempt-Date: Thu, 20 Aug 2026 12:26:44 -0700 (PDT)",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Automated email delivery bounce notification",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:24.203+00:00",
-      "aiConfidence": "medium"
-    },
-    {
-      "id": "american-express-general-application",
-      "company": "American Express",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T19:26:21+00:00",
-      "latestSubject": "Delivery Status Notification (Failure)",
-      "latestFrom": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
-      "gmailThreadId": "1a020a37644d9f24",
-      "gmailMessageIds": [
-        "1a020a381832c59a"
-      ],
-      "notes": "** Address not found ** Your message wasn't delivered to brooke.peugh1@aexp.com because the address couldn't be found, or is unable to receive mail. The response from the remote server was: 550 5.1.1 User Unknown Address not found Your message wasn't delivered to brooke.peugh1@aexp.com because the address couldn't be found, or is unable to receive mail. The response from the remote server was: 550 5.1.1 User Unknown Final-Recipient: rfc822; brooke.peugh1@aexp.com Action: failed Status: 5.1.1 Remote-MTA: dns; mx0b-0023b801.pphosted.com. (148.163.153.108, the server for the domain aexp.com.) Diagnostic-Code: smtp; 550 5.1.1 User Unknown Last-Attempt-Date: Thu, 20 Aug 2026 12:26:21 -0700 (PDT)",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
