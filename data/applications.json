@@ -1,6 +1,190 @@
 {
-  "updatedAt": "2026-08-25T09:36:32.797Z",
+  "updatedAt": "2026-08-25T10:34:32.651Z",
   "applications": [
+    {
+      "id": "lovable-general-application",
+      "company": "Lovable",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T10:00:32.000Z",
+      "latestSubject": "Thanks for applying to Lovable!",
+      "latestFrom": "Lovable Hiring Team <no-reply@ashbyhq.com>",
+      "gmailThreadId": "19febab34f079449",
+      "gmailMessageIds": [
+        "19febab34f079449",
+        "1a0385d480f0d545"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to us here at Lovable! We truly appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. For transparency, please note that we use AI support to help us structure and review applications. However, every decision in the hiring process is ultimately made by a human recruiter. All the best, Lovable Hiring Team Want to dive deeper into how we build and think about technology? Check out our https://lovable.dev/blog?category=inside+lovable, where we share insights, lessons learned, and behind-the-scenes looks at our work. From engineering deep dives to product thinking, it’s all there to keep you informed and inspired. Hi Tirth , Thank you for applying to us here at Lovable ! We truly appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. For transparency, please note that we use AI support to help us structure and review applications. However, every decision in the hiring process is ultimately made by a human recruiter. All the best, Lovable Hiring Team Want to dive deeper into how we build and think about technology? Check out our tech blog , where we share insights, lessons learned, and behind-the-scenes looks at our work. From engineering deep dives to product thinking, it’s all there to keep you informed and inspired.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "coinbase-analytics-engineer",
+      "company": "Coinbase",
+      "role": "Senior Analytics Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T10:00:31.000Z",
+      "latestSubject": "Important Update: Reapplication Timeline for Senior Analytics Engineer, GFCO Analytics",
+      "latestFrom": "no-reply@coinbase.com",
+      "gmailThreadId": "19f6a87b8eaa65ae",
+      "gmailMessageIds": [
+        "19f6a87b8eaa65ae",
+        "19f6298301c4a519",
+        "1a0245e36998b94d",
+        "coinbase-general-application",
+        "19f75871121760e0",
+        "coinbase-analytics-engineer-gfco-analytics",
+        "coinbase-analytics-engineer",
+        "coinbase-data-engineer",
+        "1a0385d45f1e2e59"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to Senior Analytics Engineer, GFCO Analytics at Coinbase. After careful consideration, we've decided not to move forward with your candidacy at this time. As part of our hiring process, candidates must wait 90 days before reapplying for the same position. This ensures a fresh evaluation of any new skills and experience gained since the last application. We encourage you to explore other opportunities with us in the future, and we truly appreciate your enthusiasm for joining Coinbase. Best regards, Coinbase Recruiting Hi Tirth, Thank you for applying to Senior Analytics Engineer, GFCO Analytics at Coinbase. After careful consideration, we've decided not to move forward with your candidacy at this time. As part of our hiring process, candidates must wait 90 days before reapplying for the same position. This ensures a fresh evaluation of any new skills and experience gained since the last application. We encourage you to explore other opportunities with us in the future, and we truly appreciate your enthusiasm for joining Coinbase. Best regards, Coinbase Recruiting",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "ATS Application Receipt: confirmation of application submission under review",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:19.176+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "growthloop-general-application",
+      "company": "Growthloop",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for application to GrowthLoop",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-25T09:59:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0385bfe4112ce0",
+      "gmailMessageIds": [
+        "1a0385bfe4112ce0"
+      ],
+      "notes": "Hi there Tirth, Thank you for your interest in joining the GrowthLoop team! We’ve received your application and our team will review it as soon as possible. We appreciate the time you took to apply and look forward to being in touch. Warm regards, GrowthLoop Recruiting Team Please note: This is an automated message from an unattended inbox. Replies will not be monitored. Hi there Tirth, Thank you for your interest in joining the GrowthLoop team! We&rsquo;ve received your application and our team will review it as soon as possible. We appreciate the time you took to apply and look forward to being in touch. Warm regards, GrowthLoop Recruiting Team Please note: This is an automated message from an unattended inbox. Replies will not be monitored."
+    },
+    {
+      "id": "yrefy-general-application",
+      "company": "Yrefy",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Yrefy LLC opportunity",
+      "latestFrom": "daphne villanueva <no-reply@yrefy-llc.breezy-mail.com>",
+      "lastActivityAt": "2026-08-25T09:47:27.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a038514e065d056",
+      "gmailMessageIds": [
+        "1a038514e065d056"
+      ],
+      "notes": "Hello Tirth, Thank you for applying for a position at Yrefy LLC. This is confirmation that our team has recieved your application and is reviewing your resume. If your experiences and qualifications match what we're looking for, we’ll be in touch regarding the next steps. Either way, we truly appreciate your interest in joining our team. In the meantime, feel free to check out our website or follow us on youtube, instagram, and facebook, to learn more about our work and culture. Warm regards, Yrefy LLC Human Resources Team Hello Tirth, Thank you for applying for a position at Yrefy LLC. This is confirmation that our team has recieved your application and is reviewing your resume. If your experiences and qualifications match what we're looking for, we’ll be in touch regarding the next steps. Either way, we truly appreciate your interest in joining our team. In the meantime, feel free to check out our website or follow us on youtube, instagram, and facebook, to learn more about our work and culture. Warm regards, Yrefy LLC Human Resources Team"
+    },
+    {
+      "id": "revature-data-engineer-databricks",
+      "company": "Revature",
+      "role": "Data Engineer - Databricks",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application for Data Engineer - Databricks at Revature sent",
+      "latestFrom": "applyonline@dice.com",
+      "lastActivityAt": "2026-08-25T09:44:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0384e735a5821a",
+      "gmailMessageIds": [
+        "1a0384e735a5821a"
+      ],
+      "notes": "Application Confirmation - Dice 96 Where tech connects.™ Log In Hey Tirth! 👋 Your application for Data Engineer - Databricks at Revature was successfully submitted. We're rooting for you! Get the Dice app This email has been scanned by Mimecast for email-related threats. Dice, DHI Group Inc. 6465 S. Greenwood Plaza Blvd, Suite 400 Centennial, CO 80111 Copyright © 1990 - 2025 Dice. All rights reserved. Use is subject to Terms & Conditions."
+    },
+    {
+      "id": "centerlight-data-engineer-i",
+      "company": "C2Q Health Solutions",
+      "role": "Data Engineer I",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Your Application!",
+      "latestFrom": "centerlight@myworkday.com",
+      "lastActivityAt": "2026-08-25T09:43:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0384d72b4bee6d",
+      "gmailMessageIds": [
+        "1a0384d87a5d3f11",
+        "1a0384d72b4bee6d"
+      ],
+      "notes": "Thank you for your application! We’ve received your submission for DATA ENGINEER I . Our Talent Acquisition team will review your qualifications and contact you if you are selected to move forward. We appreciate your interest in joining C2Q Health Solutions and look forward to reviewing your background. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "msg-19fc7a73bc2c2601",
+      "company": "AMEND Consulting",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T09:40:10.000Z",
+      "latestSubject": "Thank you for applying to AMEND Consulting",
+      "latestFrom": "noreply@amendllc.com",
+      "gmailThreadId": "19fc7a73bc2c2601",
+      "gmailMessageIds": [
+        "19fc7a73bc2c2601",
+        "19fa39e65e379420",
+        "19f658c6c2d5ef0b",
+        "1a0384aa11ad84b3"
+      ],
+      "notes": "Hi Tirth Shah! Thank you for your application to AMEND Consulting! We are so glad you're interested in joining our team. Our Recruiting Team is reviewing your application and will be in touch with updates. If you don't hear from us, check your spam folder! You'll hear from us soon. Best, AMEND Consulting Recruiting Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Hi Tirth Shah! Thank you for your application to AMEND Consulting! We are so glad you're interested in joining our team. Our Recruiting Team is reviewing your application and will be in touch with updates. If you don't hear from us, check your spam folder! You'll hear from us soon. Best, AMEND Consulting Recruiting Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "msg-1a00050cdff4251d",
+      "company": "Sunnydata",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T09:38:15.000Z",
+      "latestSubject": "Thanks for applying to SunnyData!",
+      "latestFrom": "SunnyData Hiring Team <no-reply@ashbyhq.com>",
+      "gmailThreadId": "1a00050cdff4251d",
+      "gmailMessageIds": [
+        "1a00050cdff4251d",
+        "1a0355f5f51daf9b",
+        "1a038037f1005c2f",
+        "1a03848e58b943e8"
+      ],
+      "notes": "Hi Tirth, Thank you for applying for the Data Engineer role at SunnyData! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. All the best, SunnyData Hiring Team Hi Tirth , Thank you for applying for the Data Engineer role at SunnyData ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. All the best, SunnyData Hiring Team",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "fora-general-application",
       "company": "Fora",
@@ -18,6 +202,24 @@
         "1a03846ef4f2e456"
       ],
       "notes": "Hi Tirth, Thanks for applying to Fora! If your application seems like a good fit for the position, we’ll follow up with next steps. Either way, we’re grateful you thought of Fora in your search. Warmly, The Fora Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Hi Tirth, Thanks for applying to Fora! If your application seems like a good fit for the position, we&rsquo;ll follow up with next steps. Either way, we&rsquo;re grateful you thought of Fora in your search. Warmly, The Fora Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
+    },
+    {
+      "id": "echo-it-solutions-general-application",
+      "company": "Echo IT Solutions",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received for Job #26-00169",
+      "latestFrom": "HumanResources@echoitsol.com",
+      "lastActivityAt": "2026-08-25T09:32:36.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0384b06e19d3ab",
+      "gmailMessageIds": [
+        "1a0384b06e19d3ab"
+      ],
+      "notes": "Dear Candidate, This message is to acknowledge receipt of your resume. We greatly appreciate your interest in the position. Your resume will be considered for our current and future opportunities. Thank you. Please note that this is an automated message, please do not reply to this email."
     },
     {
       "id": "denver-broncos-general-application",
@@ -164,32 +366,6 @@
         "1a03809cbe13e4a2"
       ],
       "notes": "Hi Tirth, Thank you for your recent application to the Data Engineer III (2026-6909) position at SelectQuote Insurance Services. Your submission will be reviewed, and we may reach out for more information if needed. Thank you again for your interest in our company. Sincerely, SelectQuote Insurance Services This is an automated email response. Please do not reply. ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/Yn6wjY0RjAhtAc56h2BVqQ~~/AAIB5hA~/lxMLRy_ca2b-s5ZPTwzh7xQ9KqifgSzZND5O1WM9xGIEUQKuOkxO2hYw8KLDIGJ5sEB62Q_hzvOSqfNwWoKID6wJ-k6xvqoYIE2l5G0Z6migxZyQV27lSy1ESkCIGEvGX3zvVufzDMx3owzJbPUx_xhWDr31EpwsaBdAPuLaJqmw-tYkO46jh5EyQXdbLzSR /n &#169; SelectQuote, Inc., Overland Park Kansas USA/n Hi Tirth, Thank you for your recent application to the Data Engineer III (2026-6909) position at SelectQuote Insurance Services. Your submission will be reviewed, and we may reach out for more information if needed. Thank you again for your interest in our company. Sincerely, SelectQuote Insurance Services This is an automated email response. Please do not reply. This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://selectquoteinc.icims.com/icims2/?r=112C755844&contactId=1794520&pid=17 &#169; SelectQuote, Inc., Overland Park Kansas USA"
-    },
-    {
-      "id": "msg-1a00050cdff4251d",
-      "company": "Sunnydata",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-25T08:22:28.000Z",
-      "latestSubject": "Thanks for applying to SunnyData!",
-      "latestFrom": "SunnyData Hiring Team <no-reply@ashbyhq.com>",
-      "gmailThreadId": "1a00050cdff4251d",
-      "gmailMessageIds": [
-        "1a00050cdff4251d",
-        "1a0355f5f51daf9b",
-        "1a038037f1005c2f"
-      ],
-      "notes": "Hi Tirth, Thank you for applying for the Data Engineer role at SunnyData! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. All the best, SunnyData Hiring Team Hi Tirth , Thank you for applying for the Data Engineer role at SunnyData ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. All the best, SunnyData Hiring Team",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
     },
     {
       "id": "openai-general-application",
@@ -8940,35 +9116,6 @@
       "manualAction": null,
       "manualChangedAt": null,
       "aiDecision": "LinkedIn Easy Apply application transmission confirmation",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:19.176+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "coinbase-analytics-engineer",
-      "company": "Coinbase",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-21T12:49:09+00:00",
-      "latestSubject": "Thank you for applying to Coinbase",
-      "latestFrom": "no-reply@coinbase.com",
-      "gmailThreadId": "19f6a87b8eaa65ae",
-      "gmailMessageIds": [
-        "19f6a87b8eaa65ae",
-        "19f6298301c4a519",
-        "1a0245e36998b94d",
-        "coinbase-general-application",
-        "19f75871121760e0",
-        "coinbase-analytics-engineer-gfco-analytics",
-        "coinbase-analytics-engineer",
-        "coinbase-data-engineer"
-      ],
-      "notes": "Hi Tirth, Thank you for showing interest in joining our team and taking the time to apply to Coinbase. We'll be reviewing your application shortly and will reach out to you on any next steps if your qualifications match our needs for the role. Join our Stand with Crypto ( https://www.coinbase.com/public-policy/advocacy/standwithcrypto ) campaign and become an advocate. Global Data Privacy Notice for Job Candidates and Applicants Depending on your location, the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA) may regulate the way we manage the data of job applicants. Our full notice outlining how data will be processed as part of the application procedure for applicable locations is available here ( https://www.coinbase.com/legal/applicant_privacy_notice ). By submitting your application, you are agreeing to our use and processing of your data as required. Regards, Coinbase ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "ATS Application Receipt: confirmation of application submission under review",
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:01:19.176+00:00",
       "aiConfidence": "high"
@@ -21383,28 +21530,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "lovable-general-application",
-      "company": "Lovable",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-10T12:34:53+00:00",
-      "latestSubject": "Thanks for applying to Lovable!",
-      "latestFrom": "Lovable Hiring Team <no-reply@ashbyhq.com>",
-      "gmailThreadId": "19febab34f079449",
-      "gmailMessageIds": [
-        "19febab34f079449"
-      ],
-      "notes": "Hi Tirth, Thank you for applying to us here at Lovable! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. For transparency, please note that we use AI support to help us structure and review applications. However, every decision in the hiring process is ultimately made by a human recruiter. All the best, Lovable Hiring Team Want to dive deeper into how we build and think about technology? Check out our https://lovable.dev/blog?category=inside+lovable, where we share insights, lessons learned, and behind-the-scenes looks at our work. From engineering deep dives to product thinking, it’s all there to keep you informed and inspired. Hi Tirth , Thank you for applying to us here at Lovable ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. For transparency, please note that we use AI support to help us structure and review applications. However, every decision in the hiring process is ultimately made by a human recruiter. All the best, Lovable Hiring Team Want to dive deeper into how we build and think about technology? Check out our tech blog , where we share insights, lessons learned, and behind-the-scenes looks at our work. From engineering deep dives to product thinking, it’s all there to keep you informed and inspired.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-19feba85cfa7af08",
       "company": "Sonoma Consulting.",
       "role": "Data Analyst",
@@ -25616,30 +25741,6 @@
       "manualChangedAt": null,
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19fc7a73bc2c2601",
-      "company": "AMEND Consulting",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-03T12:44:12+00:00",
-      "latestSubject": "Thank you for applying to AMEND Consulting",
-      "latestFrom": "noreply@amendllc.com",
-      "gmailThreadId": "19fc7a73bc2c2601",
-      "gmailMessageIds": [
-        "19fc7a73bc2c2601",
-        "19fa39e65e379420",
-        "19f658c6c2d5ef0b"
-      ],
-      "notes": "Hi Tirth Shah! Thank you for your application to AMEND Consulting! We are so glad you&#39;re interested in joining our team. Our Recruiting Team is reviewing your application and will be in touch with",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
     },
