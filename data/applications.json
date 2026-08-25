@@ -1,6 +1,33 @@
 {
-  "updatedAt": "2026-08-25T04:40:27.051Z",
+  "updatedAt": "2026-08-25T05:32:44.360Z",
   "applications": [
+    {
+      "id": "msg-1a014d42766cca87",
+      "company": "Stellantis",
+      "role": "Data Engineer - Supply Chain",
+      "status": "reply_needed",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T04:47:03.000Z",
+      "latestSubject": "Employment Application Needed - Stellantis",
+      "latestFrom": "Stellantis Talent Acquisition <jobs+ca63d20f53054ad79a0a3766c4f68af1@adp.com>",
+      "gmailThreadId": "1a014d42766cca87",
+      "gmailMessageIds": [
+        "1a014d42766cca87",
+        "19ffb4b8204d1b35",
+        "1a02e9401c360eaf",
+        "1a0373e4b90390d6"
+      ],
+      "notes": "Dear Tirth, You are eligible to move forward to the next step in our hiring process by completing an application for employment for Data Engineer - Supply Chain. Please click here to provide information about your background and experiences. Following completion, your details will be reviewed and you will be notified regarding the next steps with Stellantis. Access our career center with the link above. If you applied using a 3rd party login to create your profile (ie, Facebook, Google, etc) use that option to sign back into our career site. Otherwise, enter your email address (tirthcshah1999@gmail.com) to receive a personal verification code to sign back into your account. Once logged back into the career site, click the briefcase to access your applications, then click the forward arrow to complete your application. We look forward to receiving your completed application soon! Thank you for your time! Stellantis Talent Acquisition Please do not reply to this email Follow us on social! Remove Me Stellantis Auburn Hills, Michigan 48326 This message and any attachments are intended only for the use of the addressee and may contain information that is privileged and confidential. If the reader of the message is not the intended recipient or an authorized representative of the intended recipient, you are hereby notified that any dissemination of this communication is strictly prohibited. If you have received this communication in error, notify the sender immediately by return email and delete the message and any attachments from your system.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": "2026-08-20T15:58:37.357+00:00",
+      "aiDecision": "Classified as not_related",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "verizon-principal-engineer-data-engineering",
       "company": "Verizon",
@@ -6604,32 +6631,6 @@
       "aiDecision": "Standard application receipt confirmation",
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T16:50:26.07+00:00",
-      "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
-    },
-    {
-      "id": "msg-1a014d42766cca87",
-      "company": "Stellantis",
-      "role": "Data Engineer - Supply Chain",
-      "status": "reply_needed",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-23T12:24:05.000Z",
-      "latestSubject": "Additional Information Needed - Stellantis",
-      "latestFrom": "Stellantis Talent Acquisition <jobs+b8ab76d091aa42b09f0bb1dd89748441@adp.com>",
-      "gmailThreadId": "1a014d42766cca87",
-      "gmailMessageIds": [
-        "1a014d42766cca87",
-        "19ffb4b8204d1b35",
-        "1a02e9401c360eaf"
-      ],
-      "notes": "Hi, Thank you for taking the time to consider opportunities with Stellantis. Your interest in Stellantis as a potential employer is appreciated. This notification is to inform you that we have received your profile. We would like to collect some additional information from you for position Data Engineer - Supply Chain. Please CLICK HERE to complete some additional questions. Further information is needed in order to consider your application. We appreciate your interest in Stellantis as a potential employer. Access our career center with the link above. If you applied using a 3rd party login to create your profile (ie, Facebook, Google, etc) use that option to sign back into our career site. Otherwise, enter your email address (tirthcshah1999@gmail.com) to receive a personal verification code to sign back into your account. Once logged back into the career site, click the briefcase to access your applications, then click the forward arrow to complete your application. We look forward to receiving your completed application soon! Sincerely, Stellantis Talent Acquisition Team Please do not reply to this email Remove Me Stellantis Auburn Hills, Michigan 48326 This message and any attachments are intended only for the use of the addressee and may contain information that is privileged and confidential. If the reader of the message is not the intended recipient or an authorized representative of the intended recipient, you are hereby notified that any dissemination of this communication is strictly prohibited. If you have received this communication in error, notify the sender immediately by return email and delete the message and any attachments from your system.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": "2026-08-20T15:58:37.357+00:00",
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
