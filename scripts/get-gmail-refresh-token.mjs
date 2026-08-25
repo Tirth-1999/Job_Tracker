@@ -1,5 +1,22 @@
 import http from "node:http";
 import { URL } from "node:url";
+import fsSync from "node:fs";
+import { execSync } from "node:child_process";
+
+// Auto-load local .env file if present
+if (fsSync.existsSync(".env")) {
+  const envContent = fsSync.readFileSync(".env", "utf8");
+  for (const line of envContent.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const idx = trimmed.indexOf("=");
+    if (idx > 0) {
+      const key = trimmed.slice(0, idx).trim();
+      const val = trimmed.slice(idx + 1).trim().replace(/^["']|["']$/g, "");
+      if (!process.env[key]) process.env[key] = val;
+    }
+  }
+}
 
 const PORT = Number(process.env.PORT || 53682);
 const REDIRECT_URI = `http://localhost:${PORT}/oauth2callback`;
@@ -9,7 +26,7 @@ const clientId = process.env.GMAIL_CLIENT_ID;
 const clientSecret = process.env.GMAIL_CLIENT_SECRET;
 
 if (!clientId || !clientSecret) {
-  console.error("Set GMAIL_CLIENT_ID and GMAIL_CLIENT_SECRET before running this script.");
+  console.error("Set GMAIL_CLIENT_ID and GMAIL_CLIENT_SECRET in .env before running this script.");
   process.exit(1);
 }
 
@@ -49,28 +66,43 @@ const server = http.createServer(async (req, res) => {
     if (!tokenResponse.ok) throw new Error(await tokenResponse.text());
     const token = await tokenResponse.json();
 
-    res.writeHead(200, { "content-type": "text/plain" });
-    res.end("Refresh token created successfully! You can close this tab and return to the terminal.");
+    res.writeHead(200, { "content-type": "text/html" });
+    res.end("<h2>Refresh token created successfully!</h2><p>You can close this tab and return to the terminal.</p>");
 
     const refreshToken = token.refresh_token;
     if (refreshToken) {
-      const currentKey = process.env.OPENROUTER_API_KEY || "your_openrouter_api_key_here";
-      const envContent = [
-        `GMAIL_CLIENT_ID=${clientId}`,
-        `GMAIL_CLIENT_SECRET=${clientSecret}`,
-        `GMAIL_REFRESH_TOKEN=${refreshToken}`,
-        `OPENROUTER_API_KEY=${currentKey}`,
-        `OPENROUTER_MODEL=google/gemini-2.5-flash-lite`,
-        `GMAIL_BACKFILL=true`,
-        `GMAIL_RESET_DATA=false`,
-        ""
-      ].join("\n");
-      const fsSync = await import("node:fs");
+      // Update .env file preserving all existing keys
+      let envContent = fsSync.existsSync(".env") ? fsSync.readFileSync(".env", "utf8") : "";
+      if (/^GMAIL_REFRESH_TOKEN=.*$/m.test(envContent)) {
+        envContent = envContent.replace(/^GMAIL_REFRESH_TOKEN=.*$/m, `GMAIL_REFRESH_TOKEN=${refreshToken}`);
+      } else {
+        envContent = envContent.trim() + `\nGMAIL_REFRESH_TOKEN=${refreshToken}\n`;
+      }
       fsSync.writeFileSync(".env", envContent);
-      console.log("\n✅ Successfully generated and saved GMAIL_REFRESH_TOKEN to .env!");
+
+      console.log("\n=======================================================");
+      console.log("✅ Successfully generated new GMAIL_REFRESH_TOKEN!");
+      console.log("=======================================================");
       console.log(`GMAIL_REFRESH_TOKEN=${refreshToken}`);
+      console.log("Updated local .env file.");
+
+      // Attempt to automatically update GitHub Secrets
+      try {
+        execSync(`gh secret set GMAIL_REFRESH_TOKEN --body "${refreshToken}"`, { stdio: "pipe" });
+        console.log("✅ Successfully updated GMAIL_REFRESH_TOKEN in GitHub Repository Secrets!");
+      } catch (ghErr) {
+        console.log("ℹ️ To update GitHub Secret manually, run:");
+        console.log(`gh secret set GMAIL_REFRESH_TOKEN --body "${refreshToken}"`);
+      }
+
+      console.log("\n💡 IMPORTANT PERMANENT FIX FOR 7-DAY EXPIRATION:");
+      console.log("If your Google Cloud OAuth app is in 'Testing' mode, refresh tokens expire every 7 days.");
+      console.log("To make it permanent:");
+      console.log("1. Go to https://console.cloud.google.com/apis/credentials/consent");
+      console.log("2. Under 'Publishing status', click 'PUBLISH APP'.");
+      console.log("=======================================================\n");
     } else {
-      console.log("\n⚠️ No refresh token returned. (Google only returns it the first time you consent).");
+      console.log("\n⚠️ No refresh token returned. (Google only returns it when prompt=consent is used).");
       console.log("Tip: Remove the app from https://myaccount.google.com/permissions and retry.");
     }
     server.close();
@@ -82,7 +114,10 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`OAuth callback listening at ${REDIRECT_URI}`);
-  console.log("\nOpen this URL and approve Gmail read-only access:\n");
+  console.log(`\nOAuth callback server listening at ${REDIRECT_URI}`);
+  console.log("=======================================================");
+  console.log("👉 Click or open this URL in your browser to authorize:");
+  console.log("=======================================================");
   console.log(authUrl.toString());
+  console.log("=======================================================\n");
 });
