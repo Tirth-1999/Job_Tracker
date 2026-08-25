@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-08-25T14:26:12.868Z",
+  "updatedAt": "2026-08-25T15:22:12.905Z",
   "applications": [
     {
       "id": "con-edison-general-application",
-      "company": "Con Edison",
+      "company": "Conedison",
       "role": "General Application",
       "status": "not_related",
       "confidence": "medium",
@@ -11,13 +11,203 @@
       "reason": "Review / Other",
       "latestSubject": "Confirm your identity",
       "latestFrom": "ConEdison Careers <notifications@employeehub.coned.com>",
-      "lastActivityAt": "2026-08-25T14:25:20.000Z",
+      "lastActivityAt": "2026-08-25T15:20:48.000Z",
       "source": "gmail",
       "gmailThreadId": "1a0394fba97cfdef",
       "gmailMessageIds": [
-        "1a0394fba97cfdef"
+        "1a0394fba97cfdef",
+        "1a039828ab215ee0",
+        "1a039512f142e946"
       ],
-      "notes": "Hello , Just one more step before you get started. You must confirm your identity using the one-time pass code : 438580 Note : This code will expire in 10 minutes. Sincerely, O&R Career Site Recruiting Team."
+      "notes": "Hello , Just one more step before you get started. You must confirm your identity using the one-time pass code : 736253 Note : This code will expire in 10 minutes. Sincerely, O&R Career Site Recruiting Team."
+    },
+    {
+      "id": "jobright-database-engineer",
+      "company": "Jobright",
+      "role": "Data Solution Architect",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-25T15:20:22.000Z",
+      "latestSubject": "Your Top Job matches for “Data Solution Architect” — 98% match from Jobright - 08/25/2026",
+      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
+      "gmailThreadId": "1a02a266f9a6fae7",
+      "gmailMessageIds": [
+        "1a02a266f9a6fae7",
+        "1a02f104de483241",
+        "1a02f6ca6c31e787",
+        "1a033fff300d8b05",
+        "1a03458fb13908e2",
+        "1a039821a0e7f1f6"
+      ],
+      "notes": "Explore this today&#x27;s top matches, curated to align with your preferences, experiences, and skill sets. Synectics Inc. Consulting · Growth Stage 98% Data Solution Architect East Hanover, NJ 4+ referrals 21 hours ago · Be an early applicant APPLY NOW &#8203; Hatch Pros Information Technology & Services · Growth Stage 98% Data Warehouse and BI Expert (IT Programmer) Topeka, KS 1+ referrals 21 hours ago · Be an early applicant APPLY NOW &#8203; Arkhya Tech. Inc. Consulting · Growth Stage 97% AWS Data Engineer New York, NY 1+ referrals 19 minutes ago · Be an early applicant APPLY NOW &#8203; Tech Consulting Big Data · Growth Stage 97% Software Engineer $30/hr - $35/hr Delaware State 1+ referrals just now · Be an early applicant APPLY NOW &#8203; TTI of USA Accounting · Growth Stage 96% Data Solution Architect East Hanover, NJ 1+ referrals 6 minutes ago · Be an early applicant APPLY NOW &#8203; Freedom Technology Solutions Group, LLC Big Data · Growth Stage 95% General Submission with Freedom 76 Columbia, MD 1+ referrals 20 hours ago · Be an early applicant APPLY NOW &#8203; C2R Ventures Consulting · Early Stage 95% Python Developer New York, NY 1+ referrals 21 hours ago · Be an early applicant APPLY NOW &#8203; Confidential Staffing & Recruiting · Early Stage 95% Oracle PL/SQL Developer Plano, TX 9+ referrals 17 hours ago · Be an early applicant APPLY NOW &#8203; R3 Technology Inc Consulting · Growth Stage 95% Data Analytics & SQL Server Developer - W2 Role Atlanta, GA 1+ referrals 20 hours ago · Be an early applicant APPLY NOW &#8203; Dice Telecom & Communications · Growth Stage 94% Data Engineer $85K/yr - $95K/yr New York, NY 1+ referrals 2 hours ago · Be an early applicant APPLY NOW &#8203; View More Opportunities &#8203; Apply Faster with Autofill Save time by skipping repetitive forms and autofill with your Jobright profile. Save time by skipping repetitive forms Install Autofill Happy Job Hunting, The Jobright.ai Team Update Job Alert Preference | Unsubscribe",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Automated job alert digest",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "verizon-principal-engineer-data-engineering",
+      "company": "Verizon",
+      "role": "Principal Data Scientist",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T14:40:28.000Z",
+      "latestSubject": "Your application has been received for Principal Data Scientist (R-1099596)",
+      "latestFrom": "verizon@myworkday.com",
+      "gmailThreadId": "1a02088fc150efd3",
+      "gmailMessageIds": [
+        "1a02088fc150efd3",
+        "1a037371cdfb008b",
+        "1a0395d93ab04131"
+      ],
+      "notes": "96 Verizon Careers Hi Tirth, We got it! Thanks for applying to the Principal Data Scientist (R-1099596) position. What's next? We'll review the applications and reach out if we need additional information. Visit your Verizon candidate home page to monitor the status of your application. Let us help with your job search! Create a job alert and we'll email you with opportunities that match your interests. Thank you for your interest in joining the Verizon team. Verizon Talent Acquisition This email box is not monitored. Please do not reply to this email. This email was intended for tirthcshah1999@gmail.com",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "ATS application submission confirmation",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:24.203+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "rocket-companies-general-application",
+      "company": "Rocket Companies",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Rocket!",
+      "latestFrom": "Rock FOC Workday <noreply@workday.rocketcompanies.com>",
+      "lastActivityAt": "2026-08-25T14:38:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0395c370b8883d",
+      "gmailMessageIds": [
+        "1a0395c370b8883d"
+      ],
+      "notes": "96 Dear Tirth, Thank you for your recent application to our family of companies! Your resume will be reviewed by our Talent Acquisition team. If your experience and other qualifications meet our current needs, a recruiter will contact you shortly to discuss the opportunity further. Click here to log in to your Candidate Home account to check the status of your application. Have an amazing day! The Rocket Talent Acquisition Team Want to set yourself up for success at Rocket? Explore the buttons below to learn more about our culture & interviewing tips & tricks from our Talent Acquisition Team! Explore Our Culture Interviewing Resources Did you know that we're a veteran friendly workplace? To learn more about our veteran resources click on the button below. Veteran Hiring Page This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "notion-data-scientist-growth",
+      "company": "Notion",
+      "role": "Data Scientist, Growth",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application to Notion, Tirth!",
+      "latestFrom": "\"Notion's Recruiting Team\" <recruiting-no-reply@makenotion.com>",
+      "lastActivityAt": "2026-08-25T14:38:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0395bffe846d5e",
+      "gmailMessageIds": [
+        "1a0395bffe846d5e"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to Notion - we appreciate your interest in joining our team! If our team thinks you could be a good fit for the Data Scientist, Growth position, we'll reach out. Due to the high volume of applications, we may not be able to respond to everyone. In the meantime, sit back, relax, and check out our https://www.notion.so/blog blog for insight into our team's work. And if you haven’t used our product before, follow this https://www.notion.so/signup and get started with Notion for free! Best, Notion’s Recruiting Team Explore #https://www.linkedin.com/feed/hashtag/lifeatnotion/?focus=HASHTAG_FEED_CONTENT&lipi=u[%E2%80%A6]Ad_flagship3_feed_hashtag%3BjW%2B%2Fh0NURIeCfp9R9esY1A%3D%3D *Please note: Do not reply to this email. This email is sent from an unattended mailbox and replies are not read. Hi Tirth , Thank you for applying to Notion - we appreciate your interest in joining our team! If our team thinks you could be a good fit for the Data Scientist, Growth position, we'll reach out. Due to the high volume of applications, we may not be able to respond to everyone. In the meantime, sit back, relax, and check out our Tools & Craft blog for insight into our team's work. And if you haven’t used our product before, follow this link and get started with Notion for free! Best, Notion’s Recruiting Team Explore # LifeatNotion *Please note: Do not reply to this email. This email is sent from an unattended mailbox and replies are not read."
+    },
+    {
+      "id": "wex-sr",
+      "company": "WEX",
+      "role": "Sr",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Applying",
+      "latestFrom": "wexinc@myworkday.com",
+      "lastActivityAt": "2026-08-25T14:38:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0395b9771ede30",
+      "gmailMessageIds": [
+        "1a0395b9771ede30"
+      ],
+      "notes": "Hello, Thank you for your application! We’ve received your information for the position of Sr. Director, Engineering – Agentic AI & Service Applications Our Recruiting Team is currently reviewing your profile and if your skills and experience match any of our current openings you may be contacted by phone, text or email.​​​​​​​ ​​​​​​​​​​​We're so excited to have you explore career options with WEX. Stay connected with us by joining our Talent Community at https://careers.wexinc.com/us/en/jointalentcommunity. Thank you, WEX Global Talent Acquisition This email box is not monitored. Please do not reply to this message. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "apadmi-senior-data-engineer",
+      "company": "Apadmi",
+      "role": "Senior Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Apadmi",
+      "latestFrom": "recruitment@apadmi.com",
+      "lastActivityAt": "2026-08-25T14:38:13.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0395b83900e0b6",
+      "gmailMessageIds": [
+        "1a0395b83900e0b6"
+      ],
+      "notes": "Hi Tirth, Thank you for applying for the Senior Data Engineer role at Apadmi. We appreciate your interest in joining our team and have successfully received your application. Our team will carefully review your application against the role requirements. You can expect to hear back from us in 14 working days. Thank you for considering Apadmi as your next career opportunity. Regards, Apadmi Hi Tirth, Thank you for applying for the Senior Data Engineer role at Apadmi. We appreciate your interest in joining our team and have successfully received your application. Our team will carefully review your application against the role requirements. You can expect to hear back from us in 14 working days. Thank you for considering Apadmi as your next career opportunity. Regards, Apadmi"
+    },
+    {
+      "id": "smx-federal-financial-business-analyst",
+      "company": "SMX",
+      "role": "Federal Financial Business Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to SMX",
+      "latestFrom": "no-reply@ta.smxtech.com",
+      "lastActivityAt": "2026-08-25T14:38:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0395b6ce97a53b",
+      "gmailMessageIds": [
+        "1a0395b6ce97a53b"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in SMX and for applying to our open Federal Financial Business Analyst (Mid-Level) (5542) position. Your application has been received and will be reviewed as soon as possible. If your qualifications are a match for the position a member of our Talent Acquisition team will reach out to you regarding next steps. Again, thank you for your time and interest in SMX! SMX Talent Acquisition Team Hi Tirth, Thank you for your interest in SMX and for applying to our open Federal Financial Business Analyst (Mid-Level) (5542) position. Your application has been received and will be reviewed as soon as possible. If your qualifications are a match for the position a member of our Talent Acquisition team will reach out to you regarding next steps. Again, thank you for your time and interest in SMX! SMX Talent Acquisition Team"
+    },
+    {
+      "id": "caterpillar-general-application",
+      "company": "Caterpillar",
+      "role": "SR Data Scientist, Rental",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T14:37:58.000Z",
+      "latestSubject": "Application Received for R0000387100 SR Data Scientist, Rental",
+      "latestFrom": "cat@myworkday.com",
+      "gmailThreadId": "1a01db330c12717b",
+      "gmailMessageIds": [
+        "1a01db330c12717b",
+        "1a0395b49646275c"
+      ],
+      "notes": "96 Dear Tirth, Thank you for applying for the position of R0000387100 SR Data Scientist, Rental. You are one step closer to joining the team that helps our customers build a better world! The hiring team will review all applications and a member of the Caterpillar Recruiting Team may contact you, if necessary, to discuss your skills and qualifications. You may check the status of your application in your Candidate Home account. Please note that regardless of the outcome of your application we will retain your details on file for future reference in accordance with your local privacy laws. Thank you for your interest in a career at Caterpillar. Caterpillar Recruiting Team Caterpillar Inc. Join our Talent Community This email was intended for tirthcshah1999+workday-cat@gmail.com Caterpillar Inc. &#8226; 5025 N O'Connor Boulevard, Suite 100, Irving, TX, 75039",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "ATS application submission confirmation receipt",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:02:20.15+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "pryzm-federal-data-analyst",
+      "company": "Pryzm",
+      "role": "Federal Data Analyst",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Pryzm Application Update",
+      "latestFrom": "Pryzm Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-25T14:30:21.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a039544f797b5ab",
+      "gmailMessageIds": [
+        "1a039544f797b5ab"
+      ],
+      "notes": "Hi Tirth, Thank you for applying for the Federal Data Analyst role at Pryzm. After reviewing your application we've determined that there isn't an ideal fit at this time, and we will not be moving forward with your candidacy. We appreciate your interest in Pryzm! All the best, Pryzm Hiring Team Hi Tirth , Thank you for applying for the Federal Data Analyst role at Pryzm . After reviewing your application we've determined that there isn't an ideal fit at this time, and we will not be moving forward with your candidacy. We appreciate your interest in Pryzm ! All the best, Pryzm Hiring Team"
     },
     {
       "id": "jpmorgan-chase-lead-data-engineer",
@@ -1683,31 +1873,6 @@
       "aiDecision": "Classified as not_related",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
-    },
-    {
-      "id": "verizon-principal-engineer-data-engineering",
-      "company": "Verizon",
-      "role": "Principal Engineer Data Engineering",
-      "status": "rejected",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-25T04:39:13.000Z",
-      "latestSubject": "Update on your Verizon Application: Principal Engineer Data Engineering R-1099229 in Irvine, California",
-      "latestFrom": "verizon@myworkday.com",
-      "gmailThreadId": "1a02088fc150efd3",
-      "gmailMessageIds": [
-        "1a02088fc150efd3",
-        "1a037371cdfb008b"
-      ],
-      "notes": "96 Verizon Careers Update on your application Hi Tirth, Thanks for your interest in being a part of our V Team and applying for the Principal Engineer Data Engineering position (Job Requisition: R-1099229) in Irvine, California. We've had a number of applicants whose qualifications more closely matched the requirements for this position and will not be moving forward with your application at this time. Be sure to check out our Careers site for more opportunities and to stay connected with us. Verizon Talent Acquisition This email is not monitored, please do not reply to this email. This email was intended for tirthcshah1999@gmail.com",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "ATS application submission confirmation",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:24.203+00:00",
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
@@ -6577,34 +6742,6 @@
         "1a0346033325c47f"
       ],
       "notes": "96 Hello Tirth , Thank you for applying to Eisai. We have received your application for the position of Associate Director, Global Data Engineering and we are currently reviewing your experience and qualifications. If your qualifications match the job requirements, a member of the Talent Acquisition team may contact you. In the meantime, we invite you to learn more about life at Eisai. We appreciate your interest in Eisai and wish you a successful job search. Sincerely, Eisai Talent Acquisition OUR human health care (hhc ) MISSION We're on a mission to bring innovative solutions and medicines to patients, their families and caregivers. As part of our team, you'll be empowered to relentlessly challenge traditional thinking, collaborate on innovations and make change happen.​​​​ For a better user experience, we recommend using the latest version of Chrome. This email was intended for tirthcshah1999@gmail.com"
-    },
-    {
-      "id": "jobright-database-engineer",
-      "company": "Jobright",
-      "role": "Data Analyst",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-24T15:17:21.000Z",
-      "latestSubject": "Latest “Data Analyst (Local Candidates Only)” jobs you might like — 98% match from Jobright - 08/24/2026",
-      "latestFrom": "Jobright Job Alert <noreply@jobright.ai>",
-      "gmailThreadId": "1a02a266f9a6fae7",
-      "gmailMessageIds": [
-        "1a02a266f9a6fae7",
-        "1a02f104de483241",
-        "1a02f6ca6c31e787",
-        "1a033fff300d8b05",
-        "1a03458fb13908e2"
-      ],
-      "notes": "Explore this today&#x27;s top matches, curated to align with your preferences, experiences, and skill sets. PTSOL ® - Progressive Technology Solutions Consulting · Growth Stage 98% Data Analyst (Local Candidates Only) Jacksonville, FL 1+ referrals 1 hour ago · Be an early applicant APPLY NOW &#8203; Dice Telecom & Communications · Growth Stage 91% Data Engineer (Cloudera Platform) Irving, TX 1+ referrals 36 minutes ago · Be an early applicant APPLY NOW &#8203; Best Foot Forward Healthcare · Growth Stage 90% Data Solutions Analyst $65K/yr - $75K/yr Illinois State 1+ referrals 7 hours ago · Be an early applicant APPLY NOW &#8203; Auger Artificial Intelligence (AI) · Growth Stage 87% Software Development Engineer - AI Enablement Bellevue, WA 8+ referrals 3 hours ago · Be an early applicant APPLY NOW &#8203; Canon Financial Services, Inc. Banking · Growth Stage 86% Data Scientist $69K/yr - $104K/yr Melville, NY 1+ referrals 7 hours ago · Be an early applicant APPLY NOW &#8203; Temperature Equipment Corporation Information Technology · Growth Stage 86% Business Intelligence Analyst Lansing, IL 1+ referrals 19 hours ago · Be an early applicant APPLY NOW &#8203; NeerInfo Solutions Professional Services · Growth Stage 84% Ab Initio Data Engineer Irving, TX 3+ referrals 1 hour ago · Be an early applicant APPLY NOW &#8203; Ecommerce Guide Consulting · Early Stage 84% eCommerce Web Analyst $65K/yr - $75K/yr New York, NY 14 hours ago · Be an early applicant APPLY NOW &#8203; RSC Solutions Consulting · Growth Stage 84% Security Architect Charlotte, NC 4+ referrals 1 hour ago · Be an early applicant APPLY NOW &#8203; Black Canyon Consulting LLC Consulting · Growth Stage 83% Program Analyst Bethesda, MD 1+ referrals 21 hours ago · Be an early applicant APPLY NOW &#8203; View More Opportunities &#8203; Apply Faster with Autofill Save time by skipping repetitive forms and autofill with your Jobright profile. Save time by skipping repetitive forms Install Autofill Happy Job Hunting, The Jobright.ai Team Update Job Alert Preference | Unsubscribe",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Automated job alert digest",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
-      "aiConfidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
     },
     {
       "id": "openrouter-applied-ai-engineer",
@@ -11888,28 +12025,6 @@
         "1a01ecf32e312e09"
       ],
       "notes": "Tirth, Thank you for your application and interest in the CDP Data Engineer opening at Bounteous. Our people are our most important asset, and we're excited that you ve considered starting your next chapter with us. We will review your application and be in touch if we'd like to schedule an interview. Otherwise, your application will remain on file for future openings as our team continues to grow. We invite you to stay connected with us by subscribing to our monthly job openings alert here. Warmly, The Bounteous Team",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "ATS application submission confirmation receipt",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:02:20.15+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "caterpillar-general-application",
-      "company": "Caterpillar",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-20T05:44:37+00:00",
-      "latestSubject": "Thank you for your interest in Caterpillar Inc.",
-      "latestFrom": "cat@myworkday.com",
-      "gmailThreadId": "1a01db330c12717b",
-      "gmailMessageIds": [
-        "1a01db330c12717b"
-      ],
-      "notes": "96 Dear Tirth Shah, We appreciate your interest in Caterpillar Inc. and the time you’ve invested in applying for the R0000386422 Data Engineer opening. Unfortunately, our team did not select you for further consideration. We hope you’ll keep us in mind and we encourage you to apply again. Also, we will keep your application on file in accordance with local privacy laws, and may contact you in the future if a position becomes available that matches your qualifications. Again, we appreciate your interest in our company. We wish you the best of luck in your job search. Regards, Caterpillar Recruiting Team Caterpillar Inc. Join our Talent Community This email was intended for tirthcshah1999@gmail.com Caterpillar Inc. 5025 N O'Connor Boulevard, Suite 100, Irving, TX, 75039",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
