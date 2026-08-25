@@ -1,6 +1,256 @@
 {
-  "updatedAt": "2026-08-25T05:32:44.360Z",
+  "updatedAt": "2026-08-25T06:51:28.261Z",
   "applications": [
+    {
+      "id": "ucsf-general-application",
+      "company": "UCSF",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "UCSF Talent Acquisition <iazuqy.fa.sender@workflow.email.us-phoenix-1.ocs.oraclecloud.com>",
+      "lastActivityAt": "2026-08-25T06:50:55.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0356dc72e07c2f",
+      "gmailMessageIds": [
+        "1a0356dc72e07c2f",
+        "1a037afb36aed6fc"
+      ],
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 521647 Note : This code will expire in 10 minutes. Sincerely, UCSF Recruiting Team."
+    },
+    {
+      "id": "emonics-associate-ai-engineer",
+      "company": "Emonics",
+      "role": "Associate AI Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Emonics LLC",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-25T06:49:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a037ae247a1c1f1",
+      "gmailMessageIds": [
+        "1a037ae247a1c1f1"
+      ],
+      "notes": "Your application was sent to Emonics LLC Associate AI Engineer Emonics LLC Brooklyn, NY View job: https://www.linkedin.com/comm/jobs/view/4457182467/?trackingId=OxgBucOuSpeiHxPdqwMgXQ%3D%3D&refId=Q353HGRNQeuTWkecy7yDfA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bofk6JKj%2FRCq90uFADzgxuw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=13NbmavOzpDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8b131e~sr-null-null&eid=a06oc2-mt8b131e-sr&otpToken=YWExNGJhYjc5OGQxZTBmODg0ZGI0NGJmZWM2NzZkNWI0ZThlMjliMzhkNmNhNjVkNjA3OGM3ZTJkY2RjNTlmYTMyZGI4MzVmMjJkNjliOGI3MmQ3ZjgyNDJiY2M2YTVmNDUwMGM3N2Y5YzFlMWVmZDA2M2RjNmQ5ZDI4NmMxZDA1OTNkYzZjZWI2MzYwZDI3LDIsMQ%3D%3D --------------------------------------------------------- Applied on August 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=cD8zUHOeTKeG5DaBwYAv6Q%3D%3D&refId=kf9FBKRMRg%2BI4VwY7Xia%2BA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bofk6JKj%2FRCq90uFADzgxuw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=13NbmavOzpDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8b131e~sr-null-null&eid=a06oc2-mt8b131e-sr&otpToken=YWExNGJhYjc5OGQxZTBmODg0ZGI0NGJmZWM2NzZkNWI0ZThlMjliMzhkNmNhNjVkNjA3OGM3ZTJkY2RjNTlmYTMyZGI4MzVmMjJkNjliOGI3MmQ3ZjgyNDJiY2M2YTVmNDUwMGM3N2Y5YzFlMWVmZDA2M2RjNmQ5ZDI4NmMxZDA1OTNkYzZjZWI2MzYwZDI3LDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=4upsFl88Rxamnr%2ByDXaE%2Fw%3D%3D&refId=WNGlURbRQ9GFzJpyzHKz0Q%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bofk6JKj%2FRCq90uFADzgxuw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=13NbmavOzpDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8b131e~sr-null-null&eid=a06oc2-mt8b131e-sr&otpToken=YWExNGJhYjc5OGQxZTBmODg0ZGI0NGJmZWM2NzZkNWI0ZThlMjliMzhkNmNhNjVkNjA3OGM3ZTJkY2RjNTlmYTMyZGI4MzVmMjJkNjliOGI3MmQ3ZjgyNDJiY2M2YTVmNDUwMGM3N2Y5YzFlMWVmZDA2M2RjNmQ5ZDI4NmMxZDA1OTNkYzZjZWI2MzYwZDI3LDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=i3W3fdwjR0K%2BdlAIYn55XA%3D%3D&refId=YCkNpHR8SICFIKvUTltpDQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_wit"
+    },
+    {
+      "id": "akube-ai-orchestration-engineer-i",
+      "company": "Akube",
+      "role": "AI Orchestration Engineer I",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to aKUBE",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-25T06:48:21.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a037ad54c5b31c5",
+      "gmailMessageIds": [
+        "1a037ad54c5b31c5"
+      ],
+      "notes": "Your application was sent to aKUBE AI Orchestration Engineer I - 1644 aKUBE Los Angeles, CA View job: https://www.linkedin.com/comm/jobs/view/4457191026/?trackingId=LtAe9vXQRNeFivtEqyO68g%3D%3D&refId=WmBI5jfkTB6Wv9qAwgstKg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B4oVf7elCSGGbR2CSAlwjpw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0vomYDkyboDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8azy4w~g6-null-null&eid=a06oc2-mt8azy4w-g6&otpToken=MTNhYWY3NzFjYjQwNWFjNTAwMDBkNzg0MDhiZmQzM2Y1MjI4NWU3MzQ2ZjU3ZDllYTZmOTk2Y2IxYWJiNzQyNzNhMWZhYjg1Yzk4NzlhN2FkODU0YTg4MmU4MTY2YTYxOTczMWJlYjVkMDkzMzNiMTJjMTM1NmE1MjMzYThiNGQ5ODVjMjJlOGYxMzBiOGQ1LDIsMQ%3D%3D --------------------------------------------------------- Applied on August 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=V3SePjeuTtKbX5sO53lTWg%3D%3D&refId=itSu9KbQTc6cRpJ9zRSoOQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B4oVf7elCSGGbR2CSAlwjpw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0vomYDkyboDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8azy4w~g6-null-null&eid=a06oc2-mt8azy4w-g6&otpToken=MTNhYWY3NzFjYjQwNWFjNTAwMDBkNzg0MDhiZmQzM2Y1MjI4NWU3MzQ2ZjU3ZDllYTZmOTk2Y2IxYWJiNzQyNzNhMWZhYjg1Yzk4NzlhN2FkODU0YTg4MmU4MTY2YTYxOTczMWJlYjVkMDkzMzNiMTJjMTM1NmE1MjMzYThiNGQ5ODVjMjJlOGYxMzBiOGQ1LDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=7JJTBP6RRJyzuPxpE7XgnA%3D%3D&refId=KRP8VwpnRaapJwVDKOZMyw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B4oVf7elCSGGbR2CSAlwjpw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0vomYDkyboDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8azy4w~g6-null-null&eid=a06oc2-mt8azy4w-g6&otpToken=MTNhYWY3NzFjYjQwNWFjNTAwMDBkNzg0MDhiZmQzM2Y1MjI4NWU3MzQ2ZjU3ZDllYTZmOTk2Y2IxYWJiNzQyNzNhMWZhYjg1Yzk4NzlhN2FkODU0YTg4MmU4MTY2YTYxOTczMWJlYjVkMDkzMzNiMTJjMTM1NmE1MjMzYThiNGQ5ODVjMjJlOGYxMzBiOGQ1LDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=DM%2F8T9eRR1KZNhkVStVzAQ%3D%3D&refId=A%2BK2DXiCTne%2FlqMsIO33Mg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_"
+    },
+    {
+      "id": "purple-carrot-analytics-engineer",
+      "company": "Purple Carrot",
+      "role": "Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T06:47:38.000Z",
+      "latestSubject": "Tirth Chirayu, your application was sent to Purple Carrot",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "gmailThreadId": "19f6acfaa5e8f8d1",
+      "gmailMessageIds": [
+        "19f6acfaa5e8f8d1",
+        "19f6ac89952a386c",
+        "19f6ac1eb3954c30",
+        "1a037acad709d382",
+        "1a037a66a176852d",
+        "1a037a218f8ba91d",
+        "1a0379e16bc93463"
+      ],
+      "notes": "Your application was sent to Purple Carrot Analytics Engineer Purple Carrot Chicago, IL View job: https://www.linkedin.com/comm/jobs/view/4457154615/?trackingId=%2FzP7xnGRR82YSPuYoySSHQ%3D%3D&refId=r66pm1CJS%2BGEjsYiacJqMw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bab%2FIcUp%2FTaCNR2XnHigIPg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=23i_NRaAr7DIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8aeja5~ur-null-null&eid=a06oc2-mt8aeja5-ur&otpToken=ODM0MmI4ZmVjZjZkNWNlYmI3ZWYwZDhlNTQwN2M4NDM2ZWNiZGVhNDNkNzg4ODcwNmRhZDVmNGM4ZjQwOGUyODUzMjFjMmY2MjRlMjQzOTg0ZTQ2MTgyNjMwYzRlZGE2NGU3YjEyMTBhMGNkNTNmNDJlNGYxNjI1MTAzZjFjN2QwYjgxMjQzMmRlOWIyZTQxLDIsMQ%3D%3D --------------------------------------------------------- Applied on August 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=0tfwxH7FQF2v2pXWAI6QMQ%3D%3D&refId=HDJLppjuSbGsU3ZZyQ%2BBbQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bab%2FIcUp%2FTaCNR2XnHigIPg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=23i_NRaAr7DIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8aeja5~ur-null-null&eid=a06oc2-mt8aeja5-ur&otpToken=ODM0MmI4ZmVjZjZkNWNlYmI3ZWYwZDhlNTQwN2M4NDM2ZWNiZGVhNDNkNzg4ODcwNmRhZDVmNGM4ZjQwOGUyODUzMjFjMmY2MjRlMjQzOTg0ZTQ2MTgyNjMwYzRlZGE2NGU3YjEyMTBhMGNkNTNmNDJlNGYxNjI1MTAzZjFjN2QwYjgxMjQzMmRlOWIyZTQxLDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=K0Kf232ITX6ouQxw2AB9NA%3D%3D&refId=ZhYUhINASXGzEOgwxJp%2Bsw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bab%2FIcUp%2FTaCNR2XnHigIPg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=23i_NRaAr7DIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8aeja5~ur-null-null&eid=a06oc2-mt8aeja5-ur&otpToken=ODM0MmI4ZmVjZjZkNWNlYmI3ZWYwZDhlNTQwN2M4NDM2ZWNiZGVhNDNkNzg4ODcwNmRhZDVmNGM4ZjQwOGUyODUzMjFjMmY2MjRlMjQzOTg0ZTQ2MTgyNjMwYzRlZGE2NGU3YjEyMTBhMGNkNTNmNDJlNGYxNjI1MTAzZjFjN2QwYjgxMjQzMmRlOWIyZTQxLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=BRq1EGFORu6phqItu85gdg%3D%3D&refId=YerlCcQ2RXmTutzQ7Ngoyg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "vincue-data-visualization-engineer-bi-developer",
+      "company": "VINCUE",
+      "role": "Data Visualization Engineer/bi Developer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to VINCUE",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-25T06:46:39.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a037abc91ad911c",
+      "gmailMessageIds": [
+        "1a037abc91ad911c"
+      ],
+      "notes": "Your application was sent to VINCUE Data Visualization Engineer/BI Developer VINCUE Kansas City Metropolitan Area View job: https://www.linkedin.com/comm/jobs/view/4457897869/?trackingId=66XpFP8uTVeZl5opYyaQCQ%3D%3D&refId=7vZide7CRr6geQUEyizYig%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B1Kb4E4SmSaSuGuiUNswhRA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2xcuDCwdnmDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8axrnt~90-null-null&eid=a06oc2-mt8axrnt-90&otpToken=MzIwY2QzOGU0YjUyMGIwYzMzMTFkMzE2MTcyNzY3NTBhZGZkYjZhMzY2ZDY0YTlhMWJmNDc0NDdkODI5MmY2NmFlNzg5ZjI3NjE3ZGE5MzA1NjJiYWM2YTIxYjYyMjFmZTFhODRhMDZiNTYxMjQwNWM2ZjViYTUzYmFlM2UzZjQ0ZDc4ODMyODA1N2I3YjQ1LDIsMQ%3D%3D --------------------------------------------------------- Applied on August 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=ktHsTb2cSBixTJVXzN2xRA%3D%3D&refId=jeKOaOzPSjamqbnPBR9QmQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B1Kb4E4SmSaSuGuiUNswhRA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2xcuDCwdnmDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8axrnt~90-null-null&eid=a06oc2-mt8axrnt-90&otpToken=MzIwY2QzOGU0YjUyMGIwYzMzMTFkMzE2MTcyNzY3NTBhZGZkYjZhMzY2ZDY0YTlhMWJmNDc0NDdkODI5MmY2NmFlNzg5ZjI3NjE3ZGE5MzA1NjJiYWM2YTIxYjYyMjFmZTFhODRhMDZiNTYxMjQwNWM2ZjViYTUzYmFlM2UzZjQ0ZDc4ODMyODA1N2I3YjQ1LDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=rNV7N9eLRb6M3ACnxTi%2BUQ%3D%3D&refId=bXm%2BYXNlTKqqJsk52HbhNA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B1Kb4E4SmSaSuGuiUNswhRA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2xcuDCwdnmDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8axrnt~90-null-null&eid=a06oc2-mt8axrnt-90&otpToken=MzIwY2QzOGU0YjUyMGIwYzMzMTFkMzE2MTcyNzY3NTBhZGZkYjZhMzY2ZDY0YTlhMWJmNDc0NDdkODI5MmY2NmFlNzg5ZjI3NjE3ZGE5MzA1NjJiYWM2YTIxYjYyMjFmZTFhODRhMDZiNTYxMjQwNWM2ZjViYTUzYmFlM2UzZjQ0ZDc4ODMyODA1N2I3YjQ1LDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=IGVSxs%2FAQEeOzWTaDgfGYw%3D%3D&refId=s1BnmgZ7Slu5FSwsHqaLmA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_"
+    },
+    {
+      "id": "divihn-integration-data-engineer",
+      "company": "Divihn Integration",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to DivIHN Integration Inc",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-25T06:40:36.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a037a63f57c5a6e",
+      "gmailMessageIds": [
+        "1a037a63f57c5a6e"
+      ],
+      "notes": "Your application was sent to DivIHN Integration Inc Data Engineer DivIHN Integration Inc St Paul, MN View job: https://www.linkedin.com/comm/jobs/view/4455424486/?trackingId=HS6EOsuxQ1ONWouajQswBw%3D%3D&refId=xlTS6mvwTHegVvva1u6%2B4g%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BPcsWulrCQjudOOWY0VeO0Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3QkBZHdh3gDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8apzpy~ek-null-null&eid=a06oc2-mt8apzpy-ek&otpToken=YTM0OTc4Njg4YWY0OTg4MmJlMWU2NDg5OGUzN2YzZjc4ZDRkNzFmZjM2NWIwODMyZGUyNTAzZTFjZDZlNzFjZjE3ZmYyMGVjYmMzMDMxOWM4NmZmNTJiNDgxZmM5MGJjZDlkNjViMmU1NjYzODYzNTBmOWQxOWM5MWI2MWNmOGYyYWVmY2ZlOTVmOWM3NmUwLDIsMQ%3D%3D --------------------------------------------------------- Applied on August 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=5dtIIBcdTEmNL0jrEzzL3Q%3D%3D&refId=f0fdHWYTTr%2Bt4bKoaCYyKw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BPcsWulrCQjudOOWY0VeO0Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3QkBZHdh3gDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8apzpy~ek-null-null&eid=a06oc2-mt8apzpy-ek&otpToken=YTM0OTc4Njg4YWY0OTg4MmJlMWU2NDg5OGUzN2YzZjc4ZDRkNzFmZjM2NWIwODMyZGUyNTAzZTFjZDZlNzFjZjE3ZmYyMGVjYmMzMDMxOWM4NmZmNTJiNDgxZmM5MGJjZDlkNjViMmU1NjYzODYzNTBmOWQxOWM5MWI2MWNmOGYyYWVmY2ZlOTVmOWM3NmUwLDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=xw1W%2BcXbQ1iKm465PQiKXQ%3D%3D&refId=Ti6JkbcJTeesQlQ7zoIZxw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BPcsWulrCQjudOOWY0VeO0Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3QkBZHdh3gDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8apzpy~ek-null-null&eid=a06oc2-mt8apzpy-ek&otpToken=YTM0OTc4Njg4YWY0OTg4MmJlMWU2NDg5OGUzN2YzZjc4ZDRkNzFmZjM2NWIwODMyZGUyNTAzZTFjZDZlNzFjZjE3ZmYyMGVjYmMzMDMxOWM4NmZmNTJiNDgxZmM5MGJjZDlkNjViMmU1NjYzODYzNTBmOWQxOWM5MWI2MWNmOGYyYWVmY2ZlOTVmOWM3NmUwLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=JY1zoYXQRmabszFIswhGwg%3D%3D&refId=BlvGOOHBRJWivBIILYfcrQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_"
+    },
+    {
+      "id": "perform-properties-associate-analytics-engineer",
+      "company": "Perform Properties",
+      "role": "Associate, Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Perform Properties",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-25T06:36:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03472d1b4d231a",
+      "gmailMessageIds": [
+        "1a03472d1b4d231a",
+        "1a037a26daaa51fa"
+      ],
+      "notes": "Your application was sent to Perform Properties Associate, Analytics Engineer Perform Properties Santa Monica, CA View job: https://www.linkedin.com/comm/jobs/view/4456334927/?trackingId=a4qqwp%2B2S5SEPs7sdOgegw%3D%3D&refId=a7TbSZBzQm6MypQy0av50w%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B9QZq25W0SU%2BDhTbeiH4jyQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0uX0uFhNXcDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8akmgc~4-null-null&eid=a06oc2-mt8akmgc-4&otpToken=YjE3MzcxNWM3Mjk1OTYyZGE2MWIwZmJjZDVlYzE2YTBiZmI0MGM1ODNjMWY3NTU5OTYyYzRiNGVkNDU4YWNkZTA2YTVhODkwNjFkYjcyZWYwYjZhZGIyMGNlMGQxYWJjZGIxNGM3NjIyOWRhYTUwMDdmYWYyM2VhZDZiNDMzYjRhZTNiNDZhNTczYjQ3NjI2LDIsMQ%3D%3D --------------------------------------------------------- Applied on August 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=8ji20WrJTvy7BwzXNHIpDA%3D%3D&refId=p2WG7Dd6Ryy8aMxebg%2Fotw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B9QZq25W0SU%2BDhTbeiH4jyQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0uX0uFhNXcDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8akmgc~4-null-null&eid=a06oc2-mt8akmgc-4&otpToken=YjE3MzcxNWM3Mjk1OTYyZGE2MWIwZmJjZDVlYzE2YTBiZmI0MGM1ODNjMWY3NTU5OTYyYzRiNGVkNDU4YWNkZTA2YTVhODkwNjFkYjcyZWYwYjZhZGIyMGNlMGQxYWJjZGIxNGM3NjIyOWRhYTUwMDdmYWYyM2VhZDZiNDMzYjRhZTNiNDZhNTczYjQ3NjI2LDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=10jjYTTsSh2hlqovXDKnOQ%3D%3D&refId=DOVHu8ukQsmXLBTXDMMaHw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B9QZq25W0SU%2BDhTbeiH4jyQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0uX0uFhNXcDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8akmgc~4-null-null&eid=a06oc2-mt8akmgc-4&otpToken=YjE3MzcxNWM3Mjk1OTYyZGE2MWIwZmJjZDVlYzE2YTBiZmI0MGM1ODNjMWY3NTU5OTYyYzRiNGVkNDU4YWNkZTA2YTVhODkwNjFkYjcyZWYwYjZhZGIyMGNlMGQxYWJjZGIxNGM3NjIyOWRhYTUwMDdmYWYyM2VhZDZiNDMzYjRhZTNiNDZhNTczYjQ3NjI2LDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=7h7VXhggQq%2B%2BkAv88DEvtQ%3D%3D&refId=gHdNiqLhQtidL5M9Bxp7Wg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_applicatio"
+    },
+    {
+      "id": "mastech-digital-ai-data-data-engineer",
+      "company": "Mastech Digital",
+      "role": "AI & Data - Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Mastech Digital",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-25T06:35:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a037a202414bc91",
+      "gmailMessageIds": [
+        "1a037a202414bc91"
+      ],
+      "notes": "Your application was sent to Mastech Digital AI & Data - Data Engineer Mastech Digital Seattle, WA View job: https://www.linkedin.com/comm/jobs/view/4455871691/?trackingId=sk88lrqNQ3KzFIL3pXZ2JQ%3D%3D&refId=NjfSfHLqR5WWdN6vEObBow%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BWXdupMlHTHOeO1LFy6BRFg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0iIfhpuP_bDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8ak1sd~xi-null-null&eid=a06oc2-mt8ak1sd-xi&otpToken=NjA5Mjc4NGEwYWI5MzRhMGU4NTEyODRhNmMxMTliNzYxMmMwM2FjM2RkMDU4ZTE1MzhlOGY1MGY2OGZjMmFiMjkzZTEwNDM0YWU1YWQzNTk0MWE5ODYyYTRiYzI2ODRlNTAwZmY2NzVhYzU2ZWE3YjM4ZDExOWFmOWVkMTI3MGEwNzhlZTQyZDMzNDExMDY1LDIsMQ%3D%3D --------------------------------------------------------- Applied on August 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=Wl%2FAKx%2B5S7iiR1mxphC%2Bbg%3D%3D&refId=j3T9oxE0QdChCTdhw%2FLfKg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BWXdupMlHTHOeO1LFy6BRFg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0iIfhpuP_bDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8ak1sd~xi-null-null&eid=a06oc2-mt8ak1sd-xi&otpToken=NjA5Mjc4NGEwYWI5MzRhMGU4NTEyODRhNmMxMTliNzYxMmMwM2FjM2RkMDU4ZTE1MzhlOGY1MGY2OGZjMmFiMjkzZTEwNDM0YWU1YWQzNTk0MWE5ODYyYTRiYzI2ODRlNTAwZmY2NzVhYzU2ZWE3YjM4ZDExOWFmOWVkMTI3MGEwNzhlZTQyZDMzNDExMDY1LDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=cNHzSYZRTlyOpICvG9Twcg%3D%3D&refId=SCiOj0LvRX648QaTc0tEKA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BWXdupMlHTHOeO1LFy6BRFg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0iIfhpuP_bDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8ak1sd~xi-null-null&eid=a06oc2-mt8ak1sd-xi&otpToken=NjA5Mjc4NGEwYWI5MzRhMGU4NTEyODRhNmMxMTliNzYxMmMwM2FjM2RkMDU4ZTE1MzhlOGY1MGY2OGZjMmFiMjkzZTEwNDM0YWU1YWQzNTk0MWE5ODYyYTRiYzI2ODRlNTAwZmY2NzVhYzU2ZWE3YjM4ZDExOWFmOWVkMTI3MGEwNzhlZTQyZDMzNDExMDY1LDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=mFr5XRqrTUqA1ulIeAHfpg%3D%3D&refId=z7Gx1%2Bd1TXafGs1cuHoYEg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmatio"
+    },
+    {
+      "id": "abbott-it-business-systems-analyst",
+      "company": "Abbott",
+      "role": "IT Business Systems Analyst",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Abbott Application Feedback",
+      "latestFrom": "Abbott Talent Acquisition <noreply@talentacquisition.abbott.com>",
+      "lastActivityAt": "2026-08-25T06:35:49.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03571a749017d0",
+      "gmailMessageIds": [
+        "1a03571a749017d0",
+        "1a037a1dadcc8be6"
+      ],
+      "notes": "Abbott Application Feedback 96 Dear Applicant, Thank you for expressing your interest in the position of IT Business Systems Analyst at Abbott. We highly value all applicants and aim to provide the best possible application process for everyone. Your experience is important to us, and we would appreciate it if you could take 30 seconds to provide us with anonymous feedback. This feedback will help us improve the application process for future candidates. Please click on the \"Submit Feedback\" button to complete the short survey. Dear Applicant, Thank you for expressing your interest in the position of IT Business Systems Analyst at Abbott. We highly value all applicants and aim to provide the best possible application process for everyone. Your experience is important to us, and we would appreciate it if you could take 30 seconds to provide us with anonymous feedback. This feedback will help us improve the application process for future candidates. Please click on the \"Submit Feedback\" button to complete the short survey. SUBMIT FEEDBACK We appreciate your time and effort, and we look forward to hearing from you. Best regards, Abbott Talent Acquisition A feedback tool from Trustcruit Unsubscribe"
+    },
+    {
+      "id": "fractal-data-engineer",
+      "company": "Fractal",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Fractal",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-25T06:35:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a037a138922f258",
+      "gmailMessageIds": [
+        "1a037a138922f258"
+      ],
+      "notes": "Your application was sent to Fractal Data Engineer Fractal United States View job: https://www.linkedin.com/comm/jobs/view/4445933911/?trackingId=BxAqS%2BLRSAqMTBDFE6rkBQ%3D%3D&refId=lAXYa6eERDKi4eZgSJ9HZw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BhRPy2cnkRGC2WmkZxXu%2FeA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0iIfhpuP_bDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8aixyn~bl-null-null&eid=a06oc2-mt8aixyn-bl&otpToken=NzJlNDk3MzI4MjNhZDY1MjJiMjVhNWNkNmQyYzAwMzFhODU1NGFjMGFhMmYzY2UxZjRjMzY1OTI3NjcwNjUzMzg0ZWZjYzdhNTNmYzQ4MTIzOWM2YmUxZWMzMGFkNjIyMTE2YzBjNDk0NzU3MmQxMmNlZGY1Mjk4YWJhODJmYTQ4MjYwMTMyMmNmYmU1MDMzLDIsMQ%3D%3D --------------------------------------------------------- Applied on August 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=LfzwtTWERSCvkpo6mGUgxA%3D%3D&refId=Yjx17dPNSkSayVuutQHa6w%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BhRPy2cnkRGC2WmkZxXu%2FeA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0iIfhpuP_bDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8aixyn~bl-null-null&eid=a06oc2-mt8aixyn-bl&otpToken=NzJlNDk3MzI4MjNhZDY1MjJiMjVhNWNkNmQyYzAwMzFhODU1NGFjMGFhMmYzY2UxZjRjMzY1OTI3NjcwNjUzMzg0ZWZjYzdhNTNmYzQ4MTIzOWM2YmUxZWMzMGFkNjIyMTE2YzBjNDk0NzU3MmQxMmNlZGY1Mjk4YWJhODJmYTQ4MjYwMTMyMmNmYmU1MDMzLDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=savXQoWQQVCh27mNirttKg%3D%3D&refId=%2Bk3c%2FQ4uR4GIPw8EordJow%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BhRPy2cnkRGC2WmkZxXu%2FeA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0iIfhpuP_bDIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8aixyn~bl-null-null&eid=a06oc2-mt8aixyn-bl&otpToken=NzJlNDk3MzI4MjNhZDY1MjJiMjVhNWNkNmQyYzAwMzFhODU1NGFjMGFhMmYzY2UxZjRjMzY1OTI3NjcwNjUzMzg0ZWZjYzdhNTNmYzQ4MTIzOWM2YmUxZWMzMGFkNjIyMTE2YzBjNDk0NzU3MmQxMmNlZGY1Mjk4YWJhODJmYTQ4MjYwMTMyMmNmYmU1MDMzLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=nBWFxjm%2BRyqJ1J5E4DlD6g%3D%3D&refId=T3OH0HrhRYSnte%2ByD5KJfw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BhRPy"
+    },
+    {
+      "id": "amtex-systems-data-engineer",
+      "company": "Amtex Systems",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Amtex Systems Inc",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-25T06:32:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0379e74e5dd28a",
+      "gmailMessageIds": [
+        "1a0379e74e5dd28a"
+      ],
+      "notes": "Your application was sent to Amtex Systems Inc Data Engineer Amtex Systems Inc Oak Brook, IL View job: https://www.linkedin.com/comm/jobs/view/4458264951/?trackingId=uAmdeqUeQ2CU0DnEJfq0BQ%3D%3D&refId=HzFKu5UOS7i2D9I8dRklkA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BB5lvSNsUT4mS8BlesY4YMA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1UEBtIqtX8DIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8af1rb~ag-null-null&eid=a06oc2-mt8af1rb-ag&otpToken=MmU3OTcyM2I1Zjc2MDRjZTg0MTYzMzkwNTMxZmEwNTg0ZjYzYzk3NmIzZjZkYzVjZDFkZDAxMGU5NTBjMmVmNDdmZmQzMzk4NDVkMGZlMWQ1NGFkZWQ0NmQ4Nzg0ZGY4NThjNTMwMmQxNjhkNTIzYjM2ZWQ0OGMyNDhhYjkzN2M2NTlhOTA5MGE2YjQwMWUyLDIsMQ%3D%3D --------------------------------------------------------- Applied on August 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=qWGZ%2BsXUTB%2BgZnmqgekGpg%3D%3D&refId=M%2B7REsBeTEOqGv6EfrXQYg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BB5lvSNsUT4mS8BlesY4YMA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1UEBtIqtX8DIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8af1rb~ag-null-null&eid=a06oc2-mt8af1rb-ag&otpToken=MmU3OTcyM2I1Zjc2MDRjZTg0MTYzMzkwNTMxZmEwNTg0ZjYzYzk3NmIzZjZkYzVjZDFkZDAxMGU5NTBjMmVmNDdmZmQzMzk4NDVkMGZlMWQ1NGFkZWQ0NmQ4Nzg0ZGY4NThjNTMwMmQxNjhkNTIzYjM2ZWQ0OGMyNDhhYjkzN2M2NTlhOTA5MGE2YjQwMWUyLDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=KOSXalJ1QFaTpfZ9pnMVsA%3D%3D&refId=033ujr5vRa6sekazBnc20w%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BB5lvSNsUT4mS8BlesY4YMA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1UEBtIqtX8DIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8af1rb~ag-null-null&eid=a06oc2-mt8af1rb-ag&otpToken=MmU3OTcyM2I1Zjc2MDRjZTg0MTYzMzkwNTMxZmEwNTg0ZjYzYzk3NmIzZjZkYzVjZDFkZDAxMGU5NTBjMmVmNDdmZmQzMzk4NDVkMGZlMWQ1NGFkZWQ0NmQ4Nzg0ZGY4NThjNTMwMmQxNjhkNTIzYjM2ZWQ0OGMyNDhhYjkzN2M2NTlhOTA5MGE2YjQwMWUyLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=QfWn1Fq5S5OCg8RsVmfR8w%3D%3D&refId=MQafLo8%2FQFSNFSjY9j7ndg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_n"
+    },
+    {
+      "id": "temu-data-engineer",
+      "company": "Temu",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to Temu",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-25T06:25:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0379877d475ef8",
+      "gmailMessageIds": [
+        "1a0379877d475ef8"
+      ],
+      "notes": "Your application was sent to Temu Data Engineer Temu United States View job: https://www.linkedin.com/comm/jobs/view/4457193828/?trackingId=bD8%2FavN1Sm%2BSvBkKMiuuZw%3D%3D&refId=nO7IRf%2FBS%2FypTi2Ygyekyg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B31PrfI5SSQiOP4KHk3dHsA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3JQwKj3jP1DIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8a6n3j~zw-null-null&eid=a06oc2-mt8a6n3j-zw&otpToken=ZWQ1M2M0ZmUzYzNlNzcwMGVkMDBkOGRlOWFlM2JjNzQ4YjY5NTMxNzg0ZGE5ZmY4ZDhhNzEyOGEzZjk2NjcyY2ZiZmQ1YzVhMzgxZjc2ZWJlZTgwOGM2ZTEzZDJhNTFiYzRkYjc1MWRkOGVhNmE3YmE0MTMxNTNkZmIzZTFjMmQyMjA4NjU4MWIyZmJlYjk5LDIsMQ%3D%3D --------------------------------------------------------- Applied on August 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=K9ZGm9l8TDCEPfaTbfQp1g%3D%3D&refId=zTH6gdlURCe9dd7LdWk1Bg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B31PrfI5SSQiOP4KHk3dHsA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3JQwKj3jP1DIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8a6n3j~zw-null-null&eid=a06oc2-mt8a6n3j-zw&otpToken=ZWQ1M2M0ZmUzYzNlNzcwMGVkMDBkOGRlOWFlM2JjNzQ4YjY5NTMxNzg0ZGE5ZmY4ZDhhNzEyOGEzZjk2NjcyY2ZiZmQ1YzVhMzgxZjc2ZWJlZTgwOGM2ZTEzZDJhNTFiYzRkYjc1MWRkOGVhNmE3YmE0MTMxNTNkZmIzZTFjMmQyMjA4NjU4MWIyZmJlYjk5LDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=WAw2PX0JTcWEQeaGz%2BbLCA%3D%3D&refId=lTDZAWZKR4mzAw%2FIwEVMmQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B31PrfI5SSQiOP4KHk3dHsA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3JQwKj3jP1DIo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mt8a6n3j~zw-null-null&eid=a06oc2-mt8a6n3j-zw&otpToken=ZWQ1M2M0ZmUzYzNlNzcwMGVkMDBkOGRlOWFlM2JjNzQ4YjY5NTMxNzg0ZGE5ZmY4ZDhhNzEyOGEzZjk2NjcyY2ZiZmQ1YzVhMzgxZjc2ZWJlZTgwOGM2ZTEzZDJhNTFiYzRkYjc1MWRkOGVhNmE3YmE0MTMxNTNkZmIzZTFjMmQyMjA4NjU4MWIyZmJlYjk5LDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=Wjf9ockaQKiuQSSQ4T0UVA%3D%3D&refId=XEb%2BVhQbTvK5Q7awCoYNqQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B31PrfI5SSQiO"
+    },
+    {
+      "id": "equinix-business-analyst",
+      "company": "Equinix",
+      "role": "Business Analyst, Partner Incubation",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Equinix – Application Update for JR-162847 Business Analyst, Partner Incubation (Open)",
+      "latestFrom": "Equinix_Workday_Notifications <equinix@myworkday.com>",
+      "lastActivityAt": "2026-08-25T05:38:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a034a5463627cc0",
+      "gmailMessageIds": [
+        "1a034a5463627cc0",
+        "1a0376cfb40e220c"
+      ],
+      "notes": "Hello Tirth, We wanted to reach out and provide you with an update on your recent application for the Business Analyst, Partner Incubation position. Thank you for your interest in joining our team and for taking the time to submit your application. At this time we have made the decision to cancel this position, however we encourage you to continue to check our Careers Site for other opportunities that match your skills and career goals and/or join our Talent Community to sign up for job alerts. We wish you the best of luck in your job search and your professional endeavors. Sincerely, Equinix Integrated Talent Solutions To stay connected with Equinix news, updates, and the latest opportunities, follow us at: Equinix on LinkedIn Equinix on YouTube Equinix on Facebook Equinix on Glassdoor Equinix on X This email was intended for tirthcshah1999@gmail.com Equinix, Inc. · This email is sent on behalf of Equinix, Inc. or one of its group companies in the territory from where this email has been sent. The email and any files transmitted with it are confidential and solely for the use of the intended recipient. If you have received this email in error please delete this email immediately and notify the sender."
+    },
     {
       "id": "msg-1a014d42766cca87",
       "company": "Stellantis",
@@ -1676,24 +1926,6 @@
       "reason": "AI extracted"
     },
     {
-      "id": "abbott-it-business-systems-analyst",
-      "company": "Abbott",
-      "role": "IT Business Systems Analyst",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "We Received Your Application for IT Business Systems Analyst – 31159752",
-      "latestFrom": "Abbott-HR-Workday <abbott@myworkday.com>",
-      "lastActivityAt": "2026-08-24T20:23:55.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a03571a749017d0",
-      "gmailMessageIds": [
-        "1a03571a749017d0"
-      ],
-      "notes": "Dear Tirth Shah, Thank you for your interest in Abbott. We received your application for the position of IT Business Systems Analyst – 31159752 and are reviewing your experience and qualifications. If you meet the requirements of the role, you will receive a communication from our Talent Acquisition team. Follow the below steps to view your application status: 1. Sign into your Candidate Home account using the same email and password used when you applied to the job. 2. Once signed in, click on your email address in the upper right and select View Profile. 3. Under My Applications you can view the status of the jobs for which you have applied. Abbott is dedicated to helping people live more fully, through everything we do, while providing our employees the opportunity to be their true selves and live their own best lives. If you are interested in learning more about our company, we invite you to explore our global job board www.jobs.abbott or follow us on social media. Sincerely, This email was intended for tirthcshah1999+workday-abbott@gmail.com"
-    },
-    {
       "id": "transunion-data-operations-analyst",
       "company": "Transunion",
       "role": "Data Operations Analyst",
@@ -1751,24 +1983,6 @@
         "1a0356dc0fe2aa52"
       ],
       "notes": "Hello, Tirth, We need you to confirm your identity so that your job application is considered for the job Data Engineer - 6939. Confirm your identity using this code: 587919. The code expires in 10 minutes. If you want to manage your profile and application, go to your candidate self service page . If you received this message in error, notify us that it was not intended for you . Sincerely, UCSF Career Site Recruiting Team"
-    },
-    {
-      "id": "ucsf-general-application",
-      "company": "UCSF",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Confirm your identity",
-      "latestFrom": "UCSF Talent Acquisition <iazuqy.fa.sender@workflow.email.us-phoenix-1.ocs.oraclecloud.com>",
-      "lastActivityAt": "2026-08-24T20:19:41.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0356dc72e07c2f",
-      "gmailMessageIds": [
-        "1a0356dc72e07c2f"
-      ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 885999 Note : This code will expire in 10 minutes. Sincerely, UCSF Recruiting Team."
     },
     {
       "id": "booz-allen-hamilton-data-engineer",
@@ -2689,24 +2903,6 @@
         "1a034a5ba6aacf91"
       ],
       "notes": "Hi Tirth, We're glad to have received your interest and application, thank you. If you're shortlisted, you'll receive a follow-up email outlining the next steps which will consist of a mix of assessments and interviews across no more than three (3) rounds. Sincerely, TALENT TEAM Hi Tirth , We're glad to have received your interest and application, thank you. If you're shortlisted, you'll receive a follow-up email outlining the next steps which will consist of a mix of assessments and interviews across no more than three (3) rounds. Sincerely, TALENT TEAM"
-    },
-    {
-      "id": "equinix-business-analyst",
-      "company": "Equinix",
-      "role": "Business Analyst",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Tirth Shah Your job application has been received.",
-      "latestFrom": "Equinix_Workday_Notifications <equinix@myworkday.com>",
-      "lastActivityAt": "2026-08-24T16:40:41.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a034a5463627cc0",
-      "gmailMessageIds": [
-        "1a034a5463627cc0"
-      ],
-      "notes": "Business Process: Job Application: Tirth Shah ‎- JR-162847 Business Analyst on 08/24/2026 Subject: Tirth Shah ‎- JR-162847 Business Analyst Dear Tirth, Thank you for considering Business Analyst with Equinix for your next career opportunity. We believe our culture is at the heart of our success and it’s our authentic, humble, gritty people who create the Magic of Equinix. Watch this short video to learn more about why Equinix is the world’s digital infrastructure company. A recruiter will review your qualifications and reach out to you for further discussion and next steps, if your skillset meets the needs of the role. Please submit only one application per job requisition. If multiple applications are submitted, we will review only your first application. Subsequent applications to the same job requisition will not be considered. In the meantime, we encourage you to join our talent community or opt into a job alert . To stay connected with Equinix news, updates, and the latest opportunities, be sure to follow us on Facebook twitter Glassdoor LinkedIn Thank you, Equinix Talent Acquisition This email was intended for tirthcshah1999@gmail.com Equinix, Inc. · This email is sent on behalf of Equinix, Inc. or one of its group companies in the territory from where this email has been sent. The email and any files transmitted with it are confidential and solely for the use of the intended recipient. If you have received this email in error please delete this email immediately and notify the sender."
     },
     {
       "id": "equinix-general-application",
@@ -3972,24 +4168,6 @@
         "1a0347362c7b6435"
       ],
       "notes": "Tirth, Thanks for applying to Correlation One. Your application has been received and the hiring team will review it as soon as possible. If your application seems like a good fit for the position we will reach out regarding next steps. Regards, Correlation One ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Tirth, Thanks for applying to Correlation One. Your application has been received and the hiring team will review it as soon as possible. If your application seems like a good fit for the position we will reach out regarding next steps. Regards, Correlation One ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
-    },
-    {
-      "id": "perform-properties-associate-analytics-engineer",
-      "company": "Perform Properties",
-      "role": "Associate, Analytics Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thank you for applying to Perform Properties LLC",
-      "latestFrom": "revantage@myworkday.com",
-      "lastActivityAt": "2026-08-24T15:45:34.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a03472d1b4d231a",
-      "gmailMessageIds": [
-        "1a03472d1b4d231a"
-      ],
-      "notes": "Dear Tirth, Thank you for applying to the Associate, Analytics Engineer position at Perform Properties LLC. Our team will review your application and will be in touch if your qualifications match our needs for the role. Warmest Regards, Talent Acquisition Team Please do not reply to this email. Any questions can be directed to talent@revantage.com This email was intended for tirthcshah1999@gmail.com"
     },
     {
       "id": "thought-logic-principal-consultant-data-engineer",
@@ -36960,30 +37138,6 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "purple-carrot-analytics-engineer",
-      "company": "Purple Carrot",
-      "role": "Analytics Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-16T12:03:41+00:00",
-      "latestSubject": "Thanks for applying to Purple Carrot",
-      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
-      "gmailThreadId": "19f6acfaa5e8f8d1",
-      "gmailMessageIds": [
-        "19f6acfaa5e8f8d1",
-        "19f6ac89952a386c",
-        "19f6ac1eb3954c30"
-      ],
-      "notes": "Purple Carrot invites you to fill in an Equal Employment Opportunity form regarding your recent Analytics Engineer application. ------------------------------------------------------------------------------- If you didn't get the chance to complete the EEO survey when you submitted your job application for Analytics Engineer job, you can do it now. Fill in EEO form https://thepurplecarrot.workable.com/candidates/oHEUAtPjbxUZOF3OPAwcFgbsf-cdXTdRwZG8CW9jGkg/eeoc_profile/new?lng=en ** What is EEO? ** The U.S. Equal Employment Opportunity Commission (EEOC) enforces Federal laws to protect employees and job applicants against employment discrimination because of race, color, religion, sex, national origin, age, disability or genetic information. %{account_name} is an Equal opportunity employer. ------------------------------------------------------------------------------- Powered by Workable https://jobs.workable.com/ ",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
       "aiConfidence": "high"
     },
     {
