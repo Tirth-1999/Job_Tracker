@@ -1,6 +1,270 @@
 {
-  "updatedAt": "2026-08-25T14:04:18.722Z",
+  "updatedAt": "2026-08-25T14:26:12.868Z",
   "applications": [
+    {
+      "id": "con-edison-general-application",
+      "company": "Con Edison",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "ConEdison Careers <notifications@employeehub.coned.com>",
+      "lastActivityAt": "2026-08-25T14:25:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0394fba97cfdef",
+      "gmailMessageIds": [
+        "1a0394fba97cfdef"
+      ],
+      "notes": "Hello , Just one more step before you get started. You must confirm your identity using the one-time pass code : 438580 Note : This code will expire in 10 minutes. Sincerely, O&R Career Site Recruiting Team."
+    },
+    {
+      "id": "jpmorgan-chase-lead-data-engineer",
+      "company": "Jpmorgan Chase",
+      "role": "Software Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We received your job application (Job Number: 210779732)",
+      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
+      "lastActivityAt": "2026-08-25T14:25:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03473970ce1425",
+      "gmailMessageIds": [
+        "1a03473970ce1425",
+        "1a034701d88485f0",
+        "1a0394facacb63cd"
+      ],
+      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Software Engineer [Multiple Positions Available] 210779732 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans."
+    },
+    {
+      "id": "jpmorgan-chase-general-application",
+      "company": "Jpmorgan Chase",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-25T14:22:05.000Z",
+      "latestSubject": "Take action to confirm your identity",
+      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
+      "gmailThreadId": "19f6fce601891af7",
+      "gmailMessageIds": [
+        "19f6fce601891af7",
+        "1a034778ead4a58b",
+        "1a034720857c8245",
+        "1a0346f2c7991392",
+        "1a0394cc55cb8a5a"
+      ],
+      "notes": "Tirth, Please use this code to confirm your identity on our careers site: 127309 This verification code will expire in 10 minutes. If it expires, you can request a new one by clicking the “Send New Code” link on the verification page. Thank you, JPMorganChase Talent Team This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "t-rex-intelligence-analyst",
+      "company": "T-rex",
+      "role": "Intelligence Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for Applying - Intelligence Analyst - T-Rex",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-25T14:21:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0394c24d3e1eb1",
+      "gmailMessageIds": [
+        "1a0394c24d3e1eb1"
+      ],
+      "notes": "Hi Tirth, Thanks for your interest in the Intelligence Analyst position with T-Rex. Your application has been received and we will review it right away. A member of our Talent Acquisition team will contact you if your application is a good fit to the position. Regards, T-Rex Talent Acquisition ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Hi Tirth, Thanks for your interest in the Intelligence Analyst position with T-Rex. Your application has been received and we will review it right away. A member of our Talent Acquisition team will contact you if your application is a good fit to the position. Regards, T-Rex Talent Acquisition ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
+    },
+    {
+      "id": "portage-learning-data-science-associate-i",
+      "company": "Portage Learning",
+      "role": "Data Science Associate I",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying!",
+      "latestFrom": "Portage Learning <do-not-reply@mail.paylocity.com>",
+      "lastActivityAt": "2026-08-25T14:20:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0394af240e38c2",
+      "gmailMessageIds": [
+        "1a0394af240e38c2"
+      ],
+      "notes": "Dear Tirth,Thank you for your interest in a career at Portage Learning . We have received your appli... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ Portage Learning [187467] Dear Tirth, Thank you for your interest in a career at Portage Learning . We have received your application for Data Science Associate I. What happens now? We will review your application and reach out if we think it's a good match. You'll be hearing from us soon. Sincerely, Portage Learning Human Resources This email is only for the person(s) addressed. Privacy Policy | Unsubscribe"
+    },
+    {
+      "id": "innovative-defense-chief-ai-subject-matter-expert",
+      "company": "Innovative Defense",
+      "role": "Chief AI Subject Matter Expert",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received",
+      "latestFrom": "Innovative Defense Technologies <no-reply.idtus@pinpoint.email>",
+      "lastActivityAt": "2026-08-25T14:19:27.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0394a557074d35",
+      "gmailMessageIds": [
+        "1a0394a557074d35"
+      ],
+      "notes": "Hi Tirth Chirayu, Thank you for your interest in a career at Innovative Defense Technologies (IDT). We have received your application for Chief AI Subject Matter Expert - JobID-0274. Should there be a good match, someone from the Recruiting Team will contact you directly. Due to high volumes of applicants, we cannot provide status updates about applications. Thanks again for your interest in working with Innovative Defense Technologies (IDT). Sincerely, Innovative Defense Technologies -------------------------------------------------- Want to stop receiving communications from us? Manage your communication preferences. https://idtus.pinpointhq.com/candidates/communication_preferences/Ctj3t7mgkVGeVhY8Hn1Stvd6 Application Received 96 Application Received Hi Tirth Chirayu, Thank you for your interest in a career at Innovative Defense Technologies (IDT). We have received your application for Chief AI Subject Matter Expert - JobID-0274. Should there be a good match, someone from the Recruiting Team will contact you directly. Due to high volumes of applicants, we cannot provide status updates about applications. Thanks again for your interest in working with Innovative Defense Technologies (IDT). Sincerely, Innovative Defense Technologies Want to stop receiving communications from us? Manage your communication preferences ."
+    },
+    {
+      "id": "cognite-senior-field-engineer-pre-sales-forward-deployed",
+      "company": "Cognite",
+      "role": "Senior Field Engineer (pre-sales/forward Deployed)",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Cognite",
+      "latestFrom": "no-reply@eu.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-25T14:19:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0394a3c9eb2643",
+      "gmailMessageIds": [
+        "1a0394a3c9eb2643"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in Cognite! We wanted to let you know we received your application for the Senior Field Engineer (Pre-Sales/Forward Deployed) role, and we are delighted that you would consider joining our team. Our team will review your application and will be in touch if your qualifications match our needs for the role. If you are not selected for this position, keep an eye on our jobs page as we're growing and adding openings. If you'd like to learn more about Cognite in the meantime, you can check out some of these pages: * Tech Blog ( https://medium.com/cognite ) * Cognite in the news ( https://www.cognite.com/newsroom ) * Cognite Life ( https://www.linkedin.com/company/cognitedata/life/1e7413e6-a3a5-4708-8fe8-5006141e5314/?viewAsMember=true ) - behind the scenes look at Cognite, interviews with Cogniters, and more Best,The Cognite Team Hi Tirth, Thank you for your interest in Cognite! We wanted to let you know we received your application for the Senior Field Engineer (Pre-Sales/Forward Deployed) role, and we are delighted that you would consider joining our team. Our team will review your application and will be in touch if your qualifications match our needs for the role. If you are not selected for this position, keep an eye on our jobs page as we're growing and adding openings. If you'd like to learn more about Cognite in the meantime, you can check out some of these pages: Tech Blog Cognite in the news Cognite Life - behind the scenes look at Cognite, interviews with Cogniters, and more Best, The Cognite Team"
+    },
+    {
+      "id": "msg-19f941e6cf52b0b6",
+      "company": "City Of New York",
+      "role": "Director Of Geographic Data And Engineering",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T14:18:38.000Z",
+      "latestSubject": "The City of New York. We have received your application. Thank you!",
+      "latestFrom": "City of New York <notification@cityjobsupport.nyc.gov>",
+      "gmailThreadId": "19f941e6cf52b0b6",
+      "gmailMessageIds": [
+        "19f941e6cf52b0b6",
+        "1a0394996b9a5620"
+      ],
+      "notes": " Tirth, Thanks for applying to the&nbsp;Director of Geographic Data and Engineering (GDE)&nbsp;position (reference number:&nbsp;794153)! We have received your application. Next, the hiring team will review your application. If you&#39;re selected to move forward, we will contact you. This process can take some time. We appreciate your patience. We encourage you to&nbsp;apply to more NYC jobs&nbsp;while you&#39;re waiting to hear back. Some City Jobs require you to take a civil service exam. Learn more and apply for current exams on the&nbsp;Department of Citywide Administrative Services&rsquo; website. You can track your application using the button below. Please do not delete this email, or you will no longer be able to access your application. Access My Application: https://u36776705.ct.sendgrid.net/ls/click?upn=u001.rmasoUGqDXa44PfzFaEGjEMaVVHpCIjj0wIdFFrKAxDCk6-2B7mxkQ3VhVpKUygd2WPjx0C-2B-2BBvgKjx9QVFWgYlhBap9fbWXZ909T1-2BZ0pKB2QFr-2BawQEysdHjQFXFnSdA5kpZdjf5mxYdKZ-2BBIYrUlgo1Dm4fJWvweAyaGwK94L7izoFX0VzBdYQkv1pNXC1-2BzS_Y_3iIz9nyIoE7WYm9EGmPy-2FHdpg9RX0TMZqeH-2Fa-2FauaY7IG0cUJ34GuiCQsYgpNRQd1Uc8WJOCiH4hSNWSiQjJAn94J9cDaZ-2Fmrs60lvvsNauOKrREkbK2cwiioPI-2FVeXuqEgPqUmuN11fc9z6yUqJPEHrfk4JBsquvLJvNf78PSBEJiewoBvcgfxebbTATpzbq-2FSL8-2FvkBEYwqZGKnKpXwcIWHz2TooQthW703ewcMKMWbcAqmCwLFWtdxOOGpOm9TuuOBcQISe2ajUHbIFd-2FnCEphHwvq9zFDMCm4UdNLC6btwXzp2i2WwYuBZXrt5sqHYPE-2BOITqwUmFqexy2SNTuQHaXsw0OaMcLfRKBgD4U1vqQAJdi00yrSfQP4DDogTQ62aSVlx31ydaUPlfHjiXDaKvM2QSARwHntkXqa08ho7kWI-2BVtZaRC5BY-2Bntvd2iLe7ReQEl34oSXH-2B2W4Y38b-2FzQ5jKR96SAb4Akdy8DGjWJLHnGKmeDMKx7aUNB0bB If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application Tirth, Thanks for applying to the Director of Geographic Data and Engineering (GDE) position (reference number: 794153)! We have received your application. Next, the hiring team will review your application. If you're selected to move forward, we will contact you. This process can take some time. We appreciate your patience. We encourage you to apply to more NYC jobs while you're waiting to hear back. Some City Jobs require you to take a civil service exam. Learn more and apply for current exams on the Department of Citywide Administrative Services&rsquo; website. You can track your application using the button below. Please do not delete this email, or you will no longer be able to access your application. Access My Application If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company ( contactsupport@smartrecruiters.com ). Please do not share or forward this email, as it pertains to your specific job application",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "lightwheel-technical-product-manager-data-infrastructure",
+      "company": "Lightwheel",
+      "role": "Technical Product Manager, Data Infrastructure",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to Lightwheel Limited!",
+      "latestFrom": "Lightwheel Limited Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-25T14:18:13.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a039493371e40b2",
+      "gmailMessageIds": [
+        "1a039493371e40b2"
+      ],
+      "notes": "Hi Tirth, Thanks for applying to Technical Product Manager, Data Infrastructure — we’ve received your application. At Lightwheel, we’re building the infrastructure behind physical AI, enabling robots to learn, act, and be evaluated in the real world. It’s a hard problem, and we care deeply about people who enjoy working on things that don’t yet have clear answers. What happens next: - Our team will review your application for the Technical Product Manager, Data Infrastructure. - If there’s a strong match, we’ll reach out to schedule a conversation If you’re excited about solving real-world problems at the intersection of data, simulation, and AI systems, you’ll likely enjoy working with us. Best, Lightwheel Hiring Team Hi Tirth , Thanks for applying to Technical Product Manager, Data Infrastructure — we’ve received your application. At Lightwheel, we’re building the infrastructure behind physical AI, enabling robots to learn, act, and be evaluated in the real world. It’s a hard problem, and we care deeply about people who enjoy working on things that don’t yet have clear answers. What happens next: Our team will review your application for the Technical Product Manager, Data Infrastructure . If there’s a strong match, we’ll reach out to schedule a conversation If you’re excited about solving real-world problems at the intersection of data, simulation, and AI systems, you’ll likely enjoy working with us. Best, Lightwheel Hiring Team"
+    },
+    {
+      "id": "northrop-grumman-general-application",
+      "company": "Northrop Grumman",
+      "role": "Lead Databricks Data Security Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T14:17:42.000Z",
+      "latestSubject": "Status Update - R10247322 Lead Databricks Data Security Engineer",
+      "latestFrom": "ngc@myworkday.com",
+      "gmailThreadId": "1a0287b1fa46ee6c",
+      "gmailMessageIds": [
+        "1a0287b1fa46ee6c",
+        "1a02f5e798524e29",
+        "1a03470c49f46370",
+        "1a03563a0609343d",
+        "1a03948b93c3bb2d"
+      ],
+      "notes": "96 Dear Tirth, Thank you for your interest in a career with Northrop Grumman. After careful review, we have determined your application for the position of Lead Databricks Data Security Engineer does not meet the basic qualifications outlined in the job description. For this reason, we are unable to move your application forward to the next phase of our process. New positions are posted daily on our careers website . We encourage you to apply for relevant openings that align with your experience and career goals. We recognize the effort it takes to explore new possibilities and appreciate the time you invested in applying to this position. Kind Regards, Northrop Grumman Talent Acquisition Team Ref ID: JA10 This email was intended for tirthcshah1999@gmail.com",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "ATS application receipt confirmation",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "standard-bots-staff-ai-research-engineer",
+      "company": "Standard Bots",
+      "role": "Staff AI Research Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Standard Bots - Application Received!",
+      "latestFrom": "Standard Bots Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-25T14:17:37.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03948a8d765c50",
+      "gmailMessageIds": [
+        "1a03948a8d765c50"
+      ],
+      "notes": "Hi Tirth! Thank you so much for applying to the Staff AI Research Engineer role at Standard Bots! Our hiring team is currently reviewing all applications and we do our best to try to get back to you as soon as we can. While we cannot respond to all of our applicants, if shortlisted you will receive an email from our one of our team members to schedule next steps! Thank you again! The Standard Bots Team Hi Tirth ! Thank you so much for applying to the Staff AI Research Engineer role at Standard Bots! Our hiring team is currently reviewing all applications and we do our best to try to get back to you as soon as we can. While we cannot respond to all of our applicants, if shortlisted you will receive an email from our one of our team members to schedule next steps! Thank you again! The Standard Bots Team"
+    },
+    {
+      "id": "mayo-clinic-general-application",
+      "company": "Mayo Clinic",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Action Required: Confirm your identity",
+      "latestFrom": "Mayo Clinic <noreplycareers@administrativesystem.mayoclinic.org>",
+      "lastActivityAt": "2026-08-25T14:15:21.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0347b14cfd03e4",
+      "gmailMessageIds": [
+        "1a0347b14cfd03e4",
+        "1a039469f3d4524b"
+      ],
+      "notes": "Hello Tirth Shah, Just one more step before you get started. You must confirm your identity using the one-time pass code : 657419 Note : This code will expire in 10 minutes. Sincerely, Mayo Clinic Human Resources Notification only, please do not reply to this email."
+    },
+    {
+      "id": "captech-data-analyst",
+      "company": "Captech",
+      "role": "Data Analyst",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in CapTech",
+      "latestFrom": "Laura Massa from CapTech Consulting <notifications@captechcareers.com>",
+      "lastActivityAt": "2026-08-25T14:14:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03927291c13889",
+      "gmailMessageIds": [
+        "1a039463eb7d299c"
+      ],
+      "notes": " Tirth, Thank you for your interest in the Data Analyst position at&nbsp;CapTech. We appreciate that you took the time and effort you took to apply to this opening.&nbsp; While your skills and background are impressive, we have decided to proceed with other applicants who more closely fit our needs at this time. Again, thank you for your interest in a position with CapTech, and we wish you success in your job search. Best regards, CapTech Talent Acquisition &#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203; Tirth, Thank you for your interest in the Data Analyst position at CapTech. We appreciate that you took the time and effort you took to apply to this opening. While your skills and background are impressive, we have decided to proceed with other applicants who more closely fit our needs at this time. Again, thank you for your interest in a position with CapTech, and we wish you success in your job search. Best regards, CapTech Talent Acquisition"
+    },
     {
       "id": "texas-a-m-university-data-engineer",
       "company": "Texas A&m University",
@@ -3059,33 +3323,6 @@
       "notes": "Subject: Tirth Shah ‎- R0245461 Data Engineer, Mid (C02709658) Hi Tirth, We appreciate your interest in the Data Engineer, Mid position and desire to change the world with us. Due to the position being no longer available, we will not be proceeding with your application at this time. We encourage you to keep checking our careers site for job opportunities and upcoming events at https://careers.boozallen.com that match your interests and skills. If you haven’t done so yet, we encourage you to join one of our Talent Communities . Please note that this email only pertains to the Data Engineer, Mid role, though you may still be under consideration for other positions to which you have applied. We look forward to staying connected with you. The Booz Allen Talent Acquisition Team This email was intended for tirthcshah1999@gmail.com"
     },
     {
-      "id": "northrop-grumman-general-application",
-      "company": "Northrop Grumman",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-24T20:08:36.000Z",
-      "latestSubject": "Thanks for your application to Northrop Grumman",
-      "latestFrom": "ngc@myworkday.com",
-      "gmailThreadId": "1a0287b1fa46ee6c",
-      "gmailMessageIds": [
-        "1a0287b1fa46ee6c",
-        "1a02f5e798524e29",
-        "1a03470c49f46370",
-        "1a03563a0609343d"
-      ],
-      "notes": "96 Dear Tirth , Thank you for applying to Northrop Grumman! We appreciate your interest in joining our team, and invite you to access your candidate profile at any time to review the status of your application. We encourage you to check out our Life at Northrop Grumman site for a glimpse into what it’s like to work here and define possible, every day. You can also sign up for our Horizon newsletter to stay on top of future career opportunities. We look forward to reviewing what unique talents you can bring to this role! Best regards, The Northrop Grumman Recruiting Team Ref ID JA01 Please note: Workday is best accessed using Microsoft Edge, Google Chrome, or Firefox. This email was intended for tirthcshah1999@gmail.com",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "ATS application receipt confirmation",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
-      "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
-    },
-    {
       "id": "markel-data-analyst",
       "company": "Markel",
       "role": "Data Analyst",
@@ -4461,24 +4698,6 @@
       "reason": "AI extracted"
     },
     {
-      "id": "mayo-clinic-general-application",
-      "company": "Mayo Clinic",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Action Required: Confirm your identity",
-      "latestFrom": "Mayo Clinic <noreplycareers@administrativesystem.mayoclinic.org>",
-      "lastActivityAt": "2026-08-24T15:54:32.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0347b14cfd03e4",
-      "gmailMessageIds": [
-        "1a0347b14cfd03e4"
-      ],
-      "notes": "Hello Tirth Shah, Just one more step before you get started. You must confirm your identity using the one-time pass code : 717211 Note : This code will expire in 10 minutes. Sincerely, Mayo Clinic Human Resources Notification only, please do not reply to this email."
-    },
-    {
       "id": "prudential-senior-data-engineer",
       "company": "Prudential",
       "role": "Senior Data Engineer",
@@ -4824,33 +5043,6 @@
       "notes": "96 Hi Tirth , Your journey with the DriveTime Family of Brands is underway - we’ve received your application and linked it to your existing candidate profile. Our team is reviewing your information now to see how your experience aligns with where we’re headed. If there’s a next stop on this journey, we’ll be in touch soon. You can log back into your candidate profile anytime to check your application status or update your information. Thanks for taking the wheel on your career journey. We’re excited to see where the road takes us. Best, DriveTime Family of Brands Talent Team Apply This email was intended for tirthcshah1999@gmail.com"
     },
     {
-      "id": "jpmorgan-chase-general-application",
-      "company": "Jpmorgan Chase",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-24T15:50:43.000Z",
-      "latestSubject": "Take action to confirm your identity",
-      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
-      "gmailThreadId": "19f6fce601891af7",
-      "gmailMessageIds": [
-        "19f6fce601891af7",
-        "1a034778ead4a58b",
-        "1a034720857c8245",
-        "1a0346f2c7991392"
-      ],
-      "notes": "Tirth, Please use this code to confirm your identity on our careers site: 191486 This verification code will expire in 10 minutes. If it expires, you can request a new one by clicking the “Send New Code” link on the verification page. Thank you, JPMorganChase Talent Team This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
-    },
-    {
       "id": "prudential-general-application",
       "company": "Prudential",
       "role": "General Application",
@@ -5087,25 +5279,6 @@
         "1a03473a7e99f836"
       ],
       "notes": "Hello, Tirth, We received your job application for Senior Engineer - Data - 1046. If your profile corresponds to our requirements, a member of our Recruiting team will contact you. If you were requested to provide additional info about your job application, or if you want to manage your profile, go to your candidate self service page . Sincerely, Wingstop Global Support Center Careers Recruiting Team"
-    },
-    {
-      "id": "jpmorgan-chase-lead-data-engineer",
-      "company": "Jpmorgan Chase",
-      "role": "Lead Software Engineer - Cloud",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "We received your job application (Job Number: 210772921)",
-      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
-      "lastActivityAt": "2026-08-24T15:46:21.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a03473970ce1425",
-      "gmailMessageIds": [
-        "1a03473970ce1425",
-        "1a034701d88485f0"
-      ],
-      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Lead Software Engineer - Cloud 210772921 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans."
     },
     {
       "id": "correlation-one-senior-data-engineer",
@@ -30752,28 +30925,6 @@
         "19f9422af274e552"
       ],
       "notes": "Hi Tirth, Thank you for your interest in MoonPay! We wanted to let you know we received your application for Analytics Engineer - Crypto and Payments, and we are delighted that you would consider",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19f941e6cf52b0b6",
-      "company": "City of New York",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-24T12:34:09+00:00",
-      "latestSubject": "The City of New York. We have received your application. Thank you!",
-      "latestFrom": "City of New York <notification@cityjobsupport.nyc.gov>",
-      "gmailThreadId": "19f941e6cf52b0b6",
-      "gmailMessageIds": [
-        "19f941e6cf52b0b6"
-      ],
-      "notes": "Tirth, Thanks for applying to the Data Engineer position (reference number: 784007)! We have received your application. Next, the hiring team will review your application. If you&#39;re selected to",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
