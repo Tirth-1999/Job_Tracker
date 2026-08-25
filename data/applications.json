@@ -1,6 +1,143 @@
 {
-  "updatedAt": "2026-08-25T07:44:53.444Z",
+  "updatedAt": "2026-08-25T08:43:37.403Z",
   "applications": [
+    {
+      "id": "msg-19fa45b2177465fd",
+      "company": "Talkiatry",
+      "role": "Software Engineer (data)",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T08:30:10.000Z",
+      "latestSubject": "Thank you for applying with Talkiatry!",
+      "latestFrom": "Talkiatry Hiring Team <no-reply@ashbyhq.com>",
+      "gmailThreadId": "19fa45b2177465fd",
+      "gmailMessageIds": [
+        "19fa45b2177465fd",
+        "19f8fde4b8dafbd5",
+        "19f89c90a900c101",
+        "19f805ccbd8aa462",
+        "19f6553a73c2fd8a",
+        "1a0380a8dfad379c"
+      ],
+      "notes": "Hello Tirth, Thank you for your interest in joining Talkiatry and for taking the time to apply to our Software Engineer (Data) opportunity. We appreciate you sharing your experience with us. Our team is reviewing applications now, and if your background looks like a potential match, we’ll be in touch about next steps. Regardless, we’re grateful for your interest in our work and wish you the best in your job search. To learn more about Talkiatry in the meantime, please visit our website: https://www.talkiatry.com/ Best, The Talkiatry Corporate Recruitment Team! Hello Tirth , Thank you for your interest in joining Talkiatry and for taking the time to apply to our Software Engineer (Data) opportunity. We appreciate you sharing your experience with us. Our team is reviewing applications now, and if your background looks like a potential match, we’ll be in touch about next steps. Regardless, we’re grateful for your interest in our work and wish you the best in your job search. To learn more about Talkiatry in the meantime, please visit our website: https://www.talkiatry.com/ Best, The Talkiatry Corporate Recruitment Team!",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Candidate rejection notice: non-selection / pursuit of other candidates",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-19T21:24:48.051+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "selectquote-data-engineer-iii",
+      "company": "Selectquote",
+      "role": "Data Engineer III",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Your Application",
+      "latestFrom": "\"SelectQuote Insurance Services @ icims\" <selectquoteinc+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-08-25T08:29:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03809cbe13e4a2",
+      "gmailMessageIds": [
+        "1a03809cbe13e4a2"
+      ],
+      "notes": "Hi Tirth, Thank you for your recent application to the Data Engineer III (2026-6909) position at SelectQuote Insurance Services. Your submission will be reviewed, and we may reach out for more information if needed. Thank you again for your interest in our company. Sincerely, SelectQuote Insurance Services This is an automated email response. Please do not reply. ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/Yn6wjY0RjAhtAc56h2BVqQ~~/AAIB5hA~/lxMLRy_ca2b-s5ZPTwzh7xQ9KqifgSzZND5O1WM9xGIEUQKuOkxO2hYw8KLDIGJ5sEB62Q_hzvOSqfNwWoKID6wJ-k6xvqoYIE2l5G0Z6migxZyQV27lSy1ESkCIGEvGX3zvVufzDMx3owzJbPUx_xhWDr31EpwsaBdAPuLaJqmw-tYkO46jh5EyQXdbLzSR /n &#169; SelectQuote, Inc., Overland Park Kansas USA/n Hi Tirth, Thank you for your recent application to the Data Engineer III (2026-6909) position at SelectQuote Insurance Services. Your submission will be reviewed, and we may reach out for more information if needed. Thank you again for your interest in our company. Sincerely, SelectQuote Insurance Services This is an automated email response. Please do not reply. This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://selectquoteinc.icims.com/icims2/?r=112C755844&contactId=1794520&pid=17 &#169; SelectQuote, Inc., Overland Park Kansas USA"
+    },
+    {
+      "id": "msg-1a00050cdff4251d",
+      "company": "Sunnydata",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T08:22:28.000Z",
+      "latestSubject": "Thanks for applying to SunnyData!",
+      "latestFrom": "SunnyData Hiring Team <no-reply@ashbyhq.com>",
+      "gmailThreadId": "1a00050cdff4251d",
+      "gmailMessageIds": [
+        "1a00050cdff4251d",
+        "1a0355f5f51daf9b",
+        "1a038037f1005c2f"
+      ],
+      "notes": "Hi Tirth, Thank you for applying for the Data Engineer role at SunnyData! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. All the best, SunnyData Hiring Team Hi Tirth , Thank you for applying for the Data Engineer role at SunnyData ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. All the best, SunnyData Hiring Team",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "openai-general-application",
+      "company": "Openai",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-25T08:18:05.000Z",
+      "latestSubject": "Thank you for applying to OpenAI",
+      "latestFrom": "OpenAI Hiring Team <no-reply@openai.com>",
+      "gmailThreadId": "1a0244cd9d7454f0",
+      "gmailMessageIds": [
+        "1a0244cd9d7454f0",
+        "1a03317a5076a246",
+        "1a037ff7e805208d"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to OpenAI. Your application has been received and our recruiting team will review it for the role you applied to, along with any similar roles we have open. If we find a match, we'll reach out to you to discuss the next steps. In the meantime, we invite you to learn more about our hiring philosophy and interview process https://openai.com/interview-guide/. Regards, OpenAI Team Please note: This email is sent from an unattended mailbox. Hi Tirth , Thank you for applying to OpenAI. Your application has been received and our recruiting team will review it for the role you applied to, along with any similar roles we have open. If we find a match, we'll reach out to you to discuss the next steps. In the meantime, we invite you to learn more about our hiring philosophy and interview process here . Regards, OpenAI Team Please note: This email is sent from an unattended mailbox.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "ATS Application Receipt: confirmation of application submission",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:19.176+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "amphenol-tcs-general-application",
+      "company": "Amphenol TCS",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Amphenol TCS Career Center Registration",
+      "latestFrom": "\"Amphenol TCS via AcquireTM.com\" <appserv@acquiretm.com>",
+      "lastActivityAt": "2026-08-25T08:13:39.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a037fb6d09577e3",
+      "gmailMessageIds": [
+        "1a037fb6d09577e3"
+      ],
+      "notes": "TIRTH, Thank you for registering with us. Use the following link to login and check the status of your application. https://amphenol-tcs.acquiretm.com/register_home_clean.aspx You can login using your email address and password: Registered (Email): tirthcshah1999@gmail.com Password: ******* Thank you for registering! Amphenol TCS"
+    },
+    {
+      "id": "johnson-controls-senior-business-analyst",
+      "company": "Johnson Controls",
+      "role": "Senior Business Analyst",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Update: Senior Business Analyst (hybrid) - WD30277024 at Johnson Controls",
+      "latestFrom": "HR-Atlas jci <jci@myworkday.com>",
+      "lastActivityAt": "2026-08-25T08:11:51.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0350e99bd1ffc4",
+      "gmailMessageIds": [
+        "1a0350e99bd1ffc4",
+        "1a037f9c8fb0831c",
+        "1a037ea75caa6120"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in Johnson Controls. At this time, we regret to inform you that you have not been selected for the position of Senior Business Analyst (hybrid) ( WD30277024 ) We will keep your resume/CV on file and may consider you for future positions that align to your skills and experience. Please visit our careers site at jobs.johnsoncontrols.com to view other opportunities that may be of interest and to sign up for job alerts. Kind Regards, Kerri Wilson Talent Acquisition Johnson Controls Replies to this message are undeliverable and will not reach the Talent Acquisition Team. This email was intended for tirthcshah1999@gmail.com"
+    },
     {
       "id": "amazon-web-general-application",
       "company": "Amazon Web",
@@ -2254,31 +2391,6 @@
       "notes": "Tirth, Thanks for applying to True Anomaly. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, True Anomaly ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Tirth, Thanks for applying to True Anomaly. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, True Anomaly ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
     },
     {
-      "id": "msg-1a00050cdff4251d",
-      "company": "Sunnydata",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-24T20:03:57.000Z",
-      "latestSubject": "Thanks for applying to SunnyData!",
-      "latestFrom": "SunnyData Hiring Team <no-reply@ashbyhq.com>",
-      "gmailThreadId": "1a00050cdff4251d",
-      "gmailMessageIds": [
-        "1a00050cdff4251d",
-        "1a0355f5f51daf9b"
-      ],
-      "notes": "Hi Tirth, Thank you for applying for the Data Engineer role at SunnyData! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. All the best, SunnyData Hiring Team Hi Tirth , Thank you for applying for the Data Engineer role at SunnyData ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. All the best, SunnyData Hiring Team",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
-    },
-    {
       "id": "mercury-insurance-associate-data-engineer",
       "company": "Mercury Insurance",
       "role": "Associate Data Engineer",
@@ -2390,24 +2502,6 @@
         "1a03510fe7048e7d"
       ],
       "notes": "96 Dear Tirth, Thank you for your recent application to our family of companies! Your resume will be reviewed by our Talent Acquisition team. If your experience and other qualifications meet our current needs, a recruiter will contact you shortly to discuss the opportunity further. Click here to log in to your Candidate Home account to check the status of your application. Have an amazing day! The Rocket Talent Acquisition Team Want to set yourself up for success at Rocket? Explore the buttons below to learn more about our culture & interviewing tips & tricks from our Talent Acquisition Team! Explore Our Culture Interviewing Resources Did you know that we're a veteran friendly workplace? To learn more about our veteran resources click on the button below. Veteran Hiring Page This email was intended for tirthcshah1999@gmail.com"
-    },
-    {
-      "id": "johnson-controls-senior-business-analyst",
-      "company": "Johnson Controls",
-      "role": "Senior Business Analyst",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Johnson Controls - We've received your application: WD30277024",
-      "latestFrom": "HR-Atlas jci <jci@myworkday.com>",
-      "lastActivityAt": "2026-08-24T18:35:43.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0350e99bd1ffc4",
-      "gmailMessageIds": [
-        "1a0350e99bd1ffc4"
-      ],
-      "notes": "Hi Tirth, Thank you for your interest in Johnson Controls where we’re shaping the future to create a world that’s safe, comfortable and sustainable. This email is to confirm that we received your application for the position of Senior Business Analyst (hybrid) ( WD30277024 ). We are carefully reviewing your application and will be in touch regarding any potential next steps. You can also check for real time status updates on your application in our candidate portal at any time: https://jci.wd5.myworkdayjobs.com/JCI/login Kind Regards, Kerri Wilson Talent Acquisition Johnson Controls Replies to this message are undeliverable and will not reach the Talent Acquisition Team. This email was intended for tirthcshah1999@gmail.com"
     },
     {
       "id": "u-s-bank-software-engineer-2",
@@ -6574,31 +6668,6 @@
       "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
-    },
-    {
-      "id": "openai-general-application",
-      "company": "Openai",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-24T09:26:22.000Z",
-      "latestSubject": "Thank you for applying to OpenAI",
-      "latestFrom": "OpenAI Hiring Team <no-reply@openai.com>",
-      "gmailThreadId": "1a0244cd9d7454f0",
-      "gmailMessageIds": [
-        "1a0244cd9d7454f0",
-        "1a03317a5076a246"
-      ],
-      "notes": "Hi Tirth, Thank you for applying to OpenAI. Your application has been received and our recruiting team will review it for the role you applied to, along with any similar roles we have open. If we find a match, we'll reach out to you to discuss the next steps. In the meantime, we invite you to learn more about our hiring philosophy and interview process https://openai.com/interview-guide/. Regards, OpenAI Team Please note: This email is sent from an unattended mailbox. Hi Tirth , Thank you for applying to OpenAI. Your application has been received and our recruiting team will review it for the role you applied to, along with any similar roles we have open. If we find a match, we'll reach out to you to discuss the next steps. In the meantime, we invite you to learn more about our hiring philosophy and interview process here . Regards, OpenAI Team Please note: This email is sent from an unattended mailbox.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "ATS Application Receipt: confirmation of application submission",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:19.176+00:00",
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
@@ -29262,32 +29331,6 @@
       "aiDecision": "AI extracted",
       "aiModel": "openrouter",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19fa45b2177465fd",
-      "company": "Talkiatry",
-      "role": "Data Engineer",
-      "status": "rejected",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-27T16:14:23+00:00",
-      "latestSubject": "Update from Talkiatry",
-      "latestFrom": "Talkiatry Hiring Team <no-reply@ashbyhq.com>",
-      "gmailThreadId": "19fa45b2177465fd",
-      "gmailMessageIds": [
-        "19fa45b2177465fd",
-        "19f8fde4b8dafbd5",
-        "19f89c90a900c101",
-        "19f805ccbd8aa462",
-        "19f6553a73c2fd8a"
-      ],
-      "notes": "Hello Tirth, Thank you again for your interest in Talkiatry and for taking the time to apply for the Data Engineer role. After careful review, we have decided not to move forward with your candidacy | Hello Tirth, Thank you for your interest in joining Talkiatry and for taking the time to apply to our Data Engineer opportunity. We appreciate you sharing your experience with us. Our team is reviewing",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Candidate rejection notice: non-selection / pursuit of other candidates",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-19T21:24:48.051+00:00",
       "aiConfidence": "high"
     },
     {
