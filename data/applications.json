@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-08-25T10:34:32.651Z",
+  "updatedAt": "2026-08-25T11:29:12.877Z",
   "applications": [
+    {
+      "id": "salary-finance-general-application",
+      "company": "Salary Finance",
+      "role": "Enterprise Data Analyst",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Important information about your application to Salary Finance",
+      "latestFrom": "Greg Proctor <g.proctor@salaryfinance.com>",
+      "lastActivityAt": "2026-08-25T11:00:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03602834f28b63",
+      "gmailMessageIds": [
+        "1a03602834f28b63",
+        "1a038941b0a8d3c4"
+      ],
+      "notes": "Hi Tirth, Thank you for your application for the position Enterprise Data Analyst at Salary Finance. I am sorry to inform you that you have not been selected for an interview on this occasion. Salary Finance thanks you for the time you invested to apply for the position, and we encourage you to apply for any future openings for which you qualify. Best wishes for a successful job search and thank you again for your interest in our company. Kind regards, Salary Finance *Please note due to the number of applications we receive, we are unfortunately unable to provide individual feedback* Hi Tirth, Thank you for your application for the position Enterprise Data Analyst at Salary Finance. I am sorry to inform you that you have not been selected for an interview on this occasion . Salary Finance thanks you for the time you invested to apply for the position, and we encourage you to apply for any future openings for which you qualify. Best wishes for a successful job search and thank you again for your interest in our company. Kind regards, Salary Finance *Please note due to the number of applications we receive, we are unfortunately unable to provide individual feedback*"
+    },
     {
       "id": "lovable-general-application",
       "company": "Lovable",
@@ -1806,24 +1825,6 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
-    },
-    {
-      "id": "salary-finance-general-application",
-      "company": "Salary Finance",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "We've got it!",
-      "latestFrom": "no-reply@eu.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-24T23:02:08.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a03602834f28b63",
-      "gmailMessageIds": [
-        "1a03602834f28b63"
-      ],
-      "notes": "HiTirth, Thanks for applying to Salary Finance! Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. In the meantime please follow us on LinkedIn ( https://www.linkedin.com/company/10193176/ ) Regards, Logo ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. HiTirth, Thanks for applying to Salary Finance! Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. In the meantime please follow us on LinkedIn Regards, ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
     },
     {
       "id": "disney-lead-data-engineer-solutioning",
