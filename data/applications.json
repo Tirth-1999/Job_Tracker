@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-08-26T08:45:36.960Z",
+  "updatedAt": "2026-08-26T10:36:23.966Z",
   "applications": [
+    {
+      "id": "seedlegals-data-engineer",
+      "company": "Seedlegals",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-26T10:04:01.000Z",
+      "latestSubject": "Data Engineer (3-6 month contract) - SeedLegals",
+      "latestFrom": "SeedLegals <noreply@candidates.workablemail.com>",
+      "gmailThreadId": "1a02804312f242e4",
+      "gmailMessageIds": [
+        "1a02804312f242e4",
+        "1a0283d46c303e12",
+        "1a03d86d6298e750"
+      ],
+      "notes": " ------------------------------------------------------------------------------- Dear Tirth, Thank you for taking the time to apply for the Data Engineer (3-6 month contract) role at SeedLegals. We have reviewed your application and regret to inform you that it has not been selected for further consideration. I'd like to wish you success with your job search and thank you again for your interest in SeedLegals. All the best, SeedLegals ------------------------------------------------------------------------------- ------------------------------------------------------------------------------- Dear Tirth, Thank you for taking the time to apply for the Data Engineer (3-6 month contract) role at SeedLegals. We have reviewed your application and regret to inform you that it has not been selected for further consideration. I'd like to wish you success with your job search and thank you again for your interest in SeedLegals. All the best, SeedLegals",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Application submission confirmation",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:16.728+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "amphenol-data-engineer",
       "company": "Amphenol",
@@ -11813,29 +11839,6 @@
       "manualAction": null,
       "manualChangedAt": null,
       "aiDecision": "ATS Application Confirmation receipt",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:16.728+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "seedlegals-data-engineer",
-      "company": "SeedLegals",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-22T06:51:38+00:00",
-      "latestSubject": "Data Engineer (3-6 month contract) - SeedLegals",
-      "latestFrom": "SeedLegals <noreply@candidates.workablemail.com>",
-      "gmailThreadId": "1a02804312f242e4",
-      "gmailMessageIds": [
-        "1a02804312f242e4",
-        "1a0283d46c303e12"
-      ],
-      "notes": "SeedLegals ------------------------------------------------------------------------------- Your application for the Data Engineer (3-6 month contract) job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: Data Engineer with 4+ years of building scalable Python and SQL pipelines, modern data warehouses, and automation tools across finance, energy, and education sectors Phone: +19796352045 ** PROFILE ** Resume: Tirth_Shah_Resume.pdf What are your salary expectations for this role?: 0 Withdraw this application https://seedlegals.workable.com/jobs/6047030/candidates/d050yzGjdRzhdovS-tAMWvEeyvRFLqvef1PYfa-r_ME ------------------------------------------------------------------------------- Jobs by Workable https://jobs.workable.com/ ",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Application submission confirmation",
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:01:16.728+00:00",
       "aiConfidence": "high"
