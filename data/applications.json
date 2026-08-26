@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-08-26T04:41:23.687Z",
+  "updatedAt": "2026-08-26T06:52:00.681Z",
   "applications": [
+    {
+      "id": "breeze-airways-data-engineer-staff",
+      "company": "Breeze Airways",
+      "role": "Data Engineer Staff",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Breeze Airways Team Member Application Notice!",
+      "latestFrom": "Breeze Workday Team <flybreeze@myworkday.com>",
+      "lastActivityAt": "2026-08-26T06:51:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0347ec1d3d3110",
+      "gmailMessageIds": [
+        "1a0347ec1d3d3110",
+        "1a03cd6c06a45930"
+      ],
+      "notes": "96 Hello Tirth, We appreciate your interest in Breeze Airways and the Data Engineer Staff position. As you might imagine, interest in the Data Engineer Staff position is very strong. After careful consideration, we determined there were other applicants whose backgrounds and experience are more closely aligned with our needs at this time. We realize this isn’t the outcome you hoped for, but our growth plans call for continued hiring for various positions throughout the near future. While you may not be considered for the same position again for three (3) months, you can apply to other positions right away. We wish you success in your career pursuit. Breeze Airways Browse Jobs Kindest regards, Breeze Airways Talent Team This email was intended for tirthcshah1999@gmail.com"
+    },
     {
       "id": "walter-bacon-founding-forward-deployed-engineer",
       "company": "Walter Bacon",
@@ -7672,24 +7691,6 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
-    },
-    {
-      "id": "breeze-airways-data-engineer-staff",
-      "company": "Breeze Airways",
-      "role": "Data Engineer Staff",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Breeze Airways Data Engineer Staff - Application Received!",
-      "latestFrom": "Breeze Workday Team <flybreeze@myworkday.com>",
-      "lastActivityAt": "2026-08-24T15:58:36.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0347ec1d3d3110",
-      "gmailMessageIds": [
-        "1a0347ec1d3d3110"
-      ],
-      "notes": "96 Hello Tirth, Thank you for your interest in Breeze Airways and the Data Engineer Staff position. Your application has been received and we will review it as soon as possible. Our Values of Safety, Kindness, Integrity, Ingenuity and Excellence are an important part of what we do every day, and we are excited that you want to be a part of creating a \"seriously nice\" airline! If your knowledge, skills, and abilities align with what we are looking for in a candidate for this role, our recruitment team will be in touch with you soon. Breeze Airways Browse Jobs Kindest regards, Breeze Airways Talent Team This email was intended for tirthcshah1999@gmail.com"
     },
     {
       "id": "rhino-jetty-general-application",
