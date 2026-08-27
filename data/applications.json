@@ -1,6 +1,135 @@
 {
-  "updatedAt": "2026-08-26T20:36:08.748Z",
+  "updatedAt": "2026-08-27T00:31:12.675Z",
   "applications": [
+    {
+      "id": "pluto-general-application",
+      "company": "Pluto",
+      "role": "Forward Deployed Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, a reminder about your application",
+      "latestFrom": "\"Pluto (YC)\" <pluto@mail.talentpluto.com>",
+      "lastActivityAt": "2026-08-26T23:18:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a036115f0899a5a",
+      "gmailMessageIds": [
+        "1a036115f0899a5a",
+        "1a0360eccf746d54",
+        "1a0405e3fd130424"
+      ],
+      "notes": "your application is still waiting Hey Tirth, Just a reminder. You recently applied to a role we're helping fill through Pluto, a personal AI career agent backed by Y Combinator. To continue the process for the role you applied to, please complete a short text or call with Pluto. This takes 5-10 minutes and is the next required step. Here's the process: 1. Talk to Pluto — share your experience and what you're looking for 2. Complete your application — we'll send the company a clearer summary of your background 3. Get matched — once complete, Pluto can also match you with similar opportunities You stay in control — we only introduce you to other companies when you say yes. Call Pluto: +1 (929) 600-6918 [tel:+19296006918] Your career needs an agent. Backed by Y Combinator. Unsubscribe [https://app.loops.so/unsubscribe/cmtapt7lk946a01w34qyt9a2t/b972f79c3e9fd08a5e6554735efbfb62910e6be068945c26b9c70a031d1db40ae592f540736bde145cd4570d343dfc111ce50a7451085857942c4bb6] a reminder about your application 96 your application is still waiting Hey Tirth, Just a reminder. You recently applied to a role we're helping fill through Pluto, a personal AI career agent backed by Y Combinator. To continue the process for the role you applied to, please complete a short text or call with Pluto. This takes 5-10 minutes and is the next required step. Here's the process: 1. Talk to Pluto — share your experience and what you're looking for 2. Complete your application — we'll send the company a clearer summary of your background 3. Get matched — once complete, Pluto can also match you with similar opportunities You stay in control — we only introduce you to other companies when you say yes. Call Pluto: +1 (929) 600-6918 Your career needs an agent. Backed by Y Combinator. Unsubscribe"
+    },
+    {
+      "id": "amh-senior-data-engineer",
+      "company": "AMH",
+      "role": "Senior Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Status: Senior Data Engineer",
+      "latestFrom": "AMH Workday <amh@myworkday.com>",
+      "lastActivityAt": "2026-08-26T23:01:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0404e76d561f90",
+      "gmailMessageIds": [
+        "1a0404e76d561f90"
+      ],
+      "notes": "Thank you for your interest in the Senior Data Engineer position. We appreciate the time and effort you put into your application. After careful consideration, we have decided to move forward with other candidates at this time. We encourage you to keep an eye on our careers page for future opportunities that may align with your skills and experience. Wishing you all the best in your job search and future endeavors. This email box is not monitored. Please do not reply to this message. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "rocket-mortgage-senior-business-operations-analyst",
+      "company": "Rocket Mortgage",
+      "role": "Senior Business Operations Analyst",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Application with Rocket",
+      "latestFrom": "Rock FOC Workday <noreply@workday.rocketcompanies.com>",
+      "lastActivityAt": "2026-08-26T21:39:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a040032e5e02b86",
+      "gmailMessageIds": [
+        "1a040032e5e02b86"
+      ],
+      "notes": "96 Hello Tirth, Thank you for your recent application to Rocket Mortgage, LLC for Senior Business Operations Analyst. We appreciate you taking the time to apply. While we feel this position wasn’t the right match at this time, we encourage you to keep checking out our website for additional opportunities at careers.rocket.com . We wish you the best in your job search and future endeavors. Sincerely, The Rocket Talent Acquisition Team This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "sally-beauty-data-engineer",
+      "company": "Sally Beauty",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on your application to Data Engineer",
+      "latestFrom": "eigx.fa.sender@workflow.mail.us6.oraclecloud.com",
+      "lastActivityAt": "2026-08-26T21:38:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a040027ee20d814",
+      "gmailMessageIds": [
+        "1a040027ee20d814"
+      ],
+      "notes": "Dear Tirth, Thank you for the interest you have expressed in the Data Engineer) at Plano, TX, United States and in employment with Sally Beauty Cosmoprof Careers. At this time, we have decided to concentrate our attention on other candidates who we believe best meet the current needs of our organization. Please be assured that your application was given full consideration. If you have applied for other positions, please note that this message is only in reference to the above mentioned position. We also encourage you to visit our website for information regarding other available positions. We appreciate your interest in our company and wish you success in your career search. Regards, Sally Beauty Cosmoprof Careers"
+    },
+    {
+      "id": "booz-allen-hamilton-data-visualization-engineer",
+      "company": "Booz Allen Hamilton",
+      "role": "Data Visualization Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Status for Data Visualization Engineer",
+      "latestFrom": "\"workday@bah.com\" <workday@bah.com>",
+      "lastActivityAt": "2026-08-26T21:32:46.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03ffd6bf3ca8d0",
+      "gmailMessageIds": [
+        "1a03ffd6e63930d6",
+        "1a03ffd6bf3ca8d0"
+      ],
+      "notes": "Subject: Job Application: Tirth Shah ‎- R0247761 Data Visualization Engineer (C02709658) on 08/24/2026 Hi Tirth, We appreciate your interest and desire to change the world with us. We considered it a privilege to review your skills and accomplishments for the role of Data Visualization Engineer. At this time, we’ve selected other candidates to move forward with. We encourage you to keep checking our careers site for job opportunities and upcoming events at https://careers.boozallen.com that match your interests and skills. If you haven’t done so yet, we encourage you to join one of our Talent Communities. Please note that this email only pertains to the Data Visualization Engineer role, though you may still be under consideration for other positions to which you have applied. We look forward to staying connected with you. The Booz Allen Talent Acquisition Team This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "veeva-systems-senior-data-engineer",
+      "company": "Veeva Systems",
+      "role": "Senior Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on Your Application at Veeva",
+      "latestFrom": "Veeva Systems <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-08-26T20:49:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03fd57ca163856",
+      "gmailMessageIds": [
+        "1a03fd57ca163856"
+      ],
+      "notes": " Hi Tirth, Thank you for your interest in Veeva and for taking the time to complete our application process for the Senior Data Engineer position. After careful consideration, we have decided not to move forward at this time. We appreciate your time and effort invested in applying and wish you success in your job search. Kind regards, Veeva Talent Attraction Team For future opportunities visit our career site: https://careers.veeva.com/ Recruitment Fraud: Veeva will only contact candidates using official Veeva email addresses (ending in @veeva.com or @hire.lever.co). We will never use generic email services (like Gmail, Yahoo, Hotmail, etc.) or initiate conversations using WhatsApp or Telegram for official recruitment communications. If you encounter suspicious activity or believe you have been contacted by a fraudulent recruiter, please report it to us immediately using this form. Hi Tirth, Thank you for your interest in Veeva and for taking the time to complete our application process for the Senior Data Engineer position. After careful consideration, we have decided not to move forward at this time. We appreciate your time and effort invested in applying and wish you success in your job search. Kind regards, Veeva Talent Attraction Team For future opportunities visit our career site: https://careers.veeva.com/ Recruitment Fraud: Veeva will only contact candidates using official Veeva email addresses (ending in @veeva.com or @hire.lever.co). We will never use generic email services (like Gmail, Yahoo, Hotmail, etc.) or initiate conversations using WhatsApp or Telegram for official recruitment communications. If you encounter suspicious activity or believe you have been contacted by a fraudulent recruiter, please report it to us immediately using this form ."
+    },
+    {
+      "id": "byline-bank-data-analytics-engineer",
+      "company": "Byline Bank",
+      "role": "Data Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your application, Tirth",
+      "latestFrom": "<BylineBank.hr@adp.com>",
+      "lastActivityAt": "2026-08-26T20:36:16.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03fc9ad531a09a",
+      "gmailMessageIds": [
+        "1a03fc9ad531a09a"
+      ],
+      "notes": "Disclaimer: This email has been sent by the HR team at Byline Bank. using ADP services. Dear Tirth Shah , Thank you for taking the time to submit your application for the Data Analytics Engineer (Hybrid, Schaumburg, IL) position. We are glad that you are interested in a career at Byline Bank. and we're here to help you find your perfect fit. We are currently reviewing your application. If your profile is a good fit for this position, we will contact you about next steps. We may also consider your application for other positions. This could happen a few times and it is part of our recruitment process. Is your profile telling your story? A key part of our review process is to assess your Candidate Profile with job requirements. Please ensure your profile is accurate and extensive as it is our first step in getting to know you. You can build your profile by importing information from your resume or manually updating it. To view your application updates, click My Applications . We encourage you to visit our Career Center frequently and continue to look for opportunities that match your interests. Thank you, Talent Acquisition Byline Bank. Note: You must use the same email you used to log in to the career center when applying for jobs."
+    },
     {
       "id": "american-tower-senior-data-engineer",
       "company": "American Tower",
@@ -7149,25 +7278,6 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
-    },
-    {
-      "id": "pluto-general-application",
-      "company": "Pluto",
-      "role": "Forward Deployed Engineer",
-      "status": "interviewed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thanks for applying to talentpluto",
-      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
-      "lastActivityAt": "2026-08-24T23:18:22.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a036115f0899a5a",
-      "gmailMessageIds": [
-        "1a036115f0899a5a",
-        "1a0360eccf746d54"
-      ],
-      "notes": "talentpluto ------------------------------------------------------------------------------- Your application for the Forward Deployed Engineer - Zingage job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Phone: +19796352045 Withdraw this application https://talentpluto.workable.com/jobs/6050754/candidates/fyL30sLRAnkUIJ_gP_lO6p8ju48d84csKYUdjyrTrm0 ------------------------------------------------------------------------------- Jobs by Workable https://jobs.workable.com/ Your application for the Forward Deployed Engineer - Zingage job was submitted successfully. Here's a copy of your application data for safekeeping. Personal information Name Tirth Shah Email tirthcshah1999@gmail.com Withdraw this application Jobs by Workable"
     },
     {
       "id": "wells-fargo-lead-business-aligned-finance-analyst-technology-finance",
