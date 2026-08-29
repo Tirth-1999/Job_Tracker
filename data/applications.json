@@ -1,6 +1,49 @@
 {
-  "updatedAt": "2026-08-29T17:47:28.936Z",
+  "updatedAt": "2026-08-29T18:51:15.212Z",
   "applications": [
+    {
+      "id": "modus-create-general-application",
+      "company": "Modus Create",
+      "role": "AI Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Modus Create LLC!",
+      "latestFrom": "no-reply@moduscreate.com",
+      "lastActivityAt": "2026-08-29T18:19:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03e36d230a7f43",
+      "gmailMessageIds": [
+        "1a03e36d230a7f43",
+        "1a049715c1ccb50f",
+        "1a04ebf1e2d76d61"
+      ],
+      "notes": "Hello Tirth Chirayu, Thank you for applying to Modus Create we’re excited that you’ve taken the first step toward possibly becoming a Modite! Our team is currently reviewing your application to see how your experience and skills align with what we’re looking for. If there’s a strong match, we’ll be in touch to learn more about you and share more about life at Modus, including: * Your experience, skills, and career journey * The Modus way—how we work, learn, and collaborate * What you’re looking for next and what drew you to Modus Create We’re fortunate to receive a high volume of applications, so the process may take a little time. In the meantime, feel free to explore more about us and what it’s like to be a Modite here. ( https://www.moduscreate.com/ ) We’re excited to learn more about you and appreciate your interest in Modus Create! Warm regards, Recruitment Team Modus Create, LLC ________________________________________________________ Data Processing Notification This email is to notify you that personal data about you has been collected by Modus Create (“Controller”) and/or its affiliates and subsidiaries, which has legal entities in Costa Rica, Romania, France, Switzerland, Cyprus, United Kingdom and USA, with its headquarter located at 12100 Sunset Hills Rd, Suite 150 Reston, VA 20190 USA, to evaluate your candidacy for employment. Your personal data was either obtained directly from you when you applied through our website or via email address, either from publicly available sources (e.g. LinkedIn or similar sources) or provided to us by someone who referred you for potential employment. Scope of processing Your personal data will be processed for the purposes of managing Controller’s recruitment related activities, which include setting up and conducting interviews and tests for applicants, evaluating and assessing the results thereto, and as is otherwise needed in the recruitment and hiring processes. Such processing is legally permissible under Art. 6(1)(f) of Regulation (EU) 2016/679 (General Data Protection Regulation) as necessary for the purposes of the legitimate interests pursued by the Controller, which are the solicitation, evaluation, and selection of applicants for employment or under Art. 6(1)(a) of Regulation (EU) 2016/679 (General Data Protection Regulation) should your application be sent directly by you (this would mean you would consent to the processing for the above-mentioned purposes). Types of personal data The types of data processed are the ones listed in your resume or on publicly available sources, they may include (but are not limited to) your name, image, phone number, work experience, education, address, email address, hobbies. Transfer of personal data Your personal data will be transferred or be accessible internationally as we are a global organization. Any transfers of personal data from within the EEA (European Economic Area) will take place in accordance with applicable data protection legislation and"
+    },
+    {
+      "id": "ziprecruiter-general-application",
+      "company": "Ziprecruiter",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "TIRTH, Vagaro may want to hire you",
+      "latestFrom": "ZipRecruiter <alerts@ziprecruiter.com>",
+      "lastActivityAt": "2026-08-29T17:51:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03af636e368ad3",
+      "gmailMessageIds": [
+        "1a03af636e368ad3",
+        "1a03f6f36a0a558b",
+        "1a044e1895287b71",
+        "1a0452839b7ab9df",
+        "1a0490f5b90d5b98",
+        "1a04ea5dc443e3e2"
+      ],
+      "notes": " <https://www.ziprecruiter.com/km/AAErF3n8ayYRDLLVjhk8YEsY4EvwZVTBVee-fjnU0HHHKtSup967PQMViZBXoWqszfxMrbf_5sr5LAnGDzm88Z_Coo-otKkognqSQsQulMSJ0vuFvJ_vVrpAZkiHlWa8Uu0su04FDhAUiWoQ4fGbjpr30LgrJ5clYga9BcyBmsjlmNBV05PVrUmRMBZ2nsfE0nTL_qfnkareFLit-GT4zVd0zDUWhWqBQhNa8k6bI0RRtmZM5M7HUdegn2JOm6miLTIqcc0Ku9Xs2P1m1SyB1w0nFNIY3QjfSbyKwID6TKfgw1vArW-2ZjLZAsZnujUJcdLyCWvA8WJfQWGfKoTo3Vu9x9-GofGX-PkzzWaV-kG7Pz1hOvhh8-2nArvV?tsid=111000153> Hi TIRTH, Here are today's jobs recommended for you: Data Manager Senior - Data Engineering and Real-time Data Platforms (Apache... <https://www.ziprecruiter.com/ekm/AAHBIWkPoCtfkrBp4_GYCRzcaRGf3lBwAxEU_vGgudnQ8hPzBoBsFa4_pglcGYZEZnGNxURLvRjRB7xx0ZH9ds-LkBn-qPTHyIxIzZTyiwsjk5o64CfTASbELHFNeHbOOAazwbKqlD7q508w0olH2EeVh0C2kazzhKlgRHtMsqxWzU9xOfxgsRLJG8bLB_uHKwL0V9dIN0SUR7ccHKzErUKCW9A1I3SH4y3Mvw-kTYlwJTwLClbx6AgZbhXrKYWdds7QvUdfeejVI9L05iFDkq--EsEUGFUOdUa-aNdHdn0yUnxqRj3le0gv_EjWm5uLO-UUfSYsTA8Yu1jeDV2-fwwrmgs7xvQ8H8D6DKNKrsfqz8_k1O2BXLuIzwkZpuE6mpNn5S-k9iYymV0RET7gbQ?tsid=111000153> PNC Financial Services Group • Lakewood, CO View Details <https://www.ziprecruiter.com/ekm/AAHBIWkPoCtfkrBp4_GYCRzcaRGf3lBwAxEU_vGgudnQ8hPzBoBsFa4_pglcGYZEZnGNxURLvRjRB7xx0ZH9ds-LkBn-qPTHyIxIzZTyiwsjk5o64CfTASbELHFNeHbOOAazwbKqlD7q508w0olH2EeVh0C2kazzhKlgRHtMsqxWzU9xOfxgsRLJG8bLB_uHKwL0V9dIN0SUR7ccHKzErUKCW9A1I3SH4y3Mvw-kTYlwJTwLClbx6AgZbhXrKYWdds7QvUdfeejVI9L05iFDkq--EsEUGFUOdUa-aNdHdn0yUnxqRj3le0gv_EjWm5uLO-UUfSYsTA8Yu1jeDV2-fwwrmgs7xvQ8H8D6DKNKrsfqz8_k1O2BXLuIzwkZpuE6mpNn5S-k9iYymV0RET7gbQ?tsid=111000153> Data Engineer <https://www.ziprecruiter.com/km/AAG6GeL1-adh86NdcgcmPINE9Rxrp7uTz2LwIa0rIFGsAJ_ovMmvXXtfLD4mUnu45Y0DkiSdliAMZWhJJ_GbWrEM031mDocPCCArln6Inn1AmTJzWmN9FZ3Gb2AtqdL86Paz49YciWsmoGfAkQJ_p2x4d0hAJWv4wJPFrJMgWH1dJNmIgmie-skQRxrqvkeT32v5SEUc1AKZkpkTyfPAxV_zYy2T9Evn_7ObOZSby0SwPBXlyO43ST9QMKZ7s9NtHLwXkG0nZoNJFG_t-Dt_kxrgijbd6GxCpxppbCAKaEDtf0zBmQyvSiNEn2j6EKssxgcPEBdz1TZvDggUJV0gGbnUIl4ItiCVIRXLDGpaHROwYHB4Ls8TfLEMYpW74zgnJtNm?tsid=111000153&auth_token=5_1788025886_p3K_MGay5LWVCAfauQTnrhvdgaL2yGl5RJxXVgNyNGQ&contact_id=4945c5e0&expires=1788371486> Vagaro • Pleasanton, CA • In-person $135K - $150K / yr 1-Click Apply <https://www.ziprecruiter.com/km/AAElZJ7PHRjbFMuKDTjkTOUkFYfhf5ORNH5R_WgjBCsyMpEStbn3IMog-rw9w1_yqTTQgeY0RbVuvxSN4ZNveBSUuxkeU4Yp20yFKDweEsADpG8RIxJa0d2o9K-04XeBaZsAPU9M6WUIt0ySUO7pq94C5D_VZjjHPD9Ji7YNY0LU2qE6N20foLx3u5E6_YztoGKmrr6liqhVr74DQT2MQJue6OOoajfIjMaWYwbZrS8HQ5Id5BhJXMn9wyIVQqSNUtiutRBuTInvH2WwbxtfhXSK-8gf_b0h1njAmUlb452oK3v15_SU5uaqYE6qSqTfFvhbFf6XVwgsvzqS5Ipaf3JfKoGMZa1Ew2jEfeU16GmuFE-CIHZBhgYR-DFkcRVo7ZFWfMPsh9ort6tSf9B34h62s-rUGwDV6vj309eM1_hgFF0QvucU9DsLsc8tcJHbl8J8eHkuQPD-3tUdfDK5ixG0Xp0IrrgcswT6Rcle2eotYyxHcQ?tsid=111000153&auth_token=5_1788025886_p3K_MGay5LWVCAfauQTnrhvdgaL2yGl5RJxXVgNyNGQ&contact_id=4945c5e0&expires=1788371486> Senior Data Engineer <https://www.ziprecruiter.com/km/AAEQR1Dj5ENSzUuHE89GOvn20MzDtgXV3xUPXR2D1ffoHxx6pfFZXkJyYN1KwziH_fh74ON1LGQgMBW-djqnTnO-NkiDLsNT69z3AzVD324PkzWc1bByG10_o8ntjUtPG"
+    },
     {
       "id": "trueup-business-analyst",
       "company": "Trueup",
@@ -2718,25 +2761,6 @@
       "reason": "AI extracted"
     },
     {
-      "id": "modus-create-general-application",
-      "company": "Modus Create",
-      "role": "AI Engineer",
-      "status": "rejected",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Important information about your application to Modus Create",
-      "latestFrom": "Carolina Alencar <carolina.alencar@moduscreate.com>",
-      "lastActivityAt": "2026-08-28T17:36:01.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a03e36d230a7f43",
-      "gmailMessageIds": [
-        "1a03e36d230a7f43",
-        "1a049715c1ccb50f"
-      ],
-      "notes": "Dear Tirth, Thank you for your interest in joining the Modus team! We appreciate the time you spent applying for the AI Engineer (Python, Machine Learning, Generative AI/LLMs) role, however after carefully reviewing your qualifications, we have decided to pursue other candidates whom we feel meet our needs more closely. We are grateful that you have considered us as a potential employer and we would like to keep in touch for future opportunities where your skills would be a fit. Sincerely, Recruitment Team Modus Recruiting Team Modus Create, LLC ________________________________________________________ Data Processing Notification This email is to notify you that personal data about you has been collected by Modus Create (“Controller”) and/or its affiliates and subsidiaries, which has legal entities in Costa Rica, Romania, France, Switzerland, Cyprus, United Kingdom and USA, with its headquarter located at 12100 Sunset Hills Rd, Suite 150 Reston, VA 20190 USA, to evaluate your candidacy for employment. Your personal data was either obtained directly from you when you applied through our website or via email address, either from publicly available sources (e.g. LinkedIn or similar sources) or provided to us by someone who referred you for potential employment. Scope of processing Your personal data will be processed for the purposes of managing Controller’s recruitment related activities, which include setting up and conducting interviews and tests for applicants, evaluating and assessing the results thereto, and as is otherwise needed in the recruitment and hiring processes. Such processing is legally permissible under Art. 6(1)(f) of Regulation (EU) 2016/679 (General Data Protection Regulation) as necessary for the purposes of the legitimate interests pursued by the Controller, which are the solicitation, evaluation, and selection of applicants for employment or under Art. 6(1)(a) of Regulation (EU) 2016/679 (General Data Protection Regulation) should your application be sent directly by you (this would mean you would consent to the processing for the above-mentioned purposes). Types of personal data The types of data processed are the ones listed in your resume or on publicly available sources, they may include (but are not limited to) your name, image, phone number, work experience, education, address, email address, hobbies. Transfer of personal data Your personal data will be transferred or be accessible internationally as we are a global organization. Any transfers of personal data from within the EEA (European Economic Area) will take place in accordance with applicable data protection legislation and applicable additional safeguards and supplementary measures; Any personal data transfers from non-EEA countries will take place in accordance with applicable data protection legislation. Third party processors Your personal data has been shared with Greenhouse Software, Inc., a cloud services provider located in the United States of America an"
-    },
-    {
       "id": "msg-1a014f6ffb1346d8",
       "company": "Doubleverify",
       "role": "Sr",
@@ -2890,28 +2914,6 @@
         "1a04919c495ecfdd"
       ],
       "notes": " <https://voice.google.com> Hey dude I am doing great My name is rizwan calling from Sky Global solution and I just got to know that you are currently open the work and looking for job opportunity gas station play message <https://accounts.google.com/AccountChooser?Email=tirthcshah1999@gmail.com&continue=https://voice.google.com/voicemail?itemId%3Dc.PCIGUGSCRKNEVQWCQI5IFQSCWDIEAQBIQAUQAEKAB> YOUR ACCOUNT <https://voice.google.com> HELP CENTER <https://support.google.com/voice#topic=1707989> HELP FORUM <https://productforums.google.com/forum/#!forum/voice> This email was sent to you because you indicated that you'd like to receive email notifications for voicemail. If you don't want to receive such emails in the future, please update your email notification settings <https://voice.google.com/settings#voicemail>. Google LLC 1600 Amphitheatre Pkwy Mountain View CA 94043 USA Hey dude I am doing great My name is rizwan calling from Sky Global solution and I just got to know that you are currently open the work and looking for job opportunity gas station play message YOUR ACCOUNT HELP CENTER HELP FORUM This email was sent to you because you indicated that you'd like to receive email notifications for voicemail. If you don't want to receive such emails in the future, please update your email notification settings . Google LLC 1600 Amphitheatre Pkwy Mountain View CA 94043 USA"
-    },
-    {
-      "id": "ziprecruiter-general-application",
-      "company": "Ziprecruiter",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "TIRTH, BOOZ, ALLEN & HAMILTON, INC. may want to hire you",
-      "latestFrom": "ZipRecruiter <alerts@ziprecruiter.com>",
-      "lastActivityAt": "2026-08-28T15:48:57.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a03af636e368ad3",
-      "gmailMessageIds": [
-        "1a03af636e368ad3",
-        "1a03f6f36a0a558b",
-        "1a044e1895287b71",
-        "1a0452839b7ab9df",
-        "1a0490f5b90d5b98"
-      ],
-      "notes": " <https://www.ziprecruiter.com/km/AAGssI7TQHw-BVXH9yNngF8dlpIGiJnmg-xY0oYEptg8UBwR1eVABt3gJNSZqQtrH9gSuQG132sVEkYz03nekX337-BEAD9ehzupaZELL9GLjmwcyqHsgzT-obgoNiVKokQMQO6UdpuUbyMXCR5wtWra2rQZTVZXLwlZdnit-oFpCXT69rfv-RJMxkmh0Q61achVzH2-FbeJU1Ie65RrFNCAQ9zM-8e6hQN2DtvVbFOeK-Ll8xfIS959bpnHFQt3C8HDp8F8pkFToGErcQncEQInYPGuQ7KkYPd3JZ3ZOvmMGA2UCg7S3DnC7J34sgxH3Afphp7Gc5Q3cDT3S3PifSJiYQOHxko7H7kJS98QRPXiahtZH2ohYhlbqjjd?tsid=111000153> Hi TIRTH, Here are today's jobs recommended for you: Data Architect, Senior <https://www.ziprecruiter.com/ekm/AAGJRpULF3-qicAY_Wkz9qfre1enQ_CLDNXQrGNcfLXXggWiA0zlmXMkC-DDsyGqdheG98DMyLlEa5qlO2QF1ynsGOM1C1dIltIxfxlA5odrKKsRl15JXD_rrufpWe3S9-X_KW_AJhAPP5OVRn8bKSHZ_cNLM7zzpe_4E7CHvB_BoM1ju2InsrpJAYhWxwkqS21Weq5uXrs8EN8K1p7O5nBYmiTXdR-Gww7t04dwUBoxuPy6zyx1LY_iVNCsow7Kzt9COZdnoUfW4bU7kVxepK6slLyH1mOHCRtpLLNQvuLeeg4rFkE0Iu7DpPvsOd5ykZSJ2hYDs3p08z9bwoiJUFJL8etMKhHy79cdxEhJnl1TFL7RFJyztC_NsEGkhynYq-DvAv7pRyL29iROoAX_xg?tsid=111000153> BOOZ, ALLEN & HAMILTON, INC. • Albuquerque, NM • In-person $87K - $198K / yr View Details <https://www.ziprecruiter.com/ekm/AAGJRpULF3-qicAY_Wkz9qfre1enQ_CLDNXQrGNcfLXXggWiA0zlmXMkC-DDsyGqdheG98DMyLlEa5qlO2QF1ynsGOM1C1dIltIxfxlA5odrKKsRl15JXD_rrufpWe3S9-X_KW_AJhAPP5OVRn8bKSHZ_cNLM7zzpe_4E7CHvB_BoM1ju2InsrpJAYhWxwkqS21Weq5uXrs8EN8K1p7O5nBYmiTXdR-Gww7t04dwUBoxuPy6zyx1LY_iVNCsow7Kzt9COZdnoUfW4bU7kVxepK6slLyH1mOHCRtpLLNQvuLeeg4rFkE0Iu7DpPvsOd5ykZSJ2hYDs3p08z9bwoiJUFJL8etMKhHy79cdxEhJnl1TFL7RFJyztC_NsEGkhynYq-DvAv7pRyL29iROoAX_xg?tsid=111000153> Data Scientist, Mid <https://www.ziprecruiter.com/ekm/AAGJm42-iqUpFHlP8lK0RwzUfuiXLQdJndxwlfEFm0GCITByR0c-taoY66sGV8mSZG3yakpAat1T91x4kkWOCAeNLpR-1s8nviHokeHaow5tHKweTyt4xXFbaHn6YQwrDshT98X1X2ilRVVsH6V_nYhE_kQ2U4NiZV3D_cNekfjLzAyx4PBrCHcmRtCs5g_9vbhnS_ufuYKYRXQjXLc_vmJLCEFbnuTZnJ8IoH207d_R7k9FYnN108fl5U9qat39g_zZ9fnFYAQUDekwEcEOk4DGBEq4RZxc6Srf8udcatd_uLYiQsb5IasXNQupF6iujDlqpH1HYnaDOHfOGYDURUtHoM7O8UTv8P9n6vmpFef5IxS5eposLUo81P4UyMqOKZgyukNQjGgmUQFEJKuaoA?tsid=111000153> BOOZ, ALLEN & HAMILTON, INC. • Potomac, MD • In-person $78K - $176K / yr View Details <https://www.ziprecruiter.com/ekm/AAGJm42-iqUpFHlP8lK0RwzUfuiXLQdJndxwlfEFm0GCITByR0c-taoY66sGV8mSZG3yakpAat1T91x4kkWOCAeNLpR-1s8nviHokeHaow5tHKweTyt4xXFbaHn6YQwrDshT98X1X2ilRVVsH6V_nYhE_kQ2U4NiZV3D_cNekfjLzAyx4PBrCHcmRtCs5g_9vbhnS_ufuYKYRXQjXLc_vmJLCEFbnuTZnJ8IoH207d_R7k9FYnN108fl5U9qat39g_zZ9fnFYAQUDekwEcEOk4DGBEq4RZxc6Srf8udcatd_uLYiQsb5IasXNQupF6iujDlqpH1HYnaDOHfOGYDURUtHoM7O8UTv8P9n6vmpFef5IxS5eposLUo81P4UyMqOKZgyukNQjGgmUQFEJKuaoA?tsid=111000153> Software / Data Engineer (1466) (Remote) <https://www.ziprecruiter.com/ekm/AAEie_K11kuzjAhqudZVgYlx0e8Yo5gm0ZeuP57Vp-kRSlNPSL91krMlRdsPESFXoOGOkOZayZMsJSar8OK8AAWYuV6ZPFi1Bh41HEVZYBkdB_Mow6L99FFKOEV4iZ79nE25WWj48Yb14JpO-1HbyaThlQODUAe6iSgVw3uGvR9H2ROjWPzTvzxvu3yyj-6EZTrnXlDLTTEY93L-1-D8dfdnWYJFVTxZLVlSNh6jcQ1nWyPt921aoB2JbjVhJK0MsuKZ7TEbOO-NwWDnqAUonmVT6PxyS3VvjYCono34O5e-RkELXhjKjSZJyekIuG4yr29_cacQXGPww3QDIpz0e5IW0rAPmo0w-Y8iPOC-5mL03kU7yq9gNQVlcXVqR7_UVak0B6pE3v"
     },
     {
       "id": "convera-general-application",
