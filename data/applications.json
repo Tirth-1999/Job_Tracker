@@ -1,6 +1,1201 @@
 {
-  "updatedAt": "2026-08-29T01:36:39.659Z",
+  "updatedAt": "2026-08-29T04:48:59.670Z",
   "applications": [
+    {
+      "id": "msg-1a00fad705d3cd63",
+      "company": "Abbvie",
+      "role": "AI Engineering Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-29T04:47:38.000Z",
+      "latestSubject": "AbbVie Application Received - Thank you!",
+      "latestFrom": "AbbVie <notification@talentacquisition.abbvie.com>",
+      "gmailThreadId": "1a00fad705d3cd63",
+      "gmailMessageIds": [
+        "1a00fad705d3cd63",
+        "19ff5d4ebdbeca71",
+        "19ff5cbc0db355b6",
+        "1a04bd8400bcdc02"
+      ],
+      "notes": " ​Dear Tirth Chirayu, Thank you for applying for the AI Engineering Analyst (Hybrid)-R00149306 position at AbbVie. We will review your experience and qualifications and if they match our requirements, a member of our Talent Acquisition team will reach out. To learn more about AbbVie and our culture, please visit AbbVie.com or follow us on LinkedIn, Twitter, Instagram&nbsp;and Facebook. If your circumstance related to this application change, please contact us at talentacquisition@abbvie.com. At AbbVie, we strive to make a remarkable impact on the lives of patients - thank you for your interest in being part of it. Sincerely, Talent Acquisition Please do not reply to this email; it will not be delivered. ​Dear Tirth Chirayu, Thank you for applying for the AI Engineering Analyst (Hybrid)-R00149306 position at AbbVie. We will review your experience and qualifications and if they match our requirements, a member of our Talent Acquisition team will reach out. To learn more about AbbVie and our culture, please visit AbbVie.com or follow us on LinkedIn , Twitter , Instagram and Facebook . If your circumstance related to this application change, please contact us at talentacquisition@abbvie.com. At AbbVie, we strive to make a remarkable impact on the lives of patients - thank you for your interest in being part of it. Sincerely, Talent Acquisition Please do not reply to this email; it will not be delivered.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "kadence-forward-deployed-engineer",
+      "company": "Kadence",
+      "role": "Forward Deployed Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth Chirayu, your application was sent to kadence",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-08-29T04:44:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04bd5173523d9e",
+      "gmailMessageIds": [
+        "1a04bd5173523d9e"
+      ],
+      "notes": "Your application was sent to kadence Forward Deployed Engineer (HealthTech) kadence San Francisco Bay Area View job: https://www.linkedin.com/comm/jobs/view/4460520216/?trackingId=YVVXcEE2RL%2B0e0zmNaSlgg%3D%3D&refId=iCD4L3%2FfQN2ZnHc%2FG8sgLA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BLK1gG3qDRXiaRfjevbbGxg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0cSdFPoXPsJco1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtdwbo2t~rk-null-null&eid=a06oc2-mtdwbo2t-rk&otpToken=NzJkYzdhMThjMTdhOGIzZjkyMzY3MTZlYmEzNjIyMWQyMTFlYzM3NjE2NTM1ZjQyYjRjZGI5NjNlMGUzMzI1MzMzMWYzYjRjODFiZWE1N2YwZTliNjkxNWJiNTE1ZDQxMTczMmU3OTQ3YjZjYTM0ZWRiNDdkNGY1OWQxZTExYzUwZmY4MzI1ZDY2YTk4NWQyLDIsMQ%3D%3D --------------------------------------------------------- Applied on August 29, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Product Manager, AI Enablement Pindrop Atlanta, GA 4 school alumni View job: https://www.linkedin.com/comm/jobs/view/4458915497/?trackingId=2uSdWk8BTe%2BJ7%2Bjlgd4hpA%3D%3D&refId=ZOgx35flRpi2V%2F2NFLMlgQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BLK1gG3qDRXiaRfjevbbGxg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0cSdFPoXPsJco1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtdwbo2t~rk-null-null&eid=a06oc2-mtdwbo2t-rk&otpToken=NzJkYzdhMThjMTdhOGIzZjkyMzY3MTZlYmEzNjIyMWQyMTFlYzM3NjE2NTM1ZjQyYjRjZGI5NjNlMGUzMzI1MzMzMWYzYjRjODFiZWE1N2YwZTliNjkxNWJiNTE1ZDQxMTczMmU3OTQ3YjZjYTM0ZWRiNDdkNGY1OWQxZTExYzUwZmY4MzI1ZDY2YTk4NWQyLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Applied Systems Lewisville, TX 3 connections 12 company alumni 10 school alumni View job: https://www.linkedin.com/comm/jobs/view/4440780268/?trackingId=Zy1xhuc0QOKmsJJx%2FA0O3A%3D%3D&refId=B17CYIJvQRiVYdfj3eP38A%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BLK1gG3qDRXiaRfjevbbGxg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0cSdFPoXPsJco1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtdwbo2t~rk-null-null&eid=a06oc2-mtdwbo2t-rk&otpToken=NzJkYzdhMThjMTdhOGIzZjkyMzY3MTZlYmEzNjIyMWQyMTFlYzM3NjE2NTM1ZjQyYjRjZGI5NjNlMGUzMzI1MzMzMWYzYjRjODFiZWE1N2YwZTliNjkxNWJiNTE1ZDQxMTczMmU3OTQ3YjZjYTM0ZWRiNDdkNGY1OWQxZTExYzUwZmY4MzI1ZDY2YTk4NWQyLDIsMQ%3D%3D --------------------------------------------------------- Data & AI Product Manager Vendelux New York, NY View job: https://www.linkedin.com/comm/jobs/view/4430176524/?trackingId=g2EgSTcwQrunrF2fYjLWvw%3D%3D&ref"
+    },
+    {
+      "id": "newrez-general-application",
+      "company": "Newrez",
+      "role": "Sr Escrow Data Analyst",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-29T04:23:11.000Z",
+      "latestSubject": "Your application for Sr Escrow Data Analyst (On-site)",
+      "latestFrom": "newrez@myworkday.com",
+      "gmailThreadId": "1a028772d0f36012",
+      "gmailMessageIds": [
+        "1a028796bba22447",
+        "1a028772d0f36012",
+        "1a04bc1e0bf15a9e"
+      ],
+      "notes": "96 Tirth Thank you for giving us the opportunity to consider you for employment. We have reviewed your resume and have carefully considered your qualifications. While your skills are certainly impressive, we have decided to pursue other candidates for this position. We will maintain your records and should a position open that matches your qualifications, we will contact you. We also encourage you to visit our website as new positions become available. We appreciate your interest in our company and wish you success in your career search. Sincerely, The Recruiting Team © 2026 Newrez LLC, 1100 Virginia Dr, Suite 125, Fort Washington, PA 19034. 1-888-673-5521. NMLS #3013. For licensing information, go to: www.nmlsconsumeraccess.org. Equal Employment Opportunity. This email was intended for tirthcshah1999@gmail.com",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "ATS application receipt confirmation",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "draftkings-data-engineering-manager-customer",
+      "company": "Draftkings",
+      "role": "Data Engineering Manager, Customer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on your Data Engineering Manager, Customer Application at DraftKings",
+      "latestFrom": "draftkings@myworkday.com",
+      "lastActivityAt": "2026-08-29T04:21:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04bc0b761b8d50",
+      "gmailMessageIds": [
+        "1a04bc0b761b8d50"
+      ],
+      "notes": "96 Tirth, Thank you for taking the time to apply for the Data Engineering Manager, Customer position at DraftKings. After carefully reviewing your application, we have decided to move forward with other candidates who more closely match the role's requirements and our team's current needs. We appreciate your interest in DraftKings and encourage you to join our Talent Community and fill out your Talent Profile to set up personalized job alerts. By signing up, you’ll be among the first to learn about upcoming opportunities, receive company updates, and learn more about the incredible work our global team is doing. We hope you’ll consider a career at DraftKings again in the future. DraftKings Talent Acquisition This email was intended for tirthcshah1999@gmail.com DraftKings &#8226; 222 Berkeley St., Boston, MA 02116"
+    },
+    {
+      "id": "walmart-data-engineer-iii",
+      "company": "Walmart",
+      "role": "Senior Data Analyst",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for Applying!",
+      "latestFrom": "walmart@myworkday.com",
+      "lastActivityAt": "2026-08-29T04:05:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a043d6cee8a6ad2",
+      "gmailMessageIds": [
+        "1a043d6cee8a6ad2",
+        "1a044303239abcc7",
+        "1a045624b4be0a27",
+        "1a04561df645c27b",
+        "1a04bb163d44bdb4",
+        "1a04bb15cb59de36",
+        "1a04b762f0dec155",
+        "1a04b75b30e9b917",
+        "1a04b74905f5b9fe"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to our Senior Data Analyst position. Your application will be reviewed and we will contact you with next steps. You can check your application status at any time by logging in to the link below, clicking on the upper right-hand corner \"Candidate Home\": https://walmart.wd504.myworkdayjobs.com/Non-WorkdayInternal Thanks again! Your Walmart Hiring Team Business Process: Job Application: Tirth Shah ‎- R-2620383 Senior Data Analyst (C-23741463) on 08/28/2026 Subject: Tirth Shah ‎- R-2620383 Senior Data Analyst (C-23741463) This is an automated email - Please do not respond. This email was intended for tirthcshah1999+workday-walmart@gmail.com Walmart Inc. · www.walmart.com"
+    },
+    {
+      "id": "charles-schwab-data-engineer",
+      "company": "Charles Schwab",
+      "role": "AI Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "You've started your job application at Charles Schwab Corporation and its subsidiaries",
+      "latestFrom": "\"Charles Schwab Corporation @ icims\" <schwab+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-08-29T03:38:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0330df3411d924",
+      "gmailMessageIds": [
+        "1a0330df3411d924",
+        "1a0330a3aff167d9",
+        "1a04b988781746fe",
+        "1a04b97f1d7f6cb7",
+        "1a04b76fa1bb0fce",
+        "1a04b7667ea766b2"
+      ],
+      "notes": " Hi Tirth, We are excited about your interest in engaging your unique talents at Charles Schwab Corporation and its subsidiaries! Thanks for starting your application for job: AI Engineer, AI.x. Please follow this link to complete your application: https://tracking.icims.com/f/a/n5RLoprUA5F4WRotVU3Drg~~/AAIB5hA~/c0wesEwnq9x1pbi_PiYuG3iE6ZHN7jGTpCqphOiwIdRyMz_o-SBMdteXLCZdN8PVN9QtgXjk3NmDj2q6aALaKt9ggzRuGk25geVZRt-vIjzPLvh0mgAi93VObl4cTAzb43RU7sSCq7qKCUGIKTuMVnb9tZLffcDuoibYUVloHqE~. Have questions about our hiring process? Visit our How We Hire page for application tips and job candidate FAQs. Thank you! Charles Schwab Talent Acquisition Charles Schwab & Co., Inc. ************************************************** If you no longer wish to receive e-mail from Charles Schwab, click here: https://tracking.icims.com/f/a/EarPuuttZ6BKRjMm9Kw5Uw~~/AAIB5hA~/8KCBXcvJT5-j50klZ1FZVPJ2sEHF1YBYEFTOw9kDNPZamOWPqg7vN1sf9ASdr8r_W2dZyNxzLF9S68u_gvTttLrQR2DKcjDPzaTAIaCWPE_PQKJaEW_euXFF1daz4rgGdu5vmOfhHvWPPKs508lU2C9AR_QTTwMS71tsZQL1M59IUqjzH62kpJXysgynd0g2ibKzJDiVjdVg2VaY_UZAJw~~ &#169; <div style=\"text-align: left;\"> PLEASE DO NOT REPLY TO THIS MESSAGE. This email was sent from a notification-only address that cannot accept incoming e-mail. <br> NOTICE: All email sent to or from the Charles Schwab email system is subject to archiving, monitoring and/or review by Schwab personnel. </div>/n Hi Tirth, We are excited about your interest in engaging your unique talents at Charles Schwab Corporation and its subsidiaries! Thanks for starting your application for job: AI Engineer, AI.x. Please follow this link to complete your application: https://career-schwab.icims.com/r.jsp?p=121210 . Have questions about our hiring process? Visit our How We Hire page for application tips and job candidate FAQs. Thank you! Charles Schwab Talent Acquisition Charles Schwab & Co., Inc. If you no longer wish to receive e-mail from Charles Schwab, click here: https://schwab.icims.com/icims2/?r=D31B1664352&contactId=19211530&pid=97 &#169; PLEASE DO NOT REPLY TO THIS MESSAGE. This email was sent from a notification-only address that cannot accept incoming e-mail. NOTICE: All email sent to or from the Charles Schwab email system is subject to archiving, monitoring and/or review by Schwab personnel."
+    },
+    {
+      "id": "unisys-power-bi-systems-administrator",
+      "company": "Unisys",
+      "role": "Power BI Systems Administrator",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Unisys Application Confirmation",
+      "latestFrom": "unisys@myworkday.com",
+      "lastActivityAt": "2026-08-29T03:29:31.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b90bd32e7614",
+      "gmailMessageIds": [
+        "1a04b90bd32e7614"
+      ],
+      "notes": "96 Thank you for your interest in Unisys, and for your application to the position of Power BI Systems Administrator ! We will review your resume for relevant skills and experience and follow up with you on the appropriate next steps. Regards, Unisys Talent Acquisition Team Direct replies to this message are undeliverable and will not reach the Talent Acquisition Team. Please do not reply to this message. Please note that if you wish to permanently remove your data from our system, you can do so by logging in to your account and navigating to Account Settings -> Delete My Information. If you would like to access, modify or delete your personal data, please submit a data subject access request by contacting us at unisysglobalprivacy@unisys.com. Unisys Career Site This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "wtw-ai-engineer-forward-deployed-engineer",
+      "company": "WTW",
+      "role": "AI Engineer / Forward-deployed Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "WTW | Thank you for your application to start a career that moves you",
+      "latestFrom": "WTW Talent Acquisition <Recruitment@wtwco.com>",
+      "lastActivityAt": "2026-08-29T03:26:40.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b8e21ba2b0e0",
+      "gmailMessageIds": [
+        "1a04b8e21ba2b0e0"
+      ],
+      "notes": "Hello Tirth, Thank you for applying to join us as a AI Engineer/Forward-Deployed Engineer - 202604177. We will review your profile, and you will hear from us soon. To review your application or add supporting documentation, just go to your candidate self-service page. We encourage all candidates to review our Candidate AI Guidance for helpful information on using AI tools during the recruitment process. Best regards, WTW Recruitment Team Stay connected with WTW via social media or join our Talent Community for job alerts: Replies to this message are undeliverable and will not reach our team. Please do not reply."
+    },
+    {
+      "id": "proarch-data-engineer",
+      "company": "Proarch",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to ProArch",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-08-29T03:24:57.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b8c90518a78a",
+      "gmailMessageIds": [
+        "1a04b8c90518a78a"
+      ],
+      "notes": "ProArch ------------------------------------------------------------------------------- Your application for the Data Engineer job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: Ai Graduate Student Worker at Mays Business School (Texas A&M University) Phone: +19796352045 Preferred Location: Raleigh, North Carolina ** PROFILE ** Resume: Tirth_Shah_Resume.pdf Total Years of Experience: 3.8 Expected Compensation in Local currency: 0 Notice Period (in days): 15 Education 2024 - 2026 M.S. Management Information Systems Management Information Systems at Texas A&amp;M University 2017 - 2021 B.E. Computer Engineering Computer Engineering at Gujarat Technological University Experience 2025 - 2026 Data &amp; AI Graduate Student Worker at Mays Business School (Texas A&amp;M University) (4 months) Engineered Python, pandas, SQLAlchemy, openpyxl, and SQLite state-snapshot ETL with dynamic sheet discovery, cohort mapping, 40+ alias normalizations, schema validation, and idempotent upserts into a 17-table warehouse Integrated 2,173 admissions rows, 2,792 cohort snapshots, and $803K across eight channels using incremental workbook fingerprinting, fiscal mapping, grain validation, totals reconciliation, and lag-aware joins Deployed a 29.6K-line modular Python and SQL platform through nine Streamlit Cloud releases with OAuth 2.0, RBAC, caching, regression tests, monitoring, runbooks, and monthly refresh procedures Implemented governed data access with LangChain, OpenRouter, ChromaDB, MCP-based tools, multi-step NL-to-SQL, rate limiting, schema retrieval, query validation, and SELECT-only guardrails for nontechnical users Designed dimensional modeling and data modeling conventions for the admissions warehouse, bridging star-schema facts, cohort dimensions, and fiscal grain so leadership reports query consistently across channels 2025 - 2025 Data Engineer Student Worker at Texas A&amp;M University, Utilities &amp; Energy Services (8 months) Shipped 13 production Python, pandas, pyodbc, and SQL Server ETL workflows totaling 8,000+ lines across 15+ energy, pricing, billing, weather, email, and sensor sources processing 50K-500K+ daily records Built an eight-stage batch pipeline with freshness gates, Selenium ingestion, ReportLab outputs, structured logging, retries, alerting, recovery, and email delivery, reducing three-hour preparation to five minutes at 99.5% success Modeled EDS, Rockwell Historian, and thermal-storage data in a SQL Server star schema with incremental loads, indexed queries, quality checks, and Power BI DirectQuery, cutting retrieval below two seconds Automated FactoryTalk ingestion for 400K+ rows and 279 columns using Python, pandas, pyodbc, Excel COM, null profiling, schema validation, incremental caching, and source-to-target reconciliation Protot"
+    },
+    {
+      "id": "goldbelt-data-analyst",
+      "company": "Goldbelt",
+      "role": "Data Analyst",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "You've started your job application!",
+      "latestFrom": "\"Careers@goldbelt.com\" <goldbelt+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-08-29T03:24:40.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b8c4f8bac208",
+      "gmailMessageIds": [
+        "1a04b8c4f8bac208",
+        "1a04b8bf0c16b501"
+      ],
+      "notes": " Dear Tirth, Thanks for starting your application for job: Data Analyst If you lose track of the job application process please follow this link to return to the job application: https://tracking.icims.com/f/a/tkJIcRZG4pPEDr5dhnGERg~~/AAIB5hA~/B7_LyIlBbJ-rMasNP1xS_mYLpOaD2ybkgI6M3jUde-GLMswp97D3DNdrtjuEMDhh6-7rZ_9WFifWvTOVAIsnwe1E49xj2GxIstFLUHnqMnBcejI65hbIGZyRPemeArYrc8BdXiHtlgSI1z4NVhdTHQ~~ Global operations, local opportunities. Our Capabilities | Subsidiaries | Careers | Contact Us ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/V5BQwbhzJI1H6CMrl0xEeQ~~/AAIB5hA~/ZCYPhQ_yQOqaLKBeMkB2YexZodNv_4oLrGZBRkl2_qCg3cP9Aq40lBg6DBiiL0g_V-RiuIwItP4YtNGgRp1KbVL2AMQwsLEhNbZuJYIiTjPYJQyF0UUX2l1TmSv_Y9JtvJb5PnpjYp5PCU3qGmUwV-s1TDDMF3zSafjc3sLkHfcYGrAsYMIHHRP4_U2O0wk3 /n &#169; Goldbelt Inc, Juneau ak USA/n Dear Tirth, Thanks for starting your application for job: Data Analyst If you lose track of the job application process please follow this link to return to the job application: https://careers-goldbelt.icims.com/r.jsp?p=20357 Global operations, local opportunities. Our Capabilities | Subsidiaries | Careers | Contact Us This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://goldbelt.icims.com/icims2/?r=9619567048&contactId=1720779&pid=209063 &#169; Goldbelt Inc, Juneau ak USA"
+    },
+    {
+      "id": "jpmorgan-chase-lead-software-engineer-cloud",
+      "company": "Jpmorgan Chase",
+      "role": "Senior Lead Software Engineer - ML Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We received your job application (Job Number: 210780745)",
+      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
+      "lastActivityAt": "2026-08-29T03:23:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0498fb22618bef",
+      "gmailMessageIds": [
+        "1a0498fb22618bef",
+        "1a04b8bab2e41b94",
+        "1a04b7723c024c74",
+        "1a04b755a91649d2"
+      ],
+      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Senior Lead Software Engineer - ML Engineer 210780745 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans."
+    },
+    {
+      "id": "jpmorgan-chase-general-application",
+      "company": "Jpmorgan Chase",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-29T03:23:11.000Z",
+      "latestSubject": "Take action to confirm your identity",
+      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
+      "gmailThreadId": "19f6fce601891af7",
+      "gmailMessageIds": [
+        "19f6fce601891af7",
+        "1a034778ead4a58b",
+        "1a034720857c8245",
+        "1a0346f2c7991392",
+        "1a0394cc55cb8a5a",
+        "1a039c25ad7ac5b1",
+        "1a043d5bb60a9bc5",
+        "1a043afdb7301cdd",
+        "1a0458c580b886dd",
+        "1a0488e0812517da",
+        "1a048525b4bc6aaf",
+        "1a04b8af7ed45ecc",
+        "1a04b75b20dba92e",
+        "1a04b747e8959928"
+      ],
+      "notes": "Tirth, Please use this code to confirm your identity on our careers site: 103855 This verification code will expire in 10 minutes. If it expires, you can request a new one by clicking the “Send New Code” link on the verification page. Thank you, JPMorganChase Talent Team This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "lmi-data-engineer",
+      "company": "LMI",
+      "role": "Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to the Data Engineer position",
+      "latestFrom": "\"LMI @ icims\" <lmi+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-08-29T03:21:28.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b8962229b5a4",
+      "gmailMessageIds": [
+        "1a04b8962229b5a4"
+      ],
+      "notes": "cursor;\"> Dear Tirth, Thank you for your interest in LMI. This letter is to inform you that we have received your resume. If we are interested in speaking with you regarding your qualifications, a member of the LMI recruiting team will be reaching out to you to arrange an interview. Due to the large quantity of interest we receive, you may not receive a personal response regarding the status of your resume. Please note that if you are not an exact match for the position in which you have applied, your resume will be kept on file within our system for future/other job consideration. Sincerely, The LMI Recruiting Team This is an automated email response. Please do not reply. If you no longer wish to receive e-mail from LMI, click here: https://tracking.icims.com/f/a/46JbETWxA_txf2GpQtSvVQ~~/AAIB5hA~/qCB7zxwwlcB5t5iG13Yo64o0tcO2IOf11dVNsihjWSMILUrSyXV4Zy64o2iTgM9OToecKxqDJPUwPHlwEJoZg0bBH6-SE1kFM6GDwuOJckuMvFHMkoy3C41NkkzmKppapAF74CXr7oIvNVFg-BME-RE3mn2ax1QA4mJGV2FD3g5E0zo7mBbG8W5DPP69cns9. ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/0u5yv-Eh-x2NFFvV8y3XOg~~/AAIB5hA~/dwLOZFtXA5Wx5Ajwrn-O43_J_09ABHrGLpw6KcTc8LiYJe-OyuZ-8BpFtZ_RRYVKLCw8yqZdPUGBpwyuqAhP-K5Az49odksKDMQh4FTt_H99dQFgV5yhH9mXLQviXDA2eK5g8mBA0FxtGy0P9nx7ekCAdSwbHR2INwXIcHWqKJw~ /n &#169; Logistics Management Institute; 7940 Jones Branch Dr; Mc Lean, VA 22102; USA/n cursor;\"> Dear Tirth, Thank you for your interest in LMI. This letter is to inform you that we have received your resume. If we are interested in speaking with you regarding your qualifications, a member of the LMI recruiting team will be reaching out to you to arrange an interview. Due to the large quantity of interest we receive, you may not receive a personal response regarding the status of your resume. Please note that if you are not an exact match for the position in which you have applied, your resume will be kept on file within our system for future/other job consideration. Sincerely, The LMI Recruiting Team This is an automated email response. Please do not reply. If you no longer wish to receive e-mail from LMI, click here: https://lmi.icims.com/icims2/?r=F7EB475519&contactId=3631076&pid=17&hashed=1111706317. This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://lmi.icims.com/icims2/?r=F7EB475519&contactId=3631076&pid=17 &#169; Logistics Management Institute; 7940 Jones Branch Dr; Mc Lean, VA 22102; USA"
+    },
+    {
+      "id": "integrity-management-data-analyst",
+      "company": "Integrity Management",
+      "role": "Data Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to Integrity Management Services, Inc.",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-08-29T03:15:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b83dcbce4b03",
+      "gmailMessageIds": [
+        "1a04b83dcbce4b03",
+        "1a04b76b4c04e7cd",
+        "1a04b762644e4194"
+      ],
+      "notes": "Integrity Management Services, Inc. ------------------------------------------------------------------------------- Your application for the Data Analyst (Full-time, Remote) job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: Cloud Data Engineer with 4+ years experience in building data pipelines and platforms Phone: +19796352045 Address: College Station, Texas Is your Age Under 18? (This information will be used to comply with child labor laws and regulations): No Will you now or in the future require sponsorship for employment visa status (e.g., H-1B visa status)?: No ** PROFILE ** Education 2024 - 2026 M.S. Management Information Systems at Texas A&amp;M University 2017 - 2021 B.E. Computer Engineering at Gujarat Technological University Summary Cloud Data Engineer with 4+ years building production Python/SQL pipelines and data platforms across AWS, Azure, GCP, and Databricks. Experienced processing 10M+ records daily, modernizing legacy workflows, and delivering reliable analytics and AI-ready data systems. Resume: Tirth_Shah_Resume.pdf Please provide your salary rate requirements.: 0 Please provide your start date timeframe.: September 12, 2026 How or by whom were you referred to us?: linkedin Were you ever employed by IntegrityM Inc., or any other related companies? If so, what was the company's name?: No Are you currently subject to any restrictive covenant provisions (e.g., non-compete, non-solicitation, confidentiality agreements) or employment agreements?: No Please explain any gaps in your employment history:: I have maintained continuous employment or academic engagement since graduating, with no significant gaps in my employment history. Have you ever been discharged or forced to resign? If Yes, please explain.: No Did you receive any discipline in your last 12 months of active employment with your previous employer?: No State any additional information you feel may be helpful to us in considering your application. This could include any specialized training or courses you have completed that will aid in evaluating your qualifications for the position you are seeking. (Example: If applying for a clerical position, note training such as word processing, typing, calculator, computer, hardware, software, etc.) Please include grade or other indicator of achievement, such as words per minute typed.: Completed multiple certifications including Microsoft Azure Data Engineer Associate, Azure Administrator Associate, Azure AI Fundamentals, and others, demonstrating strong cloud and data skills. Please list at least three people within the last 7 years we may contact with reference to your application. One should be from a former manager/supervisor, and two from a co-worker, client, vendor, mentor; please do not include relatives. References wil"
+    },
+    {
+      "id": "insurance-institute-for-business-home-safety-data-engineer-ai-support",
+      "company": "Insurance Institute For Business & Home Safety",
+      "role": "Data Engineer, AI Support",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to Insurance Institute for Business & Home Safety",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-08-29T03:11:31.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b80410b4ac50",
+      "gmailMessageIds": [
+        "1a04b80410b4ac50",
+        "1a04b72851456cb8"
+      ],
+      "notes": "Insurance Institute for Business & Home Safety ------------------------------------------------------------------------------- Your application for the Data Engineer, AI Support job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: AI Engineer with 4+ years building Python-based data pipelines, ML workflows, and application development Phone: +19796352045 Address: Raleigh, North Carolina ** PROFILE ** Education 2024 - 2026 M.S. Management Information Systems Management Information Systems at Texas A&amp;M University 2017 - 2021 B.E. Computer Engineering Computer Engineering at Gujarat Technological University Experience 2025 - 2026 Data &amp; AI Graduate Student Worker at Mays Business School (Texas A&amp;M University) (4 months) Engineered Python, pandas, SQLAlchemy, openpyxl, and SQLite state-snapshot ETL data pipelines with dynamic sheet discovery, cohort mapping, 40+ alias normalizations, schema validation, and idempotent upserts into a 17-table warehouse Integrated 2,173 admissions rows, 2,792 cohort snapshots, and $803K across eight channels using incremental workbook fingerprinting, fiscal mapping, grain validation, totals reconciliation, and lag-aware joins, with dataset lineage and metadata tracking for reproducibility Deployed a 29.6K-line modular Python and SQL platform through nine Streamlit Cloud releases with OAuth 2.0, RBAC, caching, regression tests, monitoring, runbooks, and monthly refresh procedures Implemented governed data access with LangChain, OpenRouter, ChromaDB, MCP-based tools, multi-step NL-to-SQL, rate limiting, schema retrieval, query validation, and SELECT-only guardrails for nontechnical users, including RAG and semantic search over institutional data 2025 - 2025 Data Engineer Student Worker at Texas A&amp;M University, Utilities &amp; Energy Services (8 months) Shipped 13 production Python, pandas, pyodbc, and SQL Server ETL data transformation workflows totaling 8,000+ lines across 15+ energy, pricing, billing, weather, email, and sensor sources processing 50K-500K+ daily records Built an eight-stage batch pipeline with freshness gates, Selenium ingestion, ReportLab outputs, structured logging, retries, alerting, recovery, and email delivery, reducing three-hour preparation to five minutes at 99.5% success Modeled EDS, Rockwell Historian, and thermal-storage data in a SQL Server star schema with data modeling, incremental loads, indexed queries, quality checks, and Power BI DirectQuery, cutting retrieval below two seconds Automated FactoryTalk ingestion for 400K+ rows and 279 columns using Python, pandas, pyodbc, Excel COM, null profiling, schema validation, incremental caching, and source-to-target reconciliation Prototyped Databricks and SQL Server ingestion with Airflow DAGs, scheduled Python transformations, vali"
+    },
+    {
+      "id": "fidelity-investments-principal-data-engineer",
+      "company": "Fidelity Investments",
+      "role": "Principal Data Engineer",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "fmr@otp.workday.com",
+      "lastActivityAt": "2026-08-29T03:06:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b7b70922d492",
+      "gmailMessageIds": [
+        "1a04b7b7df2e6842",
+        "1a04b7b70922d492"
+      ],
+      "notes": "Click this link to confirm your email address and complete setup for your candidate account https://wd1.myworkdaysite.com/recruiting/fmr/fidelitycareers/activate/j17jv7aclpqump3x8n0zszc596y312stk8lryhxuv1rs3wvt9gmefcoaugu44yoxecmahcc97ezd4za2h8pee0ya158e3b4124q/?redirect=%2Frecruiting%2Ffmr%2Ffidelitycareers%2Fjob%2Fdurham-nc%2Fprincipal-data-engineer_2134219%2Fapply%2FapplyManually The link will expire after 24 hours. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "msg-1a00d1b7a2471b73",
+      "company": "Uber",
+      "role": "Data Analyst Ii, Tech",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-29T03:05:47.000Z",
+      "latestSubject": "Your recent job application for 301202 - Data Analyst II, Tech",
+      "latestFrom": "Uber Talent <Talent@uber.com>",
+      "gmailThreadId": "1a00d1b7a2471b73",
+      "gmailMessageIds": [
+        "1a00d1b7a2471b73",
+        "1a04b7b0b096816d"
+      ],
+      "notes": "Hi Tirth, We’ve received your application for the Data Analyst II, Tech - 301202 role. If your experience aligns with what the team is looking for a member of our Talent Acquisition team will be in touch. In the meantime, we encourage you to explore our People Stories blog to learn more about life at Uber and the people behind the work. If you were asked to provide additional information, or if you’d like to manage your profile, you can do so through your candidate self-service page. Best, Uber Talent Acquisition Uber Careers Terms Candidate Privacy Notice Talent Community Uber Technologies 1725 3rd St., San Francisco, CA 94158 Uber.com",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "unison-databricks-data-architect",
+      "company": "Unison",
+      "role": "Databricks Data Architect",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to Unison Group",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-08-29T03:05:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b7ad057d1bc5",
+      "gmailMessageIds": [
+        "1a04b7ad057d1bc5"
+      ],
+      "notes": "Unison Group ------------------------------------------------------------------------------- Your application for the Databricks Data Architect job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: Global Engagement Management Intern at HCLTech Phone: +19796352045 ** PROFILE ** Education 2024 - 2026 M.S. Management Information Systems at Texas A&amp;M University 2017 - 2021 B.E. Computer Engineering at Gujarat Technical University Experience 2026 - 2026 Global Engagement Management Intern at HCLTech (4 months) Translated Verizon service-assurance workflows into measurable product metrics across latency, throughput, packet loss, SLA risk, approval, rollback, and recovery signals for stakeholder review Prepared simulation-backed analysis views that helped technical and non-technical stakeholders understand where service workflows slowed down, what changed, and which recovery path required action Designed API-first data contracts and microservice-oriented ingestion boundaries so product teams could consume service metrics consistently across systems 2025 - 2026 Data &amp; AI Graduate Student Worker at Mays Business School (Texas A&amp;M University) (4 months) Developed a Python, SQL, Streamlit, and PySpark analytics platform for seven graduate programs, replacing repeated Excel/PDF reporting with self-service dashboards, filters, exports, and reusable reports Modeled admissions, cohort, marketing, and finance data at program, month, funnel, source, and lifecycle grain to analyze demand, conversion, source quality, ROI, and planning questions for leaders Delivered ARIMA, Prophet, and cohort-aware forecasts with MAPE/RMSE/MAE checks, helping stakeholders compare trend changes, enrollment scenarios, marketing performance, and operational planning tradeoffs Presented findings through concise dashboard narratives, metric definitions, release notes, and stakeholder walkthroughs so directors could lead with the so what instead of reviewing raw exports Built and tracked machine learning and generative AI experiments with MLflow, logging models, metrics, and artifacts across the LLM analysis workflow and production pipelines 2025 - 2025 Data &amp; AI Product Strategy Intern at Black Tie Concierge, Inc. (4 months) Mapped a quote-to-book-to-pay-to-dispatch multi-sided marketplace workflow into customer, driver, vehicle, booking, payment, and admin data objects with conversion, throughput, revenue, and match-quality metrics Defined Supabase PostgreSQL tables, role-based permissions, analytics events, and stakeholder review flows so founder decisions could be tied to actual usage patterns rather than manual assumptions Analyzed drop-off points across quote, checkout, confirmation, and dispatch steps, then refined form logic, event capture, and operating views so the"
+    },
+    {
+      "id": "msg-19fb827511f83ded",
+      "company": "Goldman Sachs",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-29T03:05:21.000Z",
+      "latestSubject": "Thank You for Applying to Goldman Sachs",
+      "latestFrom": "Goldman Sachs Recruiting <GSRecruiting@oracle.com>",
+      "gmailThreadId": "19fb827511f83ded",
+      "gmailMessageIds": [
+        "19fb827511f83ded",
+        "1a04b7aa19973526"
+      ],
+      "notes": "Hi Tirth Shah, Thank you for your application. A member of our recruiting team will reach out if your experience and skills are a match for this opportunity. Please be aware that timelines for review vary by role. For application updates, please visit your applicant portal In the meantime, visit our Careers Site to explore upcoming events and follow us on LinkedIn to learn more and stay up to date. Thank you, Goldman Sachs Recruiting Team",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "uber-general-application",
+      "company": "Uber",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "Uber Talent <no-reply@uber.com>",
+      "lastActivityAt": "2026-08-29T03:04:51.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b7a3322e9582",
+      "gmailMessageIds": [
+        "1a04b7a3322e9582"
+      ],
+      "notes": "Hi Tirth, Just one more step before you get started. Please confirm your identity using this one-time pass code: 763675 Note: This code will expire in 10 minutes. Thanks, Uber Talent Acquisition Uber Careers Terms Candidate Privacy Notice Talent Community Uber Technologies 1725 3rd St., San Francisco, CA 94158 Uber.com"
+    },
+    {
+      "id": "august-schell-general-application",
+      "company": "Omniscius Consulting",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, we've received your resume",
+      "latestFrom": "Omniscius Consulting <noreply@applytojob.com>",
+      "lastActivityAt": "2026-08-29T03:02:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b7365fed4c3c",
+      "gmailMessageIds": [
+        "1a04b77d18af6f2f",
+        "1a04b7365fed4c3c"
+      ],
+      "notes": "Hello Tirth, Thank you for your interest in employment at Omniscius Consulting. If your qualifications match our needs, we will contact you to learn more about your fit in this position. Thanks again for your inquiry. - Omniscius Consulting"
+    },
+    {
+      "id": "aaa-data-scientist-2",
+      "company": "AAA",
+      "role": "Associate Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "From AAA - Your Application has been Received for Associate Data Engineer",
+      "latestFrom": "People Service Center <ace@myworkday.com>",
+      "lastActivityAt": "2026-08-29T03:02:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03ce29ece6002e",
+      "gmailMessageIds": [
+        "1a03ce29ece6002e",
+        "1a04b77a6e98d0ca"
+      ],
+      "notes": "Hi Tirth Thank you for your interest in starting a career with AAA! Our organization serves over 16 million members across 21 states and joining AAA is an opportunity to strengthen the name and reputation of the brand you’ve always known. Your application for the Associate Data Engineer position has been received and is being reviewed. If you are selected to move forward to the next step, a member of our team will contact you. If at any time you would like to review the status of your application, please visit https://ace.wd5.myworkdayjobs.com/careers to find out where you are in the selection process. We also welcome you to visit our career site and follow us on LinkedIn to learn more about our organization and life at AAA. If you haven't created an account, please do so using the link below. This is allow you to access Candidate Home to view your application status. https://ace.wd5.myworkdayjobs.com/careers/login?Job_Application_ID=3e5ec74561e79000c44a2bd0c6460002 Thank you, Talent Acquisition Team Replies to this message are undeliverable and will not reach the Talent Acquisition Team, please do not reply. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "vailexa-general-application",
+      "company": "Vailexa",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Vailexa",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-29T03:02:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b779c67298fd",
+      "gmailMessageIds": [
+        "1a04b779c67298fd"
+      ],
+      "notes": "Tirth, Thanks for applying to Vailexa . Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, Vailexa ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Tirth, Thanks for applying to Vailexa . Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, Vailexa ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
+    },
+    {
+      "id": "imprint-infrastructure-engineer",
+      "company": "Imprint",
+      "role": "Infrastructure Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Imprint | Thank you for your Application",
+      "latestFrom": "Imprint Talent Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-29T03:01:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b7789a5b8599",
+      "gmailMessageIds": [
+        "1a04b7789a5b8599"
+      ],
+      "notes": "Hi Tirth, Thank you for applying for the Infrastructure Engineer at Imprint. We appreciate your interest and look forward to reviewing your application. Our team will be in touch if your experience and qualifications are a good fit. In the meantime, we invite you to learn more about Imprint by visiting our https://www.linkedin.com/company/imprint-payments/?viewAsMember=true and https://tech.imprint.co pages. Best, Imprint Talent Hi Tirth , Thank you for applying for the Infrastructure Engineer at Imprint . We appreciate your interest and look forward to reviewing your application. Our team will be in touch if your experience and qualifications are a good fit. In the meantime, we invite you to learn more about Imprint by visiting our LinkedIn and Tech Blog pages. Best, Imprint Talent"
+    },
+    {
+      "id": "independence-pet-holdings-general-application",
+      "company": "Independence Pet Holdings",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Applying!",
+      "latestFrom": "independencepetgroup@myworkday.com",
+      "lastActivityAt": "2026-08-29T03:01:55.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b77760c38ef0",
+      "gmailMessageIds": [
+        "1a04b77760c38ef0"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to Independence Pet Holdings (IPH)! 🐾 We’re reviewing your application and will be in touch soon. At IPH, we’re guided by our passion for caring for pets and empowering pet parents—and we’re excited to learn more about you! With pawsitive regards, Talent Acquisition Team Independence Pet Holdings This email box is not monitored. Please do not reply to this message. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "urus-data-engineer",
+      "company": "URUS",
+      "role": "Senior Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your recent job application for Senior Data Engineer - 2074",
+      "latestFrom": "careers@urus.org",
+      "lastActivityAt": "2026-08-29T03:01:48.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0435b24f2ae562",
+      "gmailMessageIds": [
+        "1a0435b24f2ae562",
+        "1a04b775afdb3538"
+      ],
+      "notes": "Hello, Tirth, We received your job application for Senior Data Engineer - 2074. If your profile corresponds to our requirements, a member of our Recruiting team will contact you. If you were requested to provide additional info about your job application, or if you want to manage your profile, go to your candidate self service page . Sincerely, URUS Group Recruiting Team"
+    },
+    {
+      "id": "promach-general-application",
+      "company": "Promach",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in ProMach",
+      "latestFrom": "promachbuilt@myworkday.com",
+      "lastActivityAt": "2026-08-29T03:01:30.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b77146358715",
+      "gmailMessageIds": [
+        "1a04b77146358715",
+        "1a04b76fdda499dd"
+      ],
+      "notes": "Click here to view the notification details. This email box is not monitored. Please do not reply to this message. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "ochsner-clinic-foundation-sr-is-data-engineer",
+      "company": "Ochsner Clinic Foundation",
+      "role": "Sr IS Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Ochsner Clinic Foundation Thanks You for Applying to Sr IS Data Engineer Position",
+      "latestFrom": "ochsner@myworkday.com",
+      "lastActivityAt": "2026-08-29T03:01:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b76acf90dc13",
+      "gmailMessageIds": [
+        "1a04b76acf90dc13"
+      ],
+      "notes": "96 Thank you for your interest in joining the Ochsner team! Your application is now under review by our hiring teams. Dear Tirth, Thank you for your interest in applying for the Sr IS Data Engineer position at Business Office - Benson Tower . We’re excited that you're considering a future career with Ochsner Clinic Foundation . At Ochsner, we’re proud of the award-winning service we provide to our patients and grateful for the passionate people who make it all possible—it means a lot to have individuals like you interested in joining our team. Here’s what to expect moving forward with your application: • Our hiring teams regularly review applications as they move through the selection process. If your background aligns with the needs of this role, we’ll be sure to reach out with next steps. • We often communicate via text message through Paradox, a third party vendor, in order to schedule phone screens and interviews. If you have unsubscribed from messaging in the past, we recommend resubscribing by texting \"Start\" to 504-977-2078. If you are unsubscribed, it will not disqualify you from consideration, but it may cause delays in communication. • You can check for real time status updates on your application in our candidate portal at any time. Thanks again for taking the time to apply—we truly appreciate your interest in being part of Ochsner. Sincerely, The Ochsner Talent Acquisition Team Job Profile: Sr IS Data Engineer Job Requisition ID: REQ_00268171 Senior Data Engineer (Open) Location: Business Office - Benson Tower Company: Ochsner Clinic Foundation Candidate Home This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "becton-dickinson-data-analyst-specialist",
+      "company": "Becton Dickinson",
+      "role": "Data Analyst Specialist",
+      "status": "applied",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Task: BD – R-553268 Data Analyst Specialist (Open) – WOTC Assessment",
+      "latestFrom": "bdx@myworkday.com",
+      "lastActivityAt": "2026-08-29T03:00:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b76949cffa34",
+      "gmailMessageIds": [
+        "1a04b769aaa37c3b",
+        "1a04b76949cffa34",
+        "1a04b767e0f1e821"
+      ],
+      "notes": "Hello Tirth , BD participates in federal and/or state tax credit programs. This assessment is completely voluntary and administered by a 3rd party vendor to determine the company’s eligibility for these programs and will have no impact on your application, hiring decisions, retention, or promotion decisions. We encourage you to review our vendor's Privacy Policy describing how your personal information will be handled. If you choose to participate, please click the link below to launch the voluntary assessment. Thank you. https://tcs.adp.com/screen/index.html?cc=bdco&stoken=057387F6-EF93-4A11-B3C5-D7FC55EB3930 This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "mta-headquarters-specialist-data-engineer",
+      "company": "MTA Headquarters",
+      "role": "Specialist Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application for Specialist Data Engineer at MTA Headquarters",
+      "latestFrom": "MTA Headquarters Recruiting Team <notification@jobvite.com>",
+      "lastActivityAt": "2026-08-29T03:00:12.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b75e510450fb",
+      "gmailMessageIds": [
+        "1a04b75e510450fb"
+      ],
+      "notes": "Dear Tirth Thank you for your interest in a career at MTA Headquarters. We have received your application for Specialist Data Engineer. We will review your application and will contact you if there is a good match. In the meantime, to view the status of your application, please go to the following link: Application Status Sincerely, The Metropolitan Transportation Authority Recruiting Team -*_____ You can reply directly to this message or click here to reply via your Jobvite user account. Email Preferences | Powered by Jobvite *______*"
+    },
+    {
+      "id": "steampunk-senior-data-engineer-databricks",
+      "company": "Steampunk",
+      "role": "Data Solution Architect",
+      "status": "reply_needed",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "You've started your job application!",
+      "latestFrom": "steampunk recruiting <steampunk+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-08-29T03:00:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0346cd45fa8593",
+      "gmailMessageIds": [
+        "1a0346cd45fa8593",
+        "1a0346ca50fc74f9",
+        "1a04b75dc771c0a2",
+        "1a04b75ae6a581d7"
+      ],
+      "notes": "Dear Tirth, Thanks for starting your application for job: Data Solution Architect If you lose track of the job application process please follow this link to return to the job application: https://tracking.icims.com/f/a/ZpaTHgixvOxYFSYSNHkM5g~~/AAIB5hA~/5zViNMNbSpb3xfxHhxR76dWosQVknf-sS2Xw4Go6AouozZKD9F8qPahDQ7pV_FIJKcKQcYH9KZI__uSlGQ5ijvJ-ojdP_bDLD6pUtDfGaVUrYh369D8LHmxkhterGdJucDGiXpzz6rJht-6nxnsicq-WdXrqW0FntbAbNpEj-_w~ ************************************************** This message was sent to tirthcshah1999+icims-steampunk@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/eON6HzHFi0cZhxZyHNSezg~~/AAIB5hA~/MhFWgqrv0104-tR4OjDhQohfzDWp7vN73nhCPU-4T-OlXz-B6nquF0ExVx7Hgt1M82JQ8QdypP59dzBdQb5XZN3XemK1vauREmbTmazXWozbsm2q2Kg1UswZIGuxynpV-11PWpeAVgBnlCtq9izugyDogfJYNePknthC2mFLbbxaTHOUz1_qjDdYh76HOGAkf2D0cudS3jiP6ZTS4PLdOQ~~ /n &#169; steampunk, Inc.; 1753 Pinnacle Drive, 9th Floor, Mclean, VA 22102; USA/n Dear Tirth, Thanks for starting your application for job: Data Solution Architect If you lose track of the job application process please follow this link to return to the job application: https://careers-steampunk.icims.com/r.jsp?p=8147 This message was sent to tirthcshah1999+icims-steampunk@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://steampunk.icims.com/icims2/?r=CF6C218374&contactId=1632264&pid=17 &#169; steampunk, Inc.; 1753 Pinnacle Drive, 9th Floor, Mclean, VA 22102; USA"
+    },
+    {
+      "id": "84-51-senior-data-engineer",
+      "company": "84.51°",
+      "role": "Lead Forward Deployed Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to 84.51°!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-29T03:00:08.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03470c1097a9ac",
+      "gmailMessageIds": [
+        "1a03470c1097a9ac",
+        "1a03e1d735338c41",
+        "1a04b75d658ce04f"
+      ],
+      "notes": "Hello Tirth, Thank you for your interest in 84.51°! We have received your application for the Lead Forward Deployed Engineer (P4570) role. Please add our email domain (@8451.com) to your whitelist/safe sender list to avoid emails going to spam. We understand there are plenty of great companies you could consider, so we appreciate you taking the time to apply for our company. We look forward to reviewing your application and giving it the attention it deserves. We will strive to get back to you as soon as possible, but please note that due to the thoroughness of our review process and the volume of applications we receive, it could be about 4+ weeks. Please note, if you are applying to one of our roles in University Recruiting (i.e. Development Program, Intern Program or Co-op Program)—this timeline may be a little different. We hope all of our candidates are excited about a potential future at 84.51°, but we also understand that the job hunt can be stressful and time-consuming. In an effort to help you pass the time and better understand 84.51°, we have included some information about our interview process and business. What is the interview process like for 84.51°? The hiring team will review your resume and application. If selected, your interview experience will vary based on the role you are applying for. You'll likely first speak with a recruiter and/or hiring manager. If selected to move on to the next round, you'll be contacted to schedule interviews with different members of the team. Most of our interviews strive to have a balance of technical questions that are relative to the skills necessary to be successful in the role, and behavioral questions to see if you fit our values. Depending on the role you have applied for, you may be asked to complete a case study or tech assessment, or present research. Your recruiter will stay in touch to let you know the outcome of your interviews! To help you prepare, we encourage you to visit our website ( http://www.8451.com ), where we have a variety of case studies to help you grasp what types of projects we are engaged with on a day to day basis. Regardless, prepare yourself for an exciting and engaging conversation! Want to learn more about 84.51°? We encourage you to visit our website to learn more about the basics of our business, read current articles about how we’re changing the customer experience, and access exclusive case studies done by 84.51° employees: http://www.8451.com Check us out and follow us on LinkedIn ( https://www.linkedin.com/company/84-51/ ) and Facebook ( https://www.facebook.com/8451group )! We post articles about current events in our industry and business. Thank you again for taking the time to submit an application and consider 84.51° as a next step in your career. We will be in touch soon! Regards, 84.51° Recruiting Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Hello Tirth , Thank you for your "
+    },
+    {
+      "id": "new-york-times-senior-analytics-engineer",
+      "company": "New York Times",
+      "role": "Senior Analytics Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to The New York Times - Senior Analytics Engineer, Data Platform",
+      "latestFrom": "no-reply@nytimes.com",
+      "lastActivityAt": "2026-08-29T03:00:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b75c688071ec",
+      "gmailMessageIds": [
+        "1a04b75c688071ec"
+      ],
+      "notes": "Tirth, Thank you for applying to The New York Times, where we seek the truth and help people understand the world. Your interest means you care about your career and original journalism that supports an informed and engaged public. We look forward to reviewing your application. Should your experience and skills align with the requirements for this role, we will be in touch. Thank you, The New York Times Talent Acquisition Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Tirth, Thank you for applying to The New York Times, where we seek the truth and help people understand the world. Your interest means you care about your career and original journalism that supports an informed and engaged public. We look forward to reviewing your application. Should your experience and skills align with the requirements for this role, we will be in touch. Thank you, The New York Times Talent Acquisition Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
+    },
+    {
+      "id": "urus-general-application",
+      "company": "URUS",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "careers@urus.org",
+      "lastActivityAt": "2026-08-29T02:59:54.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a043598c602deb9",
+      "gmailMessageIds": [
+        "1a043598c602deb9",
+        "1a04b759fc410fcb"
+      ],
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 593189 Note : This code will expire in 10 minutes. Sincerely, URUS People Team"
+    },
+    {
+      "id": "dave-busters-data-analyst",
+      "company": "Dave & Busters",
+      "role": "Data Analyst",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "daveandbusters@otp.workday.com",
+      "lastActivityAt": "2026-08-29T02:59:37.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b7488f7a5c5f",
+      "gmailMessageIds": [
+        "1a04b755a7ae0bf7",
+        "1a04b7488f7a5c5f"
+      ],
+      "notes": "Click this link to confirm your email address and complete setup for your candidate account https://daveandbusters.wd1.myworkdayjobs.com/dave_and_busters_careers/activate/ecdo1jxf64zc5wsdyh3ggimbx8ydwei17v7drkc45md3cdv0ig06zz7fhop9795exqxfleyzkv8a5wxu0cxkorxauq1g0ywhp4r/?redirect=%2Fdave_and_busters_careers%2Fjob%2Fcoppell-tx-corporate%2Fdata-analyst_r-1012997%2Fapply%2FapplyManually The link will expire after 24 hours. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "opendatajobs-data-engineer",
+      "company": "Opendatajobs",
+      "role": "Data Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for applying to OpenDataJobs",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-08-29T02:59:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03473b9634a5dc",
+      "gmailMessageIds": [
+        "1a03473b9634a5dc",
+        "1a04b7559662efb2"
+      ],
+      "notes": "OpenDataJobs ------------------------------------------------------------------------------- Your application for the Data Analyst (SQL, AWS) job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Phone: +19796352045 Address: College Station, Texas ** PROFILE ** Resume: Tirth_Shah_Resume.pdf ** DETAILS ** Cover letter Dear Hiring Manager, I've been working across data, AI, and cloud projects for a few years now, and your Data Analyst (SQL, AWS) role at OPENDataJobs caught my eye. I know I can bring practical experience from designing AI architectures at HCLTech, building analytics platforms at TAMU, and optimizing ETL pipelines at Texas A&M UES. I’ve built systems that handle complex workflows—like multi-agent orchestration with NWDAF signals, a data warehouse with over 17 tables and a spend analysis tool on AWS technologies, and a daily energy data pipeline that shrank report generation from hours to minutes. I’ve also contributed to winning a TAMU Datathon with an OCR/LLM classifier, which shows I can turn innovative ideas into real results. I’d bring a strong mix of software engineering, data management, and project ownership—ready to help your team deliver trusted, auditable numbers and actionable reports that support federal program missions and public value. Sincerely, Tirth Shah Answers [\"No\"] The initial engagement for this position requires sole U.S. citizenship; dual citizens are not eligible. Are you a citizen of the United States and of no other country? [\"Yes\"] Can you conduct all work from within the United States? [\"No\"] Can you work a hybrid schedule in the Washington, DC metropolitan area, commuting into DC regularly? [\"Yes\"] Are you willing to undergo a background check? [\"Yes\"] The initial engagement for this position requires a federal Public Trust suitability determination (OPM Form SF-85P), which examines, among other factors: Criminal history, including felony convictions and financial crimes Financial responsibility, including bankruptcies, delinquencies, and unpaid federal debts Employment record, including terminations for misconduct, security violations, or falsification Illegal drug or controlled-substance use within the prior seven years Are you willing to undergo this investigation if required? [\"Yes\"] Peregrine policy requires that you receive permission from senior management for any outside employment, including consulting, advisory, and board positions. Will you comply with this requirement? Years of relevant professional experience: 4.1 We ask you to report one standardized test score, such as the SAT, ACT, GRE, or GMAT. Which standardized admissions test are you reporting? None Enter your undergraduate major or primary field of study and the educational institution(s) attended. If you did not attend an undergraduate program, "
+    },
+    {
+      "id": "sams-club-senior-data-analyst",
+      "company": "Sams Club",
+      "role": "Senior Data Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for Applying!",
+      "latestFrom": "walmart@myworkday.com",
+      "lastActivityAt": "2026-08-29T02:59:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b74905f5b9fe",
+      "gmailMessageIds": [
+        "1a04b754ec0330f6"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to our Senior, Data Analyst position. Your application will be reviewed and we will contact you with next steps. You can check your application status at any time by logging in to the link below, clicking on the upper right-hand corner \"Candidate Home\": https://walmart.wd504.myworkdayjobs.com/Non-WorkdayInternal Thanks again! Your Sam’s Club Hiring Team Business Process: Job Application: Tirth Shah ‎- R-2589805 Senior, Data Analyst (C-23741463) on 08/28/2026 Subject: Tirth Shah ‎- R-2589805 Senior, Data Analyst (C-23741463) This is an automated email - Please do not respond. This email was intended for tirthcshah1999+workday-walmart@gmail.com Walmart Inc. · www.walmart.com"
+    },
+    {
+      "id": "partssource-data-analyst",
+      "company": "Partssource",
+      "role": "Data Analyst",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to PartsSource",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-29T02:59:03.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a036b997ed04207",
+      "gmailMessageIds": [
+        "1a036b997ed04207",
+        "1a04452a7113d3e2",
+        "1a04b74da4306918"
+      ],
+      "notes": "Tirth, Thank you for your interest in a career at PartsSource. We have received your application for the Data Analyst. What happens now? We will review your application and will reach out if we think it's a good match. You'll be hearing from us soon. Regards, PartsSource ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Tirth, Thank you for your interest in a career at PartsSource. We have received your application for the Data Analyst. What happens now? We will review your application and will reach out if we think it's a good match. You'll be hearing from us soon. Regards, PartsSource ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
+    },
+    {
+      "id": "yipitdata-senior-data-analyst",
+      "company": "Yipitdata",
+      "role": "Senior Data Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to YipitData",
+      "latestFrom": "no-reply@yipitdata.com",
+      "lastActivityAt": "2026-08-29T02:59:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b74d9ccb1eb8",
+      "gmailMessageIds": [
+        "1a04b74d9ccb1eb8"
+      ],
+      "notes": "Hi Tirth, Thank you for applying for the Senior Data Analyst (MedTech) opportunity at YipitData! We have received your application and appreciate your time and interest in working with us. Should we feel your profile is a good fit for our current needs, a member of our team will promptly reach out to you. To ensure timely receipt of our emails, please check your spam folder just in case future communication accidentally gets delivered there instead of to your inbox. If so, please make sure to mark \"Not Spam,\" which should help future messages to get through. Kind Regards, Recruitment Team at YipitData ** Please note: This email is sent from an unattended mailbox. Replies will not be read. ** Data Specialist: YipitData is experiencing an extremely high volume of applicants, especially for our Data Specialist position. If you are an applicant for our Data Specialist position, please allow us to take approximately 4-8 weeks to review and respond to your applications. We will do our best to get back to you as promptly as possible. Thank you! Hi Tirth, Thank you for applying for the Senior Data Analyst (MedTech) opportunity at YipitData! We have received your application and appreciate your time and interest in working with us. Should we feel your profile is a good fit for our current needs, a member of our team will promptly reach out to you. To ensure timely receipt of our emails, please check your spam folder just in case future communication accidentally gets delivered there instead of to your inbox. If so, please make sure to mark \"Not Spam,\" which should help future messages to get through. Kind Regards, Recruitment Team at YipitData ** Please note: This email is sent from an unattended mailbox. Replies will not be read. ** Data Specialist : YipitData is experiencing an extremely high volume of applicants, especially for our Data Specialist position. If you are an applicant for our Data Specialist position, please allow us to take approximately 4-8 weeks to review and respond to your applications. We will do our best to get back to you as promptly as possible. Thank you!"
+    },
+    {
+      "id": "trepp-general-application",
+      "company": "Trepp",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks for Applying to Trepp",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-08-29T02:59:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b74d6c02a469",
+      "gmailMessageIds": [
+        "1a04b74d6c02a469"
+      ],
+      "notes": "**************************** Thanks for your application. **************************** Dear Tirth, Thanks for applying to Trepp. We will review your resume and be back with you shortly if we will proceed to next steps. Keep in mind, we process your data for recruitment purposes only. We are storing your data in our Applicant Tracking System and we will not share it with anyone else. We would like to keep this data for 12 months upon application. When that period is over, we will delete your data in accordance with General Data Protection Regulations (GDPR). Here ( https://www.trepp.com/privacy-policy ) is a link to our recruitment policy with more information regarding our compliance with GDPR, including how to send us a request to let you access your data that we have collected, request us to delete your data, correct any inaccuracies or restrict our processing of your data. Regards, Trepp, Inc. Human Resources Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.** Learn more about working with Trepp at our Website here ( https://www.trepp.com/culture ) Thanks for your application. Dear Tirth, Thanks for applying to Trepp. We will review your resume and be back with you shortly if we will proceed to next steps. Keep in mind, we process your data for recruitment purposes only. We are storing your data in our Applicant Tracking System and we will not share it with anyone else. We would like to keep this data for 12 months upon application. When that period is over, we will delete your data in accordance with General Data Protection Regulations (GDPR). Here is a link to our recruitment policy with more information regarding our compliance with GDPR, including how to send us a request to let you access your data that we have collected, request us to delete your data, correct any inaccuracies or restrict our processing of your data. Regards, Trepp, Inc. Human Resources Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.** Learn more about working with Trepp at our Website here"
+    },
+    {
+      "id": "bosun-general-application",
+      "company": "Bosun",
+      "role": "General Application",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Re: Opportunity at Bosun",
+      "latestFrom": "Hiring Team <no-reply@breezy-mail.com>",
+      "lastActivityAt": "2026-08-29T02:58:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b74c8360188b",
+      "gmailMessageIds": [
+        "1a04b74c8360188b"
+      ],
+      "notes": "Hi Tirth, We'd like to ask you a few more questions. When you have a couple minutes, please click the following link and complete the form. https://bosun-25f9d5ec70da.breezy.hr/f/4ee76eb5a141 Hi Tirth, We'd like to ask you a few more questions. When you have a couple minutes, please click the following link and complete the form. https://bosun-25f9d5ec70da.breezy.hr/f/4ee76eb5a141"
+    },
+    {
+      "id": "promach-data-engineer",
+      "company": "Promach",
+      "role": "Data Engineer",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "promachbuilt@otp.workday.com",
+      "lastActivityAt": "2026-08-29T02:58:51.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b7495998e382",
+      "gmailMessageIds": [
+        "1a04b74a9a7deaba",
+        "1a04b7495998e382"
+      ],
+      "notes": "Click this link to confirm your email address and complete setup for your candidate account https://promachbuilt.wd108.myworkdayjobs.com/promach/activate/7mb30h7346qf5kisvbjtbl9vf8vv87v8woh5849bdf8zroorncsuhvrtt0t3j8ubdaurtqgu2fv0lrtrs5ueiyya7c3j330xzp4/?redirect=%2Fpromach%2Fjob%2Fus-ky-remote%2Fdata-engineer_jr101407%2Fapply%2FapplyManually The link will expire after 24 hours. This email box is not monitored. Please do not reply to this message. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "ge-healthcare-business-intelligence-analyst-ii",
+      "company": "GE Healthcare",
+      "role": "Business Intelligence Analyst II",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for Applying",
+      "latestFrom": "GE HealthCare Workday Notifications <gehc@myworkday.com>",
+      "lastActivityAt": "2026-08-29T02:58:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b748a1c30755",
+      "gmailMessageIds": [
+        "1a04b748a1c30755"
+      ],
+      "notes": "Hi Tirth , Thank you for taking the time to apply for Business Intelligence Analyst II . So, what happens now? We will review your profile against the qualifications for this opportunity, which may take some time. We give each application the same careful consideration yours is receiving right now, and rest assured: you’ll hear from us! What can you do in the meantime? At any time, you may log back into your profile and check the status of your submission by creating a Candidate Home account and logging into to check your applications. Please use this link to create or view your candidate home account. Looking for more ways to engage with GE HealthCare? Follow us on Instagram or LinkedIn . A career at GE HealthCare is about seeing the bigger picture and discovering the possibilities in it. Learn more about our diverse businesses that give you flexibility for change while providing the opportunity to learn, and the ability to develop your career. Today our company is more dynamic than ever, and working at GE HealthCare is about exploring, learning, and evolving as you go. Together, we can discover new possibilities. Kind regards, GE HealthCare Talent Acquisition Team *This message is sent from a computer system; please do not reply to this email. This email box is not monitored. Please do not reply to this message. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "ardent-principles-data-scientist-data-visualization-specialist",
+      "company": "Ardent Principles",
+      "role": "Data Scientist (data Visualization Specialist)",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Received",
+      "latestFrom": "Ardent Principles Inc <ardentprinciples@pinpoint.email>",
+      "lastActivityAt": "2026-08-29T02:58:42.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b7485239edda",
+      "gmailMessageIds": [
+        "1a04b7485239edda"
+      ],
+      "notes": "Hello Tirth, Thank you for applying for the Data Scientist (Data Visualization Specialist) position at Ardent Principles, Inc.. Our team will review your resume and be in touch if your qualifications match our needs for the role. If you are not selected at this time, we will keep your resume on file for future consideration. We greatly appreciate your interest in Ardent Principles. Thank you, Talent Team Ardent Principles, Inc. <a target=\"_blank\" href=\"http://www.ardentprinciples.com\">http://www.ardentprinciples.com</a> -------------------------------------------------- If you have any questions or would like to give us some feedback, you can reply to this email and it will go to the hiring team responsible for this role. -------------------------------------------------- Want to stop receiving communications from us? Manage your communication preferences. https://ardentprinciples.pinpointhq.com/candidates/communication_preferences/75TE4qNsPgS992bYCABv9Uvo Application Received 96 Application Received Hello Tirth, Thank you for applying for the Data Scientist (Data Visualization Specialist) position at Ardent Principles, Inc.. Our team will review your resume and be in touch if your qualifications match our needs for the role. If you are not selected at this time, we will keep your resume on file for future consideration. We greatly appreciate your interest in Ardent Principles. Thank you, Talent Team Ardent Principles, Inc. http://www.ardentprinciples.com If you have any questions or would like to give us some feedback, you can reply to this email and it will go to the hiring team responsible for this role. Want to stop receiving communications from us? Manage your communication preferences ."
+    },
+    {
+      "id": "bdo-lead-data-engineer-tax-product-development",
+      "company": "BDO",
+      "role": "IT Lead Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your recent job application for IT Lead Data Engineer - 13716",
+      "latestFrom": "BDO Careers <join-our-team@careers.bdo.com>",
+      "lastActivityAt": "2026-08-29T02:58:40.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a035f7ac08cc519",
+      "gmailMessageIds": [
+        "1a035f7ac08cc519",
+        "1a04b748146b6811"
+      ],
+      "notes": "Hello Tirth, Thank you for your interest in BDO! Our Talent Acquisition Team is reviewing your resume and will be in touch with you soon. You can check your status at any time via the Candidate Self-Service page. In the meantime, you can stay connected a few different ways : General Consideration Req - Apply to be considered for upcoming roles that match your skills and interests. BDO’s Talent Community - Join to be informed of the latest happenings at BDO, engaging stories from our team, and opportunities that match your professional interests. Strategic Resources Talent Community. - Join to learn about contract opportunities. Public Sector Talent Community. - Join to learn about our government sector. EBA Talent Community - Join to learn about our Enterprise Business Applications team. Sincerely, BDO Talent Acquisition Team"
+    },
+    {
+      "id": "harbor-compliance-staff-data-engineer",
+      "company": "Harbor Compliance",
+      "role": "Staff Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to Harbor Compliance",
+      "latestFrom": "Harbor Compliance <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-08-29T02:58:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b7419c5b5b5e",
+      "gmailMessageIds": [
+        "1a04b7419c5b5b5e"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to Harbor Compliance! We have received your application and will review it promptly. If we think there is a good fit, we will contact you at this email address. *Position:* Staff Data Engineer Thank you, Harbor Compliance Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read. 96 Hi Tirth, Thank you for applying to Harbor Compliance! We have received your application and will review it promptly. If we think there is a good fit, we will contact you at this email address. Position: Staff Data Engineer Thank you, Harbor Compliance Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read."
+    },
+    {
+      "id": "carbo-ceramics-senior-data-analyst",
+      "company": "Carbo Ceramics",
+      "role": "Senior Data Analyst",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thanks, Tirth! | Your Application for Senior Data Analyst at Carbo Ceramics, LLC Has Been Received.",
+      "latestFrom": "recruiting@wilksbrothers.com",
+      "lastActivityAt": "2026-08-29T02:58:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b74050a5d4b6",
+      "gmailMessageIds": [
+        "1a04b74050a5d4b6"
+      ],
+      "notes": "Dear Tirth, We have received your application for the position of Senior Data Analyst at Carbo Ceramics, LLC. The recruiting department is reviewing applications and will reach out via phone call if your qualifications are a potential fit for the role. To review, change, or update your application - use this link: https://recruiting.ultipro.com/wil1017/JobBoard/d4920925-42b0-bd97-5b81-2e7882ee0937/Candidate/ViewPresence. Thanks again from the Carbo Ceramics, LLC Talent Acquisition team! Dear Tirth, We have received your application for the position of Senior Data Analyst at Carbo Ceramics, LLC. The recruiting department is reviewing applications and will reach out via phone call if your qualifications are a potential fit for the role. To review, change, or update your application - use this link: https://recruiting.ultipro.com/wil1017/JobBoard/d4920925-42b0-bd97-5b81-2e7882ee0937/Candidate/ViewPresence . Thanks again from the Carbo Ceramics, LLC Talent Acquisition team!"
+    },
+    {
+      "id": "aperia-senior-data-platform-engineer",
+      "company": "Aperia",
+      "role": "Senior Data Platform Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for applying to the Senior Data Platform Engineer  role at Aperia!",
+      "latestFrom": "no-reply@aperia.com",
+      "lastActivityAt": "2026-08-29T02:58:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b73f7eb359b5",
+      "gmailMessageIds": [
+        "1a04b73f7eb359b5"
+      ],
+      "notes": "Dear Tirth, Thank you for taking the time to apply to the Senior Data Platform Engineer role at Aperia. We are genuinely humbled by your interest in joining our team. We want you to know that we carefully review every single application we receive. If your skills and experience align with our current needs, we will be in touch as soon as possible. We appreciate your patience and understanding throughout this process, and we look forward to the possibility of working together. Regards, Aperia Recruiting Team Aperia Logo ( https://aperia.com ) ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. This email message is intended only for the addressee(s) and contains information that may be privileged and/or confidential, including information protected by federal and state privacy laws. If you are not the intended recipient or an employee or agent responsible for delivering this message to the intended recipient, please notify Aperia by reply email and immediately delete this email. Use, disclosure or reproduction of this email by anyone other than the intended recipient(s) is strictly prohibited. Dear Tirth, Thank you for taking the time to apply to the Senior Data Platform Engineer role at Aperia. We are genuinely humbled by your interest in joining our team. We want you to know that we carefully review every single application we receive. If your skills and experience align with our current needs, we will be in touch as soon as possible. We appreciate your patience and understanding throughout this process, and we look forward to the possibility of working together. Regards, Aperia Recruiting Team ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. This email message is intended only for the addressee(s) and contains information that may be privileged and/or confidential, including information protected by federal and state privacy laws. If you are not the intended recipient or an employee or agent responsible for delivering this message to the intended recipient, please notify Aperia by reply email and immediately delete this email. Use, disclosure or reproduction of this email by anyone other than the intended recipient(s) is strictly prohibited."
+    },
+    {
+      "id": "smash-general-application",
+      "company": "SMASH",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "SMASH | Welcome!",
+      "latestFrom": "Smash CR <noreply@applytojob.com>",
+      "lastActivityAt": "2026-08-29T02:57:24.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b73573bfa974",
+      "gmailMessageIds": [
+        "1a04b73573bfa974"
+      ],
+      "notes": "Hi Tirth, Welcome, and thank you for your interest in becoming part of the SMASH community! We&#8217;re excited to have you as an applicant and truly appreciate you taking the time to connect with us. Our team will review your profile, and as soon as we find a role that&#8217;s a great match for your experience and goals, we&#8217;ll be in touch. In the meantime, if you&#8217;d like to learn more about who we are and the people behind SMASH, feel free to visit us at:&#160; https://smashcr.com/ Thanks again for your interest, we&#8217;re glad you&#8217;re here! Best regards, Talent Acquisition Team"
+    },
+    {
+      "id": "bdo-general-application",
+      "company": "BDO",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "BDO Careers <join-our-team@careers.bdo.com>",
+      "lastActivityAt": "2026-08-29T02:57:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b732e1e6a233",
+      "gmailMessageIds": [
+        "1a04b732e1e6a233"
+      ],
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 592834 Note : This code will expire in 10 minutes. Sincerely, BDO USA Experienced Career Site Recruiting Team."
+    },
+    {
+      "id": "sweed-forward-deployed-engineer",
+      "company": "Sweed",
+      "role": "Forward Deployed Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your Application at Sweed",
+      "latestFrom": "Sweed Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-29T02:57:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b73209d6c0f1",
+      "gmailMessageIds": [
+        "1a04b73209d6c0f1"
+      ],
+      "notes": "Dear Tirth, Thank you for applying for the Forward Deployed Engineer role at Sweed. We have received your application and our team will review it shortly. If your experience aligns with what we’re looking for, we’ll be in touch regarding the next steps. In the meantime, if you’d like to learn more about Sweed, feel free to visit https://www.sweedpos.com. Thank you for considering Sweed. We appreciate your interest in joining our team. Best regards, Sweed Talent Team Dear Tirth , Thank you for applying for the Forward Deployed Engineer role at Sweed. We have received your application and our team will review it shortly. If your experience aligns with what we’re looking for, we’ll be in touch regarding the next steps. In the meantime, if you’d like to learn more about Sweed, feel free to visit our website . Thank you for considering Sweed. We appreciate your interest in joining our team. Best regards, Sweed Talent Team"
+    },
+    {
+      "id": "salesforce-software-engineer-ai-applications",
+      "company": "Salesforce",
+      "role": "Principal Data Platform Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Great News! We’ve Received Your Application for the Principal Data Platform Engineer Position",
+      "latestFrom": "salesforce@myworkday.com",
+      "lastActivityAt": "2026-08-29T02:56:55.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a03ad583c79949f",
+      "gmailMessageIds": [
+        "1a03ad583c79949f",
+        "1a03ab6cf681af23",
+        "1a03ab6a48604473",
+        "1a039e9ae5d01d44",
+        "1a042313e676e107",
+        "1a04580b7542557a",
+        "1a04b72e2cd901ec"
+      ],
+      "notes": "96 Hi Tirth, You have officially applied for the Principal Data Platform Engineer opening at Salesforce, the world’s #1 agent-first enterprise. Thanks for showing interest in our one-of-a-kind community of innovators, customer success makers, and lifelong learners. So what’s next? We’ll review your application and reach out if you’re a potential match. If we don’t have the right role for you, don’t worry — we’ll keep your information on file for future opportunities. You can check on the status of your application at any point by logging into your Salesforce candidate homepage: https://salesforce.wd12.myworkdayjobs.com/External_Career_Site Thank you for exploring a future with Salesforce, The Salesforce Recruiting Team This is an auto-generated message, please do not reply. For information on Salesforce's commitment regarding your privacy, please see our Candidate Privacy Statement Get to know us better here: This email was intended for tirthcshah1999@gmail.com salesforce.com inc. &#8226; Salesforce Tower, 415 Mission Street, 3rd Floor, San Francisco, CA 94105"
+    },
+    {
+      "id": "saic-ai-data-engineer",
+      "company": "SAIC",
+      "role": "Sr",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your recent job application for Sr. Systems Engineer (AWS Data Engineer) - 2616243",
+      "latestFrom": "SAIC Careers <careers@talent.saic.com>",
+      "lastActivityAt": "2026-08-29T02:56:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a036022b9522b74",
+      "gmailMessageIds": [
+        "1a036022b9522b74",
+        "1a04b72aa7ecb055"
+      ],
+      "notes": "Hello Tirth, We received your job application for Sr. Systems Engineer (AWS Data Engineer) - 2616243. If your profile corresponds to our requirements, a member of our Recruiting team will contact you. If you were requested to provide additional info about your job application, or if you want to manage your profile, go to your candidate self service page . Sincerely, SAIC Recruiting Team"
+    },
+    {
+      "id": "fanatics-collectibles-analytics-engineer",
+      "company": "Fanatics Collectibles",
+      "role": "Senior Data Analyst, Operations",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-29T02:56:04.000Z",
+      "latestSubject": "Thank you for applying to the Senior Data Analyst, Operations role at Fanatics Collectibles",
+      "latestFrom": "no-reply@collectfanatics.com",
+      "gmailThreadId": "19f6a7af1c21e91a",
+      "gmailMessageIds": [
+        "19f6a7af1c21e91a",
+        "1a03e2cd176aeda8",
+        "1a04b721e58b9dd1"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to Fanatics Collectibles. We’ve received your application for the Senior Data Analyst, Operations role and our team is currently reviewing your background. If your experience aligns with what we’re looking for, we’ll reach out with next steps. Thank you again for your interest in joining Fanatics Collectibles. — Fanatics Collectibles Talent Team Hi Tirth, Thank you for applying to Fanatics Collectibles. We&rsquo;ve received your application for the Senior Data Analyst, Operations role and our team is currently reviewing your background. If your experience aligns with what we&rsquo;re looking for, we&rsquo;ll reach out with next steps. Thank you again for your interest in joining Fanatics Collectibles. &mdash; Fanatics Collectibles Talent Team",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "AI extracted",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "msg-19f655a099138ba1",
+      "company": "Together AI",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-29T02:56:03.000Z",
+      "latestSubject": "Thank you for applying to Together AI",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19f655a099138ba1",
+      "gmailMessageIds": [
+        "19f655a099138ba1",
+        "1a04b72184c09e15"
+      ],
+      "notes": "Tirth, Thanks for applying to Together AI. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, Together AI ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Tirth, Thanks for applying to Together AI. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, Together AI ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
+    {
+      "id": "saic-general-application",
+      "company": "SAIC",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "SAIC Careers <careers@talent.saic.com>",
+      "lastActivityAt": "2026-08-29T02:55:46.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a036013c90f241b",
+      "gmailMessageIds": [
+        "1a036013c90f241b",
+        "1a04b71d9ffeef66"
+      ],
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 572034 Note : This code will expire in 10 minutes. Sincerely, SAIC Recruiting Team."
+    },
+    {
+      "id": "asurion-sr",
+      "company": "Asurion",
+      "role": "Sr",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "asurion@otp.workday.com",
+      "lastActivityAt": "2026-08-29T02:55:46.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b71bcdce66ef",
+      "gmailMessageIds": [
+        "1a04b71d485d90e9",
+        "1a04b71bcdce66ef"
+      ],
+      "notes": "Click this link to confirm your email address and complete setup for your candidate account https://asurion.wd5.myworkdayjobs.com/asurioncareers_us/activate/9q5op5di3kiahel2tqk55o36oc12vxn2r5nzl3yl8zzueiioo52dwdg671xc6b88tywj84z0vvvywcxdfww8lzyor7cxxagmlvh/?redirect=%2Fasurioncareers_us%2Fjob%2Fus-headquarters%2Fsr-data-analyst--finance-analytics_asu0021172%2Fapply%2FapplyManually The link will expire after 24 hours. Workday This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "american-credit-acceptance-general-application",
+      "company": "American Credit Acceptance",
+      "role": "General Application",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You for Your Application - American Credit Acceptance",
+      "latestFrom": "American Credit Acceptance Recruiting Team <notification@jobvite.com>",
+      "lastActivityAt": "2026-08-29T02:55:40.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b71bff40d36d",
+      "gmailMessageIds": [
+        "1a04b71bff40d36d"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in a career with ACA and for taking the time to apply. Our Talent Acquisition team has received your application, and will review it soon. In the meantime, here’s ACA at-a-glance so you can get to know us better: Why Lean In? • Work that helps people access reliable transportation • Fast growth + real career opportunity • Innovative, people-first culture • National scale without bureaucracy A Fast-Growing National Auto Finance Company We partner with thousands of dealerships across all 50 states. If our name is new to you, that’s expected—we don’t market directly to consumers. We work behind the scenes through major dealer networks, powering auto financing nationwide. Big Impact, Modern Approach, No Corporate Red Tape We operate with the speed and innovation of a growth-minded company, backed by the resources to make big ideas happen. Our culture is progressive, curious, and empowering, giving you space to bring ideas to life and make an immediate impact. A Team-First Culture We’re known for strong collaboration, approachable leaders, and a culture built on respect, trust, and accountability. People thrive here because they’re supported, challenged, and encouraged to grow. Spartanburg: A Growing, Well-Connected Hub We’re headquartered in Upstate South Carolina, a rapidly growing region within one of the fastest-growing states. You get the benefits of a friendly, affordable community plus quick access to amazing nearby cities and destinations: • 1 to 2 hrs: Asheville, Charlotte. and the Blue Ridge Mountains • 3 - 4 hrs: Charleston, SC Beaches, and Atlanta Other ACA Locations: We also have growing teams in Atlanta, GA, Meridian, ID, and roles based in the field across the U.S. through our Sales organization. Regardless of the position or location you’re applying for, you’ll find the same collaborative culture and growth-minded environment across ACA. We appreciate your interest in joining ACA and, if selected to move forward, we will be in touch with next steps soon. Thank you for your patience during the review process. Sincerely, The American Credit Acceptance Talent Acquisition Team -*_____ You can reply directly to this message or click here to reply via your Jobvite user account. Email Preferences | Powered by Jobvite *______*"
+    },
+    {
+      "id": "mimecast-general-application",
+      "company": "Mimecast",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Verify your candidate account",
+      "latestFrom": "mimecast@otp.workday.com",
+      "lastActivityAt": "2026-08-29T02:55:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b714693efce7",
+      "gmailMessageIds": [
+        "1a04b71689564f73",
+        "1a04b714693efce7"
+      ],
+      "notes": "Click this link to confirm your email address and complete setup for your candidate account https://mimecast.wd5.myworkdayjobs.com/mimecast-careers/activate/hbaosbsgiglqngr9er01hoced9bxqzq8bjps7zi4pcfnta68byjafnwycokmzxdanqojrjg49hxtswjaf5q4cnmhl8utusa6wnb/?redirect=%2Fmimecast-careers%2Fjob%2Funited-states-of-america---massachusetts---lexington%2Fsenior-customer-operations-data-analyst_r6679-2%2Fapply%2FapplyManually The link will expire after 24 hours. This email was intended for tirthcshah1999@gmail.com Mimecast · 191 Spring Street, Lexington, MA 02421 U.S.A"
+    },
+    {
+      "id": "yellowstone-local-senior-data-engineer",
+      "company": "Yellowstone Local",
+      "role": "Senior Data Engineer",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Senior Data Engineer - Confirmation of your application",
+      "latestFrom": "\"Yellowstone Local/Senior Data Engineer\" <e+yp6nws667renbrna.yellowstone@recruitee-inbox.com>",
+      "lastActivityAt": "2026-08-29T02:54:57.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b711904da252",
+      "gmailMessageIds": [
+        "1a04b711904da252",
+        "1a04b7114e01d22e"
+      ],
+      "notes": "Your application for the Senior Data Engineer position has been successfully submitted. If you want to add something to your application just respond to this email. MRCOOL —— We want you to be in control of your personal data. You can request a data correction or request to be deleted from our database. This email was sent via Recruitee – the collaborative hiring software Your application for the Senior Data Engineer position has been successfully submitted. If you want to add something to your application just respond to this email. MRCOOL —— We want you to be in control of your personal data. You can request a data correction or request to be deleted from our database. This email was sent via – the collaborative hiring software"
+    },
     {
       "id": "vela-energy-software-engineer",
       "company": "Vela Energy",
@@ -9,15 +1204,44 @@
       "confidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted",
-      "latestSubject": "SWE at Vela Application → Next Step",
-      "latestFrom": "Anna Miller <anna@outlier.expert>",
-      "lastActivityAt": "2026-08-29T01:31:08.000Z",
+      "latestSubject": "30 min meeting between Tarun Batchu and Tirth Shah",
+      "latestFrom": "Tarun Batchu <hello@cal.com>",
+      "lastActivityAt": "2026-08-29T02:34:57.000Z",
       "source": "gmail",
       "gmailThreadId": "1a04b2490a2513f0",
       "gmailMessageIds": [
-        "1a04b2490a2513f0"
+        "1a04b2490a2513f0",
+        "1a04b5ef264a4e7b",
+        "1a04b32f1d639196",
+        "1a04b324de1a2652",
+        "1a04b31ed26491b0"
       ],
-      "notes": "Thanks so much for submitting your application and completing the takehome! I'm excited to invite you to the next step of the interview process:* a 30-minute behavioral + technical interview with the Vela team.* You will be meeting with Tarun Batchu <https://www.linkedin.com/in/tarun-batchu-986017284/> - the cofounder at Vela Energy. <https://calendly.com/anna-outlier/1-1-with-anna>Book here <https://cal.com/tarun-batchu/30min> → *Please confirm once you have booked by replying to this email.* Best, Anna Miller Founder, Outlier Mentors Thanks so much for submitting your application and completing the takehome! I'm excited to invite you to the next step of the interview process: a 30-minute behavioral + technical interview with the Vela team. You will be meeting with Tarun Batchu - the cofounder at Vela Energy. Book here → Please confirm once you have booked by replying to this email. Best, Anna Miller Founder, Outlier Mentors"
+      "notes": "Your event has been scheduled We sent an email to all participants with this information. What: 30 min meeting between Tarun Batchu and Tirth Shah Invitee timezone: America/New_York Who: Tarun Batchu - Organizer tarun@velaenergy.ai Tirth Shah tirthcshah1999@gmail.com Where: https://app.cal.com/video/nc7QN1pVvJhdAfY2DAUUCL?name=Tirth+Shah Additional notes: Excited to meet you. Need to reschedule or cancel? https://cal.com/booking/nc7QN1pVvJhdAfY2DAUUCL?changes=true Confirmed: 30min with Tarun Batchu at 12:00pm - 12:30pm, Sunday, August 30, 2026 96 Confirmed Your event has been scheduled We sent an email to all participants with this information. What 30 min meeting between Tarun Batchu and Tirth Shah When Sunday, August 30, 2026 | 12:00pm - 12:30pm (America/New_York) Who T Tarun Batchu Organizer tarun@velaenergy.ai T Tirth Shah Guest tirthcshah1999@gmail.com Where Cal Video https://ap p.cal.com/ video/nc7Q N1pVvJhdAf Y2DAUUCL?n ame=Tirth+ Shah Notes Excited to meet you. Reschedule Cancel Report booking Contact support"
+    },
+    {
+      "id": "spectrum-senior-business-planning-analyst",
+      "company": "Spectrum",
+      "role": "Senior Business Planning Analyst",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-29T02:00:43.000Z",
+      "latestSubject": "Spectrum Careers: Update on Your Application",
+      "latestFrom": "Charter Hire <charter+email+39uhv-7fe76a462f@talent.icims.com>",
+      "gmailThreadId": "1a024d5035b7335a",
+      "gmailMessageIds": [
+        "1a024d5035b7335a",
+        "1a04b3f73893dd6d"
+      ],
+      "notes": "<p style=\"margin: 0px;\"><span style=\"font-size: 12.0pt; font-family: 'Calibri',sans-serif;\"><img src=\"https://tracking.icims.com/f/a/GdXpeQ8YVjiwk3uENnWmoQ~~/AAIB5hA~/vIDJWAy54O8KIhydSceTV2Wo4Qw-Cki6-dNZJA7XGvJODrkeoLPD1_DTehmGdT3l65IuesY9EJ038CloOVJKAH36uD64i7EQLwddqmxGECFc-yNlDatMLlTTkEHRntsADBKLtrRBMqkY7ejXJ_r7v5TUVwE53cPI1D9-xgagbmi7dWAU6QAvZqkENA1ro7YrS84f2w6DdEXFhUA6bBFpjavKOYJE41uXF6oWyjIOAu4~ alt=\"Spectrum Logo 2025\" width=\"181\" height=\"38\" /></span></p><p style=\"margin: 0px;\">&nbsp;</p><p style=\"margin: 0in;\"><span><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif;\">Hi Tirth,</span></span><span><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif;\">&nbsp;</span></span></p><p style=\"margin: 0in;\"><span style=\"font-size: 9.0pt; font-family: 'Segoe UI',sans-serif;\">&nbsp;</span></p><p style=\"margin: 0in;\"><span><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif;\">Thank you for your interest in joining Spectrum&nbsp;and for&nbsp;the&nbsp;time&nbsp;spent on your application.&nbsp;After careful&nbsp;review,&nbsp;we’re moving&nbsp;forward with other candidates whose&nbsp;qualifications more closely&nbsp;match&nbsp;the requirements of&nbsp;this role.&nbsp;</span></span><span><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif;\">&nbsp;</span></span></p><p style=\"margin: 0in;\"><span style=\"font-size: 9.0pt; font-family: 'Segoe UI',sans-serif;\">&nbsp;</span></p><p style=\"margin: 0in;\"><span><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif;\">We know this&nbsp;isn’t&nbsp;the&nbsp;news&nbsp;you were hoping for, but you can </span></span><a href=\"https://tracking.icims.com/f/a/XNeHkA_TZ_WorOuVer91IQ~~/AAIB5hA~/AQq5K_Pb-LSIE1YgQChqSpR8EK0Qt44kybQiAnD2WR2FcRavJKqSbqCugvCdAvt_ZbB7UaAtuk7gZqWOM-mntyTIgBFZXqEBbg9d_wWsKHBwv4ehqw6aV0rZ8jaKVbDd73YZq3YnEkvcbCwBbEmgFiTivLt-LwzZsD2K4J8lWCsoJXSTrazP3n9dfTOgn6Nc_lktLFaLCTXGuufIbTSeJQ~~ target=\"_blank\" rel=\"noopener\"><span><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif; color: #1155cc;\">sign up for job alerts</span></span></a> <span><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif;\">to be notified about new roles that open on our team. </span></span></p><p style=\"margin: 0in;\"><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif;\">&nbsp;</span></p><p style=\"margin: 0in;\"><span><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif;\">Thanks again&nbsp;for&nbsp;considering a career with Spectrum – we hope&nbsp;you’ll&nbsp;keep us in mind for future&nbsp;opportunities! </span></span><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif;\"><br /></span><span><span style=\"font-size: 11.0pt; font-family: 'Aptos',sans-serif;\">&nbsp;</span></span><span style=\"font-size: 11.0pt; font-family: 'Aptos',sans-serif;\"><br /></span><span><span style=\"font-size: 11.0pt; font-family: 'Spectrum Sans',sans-serif;\">Spectrum Recruiting",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "ATS Application Receipt: confirmation of application submission",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:19.176+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "northramp-data-engineer",
@@ -1043,24 +2267,6 @@
       "reason": "AI extracted"
     },
     {
-      "id": "jpmorgan-chase-lead-software-engineer-cloud",
-      "company": "Jpmorgan Chase",
-      "role": "Lead Software Engineer - Cloud",
-      "status": "rejected",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Your job application status (Job number: 210772921)",
-      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
-      "lastActivityAt": "2026-08-28T18:09:06.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0498fb22618bef",
-      "gmailMessageIds": [
-        "1a0498fb22618bef"
-      ],
-      "notes": "Tirth, Thank you for your interest in the Lead Software Engineer - Cloud position at JPMorganChase. We received quite a few applications for this job opportunity, and at this time we're sorry to let you know we're moving forward with other candidates. Please continue to visit our careers site to explore other positions that match your areas of interest. We wish you continued success in your job search, JPMorganChase Talent Team T his is an automatically generated email sent from an unmonitored email box. Please do not reply . jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans."
-    },
-    {
       "id": "modus-create-general-application",
       "company": "Modus Create",
       "role": "AI Engineer",
@@ -1703,40 +2909,6 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
-    },
-    {
-      "id": "jpmorgan-chase-general-application",
-      "company": "Jpmorgan Chase",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-28T13:27:40.000Z",
-      "latestSubject": "Take action to confirm your identity",
-      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
-      "gmailThreadId": "19f6fce601891af7",
-      "gmailMessageIds": [
-        "19f6fce601891af7",
-        "1a034778ead4a58b",
-        "1a034720857c8245",
-        "1a0346f2c7991392",
-        "1a0394cc55cb8a5a",
-        "1a039c25ad7ac5b1",
-        "1a043d5bb60a9bc5",
-        "1a043afdb7301cdd",
-        "1a0458c580b886dd",
-        "1a0488e0812517da",
-        "1a048525b4bc6aaf"
-      ],
-      "notes": "Tirth, Please use this code to confirm your identity on our careers site: 157478 This verification code will expire in 10 minutes. If it expires, you can request a new one by clicking the “Send New Code” link on the verification page. Thank you, JPMorganChase Talent Team This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
     },
     {
       "id": "total-performance-consulting-general-application",
@@ -2958,29 +4130,6 @@
       "reason": "AI extracted"
     },
     {
-      "id": "salesforce-software-engineer-ai-applications",
-      "company": "Salesforce",
-      "role": "Sr",
-      "status": "rejected",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Great News! We’ve Received Your Application for the Sr. Data Engineer,  Enterprise - Slack Position",
-      "latestFrom": "salesforce@myworkday.com",
-      "lastActivityAt": "2026-08-27T23:14:17.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a03ad583c79949f",
-      "gmailMessageIds": [
-        "1a03ad583c79949f",
-        "1a03ab6cf681af23",
-        "1a03ab6a48604473",
-        "1a039e9ae5d01d44",
-        "1a042313e676e107",
-        "1a04580b7542557a"
-      ],
-      "notes": "96 Hi Tirth, You have officially applied for the Sr. Data Engineer, Enterprise - Slack opening at Salesforce, the world’s #1 agent-first enterprise. Thanks for showing interest in our one-of-a-kind community of innovators, customer success makers, and lifelong learners. So what’s next? We’ll review your application and reach out if you’re a potential match. If we don’t have the right role for you, don’t worry — we’ll keep your information on file for future opportunities. You can check on the status of your application at any point by logging into your Salesforce candidate homepage: https://salesforce.wd12.myworkdayjobs.com/Slack Thank you for exploring a future with Salesforce, The Salesforce Recruiting Team This is an auto-generated message, please do not reply. For information on Salesforce's commitment regarding your privacy, please see our Candidate Privacy Statement Get to know us better here: This email was intended for tirthcshah1999@gmail.com salesforce.com inc. &#8226; Salesforce Tower, 415 Mission Street, 3rd Floor, San Francisco, CA 94105"
-    },
-    {
       "id": "workhuman-data-analyst",
       "company": "Workhuman",
       "role": "Data Analyst",
@@ -3057,27 +4206,6 @@
         "1a0456abd9690dcf"
       ],
       "notes": "Hello Tirth, Thank you for the time you poured into your application. After careful review, we will not be proceeding with an interview at this time. This decision was challenging due to the high caliber of applicants we received. We hope you will keep us in mind for future opportunities that may align with your skills and experience. Kind Regards, *The AnswersNow Team* Hello Tirth , Thank you for the time you poured into your application. After careful review, we will not be proceeding with an interview at this time. This decision was challenging due to the high caliber of applicants we received. We hope you will keep us in mind for future opportunities that may align with your skills and experience. Kind Regards, The AnswersNow Team"
-    },
-    {
-      "id": "walmart-data-engineer-iii",
-      "company": "Walmart",
-      "role": "Data Engineer III",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Completed: WALMART/ Tirth Shah – Data Engineer III",
-      "latestFrom": "Walmart esignature <docusign@esignature.walmart.com>",
-      "lastActivityAt": "2026-08-27T22:41:02.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a043d6cee8a6ad2",
-      "gmailMessageIds": [
-        "1a043d6cee8a6ad2",
-        "1a044303239abcc7",
-        "1a045624b4be0a27",
-        "1a04561df645c27b"
-      ],
-      "notes": "Hello Tirth Shah, All parties have completed WALMART/ Tirth Shah – Data Engineer III. Hello Tirth Shah, We received your application for the role listed above. However, we need additional information. &nbsp;This information will be utilized to compare job qualifications with your skill set to determine whether you meet the minimum qualifications for the position. This email does not constitute a job offer or a contract of employment. &nbsp;Please make sure you complete and return the form within 48 hours upon receipt. Failure to answer these questions accurately may disqualify an applicant from all employment opportunities at Walmart. Kindly click on the link above to complete the process. If you have any questions, please reach out to Walmart Candidate Support WMCandidateSppt@walmart.com. Thank you! We are looking forward to hearing from you. https://na2.docusign.net/Member/EmailStart.aspx?a=edda8193-805c-8495-80b8-d3f1453a24d4&etti=52&r=a2305471-d0af-8fcd-8066-338581b5df44 If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started. This message was sent to you by Mobility Solutions who is using the Docusign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request. Do Not Share This Email This email contains a secure link to Docusign. Please do not share this email, link, or access code with others. Questions about the Document? If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly. Stop receiving this email Report this email https://protect.docusign.net/report-abuse?e=AUtomjpFak9GlbPL0zFFi10Abksh_kRc2H5t7Ist0Fv_ZCiNEmqbgTqMQehEt_qe-Svo2Oc00_yHezr7-Swm_kpEdgq_gGQAloo6tHddlLJ6CY34WUw5b-2SGNV6qlFfVG-PDDjZWDpWvpOKa8G7cbLPC_bUsbtVUAiuJphvUnrDAWAk_8UuXMm11ElrPU1CMCanJGnOSm1euStaHDU1FCctCUHlN5tWg0ujhmmxSreJgwUPBjXy3SuCfozpawuIBj2ij-nvqvz_tCWmbQiY-ADqEUlgMm1uV68MOLfyDi3LHrMLIn1IsMqhbnspgoSK0K32ktfIDQe5XCX0bxJbLf7isLHig7X43SMIps5SXtgau_-akP7IrxH9FR9XdfH0BzEGDEIco1GC9sjdF046co25hfyXLPCrsKJudzQQxy_8z60e3BQGvt4w281sjfpx3yQP-o5Z-vajfFGletN20hs5gsEL_n9pivJJysT1eJwTEZoPARgEIjmJV3LAIiaVfg&lang=en Declining to sign Managing notifications If you have trouble signing, visit \"How to Sign a Document\" on our Docusign Support Center. https://support.docusign.com/s/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing?language=en_US&#38;utm_campaign=GBL_XX_DBU_UPS_2211_SignNotificationEmailFooter&#38;utm_medium=product&#38;utm_source=postsend RecipientEnvelopeComplete Your document has been completed View Completed Document Mobility Solutions mobilitysolutions@walmart.com All parties have completed WALMART/ Tirth Shah – Data Engineer III. Hello Tirth Shah, We received your application for the role listed above. However, we need additional information. This information will be utilized to compare job qualifications with your skill set"
     },
     {
       "id": "mercor-data-engineer-coding-agent-experience",
@@ -4002,25 +5130,6 @@
       "notes": "Hello Carmen, It was really nice speaking with you. As discussed, I am attaching my friend's resume for your reference. I hope you will find their background suitable for any relevant opportunities. Thank you again for your time. Best regards, Ananya Singh On Thu, Aug 27, 2026, 09:45 Ananya Singh <ananya.anil.sing@gmail.com> wrote: > Hi Carmen, > > That time works for me. I look forward to speaking with you. > > Best regards, > > Ananya Singh > > > On Thu, Aug 27, 2026 at 9:22 AM Rodriguez, Carmen (03861) < > Carmen.Rodriguez@roberthalf.com> wrote: > >> I can meet today at 12:30pm CT. I will send an invite. Please let me know >> if that times no longer work. >> >> >> >> Thanks, >> >> >> >> >> >> >> >> >> <https://roberthalf-addin.smartcloudconnect.io/calendarEvent.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJldmVudElkIjoiZDRiYmM3OTMtNWI2MS00YjM1LTg4NzktYWE5NGYwN2UxMjYzIiwicmVtb3RlVXNlcklkIjoiMTJkNzI1NzYtZDYxYS00NjRiLWIyMzAtNjFmNjAwZmM1NTg4IiwicHJvdmlkZXIiOiJleGNoYW5nZSJ9.OwLigpTkseII7S-q7JysnQTeYYA_YMH5SxxPhM8gAkc&eventStart=null&eventEnd=null&eventDuration=15&organizerTimeZone=America%2FNew_York&organizerLocale=en#/reserve-timeslot> >> >> >> >> *Carmen Rodriguez Lawson* >> Practice Director, Vice President >> >> *Talent Delivery Center* >> Direct: 202.227.2873 >> *Connect with me on LinkedIn >> <https://www.linkedin.com/in/carmenprodriguez91/>* >> >> 1401 I Street NW | Suite 400 | Washington DC | 20005 >> >> [image: A picture containing font, text, white, logo Description >> automatically generated] >> <https://www.roberthalf.com/?utm_campaign=Logo&utm_medium=Email&utm_source=Sales_Support_Outlooksigpicker&utm_content=National_admin> >> >> >> >> >> >> >> >> >> >> >> >> *From:* Ananya Singh <ananya.anil.sing@gmail.com> >> *Sent:* Wednesday, August 26, 2026 1:26 PM >> *To:* Rodriguez, Carmen (03861) <Carmen.Rodriguez@roberthalf.com> >> *Subject:* Re: Resume Attached - Ananya Singh >> >> >> >> You don't often get email from ananya.anil.sing@gmail.com. Learn why >> this is important <https://aka.ms/LearnAboutSenderIdentification> >> >> Hi Carmen, >> >> Yes, I am available today the whole day, and tomorrow from 8:00 AM to >> 1:00 PM CST and 4:00 PM CST onwards. Please let me know what time works >> best for you to connect. >> >> Best regards, >> >> Ananya Singh >> >> >> >> >> >> On Wed, Aug 26, 2026, 12:11 Rodriguez, Carmen (03861) < >> Carmen.Rodriguez@roberthalf.com> wrote: >> >> Hi Ananya, >> >> >> >> Apologies for the delay. Are you available tomorrow for a quick 15-20 min >> interview. Let me know what your schedule looks like and I can send you a >> Teams call. >> >> >> >> Thanks, >> >> >> >> >> >> >> >> >> <https://roberthalf-addin.smartcloudconnect.io/calendarEvent.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJldmVudElkIjoiZDRiYmM3OTMtNWI2MS00YjM1LTg4NzktYWE5NGYwN2UxMjYzIiwicmVtb3RlVXNlcklkIjoiMTJkNzI1NzYtZDYxYS00NjRiLWIyMzAtNjFmNjAwZmM1NTg4IiwicHJvdmlkZXIiOiJleGNoYW5nZSJ9.OwLigpTkseII7S-q7JysnQTeYYA_YMH5SxxPhM8gAkc&eventStart=null"
     },
     {
-      "id": "partssource-data-analyst",
-      "company": "Partssource",
-      "role": "Data Analyst",
-      "status": "rejected",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Important information about your application for the Data Analyst at PartsSource",
-      "latestFrom": "no-reply@partssource.com",
-      "lastActivityAt": "2026-08-27T17:44:22.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a036b997ed04207",
-      "gmailMessageIds": [
-        "1a036b997ed04207",
-        "1a04452a7113d3e2"
-      ],
-      "notes": "Tirth, Thank you again for your interest in PartsSource and taking the time to apply. Unfortunately, we have decided not to proceed with your candidacy for the Data Analyst opening at PartsSource. We received many qualified applicants and have decided to move ahead with another candidate who we feel is a better match for this particular position. Thanks again for your interest in PartsSource and we wish you luck in your search. Regards, PartsSource Tirth, Thank you again for your interest in PartsSource and taking the time to apply. Unfortunately, we have decided not to proceed with your candidacy for the Data Analyst opening at PartsSource. We received many qualified applicants and have decided to move ahead with another candidate who we feel is a better match for this particular position. Thanks again for your interest in PartsSource and we wish you luck in your search. Regards, PartsSource"
-    },
-    {
       "id": "con-edison-clean-energy-data-specialist",
       "company": "Con Edison",
       "role": "Clean Energy Data Specialist",
@@ -4841,42 +5950,6 @@
         "1a04367bb0c80c53"
       ],
       "notes": "Google Workspace <https://c.gle/ACT4xYzGcz0B7b8T8Zv_KqQlarclFuW7VFMcEil2TdtxuIYQEMOVzDT1egPv0gO7e_sBwIVi870x77WrcvxD61pqPyxznuk_HiPQdA3Rty2A4ELSiUZoeM3rOe76RXjIryOBHI86FGMjDtE_x4U-wCZIa0izdDsMt1FD2qfAlv-w2E4SBc8o8jRM0KiJ8_UuiiByb3iyAKNofgUOoLmhj69c_kJ52MBSishAExqcOHAowBZ4wtIAT01XTUXjBcUGBuU-NMHTR3Uh4VLm2RyNhpTQXlT-Gj-0XqWwXh5hKBHqAA> Complete your Workspace sign-up and get up to 50% off for 3 months Get premium versions of Gmail, Docs, Calendar, and more – plus AI-powered tools and the option to create a customized business email address. Pick up where you left off and complete your no-cost trial sign-up to see how Google Workspace can help your business grow Claim discount <https://c.gle/ACT4xYw4kjeStQf0Lt-z9ebhHeI9kQ99jUd5EyqTt81o3DjbkypmakoQnXRgyK1KTqcI_Cfx2g19dRMtMdZM_Q032ghzzk0YvyF6ZBQRg4uH65rYh92UrJV6C0anGMrv-V3I9DeE81gUwQ5LxViD4tz_IPz7ZbGA6qnyKmcEiGIQVSxQcZ-CDwKNaGmk3p43HrWbXUBQE9CALGuRYyfFbjBmKl59aEXROLAnGTmr4uiiC803JqokhfXT0PnU8XWzMKm2baYVqrW-pNTKKCtGgS6q7Y8TIu0-_HNYFaKethg2> Gmail inbox featuring a custom email address. <https://c.gle/ACT4xYzBORSz3QrPAlooReEUbMr6IOOrzqoLQHNV9turFrP4G6TX-NPsx3WwN-Yc0SCLzDmXTawWjc2KvWm17vycz7VF3HXks55KMG39AV2SmwSINJ6WCACWRxbnpFX-2gtXKUgSSV4ZZZeBYyuhy0QnybAAGcyk2r_xbUq0KJxBG0LNEgOM5MeTMlw0itsGgEpJcjfwiZ1aHQ_rB1VCP-UzUVRyCQt9JUyYVl3Yxb3Ab5L5UW-66XGuomTzhqwFuJfwBLGx-hcBp6soFH-drPPfHfHeXWWdKHUka-Y> Get a customized business email address Look more professional with a you@your-business.com email address. Set this up any time – or continue to use your current address. Image showing how AI with Gemini offers writing help prompts in Gmail and Docs. <https://c.gle/ACT4xYx8xsedWO7bwqW2b0_hfIMLP7fHtdEhoqI7BqLREmp57v9kx-KBFGMRX-wpxeaOrU6wdrRksVti70Id4WmNKh6-2H8-noTuDJ-jTuADrMQU3gYLGzyZwJTH-af4o-FhrXVekZyWvduPHt0b8ITf3tDDtIEvdnwn48z1gUulanclwTHUhtzcLjzytd1vsXKZGD3hSHLE75feGr3YHim_YBF-pqUa2DgA5Nyi1LRqXCf2bcYdzvJKk51Tbvwmpsb0yMZe6V19qqik_8sJbEYec6PhWNGLCL3I8vY> Use AI with Gemini in Workspace Gemini can help you write, search, summarize, and more – and it’s all built right into your Google Workspace apps, including Gmail, Docs, Sheets, Slides, and Drive. Image of appointment scheduling in Calendar. <https://c.gle/ACT4xYwQyJKEIz8J3TrAhqbeLFJur9uksEE-jjBGqj6Ox6WuLlZYwoqSVkEb6D2VJz5xv19JBL4xi3kshG06x9YQlkMdCgFTFsKQFun-cGYTGiIfC8xwlGAsyw2EsMkMKXqXX-DXfGdUPUc7EOMMYtSes4u3o_ApPKoURMVWRlvmKfoT7uzFEQwx88wxsITqbYJJgljIROCZRLRp-9afhGItcJDDhWO3TJQMK8w_MwcajAT1_aH44vE1LLLT4kBdr6mhHonyeUdhGapps86ZzIavlzyJnWxFlV0v-Lo> Enjoy seamless meeting scheduling Let customers easily book meetings with you - with advanced features like unlimited meeting types, automated reminders, booking payments, and customer email verification. A stylized document appears on screen, with eSignature being used to add a signature in the appropriate place. <https://c.gle/ACT4xYwld2K54m6fJxjHr1OG6N6_WQzLG-nOaV8qNhqHm2kNT7c7Y6Rbxf336SFpjJyOqnhEe86xTC3tgK2iFWXx3DxZeRYRtFcaiZi9lg0ZlnDtf0j9erB0JFihjThTO_defVhsq89UGTZaDQYXtRhFyN0Y4Chrqg4sflZOcKO2f1RSdo9xRBzQ915YYDSumJ"
-    },
-    {
-      "id": "urus-data-engineer",
-      "company": "URUS",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Your recent job application for Data Engineer - 2115",
-      "latestFrom": "careers@urus.org",
-      "lastActivityAt": "2026-08-27T13:14:01.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0435b24f2ae562",
-      "gmailMessageIds": [
-        "1a0435b24f2ae562"
-      ],
-      "notes": "Hello, Tirth, We received your job application for Data Engineer - 2115. If your profile corresponds to our requirements, a member of our Recruiting team will contact you. If you were requested to provide additional info about your job application, or if you want to manage your profile, go to your candidate self service page . Sincerely, URUS Group Recruiting Team"
-    },
-    {
-      "id": "urus-general-application",
-      "company": "URUS",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Confirm your identity",
-      "latestFrom": "careers@urus.org",
-      "lastActivityAt": "2026-08-27T13:12:17.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a043598c602deb9",
-      "gmailMessageIds": [
-        "1a043598c602deb9"
-      ],
-      "notes": "Hello , Just one more step before you get started. You must confirm your identity using the one-time pass code : 520318 Note : This code will expire in 10 minutes. Sincerely, URUS People Team"
     },
     {
       "id": "acco-general-application",
@@ -6640,31 +7713,6 @@
       "reason": "AI extracted"
     },
     {
-      "id": "fanatics-collectibles-analytics-engineer",
-      "company": "Fanatics Collectibles",
-      "role": "Analytics Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-26T13:05:19.000Z",
-      "latestSubject": "Thank you for applying to the Analytics Engineer role at Fanatics Collectibles",
-      "latestFrom": "no-reply@collectfanatics.com",
-      "gmailThreadId": "19f6a7af1c21e91a",
-      "gmailMessageIds": [
-        "19f6a7af1c21e91a",
-        "1a03e2cd176aeda8"
-      ],
-      "notes": "Hi Tirth, Thank you for applying to Fanatics Collectibles. We’ve received your application for the Analytics Engineer role and our team is currently reviewing your background. If your experience aligns with what we’re looking for, we’ll reach out with next steps. Thank you again for your interest in joining Fanatics Collectibles. — Fanatics Collectibles Talent Team Hi Tirth, Thank you for applying to Fanatics Collectibles. We&rsquo;ve received your application for the Analytics Engineer role and our team is currently reviewing your background. If your experience aligns with what we&rsquo;re looking for, we&rsquo;ll reach out with next steps. Thank you again for your interest in joining Fanatics Collectibles. &mdash; Fanatics Collectibles Talent Team",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
-    },
-    {
       "id": "mill-general-application",
       "company": "Mill",
       "role": "Data Engineer - Data Platform",
@@ -6755,25 +7803,6 @@
         "1a03e21538df86cb"
       ],
       "notes": "Reply above this line ------------------------------------------------------------------------------- Dear Tirth, Thank you very much for your recent application to the Data Engineer position at Delaware Nation Industries, Inc. Your resume will be reviewed by our recruiting staff, and we will contact you soon, should we feel that your background meets our current needs. ------------------------------------------------------------------------------- ------------------------------------------------------------------------------- ↑ Reply above this line Dear Tirth, Thank you very much for your recent application to the Data Engineer position at Delaware Nation Industries, Inc. Your resume will be reviewed by our recruiting staff, and we will contact you soon, should we feel that your background meets our current needs."
-    },
-    {
-      "id": "84-51-senior-data-engineer",
-      "company": "84.51°",
-      "role": "Senior Data Engineer",
-      "status": "rejected",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thank you for your interest in 84.51°",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-26T12:48:28.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a03470c1097a9ac",
-      "gmailMessageIds": [
-        "1a03470c1097a9ac",
-        "1a03e1d735338c41"
-      ],
-      "notes": "Hello, Thank you for taking the time to consider 84.51° for the next step in your career and taking the time to complete an application. We appreciate your investment of time exploring opportunities at 84.51°. Unfortunately, we have decided not to move forward with your candidacy. We wish you well in your career endeavors. Regards, 84.51° Recruiting Team Hello, Thank you for taking the time to consider 84.51&deg; for the next step in your career and taking the time to complete an application. We appreciate your investment of time exploring opportunities at 84.51&deg;. Unfortunately, we have decided not to move forward with your candidacy. We wish you well in your career endeavors. Regards, 84.51&deg; Recruiting Team"
     },
     {
       "id": "k-health-general-application",
@@ -7423,24 +8452,6 @@
         "1a03ce612b803cf5"
       ],
       "notes": "96 Hi Tirth, Thank you for applying for the role of R1537445 Senior Business Analyst . We truly appreciate your interest in the IQVIA family of companies and the effort you invested throughout the process. After careful review, we have decided not to move forward with your application at this time. Please know this decision does not diminish your potential for future opportunities at IQVIA. We encourage you to continue exploring career possibilities that align with your goals. If nothing is available right now, we value the opportunity to stay connected and invite you to join our Global Talent Network . Please note: This notification relates specifically to your application for the position R1537445 Senior Business Analyst . If you have applied to other roles, those applications may still be under review. We encourage you to regularly check your Candidate Home Account for updates on their status. Thank you again for your time and interest in the IQVIA family of companies. We wish you the very best in your job search and hope to connect with you in the future. Warm regards, Global Talent Acquisition Our Benefits Careers Blog Our Culture This email was intended for tirthcshah1999+workday-iqvia@gmail.com"
-    },
-    {
-      "id": "aaa-data-scientist-2",
-      "company": "AAA",
-      "role": "Data Scientist 2",
-      "status": "rejected",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "From AAA - Application Update for Data Scientist 2",
-      "latestFrom": "People Service Center <ace@myworkday.com>",
-      "lastActivityAt": "2026-08-26T07:04:39.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a03ce29ece6002e",
-      "gmailMessageIds": [
-        "1a03ce29ece6002e"
-      ],
-      "notes": "Tirth We appreciate the time you took to apply with us for the position of Data Scientist 2 . We received a large volume of resumes which created a very competitive candidate pool. We reviewed your information and decided to move forward with other applicants for this position. We invite you to explore other career opportunities now or in the future on our career site. You may be in consideration for other positions you have applied for, we encourage you to check the application status on https://careers.ace.aaa.com/us/en Thank you for your interest in our organization and we wish you all the best in your career pursuits. Sincerely, Talent Acquisition Team This email was intended for tirthcshah1999@gmail.com"
     },
     {
       "id": "markel-general-application",
@@ -11801,24 +12812,6 @@
       "reason": "AI extracted"
     },
     {
-      "id": "saic-ai-data-engineer",
-      "company": "SAIC",
-      "role": "AI Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Your recent job application for AI Data Engineer - 2616032",
-      "latestFrom": "SAIC Careers <careers@talent.saic.com>",
-      "lastActivityAt": "2026-08-24T23:01:46.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a036022b9522b74",
-      "gmailMessageIds": [
-        "1a036022b9522b74"
-      ],
-      "notes": "Hello Tirth, We received your job application for AI Data Engineer - 2616032. If your profile corresponds to our requirements, a member of our Recruiting team will contact you. If you were requested to provide additional info about your job application, or if you want to manage your profile, go to your candidate self service page . Sincerely, SAIC Recruiting Team"
-    },
-    {
       "id": "protera-health-senior-data-engineer",
       "company": "Protera Health",
       "role": "Principal Software Engineer",
@@ -11854,24 +12847,6 @@
         "1a03601d77b992c2"
       ],
       "notes": "Hi Tirth, Thank you for your interest in the AI Enablement Engineer role at Replicant. We appreciate you taking the time to apply and for your interest in joining our team. Our team is currently reviewing applications. If your experience aligns with what we’re looking for, we’ll be in touch regarding next steps. If this role isn’t the right fit at this time, we encourage you to continue exploring opportunities on our https://jobs.ashbyhq.com/Replicant page as we grow and add new roles. Best, Replicant Hi Tirth , Thank you for your interest in the AI Enablement Engineer role at Replicant. We appreciate you taking the time to apply and for your interest in joining our team. Our team is currently reviewing applications. If your experience aligns with what we’re looking for, we’ll be in touch regarding next steps. If this role isn’t the right fit at this time, we encourage you to continue exploring opportunities on our careers page as we grow and add new roles. Best, Replicant"
-    },
-    {
-      "id": "saic-general-application",
-      "company": "SAIC",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Confirm your identity",
-      "latestFrom": "SAIC Careers <careers@talent.saic.com>",
-      "lastActivityAt": "2026-08-24T23:00:44.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a036013c90f241b",
-      "gmailMessageIds": [
-        "1a036013c90f241b"
-      ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 566044 Note : This code will expire in 10 minutes. Sincerely, SAIC Recruiting Team."
     },
     {
       "id": "ramp-gtm-senior-business-systems-analyst",
@@ -11945,24 +12920,6 @@
         "1a035f8d184280cc"
       ],
       "notes": "Click this link to confirm your email address and complete setup for your candidate account https://modernatx.wd1.myworkdayjobs.com/m_tx/activate/kv7cjafkg75w7tpuveqlbcu4ulykwcnavxfxi5fbyvt8w7l5kkhi0mpsq99r6w119v58jm184kxukqx7xzzs2mhy1nvy7astfm2/?redirect=%2Fm_tx%2Fjob%2Fcambridge-massachusetts%2Fsr-software-engineer--enterprise-ai-enablement-engineer_r19669%2Fapply%2FapplyManually The link will expire after 24 hours. Workday This email was intended for tirthcshah1999@gmail.com"
-    },
-    {
-      "id": "bdo-lead-data-engineer-tax-product-development",
-      "company": "BDO",
-      "role": "Lead Data Engineer - Tax Product Development",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Your recent job application for Lead Data Engineer - Tax Product Development - 13654",
-      "latestFrom": "BDO Careers <join-our-team@careers.bdo.com>",
-      "lastActivityAt": "2026-08-24T22:50:17.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a035f7ac08cc519",
-      "gmailMessageIds": [
-        "1a035f7ac08cc519"
-      ],
-      "notes": "Hello Tirth, Thank you for your interest in BDO! Our Talent Acquisition Team is reviewing your resume and will be in touch with you soon. You can check your status at any time via the Candidate Self-Service page. In the meantime, you can stay connected a few different ways : General Consideration Req - Apply to be considered for upcoming roles that match your skills and interests. BDO’s Talent Community - Join to be informed of the latest happenings at BDO, engaging stories from our team, and opportunities that match your professional interests. Strategic Resources Talent Community. - Join to learn about contract opportunities. Public Sector Talent Community. - Join to learn about our government sector. EBA Talent Community - Join to learn about our Enterprise Business Applications team. Sincerely, BDO Talent Acquisition Team"
     },
     {
       "id": "arta-finance-software-engineer-data-infrastructure-and-performance-metrics",
@@ -13632,24 +14589,6 @@
       "notes": "Dear Tirth, Thank you for your interest in a career at Church Pension Group Services Corporation. We have received your application for Director ETL and Data Engineering. You will be contacted if we would like to move forward with your application. Please do not reply to this message. This email is an automated notification, and the email address generating the message is unable to receive incoming mail. Regards, Human Resources Church Pension Group -*_____ You can reply directly to this message or click here to reply via your Jobvite user account. Email Preferences | Powered by Jobvite *______*"
     },
     {
-      "id": "opendatajobs-data-engineer",
-      "company": "Opendatajobs",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thanks for applying to OpenDataJobs",
-      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
-      "lastActivityAt": "2026-08-24T15:46:32.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a03473b9634a5dc",
-      "gmailMessageIds": [
-        "1a03473b9634a5dc"
-      ],
-      "notes": "OpenDataJobs ------------------------------------------------------------------------------- Your application for the Data Engineer Role job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Headline: Data Engineer with 4+ years of experience in building scalable data platforms across multiple cloud environments Phone: +19796352045 Address: Raleigh, North Carolina ** PROFILE ** Resume: Tirth_Shah_Resume.pdf ** DETAILS ** Cover letter Dear Hiring Manager, I've been working across data, AI, and cloud projects for a few years now, and your Data Engineer role at OPENDataJobs caught my eye. I know I can bring practical experience from designing AI architectures at HCLTech, building analytics platforms at TAMU, and optimizing ETL pipelines at Texas A&M UES. I’ve built systems that handle complex workflows—like multi-agent orchestration with NWDAF signals, a data warehouse with over 17 tables and spend analysis tools, and a daily energy data pipeline that shrank report generation from hours to minutes. I’ve also contributed to winning a TAMU Datathon with an OCR/LLM classifier, which shows I can turn innovative ideas into real results while ensuring data quality, lineage, and secure handling. I’d bring a strong mix of software engineering, data management, and project ownership—ready to help your team tackle whatever comes next in building and operating dependable data pipelines and platforms that empower AI and analytics. Sincerely, Tirth Shah Answers [\"No\"] Many of our clients support federal agencies in work that requires U.S. citizenship. Are you a United States citizen? In which countries are you currently authorized to work without employer sponsorship? Enter N/A if none. United States [\"Yes\"] Willing to undergo a standard pre-employment background check? List any current U.S. government security clearance you hold, including the level. Enter None if you do not currently hold one. None Enter your undergraduate major(s) or primary field(s) of study and the educational institution(s) attended. If you did not attend an undergraduate program, enter N/A. Computer Engineering at Gujarat Technological University Enter your cumulative undergraduate grade point average and the grading scale used, for example, 3.2 on a 4.0 scale. If you did not attend an undergraduate program or your institution did not calculate a cumulative GPA, enter N/A and briefly explain. 9.50/10.00 We ask you to report one standardized admissions or entrance test score, such as the SAT, ACT, GRE, GMAT, or ASVAB. Which test are you reporting? None Enter the month and year of the test and the score you received. If you selected Other, identify the test. If you selected None, enter None. None [\"Yes\"] If you choose to be considered for a specific opening, can you provide professional references at tha"
-    },
-    {
       "id": "wingstop-data-engineer",
       "company": "Wingstop",
       "role": "Senior Engineer - Data",
@@ -14158,25 +15097,6 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
-    },
-    {
-      "id": "steampunk-senior-data-engineer-databricks",
-      "company": "Steampunk",
-      "role": "Senior Data Engineer - Databricks",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "You've started your job application!",
-      "latestFrom": "steampunk recruiting <steampunk+autoreply@talent.icims.com>",
-      "lastActivityAt": "2026-08-24T15:39:01.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0346cd45fa8593",
-      "gmailMessageIds": [
-        "1a0346cd45fa8593",
-        "1a0346ca50fc74f9"
-      ],
-      "notes": "Dear Tirth, Thanks for starting your application for job: Senior Data Engineer - Databricks If you lose track of the job application process please follow this link to return to the job application: https://tracking.icims.com/f/a/Bz49BcPqUH149uhQV-3Pwg~~/AAIB5hA~/ECQjO40EUBUZlO1f8G04iHUMeAJDMZ2jscdwqRyMMjGQxAq0D_00KqIRjyaJvhXlBUP6KnEZJ995MaOcrbin9GnM8Qmcp5gH8ny_61xeRLgcx_qnWJWqSmnenfS04h6Duuewz3DwbOr2Ox4iPaLFVw~~ ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/F41RybDBYvlNZ1h8yDHOaQ~~/AAIB5hA~/aAcKEyA4S1KQ7Cv_Q-lArrwTfaB99dFW1Qk5k5dLqqILyLYMhwX12NFQ7t1f56brvMBHZxh4vFTHOWcscDc-hMDoAgb4AbxyVSBttDXPVvxDa_YNKoyfzXElU6pM-VyZPLyavOac5nm24iAHu1AGWWdRgmNl8TSupiziP6dsoGtsOL8Z9L26XdoY6aKr7GGq /n &#169; steampunk, Inc.; 1753 Pinnacle Drive, 9th Floor, Mclean, VA 22102; USA/n Dear Tirth, Thanks for starting your application for job: Senior Data Engineer - Databricks If you lose track of the job application process please follow this link to return to the job application: https://careers-steampunk.icims.com/r.jsp?p=8016 This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://steampunk.icims.com/icims2/?r=5F69216640&contactId=1621271&pid=17 &#169; steampunk, Inc.; 1753 Pinnacle Drive, 9th Floor, Mclean, VA 22102; USA"
     },
     {
       "id": "tiger-analytics-senior-data-engineer",
@@ -15418,25 +16338,6 @@
       "notes": "Hi Tirth, We appreciate you taking the time to submit an application for the Data Engineer position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic Hi Tirth, We appreciate you taking the time to submit an application for the Data Engineer position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic"
     },
     {
-      "id": "charles-schwab-data-engineer",
-      "company": "Charles Schwab",
-      "role": "Data Engineer",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "You've started your job application at Charles Schwab Corporation and its subsidiaries",
-      "latestFrom": "\"Charles Schwab Corporation @ icims\" <schwab+autoreply@talent.icims.com>",
-      "lastActivityAt": "2026-08-24T09:15:46.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0330df3411d924",
-      "gmailMessageIds": [
-        "1a0330df3411d924",
-        "1a0330a3aff167d9"
-      ],
-      "notes": " Hi Tirth, We are excited about your interest in engaging your unique talents at Charles Schwab Corporation and its subsidiaries! Thanks for starting your application for job: Data Engineer. Please follow this link to complete your application: https://tracking.icims.com/f/a/URl6SUzujMfDZP1TRfRpAQ~~/AAIB5hA~/OM2-ui88LxQMegjahaoa5z9gIg2s5J_MJ130JI83sBliShYmyGSrbGY9578wC6tAutfUQLEOz_aR7Vac9QBR9TJURP_O5KzuXTRpIFYmJbjNYaSTh7HTvxz3xHHbPC-_cVzcNiWXyYypQotk2mqLBA~~. Have questions about our hiring process? Visit our How We Hire page for application tips and job candidate FAQs. Thank you! Charles Schwab Talent Acquisition Charles Schwab & Co., Inc. ************************************************** If you no longer wish to receive e-mail from Charles Schwab, click here: https://tracking.icims.com/f/a/kY0T021DW27OPpAw32S_uA~~/AAIB5hA~/gFZS2q4iw2GgVscZmqTfpNcZE4O7LCtLTp7gTJPV8dkphSSDq6SlbpkQ2pdkEXOov6zZdGCq3V2KdrTrKQngeVg1KsmnUHOMqNFnhO4ptYm8p6opAuxIJ96o-yLfWdvyXcohQQuczC1doJR0p4vFgUL1ICzL6cje7smnmp6k0gY6PHZyjiGgZMPiCOab1Xnl &#169; <div style=\"text-align: left;\"> PLEASE DO NOT REPLY TO THIS MESSAGE. This email was sent from a notification-only address that cannot accept incoming e-mail. <br> NOTICE: All email sent to or from the Charles Schwab email system is subject to archiving, monitoring and/or review by Schwab personnel. </div>/n Hi Tirth, We are excited about your interest in engaging your unique talents at Charles Schwab Corporation and its subsidiaries! Thanks for starting your application for job: Data Engineer. Please follow this link to complete your application: https://career-schwab.icims.com/r.jsp?p=125139 . Have questions about our hiring process? Visit our How We Hire page for application tips and job candidate FAQs. Thank you! Charles Schwab Talent Acquisition Charles Schwab & Co., Inc. If you no longer wish to receive e-mail from Charles Schwab, click here: https://schwab.icims.com/icims2/?r=96691656795&contactId=19115626&pid=97 &#169; PLEASE DO NOT REPLY TO THIS MESSAGE. This email was sent from a notification-only address that cannot accept incoming e-mail. NOTICE: All email sent to or from the Charles Schwab email system is subject to archiving, monitoring and/or review by Schwab personnel."
-    },
-    {
       "id": "flexjet-general-application",
       "company": "Flexjet",
       "role": "General Application",
@@ -16224,29 +17125,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "newrez-general-application",
-      "company": "Newrez",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-22T07:57:20+00:00",
-      "latestSubject": "Thank You for Applying",
-      "latestFrom": "newrez@myworkday.com",
-      "gmailThreadId": "1a028772d0f36012",
-      "gmailMessageIds": [
-        "1a028796bba22447",
-        "1a028772d0f36012"
-      ],
-      "notes": "96 Dear Tirth , Thank you for your interest in a career with The Newrez Family of Companies. We have received your application for Sr Escrow Data Analyst (On-site) . What happens now? We will review your application and will contact you if it is a good match. In the meantime, to view the status of your application, please go to the following link and log into your candidate home: https://newrez.wd1.myworkdayjobs.com/NRZ Sincerely, The Recruiting Team © 2026 Newrez LLC, 1100 Virginia Dr, Suite 125, Fort Washington, PA 19034. 1-888-673-5521. NMLS #3013. For licensing information, go to: www.nmlsconsumeraccess.org. Equal Employment Opportunity. This email was intended for tirthcshah1999@gmail.com 96 Dear Tirth , Thank you for your interest in a career with The Newrez Family of Companies. We have received your application for Business Analyst - Default Systems & Support . What happens now? We will review your application and will contact you if it is a good match. In the meantime, to view the status of your application, please go to the following link and log into your candidate home: https://newrez.wd1.myworkdayjobs.com/NRZ Sincerely, The Recruiting Team © 2026 Newrez LLC, 1100 Virginia Dr, Suite 125, Fort Washington, PA 19034. 1-888-673-5521. NMLS #3013. For licensing information, go to: www.nmlsconsumeraccess.org. Equal Employment Opportunity. This email was intended for tirthcshah1999@gmail.com",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "ATS application receipt confirmation",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:30.038+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "credit-acceptance-general-application",
       "company": "Credit Acceptance",
       "role": "General Application",
@@ -16987,28 +17865,6 @@
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:01:19.176+00:00",
       "aiConfidence": "medium"
-    },
-    {
-      "id": "spectrum-senior-business-planning-analyst",
-      "company": "Spectrum",
-      "role": "Senior Business Planning Analyst",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-21T14:58:53+00:00",
-      "latestSubject": "Tirth, Thank You for Applying to Spectrum",
-      "latestFrom": "Charter Hire <charter+autoreply@talent.icims.com>",
-      "gmailThreadId": "1a024d5035b7335a",
-      "gmailMessageIds": [
-        "1a024d5035b7335a"
-      ],
-      "notes": " Hi Tirth, Thanks for applying to Spectrum. We’ve received your application for the Senior Business Planning Analyst role. Our team is reviewing applications now and we’ll reach out with next steps if your experience looks like a good fit. Want to learn more while you wait? - Check out what to expect in our application and interview process here. - Explore our careers blogfor stories and insights from people across Spectrum. Protecting yourself from job scams Be aware of the signs of a fraudulent job opportunity. - All job listings will be listed on our official careers site: https://tracking.icims.com/f/a/KQCd3ACJKPRpwfLbdoYycw~~/AAIB5hA~/IrOJsE_CUdxiziWf9KUF4bTydzfgU1Gu7L2jdgbbVku0RYj47TuE-JHc8bpdaCmXhQ0J1b6mq3nKkpr5LAnZmx4ukBb-263-w8iU6JaR5cNAzBGJkP2NfdW63KrYy6xl interviews are required for all roles - We will never ask a candidate to make a financial commitment or ask for personal, financial, or banking details during the job search or application process. - Obtaining equipment or supplies won't be required during your interview process. Learn more about recognizing job scams here. All communications related to your application will come from an official charter. com email address or one of the following domains: @spectrumrecruits.com, charter+autoreply@talent.icims.com, SpectrumAssessments@assessment.modernhire.com or noreply@mail.modernhire.com. Thanks again for your interest, Spectrum Recruiting https://tracking.icims.com/f/a/0l4YWMAFV2Ra0wSmMIBDzw~~/AAIB5hA~/Gq-gWVz8BjkmZ3TJX1SlHZayiHp2WvGSR_SH_Tg9aV1nd37jtfAPdaL0Z3L6PMreApw17n2vrpPvpBIwS1ML36tPhmylLAxbVLWYd1lLOKpS3_gR32ttNwiShaHR4hP8 ***************************** CONNECT TO MORE Application Process | Application Status | Recruiting Events | Interview Tips ***************************** This email is an automated notification and is unable to receive replies. To view your application status, please log into your candidate dashboard. ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/Qv7wgic0t-GdMUiIz8qF8w~~/AAIB5hA~/_6zNbsbTQm0GuJLYpmqnJZrfjlqPhlcjDmcdcwv_AS6GLiavE1BGXOI93Nef7yNvIPAJ7sc9xRozssZBxViHGKh2oEJWRlzsY-_Rt5eIWsJs-xW6z1GopQ16yp7K5h-sKIM-9NT-i0jVxIZVsj0Y9FkEkNsQ72eqlxigF0iISF0hvGW5zIY0JJzfRXzSDe6m /n &#169; Charter Communications Operating, LLC, Stamford, CT USA/n ",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "ATS Application Receipt: confirmation of application submission",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:19.176+00:00",
-      "aiConfidence": "high"
     },
     {
       "id": "jobright-data-reporting-analyst-developer",
@@ -22948,30 +23804,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "msg-1a00fad705d3cd63",
-      "company": "AbbVie",
-      "role": "Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-17T12:23:38+00:00",
-      "latestSubject": "AbbVie Application Received - Thank you!",
-      "latestFrom": "AbbVie <notification@talentacquisition.abbvie.com>",
-      "gmailThreadId": "1a00fad705d3cd63",
-      "gmailMessageIds": [
-        "1a00fad705d3cd63",
-        "19ff5d4ebdbeca71",
-        "19ff5cbc0db355b6"
-      ],
-      "notes": "​Dear Tirth, Thank you for applying for the Data Engineer, PDS&amp;T CMC-R00148626 position at AbbVie. We will review your experience and qualifications and if they match our requirements, a member of",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high"
-    },
-    {
       "id": "msg-1a00fa81c599a14e",
       "company": "Aspirant",
       "role": "General Application",
@@ -23655,28 +24487,6 @@
         "1a00d1ba40fa680f"
       ],
       "notes": "Hello Tirth, Thank you for exploring new career opportunities with American Express! Your application for the position of AI Engineer III - Agentic AI has been received. While we review your",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-1a00d1b7a2471b73",
-      "company": "Uber",
-      "role": "Software Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-17T00:24:59+00:00",
-      "latestSubject": "Your recent job application for 300760 - Software Engineer",
-      "latestFrom": "Uber Talent <Talent@uber.com>",
-      "gmailThreadId": "1a00d1b7a2471b73",
-      "gmailMessageIds": [
-        "1a00d1b7a2471b73"
-      ],
-      "notes": "Uber Hi Tirth, We&#39;ve received your application for the Software Engineer - 300760 role. If your experience aligns with what the team is looking for a member of our Talent Acquisition team will be",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -34108,28 +34918,6 @@
         "19fb827f67d5323d"
       ],
       "notes": "Hi Tirth, We are pleased to inform you that we have received your application for the Mid/Senior Data Engineer position at Yassir. Thanks for considering us in your job search. Our team is reviewing",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19fb827511f83ded",
-      "company": "Goldman Sachs",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-31T12:30:09+00:00",
-      "latestSubject": "Thank You for Applying to Goldman Sachs",
-      "latestFrom": "Goldman Sachs Recruiting <GSRecruiting@oracle.com>",
-      "gmailThreadId": "19fb827511f83ded",
-      "gmailMessageIds": [
-        "19fb827511f83ded"
-      ],
-      "notes": "Hi Tirth Shah, Thank you for your application. A member of our recruiting team will reach out if your experience and skills are a match for this opportunity. Please be aware that timelines for review",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -45993,28 +46781,6 @@
         "19f655aebbf3f2d5"
       ],
       "notes": "Hi Tirth, Thank you for your interest in Stitch Fix! We received your application for the Data Engineer position. The recruiter for this position will be reviewing your application and we&#39;ll get",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19f655a099138ba1",
-      "company": "Together AI",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-07-15T10:37:06+00:00",
-      "latestSubject": "Thank you for applying to Together AI",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19f655a099138ba1",
-      "gmailMessageIds": [
-        "19f655a099138ba1"
-      ],
-      "notes": "Tirth, Thanks for applying to Together AI. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon.",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
