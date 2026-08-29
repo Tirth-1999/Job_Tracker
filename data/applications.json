@@ -1,6 +1,110 @@
 {
-  "updatedAt": "2026-08-29T13:11:35.665Z",
+  "updatedAt": "2026-08-29T14:01:34.679Z",
   "applications": [
+    {
+      "id": "zensearch-general-application",
+      "company": "Zensearch",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-08-29T14:00:26.000Z",
+      "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
+      "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
+      "gmailThreadId": "19f8fad583128220",
+      "gmailMessageIds": [
+        "19f8fad583128220",
+        "1a03e5f4e7227dd1",
+        "1a04385a494c8b02",
+        "1a048abfb4d66802",
+        "1a04dd25f2762916"
+      ],
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer, Growth Superhuman Hub - San Francisco, CA, Hub - Seattle, WA, Seattle, WA, CA Full time $190k - $240k 3+ years Hub - San Francisco, CA, Hub - Seattle, WA, Seattle, WA, CA Full time $190k - $240k 3+ years DevOps Engineer Bloomerang Indianapolis, IN Full time $98k - $130k 3+ years Indianapolis, IN Full time $98k - $130k 3+ years Data Engineer (Fully Remote) PadSplit Atlanta, GA, GA Full time $150k - $165k Atlanta, GA, GA Full time $150k - $165k Senior DevOps Engineer Level99 Entertainment Greater Boston, MA, MA Full time $150k - $170k Greater Boston, MA, MA Full time $150k - $170k Forward Deployed Engineer Sweed Remote, US Full time 2+ years Remote, US Full time 2+ years Associate Data Engineer (College Grad 2027) Solace Redwood City, CA, CA Full time Redwood City, CA, CA Full time Forward Deployed Engineer, Ecosystem - Tavily Nebius New York, NY, NY Full time $140k - $183k 3+ years New York, NY, NY Full time $140k - $183k 3+ years Data Engineer Benchling San Francisco, CA Full time $83k - $207k 3+ years San Francisco, CA Full time $83k - $207k 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Review / Other",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
+      "id": "bank-of-hawaii-senior-technical-data-analyst-ii",
+      "company": "Bank Of Hawaii",
+      "role": "Senior Technical Data Analyst II",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application for the Senior Technical Data Analyst II has been received",
+      "latestFrom": "enlf.fa.sender@workflow.email.us-phoenix-1.ocs.oraclecloud.com",
+      "lastActivityAt": "2026-08-29T13:49:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04dc86a7a83b51",
+      "gmailMessageIds": [
+        "1a04dc86a7a83b51"
+      ],
+      "notes": "View in Browser Aloha Tirth, Your job application has been received for our Senior Technical Data Analyst II position. If you meet the position requirements, a member of our Recruiting team will contact you. Please visit your candidate self service page to view the status of your application(s) and/or manage your candidate profile as needed. Thank you, Bank of Hawaii People Services"
+    },
+    {
+      "id": "superhuman-data-engineer-growth",
+      "company": "Superhuman",
+      "role": "Data Engineer, Growth",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your application for Data Engineer, Growth  at Superhuman",
+      "latestFrom": "Superhuman Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-08-29T13:49:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04dc830115807e",
+      "gmailMessageIds": [
+        "1a04dc830115807e"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in Superhuman and for taking the time to apply for the Data Engineer, Growth position. We’re looking forward to reviewing your application materials and learning more about you! If there’s an appropriate match, we’ll contact you to discuss next steps. Once again, thank you for considering Superhuman in your job search. Best, The Superhuman Recruiting team Grammarly is now part of Superhuman, the AI productivity platform on a mission to unlock the superhuman potential in everyone. The Superhuman suite of apps and agents brings AI wherever people work, integrating with over 1 million applications and websites. Learn more at http://superhuman.com. Hi Tirth , Thank you for your interest in Superhuman and for taking the time to apply for the Data Engineer, Growth position. We’re looking forward to reviewing your application materials and learning more about you! If there’s an appropriate match, we’ll contact you to discuss next steps. Once again, thank you for considering Superhuman in your job search. Best, The Superhuman Recruiting team Grammarly is now part of Superhuman, the AI productivity platform on a mission to unlock the superhuman potential in everyone. The Superhuman suite of apps and agents brings AI wherever people work, integrating with over 1 million applications and websites. Learn more at superhuman.com ."
+    },
+    {
+      "id": "bank-of-hawaii-general-application",
+      "company": "Bank Of Hawaii",
+      "role": "General Application",
+      "reqId": null,
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "enlf.fa.sender@workflow.email.us-phoenix-1.ocs.oraclecloud.com",
+      "lastActivityAt": "2026-08-29T13:49:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04dc82cbb493ed",
+      "gmailMessageIds": [
+        "1a04dc82cbb493ed"
+      ],
+      "notes": "View in Browser Aloha Tirth, You’re almost there! Just one more step before you get started. Please confirm your identity using the one-time passcode : 675338 (note: this code will expire in 10 minutes) Thank you, Bank of Hawaii People Services."
+    },
+    {
+      "id": "bank-of-hawaii-senior-technical-data-analyst-ii-erence",
+      "company": "Bank Of Hawaii",
+      "role": "Senior Technical Data Analyst II",
+      "reqId": "erence",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity for the Senior Technical Data Analyst II position - 3003441",
+      "latestFrom": "enlf.fa.sender@workflow.email.us-phoenix-1.ocs.oraclecloud.com",
+      "lastActivityAt": "2026-08-29T13:49:15.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04dc8228fa6c80",
+      "gmailMessageIds": [
+        "1a04dc8228fa6c80"
+      ],
+      "notes": "View in Browser Aloha Tirth, Thank you for your interest in the Senior Technical Data Analyst II position at Bank of Hawai‘i. For your reference, the requisition number is: 3003441. Please confirm your identity so that we can process the next steps of your job application. Confirm your identity using this code: 169540. (note: this code expires in 10 minutes) You can manage your profile and application through your candidate self service page . If you received this message in error, please notify us by clicking here . Thank you, Bank of Hawaii People Services"
+    },
     {
       "id": "walmart-data-engineer-iii",
       "company": "Walmart",
@@ -3056,33 +3160,6 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
-    },
-    {
-      "id": "zensearch-general-application",
-      "company": "Zensearch",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-28T14:00:25.000Z",
-      "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
-      "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
-      "gmailThreadId": "19f8fad583128220",
-      "gmailMessageIds": [
-        "19f8fad583128220",
-        "1a03e5f4e7227dd1",
-        "1a04385a494c8b02",
-        "1a048abfb4d66802"
-      ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Senior Data Engineer - Revenue Data Platform Datadog Boston, MA, New York, NY, MA Full time $192k - $240k Boston, MA, New York, NY, MA Full time $192k - $240k Data Engineer Navan Dallas, TX, TX Full time 2+ years Dallas, TX, TX Full time 2+ years Data Engineer 1, Operational Technology - Operations #4941 Grail Durham, NC, NC Full time $86k - $106k 1+ years Durham, NC, NC Full time $86k - $106k 1+ years Junior Data Engineer (DEA) Hatch IT Arlington, VA, VA Full time 1+ years Arlington, VA, VA Full time 1+ years Senior Forward Deployed Engineer (CDC) Skylight Digital Remote, US Full time $90k - $230k Remote, US Full time $90k - $230k Lead Data Engineer Atticus Los Angeles, CA Full time $174k - $230k 4+ years Los Angeles, CA Full time $174k - $230k 4+ years Forward Deployed Engineer, Public Sector Domino Data Lab Remote, US Full time $175k - $220k Remote, US Full time $175k - $220k Forward Deployed Engineer Vinmar Remote, US Full time Remote, US Full time See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
     },
     {
       "id": "cerebras-systems-senior-data-engineer-data-platform",
