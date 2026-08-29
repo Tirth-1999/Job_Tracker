@@ -245,8 +245,25 @@ export default async function handler(req, res) {
   try {
     let aiResponse;
     let attempts = 0;
+    let useJsonFormat = true;
+
     while (attempts < 3) {
       attempts++;
+      const requestBody = {
+        model: chosenModel,
+        messages: [
+          { role: "system", content: SYSTEM_PROMPT },
+          {
+            role: "user",
+            content: `Analyze and classify the following batch of ${inputPayload.length} job applications:\n${JSON.stringify(inputPayload, null, 2)}`
+          }
+        ],
+        temperature: 0.1
+      };
+      if (useJsonFormat) {
+        requestBody.response_format = { type: "json_object" };
+      }
+
       aiResponse = await fetch(OPENROUTER_API_URL, {
         method: "POST",
         headers: {
@@ -255,19 +272,14 @@ export default async function handler(req, res) {
           "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
           "X-Title": "Job Tracker Master AI Auditor"
         },
-        body: JSON.stringify({
-          model: chosenModel,
-          messages: [
-            { role: "system", content: SYSTEM_PROMPT },
-            {
-              role: "user",
-              content: `Analyze and classify the following batch of ${inputPayload.length} job applications:\n${JSON.stringify(inputPayload, null, 2)}`
-            }
-          ],
-          temperature: 0.1,
-          response_format: { type: "json_object" }
-        })
+        body: JSON.stringify(requestBody)
       });
+
+      if (aiResponse.status === 400 && useJsonFormat) {
+        // Some free models do not support response_format: { type: "json_object" }
+        useJsonFormat = false;
+        continue;
+      }
 
       if (aiResponse.status === 429 && attempts < 3) {
         await new Promise((r) => setTimeout(r, 1500 * attempts));
@@ -286,18 +298,35 @@ export default async function handler(req, res) {
     const aiJson = await aiResponse.json();
     const rawContent = aiJson.choices?.[0]?.message?.content || "{}";
 
-    let parsedResults = [];
-    try {
-      const parsed = JSON.parse(rawContent);
-      parsedResults = parsed.results || parsed.applications || (Array.isArray(parsed) ? parsed : []);
-    } catch (parseErr) {
-      // Fallback regex extractor if LLM returned markdown codeblock
-      const jsonMatch = rawContent.match(/\{[\s\S]*\}/);
-      if (jsonMatch) {
-        const parsed = JSON.parse(jsonMatch[0]);
-        parsedResults = parsed.results || parsed.applications || [];
+    function extractJsonFromContent(text) {
+      if (!text) return [];
+      let clean = text.trim();
+      // Remove markdown code fences if present: ```json ... ``` or ``` ... ```
+      const fenceMatch = clean.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
+      if (fenceMatch) clean = fenceMatch[1].trim();
+      try {
+        const parsed = JSON.parse(clean);
+        return parsed.results || parsed.applications || (Array.isArray(parsed) ? parsed : []);
+      } catch {
+        const objMatch = clean.match(/\{[\s\S]*\}/);
+        if (objMatch) {
+          try {
+            const parsed = JSON.parse(objMatch[0]);
+            return parsed.results || parsed.applications || (Array.isArray(parsed) ? parsed : []);
+          } catch {}
+        }
+        const arrMatch = clean.match(/\[[\s\S]*\]/);
+        if (arrMatch) {
+          try {
+            const parsed = JSON.parse(arrMatch[0]);
+            return Array.isArray(parsed) ? parsed : [];
+          } catch {}
+        }
       }
+      return [];
     }
+
+    const parsedResults = extractJsonFromContent(rawContent);
 
     return res.status(200).json({
       success: true,

@@ -124,10 +124,13 @@ async function main() {
       continue;
     }
 
+    const reqId = extractRequisitionId(`${item.parsed.subject || ""} ${item.parsed.body || ""}`);
+
     upsertApplication(data, {
-      id: makeApplicationId(item.company, item.role),
+      id: makeApplicationId(item.company, item.role, reqId),
       company: item.company,
       role: item.role || "General Application",
+      reqId: reqId || null,
       status: item.status,
       confidence: item.confidence || "medium",
       classifier: item.classifier || "openrouter",
@@ -1139,12 +1142,23 @@ function titleCase(value) {
     .join(" ");
 }
 
-function makeApplicationId(company, role) {
+function makeApplicationId(company, role, reqId) {
+  if (reqId) {
+    return slugify(`${company}-${role}-${reqId}`);
+  }
   return slugify(`${company}-${role}`);
 }
 
 function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || `app-${Date.now()}`;
+}
+
+function normalizeRoleName(role) {
+  if (!role) return "general";
+  let r = String(role).toLowerCase().trim();
+  r = r.replace(/[^a-z0-9]/g, "");
+  if (r.includes("general") || r.includes("unknown") || r.length < 3) return "general";
+  return r;
 }
 
 function extractRequisitionId(text) {
@@ -1181,26 +1195,42 @@ function upsertApplication(data, incoming) {
     incoming.status = "not_related";
   }
 
-  const incomingReqId = extractRequisitionId(`${incoming.latestSubject || ""} ${incoming.notes || ""}`);
+  const incomingReqId = incoming.reqId || extractRequisitionId(`${incoming.latestSubject || ""} ${incoming.notes || ""}`);
   const incomingCompNorm = normalizeComp(incoming.company);
+  const incomingRoleNorm = normalizeRoleName(incoming.role);
   const incomingMsgIds = new Set(incoming.gmailMessageIds || []);
 
   const STATUS_PRIORITY = { offered: 6, interviewed: 5, reply_needed: 4, applied: 3, rejected: 2, not_related: 1 };
 
-  // Match existing by ID, threadId, messageId overlap, requisition ID, or active stages for same company
+  // Match existing by ID, threadId, messageId overlap, requisition ID, or stage progression for same role
   const existing = data.applications.find((app) => {
     if (app.id === incoming.id) return true;
     if (incoming.gmailThreadId && app.gmailThreadId && app.gmailThreadId === incoming.gmailThreadId) return true;
     if ((app.gmailMessageIds || []).some((mid) => incomingMsgIds.has(mid))) return true;
+
     const appCompNorm = normalizeComp(app.company);
     if (appCompNorm && incomingCompNorm && appCompNorm === incomingCompNorm) {
-      const appReqId = extractRequisitionId(`${app.latestSubject || ""} ${app.notes || ""}`);
-      if (appReqId && incomingReqId && appReqId === incomingReqId) return true;
+      const appReqId = app.reqId || extractRequisitionId(`${app.latestSubject || ""} ${app.notes || ""}`);
+
+      // Strict Conflict Guard 1: If both have Requisition IDs and they differ -> DO NOT MERGE!
+      if (appReqId && incomingReqId && appReqId.toLowerCase() !== incomingReqId.toLowerCase()) return false;
+      // If both have the same non-empty Requisition ID -> MERGE!
+      if (appReqId && incomingReqId && appReqId.toLowerCase() === incomingReqId.toLowerCase()) return true;
+
+      // Strict Conflict Guard 2: If both have specific non-generic roles and they differ -> DO NOT MERGE!
+      const appRoleNorm = normalizeRoleName(app.role);
+      if (appRoleNorm !== "general" && incomingRoleNorm !== "general" && appRoleNorm !== incomingRoleNorm) {
+        return false;
+      }
+
+      // Stage progression check for the same role:
       if (app.status === "offered" || incoming.status === "offered") return true;
       if (app.status === "interviewed" || incoming.status === "interviewed") return true;
       if (app.status === "reply_needed" || incoming.status === "reply_needed") return true;
       if ((app.status === "rejected" && incoming.status === "applied") || (app.status === "applied" && incoming.status === "rejected")) return true;
-      if (app.status === "applied" && incoming.status === "applied") return true;
+
+      // Do NOT merge separate applied receipts if they are from different threads!
+      return false;
     }
     return false;
   });

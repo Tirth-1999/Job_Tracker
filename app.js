@@ -296,6 +296,14 @@ function normalizeCompany(name) {
   return n.replace(/[^a-z0-9]/g, "");
 }
 
+function normalizeRoleName(role) {
+  if (!role) return "general";
+  let r = String(role).toLowerCase().trim();
+  r = r.replace(/[^a-z0-9]/g, "");
+  if (r.includes("general") || r.includes("unknown") || r.length < 3) return "general";
+  return r;
+}
+
 function deduplicateAndConsolidateApplications(appList) {
   if (!Array.isArray(appList) || appList.length === 0) return [];
 
@@ -317,11 +325,13 @@ function deduplicateAndConsolidateApplications(appList) {
     if (cleanComp.toLowerCase() === "tirth shah" && s === "offered") s = "not_related";
     const normComp = normalizeCompany(cleanComp);
     const reqId = extractRequisitionId(`${a.latestSubject || ""} ${a.notes || ""}`);
+    const normRole = normalizeRoleName(a.role);
     const msgIds = (a.gmailMessageIds || []).concat(a.id ? [a.id.replace(/^msg-/, "")] : []);
 
     prepared[i] = {
-      app: { ...a, company: cleanComp, status: s },
+      app: { ...a, company: cleanComp, status: s, reqId },
       normComp,
+      normRole,
       reqId,
       msgIds,
       threadId: a.gmailThreadId || null
@@ -332,19 +342,19 @@ function deduplicateAndConsolidateApplications(appList) {
   const threadMap = new Map();
   const msgMap = new Map();
   const reqMap = new Map();
-  const compMap = new Map();
+  const compRoleMap = new Map();
   const groups = [];
 
   for (let i = 0; i < prepared.length; i++) {
     const item = prepared[i];
     let targetGroup = null;
 
-    // 1. Match Thread ID
+    // 1. Match Thread ID (emails in the exact same conversation thread always belong to same application)
     if (item.threadId && threadMap.has(item.threadId)) {
       targetGroup = threadMap.get(item.threadId);
     }
 
-    // 2. Match Message IDs
+    // 2. Match Message IDs (shared email message ID)
     if (!targetGroup) {
       for (const mid of item.msgIds) {
         if (msgMap.has(mid)) {
@@ -354,34 +364,44 @@ function deduplicateAndConsolidateApplications(appList) {
       }
     }
 
-    // 3. Match Same Company + Same Requisition ID
+    // 3. Match Same Company + Same Explicit Requisition ID (must be non-empty and identical)
     if (!targetGroup && item.normComp && item.normComp !== "unknown" && item.reqId) {
-      const reqKey = `${item.normComp}:${item.reqId}`;
+      const reqKey = `${item.normComp}:${item.reqId.toLowerCase()}`;
       if (reqMap.has(reqKey)) {
         targetGroup = reqMap.get(reqKey);
       }
     }
 
-    // 4. Match Same Company across pipeline stages (including applied + rejected pairs)
+    // 4. Match Same Company + Same Role for Stage Progressions (e.g. Applied -> Interview / Rejection)
     if (!targetGroup && item.normComp && item.normComp !== "unknown") {
-      if (compMap.has(item.normComp)) {
-        const candidateGroup = compMap.get(item.normComp);
-        // Consolidate if there is stage interaction (offers, interviews, replies, or applied + rejection updates)
-        const hasMatch = candidateGroup.some((other) => {
-          if (item.app.status === "offered" || other.app.status === "offered") return true;
-          if (item.app.status === "interviewed" || other.app.status === "interviewed") return true;
-          if (item.app.status === "reply_needed" || other.app.status === "reply_needed") return true;
-          if ((item.app.status === "rejected" && other.app.status === "applied") || (item.app.status === "applied" && other.app.status === "rejected")) return true;
-          if (item.app.status === "applied" && other.app.status === "applied") {
-            // Same role or generic role at same company -> merge
-            const r1 = (item.app.role || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-            const r2 = (other.app.role || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-            if (r1 === r2 || r1.includes("general") || r2.includes("general") || r1.includes("data") && r2.includes("data")) return true;
+      const compRoleKey = `${item.normComp}:${item.normRole}`;
+      if (compRoleMap.has(compRoleKey)) {
+        const candidateGroup = compRoleMap.get(compRoleKey);
+
+        // Strict Conflict Guard 1: If both have Requisition IDs and they differ -> DO NOT MERGE!
+        const hasReqConflict = candidateGroup.some(
+          (other) => item.reqId && other.reqId && item.reqId.toLowerCase() !== other.reqId.toLowerCase()
+        );
+
+        // Strict Conflict Guard 2: If both have specific non-generic roles and they differ -> DO NOT MERGE!
+        const hasRoleConflict = candidateGroup.some(
+          (other) => item.normRole !== "general" && other.normRole !== "general" && item.normRole !== other.normRole
+        );
+
+        if (!hasReqConflict && !hasRoleConflict) {
+          // Check if this is an update to an existing card (one is applied, other is rejection/interview/reply/offer)
+          const isProgression = candidateGroup.some((other) => {
+            if ((item.app.status === "rejected" && other.app.status === "applied") || (item.app.status === "applied" && other.app.status === "rejected")) return true;
+            if (item.app.status === "interviewed" || other.app.status === "interviewed") return true;
+            if (item.app.status === "reply_needed" || other.app.status === "reply_needed") return true;
+            if (item.app.status === "offered" || other.app.status === "offered") return true;
+            return false;
+          });
+
+          // If both are separate applied receipts from different threads without matching reqId, DO NOT merge!
+          if (isProgression) {
+            targetGroup = candidateGroup;
           }
-          return false;
-        });
-        if (hasMatch) {
-          targetGroup = candidateGroup;
         }
       }
     }
@@ -393,14 +413,17 @@ function deduplicateAndConsolidateApplications(appList) {
 
     targetGroup.push(item);
 
-    // Register all indices for fast O(1) matching of subsequent items
+    // Register indices for fast matching of subsequent items
     if (item.threadId) threadMap.set(item.threadId, targetGroup);
     for (const mid of item.msgIds) msgMap.set(mid, targetGroup);
     if (item.normComp && item.normComp !== "unknown" && item.reqId) {
-      reqMap.set(`${item.normComp}:${item.reqId}`, targetGroup);
+      reqMap.set(`${item.normComp}:${item.reqId.toLowerCase()}`, targetGroup);
     }
     if (item.normComp && item.normComp !== "unknown") {
-      compMap.set(item.normComp, targetGroup);
+      compRoleMap.set(`${item.normComp}:${item.normRole}`, targetGroup);
+      if (item.normRole !== "general") {
+        compRoleMap.set(`${item.normComp}:general`, targetGroup);
+      }
     }
   }
 
@@ -464,12 +487,14 @@ function resolveClusterStatus(appCluster) {
       const latest = appCluster[0];
       const allMsgIds = [...new Set(cluster.flatMap((c) => c.msgIds))];
       const manualApp = appCluster.find((a) => a.isManualOverride);
+      const clusterReqId = cluster.find((c) => c.reqId)?.reqId || null;
 
       consolidated[g] = {
         ...latest,
         id: appCluster.find((a) => a.status === bestStatus)?.id || latest.id,
         company: cleanComp,
         role: cleanRole,
+        reqId: clusterReqId,
         status: bestStatus,
         effectiveStatus: bestStatus,
         gmailMessageIds: allMsgIds,
@@ -826,6 +851,7 @@ function renderCard(app) {
   }
 
   const msgCountBadge = app.gmailMessageIds?.length > 1 ? `<span class="pill" title="${app.gmailMessageIds.length} emails in this thread">${app.gmailMessageIds.length} emails</span>` : "";
+  const reqBadge = app.reqId ? `<span class="pill" style="border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.08);color:var(--text);" title="Job Requisition ID: ${escapeHtml(app.reqId)}">Req: ${escapeHtml(app.reqId)}</span>` : "";
 
   // Dropdown options for moving cards across all pipeline stages
   const MOVE_OPTIONS = [
@@ -854,6 +880,7 @@ function renderCard(app) {
       </a>
       <div class="meta">
         <span class="pill status-pill ${statusClass(status)}">${escapeHtml(labelForStatus(status))}</span>
+        ${reqBadge}
         ${doneBadge}
         ${ignoredBadge}
         ${manualBadge}
@@ -1655,26 +1682,71 @@ function switchTab(viewName) {
 }
 
 const AI_MODELS = [
+  // ─── 100% Free Models (OpenRouter Free Tier) ──────────────────────────────
   {
-    id: "google/gemini-2.5-flash-lite",
-    name: "Google Gemini 2.5 Flash Lite",
-    badge: "Blazing Fast · High Volume Default",
-    provider: "Google (via OpenRouter)",
-    description: "Ultra-fast latency, high throughput JSON structured output. Ideal for rapid multi-batch classification."
+    id: "openrouter/free",
+    name: "OpenRouter Free Router",
+    badge: "100% Free · Auto-Selects Top Free Model",
+    provider: "OpenRouter Free Pool",
+    description: "Automatically routes requests to the fastest, best available 100% free model across all providers."
   },
+  {
+    id: "nvidia/nemotron-3-ultra-550b-a55b:free",
+    name: "NVIDIA Nemotron 3 Ultra (550B)",
+    badge: "100% Free · 550B Frontier Reasoning",
+    provider: "NVIDIA (via OpenRouter)",
+    description: "NVIDIA's massive 550B parameter frontier model. Unrivaled reasoning, document comprehension, and intent classification."
+  },
+  {
+    id: "nvidia/nemotron-3.5-lightning:free",
+    name: "NVIDIA Nemotron 3.5 Lightning",
+    badge: "100% Free · Lightning Speed",
+    provider: "NVIDIA (via OpenRouter)",
+    description: "Ultra-fast latency with cutting-edge extraction capabilities. Engineered for instant high-throughput parsing."
+  },
+  {
+    id: "nvidia/nemotron-3-super-120b-a12b:free",
+    name: "NVIDIA Nemotron 3 Super (120B)",
+    badge: "100% Free · Deep Analytical Precision",
+    provider: "NVIDIA (via OpenRouter)",
+    description: "Powerful 120B open weights model with state-of-the-art accuracy in recruiter message analysis and status auditing."
+  },
+  {
+    id: "google/gemma-4-31b-it:free",
+    name: "Google Gemma 4 (31B)",
+    badge: "100% Free · Google Open Weights",
+    provider: "Google (via OpenRouter)",
+    description: "Google's premier open weights model optimized for high accuracy instruction following and JSON extraction."
+  },
+  {
+    id: "minimax/minimax-m3:free",
+    name: "MiniMax M3",
+    badge: "100% Free · Long Context Extraction",
+    provider: "MiniMax (via OpenRouter)",
+    description: "High-capability free model with deep multi-paragraph context awareness for complex email thread parsing."
+  },
+  {
+    id: "z-ai/glm-5.2:free",
+    name: "Z.ai GLM 5.2",
+    badge: "100% Free · Robust Schema Compliance",
+    provider: "Z.ai (via OpenRouter)",
+    description: "Next-gen bilingual model with strong structured output adherence and recruiter tone recognition."
+  },
+
+  // ─── Frontier & High Precision Models ──────────────────────────────────────
   {
     id: "google/gemini-3.7-flash",
     name: "Google Gemini 3.7 Flash",
-    badge: "75% Off Promo · Next-Gen Frontier",
+    badge: "Next-Gen Frontier · Ultra-Fast",
     provider: "Google (via OpenRouter)",
     description: "Google's newest frontier Flash model. Deep reasoning with lightning speed and advanced semantic precision."
   },
   {
-    id: "anthropic/claude-3.5-haiku",
-    name: "Anthropic Claude 3.5 Haiku",
-    badge: "High Precision · Fast Reasoning",
-    provider: "Anthropic (via OpenRouter)",
-    description: "Anthropic's fastest intelligence model. Exceptional precision in natural language parsing and recruiter intent extraction."
+    id: "google/gemini-2.5-flash-lite",
+    name: "Google Gemini 2.5 Flash Lite",
+    badge: "Blazing Fast · High Volume",
+    provider: "Google (via OpenRouter)",
+    description: "Ultra-fast latency, high throughput JSON structured output. Ideal for rapid multi-batch classification."
   },
   {
     id: "anthropic/claude-3.7-sonnet",
@@ -1682,6 +1754,13 @@ const AI_MODELS = [
     badge: "Frontier Reasoning · Complex Auditor",
     provider: "Anthropic (via OpenRouter)",
     description: "Gold standard for complex multi-turn reasoning and nuanced contract/offer letter analysis."
+  },
+  {
+    id: "anthropic/claude-3.5-haiku",
+    name: "Anthropic Claude 3.5 Haiku",
+    badge: "High Precision · Fast Reasoning",
+    provider: "Anthropic (via OpenRouter)",
+    description: "Anthropic's fastest intelligence model. Exceptional precision in natural language parsing and recruiter intent extraction."
   },
   {
     id: "openai/gpt-4o-mini",
