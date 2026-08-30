@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-08-30T05:17:40.918Z",
+  "updatedAt": "2026-08-30T07:17:59.835Z",
   "applications": [
+    {
+      "id": "ewor-fellowship",
+      "company": "EWOR",
+      "role": "Fellowship",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Are you ready to complete your EWOR Fellowship application?",
+      "latestFrom": "Marc Richter <applications@ewor.com>",
+      "lastActivityAt": "2026-08-30T06:00:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a02d2fefefaa054",
+      "gmailMessageIds": [
+        "1a02d2fefefaa054",
+        "1a051410964d7a7b"
+      ],
+      "notes": "Hi Tirth, It seems like we haven't received your full application yet. If you're still interested, please complete your application via this link . We review applications and admit fellows on a rolling basis. Once you've submitted your application, you'll hear from us within three weeks regarding any potential next steps. Hope to review your materials soon! Best, Marc Richter On behalf of the EWOR Team"
+    },
     {
       "id": "intel-senior-ai-data-science-engineer-erral",
       "company": "Intel",
@@ -17023,24 +17042,6 @@
         "1a02e1343450aa3d"
       ],
       "notes": "Daily Digest for Tirth Shah Sunday, August 23, 2026 1 Notification(s) CLICK HERE to sign-in to Workday Notifications (1) Thank you for applying! Dear Tirth, Thank you for your interest in the position of AI Engineer – Cloud Software & AI Platforms - Contract with Altera. We have received your application and will contact you if more information is needed. You may review the status of your employment application by logging in to your Candidate Home account: https://altera.wd1.myworkdayjobs.com/Altera Kind Regards, Talent Acquisition Business Process: Job Application: Tirth Shah ‎- R03022 AI Engineer – Cloud Software & AI Platforms - Contract (CAND-123215) on 08/22/2026 Subject: Tirth Shah ‎- R03022 AI Engineer – Cloud Software & AI Platforms - Contract (CAND-123215) Click here to view the notification details. This is a post-only email. Please do not reply to this message. This email address is not monitored for responses. This email was intended for tirthcshah1999@gmail.com · Manage Preferences Workday, Inc · 6230 Stoneridge Mall Road, Pleasanton, CA 94588"
-    },
-    {
-      "id": "ewor-fellowship",
-      "company": "EWOR",
-      "role": "Fellowship",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Complete your application for the EWOR Fellowship",
-      "latestFrom": "Marc Richter <applications@ewor.com>",
-      "lastActivityAt": "2026-08-23T05:55:10.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a02d2fefefaa054",
-      "gmailMessageIds": [
-        "1a02d2fefefaa054"
-      ],
-      "notes": "Hi Tirth, After reviewing your initial application, I believe you could be an excellent fit for the EWOR Fellowship. Think of what you have done so far as just the first step. To complete your application, please fill out the form on our website here . A Little Bit About EWOR EWOR is a fellowship for outlier founders building transformative tech. We back the top 0.1% with up to €500K in funding (Traction Mode) or €300K over the course of the fellowship (Ideation Mode) and weekly 1:1 mentorship from unicorn founders (Adjust, ProGlove, SumUp) who have built companies collectively worth over €12B and now work full-time at EWOR. No standardised playbooks or rigid programming. EWOR’s virtual-first approach is tailored to each founder’s non-linear journey. We review applications and admit fellows on a rolling basis. Once you've submitted your application, you'll hear from us within three weeks regarding any potential next steps. Please let me know if you have any questions. We look forward to reading your full application soon! Best, Marc Richter On behalf of the EWOR Team"
     },
     {
       "id": "gartner-data-analyst",
