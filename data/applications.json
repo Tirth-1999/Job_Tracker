@@ -1,6 +1,66 @@
 {
-  "updatedAt": "2026-08-29T22:47:16.142Z",
+  "updatedAt": "2026-08-30T01:07:48.657Z",
   "applications": [
+    {
+      "id": "ey-general-application",
+      "company": "EY",
+      "role": "General Application",
+      "reqId": null,
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Welcome - Thanks for creating an EY Careers profile!",
+      "latestFrom": "EY Talent Acquisition <TalentAttractionandAcquisition@ey.com>",
+      "lastActivityAt": "2026-08-30T01:03:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a05031d013617f5",
+      "gmailMessageIds": [
+        "1a05031d013617f5"
+      ],
+      "notes": "Dear Tirth, At EY, we’re all in for your personal fulfilment and professional success. Here, you’ll be supported through our globally connected organization and developed into the most extraordinary version of you. Click https://www.ey.com/en_gl/careers to log in and explore our open positions. You can also check out our EY Careers site to learn what it’s like to work here and how our focus on skills development and world-class experiences will help you take your career wherever you want it to go. Best regards, EY Talent Attraction and Acquisition Team © 2026 EYGM Limited. All Rights Reserved"
+    },
+    {
+      "id": "nextera-energy-resources-forward-deployed-engineer",
+      "company": "Nextera Energy Resources",
+      "role": "Forward Deployed Engineer",
+      "reqId": null,
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "JD and Org Details",
+      "latestFrom": "\"Deenadayalu, Karthik\" <Karthik.Deenadayalu@nexteraenergy.com>",
+      "lastActivityAt": "2026-08-29T23:23:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04fd1010d2c21b",
+      "gmailMessageIds": [
+        "1a04fd5e312c836d",
+        "1a04fd1010d2c21b"
+      ],
+      "notes": "Hello Tirth, Please find the JD and company details. NextEra Energy Resources Address<https://www.google.com/search?sca_esv=7e4c824d7041932c&rlz=1C5FPAB_enUS1220US1220&sxsrf=APpeQnsiRM3SEu6jST_JsxgXVlPNAxWSmA:1788045374799&q=nextera+energy+resources+juno+beach+address&ludocid=6050971643634912174&sa=X&ved=2ahUKEwictaCL_MaWAxVgg4QIHUW-Ls0Q6BN6BAgiEAI>: 700 Universe Blvd, Juno Beach, FL 33408 Phone: (561) 691-7171<https://www.google.com/search?gs_ssp=eJzj4tZP1zcsSUuzSDMuMGC0UjWosLBISTNKTEsySzNJMkpJNrYyqDA1TrM0TU00szBJMTJISkz1EspLrShJLUpUyCrNy1dISk1MzgAACrwWbg&q=nextera+juno+beach&rlz=1C5FPAB_enUS1220US1220&oq=nextera+juno+&gs_lcrp=EgZjaHJvbWUqDQgBEC4YrwEYxwEYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyCggCEEUYFhgeGDkyBwgDEAAYgAQyBwgEEAAYgAQyCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCDcyOTRqMGo3qAIIsAIB8QW6RSBZvcZQ0w&sourceid=chrome&source=chrome.ob&ie=UTF-8#> Nearest Airport - Donald J Trump International (WestPalm Beach) Forward Deployed Engineer— Job Description Location Onsite — Day 1, Juno Beach, FL (candidate must be based in/near Juno Beach and available to work onsite from the first day, no remote/hybrid flexibility). About the Role We are looking for a Forward Deployed Engineer (FDE) with 1–2 years of IT experience to work directly with clients, embedding AI-powered developer tools and custom solutions into their existing workflows. This is a hands-on, client-facing technical role blending software engineering, AI tooling expertise, and rapid solution deployment. Key Responsibilities * Client Embedding: Work onsite with client engineering teams in Juno Beach to understand workflows, pain points, and integration requirements. * AI Coding Tool Deployment: Configure, customize, and troubleshoot AI development tools such as Devin, Windsurf, Claude Code, and GitHub Copilot within client environments. * MCP Integration: Build and configure Model Context Protocol (MCP) servers/clients to connect AI agents with internal tools, databases, and APIs. * Secure Connectivity: Set up and manage tunnelling solutions (e.g., ngrok, Cloudflare Tunnel, SSH tunnels) to enable secure access between client infrastructure and external tools/agents. * Custom Tooling: Write Python scripts, automation, and glue code to bridge AI agents with client-specific systems. * LLM Fine-Tuning: Assist in fine-tuning or adapting LLMs (e.g., LoRA, PEFT, prompt-tuning) to improve performance on client-specific tasks and datasets. * Rapid Prototyping: Quickly build proof-of-concepts and iterate based on direct client feedback. * Documentation & Enablement: Document integrations and train client teams on effective use of deployed AI tools. * Feedback Loop: Relay client requirements and friction points back to the product/engineering team to influence roadmap. Required Skills & Experience * 1–2 years of professional IT/software engineering experience. * Must be local to Juno Beach, FL or willing to relocate at own expense before start date — no remote work, no re"
+    },
+    {
+      "id": "pluto-general-application",
+      "company": "Pluto",
+      "role": "Forward Deployed Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, your application process is incomplete",
+      "latestFrom": "\"Pluto (YC)\" <pluto@mail.talentpluto.com>",
+      "lastActivityAt": "2026-08-29T23:18:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a036115f0899a5a",
+      "gmailMessageIds": [
+        "1a036115f0899a5a",
+        "1a0360eccf746d54",
+        "1a0405e3fd130424",
+        "1a04fd19c9881245"
+      ],
+      "notes": "complete the next steps to continue Hey Tirth, Your application process is incomplete. You applied to a role we're helping fill through Pluto, a personal AI career agent backed by Y Combinator. Your application has not moved forward because the required steps have not been completed. Complete the steps below: 1. Talk to Pluto — share your experience and what you're looking for 2. Complete your application — we'll send the company a clearer summary of your background 3. Get matched — Pluto can also match you with similar opportunities You stay in control — we only introduce you to other companies when you say yes. Call Pluto: +1 (929) 600-6918 [tel:+19296006918] Your career needs an agent. Backed by Y Combinator. Unsubscribe [https://app.loops.so/unsubscribe/cmtf0563rzctc01x535pkbn6q/3a9c60c6da05459b7631ff4eb354def39c35d3e2fb62d47c88a0c8cfc08b6454d3026ee291e4498adc8a1184b7c961bc80d4e99ba19de44ceb460114] your application process is incomplete 96 complete the next steps to continue Hey Tirth, Your application process is incomplete. You applied to a role we're helping fill through Pluto, a personal AI career agent backed by Y Combinator. Your application has not moved forward because the required steps have not been completed. Complete the steps below: 1. Talk to Pluto — share your experience and what you're looking for 2. Complete your application — we'll send the company a clearer summary of your background 3. Get matched — Pluto can also match you with similar opportunities You stay in control — we only introduce you to other companies when you say yes. Call Pluto: +1 (929) 600-6918 Your career needs an agent. Backed by Y Combinator. Unsubscribe"
+    },
     {
       "id": "technimark-data-analyst-sustainability",
       "company": "Technimark",
@@ -7327,26 +7387,6 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
-    },
-    {
-      "id": "pluto-general-application",
-      "company": "Pluto",
-      "role": "Forward Deployed Engineer",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Tirth, a reminder about your application",
-      "latestFrom": "\"Pluto (YC)\" <pluto@mail.talentpluto.com>",
-      "lastActivityAt": "2026-08-26T23:18:33.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a036115f0899a5a",
-      "gmailMessageIds": [
-        "1a036115f0899a5a",
-        "1a0360eccf746d54",
-        "1a0405e3fd130424"
-      ],
-      "notes": "your application is still waiting Hey Tirth, Just a reminder. You recently applied to a role we're helping fill through Pluto, a personal AI career agent backed by Y Combinator. To continue the process for the role you applied to, please complete a short text or call with Pluto. This takes 5-10 minutes and is the next required step. Here's the process: 1. Talk to Pluto — share your experience and what you're looking for 2. Complete your application — we'll send the company a clearer summary of your background 3. Get matched — once complete, Pluto can also match you with similar opportunities You stay in control — we only introduce you to other companies when you say yes. Call Pluto: +1 (929) 600-6918 [tel:+19296006918] Your career needs an agent. Backed by Y Combinator. Unsubscribe [https://app.loops.so/unsubscribe/cmtapt7lk946a01w34qyt9a2t/b972f79c3e9fd08a5e6554735efbfb62910e6be068945c26b9c70a031d1db40ae592f540736bde145cd4570d343dfc111ce50a7451085857942c4bb6] a reminder about your application 96 your application is still waiting Hey Tirth, Just a reminder. You recently applied to a role we're helping fill through Pluto, a personal AI career agent backed by Y Combinator. To continue the process for the role you applied to, please complete a short text or call with Pluto. This takes 5-10 minutes and is the next required step. Here's the process: 1. Talk to Pluto — share your experience and what you're looking for 2. Complete your application — we'll send the company a clearer summary of your background 3. Get matched — once complete, Pluto can also match you with similar opportunities You stay in control — we only introduce you to other companies when you say yes. Call Pluto: +1 (929) 600-6918 Your career needs an agent. Backed by Y Combinator. Unsubscribe"
     },
     {
       "id": "amh-senior-data-engineer",
