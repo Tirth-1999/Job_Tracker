@@ -1,6 +1,44 @@
 {
-  "updatedAt": "2026-08-31T01:29:41.539Z",
+  "updatedAt": "2026-08-31T03:25:53.022Z",
   "applications": [
+    {
+      "id": "texas-childrens-general-application",
+      "company": "Texas Childrens",
+      "role": "General Application",
+      "reqId": null,
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "\"Texas Children's Careers\" <noreply@texaschildrens.org>",
+      "lastActivityAt": "2026-08-31T03:25:30.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a055d9c40360f4f",
+      "gmailMessageIds": [
+        "1a055d9c40360f4f"
+      ],
+      "notes": "Dear Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 419329 Note : This code will expire in 10 minutes. Sincerely, Texas Children's Talent Acquisition Team"
+    },
+    {
+      "id": "texas-childrens-lead-data-scientist-426176",
+      "company": "Texas Childrens",
+      "role": "Lead Data Scientist",
+      "reqId": "426176",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Confirm your identity for job Lead Data Scientist - 426176",
+      "latestFrom": "\"Texas Children's Careers\" <noreply@texaschildrens.org>",
+      "lastActivityAt": "2026-08-31T03:25:29.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a055d9c36a2f533",
+      "gmailMessageIds": [
+        "1a055d9c36a2f533"
+      ],
+      "notes": "Dear Tirth, We need you to confirm your identity so that your job application is considered for the job Lead Data Scientist - 426176. Confirm your identity using this code: 223468. The code expires in 10 minutes. If you want to manage your profile and application, go to your candidate self service page . If you received this message in error, notify us that it was not intended for you . Sincerely, Texas Children's Talent Acquisition Team"
+    },
     {
       "id": "teamwork-online-general-application",
       "company": "Teamwork Online",
