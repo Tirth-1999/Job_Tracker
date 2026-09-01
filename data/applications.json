@@ -1,6 +1,35 @@
 {
-  "updatedAt": "2026-09-01T21:57:12.348Z",
+  "updatedAt": "2026-09-01T23:55:07.389Z",
   "applications": [
+    {
+      "id": "msg-19fd717950a42d32",
+      "company": "Xometry",
+      "role": "Analytics Engineer II",
+      "status": "rejected",
+      "confidence": "high",
+      "lastActivityAt": "2026-09-01T22:45:32.000Z",
+      "latestSubject": "Important information about your application to Xometry",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "gmailThreadId": "19fd717950a42d32",
+      "gmailMessageIds": [
+        "19fd717950a42d32",
+        "19fccc57efe4b285",
+        "19fb302cfe47e313",
+        "19f8fc90ff49362d",
+        "19f65498c9c1c3d6",
+        "1a05f2631bec629b"
+      ],
+      "notes": "Hi Tirth, After careful thought and consideration, we've made the decision to move forward with other candidates for the Analytics Engineer II position at this time. That being said, we’d like to keep your resume on file as our team continues to grow. We really appreciate you taking the time to get to know Xometry. Best of luck with your current search! Best, Xometry Recruiting Team Hi Tirth, After careful thought and consideration, we've made the decision to move forward with other candidates for the Analytics Engineer II position at this time. That being said, we&rsquo;d like to keep your resume on file as our team continues to grow. We really appreciate you taking the time to get to know Xometry. Best of luck with your current search! Best, Xometry Recruiting Team",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Classified as applied",
+      "aiModel": "rules_1to1",
+      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "teamwork-online-general-application",
       "company": "Teamwork Online",
@@ -35198,32 +35227,6 @@
       "manualAction": null,
       "manualChangedAt": null,
       "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
-      "aiConfidence": "high"
-    },
-    {
-      "id": "msg-19fd717950a42d32",
-      "company": "Xometry",
-      "role": "General Application",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-08-06T12:41:14+00:00",
-      "latestSubject": "Thank you for applying to Xometry!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "gmailThreadId": "19fd717950a42d32",
-      "gmailMessageIds": [
-        "19fd717950a42d32",
-        "19fccc57efe4b285",
-        "19fb302cfe47e313",
-        "19f8fc90ff49362d",
-        "19f65498c9c1c3d6"
-      ],
-      "notes": "Hi Tirth, Thank you for applying to our Analytics Engineer II role here at Xometry! Your application has been received and we will review it and get back to you shortly. All the best, Xometry",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Classified as applied",
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
