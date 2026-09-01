@@ -1,6 +1,101 @@
 {
-  "updatedAt": "2026-09-01T14:33:35.246Z",
+  "updatedAt": "2026-09-01T16:14:25.068Z",
   "applications": [
+    {
+      "id": "pathlabs-data-engineer-ii",
+      "company": "Pathlabs",
+      "role": "Data Engineer II",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Application Update - Pathlabs",
+      "latestFrom": "Pathlabs <recruiting+434425109-aa60fa1d@applytojob.com>",
+      "lastActivityAt": "2026-09-01T15:15:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a05d89f93a024d1",
+      "gmailMessageIds": [
+        "1a05d89f93a024d1"
+      ],
+      "notes": "Hello Tirth, Thank you for your interest in the contracted Data Engineer II role. We're grateful for the incredible response to this opportunity. Given the volume of applications, we're not able to personally follow up with every candidate, but we truly appreciate the time you took to apply. If you are selected to move forward in the interview process, someone from the hiring team will reach out. Regards, Pathlabs"
+    },
+    {
+      "id": "insurance-institute-for-business-home-safety-data-engineer-ai-support",
+      "company": "Insurance Institute For Business & Home Safety",
+      "role": "Data Engineer, AI Support",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Data Engineer, AI Support - Insurance Institute for Business & Home Safety",
+      "latestFrom": "\"Insurance Institute for Business & Home Safety\" <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-09-01T15:08:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b80410b4ac50",
+      "gmailMessageIds": [
+        "1a04b80410b4ac50",
+        "1a04b72851456cb8",
+        "1a04c4f7d0ad1e27",
+        "1a056ed709eac50e",
+        "1a05d8433f04591c"
+      ],
+      "notes": " ------------------------------------------------------------------------------- Dear Tirth, Thank you for taking the time to apply for the Data Engineer, AI Support position with the Insurance Institute for Business &amp; Home Safety (IBHS). We appreciate your interest in our organization and the time you invested in sharing your experience with us. After careful consideration, we have selected another candidate whose experience more closely aligns with the needs of this role. This was a thoughtful decision given the strong group of applicants. At IBHS, our team is committed to advancing science and solutions that help strengthen homes, businesses, and communities against severe weather and other risks. We are grateful for your interest in contributing to this mission. We encourage you to stay connected with IBHS for future opportunities and to follow our social channels to keep up with our research, mission-driven work, and updates from the team along the way. Thank you again for your interest in IBHS, and we wish you continued success in your career. Best Regards, Paul Buchanan Senior Director, People &amp; Organization IBHS.org | FORTIFIEDHOME.org Insurance Institute for Business &amp; Home Safety ------------------------------------------------------------------------------- ------------------------------------------------------------------------------- Dear Tirth, Thank you for taking the time to apply for the Data Engineer, AI Support position with the Insurance Institute for Business & Home Safety (IBHS). We appreciate your interest in our organization and the time you invested in sharing your experience with us. After careful consideration, we have selected another candidate whose experience more closely aligns with the needs of this role. This was a thoughtful decision given the strong group of applicants. At IBHS, our team is committed to advancing science and solutions that help strengthen homes, businesses, and communities against severe weather and other risks. We are grateful for your interest in contributing to this mission. We encourage you to stay connected with IBHS for future opportunities and to follow our social channels to keep up with our research, mission-driven work, and updates from the team along the way. Thank you again for your interest in IBHS, and we wish you continued success in your career. Best Regards, Paul Buchanan Senior Director, People & Organization IBHS.org | FORTIFIEDHOME.org Insurance Institute for Business & Home Safety"
+    },
+    {
+      "id": "vela-founding-engineer",
+      "company": "Vela",
+      "role": "Founding Engineer",
+      "status": "interviewed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Re: Vela technical follow-up - Tirth Shah",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "lastActivityAt": "2026-09-01T14:52:19.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a044a896c918de2",
+      "gmailMessageIds": [
+        "1a044a896c918de2",
+        "1a053318ba3f87fe",
+        "1a05d74ee4840000"
+      ],
+      "notes": "Hi Zorawar, The previous email was unreasonably large, so I would just give you a shorter email, which would help you give a better understanding. The main reason Vela interests me is that the product sits directly at the intersection I have been building toward: *Data, Energy, and AI*. My strongest fit is turning fragmented operational data into trusted workflows with clear schemas, APIs, retrieval, permissions, validation, and user-facing execution. I attached a short technical snapshot that summarizes how I would think about Vela's product surface and where my past work maps to it. On the practical side, I can start quickly and I am open to relocating to San Francisco for the right founding role. Beyond housing, food, and travel logistics, the biggest thing that would help me ramp fast is early access to product context, customer workflow examples, and a clear first 30-day problem to own. I understand that you are not the sole decision-maker, so I wrote the attached note to be easy to forward to the founders. I would be excited to continue the conversation and show how I can contribute as a first engineer who can learn fast, build carefully, and own the messy last mile. I would love for you to explore more about me at https://tirthcshah.com <https://tirthcshah.com.> . Best, Tirth Shah tirthcshah1999@gmail.com | (979) 635-2045 On Tue, Sep 1, 2026 at 12:53 AM Tirth Shah <tirthcshah1999@gmail.com> wrote: > Hi Zorawar, > > Thank you for taking the time to go deep on the technical side today. I > appreciated the questions around RAG architecture, ETL design, > permission-based querying, API boundaries, and what I have broken, > debugged, and rebuilt in past projects. > > The main reason Vela interests me is that the product sits at the exact > intersection where I have been building: **data, energy, and AI**. Vela is > not just adding a chat layer on top of project documents; it is turning > fragmented infrastructure data into a live operating model that can trace > changes, identify downstream impact, cite sources, route work, and stage > actions behind human approval. > > From a technical perspective, this is how I would think about contributing: > > - I would start with the project model first: organizations, companies, > projects, memberships, documents, source records, extracted events, > impacted objects, recommendations, approvals, and audit logs. > - I would treat every connector and API as a contract across > authentication, authorization, schema, validation, idempotency, retries, > error handling, and auditability. > - I would design the RAG layer around permission-aware retrieval, source > metadata, citations, and evaluation, not just embeddings and prompt quality. > - I would separate recommendation from execution so Vela can draft, stage, > and route actions while keeping final writeback behind scoped permissions > and named approval. > - I would keep the first product slice narrow, such as a source change > that becomes an extracted e"
+    },
+    {
+      "id": "salesforce-general-application",
+      "company": "Salesforce",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-09-01T14:49:05.000Z",
+      "latestSubject": "Two days left: Save $400 and see what everyone’s talking about",
+      "latestFrom": "Dreamforce <email@mail.salesforce.com>",
+      "gmailThreadId": "1a01ae0aca1bb84f",
+      "gmailMessageIds": [
+        "1a01ae0aca1bb84f",
+        "1a020386c92e08e6",
+        "19f6bc75a98a8029",
+        "19f6179cc7f6fb27",
+        "19f4cdf764ae6a26",
+        "19f4292d63cb563f",
+        "1a0203dccea32718",
+        "salesforce-general-application",
+        "1a044e17fd07e8f7",
+        "1a0444169c0c6820",
+        "1a05d873870a88f1"
+      ],
+      "notes": " Two days left: Save $400 and see what everyone’s talking about Register for $1,899 by September 2 to experience Claudeforce, Dreamfest, and more live. http://click.mail.salesforce.com/?qs=ABp7ImQiOjQ5ODYsInQiOjExMzQyLCJzIjo4fQAIAAAAAAAI2xZ93NsgV7LVyd_rWS0KYosxPby5L9R48M479YTt32q8CUm3Bw6EGKnxxzlDx2dpZeNI7_gM2Y8KZXOw4tZO6BepbX_s12ocFlm6fA September 15–17, 2026 San Francisco and Salesforce+ September 15–17, 2026 San Francisco and Salesforce+ http://click.mail.salesforce.com/?qs=ABp7ImQiOjQ5ODYsInQiOjExMzQyLCJzIjo4fQAIAAAAAAAI2xZ94EHssuQfTAqgvVNzIFVaQQ_JrSlbzTWdp00TDIXrShPjSzPD5YgDUhnNf_WzUtPGhnjRy6mWhRWhxWdSu6XqbaiT3dWlaRP33g Last chance to save $400 on the breakthroughs built to move your business forward, fast. Across three can’t-miss days, experience innovation you won’t find anywhere else, connect with the people shaping the future, and see how leading companies are becoming Agentic Enterprises. You’ll leave with practical ideas to help your entire business work smarter, move faster, and grow long after Dreamforce ends. There’s only two days left to save $400. Register with code DF26LASTCALL by September 2 for $1,899. Or bring a team of three or more for just $999 per person. http://click.mail.salesforce.com/?qs=ABp7ImQiOjQ5ODYsInQiOjExMzQyLCJzIjo4fQAIAAAAAAAI2xZ94wxGl1utAjknKVuUC2ow3NZZzQb6MOnryyDF1uXDMGIkNbOBPVAug7O0mSjnJK5SjsUI8ZgTE4oxwA3aT2Ue06hABnj1wrT9ow Register now In case you missed the big news: The #1 AI meets the #1 CRM. Get hands-on with Salesforce in Claude, unveiled live at Dreamforce and see Claude's reasoning take action across the entire revenue cycle, from prospect to closed deal. Dario Amodei and Marc Benioff take the stage. A conversation between the Anthropic and Salesforce CEOs on their shared vision for AI and what it means for your business. One night, two icons. USHER and Gwen Stefani take the Dreamfest stage, all for the kids, in support of UCSF Benioff Children's Hospitals. http://click.mail.salesforce.com/?qs=ABp7ImQiOjQ5ODYsInQiOjExMzQyLCJzIjo4fQAIAAAAAAAI2xZ95rDH0kniceijbzwQsBdb6aXwS3EkTy8-Ilk8KLaVtV6XlgtMTamUbx4jI5CrEHZGubhxzDPd9AwgMvOzqN5Pg3GPW8pMppml-A Register now Can't join in person? http://click.mail.salesforce.com/?qs=ABp7ImQiOjQ5ODYsInQiOjExMzQyLCJzIjo4fQAIAAAAAAAI2xZ96WgLSnETCX8HGmysaHaPRvzQo3NH8lB27ziUIVmn1gDyyj1LVt9qiDiXTCqH0YtCqgY3zki6U7O8NmfJTRo1mx0F6QodE4NlaA Stream free on Salesforce+. (c) 2026 Salesforce, Inc. Salesforce Tower, 415 Mission Street, 3rd Floor, San Francisco, CA 94105, United States General Inquiries: 1-800-NO-SOFTWARE http://click.mail.salesforce.com/?qs=ABp7ImQiOjQ5ODYsInQiOjExMzQyLCJzIjo4fQAIAAAAAAAI2xZ98AtxFV59Nr0171z_Cv_IrXPnR8ySkY5r08WvqtnaK_JC85bfRNyKhIME1iQt8PgSJoYslmeVUuqwv-3CE3PLORn7aizn6t2tIw http://click.mail.salesforce.com/?qs=ABp7ImQiOjQ5ODYsInQiOjExMzQyLCJzIjo4fQAIAAAAAAAI2xZ98fAs1816dFWNXGEr_1WjLJBxveAE3JEogjkJMMMBYEsM7lvKW8I2iW-vfpT4rcqfFuWwrxf0_gpXKPD7hydzzvCPS0pUzJPMgg http://click.mail.salesforce.com/?qs=ABp7ImQiOjQ5ODYsInQiOjExMzQyLCJzIjo4fQAIAAAAAAAI2xZ98uwS0DRK",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Marketing digest / conference event promotional email",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:42.559+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
     {
       "id": "johnson-johnson-senior-director-global-commercial-data-platforms-ai-engineering-uisition",
       "company": "Johnson & Johnson",
@@ -3890,27 +3985,6 @@
       "notes": "Your application was sent to GRAIL, Inc. Data Engineer 1, Operational Technology - Operations #4941 GRAIL Durham, NC View job: https://www.linkedin.com/comm/jobs/view/4458698414/?trackingId=4PT4aAcSQpK99bcYa5w4Cg%3D%3D&refId=qy1%2BW379Samj2NsANtcuyA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BBSsIJ4IyQ2uLtNSZygnb7w%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0C9oWchunYMco1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtgz7pul~ud-null-null&eid=a06oc2-mtgz7pul-ud&otpToken=MGRiN2U1OWY4MGMwZjJkNTRhYzgyMGYwMjI0NDU1MWE0N2JjMGZjYTQzNmRmOGQwZDkzY2NiODg4MzIzZTRjNTg3YzE0MzJjYTBkYjk0NTI1MjY4ZDIxNzM3MjgyNWMxMTdhM2M4ZDMwN2M4ZjYxODk3YzdjOWEzNTJjNTk3NDc0YzlmMTFmY2QwMzIxN2IxLDIsMQ%3D%3D --------------------------------------------------------- Applied on August 31, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=H4%2BNcfStRPS8mC%2FseJ7k7w%3D%3D&refId=R8kHvVaBQW2QU6lO8Q8A2g%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BBSsIJ4IyQ2uLtNSZygnb7w%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0C9oWchunYMco1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtgz7pul~ud-null-null&eid=a06oc2-mtgz7pul-ud&otpToken=MGRiN2U1OWY4MGMwZjJkNTRhYzgyMGYwMjI0NDU1MWE0N2JjMGZjYTQzNmRmOGQwZDkzY2NiODg4MzIzZTRjNTg3YzE0MzJjYTBkYjk0NTI1MjY4ZDIxNzM3MjgyNWMxMTdhM2M4ZDMwN2M4ZjYxODk3YzdjOWEzNTJjNTk3NDc0YzlmMTFmY2QwMzIxN2IxLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=427iRwxoQveY0hg%2FgNpGlA%3D%3D&refId=U4BSMBclSZmBNXFHvT8qWQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BBSsIJ4IyQ2uLtNSZygnb7w%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0C9oWchunYMco1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtgz7pul~ud-null-null&eid=a06oc2-mtgz7pul-ud&otpToken=MGRiN2U1OWY4MGMwZjJkNTRhYzgyMGYwMjI0NDU1MWE0N2JjMGZjYTQzNmRmOGQwZDkzY2NiODg4MzIzZTRjNTg3YzE0MzJjYTBkYjk0NTI1MjY4ZDIxNzM3MjgyNWMxMTdhM2M4ZDMwN2M4ZjYxODk3YzdjOWEzNTJjNTk3NDc0YzlmMTFmY2QwMzIxN2IxLDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423039237/?trackingId=N4qVfctuRieIVTlmwoKe%2BA%3D%3D&refId=JTlq2mDbRLyWxfJ1hUadBQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_appli"
     },
     {
-      "id": "insurance-institute-for-business-home-safety-data-engineer-ai-support",
-      "company": "Insurance Institute For Business & Home Safety",
-      "role": "Data Engineer, AI Support",
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Tirth Chirayu, your application was sent to Insurance Institute for Business & Home Safety - IBHS",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-08-31T08:26:36.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a04b80410b4ac50",
-      "gmailMessageIds": [
-        "1a04b80410b4ac50",
-        "1a04b72851456cb8",
-        "1a04c4f7d0ad1e27",
-        "1a056ed709eac50e"
-      ],
-      "notes": "Your application was sent to Insurance Institute for Business & Home Safety - IBHS Data Engineer, AI Support Insurance Institute for Business & Home Safety - IBHS Richburg, SC View job: https://www.linkedin.com/comm/jobs/view/4460352996/?trackingId=lWglfPjxTc6MOX2JdiYe4w%3D%3D&refId=E%2Fm%2Fi49lTVuWYJTcly%2BbNg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B5hipkvkySFmGts4T968O%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1wJINnUZDWMco1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtgz5ekz~vp-null-null&eid=a06oc2-mtgz5ekz-vp&otpToken=Y2U0ZjhjNzA1YzgyNmNkN2U4ODQ0YTExNTZjNjUyODdmNTcyMDNlYzkwZDI3MGJjODhiZjY2YWZjNGI2NjI3MWE5ZDJlZDE2ZDI5MjllZmUxNTczOTE1YmU5NGYxYTBjZjQ5ZDk0NjkwYTRhZTI3YzFlZjYzMjk0NmRiYjcxZmEwYzFmMmVmOWQ1MjhhZWJlLDIsMQ%3D%3D --------------------------------------------------------- Applied on August 31, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Agent Product Manager Hello Patient Austin, TX View job: https://www.linkedin.com/comm/jobs/view/4423025488/?trackingId=PGGkgAHtRAuuPf4y0DLpeA%3D%3D&refId=x3EH6u3aSXSdWQAHRH5rKQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B5hipkvkySFmGts4T968O%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1wJINnUZDWMco1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtgz5ekz~vp-null-null&eid=a06oc2-mtgz5ekz-vp&otpToken=Y2U0ZjhjNzA1YzgyNmNkN2U4ODQ0YTExNTZjNjUyODdmNTcyMDNlYzkwZDI3MGJjODhiZjY2YWZjNGI2NjI3MWE5ZDJlZDE2ZDI5MjllZmUxNTczOTE1YmU5NGYxYTBjZjQ5ZDk0NjkwYTRhZTI3YzFlZjYzMjk0NmRiYjcxZmEwYzFmMmVmOWQ1MjhhZWJlLDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423029409/?trackingId=knB9jfocTPqIqgO1rt7d0g%3D%3D&refId=7ELJG1RDQw2aejsOlH7kSA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B5hipkvkySFmGts4T968O%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1wJINnUZDWMco1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtgz5ekz~vp-null-null&eid=a06oc2-mtgz5ekz-vp&otpToken=Y2U0ZjhjNzA1YzgyNmNkN2U4ODQ0YTExNTZjNjUyODdmNTcyMDNlYzkwZDI3MGJjODhiZjY2YWZjNGI2NjI3MWE5ZDJlZDE2ZDI5MjllZmUxNTczOTE1YmU5NGYxYTBjZjQ5ZDk0NjkwYTRhZTI3YzFlZjYzMjk0NmRiYjcxZmEwYzFmMmVmOWQ1MjhhZWJlLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Apt Dallas, TX View job: https://www.linkedin.com/comm/jobs/view/4455949550/?trackingId=mi4daAD5SdKVsVd3b7D1KQ%3D%3D&refId=fx15Nmet"
-    },
-    {
       "id": "lucas-james-partners-data-engineer",
       "company": "Lucas James Partners",
       "role": "Data Engineer",
@@ -4722,25 +4796,6 @@
       "aiConfidence": "high",
       "classifier": "openrouter",
       "reason": "AI extracted"
-    },
-    {
-      "id": "vela-founding-engineer",
-      "company": "Vela",
-      "role": "Founding Engineer",
-      "status": "interviewed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Reminder: 30 min meeting between Tarun Batchu and Tirth Shah - Sun, Aug 30, 2026 12:00pm",
-      "latestFrom": "\"Cal.com\" <hello@cal.com>",
-      "lastActivityAt": "2026-08-30T15:02:30.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a044a896c918de2",
-      "gmailMessageIds": [
-        "1a044a896c918de2",
-        "1a053318ba3f87fe"
-      ],
-      "notes": "Hi Tirth Shah, This is a reminder about your upcoming event. Event: 30 min meeting between Tarun Batchu and Tirth Shah Date & time: Sun, Aug 30, 2026 12:00pm - 12:30pm (America/New_York) Attendees: You & Tarun Batchu Location: Cal Video https://app.cal.com/video/nc7QN1pVvJhdAfY2DAUUCL?name=Tirth+Shah _ Scheduling by Cal.com"
     },
     {
       "id": "empirici-academy-general-application",
@@ -9480,39 +9535,6 @@
         "1a045206442e1687"
       ],
       "notes": "Your application was sent to National Data Solutions Analytics Engineer National Data Solutions Franklin, TN View job: https://www.linkedin.com/comm/jobs/view/4460104708/?trackingId=FWzHeSsfQ1i%2BwAkcrKa7cQ%3D%3D&refId=s2F86nCpRBCJu34Y08hEkg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BcnUyjKvPStK%2BtxjNbQdeAA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2vqsny1Sm9Hso1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtc1ca7b~lz-null-null&eid=a06oc2-mtc1ca7b-lz&otpToken=NWJlNmFiOTgzNGJiZDk4NmU4YmZjNjA3YTZiZTI0ZWMwMTVjMGVlOWRjNjIzZWZkMWE5MzMyNWU1MjIyNTZjYTJhYjM2YzVhYTA3MzYyOWY5MjUzZTFlMzBhODBiMjIyNGIyMzY5OWY4YWZjZDgwZGQzYTU5ZGNiODNiZjEyNWYxMmJlZjZmMmQ3ZjRhNmRiLDIsMQ%3D%3D --------------------------------------------------------- Applied on August 27, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Product Manager Applied Systems Lewisville, TX 3 connections 12 company alumni 10 school alumni View job: https://www.linkedin.com/comm/jobs/view/4440780268/?trackingId=uSUeHWSOSg6Og%2FUBKjk1tQ%3D%3D&refId=vJRoCyATQEKwYPG2xHvKhw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BcnUyjKvPStK%2BtxjNbQdeAA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2vqsny1Sm9Hso1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtc1ca7b~lz-null-null&eid=a06oc2-mtc1ca7b-lz&otpToken=NWJlNmFiOTgzNGJiZDk4NmU4YmZjNjA3YTZiZTI0ZWMwMTVjMGVlOWRjNjIzZWZkMWE5MzMyNWU1MjIyNTZjYTJhYjM2YzVhYTA3MzYyOWY5MjUzZTFlMzBhODBiMjIyNGIyMzY5OWY4YWZjZDgwZGQzYTU5ZGNiODNiZjEyNWYxMmJlZjZmMmQ3ZjRhNmRiLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Hyundai Capital America Irvine, CA 2 company alumni 4 school alumni View job: https://www.linkedin.com/comm/jobs/view/4437886754/?trackingId=3IJVZDslQq%2B3GiT1BzeedQ%3D%3D&refId=h7LNslaCStm8nRZLberDCw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BcnUyjKvPStK%2BtxjNbQdeAA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2vqsny1Sm9Hso1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtc1ca7b~lz-null-null&eid=a06oc2-mtc1ca7b-lz&otpToken=NWJlNmFiOTgzNGJiZDk4NmU4YmZjNjA3YTZiZTI0ZWMwMTVjMGVlOWRjNjIzZWZkMWE5MzMyNWU1MjIyNTZjYTJhYjM2YzVhYTA3MzYyOWY5MjUzZTFlMzBhODBiMjIyNGIyMzY5OWY4YWZjZDgwZGQzYTU5ZGNiODNiZjEyNWYxMmJlZjZmMmQ3ZjRhNmRiLDIsMQ%3D%3D --------------------------------------------------------- Data & AI Product Manager Hyatt Chicago, IL 7 company alumni 46 school alumni View job: https://www.linkedin.com/comm/jobs/view/44472"
-    },
-    {
-      "id": "salesforce-general-application",
-      "company": "Salesforce",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-08-27T20:02:20.000Z",
-      "latestSubject": "Build a data foundation that scales with Agentforce.",
-      "latestFrom": "Salesforce Platform <email@mail.salesforce.com>",
-      "gmailThreadId": "1a01ae0aca1bb84f",
-      "gmailMessageIds": [
-        "1a01ae0aca1bb84f",
-        "1a020386c92e08e6",
-        "19f6bc75a98a8029",
-        "19f6179cc7f6fb27",
-        "19f4cdf764ae6a26",
-        "19f4292d63cb563f",
-        "1a0203dccea32718",
-        "salesforce-general-application",
-        "1a044e17fd07e8f7",
-        "1a0444169c0c6820"
-      ],
-      "notes": "Your agents are only as smart as your data. Unfortunately, your email client cannot display HTML or your settings are turned off. To view this email, please copy and paste the link below into your browser. http://click.mail.salesforce.com/?qs=ABp7ImQiOjQ5ODEsInQiOjExMzQyLCJzIjo4fQAIAAAAAAAIUddeTHNPK7r-MrwKBdPBabTv3PH8mxn-xX5Y_sFF6h5UKqeX_Wfx9yoyrr5xC2UZiQn7FqEfjLs0FOS4boqrra9TIcR8BhG0yg This email powered by Salesforce Marketing Cloud. Manage Preferences to Unsubscribe: http://click.mail.salesforce.com/?qs=ABp7ImQiOjQ5ODEsInQiOjExMzQyLCJzIjo4fQAIAAAAAAAIUddeTSOriVPTJg2lfFCFGMutobysVZvgFW3n-5mkivm8topVbnsCgmu8qncTKp3LCuiUMJ1UjBuFCSeoLemPNGyMHLX9Tc-w4g (C) 2026 salesforce.com, inc. All rights reserved. Various trademarks held by their respective owners. You can unsubscribe from Marketing emails at any time. Please note that opting-out of Marketing communications does not affect your receipt of business communications that are important to your interaction with Salesforce, such as support/service communications, security updates, event registration updates or account management communications. Salesforce.com, inc. Salesforce Tower, 415 Mission Street, 3rd Floor, San Francisco, CA 94105, United States General Enquiries: 415-901-7000 | Fax: 415-901-7040 | Sales: 1-800-NO-SOFTWARE This email was sent to tirthcshah1999@gmail.com 96 Your agents are only as smart as your data. Strengthen data resilience with these admin tips. Get the guide Data is an organization’s most valuable asset, and for those looking to implement Agentforce, ensuring that data is accurate, current, and relevant can maximize its effectiveness. Read the guide to learn how to: Declutter your Salesforce org to remove technical debt Automate backups and speed up data recovery Develop sustainable data quality Get the guide IT Service, Right in Slack. Meet Your New AI Agent Learn how Agentforce IT Service + Slackbot resolve issues instantly — conversation-first, no portals. Watch the webinar &copy; 2026 Salesforce, Inc. Salesforce Tower, 415 Mission Street, 3rd Floor, San Francisco, CA 94105, United States General Inquiries: 1-800-NO-SOFTWARE This email was sent to tirthcshah1999@gmail.com You received this because you are enrolled in Marketing Communications. Unenroll Manage Preferences or Unsubscribe | Salesforce values your privacy. Check out our Privacy Statement to learn more. Powered by Salesforce Marketing Cloud",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Marketing digest / conference event promotional email",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:42.559+00:00",
-      "aiConfidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
     },
     {
       "id": "amida-technology-solutions-data-quality-engineer",
