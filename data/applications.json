@@ -1,6 +1,83 @@
 {
-  "updatedAt": "2026-09-01T01:18:11.226Z",
+  "updatedAt": "2026-09-01T06:05:09.697Z",
   "applications": [
+    {
+      "id": "cna-insurance-principal-data-engineer",
+      "company": "CNA Insurance",
+      "role": "Principal Data Engineer",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "CNA Application Status for R-7998 - Principal Data Engineer",
+      "latestFrom": "CNA Workday <CNA@myworkday.com>",
+      "lastActivityAt": "2026-09-01T05:40:06.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a05b7b5d8a4f348",
+      "gmailMessageIds": [
+        "1a05b7b5d8a4f348"
+      ],
+      "notes": "96 Hello Tirth, Thank you for your application for the Principal Data Engineer role at CNA Insurance. After further review, we have decided to pursue other candidates for this position. We encourage you to visit our Career Site where you can review current openings and set up job alerts to notify you of future openings that may match your interest. Thank you again for your interest in joining CNA, we wish you success in your career search. Sincerely, CNA Talent Acquisition This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "vela-software-engineer",
+      "company": "Vela",
+      "role": "Software Engineer",
+      "reqId": null,
+      "status": "interviewed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Vela technical follow-up - Tirth Shah",
+      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "lastActivityAt": "2026-09-01T04:53:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a04b5ef264a4e7b",
+      "gmailMessageIds": [
+        "1a05375b9fed30b4",
+        "1a05b51198106f70"
+      ],
+      "notes": "Hi Zorawar, Thank you for taking the time to go deep on the technical side today. I appreciated the questions around RAG architecture, ETL design, permission-based querying, API boundaries, and what I have broken, debugged, and rebuilt in past projects. The main reason Vela interests me is that the product sits at the exact intersection where I have been building: **data, energy, and AI**. Vela is not just adding a chat layer on top of project documents; it is turning fragmented infrastructure data into a live operating model that can trace changes, identify downstream impact, cite sources, route work, and stage actions behind human approval. From a technical perspective, this is how I would think about contributing: - I would start with the project model first: organizations, companies, projects, memberships, documents, source records, extracted events, impacted objects, recommendations, approvals, and audit logs. - I would treat every connector and API as a contract across authentication, authorization, schema, validation, idempotency, retries, error handling, and auditability. - I would design the RAG layer around permission-aware retrieval, source metadata, citations, and evaluation, not just embeddings and prompt quality. - I would separate recommendation from execution so Vela can draft, stage, and route actions while keeping final writeback behind scoped permissions and named approval. - I would keep the first product slice narrow, such as a source change that becomes an extracted event, maps to an impacted milestone/register field, and appears as a reviewable PM card with citations. My background maps to that work in a practical way. At Texas A&M Utilities, I built Python and SQL Server workflows across ERCOT, weather, solar, billing, CHP, thermal-storage, and sensor data with validation gates, retries, logs, alerts, and operator handoff. At Mays, I built a 29.6K-line analytics and AI platform with a 17-table warehouse, LangChain/OpenRouter assistant, schema RAG, SQL tools, OAuth/RBAC, and context management. At Black Tie, I helped ship a zero-to-one Next.js, TypeScript, Tailwind, Supabase/Postgres, Stripe, Maps, APIs, and webhook-based product from founder requirements to live usage in 12 weeks. I also want to be clear about how I work. I do not pretend to know every EPC or interconnection workflow yet, and I would not overstate my HCLTech work as live Verizon network automation. Where I do not know the domain detail, I will sit with users, read the actual artifacts, ask direct questions, and build the smallest useful version that proves the workflow. That is the attitude I would bring as a founding engineer: learn fast, build carefully, and own the messy last mile. On the practical side, I can start quickly and I am open to relocating to San Francisco for the right founding role. Beyond housing, food, and travel logistics, what would help me contribute fastest is early access to the product context, a clear first 30-day problem, custome"
+    },
+    {
+      "id": "icf-general-application",
+      "company": "ICF",
+      "role": "General Application",
+      "reqId": null,
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Explore life at ICF and discover new opportunities",
+      "latestFrom": "ICF Careers <icfcareers@icf.com>",
+      "lastActivityAt": "2026-09-01T02:44:17.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a05ada692b3e4f3",
+      "gmailMessageIds": [
+        "1a05ada692b3e4f3"
+      ],
+      "notes": "Aug Newsletter 2026 96 We'd love to see you apply Learn more about ICF Complete your ICF profile Browse open jobs What sets the ICF employee experience apart? What does it look like to grow your career while being supported every step of the way? Explore how ICF invests in employee development, well-being, and workplace flexibility to foster a culture where people can thrive. LEARN MORE LEARN MORE Open jobs spotlight Principal Solutions Architect | Scrum Master / Product Owner | Senior Agentic Enterprise Solutions Engineer | Manager, Cyber Security | Distribution Planning Engineer | Senior Specialist, C&I Buildings | Account Specialist - Beneficial Electrification | Energy Engineer | Disaster Recovery Grant Administrator - Reservist | FEMA Business Development Manager And more— browse our open jobs today > We're hiring power delivery professionals Join a team that’s shaping the future of power delivery. We combine cutting-edge technology with comprehensive engineering expertise to solve real-world utility challenges. DISCOVER MORE > Meet us on Instagram Want to know what it's like to work at ICF? FOLLOW US FOLLOW US ICF 1902 Reston Metro Plaza, Reston, VA 20190 Website | LinkedIn | Facebook | Inside ICF Copyright 2026, ICF International Inc. All Rights Reserved click here to unsubscribe"
+    },
+    {
+      "id": "expedia-data-engineer-iii-partner-data",
+      "company": "Expedia",
+      "role": "Data Engineer III - Partner Data",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in Expedia Group",
+      "latestFrom": "Expedia Workday Notifications <expedia@myworkday.com>",
+      "lastActivityAt": "2026-09-01T01:57:11.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a05aaf4644510ab",
+      "gmailMessageIds": [
+        "1a05aaf4644510ab"
+      ],
+      "notes": "Hi Tirth, Thank You for taking time to apply for the Data Engineer III - Partner Data position. We’re grateful for your interest in Expedia Group and in our Purpose to help travelers explore the world, one journey at a time. After reviewing your application, we’ve decided to move forward with other candidates whose experience more closely matches the requirements for this role. We know this can be disappointing news, and we hope you’ll consider applying for another role at Expedia Group. You can explore all open positions at Expedia Group Careers . Wishing you all the best on your career journey, Expedia Group Recruiting Team This email was intended for tirthcshah1999@gmail.com Email Communications Preference · Expedia Group - 1111 Expedia Group Way W., Seattle, WA 98119"
+    },
     {
       "id": "vela-energy-software-engineer",
       "company": "Vela Energy",
@@ -3339,25 +3416,6 @@
         "1a0538129698e71f"
       ],
       "notes": "Hello Team, Let’s meet with Tirth Shah and learn more about his experience with Ai. Regards, Karthik Hello Team, Let’s meet with Tirth Shah and learn more about his experience with Ai. Regards, Karthik"
-    },
-    {
-      "id": "vela-software-engineer",
-      "company": "Vela",
-      "role": "Software Engineer",
-      "reqId": null,
-      "status": "interviewed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Re: SWE at Vela Application → Tips to Prepare for the First Interview",
-      "latestFrom": "Tirth Shah <tirthcshah1999@gmail.com>",
-      "lastActivityAt": "2026-08-30T16:16:58.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a04b5ef264a4e7b",
-      "gmailMessageIds": [
-        "1a05375b9fed30b4"
-      ],
-      "notes": "Hi Anna, I tried joining the call. I've scheduled the call for today at 12:00 p.m. EST. Haven't had the chance to connect with Tarun. Would it be possible for you to check with him about his availability, or should I just schedule another meeting? Let me know whatever seems like a better option. Moreover, thank you for sharing these tips and the resource. I really appreciate the guidance as I prepare for the interview with Tarun. Best, Tirth Shah On Fri, Aug 28, 2026 at 10:35 PM Anna Miller <anna@outlier.expert> wrote: > The first interview with Vela consists of a *30min* conversation with > Tarun, the co-founder of Vela Energy. > > Remember you have only *30 seconds to make a strong first impression*. > The rest is built on how well you prepared for the interview. > > You will be evaluated on your *Communication ability + Technical depth.* > > *5 Tips to prepare:* > 1. Research the company Vela Energy <https://www.velaenergy.ai/> in detail > 2. Prepare a short *30 sec Intro *that tells Traun *WHY* you are > interested in Vela > 3. Prepare *3 Career Stories* about *Ownership *of projects end-to-end. > 4. Prepare *3 Career Stories* about *Technical Tradeoffs *during project > work > 5. Brush up on *API Design, Agent Orchestration* and other data/AI* > fundamentals* > > → Recommend to use *this resource* > <https://docs.google.com/spreadsheets/d/1GLZHYY4rCav-_pufjE1nA9zZ1JKQIEMd6Hrxas4fWWA/edit?gid=2139835690#gid=2139835690> > we offer inside the mentorship program to structure your career stories. > > Good luck! > > Best, > Anna Miller > Founder, Outlier Mentors > Hi Anna, I tried joining the call. I've scheduled the call for today at 12:00 p.m. EST. Haven't had the chance to connect with Tarun. Would it be possible for you to check with him about his availability, or should I just schedule another meeting? Let me know whatever seems like a better option. Moreover, thank you for sharing these tips and the resource. I really appreciate the guidance as I prepare for the interview with Tarun. Best, Tirth Shah On Fri, Aug 28, 2026 at 10:35 PM Anna Miller <anna@outlier.expert> wrote: The first interview with Vela consists of a 30min conversation with Tarun, the co-founder of Vela Energy. Remember you have only 30 seconds to make a strong first impression . The rest is built on how well you prepared for the interview. You will be evaluated on your Communication ability + Technical depth. 5 Tips to prepare : 1. Research the company Vela Energy in detail 2. Prepare a short 30 sec Intro that tells Traun WHY you are interested in Vela 3. Prepare 3 Career Stories about Ownership of projects end-to-end. 4. Prepare 3 Career Stories about Technical Tradeoffs during project work 5. Brush up on API Design, Agent Orchestration and other data/AI fundamentals → Recommend to use this resource we offer inside the mentorship program to structure your career stories. Good luck! Best, Anna Miller Founder, Outlier Mentors"
     },
     {
       "id": "vela-founding-software-engineer",
