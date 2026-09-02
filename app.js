@@ -1123,13 +1123,13 @@ async function renderFollowUp() {
     <div class="followup-header">
       <div class="followup-header-top">
         <div>
-          <h2 class="followup-title">&#128337; Follow-Up Needed</h2>
+          <h2 class="followup-title">Follow-Up Needed</h2>
           <p class="followup-subtitle">
             Threads where you sent the last message and received no reply.
             AI-generated drafts are ready to copy and paste.
           </p>
         </div>
-        <button class="btn-followup-refresh" onclick="state.followupLoaded=false;render();">&#8635; Refresh</button>
+        <button class="btn-followup-refresh" onclick="state.followupLoaded=false;render();">Refresh</button>
       </div>
       <div class="followup-threshold-row">
         <label class="followup-threshold-label-text">Show threads with no reply for at least:</label>
@@ -1146,7 +1146,7 @@ async function renderFollowUp() {
 
     ${visible.length === 0 ? `
       <div class="followup-empty">
-        <div class="followup-empty-icon">&#10003;</div>
+        <div class="followup-empty-icon">All clear</div>
         <strong>You're all caught up!</strong>
         <p>No threads found where you're waiting on a reply for ${threshold}+ business days.</p>
         <p style="font-size:13px;color:var(--muted);">The follow-up scanner runs daily via GitHub Actions. If you just ran it, check back tomorrow.</p>
@@ -1213,10 +1213,10 @@ function renderFollowUpCard(c) {
 
       <div class="followup-actions">
         <button class="btn-followup-accept btn-action btn-accept" data-id="${c.id}" title="I'll send this — copy draft and mark done">
-          &#10003; Done — I'll Send This
+          Done — I'll Send This
         </button>
         <button class="btn-followup-dismiss btn-action btn-dismiss" data-id="${c.id}" title="Not needed — remove from list permanently">
-          &#10007; Skip — Not Needed
+          Skip — Not Needed
         </button>
       </div>
     </div>
