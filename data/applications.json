@@ -1,6 +1,82 @@
 {
-  "updatedAt": "2026-09-02T19:09:56.579Z",
+  "updatedAt": "2026-09-02T20:00:34.999Z",
   "applications": [
+    {
+      "id": "ziprecruiter-you",
+      "company": "IBM",
+      "role": "You",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "TIRTH, Yellowstone Local has an open position",
+      "latestFrom": "ZipRecruiter <alerts@ziprecruiter.com>",
+      "lastActivityAt": "2026-09-02T19:44:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a063a6816ec370a",
+      "gmailMessageIds": [
+        "1a063a6816ec370a"
+      ],
+      "notes": " <https://www.ziprecruiter.com/km/AAEFIL-MkFX41KO7f-k6nlyPT4XQXtH60YPkO7JJF6947bvMLdZ3_0WqiZwq1TM2ddkRVDYJyM1O2hdS49fDu6xlB5ulwo6p4yS_V2wgiXFKuMGVTEmZ0oLLtGp4Ioe0iKqKrqxg2yRQnFcyaZtwU9KaYbQRHT4XyAgU3J0w2trFkEW4XRbBRY0QD16MAOZwnkLBNm5vaXJSf3SvenmJD9Li0a788wIbzoJc3BiSQAXh5rMXu3LmwMrXmcqUBBW-NNqb4lSDtfZhD17-oKUrjg11GRaNx9CJwpF8jJBegXyecN0lCPJFX29ub5GMvoN9XTSnLB49OfkrjDQYLso6z9xXpMg1Wn_rOzoOKcLp8rMdxxVM6Z0uNjQ4zNTs?tsid=111000153> Hi TIRTH, Here are today's jobs recommended for you: Senior Data Engineer <https://www.ziprecruiter.com/ekm/AAHyTtyx1e0_Je_z29f-7p6wMwDOeLh8hbqIbswiOasxGjtvuhe4dP2EV-oeymlEzo10PovRkI8qUfwdaFB9f_Cb1OPpCqxlBO3otf3akiu3ZIOG4axQdb5SvEqxowN3vqLykbIoTqWGaOmfdma9gSeCn99JPsYwk7dFoUmc2PFO3NMNW267RGQcLeiGBzk8KYoowvRWFn3zHY_KF0QUaAdqmaJttmlTXD0oLmGV96jMJURp2h1Gc_qY12WLcpFOyQ7AlOQiajtqMnbp8T5ZtD2flK7_5orqgew6qWd61-GojC_lPjRfQDWorLdlPf5jFQAG9QvL4uduXOVSUXlJuDI4v0XQg0z65PA4fg2_Idmnh-bGck8LRQ_p4sbfXnt-Ocq45B9vygend3HfqsrTJQ74gAYA?tsid=111000153> Yellowstone Local • Hickory, KY • In-person $91K - $124K / yr Estimated Pay View Details <https://www.ziprecruiter.com/ekm/AAHyTtyx1e0_Je_z29f-7p6wMwDOeLh8hbqIbswiOasxGjtvuhe4dP2EV-oeymlEzo10PovRkI8qUfwdaFB9f_Cb1OPpCqxlBO3otf3akiu3ZIOG4axQdb5SvEqxowN3vqLykbIoTqWGaOmfdma9gSeCn99JPsYwk7dFoUmc2PFO3NMNW267RGQcLeiGBzk8KYoowvRWFn3zHY_KF0QUaAdqmaJttmlTXD0oLmGV96jMJURp2h1Gc_qY12WLcpFOyQ7AlOQiajtqMnbp8T5ZtD2flK7_5orqgew6qWd61-GojC_lPjRfQDWorLdlPf5jFQAG9QvL4uduXOVSUXlJuDI4v0XQg0z65PA4fg2_Idmnh-bGck8LRQ_p4sbfXnt-Ocq45B9vygend3HfqsrTJQ74gAYA?tsid=111000153> Data Manager Senior - Data Engineering and Real-time Data Platforms (Apache... <https://www.ziprecruiter.com/ekm/AAHts-p1GlPKFDWVFvtQm8dZD-f5phBBhv6Ms19F5LcuoEnbDYF--v8_GPzeSEDo8R3D15_4ICiXE9ooZxxMAnNHsAmFNNgeFq2QT_u-c-dGbASAwYzySfyONLEqdFxpIDPTGlK3kDqG5DmRS3m8uEPO4TGZutEnOF73z81xbNFTiUHde_CfRusuCxoJ4IOh5tSy-dE7D5SlzmRYHlNxYr11ns5uHC-Jy1qUtnrw8gqPPAYIiAWiuPWtUyyqmsFnN_6rSDPjfQdxzs5_UEYu4axsoAWHNN6hhiC6owgtsTDW4YKaVfdo3fyIJKZEykuOAyjUWoYSypbPesBebnsRRNLyVGI0n8-F_3YYH0uv98udIgnGYIo3zO0xDC-cas-XfFiE6zHMHQLnRnQEclAYYq9P0Iu5?tsid=111000153> PNC Financial Services Group • Dallas, TX View Details <https://www.ziprecruiter.com/ekm/AAHts-p1GlPKFDWVFvtQm8dZD-f5phBBhv6Ms19F5LcuoEnbDYF--v8_GPzeSEDo8R3D15_4ICiXE9ooZxxMAnNHsAmFNNgeFq2QT_u-c-dGbASAwYzySfyONLEqdFxpIDPTGlK3kDqG5DmRS3m8uEPO4TGZutEnOF73z81xbNFTiUHde_CfRusuCxoJ4IOh5tSy-dE7D5SlzmRYHlNxYr11ns5uHC-Jy1qUtnrw8gqPPAYIiAWiuPWtUyyqmsFnN_6rSDPjfQdxzs5_UEYu4axsoAWHNN6hhiC6owgtsTDW4YKaVfdo3fyIJKZEykuOAyjUWoYSypbPesBebnsRRNLyVGI0n8-F_3YYH0uv98udIgnGYIo3zO0xDC-cas-XfFiE6zHMHQLnRnQEclAYYq9P0Iu5?tsid=111000153> Computer Scientist, Senior-Aurora, Colorado <https://www.ziprecruiter.com/ekm/AAHNg4dI5zvkibVI0uajq6La82TjKRHOxcV4YofJSi93sTqYrYIExVV2DhiePNw0JOzi8buLLa9HYguwPtBOcPd6s8oNxlYxwm0fxPuytRpHfSslknqAo-ibMMhy6wc3vFtEli1JmsmkIh-gv1Iclbfy5f7lYnqATTOeLfnPfQti-pPz6GjXgsfPWWCWhwOWY8gJvk6tKXxiPD5dC-NgKR2eVJlg5Jepb43N2cIwF2MvtL5nefJWjKWzrbWgDUJJpKAkDKftKNblh4KP_lxPTNeAkOXjmKXX4CdutJJucTY9VYByCQXHwsI2utFfTyu5pJC26mIxqD5-XsTn6EI2wF"
+    },
+    {
+      "id": "studyfetch-studyfetch",
+      "company": "Studyfetch",
+      "role": "Studyfetch",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "rules",
+      "reason": "application confirmed",
+      "latestSubject": "Thank you for applying to Studyfetch",
+      "latestFrom": "Studyfetch <no-reply@ats.rippling.com>",
+      "lastActivityAt": "2026-09-02T19:37:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0639ff4af48519",
+      "gmailMessageIds": [
+        "1a0639ff4af48519"
+      ],
+      "notes": "Hi Tirth, Thank you for applying to Studyfetch! We have received your application and will review it promptly. If we think there is a good fit, we will contact you at this email address. *Position:* Quality Assurance Analyst Thank you, Studyfetch Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read. 96 Hi Tirth, Thank you for applying to Studyfetch! We have received your application and will review it promptly. If we think there is a good fit, we will contact you at this email address. Position: Quality Assurance Analyst Thank you, Studyfetch Please do not reply to this email. It is sent from an unmonitored inbox and replies will not be read."
+    },
+    {
+      "id": "corewell-health-your-interest-r223658",
+      "company": "Corewell Health",
+      "role": "Your Interest",
+      "reqId": "R223658",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "rules",
+      "reason": "rejection keywords",
+      "latestSubject": "Update on the Priority Health Data Engineer Senior ( Job ID R223658 ) opportunity at Corewell Health",
+      "latestFrom": "Corewell Health Workday <spectrumhealth@myworkday.com>",
+      "lastActivityAt": "2026-09-02T19:15:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0638c7a9282969",
+      "gmailMessageIds": [
+        "1a0638c7a9282969"
+      ],
+      "notes": "Thank you for your interest in our Priority Health Data Engineer Senior ( Job ID R223658 ) opportunity. At this time we have decided to pursue other candidates. We encourage you to review other open positions at our career site and continue to apply for those specific positions in which your interests, skills and experience align. We wish you the best of success in your career search. Thank you, Corewell Health Talent Attraction Business Process: Job Application: Tirth Shah ‎- R223658 Priority Health Data Engineer Senior on 08/21/2026 Subject: Tirth Shah ‎- R223658 Priority Health Data Engineer Senior This email was intended for tirthcshah1999+workday-spectrumhealth@gmail.com Corewell Health · www.corewellhealth.org"
+    },
+    {
+      "id": "workable-sr",
+      "company": "Workable",
+      "role": "Sr",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "EEO survey for Sr. Data Engineer, at Zifo",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-09-02T19:09:28.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a06386bc201d502",
+      "gmailMessageIds": [
+        "1a06386bc201d502"
+      ],
+      "notes": "Zifo invites you to fill in an Equal Employment Opportunity form regarding your recent Sr. Data Engineer application. ------------------------------------------------------------------------------- If you didn't get the chance to complete the EEO survey when you submitted your job application for Sr. Data Engineer job, you can do it now. Fill in EEO form https://zifo.workable.com/candidates/Y2ilPST4yI1xZK63PS8Vu-nGAinqRMDPBwd4VR27ufQ/eeoc_profile/new?lng=en ** What is EEO? ** The U.S. Equal Employment Opportunity Commission (EEOC) enforces Federal laws to protect employees and job applicants against employment discrimination because of race, color, religion, sex, national origin, age, disability or genetic information. %{account_name} is an Equal opportunity employer. ------------------------------------------------------------------------------- Powered by Workable https://jobs.workable.com/ Zifo invites you to fill in an Equal Employment Opportunity form regarding your recent Sr. Data Engineer application. If you didn't get the chance to complete the EEO survey when you submitted your job application for Sr. Data Engineer job, you can do it now. The information you provide, will only be used for government reporting purposes and will not be used as selection criteria. Fill in EEO form What is EEO? The U.S. Equal Employment Opportunity Commission (EEOC) enforces Federal laws to protect employees and job applicants against employment discrimination because of race, color, religion, sex, national origin, age, disability or genetic information. Zifo is an Equal opportunity employer. Withdraw this application Powered by Workable"
+    },
     {
       "id": "avance-business-analyst",
       "company": "Avance",
