@@ -2,7 +2,8 @@ name: Gmail Sync
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/30 * * * *"      # main Gmail sync every 30 min
+    - cron: "0 10 * * *"         # follow-up scanner once daily at 10am UTC
   workflow_dispatch:
     inputs:
       backfill:
@@ -29,6 +30,14 @@ on:
         description: "Optional Gmail search query override"
         required: false
         default: ""
+      run_followup:
+        description: "Run the follow-up scanner"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
 
 permissions:
   contents: write
@@ -83,3 +92,16 @@ jobs:
           git commit -m "Update job applications from Gmail"
           git pull --rebase origin main
           git push
+
+      - name: Scan Follow-Up Candidates
+        # Run on daily cron trigger OR when manually requested
+        if: github.event.schedule == '0 10 * * *' || github.event.inputs.run_followup == 'true'
+        env:
+          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'google/gemini-3.7-flash' }}
+        run: node scripts/scan-followups.mjs

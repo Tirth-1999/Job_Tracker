@@ -211,7 +211,12 @@ const state = {
   pageSizeCompanies: 50,
   pageOther: 1,
   pageSizeOther: 50,
-  selectedDate: getTodayDateStr()
+  selectedDate: getTodayDateStr(),
+  // Follow-Up Needed tab
+  followupCandidates: [],
+  followupLoading: false,
+  followupLoaded: false,
+  followupThreshold: Number(localStorage.getItem("followup_threshold") ?? "10")
 };
 
 const byId = (id) => document.getElementById(id);
@@ -703,6 +708,8 @@ function render() {
     renderApplications(filteredApps);
   } else if (currentView === "otherEmails") {
     renderOtherEmails(filteredApps);
+  } else if (currentView === "followup") {
+    renderFollowUp();
   } else if (currentView === "analytics") {
     renderAnalytics(allApps);
   } else if (currentView === "services") {
@@ -1020,6 +1027,43 @@ function initCardActionDelegation() {
       setAppIgnored(reopenBtn.dataset.id, false);
       return;
     }
+
+    // ── Follow-Up Needed tab actions ─────────────────────────────────────────
+    const followupAcceptBtn = e.target.closest(".btn-followup-accept");
+    if (followupAcceptBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const id = followupAcceptBtn.dataset.id;
+      const draftEl = document.querySelector(`.followup-draft[data-id="${id}"]`);
+      if (draftEl) {
+        navigator.clipboard.writeText(draftEl.value).catch(() => {});
+      }
+      markFollowupActioned(id);
+      return;
+    }
+
+    const followupDismissBtn = e.target.closest(".btn-followup-dismiss");
+    if (followupDismissBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      markFollowupDismissed(followupDismissBtn.dataset.id);
+      return;
+    }
+
+    const copyDraftBtn = e.target.closest(".btn-copy-draft");
+    if (copyDraftBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const id = copyDraftBtn.dataset.id;
+      const draftEl = document.querySelector(`.followup-draft[data-id="${id}"]`);
+      if (draftEl) {
+        navigator.clipboard.writeText(draftEl.value).then(() => {
+          copyDraftBtn.textContent = "Copied!";
+          setTimeout(() => { copyDraftBtn.textContent = "Copy Draft"; }, 2000);
+        }).catch(() => {});
+      }
+      return;
+    }
   });
 
   document.addEventListener("change", (e) => {
@@ -1033,7 +1077,202 @@ function initCardActionDelegation() {
       }
       select.value = "";
     }
+
+    const thresholdSlider = e.target.closest(".followup-threshold-slider");
+    if (thresholdSlider) {
+      const val = Number(thresholdSlider.value);
+      state.followupThreshold = val;
+      localStorage.setItem("followup_threshold", String(val));
+      const label = thresholdSlider.closest(".followup-threshold-row")?.querySelector(".followup-threshold-label");
+      if (label) label.textContent = `${val} business days`;
+    }
   });
+}
+
+// ─── Follow-Up Needed Tab ─────────────────────────────────────────────────────
+
+async function renderFollowUp() {
+  const shell = byId("followup");
+  if (!shell) return;
+
+  // If not loaded yet, show a loader and kick off the fetch
+  if (!state.followupLoaded && !state.followupLoading) {
+    shell.innerHTML = `<div class="followup-loading"><span class="followup-spinner"></span> Loading follow-up candidates from database...</div>`;
+    state.followupLoading = true;
+    try {
+      await loadFollowupCandidates();
+      state.followupLoaded = true;
+    } catch (err) {
+      shell.innerHTML = `<div class="empty">Failed to load follow-up data: ${escapeHtml(err.message)}</div>`;
+      state.followupLoading = false;
+      return;
+    }
+    state.followupLoading = false;
+  }
+
+  // If still loading, bail — will re-render when done
+  if (state.followupLoading) return;
+
+  const threshold = state.followupThreshold;
+  const candidates = state.followupCandidates;
+
+  // Filter by current threshold (show only items at/above the threshold)
+  const visible = candidates.filter((c) => (c.days_elapsed ?? 0) >= threshold);
+
+  shell.innerHTML = `
+    <div class="followup-header">
+      <div class="followup-header-top">
+        <div>
+          <h2 class="followup-title">&#128337; Follow-Up Needed</h2>
+          <p class="followup-subtitle">
+            Threads where you sent the last message and received no reply.
+            AI-generated drafts are ready to copy and paste.
+          </p>
+        </div>
+        <button class="btn-followup-refresh" onclick="state.followupLoaded=false;render();">&#8635; Refresh</button>
+      </div>
+      <div class="followup-threshold-row">
+        <label class="followup-threshold-label-text">Show threads with no reply for at least:</label>
+        <input
+          type="range"
+          min="7" max="21" step="1"
+          value="${threshold}"
+          class="followup-threshold-slider"
+          aria-label="Follow-up threshold in business days"
+        />
+        <span class="followup-threshold-label">${threshold} business days</span>
+      </div>
+    </div>
+
+    ${visible.length === 0 ? `
+      <div class="followup-empty">
+        <div class="followup-empty-icon">&#10003;</div>
+        <strong>You're all caught up!</strong>
+        <p>No threads found where you're waiting on a reply for ${threshold}+ business days.</p>
+        <p style="font-size:13px;color:var(--muted);">The follow-up scanner runs daily via GitHub Actions. If you just ran it, check back tomorrow.</p>
+      </div>
+    ` : `
+      <div class="followup-count-bar">
+        <span>${visible.length} thread${visible.length === 1 ? "" : "s"} awaiting reply</span>
+      </div>
+      <div class="followup-cards">
+        ${visible.map((c) => renderFollowUpCard(c)).join("")}
+      </div>
+    `}
+  `;
+}
+
+function renderFollowUpCard(c) {
+  const days = c.days_elapsed ?? 0;
+  const dayClass = days >= 15 ? "days-urgent" : days >= 10 ? "days-warning" : "days-ok";
+  const attemptNum = (c.followup_count ?? 0) + 1;
+  const attemptBadge = `<span class="followup-attempt-badge attempt-${attemptNum}">Follow-up #${attemptNum} of 2</span>`;
+
+  const company = escapeHtml(c.company || "Unknown");
+  const role = escapeHtml(c.role || "General");
+  const contactName = escapeHtml(c.contact_name || "");
+  const contactEmail = escapeHtml(c.contact_email || "");
+  const subject = escapeHtml(c.subject || "No subject");
+  const summary = escapeHtml(c.thread_summary || "");
+  const draft = c.ai_draft || "";
+
+  const sentDate = c.last_sent_at
+    ? new Date(c.last_sent_at).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
+    : "Unknown";
+
+  return `
+    <div class="followup-card" data-id="${c.id}">
+      <div class="followup-card-header">
+        <div class="followup-card-meta">
+          <strong class="followup-company">${company}</strong>
+          <span class="followup-role">${role}</span>
+          ${contactName || contactEmail ? `
+            <span class="followup-contact">
+              ${contactName ? `${contactName}` : ""}${contactEmail ? ` &lt;${contactEmail}&gt;` : ""}
+            </span>
+          ` : ""}
+        </div>
+        <div class="followup-card-badges">
+          ${attemptBadge}
+          <span class="followup-days-badge ${dayClass}">${days} business days ago</span>
+        </div>
+      </div>
+
+      <div class="followup-subject">Re: ${subject}</div>
+      ${summary ? `<div class="followup-summary">${summary}</div>` : ""}
+
+      <div class="followup-sent-note">Your last email: ${sentDate}</div>
+
+      <div class="followup-draft-section">
+        <div class="followup-draft-label">
+          <span>AI Draft Reply</span>
+          <button class="btn-copy-draft btn-action" data-id="${c.id}">Copy Draft</button>
+        </div>
+        <textarea class="followup-draft" data-id="${c.id}" rows="5" spellcheck="true">${escapeHtml(draft)}</textarea>
+      </div>
+
+      <div class="followup-actions">
+        <button class="btn-followup-accept btn-action btn-accept" data-id="${c.id}" title="I'll send this — copy draft and mark done">
+          &#10003; Done — I'll Send This
+        </button>
+        <button class="btn-followup-dismiss btn-action btn-dismiss" data-id="${c.id}" title="Not needed — remove from list permanently">
+          &#10007; Skip — Not Needed
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+async function loadFollowupCandidates() {
+  const sb = initSupabase();
+  if (!sb) throw new Error("Supabase not initialized");
+
+  const { data, error } = await sb
+    .from("followup_candidates")
+    .select("*")
+    .eq("status", "pending")
+    .order("days_elapsed", { ascending: false });
+
+  if (error) throw new Error(error.message);
+  state.followupCandidates = data ?? [];
+}
+
+async function markFollowupActioned(id) {
+  // Remove from local state immediately
+  state.followupCandidates = state.followupCandidates.filter((c) => c.id !== id);
+  render();
+
+  // Persist to Supabase
+  try {
+    const sb = initSupabase();
+    if (sb) {
+      await sb
+        .from("followup_candidates")
+        .update({ status: "actioned", updated_at: new Date().toISOString() })
+        .eq("id", id);
+    }
+  } catch (err) {
+    console.error("Failed to mark follow-up as actioned:", err);
+  }
+}
+
+async function markFollowupDismissed(id) {
+  // Remove from local state immediately
+  state.followupCandidates = state.followupCandidates.filter((c) => c.id !== id);
+  render();
+
+  // Persist to Supabase — dismissed rows will never be re-suggested
+  try {
+    const sb = initSupabase();
+    if (sb) {
+      await sb
+        .from("followup_candidates")
+        .update({ status: "dismissed", updated_at: new Date().toISOString() })
+        .eq("id", id);
+    }
+  } catch (err) {
+    console.error("Failed to mark follow-up as dismissed:", err);
+  }
 }
 
 function renderPaginationBar(totalItems, currentPage, pageSize, prefix, pos = "bottom") {

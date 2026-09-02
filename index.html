@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Tracker</title>
-    <link rel="stylesheet" href="./styles.css?v=2.8.0" />
+    <link rel="stylesheet" href="./styles.css?v=2.9.0" />
   </head>
   <body>
     <header class="topbar">
@@ -30,6 +30,7 @@
         <button class="tab" type="button" data-view="companies">Companies</button>
         <button class="tab" type="button" data-view="applications">Applications</button>
         <button class="tab" type="button" data-view="otherEmails">Other Emails</button>
+        <button class="tab tab-followup" type="button" data-view="followup">&#128337; Follow-Up Needed</button>
         <button class="tab" type="button" data-view="analytics">Analytics</button>
         <button class="tab" type="button" data-view="services">Services</button>
       </nav>
@@ -48,6 +49,10 @@
 
       <section id="otherEmailsView" class="view">
         <div id="otherEmails" class="table-shell"></div>
+      </section>
+
+      <section id="followupView" class="view">
+        <div id="followup" class="followup-shell"></div>
       </section>
 
       <section id="analyticsView" class="view">
@@ -73,12 +78,12 @@
         </div>
         <div class="modal-actions">
           <button id="btnModalCancel" class="btn-modal-cancel" type="button">Cancel</button>
-          <button id="btnModalConfirm" class="btn-modal-confirm" type="button">Confirm & Move</button>
+          <button id="btnModalConfirm" class="btn-modal-confirm" type="button">Confirm &amp; Move</button>
         </div>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="./app.js?v=2.8.0" type="module"></script>
+    <script src="./app.js?v=2.9.0" type="module"></script>
   </body>
 </html>
