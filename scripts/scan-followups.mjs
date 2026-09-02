@@ -1,4 +1,6 @@
 import fsSync from "node:fs";
+import fs from "node:fs/promises";
+import path from "node:path";
 import crypto from "node:crypto";
 
 // ─── Auto-load local .env ─────────────────────────────────────────────────────
@@ -16,6 +18,7 @@ if (fsSync.existsSync(".env")) {
   }
 }
 
+const DATA_PATH = path.resolve("data/applications.json");
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 const GMAIL_API = "https://gmail.googleapis.com/gmail/v1/users/me";
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
@@ -28,15 +31,13 @@ const DRY_RUN = process.env.GMAIL_FOLLOWUP_DRY_RUN === "true";
 // Follow-up threshold: days since last sent with no reply. Default = 10 business days.
 const DEFAULT_THRESHOLD_BUSINESS_DAYS = Number(process.env.FOLLOWUP_THRESHOLD_DAYS || "10");
 
-// Maximum number of consecutive sent messages from me at end of thread before we stop following up.
-// If this count is >= MAX_FOLLOWUPS, the thread is considered exhausted.
-const MAX_FOLLOWUPS = 2; // 0-indexed count: 0 = eligible for 1st, 1 = eligible for 2nd, >=2 = stop
+// Maximum consecutive sent messages from me at the end of thread before stopping follow-ups
+const MAX_FOLLOWUPS = 2; // 0 = eligible for 1st follow-up, 1 = eligible for 2nd follow-up, >=2 = exhausted
 
 // How far back to scan SENT folder (in days)
 const SENT_LOOKBACK_DAYS = 90;
 
 // ─── Gmail sent search query ───────────────────────────────────────────────────
-// Covers job applications, recruiter cold outreach you sent, networking, referrals
 const SENT_QUERY = [
   "in:sent",
   "newer_than:" + SENT_LOOKBACK_DAYS + "d",
@@ -79,54 +80,58 @@ const NOREPLY_PATTERNS = [
 
 // ─── System Prompt for AI Draft Generation ───────────────────────────────────
 const DRAFT_SYSTEM_PROMPT = `
-You are a professional email writer helping a job seeker named Tirth follow up on important job-search threads.
-Tirth is a data engineer / data professional actively job seeking.
+You are a professional executive communication assistant helping a data engineering candidate named Tirth follow up on job-search outreach threads.
+Tirth is a skilled Data Engineer actively looking for data engineering, analytics engineering, and data platform positions.
 
-Your task is dual:
-1. Determine if this thread is a "dead end" and should NOT receive a follow-up.
-2. If it is NOT a dead end, write a personalized, professional follow-up email draft Tirth can send.
+Your task:
+1. Determine if this conversation is a "dead end" where following up is inappropriate or useless.
+2. If it is NOT a dead end, write a polished, high-converting follow-up email draft Tirth can copy and send.
 
 =====================================================================
 DEAD END DETECTION — return is_dead: true if ANY of the following apply:
 =====================================================================
-- The other party explicitly said they have no current positions open (and Tirth already acknowledged/replied thanking them).
-- The thread contains a clear rejection ("we've decided to move forward with other candidates", "we are not moving forward", "the position has been filled", "we wish you all the best", etc.).
-- Tirth already replied to a rejection gracefully, so the thread is fully closed.
-- The entire thread is automated emails only (ATS confirmations, noreply senders) with no human conversation.
-- The other person asked Tirth to stop contacting them, or said they'll reach out if needed.
-- The thread is clearly concluded and nothing productive can come from follow-up.
-- The thread is a subscription, newsletter, or promotional email.
+- The recipient explicitly stated they have no openings/positions available (and Tirth already acknowledged/thanked them).
+- The thread contains a clear formal rejection ("decided not to move forward", "pursuing other candidates", "position has been filled", etc.).
+- The other person asked not to be contacted or said they will reach out if something opens.
+- The thread is completely automated (ATS receipt, system notification) with no human in the conversation.
+- The thread is a newsletter, promotional digest, or platform notification.
+
+=====================================================================
+EXTRACTION GUIDELINES:
+=====================================================================
+- "company": Identify the employer or recruiting agency.
+  * If a PRE-DETECTED COMPANY is provided in the prompt, use it unless the thread explicitly discusses a different client employer.
+  * If not provided, infer the company from the recipient's email domain (e.g. from "@citi.com" -> "Citi", from "@walmart.com" -> "Walmart", from "@apexsystems.com" -> "Apex Systems", from "@teksystems.com" -> "TEKsystems", from "@insightglobal.com" -> "Insight Global").
+  * Do not output "Unknown" if the company can be inferred from the recipient's corporate email domain!
+- "role": Standardized job title (e.g. "Data Engineer", "Senior Data Engineer", "Analytics Engineer").
+- "contact_name": The first name of the recruiter or contact (extracted from the message body greeting "Hi John" or the recipient header "John Doe <john@...>").
+- "contact_email": The recipient's email address.
 
 =====================================================================
 DRAFT WRITING RULES — if is_dead: false, write a follow-up:
 =====================================================================
-- Keep it SHORT: 2-4 sentences maximum. Quality > quantity.
-- PERSONALIZE to the specific conversation, company, role, and what was last discussed.
-- Reference the specific context of the last email you sent (what you discussed, what you offered, what they said).
-- Do NOT invent facts, qualifications, or promises that are not in the thread.
-- Do NOT overstate Tirth's qualifications.
-- Do NOT use em dashes (—) anywhere in the draft. Use commas or periods instead.
-- Do NOT start with "I hope this email finds you well" or any generic opener. Start with something specific.
-- Do NOT use phrases like "I wanted to circle back" or "just checking in" — be more direct and specific.
-- Keep the tone professional, warm, and human. Not robotic or over-formal.
-- The subject line should be "Re: [original subject]" — just reference it, don't recreate it.
-- End with a clear but non-pushy call to action (e.g. asking if they have a moment to connect, if there's an update, or if any new positions opened).
-- Do NOT include a greeting or sign-off. Output ONLY the body text of the email (the content between "Hi [Name]," and "Best, Tirth"). Tirth will add those himself.
-- If the thread is networking/referral outreach with no job yet, the tone should be relationship-building.
-- If the thread is about a specific job application or interview, ask for a status update.
+- Keep it concise: 2 to 4 sentences maximum.
+- Personalize to the specific conversation, company, role, and what was last communicated.
+- Reference what was previously shared (e.g., resume sent, role discussed, connection requested).
+- Do NOT invent facts, credentials, projects, or promises not mentioned in the thread.
+- Do NOT use em dashes (—) anywhere in the text. Use commas or periods instead.
+- Do NOT start with "I hope this email finds you well" or generic cliches.
+- Do NOT use "I wanted to circle back" or "just checking in". Be purposeful, polite, and direct.
+- Tone: Professional, warm, confident, human. Not overly formal or desperate.
+- Output ONLY the body paragraphs of the email. Do NOT include greetings ("Hi Name,") or sign-offs ("Best, Tirth") — Tirth adds those in Gmail.
 
 =====================================================================
-OUTPUT FORMAT — respond with valid JSON only, no markdown fences:
+OUTPUT FORMAT — respond with valid JSON only, no markdown code fences:
 =====================================================================
 {
   "is_dead": boolean,
   "dead_reason": "short explanation if is_dead is true, else empty string",
-  "company": "company or organization name (if identifiable, else 'Unknown')",
-  "role": "job role or position (if identifiable, else 'General')",
-  "contact_name": "first name of the person Tirth was emailing (if identifiable, else '')",
-  "contact_email": "their email address (if identifiable, else '')",
-  "thread_summary": "1-2 sentence summary of what this conversation is about",
-  "ai_draft": "the follow-up email body text (empty string if is_dead is true)"
+  "company": "company name",
+  "role": "job role title",
+  "contact_name": "first name of recipient",
+  "contact_email": "recipient email address",
+  "thread_summary": "1-2 sentence summary of this conversation",
+  "ai_draft": "the follow-up email body text"
 }
 `.trim();
 
@@ -139,85 +144,125 @@ async function main() {
   const myEmail = await getMyEmail(token);
   console.log(`📧 Authenticated as: ${myEmail}`);
 
-  // ── 1. Load already-dismissed thread IDs from Supabase (don't re-process them) ──
-  const dismissedIds = await loadDismissedIds();
-  console.log(`📋 ${dismissedIds.size} threads already dismissed (will be skipped).`);
+  // 1. Load application dataset for thread-to-company mapping
+  const appMap = await loadApplicationsMap();
+  console.log(`📦 Loaded ${appMap.size} application mappings for company/role resolution.`);
 
-  // ── 2. List sent messages ─────────────────────────────────────────────────────
+  // 2. Load existing candidate status from Supabase
+  const existingMap = await loadExistingCandidatesMap();
+  console.log(`📋 Found ${existingMap.size} existing rows in Supabase followup_candidates.`);
+
+  // 3. List sent messages from Gmail
   const sentMessages = await listSentMessages(token);
   console.log(`📤 Found ${sentMessages.length} sent messages matching job-search query.`);
 
-  // ── 3. Group by thread, deduplicate ──────────────────────────────────────────
+  // 4. Group by thread ID
   const threadIds = [...new Set(sentMessages.map((m) => m.threadId).filter(Boolean))];
   console.log(`🧵 ${threadIds.length} unique threads to analyze.`);
 
-  // ── 4. Process each thread ───────────────────────────────────────────────────
+  // 5. Analyze threads in parallel chunks
   const candidates = [];
-  const THREAD_CHUNK = 5;
+  const THREAD_CHUNK = 8;
 
   for (let i = 0; i < threadIds.length; i += THREAD_CHUNK) {
     const chunk = threadIds.slice(i, i + THREAD_CHUNK);
     const results = await Promise.all(
-      chunk.map((threadId) => analyzeThread(token, threadId, myEmail, dismissedIds))
+      chunk.map((threadId) => analyzeThread(token, threadId, myEmail, appMap))
     );
     const qualified = results.filter(Boolean);
     candidates.push(...qualified);
 
     if (i + THREAD_CHUNK < threadIds.length) {
-      await sleep(200);
+      await sleep(150);
     }
   }
 
-  console.log(`\n✅ ${candidates.length} threads qualify for follow-up.`);
+  console.log(`\n✅ ${candidates.length} threads qualify for follow-up evaluation.`);
 
   if (!candidates.length) {
     console.log("No follow-up candidates found. Exiting.");
     return;
   }
 
-  // ── 5. Generate AI drafts for all candidates ──────────────────────────────────
-  console.log("\n🤖 Generating AI drafts...");
+  // 6. Generate AI drafts with real-time Supabase saving
+  console.log("\n🤖 Generating AI drafts with real-time saving to Supabase...");
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {
     console.warn("⚠️  No OPENROUTER_API_KEY set — cannot generate AI drafts.");
     return;
   }
 
-  const withDrafts = [];
-  for (const candidate of candidates) {
-    try {
-      const analysis = await generateDraft(candidate, apiKey);
-      if (!analysis || analysis.is_dead) {
-        console.log(`  ⏭  Skipping (AI says dead): ${candidate.subject?.slice(0, 60)}`);
+  let totalDrafted = 0;
+  let totalSkippedExisting = 0;
+  let totalDeadEnds = 0;
+
+  for (let idx = 0; idx < candidates.length; idx++) {
+    const candidate = candidates[idx];
+    const candidateId = candidate.candidateId;
+
+    // Check if already in Supabase
+    if (existingMap.has(candidateId)) {
+      const existingStatus = existingMap.get(candidateId);
+      if (existingStatus === "dismissed" || existingStatus === "actioned") {
+        totalSkippedExisting++;
         continue;
       }
-      withDrafts.push({ ...candidate, ...analysis });
-      console.log(`  ✅ Draft ready: ${analysis.company || candidate.company} — ${analysis.role || "General"}`);
+      // If already pending and has a draft, we can skip re-calling OpenRouter
+      totalSkippedExisting++;
+      continue;
+    }
+
+    try {
+      console.log(`[${idx + 1}/${candidates.length}] Analyzing thread "${candidate.subject?.slice(0, 50)}"...`);
+      const analysis = await generateDraft(candidate, apiKey);
+
+      if (!analysis || analysis.is_dead) {
+        console.log(`  ⏭  Skipping (dead end: ${analysis?.dead_reason || "closed thread"})`);
+        totalDeadEnds++;
+        continue;
+      }
+
+      // Merge and resolve best company & role
+      const resolvedCompany = analysis.company && analysis.company !== "Unknown"
+        ? analysis.company
+        : candidate.knownCompany || candidate.inferredCompany || "Unknown";
+
+      const resolvedRole = analysis.role && analysis.role !== "General"
+        ? analysis.role
+        : candidate.knownRole || "Data Engineer";
+
+      const resolvedContactName = analysis.contact_name || candidate.contactName || "";
+      const resolvedContactEmail = analysis.contact_email || candidate.contactEmail || "";
+
+      const fullCandidate = {
+        ...candidate,
+        company: resolvedCompany,
+        role: resolvedRole,
+        contact_name: resolvedContactName,
+        contact_email: resolvedContactEmail,
+        thread_summary: analysis.thread_summary || "",
+        ai_draft: analysis.ai_draft || ""
+      };
+
+      console.log(`  ✅ Draft ready: ${fullCandidate.company} | ${fullCandidate.role} (${fullCandidate.days_elapsed}d ago)`);
+
+      // Upsert immediately to Supabase so progress is never lost!
+      if (!DRY_RUN) {
+        await upsertCandidates([fullCandidate]);
+      }
+
+      totalDrafted++;
     } catch (err) {
-      console.warn(`  ⚠️  Draft generation failed for thread ${candidate.threadId}: ${err.message}`);
+      console.warn(`  ⚠️  Draft error on thread ${candidate.threadId}: ${err.message}`);
     }
-    await sleep(300);
+
+    await sleep(400);
   }
 
-  console.log(`\n📝 ${withDrafts.length} follow-up drafts generated.`);
-
-  if (!withDrafts.length) {
-    console.log("All candidates were classified as dead ends by AI. Exiting.");
-    return;
-  }
-
-  // ── 6. Upsert to Supabase ─────────────────────────────────────────────────────
-  if (DRY_RUN) {
-    console.log("\n[DRY RUN] Would upsert these follow-up candidates:");
-    for (const d of withDrafts) {
-      console.log(`  - ${d.company} | ${d.role} | ${d.contact_email} | Days: ${d.days_elapsed} | Attempt: ${d.followup_count + 1}`);
-      console.log(`    Draft: ${d.ai_draft?.slice(0, 120)}...`);
-    }
-    return;
-  }
-
-  await upsertCandidates(withDrafts);
-  console.log("\n🎉 Follow-up scan complete!");
+  console.log(`\n🎉 Follow-up scan complete!`);
+  console.log(`   - New drafts generated & saved: ${totalDrafted}`);
+  console.log(`   - Already in Supabase: ${totalSkippedExisting}`);
+  console.log(`   - Dead ends skipped: ${totalDeadEnds}`);
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -249,10 +294,50 @@ async function getMyEmail(token) {
   return json.emailAddress;
 }
 
+async function loadApplicationsMap() {
+  try {
+    const raw = await fs.readFile(DATA_PATH, "utf8");
+    const data = JSON.parse(raw);
+    const map = new Map();
+    for (const app of data.applications ?? []) {
+      if (app.gmailThreadId) {
+        map.set(app.gmailThreadId, app);
+      }
+      for (const msgId of app.gmailMessageIds ?? []) {
+        map.set(msgId, app);
+      }
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
+}
+
+async function loadExistingCandidatesMap() {
+  try {
+    const url = new URL(`${SUPABASE_URL}/rest/v1/followup_candidates`);
+    url.searchParams.set("select", "id,status");
+
+    const res = await fetch(url, {
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        Accept: "application/json"
+      }
+    });
+
+    if (!res.ok) return new Map();
+    const rows = await res.json();
+    return new Map(Array.isArray(rows) ? rows.map((r) => [r.id, r.status]) : []);
+  } catch {
+    return new Map();
+  }
+}
+
 async function listSentMessages(token) {
   const messages = [];
   let pageToken = "";
-  const maxPages = 10; // Cap to avoid runaway
+  const maxPages = 10;
 
   for (let page = 0; page < maxPages; page++) {
     const url = new URL(`${GMAIL_API}/messages`);
@@ -269,15 +354,11 @@ async function listSentMessages(token) {
     await sleep(100);
   }
 
-  // Fetch threadId for each message ref (they come with just id, not threadId)
-  // Actually Gmail messages list does return threadId — let's verify and map
   return messages;
 }
 
-async function analyzeThread(token, threadId, myEmail, dismissedIds) {
-  // Skip already-dismissed threads immediately
+async function analyzeThread(token, threadId, myEmail, appMap) {
   const candidateId = hashThreadId(threadId);
-  if (dismissedIds.has(candidateId)) return null;
 
   let thread;
   try {
@@ -290,24 +371,23 @@ async function analyzeThread(token, threadId, myEmail, dismissedIds) {
   const messages = thread.messages ?? [];
   if (!messages.length) return null;
 
-  // Sort by internalDate ascending (oldest first)
+  // Sort chronologically (oldest first)
   messages.sort((a, b) => Number(a.internalDate) - Number(b.internalDate));
 
-  // ── Filter A: Last message must be FROM me ──────────────────────────────────
+  // Filter A: Last message must be FROM me
   const lastMsg = messages[messages.length - 1];
   const lastHeaders = headersMap(lastMsg);
   const lastFrom = lastHeaders.from ?? "";
 
   if (!emailBelongsToMe(lastFrom, myEmail)) return null;
 
-  // ── Filter B: Days since last sent ≥ threshold ──────────────────────────────
+  // Filter B: Business days since last sent >= threshold
   const lastSentAt = new Date(Number(lastMsg.internalDate));
   const businessDaysElapsed = countBusinessDays(lastSentAt, new Date());
 
   if (businessDaysElapsed < DEFAULT_THRESHOLD_BUSINESS_DAYS) return null;
 
-  // ── Filter C: Count consecutive sent messages at end ─────────────────────────
-  // Walk backwards from the last message counting consecutive mine-sent messages
+  // Filter C: Count consecutive sent messages from me at the end
   let consecutiveMine = 0;
   for (let i = messages.length - 1; i >= 0; i--) {
     const from = headersMap(messages[i]).from ?? "";
@@ -318,21 +398,23 @@ async function analyzeThread(token, threadId, myEmail, dismissedIds) {
     }
   }
 
-  // 1 = eligible for 1st follow-up, 2 = eligible for 2nd follow-up, >=3 = exhausted
-  if (consecutiveMine > MAX_FOLLOWUPS) return null; // Already followed up twice, stop
+  if (consecutiveMine > MAX_FOLLOWUPS) return null; // Already followed up twice
 
-  // ── Filter D: Skip threads where the recipient is a noreply address ──────────
-  // Look at the first non-mine message to find the "contact" email
+  // Filter D: Find recipient contact info
   const firstOtherMsg = messages.find((m) => !emailBelongsToMe(headersMap(m).from ?? "", myEmail));
-  // If there's no reply at all (first message is from me), check the To: of my first message
   const myFirstMsg = messages.find((m) => emailBelongsToMe(headersMap(m).from ?? "", myEmail));
-  const contactEmail = firstOtherMsg
-    ? extractEmail(headersMap(firstOtherMsg).from ?? "")
-    : extractEmail(headersMap(myFirstMsg ?? {}).to ?? "");
+
+  const otherHeader = firstOtherMsg ? headersMap(firstOtherMsg).from : headersMap(myFirstMsg ?? {}).to;
+  const { name: contactName, email: contactEmail } = extractNameAndEmail(otherHeader);
 
   if (contactEmail && isNoreply(contactEmail)) return null;
 
-  // ── Build thread context for AI ──────────────────────────────────────────────
+  // Check known application dataset match
+  const matchedApp = appMap.get(threadId);
+  const knownCompany = matchedApp?.company || "";
+  const knownRole = matchedApp?.role || "";
+  const inferredCompany = inferCompanyFromDomain(contactEmail);
+
   const subject = headersMap(messages[0]).subject ?? "";
   const threadContext = buildThreadContext(messages, myEmail);
 
@@ -340,8 +422,12 @@ async function analyzeThread(token, threadId, myEmail, dismissedIds) {
     threadId,
     candidateId,
     subject,
+    contactName,
     contactEmail,
-    followup_count: consecutiveMine - 1, // 0 = first follow-up eligible, 1 = second
+    knownCompany,
+    knownRole,
+    inferredCompany,
+    followup_count: consecutiveMine - 1, // 0 = first follow-up, 1 = second
     last_sent_at: lastSentAt.toISOString(),
     days_elapsed: businessDaysElapsed,
     threadContext
@@ -353,26 +439,30 @@ function buildThreadContext(messages, myEmail) {
   for (const msg of messages) {
     const headers = headersMap(msg);
     const from = headers.from ?? "Unknown";
+    const to = headers.to ?? "Unknown";
     const date = new Date(Number(msg.internalDate)).toLocaleDateString("en-US", {
       month: "short", day: "numeric", year: "numeric"
     });
     const body = extractBody(msg.payload).slice(0, 2500);
-    const direction = emailBelongsToMe(from, myEmail) ? "[SENT BY ME]" : "[RECEIVED]";
-    parts.push(`--- ${direction} ${date} | From: ${from} ---\n${body}`);
+    const direction = emailBelongsToMe(from, myEmail) ? "[SENT BY TIRTH]" : "[RECEIVED FROM RECIPIENT]";
+    parts.push(`--- ${direction} ${date} | From: ${from} | To: ${to} ---\n${body}`);
   }
   return parts.join("\n\n").slice(0, 8000);
 }
 
 async function generateDraft(candidate, apiKey) {
-  const userPrompt = `Analyze this email thread and decide if it needs a follow-up. If yes, write the draft.
+  const userPrompt = `Analyze this job-search email thread and write a follow-up draft if appropriate.
 
 SUBJECT: ${candidate.subject}
+RECIPIENT CONTACT: ${candidate.contactName ? `${candidate.contactName} (${candidate.contactEmail})` : candidate.contactEmail}
+PRE-DETECTED COMPANY: ${candidate.knownCompany || candidate.inferredCompany || "None"}
+PRE-DETECTED ROLE: ${candidate.knownRole || "None"}
 FOLLOW-UP ATTEMPT: ${candidate.followup_count + 1} of 2
-DAYS SINCE MY LAST EMAIL: ${candidate.days_elapsed} business days
+BUSINESS DAYS SINCE TIRTH'S LAST EMAIL: ${candidate.days_elapsed}
 
---- FULL THREAD ---
+--- FULL CONVERSATION THREAD ---
 ${candidate.threadContext}
---- END THREAD ---`;
+--- END CONVERSATION THREAD ---`;
 
   const response = await fetch(OPENROUTER_API_URL, {
     method: "POST",
@@ -388,7 +478,7 @@ ${candidate.threadContext}
         { role: "system", content: DRAFT_SYSTEM_PROMPT },
         { role: "user", content: userPrompt }
       ],
-      temperature: 0.3
+      temperature: 0.25
     })
   });
 
@@ -403,17 +493,13 @@ ${candidate.threadContext}
 
 function parseJsonSafely(raw) {
   if (!raw) return null;
-  // Strip markdown fences if present
-  let cleaned = raw.trim();
-  cleaned = cleaned.replace(/^```(?:json)?\s*/i, "").replace(/\s*```\s*$/i, "").trim();
-
+  let cleaned = raw.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```\s*$/i, "").trim();
   try {
     return JSON.parse(cleaned);
   } catch {
-    // Regex fallback: extract first JSON object
     const match = cleaned.match(/\{[\s\S]*\}/);
     if (match) {
-      try { return JSON.parse(match[0]); } catch { /* ignore */ }
+      try { return JSON.parse(match[0]); } catch {}
     }
     return null;
   }
@@ -428,7 +514,7 @@ async function upsertCandidates(candidates) {
     company: (c.company ?? "Unknown").slice(0, 200),
     role: (c.role ?? "General").slice(0, 200),
     contact_name: (c.contact_name ?? "").slice(0, 200),
-    contact_email: (c.contact_email ?? c.contactEmail ?? "").slice(0, 200),
+    contact_email: (c.contact_email ?? "").slice(0, 200),
     last_sent_at: c.last_sent_at,
     days_elapsed: c.days_elapsed,
     followup_count: c.followup_count,
@@ -438,50 +524,20 @@ async function upsertCandidates(candidates) {
     updated_at: now
   }));
 
-  // Batch upsert in chunks of 50
-  const BATCH = 50;
-  for (let i = 0; i < rows.length; i += BATCH) {
-    const chunk = rows.slice(i, i + BATCH);
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/followup_candidates`, {
-      method: "POST",
-      headers: {
-        apikey: SUPABASE_ANON_KEY,
-        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-        "Content-Type": "application/json",
-        // Only update non-dismissed rows — don't touch dismissed ones
-        Prefer: "resolution=merge-duplicates"
-      },
-      body: JSON.stringify(chunk)
-    });
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/followup_candidates`, {
+    method: "POST",
+    headers: {
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+      "Content-Type": "application/json",
+      Prefer: "resolution=merge-duplicates"
+    },
+    body: JSON.stringify(rows)
+  });
 
-    if (!res.ok) {
-      const text = await res.text();
-      console.warn(`Supabase upsert warning (${res.status}): ${text}`);
-    } else {
-      console.log(`✅ Upserted ${chunk.length} follow-up candidates to Supabase.`);
-    }
-  }
-}
-
-async function loadDismissedIds() {
-  try {
-    const url = new URL(`${SUPABASE_URL}/rest/v1/followup_candidates`);
-    url.searchParams.set("select", "id");
-    url.searchParams.set("status", "eq.dismissed");
-
-    const res = await fetch(url, {
-      headers: {
-        apikey: SUPABASE_ANON_KEY,
-        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-        Accept: "application/json"
-      }
-    });
-
-    if (!res.ok) return new Set();
-    const rows = await res.json();
-    return new Set(Array.isArray(rows) ? rows.map((r) => r.id) : []);
-  } catch {
-    return new Set();
+  if (!res.ok) {
+    const text = await res.text();
+    console.warn(`Supabase upsert notice (${res.status}): ${text}`);
   }
 }
 
@@ -522,6 +578,30 @@ function extractEmail(header) {
   return match ? match[1].trim() : (header ?? "").trim();
 }
 
+function extractNameAndEmail(header) {
+  if (!header) return { name: "", email: "" };
+  const emailMatch = header.match(/<([^>]+)>/) || header.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
+  const email = emailMatch ? emailMatch[1].trim() : header.trim();
+  let name = "";
+  if (header.includes("<")) {
+    name = header.slice(0, header.indexOf("<")).replace(/["']/g, "").trim();
+  }
+  return { name, email };
+}
+
+function inferCompanyFromDomain(email) {
+  if (!email || !email.includes("@")) return "";
+  const domain = email.split("@")[1].toLowerCase();
+  const publicWebmails = new Set([
+    "gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "icloud.com",
+    "aol.com", "protonmail.com", "zoho.com", "mail.com", "ymail.com"
+  ]);
+  if (publicWebmails.has(domain)) return "";
+  const mainPart = domain.split(".")[0];
+  if (!mainPart || mainPart.length < 2) return "";
+  return mainPart.charAt(0).toUpperCase() + mainPart.slice(1);
+}
+
 function isNoreply(email) {
   return NOREPLY_PATTERNS.some((p) => p.test(email));
 }
@@ -530,10 +610,6 @@ function hashThreadId(threadId) {
   return crypto.createHash("sha256").update(threadId).digest("hex").slice(0, 32);
 }
 
-/**
- * Count business days (Mon–Fri) between two dates.
- * Saturdays and Sundays are not counted.
- */
 function countBusinessDays(fromDate, toDate) {
   let count = 0;
   const current = new Date(fromDate);
@@ -544,7 +620,7 @@ function countBusinessDays(fromDate, toDate) {
   while (current < end) {
     current.setDate(current.getDate() + 1);
     const day = current.getDay();
-    if (day !== 0 && day !== 6) count++; // Not Sunday (0) or Saturday (6)
+    if (day !== 0 && day !== 6) count++;
   }
   return count;
 }
