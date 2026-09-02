@@ -216,7 +216,11 @@ const state = {
   followupCandidates: [],
   followupLoading: false,
   followupLoaded: false,
-  followupThreshold: Number(localStorage.getItem("followup_threshold") ?? "10")
+  followupThreshold: Number(localStorage.getItem("followup_threshold") ?? "10"),
+  followupFilter: "all",
+  followupSort: "days_desc",
+  followupSearch: "",
+  activeFollowupId: null
 };
 
 const byId = (id) => document.getElementById(id);
@@ -1029,43 +1033,123 @@ function initCardActionDelegation() {
     }
 
     // ── Follow-Up Needed tab actions ─────────────────────────────────────────
-    const followupAcceptBtn = e.target.closest(".btn-followup-accept");
-    if (followupAcceptBtn) {
+    const filterChip = e.target.closest(".followup-filter-chip");
+    if (filterChip && filterChip.dataset.filter) {
       e.preventDefault();
-      e.stopPropagation();
-      const id = followupAcceptBtn.dataset.id;
-      const draftEl = document.querySelector(`.followup-draft[data-id="${id}"]`);
-      if (draftEl) {
-        navigator.clipboard.writeText(draftEl.value).catch(() => {});
-      }
-      markFollowupActioned(id);
+      state.followupFilter = filterChip.dataset.filter;
+      renderFollowUp();
       return;
     }
 
-    const followupDismissBtn = e.target.closest(".btn-followup-dismiss");
-    if (followupDismissBtn) {
+    const refreshFollowupBtn = e.target.closest("#btnFollowupRefresh");
+    if (refreshFollowupBtn) {
       e.preventDefault();
-      e.stopPropagation();
-      markFollowupDismissed(followupDismissBtn.dataset.id);
+      state.followupLoaded = false;
+      renderFollowUp();
       return;
     }
 
-    const copyDraftBtn = e.target.closest(".btn-copy-draft");
-    if (copyDraftBtn) {
+    const quickCopyBtn = e.target.closest(".btn-quick-copy");
+    if (quickCopyBtn) {
       e.preventDefault();
       e.stopPropagation();
-      const id = copyDraftBtn.dataset.id;
-      const draftEl = document.querySelector(`.followup-draft[data-id="${id}"]`);
-      if (draftEl) {
-        navigator.clipboard.writeText(draftEl.value).then(() => {
-          copyDraftBtn.textContent = "Copied!";
-          setTimeout(() => { copyDraftBtn.textContent = "Copy Draft"; }, 2000);
+      const id = quickCopyBtn.dataset.id;
+      const candidate = state.followupCandidates.find((c) => c.id === id);
+      if (candidate && candidate.ai_draft) {
+        navigator.clipboard.writeText(candidate.ai_draft).then(() => {
+          const oldText = quickCopyBtn.textContent;
+          quickCopyBtn.textContent = "Copied!";
+          setTimeout(() => { quickCopyBtn.textContent = oldText; }, 2000);
         }).catch(() => {});
       }
       return;
     }
+
+    const quickDismissBtn = e.target.closest(".btn-quick-dismiss");
+    if (quickDismissBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      markFollowupDismissed(quickDismissBtn.dataset.id);
+      return;
+    }
+
+    const reviewDraftBtn = e.target.closest(".btn-review-draft");
+    if (reviewDraftBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      openFollowupModal(reviewDraftBtn.dataset.id);
+      return;
+    }
+
+    const card = e.target.closest(".followup-card");
+    if (card && !e.target.closest("button") && !e.target.closest("a")) {
+      e.preventDefault();
+      openFollowupModal(card.dataset.id);
+      return;
+    }
+
+    // Modal buttons
+    if (e.target.closest("#btnFollowupModalClose")) {
+      e.preventDefault();
+      closeFollowupModal();
+      return;
+    }
+
+    if (e.target.closest("#btnFollowupModalCopy")) {
+      e.preventDefault();
+      const textarea = byId("followupModalDraftText");
+      const btn = byId("#btnFollowupModalCopy") || e.target.closest("#btnFollowupModalCopy");
+      if (textarea) {
+        navigator.clipboard.writeText(textarea.value).then(() => {
+          if (btn) {
+            btn.textContent = "Copied!";
+            setTimeout(() => { btn.textContent = "Copy Draft"; }, 2000);
+          }
+        }).catch(() => {});
+      }
+      return;
+    }
+
+    if (e.target.closest("#btnFollowupModalDone")) {
+      e.preventDefault();
+      const textarea = byId("followupModalDraftText");
+      if (textarea) {
+        navigator.clipboard.writeText(textarea.value).catch(() => {});
+      }
+      if (state.activeFollowupId) {
+        const id = state.activeFollowupId;
+        closeFollowupModal();
+        markFollowupActioned(id);
+      }
+      return;
+    }
+
+    if (e.target.closest("#btnFollowupModalDismiss")) {
+      e.preventDefault();
+      if (state.activeFollowupId) {
+        const id = state.activeFollowupId;
+        closeFollowupModal();
+        markFollowupDismissed(id);
+      }
+      return;
+    }
+
+    const modalBackdrop = e.target;
+    if (modalBackdrop && modalBackdrop.id === "followupModalBackdrop") {
+      closeFollowupModal();
+      return;
+    }
   });
 
+  // Live search input for follow-up
+  document.addEventListener("input", (e) => {
+    if (e.target && e.target.id === "followupSearchInput") {
+      state.followupSearch = e.target.value;
+      renderFollowUpGridOnly();
+    }
+  });
+
+  // Sort & slider change listeners
   document.addEventListener("change", (e) => {
     const select = e.target.closest(".select-move-lane");
     if (select) {
@@ -1078,24 +1162,84 @@ function initCardActionDelegation() {
       select.value = "";
     }
 
-    const thresholdSlider = e.target.closest(".followup-threshold-slider");
+    const sortSelect = e.target.closest("#followupSortSelect");
+    if (sortSelect) {
+      state.followupSort = sortSelect.value;
+      renderFollowUp();
+      return;
+    }
+
+    const thresholdSlider = e.target.closest("#followupThresholdSlider") || e.target.closest(".followup-threshold-slider");
     if (thresholdSlider) {
       const val = Number(thresholdSlider.value);
       state.followupThreshold = val;
       localStorage.setItem("followup_threshold", String(val));
-      const label = thresholdSlider.closest(".followup-threshold-row")?.querySelector(".followup-threshold-label");
-      if (label) label.textContent = `${val} business days`;
+      renderFollowUp();
+    }
+  });
+
+  // Escape key closes modal
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && state.activeFollowupId) {
+      closeFollowupModal();
     }
   });
 }
 
-// ─── Follow-Up Needed Tab ─────────────────────────────────────────────────────
+// ─── Follow-Up Needed Tab (Grid UI & Review Modal) ────────────────────────────
+
+function getFilteredAndSortedFollowups() {
+  const threshold = state.followupThreshold;
+  const allCandidates = state.followupCandidates ?? [];
+
+  // Filter 1: Min business days elapsed
+  let list = allCandidates.filter((c) => (c.days_elapsed ?? 0) >= threshold);
+
+  // Compute counts for filter chips
+  const totalCount = list.length;
+  const urgentCount = list.filter((c) => (c.days_elapsed ?? 0) >= 15).length;
+  const attempt1Count = list.filter((c) => (c.followup_count ?? 0) === 0).length;
+  const attempt2Count = list.filter((c) => (c.followup_count ?? 0) === 1).length;
+
+  // Filter 2: Filter chip
+  if (state.followupFilter === "urgent") {
+    list = list.filter((c) => (c.days_elapsed ?? 0) >= 15);
+  } else if (state.followupFilter === "attempt1") {
+    list = list.filter((c) => (c.followup_count ?? 0) === 0);
+  } else if (state.followupFilter === "attempt2") {
+    list = list.filter((c) => (c.followup_count ?? 0) === 1);
+  }
+
+  // Filter 3: Search query
+  const q = (state.followupSearch || "").trim().toLowerCase();
+  if (q) {
+    list = list.filter((c) => {
+      const comp = String(c.company || "").toLowerCase();
+      const role = String(c.role || "").toLowerCase();
+      const contact = String(c.contact_name || "").toLowerCase();
+      const email = String(c.contact_email || "").toLowerCase();
+      const subj = String(c.subject || "").toLowerCase();
+      return comp.includes(q) || role.includes(q) || contact.includes(q) || email.includes(q) || subj.includes(q);
+    });
+  }
+
+  // Sorting
+  if (state.followupSort === "days_asc") {
+    list.sort((a, b) => (a.days_elapsed ?? 0) - (b.days_elapsed ?? 0));
+  } else if (state.followupSort === "company_asc") {
+    list.sort((a, b) => String(a.company || "").localeCompare(String(b.company || "")));
+  } else {
+    // default: days_desc
+    list.sort((a, b) => (b.days_elapsed ?? 0) - (a.days_elapsed ?? 0));
+  }
+
+  return { list, totalCount, urgentCount, attempt1Count, attempt2Count };
+}
 
 async function renderFollowUp() {
   const shell = byId("followup");
   if (!shell) return;
 
-  // If not loaded yet, show a loader and kick off the fetch
   if (!state.followupLoaded && !state.followupLoading) {
     shell.innerHTML = `<div class="followup-loading"><span class="followup-spinner"></span> Loading follow-up candidates from database...</div>`;
     state.followupLoading = true;
@@ -1110,14 +1254,10 @@ async function renderFollowUp() {
     state.followupLoading = false;
   }
 
-  // If still loading, bail — will re-render when done
   if (state.followupLoading) return;
 
   const threshold = state.followupThreshold;
-  const candidates = state.followupCandidates;
-
-  // Filter by current threshold (show only items at/above the threshold)
-  const visible = candidates.filter((c) => (c.days_elapsed ?? 0) >= threshold);
+  const { list, totalCount, urgentCount, attempt1Count, attempt2Count } = getFilteredAndSortedFollowups();
 
   shell.innerHTML = `
     <div class="followup-header">
@@ -1125,102 +1265,255 @@ async function renderFollowUp() {
         <div>
           <h2 class="followup-title">Follow-Up Needed</h2>
           <p class="followup-subtitle">
-            Threads where you sent the last message and received no reply.
-            AI-generated drafts are ready to copy and paste.
+            Threads awaiting a response. Click any card to review the draft or copy directly.
           </p>
         </div>
-        <button class="btn-followup-refresh" onclick="state.followupLoaded=false;render();">Refresh</button>
+        <div class="followup-header-actions">
+          <button class="btn-followup-refresh" id="btnFollowupRefresh">Refresh</button>
+        </div>
       </div>
-      <div class="followup-threshold-row">
-        <label class="followup-threshold-label-text">Show threads with no reply for at least:</label>
-        <input
-          type="range"
-          min="7" max="21" step="1"
-          value="${threshold}"
-          class="followup-threshold-slider"
-          aria-label="Follow-up threshold in business days"
-        />
-        <span class="followup-threshold-label">${threshold} business days</span>
+
+      <div class="followup-controls-strip">
+        <div class="followup-search-box">
+          <input
+            type="search"
+            id="followupSearchInput"
+            placeholder="Search company, role, contact..."
+            value="${escapeHtml(state.followupSearch)}"
+          />
+        </div>
+
+        <div class="followup-filter-chips">
+          <button class="followup-filter-chip ${state.followupFilter === 'all' ? 'active' : ''}" data-filter="all">
+            All (${totalCount})
+          </button>
+          <button class="followup-filter-chip ${state.followupFilter === 'urgent' ? 'active' : ''}" data-filter="urgent">
+            Urgent 15d+ (${urgentCount})
+          </button>
+          <button class="followup-filter-chip ${state.followupFilter === 'attempt1' ? 'active' : ''}" data-filter="attempt1">
+            Attempt #1 (${attempt1Count})
+          </button>
+          <button class="followup-filter-chip ${state.followupFilter === 'attempt2' ? 'active' : ''}" data-filter="attempt2">
+            Attempt #2 (${attempt2Count})
+          </button>
+        </div>
+
+        <div class="followup-sort-wrap">
+          <select id="followupSortSelect" class="followup-sort-select" aria-label="Sort follow-up cards">
+            <option value="days_desc" ${state.followupSort === 'days_desc' ? 'selected' : ''}>Longest Waiting First</option>
+            <option value="days_asc" ${state.followupSort === 'days_asc' ? 'selected' : ''}>Most Recent First</option>
+            <option value="company_asc" ${state.followupSort === 'company_asc' ? 'selected' : ''}>Company A-Z</option>
+          </select>
+        </div>
+
+        <div class="followup-threshold-row">
+          <label class="followup-threshold-label-text">Min waiting:</label>
+          <input
+            type="range"
+            min="7" max="21" step="1"
+            value="${threshold}"
+            class="followup-threshold-slider"
+            id="followupThresholdSlider"
+            aria-label="Follow-up threshold in business days"
+          />
+          <span class="followup-threshold-label">${threshold} business days</span>
+        </div>
       </div>
     </div>
 
-    ${visible.length === 0 ? `
+    <div class="followup-count-bar" id="followupCountBar">
+      Showing <strong>${list.length}</strong> of <strong>${totalCount}</strong> follow-up opportunities
+    </div>
+
+    <div id="followupCardsContainer">
+      ${list.length === 0 ? `
+        <div class="followup-empty">
+          <div class="followup-empty-icon">All clear</div>
+          <strong>No matching follow-up threads found</strong>
+          <p>Try adjusting your search query, filter chips, or minimum waiting threshold.</p>
+        </div>
+      ` : `
+        <div class="followup-cards-grid" id="followupCardsGrid">
+          ${list.map(renderFollowUpCard).join("")}
+        </div>
+      `}
+    </div>
+  `;
+}
+
+// Partial re-render when typing in search to preserve input focus
+function renderFollowUpGridOnly() {
+  const container = byId("followupCardsContainer");
+  const countBar = byId("followupCountBar");
+  if (!container || !countBar) {
+    renderFollowUp();
+    return;
+  }
+
+  const { list, totalCount } = getFilteredAndSortedFollowups();
+
+  countBar.innerHTML = `Showing <strong>${list.length}</strong> of <strong>${totalCount}</strong> follow-up opportunities`;
+
+  if (list.length === 0) {
+    container.innerHTML = `
       <div class="followup-empty">
         <div class="followup-empty-icon">All clear</div>
-        <strong>You're all caught up!</strong>
-        <p>No threads found where you're waiting on a reply for ${threshold}+ business days.</p>
-        <p style="font-size:13px;color:var(--muted);">The follow-up scanner runs daily via GitHub Actions. If you just ran it, check back tomorrow.</p>
+        <strong>No matching follow-up threads found</strong>
+        <p>Try adjusting your search query, filter chips, or minimum waiting threshold.</p>
       </div>
-    ` : `
-      <div class="followup-count-bar">
-        <span>${visible.length} thread${visible.length === 1 ? "" : "s"} awaiting reply</span>
+    `;
+  } else {
+    container.innerHTML = `
+      <div class="followup-cards-grid" id="followupCardsGrid">
+        ${list.map(renderFollowUpCard).join("")}
       </div>
-      <div class="followup-cards">
-        ${visible.map((c) => renderFollowUpCard(c)).join("")}
-      </div>
-    `}
-  `;
+    `;
+  }
 }
 
 function renderFollowUpCard(c) {
   const days = c.days_elapsed ?? 0;
   const dayClass = days >= 15 ? "days-urgent" : days >= 10 ? "days-warning" : "days-ok";
   const attemptNum = (c.followup_count ?? 0) + 1;
-  const attemptBadge = `<span class="followup-attempt-badge attempt-${attemptNum}">Follow-up #${attemptNum} of 2</span>`;
+  const attemptBadge = `<span class="followup-attempt-badge attempt-${attemptNum}">Attempt #${attemptNum}</span>`;
 
   const company = escapeHtml(c.company || "Unknown");
   const role = escapeHtml(c.role || "General");
   const contactName = escapeHtml(c.contact_name || "");
   const contactEmail = escapeHtml(c.contact_email || "");
   const subject = escapeHtml(c.subject || "No subject");
-  const summary = escapeHtml(c.thread_summary || "");
-  const draft = c.ai_draft || "";
+  const summary = escapeHtml(c.thread_summary || c.ai_draft || "");
 
-  const sentDate = c.last_sent_at
-    ? new Date(c.last_sent_at).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
-    : "Unknown";
+  const contactDisplay = contactName
+    ? `${contactName}${contactEmail ? ` · ${contactEmail}` : ""}`
+    : (contactEmail || "Recruiter");
 
   return `
     <div class="followup-card" data-id="${c.id}">
-      <div class="followup-card-header">
-        <div class="followup-card-meta">
-          <strong class="followup-company">${company}</strong>
-          <span class="followup-role">${role}</span>
-          ${contactName || contactEmail ? `
-            <span class="followup-contact">
-              ${contactName ? `${contactName}` : ""}${contactEmail ? ` &lt;${contactEmail}&gt;` : ""}
-            </span>
-          ` : ""}
-        </div>
-        <div class="followup-card-badges">
-          ${attemptBadge}
-          <span class="followup-days-badge ${dayClass}">${days} business days ago</span>
-        </div>
+      <div class="followup-card-top">
+        <strong class="followup-company" title="${company}">${company}</strong>
+        <span class="followup-days-badge ${dayClass}">${days}d ago</span>
       </div>
 
-      <div class="followup-subject">Re: ${subject}</div>
-      ${summary ? `<div class="followup-summary">${summary}</div>` : ""}
-
-      <div class="followup-sent-note">Your last email: ${sentDate}</div>
-
-      <div class="followup-draft-section">
-        <div class="followup-draft-label">
-          <span>AI Draft Reply</span>
-          <button class="btn-copy-draft btn-action" data-id="${c.id}">Copy Draft</button>
-        </div>
-        <textarea class="followup-draft" data-id="${c.id}" rows="5" spellcheck="true">${escapeHtml(draft)}</textarea>
+      <div class="followup-role-row">
+        <span class="followup-role" title="${role}">${role}</span>
+        ${attemptBadge}
       </div>
 
-      <div class="followup-actions">
-        <button class="btn-followup-accept btn-action btn-accept" data-id="${c.id}" title="I'll send this — copy draft and mark done">
-          Done — I'll Send This
-        </button>
-        <button class="btn-followup-dismiss btn-action btn-dismiss" data-id="${c.id}" title="Not needed — remove from list permanently">
-          Skip — Not Needed
-        </button>
+      <div class="followup-contact" title="${contactDisplay}">${contactDisplay}</div>
+
+      <div class="followup-subject-line" title="Re: ${subject}">Re: ${subject}</div>
+
+      <div class="followup-summary-box">
+        ${summary}
+      </div>
+
+      <div class="followup-card-footer">
+        <button class="btn-review-draft" data-id="${c.id}">Review Draft</button>
+        <button class="btn-quick-copy" data-id="${c.id}" title="Copy draft to clipboard">Copy</button>
+        <button class="btn-quick-dismiss" data-id="${c.id}" title="Skip and remove from list">Skip</button>
       </div>
     </div>
   `;
+}
+
+function getGmailSearchUrlForFollowup(c) {
+  if (c.thread_id) {
+    return `https://mail.google.com/mail/#all/${encodeURIComponent(c.thread_id)}`;
+  }
+  if (c.contact_email) {
+    return `https://mail.google.com/mail/#search/${encodeURIComponent(c.contact_email)}`;
+  }
+  if (c.company) {
+    return `https://mail.google.com/mail/#search/${encodeURIComponent(c.company)}`;
+  }
+  return "https://mail.google.com/mail/#all";
+}
+
+function openFollowupModal(id) {
+  const candidate = state.followupCandidates.find((c) => c.id === id);
+  if (!candidate) return;
+
+  state.activeFollowupId = id;
+  const modalBox = byId("followupModalBox");
+  const backdrop = byId("followupModalBackdrop");
+  if (!modalBox || !backdrop) return;
+
+  const days = candidate.days_elapsed ?? 0;
+  const attemptNum = (candidate.followup_count ?? 0) + 1;
+  const company = escapeHtml(candidate.company || "Unknown");
+  const role = escapeHtml(candidate.role || "General");
+  const contactName = escapeHtml(candidate.contact_name || "");
+  const contactEmail = escapeHtml(candidate.contact_email || "");
+  const subject = escapeHtml(candidate.subject || "No subject");
+  const summary = escapeHtml(candidate.thread_summary || "");
+  const draft = candidate.ai_draft || "";
+  const gmailUrl = getGmailSearchUrlForFollowup(candidate);
+
+  const sentDate = candidate.last_sent_at
+    ? new Date(candidate.last_sent_at).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
+    : "Unknown";
+
+  modalBox.innerHTML = `
+    <div class="modal-header followup-modal-header">
+      <div>
+        <div class="followup-modal-eyebrow">${days} business days waiting · Follow-up #${attemptNum} of 2</div>
+        <h3 class="followup-modal-company">${company}</h3>
+        <div class="followup-modal-role">${role}</div>
+      </div>
+      <button class="btn-modal-close" id="btnFollowupModalClose" type="button" aria-label="Close dialog">&times;</button>
+    </div>
+
+    <div class="modal-body followup-modal-body">
+      <div class="followup-modal-meta-grid">
+        <div class="followup-meta-item">
+          <span class="meta-label">Recipient:</span>
+          <span class="meta-val">${contactName ? `<strong>${contactName}</strong> ` : ""}${contactEmail ? `&lt;${contactEmail}&gt;` : "Not specified"}</span>
+        </div>
+        <div class="followup-meta-item">
+          <span class="meta-label">Subject:</span>
+          <span class="meta-val">Re: ${subject}</span>
+        </div>
+        <div class="followup-meta-item">
+          <span class="meta-label">Last Sent:</span>
+          <span class="meta-val">${sentDate} (${days} business days ago)</span>
+        </div>
+      </div>
+
+      ${summary ? `
+        <div class="followup-modal-summary-wrap">
+          <strong>Context:</strong> ${summary}
+        </div>
+      ` : ""}
+
+      <div class="followup-modal-draft-wrap">
+        <div class="followup-draft-label">
+          <span>AI-Generated Draft Reply</span>
+          <span class="followup-draft-hint">Editable &mdash; adjust as desired before copying</span>
+        </div>
+        <textarea id="followupModalDraftText" class="followup-modal-draft-textarea" rows="7">${escapeHtml(draft)}</textarea>
+      </div>
+    </div>
+
+    <div class="modal-actions followup-modal-actions">
+      <div class="followup-modal-actions-left">
+        <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" class="btn-modal-gmail">Open Gmail &nearr;</a>
+        <button class="btn-modal-copy" id="btnFollowupModalCopy" type="button">Copy Draft</button>
+      </div>
+      <div class="followup-modal-actions-right">
+        <button class="btn-modal-dismiss" id="btnFollowupModalDismiss" type="button">Skip &mdash; Not Needed</button>
+        <button class="btn-modal-done" id="btnFollowupModalDone" type="button">Done &mdash; Copy &amp; Mark Sent</button>
+      </div>
+    </div>
+  `;
+
+  backdrop.classList.add("active");
+}
+
+function closeFollowupModal() {
+  const backdrop = byId("followupModalBackdrop");
+  if (backdrop) backdrop.classList.remove("active");
+  state.activeFollowupId = null;
 }
 
 async function loadFollowupCandidates() {
@@ -1238,11 +1531,9 @@ async function loadFollowupCandidates() {
 }
 
 async function markFollowupActioned(id) {
-  // Remove from local state immediately
   state.followupCandidates = state.followupCandidates.filter((c) => c.id !== id);
-  render();
+  renderFollowUp();
 
-  // Persist to Supabase
   try {
     const sb = initSupabase();
     if (sb) {
@@ -1257,11 +1548,9 @@ async function markFollowupActioned(id) {
 }
 
 async function markFollowupDismissed(id) {
-  // Remove from local state immediately
   state.followupCandidates = state.followupCandidates.filter((c) => c.id !== id);
-  render();
+  renderFollowUp();
 
-  // Persist to Supabase — dismissed rows will never be re-suggested
   try {
     const sb = initSupabase();
     if (sb) {
