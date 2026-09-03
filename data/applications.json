@@ -1,6 +1,124 @@
 {
-  "updatedAt": "2026-09-03T21:14:03.821Z",
+  "updatedAt": "2026-09-03T23:27:00.046Z",
   "applications": [
+    {
+      "id": "pluto-general-application",
+      "company": "Pluto",
+      "role": "Forward Deployed Engineer",
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Tirth, action required",
+      "latestFrom": "\"Pluto (YC)\" <pluto@mail.talentpluto.com>",
+      "lastActivityAt": "2026-09-03T23:19:26.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a036115f0899a5a",
+      "gmailMessageIds": [
+        "1a036115f0899a5a",
+        "1a0360eccf746d54",
+        "1a0405e3fd130424",
+        "1a04fd19c9881245",
+        "1a06991f023b1b04"
+      ],
+      "notes": "your application is about to be closed Hey Tirth, This is Pluto, a personal AI career agent backed by Y Combinator. You applied to a role we're helping fill. Your application has not moved forward because the required steps have not been completed. If you do not complete the steps below, your application will be closed. Complete the steps below: 1. Talk to Pluto — share your experience and what you're looking for 2. Complete your application — we'll send the company a clearer summary of your background 3. Get matched — Pluto can also match you with similar opportunities You stay in control — we only introduce you to other companies when you say yes. Call Pluto: +1 (929) 600-6918 [tel:+19296006918] Your career needs an agent. Backed by Y Combinator. Unsubscribe [https://app.loops.so/unsubscribe/cmtm5d644067001wm6ff3by9q/cace9ff3a7b07d02be92d727accb0c8dfe24ca124945b58d3c9a6c740acdd4b948dd9bb74db6f3afdfd41f74069a520b0a7013d0da8b9346b61b6a7b] action required 96 your application is about to be closed Hey Tirth, This is Pluto, a personal AI career agent backed by Y Combinator. You applied to a role we're helping fill. Your application has not moved forward because the required steps have not been completed. If you do not complete the steps below, your application will be closed. Complete the steps below: 1. Talk to Pluto — share your experience and what you're looking for 2. Complete your application — we'll send the company a clearer summary of your background 3. Get matched — Pluto can also match you with similar opportunities You stay in control — we only introduce you to other companies when you say yes. Call Pluto: +1 (929) 600-6918 Your career needs an agent. Backed by Y Combinator. Unsubscribe"
+    },
+    {
+      "id": "henry-schein-one-manager-data-engineering",
+      "company": "Henry Schein One",
+      "role": "Manager, Data Engineering",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Henry Schein One - Manager, Data Engineering",
+      "latestFrom": "Henry Schein One <recruiting+435451462-e84669dd@applytojob.com>",
+      "lastActivityAt": "2026-09-03T22:35:53.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a059f4ac9954bcd",
+      "gmailMessageIds": [
+        "1a059f4ac9954bcd",
+        "1a0696a11f8de354"
+      ],
+      "notes": "Tirth, Thank you for your interest in employment with Henry Schein One. Your qualifications have been carefully reviewed. At this time, we are pursuing candidates whose skills and experience more closely match the needs of this position. We appreciate your interest in our company and wish you luck in your future endeavors. We encourage you to apply for other open positions at Henry Schein One which you feel qualified for. Sincerely, - Henry Schein One Recruiting"
+    },
+    {
+      "id": "ziprecruiter-data-engineer",
+      "company": "Ziprecruiter",
+      "role": "Data Engineer",
+      "reqId": null,
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "TIRTH, Municipal Credit Union has an open position",
+      "latestFrom": "ZipRecruiter <alerts@ziprecruiter.com>",
+      "lastActivityAt": "2026-09-03T22:16:59.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a06958c575184b2",
+      "gmailMessageIds": [
+        "1a06958c575184b2"
+      ],
+      "notes": " <https://www.ziprecruiter.com/km/AAHbSL8IcTyi1KHBpyCD9-GHe0szdKeCGfwzMrHTmevmNZ8fNBc1kRLOoQZM0Zurvv3tRUav8exI2qtrpk_Qlff68-PSxlkrGIMIsShT5kkLWFYMP5tZsDZ9Az6RN6Ickp4OM9mdjLmYE58L1-HLBKw8yGTs0T_gH93tHosLIt2vmIEJ9uShKTWCwCMAj9d45MJQKXl98txqyS2n7fRj13h9EidU_XK_Ajcaul1EnfbLpk2BYa8klvZ78iZWK2w944Z4UP572crqthcWwshZYZfuqQeJvgJL70p1IiINW8I967LgNwurmlzLJus8bjYBW6Ymj6Jl_X2yqA0f9mjdOoeMOeGEFvVC05kViBgXz-W3YgqvqQ3wo8knWFI?tsid=111000153> Hi TIRTH, Here are today's jobs recommended for you: Data Engineer <https://www.ziprecruiter.com/km/AAF86m-dHGeQCSYlOBeTvb8bBKwMFk8daaIMs0vN4IHasarzk6d3h8g6RCSx7c0AlDGw1wTOzIR4_jnnvl2vBZz5afEugkoTf4__1t_zh3pdCyA-Q_Y3Qn6VxsCiuEHJyVdWoPjEtxqSa5VYT2v-StkKm3OTL_JH2nMp4ZAvyKotDtyf7ei3bjdpt3gLLffAUvd8glKRQIwofSKSWBYRiuRJe-9-_zIJKzG3atHbTEeDoMPutjpDBslqpAj2jdIaPiO3Knnk5tEBs50fit15aFutRb-iH0hWqpBmEm9oasXCzhiM3Ghq8iXxajOhmpSrZ0FmdSkucotidNN27VWp0X5clagVs-0kNRDmb4s9AugBvYVCaezwt-mV45D2B4PxQPqRG6Y6IRXZ2SA?tsid=111000153&auth_token=5_1788473818_yq1QBqnHX-JfOIorWSgeHE19gApMsGni-gyVMRJslKU&contact_id=4945c5e0&expires=1788819418> Municipal Credit Union $106K - $150K / yr 1-Click Apply <https://www.ziprecruiter.com/km/AAHcgAq31_VTZrDzvGn0rOJokUKOMp5lVH-jzFZtt_cKPnW1FHKu3Vy7Q4Z4AEPnNgjT853ipGcwNxC4maQLfHIUGoOyGdzZMdtKWIz7iQzGVp7lS4MHBqTz-_Zx3FmcGW6Yup2Rqe_fuFmuzaNqsvamnRrcOkozbziOFR5GUA4cprXG9bty_GThohQaDFrZZr5MgiKYbf2h_px8jeOGK8pjltPzABk5NdCHLp7SRtzLcKboMhv7oSS7BSEuVBsCnKw1llOI-kA43IV_oXS3nxPezeL9jgtut35PHC2_8G37aeDqj4QdtBsTi90HT53KoMVbamhKsE0So9a9aboGJCfsbxXT3YGOAiN5hHFo_uO0xtAsYQj9MESy15x1V7zvSKiaf9QoB9OA6PxyjtnlB1LJW0gcaD5U1IXTdi05eZfGR-hbI6R2GLsmVfOyuBoGm_YZG34WikE8mEtYb7q38yR_zJQ5N1ZU0Qu0eCfUyXEIN9kD-kAcnX1zP4I?tsid=111000153&auth_token=5_1788473818_yq1QBqnHX-JfOIorWSgeHE19gApMsGni-gyVMRJslKU&contact_id=4945c5e0&expires=1788819418> Data Engineer <https://www.ziprecruiter.com/km/AAGxZMFRltpBkAh9radAegL5aO7ihT0kB2xmP0YwnJT3b3JYLEplgZDnXhGvOZe306yXdX1T68MdWoY_dEs9tYIodbz3K_nRV4UpL154-WQTIM9NH5J72FZXUWRodyBuB_Iphz6eMRkmPfqALE1n5xcDnfTqA4tSgLjymQkObab8g6rbKMlyddSXhzl58qtyTmKhunjwD-u--_XiXDfjnUl6VC68E94Ak5fm29v-lzDWr8C0qt1YhXVhi8iT0dq46k2HWOns5Z54OVUZW2RGO7AJfU7tkdxSIRRYIyXs_WiAbFzmVWxHtjmPqlJONbAzafISeaLiRQtll9r6eAFNjnyDcN6JvBj0UU_QzaycssHPTaERbi-bR6v4G-oD2VRzGI4KcxP17MvgLPM?tsid=111000153&auth_token=5_1788473818_yq1QBqnHX-JfOIorWSgeHE19gApMsGni-gyVMRJslKU&contact_id=4945c5e0&expires=1788819418> Wyyerd Group LLC $117K - $141K / yr Estimated Pay 1-Click Apply <https://www.ziprecruiter.com/km/AAGaAZ7NRvCNGXztRQIhIMzjC8lfmJ0R0r32DoAjq9Y3FsF-NhEbyHX4mZGxb7VErageGDNrNNrf4vnFhU5STn7nKMK_l-pF7T3s-tpEt4GHvFgNlR9ty_RwwAVXnVZzTZPO5qq5imSYMrlUUQsYkU_3Zo2o9n0e5stAOT3a2b-ymLjEdR3iOuzZ2bOD2beirwRsHxzKhCVG8BUxlIRb3c8SQ4zcOJOCI7A6S2AVVFI-9XvyMXPXP6W5qK7Y8QrkLx0DI6PGBNdnvMI0banKPZ-e9sjVIHF3OKTVp8nL-E3FuyWJGxN93OIYzHCk6kQ3avLJquY5G5bJwrc5akIWAB1bKhNnHcTb-R4CXz56yoBupZyjUP290gYrzTNF5mnava-JmW7sFoeAluLDrSCohOOZimi5M0Ppwabe7LipJDNQ7teX51bWbFppLdiXe2OxoY9VLxs1zivC1qqfLEvUrN_kzyK7ij0e5SJqTZMsRQz0Qm3PP3IXJsx05HA?tsid=111000153&auth_token=5_1788473818_yq1QBqnHX-JfO"
+    },
+    {
+      "id": "citi-senior-data-engineer-vice-president",
+      "company": "Citi",
+      "role": "Senior Data Engineer - Vice President",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for considering Citi!",
+      "latestFrom": "Citi Human Resources <citi@myworkday.com>",
+      "lastActivityAt": "2026-09-03T22:10:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a06952fc49b5969",
+      "gmailMessageIds": [
+        "1a06952fc49b5969"
+      ],
+      "notes": "Dear Tirth Shah, Thank you for your interest in the role of Senior Data Engineer - Vice President-26960600. We want to let you know that we unfortunately will not be moving forward with your application for this particular role. While this position might not have been right for you, there could be another opportunity for you to join our team listed in our Careers Site . So, when you have some time, we encourage you to take a look and submit an application if you see something that takes your interest. Good luck in your career search and your future! Best regards, Citi Global Talent Acquisition Citi is committed to equality in the workplace and building teams from qualified candidates regardless of their race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran. This is an automated system generated message. Please do not reply. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "jpmorgan-chase-data-engineer-iii-python-databricks",
+      "company": "Jpmorgan Chase",
+      "role": "Data Engineer III - Python, Databricks",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Your job application status (Job number: 210759920)",
+      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
+      "lastActivityAt": "2026-09-03T22:03:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0694c832a81711",
+      "gmailMessageIds": [
+        "1a0694c832a81711"
+      ],
+      "notes": "Tirth, Thank you for your interest in the Data Engineer III - Python, Databricks position at JPMorganChase. We received quite a few applications for this job opportunity, and at this time we're sorry to let you know we're moving forward with other candidates. Please continue to visit our careers site to explore other positions that match your areas of interest. We wish you continued success in your job search, JPMorganChase Talent Team T his is an automatically generated email sent from an unmonitored email box. Please do not reply . jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans."
+    },
+    {
+      "id": "rural-mutual-insurance-data-engineer",
+      "company": "Rural Mutual Insurance",
+      "role": "Data Engineer",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Re: Tirth Chirayu Shah - Data Engineer Application (Wizehire)",
+      "latestFrom": "Julie Salt  from Rural Mutual Insurance <postie@wizehiremail.com>",
+      "lastActivityAt": "2026-09-03T22:00:52.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0694a015319781",
+      "gmailMessageIds": [
+        "1a0694a015319781"
+      ],
+      "notes": "<p>Hello Tirth Chirayu,<br>Thank you for your interest in Rural Mutual Insurance. While your application was competitive, our hiring team has decided to offer the position to a different candidate. <br>Best of luck in your job search and we hope to have the opportunity to consider you for a different role in the future.<br>Regards,<br>The Hiring Team at Rural Mutual Insurance</p> Reply directly to this message to reach Julie. Rural Mutual Insurance &#xA0; Hello Tirth Chirayu, Thank you for your interest in Rural Mutual Insurance. While your application was competitive, our hiring team has decided to offer the position to a different candidate. Best of luck in your job search and we hope to have the opportunity to consider you for a different role in the future. Regards, The Hiring Team at Rural Mutual Insurance &#xA0; &#xA0; You are receiving this message because the hiring team at Rural Mutual Insurance is reaching out to you about your application for Data Engineer . If you no longer wish to receive an email copy of this conversation thread, please contact us via the email address below. Suspect spam or fraud? Learn more here or report this message to Wizehire by forwarding this message to the email below. &#xA0; Wizehire, Inc, 3403 W T C Jester Blvd, PMB 1515, Houston, TX 77018 team@wizehire.com"
+    },
     {
       "id": "nike-consultant-general-application",
       "company": "Nike Consultant",
@@ -7011,25 +7129,6 @@
       "notes": "Hi Tirth, Thank you for sharing your background and interest in joining Paradigm Health. We know how much effort goes into an application, and we’re excited to take a look. Our team is currently reviewing applications and will be in touch if your qualifications fit our needs for the role. In the meantime, feel free to check out our http://www.paradigmhealth.ai to learn more about Paradigm Health and how we’re working to expand patient access. Best, Paradigm Health Hi Tirth , Thank you for sharing your background and interest in joining Paradigm Health. We know how much effort goes into an application, and we’re excited to take a look. Our team is currently reviewing applications and will be in touch if your qualifications fit our needs for the role. In the meantime, feel free to check out our website to learn more about Paradigm Health and how we’re working to expand patient access. Best, Paradigm Health"
     },
     {
-      "id": "henry-schein-one-manager-data-engineering",
-      "company": "Henry Schein One",
-      "role": "Manager, Data Engineering",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Tirth, we've received your resume",
-      "latestFrom": "Henry Schein One <noreply@applytojob.com>",
-      "lastActivityAt": "2026-08-31T22:33:22.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a059f4ac9954bcd",
-      "gmailMessageIds": [
-        "1a059f4ac9954bcd"
-      ],
-      "notes": "Dear Tirth, Thank you for your recent application for the&#160;Manager, Data Engineering position at Henry Schein One. We understand that the application process can evoke a mix of emotions, and we want to ensure transparency and clarity every step of the way. After your application has been carefully reviewed by our internal Talent Acquisition team, you can expect to receive an email communication regarding the status of your application. If you are selected to move forward, a member of our Talent Acquisition team will reach out to schedule a phone interview. This initial conversation will allow us to delve deeper into your background, skills, and experience, and provide further details about the interview process, including timing and format. Regardless of the outcome, we are committed to keeping you informed about the status of your application. Thank you for your interest in joining us at Henry Schein One. Best regards, Talent Acquisition Team, Henry Schein One"
-    },
-    {
       "id": "vanguard-general-application",
       "company": "Vanguard",
       "role": "General Application",
@@ -9730,27 +9829,6 @@
         "1a04fd1010d2c21b"
       ],
       "notes": "Hello Tirth, Please find the JD and company details. NextEra Energy Resources Address<https://www.google.com/search?sca_esv=7e4c824d7041932c&rlz=1C5FPAB_enUS1220US1220&sxsrf=APpeQnsiRM3SEu6jST_JsxgXVlPNAxWSmA:1788045374799&q=nextera+energy+resources+juno+beach+address&ludocid=6050971643634912174&sa=X&ved=2ahUKEwictaCL_MaWAxVgg4QIHUW-Ls0Q6BN6BAgiEAI>: 700 Universe Blvd, Juno Beach, FL 33408 Phone: (561) 691-7171<https://www.google.com/search?gs_ssp=eJzj4tZP1zcsSUuzSDMuMGC0UjWosLBISTNKTEsySzNJMkpJNrYyqDA1TrM0TU00szBJMTJISkz1EspLrShJLUpUyCrNy1dISk1MzgAACrwWbg&q=nextera+juno+beach&rlz=1C5FPAB_enUS1220US1220&oq=nextera+juno+&gs_lcrp=EgZjaHJvbWUqDQgBEC4YrwEYxwEYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyCggCEEUYFhgeGDkyBwgDEAAYgAQyBwgEEAAYgAQyCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCDcyOTRqMGo3qAIIsAIB8QW6RSBZvcZQ0w&sourceid=chrome&source=chrome.ob&ie=UTF-8#> Nearest Airport - Donald J Trump International (WestPalm Beach) Forward Deployed Engineer— Job Description Location Onsite — Day 1, Juno Beach, FL (candidate must be based in/near Juno Beach and available to work onsite from the first day, no remote/hybrid flexibility). About the Role We are looking for a Forward Deployed Engineer (FDE) with 1–2 years of IT experience to work directly with clients, embedding AI-powered developer tools and custom solutions into their existing workflows. This is a hands-on, client-facing technical role blending software engineering, AI tooling expertise, and rapid solution deployment. Key Responsibilities * Client Embedding: Work onsite with client engineering teams in Juno Beach to understand workflows, pain points, and integration requirements. * AI Coding Tool Deployment: Configure, customize, and troubleshoot AI development tools such as Devin, Windsurf, Claude Code, and GitHub Copilot within client environments. * MCP Integration: Build and configure Model Context Protocol (MCP) servers/clients to connect AI agents with internal tools, databases, and APIs. * Secure Connectivity: Set up and manage tunnelling solutions (e.g., ngrok, Cloudflare Tunnel, SSH tunnels) to enable secure access between client infrastructure and external tools/agents. * Custom Tooling: Write Python scripts, automation, and glue code to bridge AI agents with client-specific systems. * LLM Fine-Tuning: Assist in fine-tuning or adapting LLMs (e.g., LoRA, PEFT, prompt-tuning) to improve performance on client-specific tasks and datasets. * Rapid Prototyping: Quickly build proof-of-concepts and iterate based on direct client feedback. * Documentation & Enablement: Document integrations and train client teams on effective use of deployed AI tools. * Feedback Loop: Relay client requirements and friction points back to the product/engineering team to influence roadmap. Required Skills & Experience * 1–2 years of professional IT/software engineering experience. * Must be local to Juno Beach, FL or willing to relocate at own expense before start date — no remote work, no re"
-    },
-    {
-      "id": "pluto-general-application",
-      "company": "Pluto",
-      "role": "Forward Deployed Engineer",
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Tirth, your application process is incomplete",
-      "latestFrom": "\"Pluto (YC)\" <pluto@mail.talentpluto.com>",
-      "lastActivityAt": "2026-08-29T23:18:52.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a036115f0899a5a",
-      "gmailMessageIds": [
-        "1a036115f0899a5a",
-        "1a0360eccf746d54",
-        "1a0405e3fd130424",
-        "1a04fd19c9881245"
-      ],
-      "notes": "complete the next steps to continue Hey Tirth, Your application process is incomplete. You applied to a role we're helping fill through Pluto, a personal AI career agent backed by Y Combinator. Your application has not moved forward because the required steps have not been completed. Complete the steps below: 1. Talk to Pluto — share your experience and what you're looking for 2. Complete your application — we'll send the company a clearer summary of your background 3. Get matched — Pluto can also match you with similar opportunities You stay in control — we only introduce you to other companies when you say yes. Call Pluto: +1 (929) 600-6918 [tel:+19296006918] Your career needs an agent. Backed by Y Combinator. Unsubscribe [https://app.loops.so/unsubscribe/cmtf0563rzctc01x535pkbn6q/3a9c60c6da05459b7631ff4eb354def39c35d3e2fb62d47c88a0c8cfc08b6454d3026ee291e4498adc8a1184b7c961bc80d4e99ba19de44ceb460114] your application process is incomplete 96 complete the next steps to continue Hey Tirth, Your application process is incomplete. You applied to a role we're helping fill through Pluto, a personal AI career agent backed by Y Combinator. Your application has not moved forward because the required steps have not been completed. Complete the steps below: 1. Talk to Pluto — share your experience and what you're looking for 2. Complete your application — we'll send the company a clearer summary of your background 3. Get matched — Pluto can also match you with similar opportunities You stay in control — we only introduce you to other companies when you say yes. Call Pluto: +1 (929) 600-6918 Your career needs an agent. Backed by Y Combinator. Unsubscribe"
     },
     {
       "id": "technimark-data-analyst-sustainability",
