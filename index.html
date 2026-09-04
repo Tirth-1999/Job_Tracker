@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Tracker</title>
-    <link rel="stylesheet" href="./styles.css?v=3.0.0" />
+    <link rel="stylesheet" href="./styles.css?v=3.2.0" />
   </head>
   <body>
     <header class="topbar">
@@ -36,6 +36,26 @@
       </nav>
 
       <section id="boardView" class="view active">
+        <div id="boardToolbar" class="board-toolbar">
+          <div class="board-toolbar-left">
+            <span class="board-filter-label">Filter by Date:</span>
+            <div class="board-time-pills" role="group" aria-label="Filter applications by time">
+              <button type="button" class="board-time-pill active" data-time="all">All Time</button>
+              <button type="button" class="board-time-pill" data-time="7d">Past 7 Days</button>
+              <button type="button" class="board-time-pill" data-time="30d">Past 30 Days</button>
+              <button type="button" class="board-time-pill" data-time="90d">Past 90 Days</button>
+            </div>
+          </div>
+          <div class="board-toolbar-right">
+            <label for="boardSortSelect" class="board-sort-label">Sort Board:</label>
+            <select id="boardSortSelect" class="board-sort-select" aria-label="Sort board cards">
+              <option value="date_desc">Newest Activity First</option>
+              <option value="date_asc">Oldest Activity First</option>
+              <option value="company_asc">Company (A to Z)</option>
+              <option value="company_desc">Company (Z to A)</option>
+            </select>
+          </div>
+        </div>
         <div id="board" class="board"></div>
       </section>
 
@@ -91,6 +111,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="./app.js?v=3.0.0" type="module"></script>
+    <script src="./app.js?v=3.2.0" type="module"></script>
   </body>
 </html>

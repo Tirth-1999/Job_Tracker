@@ -212,6 +212,9 @@ const state = {
   pageOther: 1,
   pageSizeOther: 50,
   selectedDate: getTodayDateStr(),
+  boardSort: "date_desc",
+  boardTimeRange: "all",
+  laneSorts: {},
   // Follow-Up Needed tab
   followupCandidates: [],
   followupLoading: false,
@@ -757,17 +760,68 @@ function renderStats(applications) {
   }
 }
 
+function filterByTimeRange(apps, timeRange) {
+  if (!timeRange || timeRange === "all") return apps;
+  const now = Date.now();
+  const days = timeRange === "7d" ? 7 : timeRange === "30d" ? 30 : timeRange === "90d" ? 90 : 0;
+  if (!days) return apps;
+  const cutoff = now - days * 24 * 60 * 60 * 1000;
+  return apps.filter((a) => {
+    if (!a.lastActivityAt) return false;
+    const t = new Date(a.lastActivityAt).getTime();
+    return !Number.isNaN(t) && t >= cutoff;
+  });
+}
+
+function sortApplications(apps, sortKey) {
+  const list = [...apps];
+  switch (sortKey) {
+    case "date_asc":
+      list.sort((a, b) => (a.lastActivityAt || "").localeCompare(b.lastActivityAt || ""));
+      break;
+    case "company_asc":
+      list.sort((a, b) => (a.company || "").localeCompare(b.company || ""));
+      break;
+    case "company_desc":
+      list.sort((a, b) => (b.company || "").localeCompare(a.company || ""));
+      break;
+    case "date_desc":
+    default:
+      list.sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
+      break;
+  }
+  return list;
+}
+
 function renderBoard(applications) {
+  const timeFilteredApps = filterByTimeRange(applications, state.boardTimeRange);
+
+  const sortLabels = {
+    date_desc: "Newest ↓",
+    date_asc: "Oldest ↑",
+    company_asc: "A-Z ↓",
+    company_desc: "Z-A ↑"
+  };
+
   byId("board").innerHTML = LANES.map(([key, label, className]) => {
-    const laneApps = applications.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === key);
+    const rawLaneApps = timeFilteredApps.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === key);
+    const laneSortKey = state.laneSorts[key] || state.boardSort;
+    const sortedLaneApps = sortApplications(rawLaneApps, laneSortKey);
+    const currentSortLabel = sortLabels[laneSortKey] || "Sort";
+
     return `
       <section class="lane ${className}">
         <div class="lane-header">
-          <span>${label}</span>
-          <span class="lane-count">${laneApps.length}</span>
+          <div class="lane-header-left">
+            <span>${label}</span>
+            <span class="lane-count">${sortedLaneApps.length}</span>
+          </div>
+          <button type="button" class="btn-lane-sort" data-lane="${key}" title="Sort this lane (Current: ${currentSortLabel})">
+            ${currentSortLabel}
+          </button>
         </div>
         <div class="cards">
-          ${laneApps.map(renderCard).join("") || `<div class="empty">No applications</div>`}
+          ${sortedLaneApps.map(renderCard).join("") || `<div class="empty">No applications</div>`}
         </div>
       </section>
     `;
@@ -998,6 +1052,29 @@ function initCardActionDelegation() {
       return;
     }
 
+    const timePill = e.target.closest(".board-time-pill");
+    if (timePill && timePill.dataset.time) {
+      e.preventDefault();
+      state.boardTimeRange = timePill.dataset.time;
+      document.querySelectorAll(".board-time-pill").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.time === state.boardTimeRange);
+      });
+      renderBoard(getFilteredApplications());
+      return;
+    }
+
+    const laneSortBtn = e.target.closest(".btn-lane-sort");
+    if (laneSortBtn && laneSortBtn.dataset.lane) {
+      e.preventDefault();
+      const laneKey = laneSortBtn.dataset.lane;
+      const current = state.laneSorts[laneKey] || state.boardSort;
+      const CYCLE = ["date_desc", "date_asc", "company_asc", "company_desc"];
+      const nextIdx = (CYCLE.indexOf(current) + 1) % CYCLE.length;
+      state.laneSorts[laneKey] = CYCLE[nextIdx];
+      renderBoard(getFilteredApplications());
+      return;
+    }
+
     const dismissAuditBtn = e.target.closest(".btn-dismiss-audit");
     if (dismissAuditBtn) {
       e.preventDefault();
@@ -1166,6 +1243,14 @@ function initCardActionDelegation() {
     if (sortSelect) {
       state.followupSort = sortSelect.value;
       renderFollowUp();
+      return;
+    }
+
+    const boardSortSelect = e.target.closest("#boardSortSelect");
+    if (boardSortSelect) {
+      state.boardSort = boardSortSelect.value;
+      state.laneSorts = {};
+      renderBoard(getFilteredApplications());
       return;
     }
 

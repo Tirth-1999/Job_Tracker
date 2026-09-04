@@ -2638,3 +2638,112 @@ tr:last-child td {
   }
 }
 
+/* ─── Board Toolbar & Sorting ────────────────────────────────────────────── */
+
+.board-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(32, 36, 44, 0.04);
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.board-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.board-filter-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.board-time-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.board-time-pill {
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #f2f4f8;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.board-time-pill:hover {
+  background: #e5e9f0;
+  color: var(--text);
+}
+
+.board-time-pill.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.board-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.board-sort-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.board-sort-select {
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.lane-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-lane-sort {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-lane-sort:hover {
+  background: #f8fafc;
+  color: var(--text);
+  border-color: #94a3b8;
+}
+
