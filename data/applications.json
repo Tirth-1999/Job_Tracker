@@ -1,6 +1,30 @@
 {
-  "updatedAt": "2026-09-04T02:23:08.377Z",
+  "updatedAt": "2026-09-04T02:28:29.064Z",
   "applications": [
+    {
+      "id": "atc-general-application",
+      "company": "ATC",
+      "role": "Business Analyst",
+      "status": "offered",
+      "confidence": "high",
+      "lastActivityAt": "2026-08-28T14:19:24.000Z",
+      "latestSubject": "Details Required For Offer Rollout",
+      "latestFrom": "Divya Maran <divya@atc.xyz>",
+      "gmailThreadId": "1a048bd5e2a5bb26",
+      "gmailMessageIds": [
+        "1a048bd5e2a5bb26"
+      ],
+      "notes": "Hi Tirth Shah , Congratulations for getting shortlisted ! Kindly fill in the below details for us to send you an offer letter and for verification. Position: Business Analyst, Salary: $70000",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Job Offer",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-08-28T14:19:24.000Z",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
+    },
     {
       "id": "levels-fyi-general-application",
       "company": "Levels.fyi",
@@ -228,49 +252,6 @@
         "1a069a4b89cad3bc"
       ],
       "notes": " Hi Tirth, Thank you very much for your recent application for the Lead Data Engineer position at Quanta Services. We appreciate your interest in a career opportunity with Ampacity, LLC.! Your information will be reviewed by a member of our team for consideration. We will contact you soon should we feel that your background matches our current needs. In the meantime, be sure to visit our social channels and website to learn more! Sincerely, Quanta Services This is an automated email response. Please do not reply. If you no longer wish to receive email from Quanta Services, click here: https://tracking.icims.com/f/a/hIZK90l5XSbo4YAEm_PCiQ~~/AAIB5hA~/-YJbi4EJsYdY7xZ2xYZ03MYPDb_IQRGh8A6a-kU7Dv5ahh_EOr7o7IoD9JXlK62KhK-pQXjlewURijUs5Yzcs2ai-um_75mSIYa6tTGW-aTYmt-6fDJryTVSY4hYPMpoSap0CYHzUG5gNiqp7iiazT36UOrkUeeRb1Q7VEEVQeRP8Ormg92gAPCxj7qtTtzNHHG86XTdxPRcIHXfgmKeWw~~. ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/zLCI6dOKAIWxhTM0MRepMg~~/AAIB5hA~/uBEn2Aj-XJqTTG5nN8UXorXw9R1dWFjOWlTKs3Vz6zlPCjXi00O4RXbxF0qsf-bLVwSY8ngoegNBD93IbzTUVkyMoaxnZZLalWqSxgatEGlqM1Kw1SKw30Ajw9_thmeSnxi1DGwPOtvY71QX6T4FOmpDcoMidXDQYxOjF9wqCSvfIOHwRIgHpbcGzcA-HlQO /n &#169; Quanta Services Management Partnership, L.P.; 2727 North Loop West, Houston, TX 77008; USA/n Hi Tirth, Thank you very much for your recent application for the Lead Data Engineer position at Quanta Services. We appreciate your interest in a career opportunity with Ampacity, LLC.! Your information will be reviewed by a member of our team for consideration. We will contact you soon should we feel that your background matches our current needs. In the meantime, be sure to visit our social channels and website to learn more! Sincerely, Quanta Services This is an automated email response. Please do not reply. If you no longer wish to receive email from Quanta Services, click here: https://quanta.icims.com/icims2/?r=70C2405398&contactId=1782487&pid=17&hashed=1111704270. This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://quanta.icims.com/icims2/?r=70C2405398&contactId=1782487&pid=17 &#169; Quanta Services Management Partnership, L.P.; 2727 North Loop West, Houston, TX 77008; USA"
-    },
-    {
-      "id": "atc-general-application",
-      "company": "ATC",
-      "role": "Senior Data Engineer",
-      "status": "applied",
-      "confidence": "high",
-      "lastActivityAt": "2026-09-03T23:39:29.000Z",
-      "latestSubject": "Application Received",
-      "latestFrom": "workday atcllc <atcllc@myworkday.com>",
-      "gmailThreadId": "1a01a82eb45a8f36",
-      "gmailMessageIds": [
-        "1a01a82eb45a8f36"
-      ],
-      "notes": "Hi Tirth , At ATC, we're rooted in a shared purpose and powered by people who make a difference every day. As the energy industry evolves, our employees help shape the future of the grid while growing their careers and supporting one another along the way. Our people are at the heart of that work, bringing curiosity, collaboration, and a commitment to continuous growth every day. We have received your application for the Sr. Data Engineer position. After reviewing your application, we will contact you regarding next steps if we feel you are a good match for the position. In the meantime, please visit atcllc.com/careers to learn more about our culture, career opportunities, and what makes ATC a certified Great Place to Work. Sincerely, ATC Talent Acquisition Follow us on: X https://twitter.com/AmerTransCo | LinkedIn | http://www.atcllc.com/category/blog/ | YouTube Business Process: Job Application: Tirth Shah ‎- R0003261 Sr. Data Engineer on 09/03/2026 Subject: Tirth Shah ‎- R0003261 Sr. Data Engineer Click here to view the notification details. This email was intended for tirthcshah1999@gmail.com",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "AI extracted",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
-      "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
-    },
-    {
-      "id": "atc-senior-data-engineer",
-      "company": "ATC",
-      "role": "Senior Data Engineer",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Application Received",
-      "latestFrom": "workday atcllc <atcllc@myworkday.com>",
-      "lastActivityAt": "2026-09-03T23:39:29.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a069a44b7d43710",
-      "gmailMessageIds": [
-        "1a069a44b7d43710"
-      ],
-      "notes": "Hi Tirth , At ATC, we're rooted in a shared purpose and powered by people who make a difference every day. As the energy industry evolves, our employees help shape the future of the grid while growing their careers and supporting one another along the way. Our people are at the heart of that work, bringing curiosity, collaboration, and a commitment to continuous growth every day. We have received your application for the Sr. Data Engineer position. After reviewing your application, we will contact you regarding next steps if we feel you are a good match for the position. In the meantime, please visit atcllc.com/careers to learn more about our culture, career opportunities, and what makes ATC a certified Great Place to Work. Sincerely, ATC Talent Acquisition Follow us on: X https://twitter.com/AmerTransCo | LinkedIn | http://www.atcllc.com/category/blog/ | YouTube Business Process: Job Application: Tirth Shah ‎- R0003261 Sr. Data Engineer on 09/03/2026 Subject: Tirth Shah ‎- R0003261 Sr. Data Engineer Click here to view the notification details. This email was intended for tirthcshah1999@gmail.com"
     },
     {
       "id": "steerbridge-senior-software-engineer-data-backend",
@@ -56996,6 +56977,30 @@
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.185+00:00",
       "aiConfidence": "high"
+    },
+    {
+      "id": "atc-senior-data-engineer",
+      "company": "ATC",
+      "role": "Senior Data Engineer",
+      "status": "applied",
+      "confidence": "high",
+      "lastActivityAt": "2026-09-03T23:39:29.000Z",
+      "latestSubject": "Application Received",
+      "latestFrom": "workday atcllc <atcllc@myworkday.com>",
+      "gmailThreadId": "1a01a82eb45a8f36",
+      "gmailMessageIds": [
+        "1a01a82eb45a8f36"
+      ],
+      "notes": "Hi Tirth , At ATC, we're rooted in a shared purpose and powered by people who make a difference every day. As the energy industry evolves, our employees help shape the future of the grid while growing their careers and supporting one another along the way. Our people are at the heart of that work, bringing curiosity, collaboration, and a commitment to continuous growth every day. We have received your application for the Sr. Data Engineer position. After reviewing your application, we will contact you regarding next steps if we feel you are a good match for the position. In the meantime, please visit atcllc.com/careers to learn more about our culture, career opportunities, and what makes ATC a certified Great Place to Work. Sincerely, ATC Talent Acquisition Follow us on: X https://twitter.com/AmerTransCo | LinkedIn | http://www.atcllc.com/category/blog/ | YouTube Business Process: Job Application: Tirth Shah ‎- R0003261 Sr. Data Engineer on 09/03/2026 Subject: Tirth Shah ‎- R0003261 Sr. Data Engineer Click here to view the notification details. This email was intended for tirthcshah1999@gmail.com",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "ATS Application Receipt",
+      "aiModel": "openrouter",
+      "aiClassifiedAt": "2026-09-04T02:24:18.609+00:00",
+      "aiConfidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     }
   ]
 }
