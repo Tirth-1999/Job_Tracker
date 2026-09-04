@@ -2747,3 +2747,165 @@ tr:last-child td {
   border-color: #94a3b8;
 }
 
+/* ─── Starred Tab & Star Button Styling ────────────────────────────────────── */
+
+.tab-badge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #4338ca;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 999px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.tab.active .tab-badge {
+  background: #4338ca;
+  color: #fff;
+}
+
+.tab-starred {
+  color: #b45309;
+  font-weight: 700;
+}
+
+.tab-starred.active {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+.tab-starred .tab-badge {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.tab-starred.active .tab-badge {
+  background: #b45309;
+  color: #fff;
+}
+
+.card-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-card-star {
+  background: none;
+  border: none;
+  font-size: 17px;
+  line-height: 1;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: transform 0.15s ease, color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-card-star:hover {
+  color: #eab308;
+  transform: scale(1.2);
+}
+
+.btn-card-star.starred {
+  color: #eab308;
+}
+
+/* ─── Starred View Grid ───────────────────────────────────────────────────── */
+
+.starred-shell {
+  padding: 0;
+}
+
+.starred-header {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(32, 36, 44, 0.04);
+  padding: 14px 18px;
+  margin-bottom: 16px;
+}
+
+.starred-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.starred-title {
+  margin: 0 0 2px;
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.starred-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.starred-sort-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.starred-sort-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.starred-count-bar {
+  padding: 0 2px 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.starred-count-bar strong {
+  color: var(--text);
+}
+
+.starred-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.starred-empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(32, 36, 44, 0.04);
+}
+
+.starred-empty-icon {
+  font-size: 32px;
+  color: #eab308;
+  margin-bottom: 8px;
+}
+
+.starred-empty strong {
+  display: block;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.starred-empty p {
+  margin: 0;
+  font-size: 13px;
+}
+

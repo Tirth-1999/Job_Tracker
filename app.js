@@ -215,6 +215,9 @@ const state = {
   boardSort: "date_desc",
   boardTimeRange: "all",
   laneSorts: {},
+  // Starred tab
+  starredIds: new Set(JSON.parse(localStorage.getItem("job_tracker_starred_ids") || "[]")),
+  starredSort: "date_desc",
   // Follow-Up Needed tab
   followupCandidates: [],
   followupLoading: false,
@@ -709,6 +712,8 @@ function render() {
 
   if (currentView === "board") {
     renderBoard(filteredApps);
+  } else if (currentView === "starred") {
+    renderStarred(filteredApps);
   } else if (currentView === "companies") {
     renderCompanies(filteredApps);
   } else if (currentView === "applications") {
@@ -753,6 +758,7 @@ function renderStats(applications) {
   const otherStatHtml = `<article class="stat lane-not-related stat-clickable" title="Click to view Other Emails tab"><strong>${otherCount}</strong><span>Other Emails</span></article>`;
 
   byId("stats").innerHTML = laneStatsHtml + otherStatHtml;
+  updateStarredBadge();
 
   const otherStatEl = document.querySelector(".stat-clickable");
   if (otherStatEl) {
@@ -826,6 +832,83 @@ function renderBoard(applications) {
       </section>
     `;
   }).join("");
+}
+
+function saveStarredIds() {
+  localStorage.setItem("job_tracker_starred_ids", JSON.stringify([...state.starredIds]));
+  updateStarredBadge();
+}
+
+function updateStarredBadge() {
+  const badge = byId("starredCountBadge");
+  if (!badge) return;
+  const count = state.starredIds.size;
+  badge.textContent = count;
+  badge.style.display = count > 0 ? "inline-block" : "none";
+}
+
+function toggleStar(id) {
+  if (state.starredIds.has(id)) {
+    state.starredIds.delete(id);
+  } else {
+    state.starredIds.add(id);
+  }
+  saveStarredIds();
+  if (state.view === "starred") {
+    render();
+  } else {
+    document.querySelectorAll(`.btn-card-star[data-id="${id}"]`).forEach((btn) => {
+      const isStarred = state.starredIds.has(id);
+      btn.classList.toggle("starred", isStarred);
+      btn.textContent = isStarred ? "★" : "☆";
+      btn.title = isStarred ? "Starred — click to unstar" : "Star this application";
+    });
+  }
+}
+
+function renderStarred(applications) {
+  const shell = byId("starred");
+  if (!shell) return;
+
+  const starredList = applications.filter((app) => state.starredIds.has(app.id));
+  const sorted = sortApplications(starredList, state.starredSort || "date_desc");
+
+  shell.innerHTML = `
+    <div class="starred-header">
+      <div class="starred-header-top">
+        <div>
+          <h2 class="starred-title">Starred Applications</h2>
+          <p class="starred-subtitle">
+            High-priority applications and conversations flagged for quick reference.
+          </p>
+        </div>
+        <div class="starred-sort-wrap">
+          <label for="starredSortSelect" class="starred-sort-label">Sort:</label>
+          <select id="starredSortSelect" class="board-sort-select" aria-label="Sort starred applications">
+            <option value="date_desc" ${(state.starredSort || 'date_desc') === 'date_desc' ? 'selected' : ''}>Newest Activity First</option>
+            <option value="date_asc" ${(state.starredSort || 'date_desc') === 'date_asc' ? 'selected' : ''}>Oldest Activity First</option>
+            <option value="company_asc" ${(state.starredSort || 'date_desc') === 'company_asc' ? 'selected' : ''}>Company A-Z</option>
+            <option value="company_desc" ${(state.starredSort || 'date_desc') === 'company_desc' ? 'selected' : ''}>Company Z-A</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    ${sorted.length === 0 ? `
+      <div class="starred-empty">
+        <div class="starred-empty-icon">☆</div>
+        <strong>No starred applications yet</strong>
+        <p>Click the star icon (☆) on any job card in the Board to pin it here.</p>
+      </div>
+    ` : `
+      <div class="starred-count-bar">
+        Showing <strong>${sorted.length}</strong> starred application${sorted.length === 1 ? '' : 's'}
+      </div>
+      <div class="starred-cards-grid">
+        ${sorted.map(renderCard).join('')}
+      </div>
+    `}
+  `;
 }
 
 function getGmailUrl(app) {
@@ -928,16 +1011,26 @@ function renderCard(app) {
     { key: "not_related", label: "Move to: Other Emails" }
   ];
 
+  const isStarred = state.starredIds.has(app.id);
+  const starBtn = `
+    <button type="button" class="btn-card-star ${isStarred ? "starred" : ""}" data-id="${app.id}" title="${isStarred ? "Starred — click to unstar" : "Star this application"}">
+      ${isStarred ? "★" : "☆"}
+    </button>
+  `;
+
   return `
     <article class="card ${statusClass(status)}">
       <div class="card-header">
         <a class="card-header-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact email thread in Gmail">
           <h3>${escapeHtml(app.company || "Unknown company")}</h3>
         </a>
-        <a class="btn-gmail-icon" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact thread in Gmail">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          Open ↗
-        </a>
+        <div class="card-header-actions">
+          ${starBtn}
+          <a class="btn-gmail-icon" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact thread in Gmail">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Open ↗
+          </a>
+        </div>
       </div>
       <div class="role">${escapeHtml(app.role || "Unknown role")}</div>
       <a class="card-subject-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact email thread in Gmail">
@@ -1072,6 +1165,14 @@ function initCardActionDelegation() {
       const nextIdx = (CYCLE.indexOf(current) + 1) % CYCLE.length;
       state.laneSorts[laneKey] = CYCLE[nextIdx];
       renderBoard(getFilteredApplications());
+      return;
+    }
+
+    const starBtn = e.target.closest(".btn-card-star");
+    if (starBtn && starBtn.dataset.id) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleStar(starBtn.dataset.id);
       return;
     }
 
@@ -1251,6 +1352,13 @@ function initCardActionDelegation() {
       state.boardSort = boardSortSelect.value;
       state.laneSorts = {};
       renderBoard(getFilteredApplications());
+      return;
+    }
+
+    const starredSortSelect = e.target.closest("#starredSortSelect");
+    if (starredSortSelect) {
+      state.starredSort = starredSortSelect.value;
+      renderStarred(getFilteredApplications());
       return;
     }
 
