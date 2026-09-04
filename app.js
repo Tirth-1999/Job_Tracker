@@ -270,7 +270,7 @@ function sanitizeCompanyName(name, subject = "", from = "", notes = "") {
   // Direct Staffing / Employer Domain & Sender Pattern Matching
   if (/Emergent/i.test(combined)) return "Emergent Software";
   if (/infoway|infowaygroup\.com/i.test(combined)) return "Infoway Group";
-  if (/\bATC\b|divya@atc\.xyz|atc\.xyz|Offer Rollout|ATC-\s*VIDEO|ATC Data Engineering|Shakthi/i.test(combined)) return "ATC";
+  if (/\bATC\b|divya@atc\.xyz|atc\.xyz|ATC-\s*VIDEO|ATC Data Engineering|Shakthi/i.test(combined)) return "ATC";
   if (/Randstad|Randstand|Shreyang Joshi|randstadusa\.com/i.test(combined)) return "Randstad";
   if (/NC State/i.test(combined)) return "NC State";
   if (/Nodveta|nodveta\.com/i.test(combined)) return "Nodveta";
@@ -292,6 +292,55 @@ function sanitizeCompanyName(name, subject = "", from = "", notes = "") {
     return "Unknown Company";
   }
   return c || "Unknown Company";
+}
+
+function cleanJobRole(role, subject = "", notes = "") {
+  let r = String(role || "").trim();
+
+  // Normalize "Sr." and "Jr."
+  r = r.replace(/\bSr\.\s*/gi, "Senior ").replace(/\bJr\.\s*/gi, "Junior ");
+
+  // Check if role is a truncated stub or generic
+  const isStub = !r || r.length <= 3 || /^(sr|jr|you|unknown|applying)$/i.test(r) || r === "General Application";
+
+  if (isStub) {
+    const text = `${notes || ""} ${subject || ""}`;
+
+    // Pattern 1: Workday style: "Job Application: Tirth Shah - R0003261 Sr. Data Engineer"
+    const mAtc = text.match(/Job Application:\s*[^-\n]+[-–]\s*(?:R[0-9]+\s+)?([A-Za-z0-9/&.\- ]{4,60}?)(?:\s+on\s+[0-9]|\s*[-–(.,\n]|$)/i);
+    if (mAtc && mAtc[1] && mAtc[1].trim().length > 3) {
+      r = mAtc[1].trim();
+    } else {
+      // Pattern 2: "application for the [Role] position"
+      const mPos = text.match(/(?:application for(?: the)?|applied for(?: the)?|applied to(?: the)?|position of|role of)\s+([A-Z][A-Za-z0-9/&.\- ]{3,55}?)(?:\s+position|\s+role|\s+at|\s+with|\s+on|\s*[-–(.,\n]|$)/i);
+      if (mPos && mPos[1] && mPos[1].trim().length > 3 && !/^(the|our|this|a|an|review|following|any)$/i.test(mPos[1].trim())) {
+        r = mPos[1].trim();
+      } else {
+        // Pattern 3: Subject matches
+        const mSubj = (subject || "").match(/(?:applying for|application for|applied for|role:?|position:?)\s+([A-Za-z0-9/&.\- ]{4,55})/i);
+        if (mSubj && mSubj[1] && mSubj[1].trim().length > 3 && !/^(the|our|this|a|an)$/i.test(mSubj[1].trim())) {
+          r = mSubj[1].trim();
+        }
+      }
+    }
+  }
+
+  r = r
+    .replace(/\bSr\.\s*/gi, "Senior ")
+    .replace(/\bJr\.\s*/gi, "Junior ")
+    .replace(/\s+/g, " ")
+    .replace(/\s*\(Open\)\s*$/i, "")
+    .replace(/\s*\(Hybrid\)\s*$/i, "")
+    .replace(/\s*\(Remote\)\s*$/i, "")
+    .replace(/\|\s*.*$/i, "")
+    .replace(/[-–,;:\s]+$/, "")
+    .trim();
+
+  if (!r || r.length <= 3 || /^(sr|jr|you|unknown)$/i.test(r)) {
+    return "General Application";
+  }
+
+  return r;
 }
 
 function extractRequisitionId(text) {
@@ -341,11 +390,12 @@ function deduplicateAndConsolidateApplications(appList) {
     if (cleanComp.toLowerCase() === "tirth shah" && s === "offered") s = "not_related";
     const normComp = normalizeCompany(cleanComp);
     const reqId = extractRequisitionId(`${a.latestSubject || ""} ${a.notes || ""}`);
-    const normRole = normalizeRoleName(a.role);
+    const cleanR = cleanJobRole(a.role, a.latestSubject, a.notes);
+    const normRole = normalizeRoleName(cleanR);
     const msgIds = (a.gmailMessageIds || []).concat(a.id ? [a.id.replace(/^msg-/, "")] : []);
 
     prepared[i] = {
-      app: { ...a, company: cleanComp, status: s, reqId },
+      app: { ...a, company: cleanComp, role: cleanR, status: s, reqId },
       normComp,
       normRole,
       reqId,
@@ -498,10 +548,11 @@ function resolveClusterStatus(appCluster) {
       const appCluster = cluster.map((c) => c.app);
       const bestStatus = resolveClusterStatus(appCluster);
       const cleanComp = appCluster.find((a) => a.company && a.company.toLowerCase() !== "tirth shah" && a.company.toLowerCase() !== "unknown")?.company || appCluster[0].company;
-      const cleanRole = appCluster.find((a) => a.role && a.role !== "General Application" && a.role !== "Unknown role")?.role || appCluster[0].role || "General Application";
+      const cleanRole = appCluster.find((a) => a.role && a.role !== "General Application" && a.role !== "Unknown role" && a.role.length > 3 && !/^(sr|jr|you)$/i.test(a.role))?.role || cleanJobRole(appCluster[0].role, appCluster[0].latestSubject, appCluster[0].notes);
       appCluster.sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
       const latest = appCluster[0];
-      const allMsgIds = [...new Set(cluster.flatMap((c) => c.msgIds))];
+      const rawMsgIds = [...new Set(cluster.flatMap((c) => c.msgIds))];
+      const allMsgIds = rawMsgIds.length > 5 ? (latest.gmailThreadId ? [latest.gmailThreadId] : rawMsgIds.slice(0, 2)) : rawMsgIds;
       const manualApp = appCluster.find((a) => a.isManualOverride);
       const clusterReqId = cluster.find((c) => c.reqId)?.reqId || null;
 
@@ -1030,9 +1081,12 @@ function renderCard(app) {
     { key: "not_related", label: "Other" }
   ];
 
-  // Authentic thread count badge (only when > 1 email)
-  const msgCountBadge = (app.gmailMessageIds && app.gmailMessageIds.length > 1)
-    ? `<span class="badge-thread-count" title="${app.gmailMessageIds.length} authentic emails in this thread">${app.gmailMessageIds.length} emails</span>`
+  const cleanRole = cleanJobRole(app.role, app.latestSubject, app.notes);
+
+  // Authentic thread count badge (only when genuine conversation with 2-5 emails)
+  const msgCount = Array.isArray(app.gmailMessageIds) ? app.gmailMessageIds.length : 1;
+  const msgCountBadge = (msgCount > 1 && msgCount <= 5)
+    ? `<span class="badge-thread-count" title="${msgCount} authentic emails in this thread">${msgCount} emails</span>`
     : "";
 
   // Requisition ID badge
@@ -1086,7 +1140,7 @@ function renderCard(app) {
       </div>
 
       <div class="card-role-row">
-        <span class="card-role">${escapeHtml(app.role || "General Application")}</span>
+        <span class="card-role">${escapeHtml(cleanRole)}</span>
         ${reqBadge}
       </div>
 

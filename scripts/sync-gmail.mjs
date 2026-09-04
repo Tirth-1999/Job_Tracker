@@ -872,7 +872,7 @@ Carefully evaluate the provided batch of emails according to all the above rules
 
         if (aiResult && isJob && aiResult.status !== "not_related") {
           const cleanCompany = sanitizeCompanyName(aiResult.company);
-          const cleanRoleName = sanitizeRole(aiResult.role);
+          const cleanRoleName = sanitizeRole(aiResult.role, item.parsed?.subject, item.parsed?.body);
           const validStatus = ALLOWED_STATUSES.has(aiResult.status) ? aiResult.status : "applied";
 
           batchResults.push({
@@ -892,7 +892,7 @@ Carefully evaluate the provided batch of emails according to all the above rules
             message: item.message,
             parsed: item.parsed,
             company: cleanCompany || "Other",
-            role: sanitizeRole(aiResult.role || "General Communication"),
+            role: sanitizeRole(aiResult.role || "General Communication", item.parsed?.subject, item.parsed?.body),
             status: "not_related",
             confidence: "medium",
             classifier: "openrouter",
@@ -975,7 +975,7 @@ function extractWithHeuristics(item) {
   }
 
   const company = sanitizeCompanyName(inferCompanyHeuristic(from, subject, body));
-  const role = sanitizeRole(inferRoleHeuristic(subject, body));
+  const role = sanitizeRole(inferRoleHeuristic(subject, body), subject, body);
 
   return {
     message: item.message,
@@ -1077,7 +1077,7 @@ function sanitizeCompanyName(company, subject = "", from = "", notes = "") {
   // Direct Staffing / Employer Domain & Sender Pattern Matching
   if (/Emergent/i.test(combined)) return "Emergent Software";
   if (/infoway|infowaygroup\.com/i.test(combined)) return "Infoway Group";
-  if (/\bATC\b|divya@atc\.xyz|atc\.xyz|Offer Rollout|ATC-\s*VIDEO|ATC Data Engineering|Shakthi/i.test(combined)) return "ATC";
+  if (/\bATC\b|divya@atc\.xyz|atc\.xyz|ATC-\s*VIDEO|ATC Data Engineering|Shakthi/i.test(combined)) return "ATC";
   if (/Randstad|Randstand|Shreyang Joshi|randstadusa\.com/i.test(combined)) return "Randstad";
   if (/NC State/i.test(combined)) return "NC State";
   if (/Nodveta|nodveta\.com/i.test(combined)) return "Nodveta";
@@ -1107,15 +1107,18 @@ function sanitizeCompanyName(company, subject = "", from = "", notes = "") {
   return titleCase(cleaned).slice(0, 80);
 }
 
-function sanitizeRole(role) {
-  if (!role) return "General Application";
-  let cleaned = role
-    .split(/[.!?\n]/)[0]
+function sanitizeRole(role, subject = "", notes = "") {
+  let cleaned = String(role || "")
+    .replace(/\bSr\.\s*/gi, "Senior ")
+    .replace(/\bJr\.\s*/gi, "Junior ")
+    .replace(/\r?\n.*/s, "")
+    .split(/[!?\n]/)[0]
     .replace(/\s+/g, " ")
     .replace(/^(your application to|taking the time to apply to our open|applying to|applying for|application for|application to|interest in the|interest in|update on your|update on|recent job application for)\s+/i, "")
     .replace(/\s+(at|with|from)\s+[A-Z][A-Za-z0-9&.'\- ]+$/i, "")
     .replace(/\s*\(Open\)\s*$/i, "")
     .replace(/\s*\(Hybrid\)\s*$/i, "")
+    .replace(/\s*\(Remote\)\s*$/i, "")
     .replace(/\s*\(R\d+\)\s*,?\s*/i, "")
     .replace(/\s*-\s*\d+\s*$/i, "")
     .replace(/\s+in\s+[A-Za-z\s,]+$/i, "")
@@ -1125,7 +1128,26 @@ function sanitizeRole(role) {
     .trim()
     .slice(0, 80);
 
-  if (!cleaned || cleaned.length < 2 || /^unknown$/i.test(cleaned) || /^applying$/i.test(cleaned)) {
+  // If role got reduced to a stub like "Sr", "Jr", "You", or empty, extract from subject/notes
+  if (!cleaned || cleaned.length <= 3 || /^(unknown|applying|sr|jr|you)$/i.test(cleaned)) {
+    const text = `${notes || ""} ${subject || ""}`;
+    const mAtc = text.match(/Job Application:\s*[^-\n]+[-–]\s*(?:R[0-9]+\s+)?([A-Za-z0-9/&.\- ]{4,60}?)(?:\s+on\s+[0-9]|\s*[-–(.,\n]|$)/i);
+    if (mAtc && mAtc[1] && mAtc[1].trim().length > 3) {
+      cleaned = mAtc[1].trim().replace(/\bSr\.\s*/gi, "Senior ").replace(/\bJr\.\s*/gi, "Junior ");
+    } else {
+      const mPos = text.match(/(?:application for(?: the)?|applied for(?: the)?|applied to(?: the)?|position of|role of)\s+([A-Z][A-Za-z0-9/&.\- ]{3,55}?)(?:\s+position|\s+role|\s+at|\s+with|\s+on|\s*[-–(.,\n]|$)/i);
+      if (mPos && mPos[1] && mPos[1].trim().length > 3 && !/^(the|our|this|a|an|review|following|any)$/i.test(mPos[1].trim())) {
+        cleaned = mPos[1].trim().replace(/\bSr\.\s*/gi, "Senior ").replace(/\bJr\.\s*/gi, "Junior ");
+      } else {
+        const mSubj = (subject || "").match(/(?:applying for|application for|applied for|role:?|position:?)\s+([A-Za-z0-9/&.\- ]{4,55})/i);
+        if (mSubj && mSubj[1] && mSubj[1].trim().length > 3 && !/^(the|our|this|a|an)$/i.test(mSubj[1].trim())) {
+          cleaned = mSubj[1].trim().replace(/\bSr\.\s*/gi, "Senior ").replace(/\bJr\.\s*/gi, "Junior ");
+        }
+      }
+    }
+  }
+
+  if (!cleaned || cleaned.length <= 3 || /^(unknown|applying|sr|jr|you)$/i.test(cleaned)) {
     return "General Application";
   }
   return titleCase(cleaned);
@@ -1306,9 +1328,10 @@ function upsertApplication(data, incoming) {
     existing.lastActivityAt = incoming.lastActivityAt;
   }
   if (incoming.gmailThreadId && existing.gmailThreadId && incoming.gmailThreadId === existing.gmailThreadId) {
-    existing.gmailMessageIds = [...new Set([...(existing.gmailMessageIds ?? []), ...(incoming.gmailMessageIds ?? [])])];
+    const combined = [...new Set([...(existing.gmailMessageIds ?? []), ...(incoming.gmailMessageIds ?? [])])];
+    existing.gmailMessageIds = combined.slice(-5);
   } else if (!existing.gmailMessageIds || existing.gmailMessageIds.length === 0) {
-    existing.gmailMessageIds = incoming.gmailMessageIds || [];
+    existing.gmailMessageIds = (incoming.gmailMessageIds || []).slice(-5);
   }
 }
 
