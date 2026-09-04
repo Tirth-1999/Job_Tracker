@@ -1241,15 +1241,27 @@ function upsertApplication(data, incoming) {
   }
 
   // If the user manually overrode this record's status (via Mark Done / Ignore / Move Lane),
-  // preserve their decision — only refresh metadata so the card stays up to date.
+  // preserve their decision UNLESS a newer formal rejection arrived after their manual action.
   if (existing.isManualOverride) {
-    if (incoming.latestSubject) existing.latestSubject = incoming.latestSubject;
-    if (incoming.latestFrom) existing.latestFrom = incoming.latestFrom;
-    if (incoming.notes) existing.notes = incoming.notes;
-    if (incoming.lastActivityAt > (existing.lastActivityAt || "")) existing.lastActivityAt = incoming.lastActivityAt;
-    existing.gmailMessageIds = [...new Set([...(existing.gmailMessageIds ?? []), ...incoming.gmailMessageIds])];
-    console.log(`⚠️  Skipping AI status overwrite for manually overridden record: ${existing.id} (${existing.company})`);
-    return;
+    const manualDate = existing.manualChangedAt || existing.lastActivityAt || "";
+    const incomingDate = incoming.lastActivityAt || "";
+    if (incoming.status === "rejected" && incomingDate > manualDate) {
+      console.log(`⚡ Formal rejection arrived after manual override date for ${existing.company}. Advancing status to rejected.`);
+      existing.status = "rejected";
+      existing.isManualOverride = false;
+      existing.manualAction = null;
+      existing.manualChangedAt = null;
+    } else {
+      if (incoming.latestSubject) existing.latestSubject = incoming.latestSubject;
+      if (incoming.latestFrom) existing.latestFrom = incoming.latestFrom;
+      if (incoming.notes) existing.notes = incoming.notes;
+      if (incoming.lastActivityAt > (existing.lastActivityAt || "")) existing.lastActivityAt = incoming.lastActivityAt;
+      if (incoming.gmailThreadId && existing.gmailThreadId && incoming.gmailThreadId === existing.gmailThreadId) {
+        existing.gmailMessageIds = [...new Set([...(existing.gmailMessageIds ?? []), ...incoming.gmailMessageIds])];
+      }
+      console.log(`⚠️  Skipping AI status overwrite for manually overridden record: ${existing.id} (${existing.company})`);
+      return;
+    }
   }
 
   // Lifecycle status resolution:

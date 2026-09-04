@@ -220,11 +220,73 @@ const state = {
   followupFilter: "all",
   followupSort: "days_desc",
   followupSearch: "",
-  activeFollowupId: null
+  activeFollowupId: null,
+  // Starred feature
+  starredIds: new Set(JSON.parse(localStorage.getItem("job_tracker_starred_ids") || "[]")),
+  starredSort: "date_desc",
+  // Board sorting & filters
+  boardSort: localStorage.getItem("job_tracker_board_sort") || "date_desc",
+  boardTimeRange: localStorage.getItem("job_tracker_board_time_range") || "all",
+  laneSorts: {}
 };
 
 const byId = (id) => document.getElementById(id);
 let realtimeChannel = null;
+
+// ─── Starred & Sorting Utilities ─────────────────────────────────────────────
+function saveStarredIds() {
+  localStorage.setItem("job_tracker_starred_ids", JSON.stringify([...state.starredIds]));
+  updateStarredBadge();
+}
+
+function updateStarredBadge() {
+  const badge = byId("starredCountBadge");
+  if (badge) {
+    badge.textContent = state.starredIds.size;
+    badge.style.display = state.starredIds.size > 0 ? "inline-block" : "none";
+  }
+}
+
+function toggleStar(appId) {
+  if (!appId) return;
+  if (state.starredIds.has(appId)) {
+    state.starredIds.delete(appId);
+  } else {
+    state.starredIds.add(appId);
+  }
+  saveStarredIds();
+  render();
+}
+
+function sortApplications(appList, sortKey = "date_desc") {
+  const list = [...appList];
+  if (sortKey === "date_asc") {
+    list.sort((a, b) => (a.lastActivityAt || a.last_activity_at || "").localeCompare(b.lastActivityAt || b.last_activity_at || ""));
+  } else if (sortKey === "company_asc") {
+    list.sort((a, b) => String(a.company || "").localeCompare(String(b.company || "")));
+  } else if (sortKey === "company_desc") {
+    list.sort((a, b) => String(b.company || "").localeCompare(String(a.company || "")));
+  } else if (sortKey === "messages_desc") {
+    list.sort((a, b) => (b.gmailMessageIds?.length || 0) - (a.gmailMessageIds?.length || 0));
+  } else {
+    // date_desc (default)
+    list.sort((a, b) => (b.lastActivityAt || b.last_activity_at || "").localeCompare(a.lastActivityAt || a.last_activity_at || ""));
+  }
+  return list;
+}
+
+function filterByTimeRange(appList, timeRange = "all") {
+  if (!timeRange || timeRange === "all") return appList;
+  const now = Date.now();
+  const days = timeRange === "7d" ? 7 : timeRange === "30d" ? 30 : timeRange === "90d" ? 90 : 0;
+  if (!days) return appList;
+  const cutoff = now - days * 24 * 60 * 60 * 1000;
+  return appList.filter((app) => {
+    const d = app.lastActivityAt || app.last_activity_at;
+    if (!d) return false;
+    return new Date(d).getTime() >= cutoff;
+  });
+}
 
 // ─── Row mapper (Supabase row → in-memory app) ────────────────────────────────
 function rowToApp(row) {
@@ -452,21 +514,21 @@ function resolveClusterStatus(appCluster) {
   // 3. If the most recent communication is a formal rejection, the application is rejected
   if (latest.status === "rejected") return "rejected";
 
-  // 4. If any communication is an active interview/assessment, check if a rejection happened after
+  // 4. If any communication is an active interview/assessment, check if a rejection happened at or after it
   const interviewApp = sorted.find((a) => a.status === "interviewed");
   if (interviewApp) {
     const rejectionAfter = sorted.find(
-      (a) => a.status === "rejected" && (a.lastActivityAt || a.last_activity_at || "") > (interviewApp.lastActivityAt || interviewApp.last_activity_at || "")
+      (a) => a.status === "rejected" && (a.lastActivityAt || a.last_activity_at || "") >= (interviewApp.lastActivityAt || interviewApp.last_activity_at || "")
     );
     if (rejectionAfter) return "rejected";
     return "interviewed";
   }
 
-  // 5. If any communication is reply_needed, check if rejection happened after
+  // 5. If any communication is reply_needed, check if rejection happened at or after it
   const replyApp = sorted.find((a) => a.status === "reply_needed");
   if (replyApp) {
     const rejectionAfter = sorted.find(
-      (a) => a.status === "rejected" && (a.lastActivityAt || a.last_activity_at || "") > (replyApp.lastActivityAt || replyApp.last_activity_at || "")
+      (a) => a.status === "rejected" && (a.lastActivityAt || a.last_activity_at || "") >= (replyApp.lastActivityAt || replyApp.last_activity_at || "")
     );
     if (rejectionAfter) return "rejected";
     return "reply_needed";
@@ -706,6 +768,8 @@ function render() {
 
   if (currentView === "board") {
     renderBoard(filteredApps);
+  } else if (currentView === "starred") {
+    renderStarred(filteredApps);
   } else if (currentView === "companies") {
     renderCompanies(filteredApps);
   } else if (currentView === "applications") {
@@ -750,6 +814,7 @@ function renderStats(applications) {
   const otherStatHtml = `<article class="stat lane-not-related stat-clickable" title="Click to view Other Emails tab"><strong>${otherCount}</strong><span>Other Emails</span></article>`;
 
   byId("stats").innerHTML = laneStatsHtml + otherStatHtml;
+  updateStarredBadge();
 
   const otherStatEl = document.querySelector(".stat-clickable");
   if (otherStatEl) {
@@ -758,20 +823,108 @@ function renderStats(applications) {
 }
 
 function renderBoard(applications) {
-  byId("board").innerHTML = LANES.map(([key, label, className]) => {
-    const laneApps = applications.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === key);
+  const timeFilteredApps = filterByTimeRange(applications, state.boardTimeRange);
+
+  const toolbarHtml = `
+    <div class="board-toolbar">
+      <div class="board-time-pills" role="group" aria-label="Filter applications by time">
+        <button type="button" class="board-time-pill ${state.boardTimeRange === 'all' ? 'active' : ''}" data-time="all">All Time</button>
+        <button type="button" class="board-time-pill ${state.boardTimeRange === '7d' ? 'active' : ''}" data-time="7d">Past 7 Days</button>
+        <button type="button" class="board-time-pill ${state.boardTimeRange === '30d' ? 'active' : ''}" data-time="30d">Past 30 Days</button>
+        <button type="button" class="board-time-pill ${state.boardTimeRange === '90d' ? 'active' : ''}" data-time="90d">Past 90 Days</button>
+      </div>
+
+      <div class="board-sort-wrap">
+        <label for="boardSortSelect" class="board-sort-label">Sort Board:</label>
+        <select id="boardSortSelect" class="board-sort-select" aria-label="Sort board cards">
+          <option value="date_desc" ${state.boardSort === 'date_desc' ? 'selected' : ''}>Newest Activity First</option>
+          <option value="date_asc" ${state.boardSort === 'date_asc' ? 'selected' : ''}>Oldest Activity First</option>
+          <option value="company_asc" ${state.boardSort === 'company_asc' ? 'selected' : ''}>Company A-Z</option>
+          <option value="company_desc" ${state.boardSort === 'company_desc' ? 'selected' : ''}>Company Z-A</option>
+          <option value="messages_desc" ${state.boardSort === 'messages_desc' ? 'selected' : ''}>Most Messages</option>
+        </select>
+      </div>
+    </div>
+  `;
+
+  const sortLabels = {
+    date_desc: "Newest ↓",
+    date_asc: "Oldest ↑",
+    company_asc: "A-Z ↓",
+    company_desc: "Z-A ↑",
+    messages_desc: "Msgs ↓"
+  };
+
+  const lanesHtml = LANES.map(([key, label, className]) => {
+    const rawLaneApps = timeFilteredApps.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === key);
+    const laneSortKey = state.laneSorts[key] || state.boardSort;
+    const sortedLaneApps = sortApplications(rawLaneApps, laneSortKey);
+    const currentSortLabel = sortLabels[laneSortKey] || "Sort";
+
     return `
       <section class="lane ${className}">
         <div class="lane-header">
-          <span>${label}</span>
-          <span class="lane-count">${laneApps.length}</span>
+          <div class="lane-header-left">
+            <span>${label}</span>
+            <span class="lane-count">${sortedLaneApps.length}</span>
+          </div>
+          <button type="button" class="btn-lane-sort" data-lane="${key}" title="Click to cycle lane sort (Current: ${currentSortLabel})">
+            ${currentSortLabel}
+          </button>
         </div>
         <div class="cards">
-          ${laneApps.map(renderCard).join("") || `<div class="empty">No applications</div>`}
+          ${sortedLaneApps.map(renderCard).join("") || `<div class="empty">No applications</div>`}
         </div>
       </section>
     `;
   }).join("");
+
+  byId("board").innerHTML = toolbarHtml + `<div class="board-lanes-container">${lanesHtml}</div>`;
+}
+
+function renderStarred(applications) {
+  const shell = byId("starred");
+  if (!shell) return;
+
+  const starredList = applications.filter((app) => state.starredIds.has(app.id));
+  const sorted = sortApplications(starredList, state.starredSort || "date_desc");
+
+  shell.innerHTML = `
+    <div class="starred-header">
+      <div class="starred-header-top">
+        <div>
+          <h2 class="starred-title">Starred Applications</h2>
+          <p class="starred-subtitle">
+            High-priority applications and conversations flagged for quick reference.
+          </p>
+        </div>
+        <div class="starred-sort-wrap">
+          <label for="starredSortSelect" class="starred-sort-label">Sort:</label>
+          <select id="starredSortSelect" class="board-sort-select" aria-label="Sort starred applications">
+            <option value="date_desc" ${(state.starredSort || 'date_desc') === 'date_desc' ? 'selected' : ''}>Newest Activity First</option>
+            <option value="date_asc" ${(state.starredSort || 'date_desc') === 'date_asc' ? 'selected' : ''}>Oldest Activity First</option>
+            <option value="company_asc" ${(state.starredSort || 'date_desc') === 'company_asc' ? 'selected' : ''}>Company A-Z</option>
+            <option value="company_desc" ${(state.starredSort || 'date_desc') === 'company_desc' ? 'selected' : ''}>Company Z-A</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    ${sorted.length === 0 ? `
+      <div class="starred-empty">
+        <div class="starred-empty-icon">☆</div>
+        <strong>No starred applications yet</strong>
+        <p>Click the star icon (☆) on any job card in the Board or Applications tab to pin it here.</p>
+      </div>
+    ` : `
+      <div class="starred-count-bar">
+        Showing <strong>${sorted.length}</strong> starred application${sorted.length === 1 ? '' : 's'}
+      </div>
+      <div class="starred-cards-grid">
+        ${sorted.map(renderCard).join('')}
+      </div>
+    `}
+  `;
 }
 
 function getGmailUrl(app) {
@@ -861,8 +1014,18 @@ function renderCard(app) {
     `;
   }
 
-  const msgCountBadge = app.gmailMessageIds?.length > 1 ? `<span class="pill" title="${app.gmailMessageIds.length} emails in this thread">${app.gmailMessageIds.length} emails</span>` : "";
+  const msgCount = Array.isArray(app.gmailMessageIds) ? app.gmailMessageIds.length : 0;
+  const msgCountBadge = msgCount > 1 && msgCount <= 15
+    ? `<span class="pill" title="${msgCount} messages in thread">${msgCount} in thread</span>`
+    : "";
   const reqBadge = app.reqId ? `<span class="pill" style="border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.08);color:var(--text);" title="Job Requisition ID: ${escapeHtml(app.reqId)}">Req: ${escapeHtml(app.reqId)}</span>` : "";
+
+  const isStarred = state.starredIds.has(app.id);
+  const starBtn = `
+    <button type="button" class="btn-card-star ${isStarred ? "starred" : ""}" data-id="${app.id}" title="${isStarred ? "Starred — click to unstar" : "Star this application"}">
+      ${isStarred ? "★" : "☆"}
+    </button>
+  `;
 
   // Dropdown options for moving cards across all pipeline stages
   const MOVE_OPTIONS = [
@@ -875,15 +1038,18 @@ function renderCard(app) {
   ];
 
   return `
-    <article class="card ${statusClass(status)}">
+    <article class="card ${statusClass(status)}" data-id="${app.id}">
       <div class="card-header">
         <a class="card-header-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact email thread in Gmail">
           <h3>${escapeHtml(app.company || "Unknown company")}</h3>
         </a>
-        <a class="btn-gmail-icon" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact thread in Gmail">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          Open ↗
-        </a>
+        <div class="card-header-actions">
+          ${starBtn}
+          <a class="btn-gmail-icon" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact thread in Gmail">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Open ↗
+          </a>
+        </div>
       </div>
       <div class="role">${escapeHtml(app.role || "Unknown role")}</div>
       <a class="card-subject-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact email thread in Gmail">
@@ -1134,6 +1300,37 @@ function initCardActionDelegation() {
       return;
     }
 
+    // ── Star toggle action ───────────────────────────────────────────────────
+    const starBtn = e.target.closest(".btn-card-star");
+    if (starBtn && starBtn.dataset.id) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleStar(starBtn.dataset.id);
+      return;
+    }
+
+    // ── Board time-range pills ───────────────────────────────────────────────
+    const timePill = e.target.closest(".board-time-pill");
+    if (timePill && timePill.dataset.time) {
+      e.preventDefault();
+      state.boardTimeRange = timePill.dataset.time;
+      localStorage.setItem("job_tracker_board_time_range", state.boardTimeRange);
+      render();
+      return;
+    }
+
+    // ── Lane sort cycle button ───────────────────────────────────────────────
+    const laneSortBtn = e.target.closest(".btn-lane-sort");
+    if (laneSortBtn && laneSortBtn.dataset.lane) {
+      e.preventDefault();
+      const lane = laneSortBtn.dataset.lane;
+      const current = state.laneSorts[lane] || state.boardSort;
+      const nextSort = current === "date_desc" ? "date_asc" : current === "date_asc" ? "company_asc" : current === "company_asc" ? "company_desc" : "date_desc";
+      state.laneSorts[lane] = nextSort;
+      render();
+      return;
+    }
+
     const modalBackdrop = e.target;
     if (modalBackdrop && modalBackdrop.id === "followupModalBackdrop") {
       closeFollowupModal();
@@ -1162,6 +1359,21 @@ function initCardActionDelegation() {
       select.value = "";
     }
 
+    const boardSort = e.target.closest("#boardSortSelect");
+    if (boardSort) {
+      state.boardSort = boardSort.value;
+      localStorage.setItem("job_tracker_board_sort", state.boardSort);
+      render();
+      return;
+    }
+
+    const starredSort = e.target.closest("#starredSortSelect");
+    if (starredSort) {
+      state.starredSort = starredSort.value;
+      render();
+      return;
+    }
+
     const sortSelect = e.target.closest("#followupSortSelect");
     if (sortSelect) {
       state.followupSort = sortSelect.value;
@@ -1174,7 +1386,6 @@ function initCardActionDelegation() {
       const val = Number(thresholdSlider.value);
       state.followupThreshold = val;
       localStorage.setItem("followup_threshold", String(val));
-      renderFollowUp();
     }
   });
 
