@@ -1305,7 +1305,11 @@ function upsertApplication(data, incoming) {
   if (incoming.lastActivityAt && incoming.lastActivityAt > (existing.lastActivityAt || "")) {
     existing.lastActivityAt = incoming.lastActivityAt;
   }
-  existing.gmailMessageIds = [...new Set([...(existing.gmailMessageIds ?? []), ...(incoming.gmailMessageIds ?? [])])];
+  if (incoming.gmailThreadId && existing.gmailThreadId && incoming.gmailThreadId === existing.gmailThreadId) {
+    existing.gmailMessageIds = [...new Set([...(existing.gmailMessageIds ?? []), ...(incoming.gmailMessageIds ?? [])])];
+  } else if (!existing.gmailMessageIds || existing.gmailMessageIds.length === 0) {
+    existing.gmailMessageIds = incoming.gmailMessageIds || [];
+  }
 }
 
 function cleanupApplications(applications) {
