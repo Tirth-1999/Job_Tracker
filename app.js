@@ -215,6 +215,7 @@ const state = {
   boardSort: "date_desc",
   boardTimeRange: "all",
   laneSorts: {},
+  cardDensity: localStorage.getItem("board_card_density") || "detailed",
   // Starred tab
   starredIds: new Set(JSON.parse(localStorage.getItem("job_tracker_starred_ids") || "[]")),
   starredSort: "date_desc",
@@ -799,6 +800,54 @@ function sortApplications(apps, sortKey) {
   return list;
 }
 
+const AVATAR_COLORS = [
+  "#4f46e5",
+  "#059669",
+  "#d97706",
+  "#dc2626",
+  "#7c3aed",
+  "#0284c7",
+  "#db2777",
+  "#0d9488",
+  "#e11d48",
+  "#2563eb"
+];
+
+function getCompanyAvatar(company) {
+  const clean = (company || "?").trim();
+  const initial = clean.charAt(0).toUpperCase();
+  let hash = 0;
+  for (let i = 0; i < clean.length; i++) {
+    hash = (hash << 5) - hash + clean.charCodeAt(i);
+  }
+  const color = AVATAR_COLORS[Math.abs(hash) % AVATAR_COLORS.length];
+  return `<div class="company-avatar" style="background-color:${color};" title="${escapeHtml(clean)}">${escapeHtml(initial)}</div>`;
+}
+
+function formatRelativeDate(value) {
+  if (!value) return "Unknown";
+  const date = new Date(value);
+  if (isNaN(date.getTime())) return "Unknown";
+  const now = new Date();
+  const diffMs = now - date;
+  const diffSec = Math.floor(diffMs / 1000);
+  const diffMin = Math.floor(diffSec / 60);
+  const diffHours = Math.floor(diffMin / 60);
+  const diffDays = Math.floor(diffHours / 24);
+
+  if (diffDays === 0) {
+    if (diffHours === 0) {
+      if (diffMin <= 1) return "Just now";
+      return `${diffMin}m ago`;
+    }
+    return `${diffHours}h ago`;
+  }
+  if (diffDays === 1) return "Yesterday";
+  if (diffDays < 7) return `${diffDays}d ago`;
+  if (diffDays < 30) return `${Math.floor(diffDays / 7)}w ago`;
+  return date.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+}
+
 function renderBoard(applications) {
   const timeFilteredApps = filterByTimeRange(applications, state.boardTimeRange);
 
@@ -809,29 +858,41 @@ function renderBoard(applications) {
     company_desc: "Z-A ↑"
   };
 
-  byId("board").innerHTML = LANES.map(([key, label, className]) => {
-    const rawLaneApps = timeFilteredApps.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === key);
-    const laneSortKey = state.laneSorts[key] || state.boardSort;
-    const sortedLaneApps = sortApplications(rawLaneApps, laneSortKey);
-    const currentSortLabel = sortLabels[laneSortKey] || "Sort";
+  const boardEl = byId("board");
+  if (boardEl) {
+    boardEl.className = `board ${state.cardDensity === "compact" ? "density-compact" : ""}`;
+  }
 
-    return `
-      <section class="lane ${className}">
-        <div class="lane-header">
-          <div class="lane-header-left">
-            <span>${label}</span>
-            <span class="lane-count">${sortedLaneApps.length}</span>
+  document.querySelectorAll(".btn-density").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.density === state.cardDensity);
+  });
+
+  if (boardEl) {
+    boardEl.innerHTML = LANES.map(([key, label, className]) => {
+      const rawLaneApps = timeFilteredApps.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === key);
+      const laneSortKey = state.laneSorts[key] || state.boardSort;
+      const sortedLaneApps = sortApplications(rawLaneApps, laneSortKey);
+      const currentSortLabel = sortLabels[laneSortKey] || "Sort";
+
+      return `
+        <section class="lane ${className}">
+          <div class="lane-header">
+            <div class="lane-header-left">
+              <span class="lane-dot"></span>
+              <span>${label}</span>
+              <span class="lane-count">${sortedLaneApps.length}</span>
+            </div>
+            <button type="button" class="btn-lane-sort" data-lane="${key}" title="Sort this lane (Current: ${currentSortLabel})">
+              ${currentSortLabel}
+            </button>
           </div>
-          <button type="button" class="btn-lane-sort" data-lane="${key}" title="Sort this lane (Current: ${currentSortLabel})">
-            ${currentSortLabel}
-          </button>
-        </div>
-        <div class="cards">
-          ${sortedLaneApps.map(renderCard).join("") || `<div class="empty">No applications</div>`}
-        </div>
-      </section>
-    `;
-  }).join("");
+          <div class="cards">
+            ${sortedLaneApps.map(renderCard).join("") || `<div class="empty">No applications</div>`}
+          </div>
+        </section>
+      `;
+    }).join("");
+  }
 }
 
 function saveStarredIds() {
@@ -949,67 +1010,8 @@ function getGmailUrl(app) {
 }
 
 function renderCard(app) {
-  const confidence = app.confidence ? `${app.confidence} confidence` : "unscored";
   const status = normalizeStatus(app.effectiveStatus || app.status);
   const gmailUrl = getGmailUrl(app);
-
-  const doneBadge = app.isDone ? `<span class="pill pill-done">Action Completed</span>` : "";
-  const ignoredBadge = app.isIgnored ? `<span class="pill pill-ignored">Ignored</span>` : "";
-
-  // Manual override audit badge — shows when a human moved this card
-  const manualActionLabels = {
-    move_to_applied: "Moved → Applied",
-    move_to_reply_needed: "Moved → Reply Needed",
-    move_to_interviewed: "Moved → Interview / Assessment",
-    move_to_offered: "Moved → Offered",
-    move_to_rejected: "Moved → Rejected",
-    move_to_not_related: "Moved → Other",
-    mark_done: "Marked Done",
-    ignore: "Ignored",
-    reopen: "Reopened"
-  };
-  const manualBadge = app.isManualOverride
-    ? `<span class="pill pill-manual" title="Manually changed on ${app.manualChangedAt ? new Date(app.manualChangedAt).toLocaleString() : "unknown"}">Manual: ${manualActionLabels[app.manualAction] || app.manualAction || "Manual Override"}</span>`
-    : "";
-
-  const aiBadge = app.aiDecision
-    ? `<span class="pill pill-ai" title="AI Engine: ${escapeHtml(app.aiModel || "Gemini Flash")}&#10;Decision: ${escapeHtml(app.aiDecision)}&#10;Evaluated: ${app.aiClassifiedAt ? new Date(app.aiClassifiedAt).toLocaleString() : "Recently"}">AI: ${escapeHtml(app.aiDecision.length > 30 ? app.aiDecision.slice(0, 28) + '…' : app.aiDecision)}</span>`
-    : "";
-
-  let actionButton = "";
-  if (status === "reply_needed" && !app.isDone && !app.isIgnored) {
-    actionButton = `
-      <div class="card-actions">
-        <button class="btn-action btn-mark-done" data-id="${app.id}" title="Mark this assessment or reply as completed">Mark Done</button>
-        <button class="btn-action btn-ignore" data-id="${app.id}" title="Ignore this email and move it to Other Emails">Ignore</button>
-      </div>
-    `;
-  } else if (app.isDone) {
-    actionButton = `
-      <div class="card-actions">
-        <button class="btn-action btn-reopen" data-id="${app.id}">Reopen to Reply Needed</button>
-      </div>
-    `;
-  } else if (app.isIgnored) {
-    actionButton = `
-      <div class="card-actions">
-        <button class="btn-action btn-reopen" data-id="${app.id}">Move Back to Reply Needed</button>
-      </div>
-    `;
-  }
-
-  const msgCountBadge = app.gmailMessageIds?.length > 1 ? `<span class="pill" title="${app.gmailMessageIds.length} emails in this thread">${app.gmailMessageIds.length} emails</span>` : "";
-  const reqBadge = app.reqId ? `<span class="pill" style="border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.08);color:var(--text);" title="Job Requisition ID: ${escapeHtml(app.reqId)}">Req: ${escapeHtml(app.reqId)}</span>` : "";
-
-  // Dropdown options for moving cards across all pipeline stages
-  const MOVE_OPTIONS = [
-    { key: "applied", label: "Move to: Applied" },
-    { key: "reply_needed", label: "Move to: Reply Needed" },
-    { key: "interviewed", label: "Move to: Interview / Assessment" },
-    { key: "offered", label: "Move to: Offered" },
-    { key: "rejected", label: "Move to: Rejected" },
-    { key: "not_related", label: "Move to: Other Emails" }
-  ];
 
   const isStarred = state.starredIds.has(app.id);
   const starBtn = `
@@ -1018,46 +1020,89 @@ function renderCard(app) {
     </button>
   `;
 
+  // Dropdown options for moving cards across all pipeline stages
+  const MOVE_OPTIONS = [
+    { key: "applied", label: "Applied" },
+    { key: "reply_needed", label: "Reply Needed" },
+    { key: "interviewed", label: "Interview" },
+    { key: "offered", label: "Offered" },
+    { key: "rejected", label: "Rejected" },
+    { key: "not_related", label: "Other" }
+  ];
+
+  // Authentic thread count badge (only when > 1 email)
+  const msgCountBadge = (app.gmailMessageIds && app.gmailMessageIds.length > 1)
+    ? `<span class="badge-thread-count" title="${app.gmailMessageIds.length} authentic emails in this thread">${app.gmailMessageIds.length} emails</span>`
+    : "";
+
+  // Subtle role line with reqId if present
+  const roleText = (app.role || "General Application") + (app.reqId ? ` · Req: ${app.reqId}` : "");
+
+  let actionButton = "";
+  if (status === "reply_needed" && !app.isDone && !app.isIgnored) {
+    actionButton = `
+      <div class="card-actions" style="margin-top:8px;">
+        <button class="btn-action btn-mark-done" data-id="${app.id}" title="Mark this assessment or reply as completed">Mark Done</button>
+        <button class="btn-action btn-ignore" data-id="${app.id}" title="Ignore this email and move it to Other Emails">Ignore</button>
+      </div>
+    `;
+  } else if (app.isDone) {
+    actionButton = `
+      <div class="card-actions" style="margin-top:8px;">
+        <button class="btn-action btn-reopen" data-id="${app.id}">Reopen to Reply Needed</button>
+      </div>
+    `;
+  } else if (app.isIgnored) {
+    actionButton = `
+      <div class="card-actions" style="margin-top:8px;">
+        <button class="btn-action btn-reopen" data-id="${app.id}">Move Back to Reply Needed</button>
+      </div>
+    `;
+  }
+
+  const statusTooltip = app.isManualOverride
+    ? `Manually updated: ${app.manualAction || "Override"}`
+    : (app.aiDecision ? `AI Classification: ${app.aiDecision}` : "");
+
   return `
-    <article class="card ${statusClass(status)}">
+    <article class="card ${statusClass(status)}" data-id="${app.id}">
       <div class="card-header">
-        <a class="card-header-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact email thread in Gmail">
-          <h3>${escapeHtml(app.company || "Unknown company")}</h3>
-        </a>
+        <div class="card-brand">
+          ${getCompanyAvatar(app.company)}
+          <div class="card-titles">
+            <a class="card-header-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open in Gmail">
+              <h3>${escapeHtml(app.company || "Unknown")}</h3>
+            </a>
+            <div class="role" title="${escapeHtml(roleText)}">${escapeHtml(roleText)}</div>
+          </div>
+        </div>
         <div class="card-header-actions">
           ${starBtn}
           <a class="btn-gmail-icon" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact thread in Gmail">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            Open ↗
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Gmail
           </a>
         </div>
       </div>
-      <div class="role">${escapeHtml(app.role || "Unknown role")}</div>
       <a class="card-subject-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact email thread in Gmail">
         <div class="subject">${escapeHtml(app.latestSubject || "No subject")}</div>
       </a>
-      <div class="meta">
-        <span class="pill status-pill ${statusClass(status)}">${escapeHtml(labelForStatus(status))}</span>
-        ${reqBadge}
-        ${doneBadge}
-        ${ignoredBadge}
-        ${manualBadge}
-        ${aiBadge}
-        ${msgCountBadge}
-        <span class="pill">${formatDate(app.lastActivityAt)}</span>
-        <span class="pill">${escapeHtml(confidence)}</span>
-        <div class="move-select-wrapper">
-          <select class="select-move-lane" data-id="${app.id}" data-current="${status}" title="Move application to a different lane">
-            <option value="" disabled selected>Move Lane ▾</option>
-            ${MOVE_OPTIONS.map(
-              (opt) => `
-              <option value="${opt.key}" ${opt.key === status ? 'disabled style="color:#94a3b8;"' : ""}>
-                ${opt.label} ${opt.key === status ? " (Current)" : ""}
-              </option>
-            `
-            ).join("")}
-          </select>
+      <div class="card-footer">
+        <div class="card-footer-left">
+          <span class="pill status-pill ${statusClass(status)}" ${statusTooltip ? `title="${escapeHtml(statusTooltip)}"` : ""}>${escapeHtml(labelForStatus(status))}</span>
+          ${msgCountBadge}
+          <span class="card-date" title="${app.lastActivityAt ? new Date(app.lastActivityAt).toLocaleString() : ""}">${formatRelativeDate(app.lastActivityAt)}</span>
         </div>
+        <select class="select-move-lane" data-id="${app.id}" data-current="${status}" title="Move application to a different stage">
+          <option value="" disabled selected>Move ▾</option>
+          ${MOVE_OPTIONS.map(
+            (opt) => `
+            <option value="${opt.key}" ${opt.key === status ? 'disabled style="color:#94a3b8;"' : ""}>
+              ${opt.label} ${opt.key === status ? "(Current)" : ""}
+            </option>
+          `
+          ).join("")}
+        </select>
       </div>
       ${actionButton}
     </article>
@@ -1165,6 +1210,21 @@ function initCardActionDelegation() {
       const nextIdx = (CYCLE.indexOf(current) + 1) % CYCLE.length;
       state.laneSorts[laneKey] = CYCLE[nextIdx];
       renderBoard(getFilteredApplications());
+      return;
+    }
+
+    const densityBtn = e.target.closest(".btn-density");
+    if (densityBtn && densityBtn.dataset.density) {
+      e.preventDefault();
+      state.cardDensity = densityBtn.dataset.density;
+      localStorage.setItem("board_card_density", state.cardDensity);
+      document.querySelectorAll(".btn-density").forEach((b) => {
+        b.classList.toggle("active", b.dataset.density === state.cardDensity);
+      });
+      const boardEl = byId("board");
+      if (boardEl) {
+        boardEl.classList.toggle("density-compact", state.cardDensity === "compact");
+      }
       return;
     }
 
