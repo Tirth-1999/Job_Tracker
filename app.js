@@ -1035,8 +1035,10 @@ function renderCard(app) {
     ? `<span class="badge-thread-count" title="${app.gmailMessageIds.length} authentic emails in this thread">${app.gmailMessageIds.length} emails</span>`
     : "";
 
-  // Subtle role line with reqId if present
-  const roleText = (app.role || "General Application") + (app.reqId ? ` · Req: ${app.reqId}` : "");
+  // Requisition ID badge
+  const reqBadge = app.reqId
+    ? `<span class="badge-req" title="Job Requisition ID: ${escapeHtml(app.reqId)}">Req #${escapeHtml(app.reqId)}</span>`
+    : "";
 
   let actionButton = "";
   if (status === "reply_needed" && !app.isDone && !app.isIgnored) {
@@ -1064,29 +1066,37 @@ function renderCard(app) {
     ? `Manually updated: ${app.manualAction || "Override"}`
     : (app.aiDecision ? `AI Classification: ${app.aiDecision}` : "");
 
+  const subjectText = app.latestSubject ? escapeHtml(app.latestSubject) : "No subject recorded";
+
   return `
     <article class="card ${statusClass(status)}" data-id="${app.id}">
       <div class="card-header">
-        <div class="card-brand">
+        <div class="card-company-group">
           ${getCompanyAvatar(app.company)}
-          <div class="card-titles">
-            <a class="card-header-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open in Gmail">
-              <h3>${escapeHtml(app.company || "Unknown")}</h3>
-            </a>
-            <div class="role" title="${escapeHtml(roleText)}">${escapeHtml(roleText)}</div>
-          </div>
+          <a class="card-company-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Search ${escapeHtml(app.company || 'Company')} in Gmail">
+            <h3 class="company-name">${escapeHtml(app.company || "Unknown Company")}</h3>
+          </a>
         </div>
         <div class="card-header-actions">
           ${starBtn}
-          <a class="btn-gmail-icon" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact thread in Gmail">
+          <a class="btn-card-gmail" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact email thread in Gmail">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            Gmail
           </a>
         </div>
       </div>
-      <a class="card-subject-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Open exact email thread in Gmail">
-        <div class="subject">${escapeHtml(app.latestSubject || "No subject")}</div>
+
+      <div class="card-role-row">
+        <span class="card-role">${escapeHtml(app.role || "General Application")}</span>
+        ${reqBadge}
+      </div>
+
+      <a class="card-subject-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Subject Context: ${subjectText}">
+        <div class="card-context">
+          <span class="context-label">Context:</span>
+          <span class="context-text">${subjectText}</span>
+        </div>
       </a>
+
       <div class="card-footer">
         <div class="card-footer-left">
           <span class="pill status-pill ${statusClass(status)}" ${statusTooltip ? `title="${escapeHtml(statusTooltip)}"` : ""}>${escapeHtml(labelForStatus(status))}</span>
