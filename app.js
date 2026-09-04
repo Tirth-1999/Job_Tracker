@@ -2084,12 +2084,277 @@ function getLocalDateKey(dateInput) {
   return d.toLocaleDateString("en-CA"); // "YYYY-MM-DD"
 }
 
+// ─── Interactive Job Pipeline Sankey Diagram ─────────────────────────────────
+function renderSankeySVG(applications, currentCategoryFilter, overallCounts) {
+  const total = (overallCounts.applied || 0) + (overallCounts.reply_needed || 0) + (overallCounts.interviewed || 0) + (overallCounts.offered || 0) + (overallCounts.rejected || 0) + (overallCounts.not_related || 0) || 1;
+  const appsTotal = (overallCounts.applied || 0) + (overallCounts.interviewed || 0) + (overallCounts.offered || 0) + (overallCounts.rejected || 0);
+  const interviewTotal = (overallCounts.interviewed || 0) + (overallCounts.offered || 0);
+  const offerTotal = overallCounts.offered || 0;
+  const rejTotal = overallCounts.rejected || 0;
+  const replyTotal = overallCounts.reply_needed || 0;
+  const otherTotal = overallCounts.not_related || 0;
+  const pendingTotal = overallCounts.applied || 0;
+  const activeIntvTotal = overallCounts.interviewed || 0;
+
+  const intvConv = appsTotal > 0 ? ((interviewTotal / appsTotal) * 100).toFixed(1) : "0";
+  const rejConv = appsTotal > 0 ? ((rejTotal / appsTotal) * 100).toFixed(1) : "0";
+  const offerConv = interviewTotal > 0 ? ((offerTotal / interviewTotal) * 100).toFixed(1) : "0";
+  const appsPct = ((appsTotal / total) * 100).toFixed(1);
+  const replyPct = ((replyTotal / total) * 100).toFixed(1);
+  const otherPct = ((otherTotal / total) * 100).toFixed(1);
+
+  // Column X positions & node widths
+  const col0_x = 20, col0_w = 175;
+  const col1_x = 255, col1_w = 180;
+  const col2_x = 495, col2_w = 185;
+  const col3_x = 740, col3_w = 215;
+
+  const nodes = [
+    // Column 0: Intake
+    { id: "node_total", x: col0_x, y: 110, w: col0_w, h: 140, cat: "all", title: "Total Activity", count: total.toLocaleString(), sub: "All Tracked Communications", color: "#475569" },
+
+    // Column 1: Primary Stream Channels
+    { id: "node_apps", x: col1_x, y: 44, w: col1_w, h: 105, cat: "applied", title: "Job Applications", count: appsTotal.toLocaleString(), sub: `${appsPct}% of all activity`, color: "#2563eb" },
+    { id: "node_inbound", x: col1_x, y: 168, w: col1_w, h: 72, cat: "reply_needed", title: "Recruiter Inbound", count: replyTotal.toLocaleString(), sub: `${replyPct}% recruiter outreach`, color: "#d97706" },
+    { id: "node_other", x: col1_x, y: 258, w: col1_w, h: 95, cat: "not_related", title: "System & Platform", count: otherTotal.toLocaleString(), sub: `${otherPct}% notifications`, color: "#64748b" },
+
+    // Column 2: Screening & Evaluation
+    { id: "node_eval_intv", x: col2_x, y: 44, w: col2_w, h: 72, cat: "interviewed", title: "Interviews & Screens", count: interviewTotal.toLocaleString(), sub: `${intvConv}% interview rate`, color: "#7c3aed" },
+    { id: "node_eval_pend", x: col2_x, y: 132, w: col2_w, h: 90, cat: "applied", title: "Awaiting Review", count: pendingTotal.toLocaleString(), sub: "In employer queue", color: "#3b82f6" },
+    { id: "node_eval_rej", x: col2_x, y: 238, w: col2_w, h: 74, cat: "rejected", title: "Screening Rejections", count: rejTotal.toLocaleString(), sub: `${rejConv}% rejection rate`, color: "#ef4444" },
+    { id: "node_eval_reply", x: col2_x, y: 328, w: col2_w, h: 56, cat: "reply_needed", title: "Active Discussions", count: replyTotal.toLocaleString(), sub: "Inbound threads", color: "#f59e0b" },
+
+    // Column 3: Final Outcomes
+    { id: "node_out_offer", x: col3_x, y: 44, w: col3_w, h: 72, cat: "offered", title: "🏆 Job Offer Received", count: offerTotal.toLocaleString(), sub: "ATC (Business Analyst, $70k)", color: "#10b981", isOffer: true },
+    { id: "node_out_intv", x: col3_x, y: 132, w: col3_w, h: 68, cat: "interviewed", title: "In Active Rounds", count: activeIntvTotal.toLocaleString(), sub: "Technical loops & tests", color: "#8b5cf6" },
+    { id: "node_out_pend", x: col3_x, y: 216, w: col3_w, h: 74, cat: "applied", title: "Under Consideration", count: (pendingTotal + replyTotal).toLocaleString(), sub: "Pending decisions", color: "#60a5fa" },
+    { id: "node_out_rej", x: col3_x, y: 306, w: col3_w, h: 76, cat: "rejected", title: "Rejections Recorded", count: rejTotal.toLocaleString(), sub: "Archived rejections", color: "#dc2626" }
+  ];
+
+  function makeRibbonPath(x0, y0, h0, x1, y1, h1) {
+    const dx = (x1 - x0) * 0.48;
+    return `M ${x0} ${y0} C ${x0 + dx} ${y0}, ${x1 - dx} ${y1}, ${x1} ${y1} L ${x1} ${y1 + h1} C ${x1 - dx} ${y1 + h1}, ${x0 + dx} ${y0 + h0}, ${x0} ${y0 + h0} Z`;
+  }
+
+  const ribbons = [
+    // Col 0 -> Col 1
+    {
+      d: makeRibbonPath(col0_x + col0_w, 120, 58, col1_x, 56, 58),
+      grad: "grad-total-apps",
+      cat: "applied",
+      title: "Total Tracked → Job Applications",
+      stat: `${appsTotal} applications (${appsPct}% share)`
+    },
+    {
+      d: makeRibbonPath(col0_x + col0_w, 178, 25, col1_x, 176, 25),
+      grad: "grad-total-inbound",
+      cat: "reply_needed",
+      title: "Total Tracked → Recruiter Outreach",
+      stat: `${replyTotal} recruiter inbounds (${replyPct}% share)`
+    },
+    {
+      d: makeRibbonPath(col0_x + col0_w, 203, 35, col1_x, 270, 48),
+      grad: "grad-total-other",
+      cat: "not_related",
+      title: "Total Tracked → Platform & Confirmations",
+      stat: `${otherTotal} notices (${otherPct}% share)`
+    },
+
+    // Col 1 -> Col 2
+    {
+      d: makeRibbonPath(col1_x + col1_w, 54, 22, col2_x, 56, 24),
+      grad: "grad-apps-intv",
+      cat: "interviewed",
+      title: "Applications → Interviews & Assessments",
+      stat: `${interviewTotal} candidates (${intvConv}% pass-through)`
+    },
+    {
+      d: makeRibbonPath(col1_x + col1_w, 76, 45, col2_x, 142, 50),
+      grad: "grad-apps-pend",
+      cat: "applied",
+      title: "Applications → Awaiting Review",
+      stat: `${pendingTotal} pending review (${((pendingTotal / appsTotal) * 100).toFixed(1)}%)`
+    },
+    {
+      d: makeRibbonPath(col1_x + col1_w, 121, 24, col2_x, 248, 35),
+      grad: "grad-apps-rej",
+      cat: "rejected",
+      title: "Applications → Screening Rejections",
+      stat: `${rejTotal} rejections (${rejConv}% rejection rate)`
+    },
+    {
+      d: makeRibbonPath(col1_x + col1_w, 185, 28, col2_x, 336, 30),
+      grad: "grad-inbound-dialogue",
+      cat: "reply_needed",
+      title: "Recruiter Inbound → Active Dialogues",
+      stat: `${replyTotal} active recruiter threads`
+    },
+
+    // Col 2 -> Col 3
+    {
+      d: makeRibbonPath(col2_x + col2_w, 54, 20, col3_x, 56, 24),
+      grad: "grad-intv-offer",
+      cat: "offered",
+      title: "Interviews → 🏆 Job Offer Received",
+      stat: `${offerTotal} Job Offer (${offerConv}% interview-to-offer rate)`
+    },
+    {
+      d: makeRibbonPath(col2_x + col2_w, 74, 24, col3_x, 144, 28),
+      grad: "grad-intv-active",
+      cat: "interviewed",
+      title: "Interviews → In Active Loops",
+      stat: `${activeIntvTotal} active assessment & interview loops`
+    },
+    {
+      d: makeRibbonPath(col2_x + col2_w, 148, 45, col3_x, 226, 38),
+      grad: "grad-pend-outcome",
+      cat: "applied",
+      title: "Awaiting Review → Under Consideration",
+      stat: `${pendingTotal} actively being evaluated`
+    },
+    {
+      d: makeRibbonPath(col2_x + col2_w, 252, 34, col3_x, 318, 38),
+      grad: "grad-rej-outcome",
+      cat: "rejected",
+      title: "Screening Rejections → Total Rejections",
+      stat: `${rejTotal} cumulative rejections recorded`
+    },
+    {
+      d: makeRibbonPath(col2_x + col2_w, 340, 20, col3_x, 258, 20),
+      grad: "grad-dialogue-outcome",
+      cat: "reply_needed",
+      title: "Active Dialogues → Under Consideration",
+      stat: `${replyTotal} ongoing recruiter discussions`
+    }
+  ];
+
+  const defs = `
+    <defs>
+      <linearGradient id="grad-total-apps" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#475569" stop-opacity="0.4" />
+        <stop offset="100%" stop-color="#2563eb" stop-opacity="0.65" />
+      </linearGradient>
+      <linearGradient id="grad-total-inbound" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#475569" stop-opacity="0.4" />
+        <stop offset="100%" stop-color="#d97706" stop-opacity="0.65" />
+      </linearGradient>
+      <linearGradient id="grad-total-other" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#475569" stop-opacity="0.4" />
+        <stop offset="100%" stop-color="#64748b" stop-opacity="0.55" />
+      </linearGradient>
+
+      <linearGradient id="grad-apps-intv" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#2563eb" stop-opacity="0.6" />
+        <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.75" />
+      </linearGradient>
+      <linearGradient id="grad-apps-pend" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#2563eb" stop-opacity="0.55" />
+        <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.65" />
+      </linearGradient>
+      <linearGradient id="grad-apps-rej" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#2563eb" stop-opacity="0.5" />
+        <stop offset="100%" stop-color="#ef4444" stop-opacity="0.65" />
+      </linearGradient>
+      <linearGradient id="grad-inbound-dialogue" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#d97706" stop-opacity="0.6" />
+        <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.7" />
+      </linearGradient>
+
+      <linearGradient id="grad-intv-offer" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.75" />
+        <stop offset="100%" stop-color="#10b981" stop-opacity="0.9" />
+      </linearGradient>
+      <linearGradient id="grad-intv-active" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.65" />
+        <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.75" />
+      </linearGradient>
+      <linearGradient id="grad-pend-outcome" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.55" />
+        <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.65" />
+      </linearGradient>
+      <linearGradient id="grad-rej-outcome" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#ef4444" stop-opacity="0.6" />
+        <stop offset="100%" stop-color="#dc2626" stop-opacity="0.7" />
+      </linearGradient>
+      <linearGradient id="grad-dialogue-outcome" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.6" />
+        <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.65" />
+      </linearGradient>
+
+      <filter id="offer-glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#10b981" flood-opacity="0.4" />
+      </filter>
+    </defs>
+  `;
+
+  const colHeaders = `
+    <g class="sankey-headers">
+      <text x="${col0_x + 6}" y="22" class="sankey-col-header">1. Intake &amp; Inflow</text>
+      <text x="${col1_x + 6}" y="22" class="sankey-col-header">2. Stream Channels</text>
+      <text x="${col2_x + 6}" y="22" class="sankey-col-header">3. Screening &amp; Eval</text>
+      <text x="${col3_x + 6}" y="22" class="sankey-col-header">4. Pipeline Outcomes</text>
+    </g>
+  `;
+
+  const ribbonsSvg = ribbons.map((r) => {
+    const isFiltered = currentCategoryFilter !== "all";
+    const isMatch = r.cat === currentCategoryFilter;
+    const ribbonClass = isFiltered ? (isMatch ? "active" : "dimmed") : "";
+    return `
+      <path class="sankey-ribbon ${ribbonClass}"
+            d="${r.d}"
+            fill="url(#${r.grad})"
+            data-category="${r.cat}"
+            data-title="${escapeHtml(r.title)}"
+            data-stat="${escapeHtml(r.stat)}" />
+    `;
+  }).join("");
+
+  const nodesSvg = nodes.map((n) => {
+    const isFiltered = currentCategoryFilter !== "all";
+    const isActive = n.cat === currentCategoryFilter || (n.cat === "all" && !isFiltered);
+    const nodeClass = isActive ? "active" : (isFiltered && n.cat !== "all" ? "dimmed" : "");
+    const offerStyle = n.isOffer ? 'filter="url(#offer-glow)"' : "";
+    return `
+      <g class="sankey-node ${nodeClass}"
+         data-category="${n.cat}"
+         data-title="${escapeHtml(n.title)}"
+         data-stat="${n.count} applications • ${escapeHtml(n.sub)}"
+         transform="translate(${n.x}, ${n.y})"
+         ${offerStyle}>
+        <rect class="sankey-node-bg" width="${n.w}" height="${n.h}" rx="8" />
+        <rect class="sankey-node-accent" x="0" y="0" width="4" height="${n.h}" rx="2" fill="${n.color}" />
+        <text x="14" y="24" class="sankey-node-title">${escapeHtml(n.title)}</text>
+        <text x="14" y="48" class="sankey-node-count" fill="${n.color}">${n.count}</text>
+        <text x="14" y="65" class="sankey-node-sub">${escapeHtml(n.sub)}</text>
+      </g>
+    `;
+  }).join("");
+
+  return `
+    <div class="sankey-wrap">
+      <svg class="sankey-svg" viewBox="0 0 980 410" preserveAspectRatio="xMidYMid meet">
+        ${defs}
+        ${colHeaders}
+        <g class="sankey-ribbons-layer">${ribbonsSvg}</g>
+        <g class="sankey-nodes-layer">${nodesSvg}</g>
+      </svg>
+      <div id="sankeyTooltip" class="sankey-tooltip">
+        <div class="sankey-tooltip-title" id="sankeyTooltipTitle"></div>
+        <div class="sankey-tooltip-stat" id="sankeyTooltipStat"></div>
+      </div>
+    </div>
+  `;
+}
+
 function renderAnalytics(applications) {
   const analyticsEl = byId("analytics");
   if (!analyticsEl) return;
 
   const currentSelectedDate = state.selectedDate || getTodayDateStr();
   const currentCategoryFilter = state.analyticsCategoryFilter || "all";
+  const chartView = state.analyticsChartView || "sankey";
+  const isSankey = chartView === "sankey";
 
   // 1. Group applications by date
   const dateMap = new Map();
@@ -2238,12 +2503,26 @@ function renderAnalytics(applications) {
       </div>
     </div>
 
-    <!-- Aggregate Category Bar Graph -->
+    <!-- Funnel Flow & Category Distribution -->
     <div class="aggregate-card">
       <div class="aggregate-header">
-        <h3>Aggregate Category Distribution (${applications.length} Total Entries)</h3>
-        <span style="font-size:12px;color:var(--muted);">Click any bar to filter the activity table below</span>
+        <div>
+          <h3>Pipeline Flow &amp; Category Distribution (${applications.length} Total Entries)</h3>
+          <span style="font-size:12px;color:var(--muted);">${isSankey ? "Click any stage node or flow channel to filter the activity table below" : "Click any bar to filter the activity table below"}</span>
+        </div>
+        <div class="chart-view-toggle" role="group" aria-label="Chart view mode">
+          <button type="button" class="btn-chart-view ${isSankey ? "active" : ""}" data-chart-view="sankey" title="View interactive Sankey Flow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 16c3-8 7-2 10-10"/></svg>
+            Sankey Flow
+          </button>
+          <button type="button" class="btn-chart-view ${!isSankey ? "active" : ""}" data-chart-view="bars" title="View Distribution Bars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+            Distribution Bars
+          </button>
+        </div>
       </div>
+
+      ${isSankey ? renderSankeySVG(applications, currentCategoryFilter, overallCounts) : `
       <div class="aggregate-bars-list">
         ${aggCategories
           .map((cat) => {
@@ -2269,6 +2548,7 @@ function renderAnalytics(applications) {
           })
           .join("")}
       </div>
+      `}
     </div>
 
     <!-- 14-Day Activity Trend Bar Chart -->
@@ -2433,6 +2713,52 @@ function attachAnalyticsListeners(applications) {
       renderAnalytics(applications);
     });
   });
+
+  // Chart View Toggle (Sankey vs. Bars)
+  document.querySelectorAll(".btn-chart-view").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state.analyticsChartView = btn.dataset.chartView || "sankey";
+      renderAnalytics(applications);
+    });
+  });
+
+  // Sankey Chart Interactivity (Nodes & Ribbons)
+  const sankeyWrap = document.querySelector(".sankey-wrap");
+  const sankeyTooltip = byId("sankeyTooltip");
+  const sankeyTooltipTitle = byId("sankeyTooltipTitle");
+  const sankeyTooltipStat = byId("sankeyTooltipStat");
+
+  if (sankeyWrap && sankeyTooltip) {
+    sankeyWrap.querySelectorAll(".sankey-ribbon, .sankey-node").forEach((elem) => {
+      elem.addEventListener("mouseenter", () => {
+        const title = elem.dataset.title;
+        const stat = elem.dataset.stat;
+        if (!title) return;
+        if (sankeyTooltipTitle) sankeyTooltipTitle.textContent = title;
+        if (sankeyTooltipStat) sankeyTooltipStat.textContent = stat || "";
+        sankeyTooltip.style.display = "block";
+      });
+
+      elem.addEventListener("mousemove", (e) => {
+        const rect = sankeyWrap.getBoundingClientRect();
+        const mouseX = Math.max(10, Math.min(rect.width - 20, e.clientX - rect.left));
+        const mouseY = Math.max(10, e.clientY - rect.top);
+        sankeyTooltip.style.left = `${mouseX}px`;
+        sankeyTooltip.style.top = `${mouseY}px`;
+      });
+
+      elem.addEventListener("mouseleave", () => {
+        sankeyTooltip.style.display = "none";
+      });
+
+      elem.addEventListener("click", () => {
+        const cat = elem.dataset.category;
+        if (!cat) return;
+        state.analyticsCategoryFilter = state.analyticsCategoryFilter === cat ? "all" : cat;
+        renderAnalytics(applications);
+      });
+    });
+  }
 }
 
 function attachPaginationListeners(prefix, totalItems, pageKey, pageSizeKey, rerenderFn) {
