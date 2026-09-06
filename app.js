@@ -2147,7 +2147,12 @@ function renderDraftReply(applications) {
   const currentIntent = state.draftReplyIntent || "interest";
 
   // Filter application candidates
-  let candidateApps = applications.filter((a) => {
+  // Merge live-fetched Gmail threads with tracked applications
+  const liveFetched = state.fetchedLiveApps || [];
+  const combinedApps = [...liveFetched, ...applications];
+
+  let candidateApps = combinedApps.filter((a) => {
+    if (a.isLiveFetched) return true;
     const s = normalizeStatus(a.effectiveStatus || a.status);
     if (s === "not_related") return false;
     if (currentFilter === "reply_needed") return s === "reply_needed";
@@ -2173,7 +2178,7 @@ function renderDraftReply(applications) {
     state.draftReplySelectedId = candidateApps[0].id;
   }
 
-  const selectedApp = applications.find((a) => a.id === state.draftReplySelectedId) || candidateApps[0] || null;
+  const selectedApp = combinedApps.find((a) => a.id === state.draftReplySelectedId) || candidateApps[0] || null;
 
   // Counts for filter pills
   const replyNeededTotal = applications.filter((a) => normalizeStatus(a.effectiveStatus || a.status) === "reply_needed").length;
@@ -2197,7 +2202,20 @@ function renderDraftReply(applications) {
         <p>AI-assisted recruiter email replies grounded in your verified portfolio, job history, and specific thread memory.</p>
       </div>
       <div class="draft-reply-controls">
-        <input type="search" id="draftReplySearchInput" class="draft-reply-search-input" placeholder="Search company, role, sender..." value="${escapeHtml(state.draftReplySearch || "")}" />
+        <div class="draft-reply-url-box">
+          <div style="display:flex;gap:8px;align-items:center;width:100%;">
+            <input type="text" id="draftReplySearchInput" class="draft-reply-search-input" placeholder="Paste Gmail thread URL (https://mail.google.com/...) or search company, role..." value="${escapeHtml(state.draftReplySearch || "")}" style="flex:1;" />
+            <button type="button" id="btnFetchGmailUrl" class="btn-fetch-gmail-url" ${state.draftReplyFetchingUrl ? "disabled" : ""} title="Fetch live email body directly from Gmail using the link or thread ID">
+              ${
+                state.draftReplyFetchingUrl
+                  ? `<span class="followup-spinner" style="width:14px;height:14px;border-width:2px;"></span> Fetching from Gmail...`
+                  : `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Fetch from Gmail`
+              }
+            </button>
+          </div>
+          ${state.draftReplyFetchError ? `<div class="draft-reply-fetch-error">${escapeHtml(state.draftReplyFetchError)}</div>` : ""}
+          ${state.draftReplyFetchSuccess ? `<div class="draft-reply-fetch-success">${escapeHtml(state.draftReplyFetchSuccess)}</div>` : ""}
+        </div>
         <div class="draft-reply-filter-pills">
           <button type="button" class="draft-reply-pill-btn ${currentFilter === "reply_needed" ? "active" : ""}" data-filter="reply_needed">
             Reply Needed (${replyNeededTotal})
@@ -2380,11 +2398,113 @@ function renderDraftReply(applications) {
 }
 
 function attachDraftReplyListeners(applications) {
-  // Search input
+  function extractThreadOrMessageId(input) {
+    if (!input) return "";
+    const s = String(input).trim();
+    if (/^[a-f0-9]{16,}$/i.test(s)) return s;
+    const m = s.match(/(?:#|\/|%23)([a-f0-9]{16,})(?:[/?#&]|$)/i);
+    if (m) return m[1];
+    return "";
+  }
+
+  const handleFetchGmail = async () => {
+    const query = (state.draftReplySearch || "").trim();
+    const threadId = extractThreadOrMessageId(query);
+
+    if (!query) {
+      state.draftReplyFetchError = "Please paste a Gmail thread URL (e.g. https://mail.google.com/mail/u/0/#inbox/...) into the search bar first.";
+      state.draftReplyFetchSuccess = null;
+      renderDraftReply(applications);
+      return;
+    }
+
+    state.draftReplyFetchingUrl = true;
+    state.draftReplyFetchError = null;
+    state.draftReplyFetchSuccess = null;
+    renderDraftReply(applications);
+
+    try {
+      const res = await fetch("/api/fetch-gmail-thread", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url: query, threadId })
+      });
+
+      if (!res.ok) {
+        const errJson = await res.json().catch(() => ({}));
+        throw new Error(errJson.error || `HTTP ${res.status} fetching Gmail thread`);
+      }
+
+      const data = await res.json();
+      if (!data.body && !data.snippet) {
+        throw new Error("No readable email content returned from Gmail.");
+      }
+
+      // Check if this thread matches an existing application
+      const matchedApp = applications.find(
+        (a) => a.gmailThreadId === data.threadId || (a.gmailMessageIds || []).includes(data.threadId) || (a.gmailMessageIds || []).includes(data.messageId)
+      );
+
+      if (matchedApp) {
+        state.draftReplySelectedId = matchedApp.id;
+        state.draftReplyExtraContext = data.body || data.snippet;
+        state.draftReplyFetchSuccess = `✅ Live Gmail thread fetched for ${matchedApp.company}! Recruiter message body loaded below.`;
+      } else {
+        // Create an ad-hoc live fetched application card
+        const liveApp = {
+          id: `gmail-${data.threadId}`,
+          company: data.company || "Company",
+          role: data.role || "General Application",
+          status: "reply_needed",
+          latestSubject: data.subject || "No Subject",
+          latestFrom: data.from || "Recruiter",
+          gmailThreadId: data.threadId,
+          gmailMessageIds: [data.messageId || data.threadId],
+          lastActivityAt: data.date || new Date().toISOString(),
+          notes: data.snippet || data.body.slice(0, 300),
+          isLiveFetched: true
+        };
+
+        state.fetchedLiveApps = state.fetchedLiveApps || [];
+        state.fetchedLiveApps = state.fetchedLiveApps.filter((a) => a.gmailThreadId !== data.threadId);
+        state.fetchedLiveApps.unshift(liveApp);
+
+        state.draftReplySelectedId = liveApp.id;
+        state.draftReplyExtraContext = data.body || data.snippet;
+        state.draftReplyFetchSuccess = `✅ Fetched live email from Gmail (${data.company}: "${data.subject}"). Recruiter body loaded below!`;
+      }
+
+      state.draftReplyOutput = "";
+      state.draftReplyCopied = false;
+    } catch (err) {
+      console.error("Fetch Gmail thread error:", err);
+      // Fallback: If network failed or serverless offline, check if local application matches the ID
+      if (threadId) {
+        const localMatch = applications.find(
+          (a) => a.gmailThreadId === threadId || (a.gmailMessageIds || []).includes(threadId)
+        );
+        if (localMatch) {
+          state.draftReplySelectedId = localMatch.id;
+          state.draftReplyExtraContext = localMatch.notes || "";
+          state.draftReplyFetchSuccess = `Found matching application from local tracker (${localMatch.company})!`;
+          state.draftReplyFetchingUrl = false;
+          renderDraftReply(applications);
+          return;
+        }
+      }
+      state.draftReplyFetchError = `Could not fetch from Gmail: ${err.message}. You can still paste the email body manually in the box below.`;
+    } finally {
+      state.draftReplyFetchingUrl = false;
+      renderDraftReply(applications);
+    }
+  };
+
+  // Search input & Enter key
   const searchInput = byId("draftReplySearchInput");
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
       state.draftReplySearch = e.target.value;
+      state.draftReplyFetchError = null;
       renderDraftReply(applications);
       const newSearchInput = byId("draftReplySearchInput");
       if (newSearchInput) {
@@ -2392,6 +2512,22 @@ function attachDraftReplyListeners(applications) {
         newSearchInput.setSelectionRange(newSearchInput.value.length, newSearchInput.value.length);
       }
     });
+
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        const val = (searchInput.value || "").trim();
+        if (val.includes("mail.google.com") || /^[a-f0-9]{16,}$/i.test(val)) {
+          e.preventDefault();
+          handleFetchGmail();
+        }
+      }
+    });
+  }
+
+  // Fetch from Gmail URL button
+  const btnFetchUrl = byId("btnFetchGmailUrl");
+  if (btnFetchUrl) {
+    btnFetchUrl.addEventListener("click", handleFetchGmail);
   }
 
   // Filter pills
@@ -2464,7 +2600,8 @@ function attachDraftReplyListeners(applications) {
   const btnGenerate = byId("btnGenerateReplyDraft");
   const btnRegenerate = byId("btnRegenerateDraft");
   const runGeneration = async () => {
-    const selectedApp = applications.find((a) => a.id === state.draftReplySelectedId);
+    const combinedApps = [...(state.fetchedLiveApps || []), ...applications];
+    const selectedApp = combinedApps.find((a) => a.id === state.draftReplySelectedId);
     if (!selectedApp) return;
 
     state.draftReplyLoading = true;
