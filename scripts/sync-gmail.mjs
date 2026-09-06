@@ -45,7 +45,9 @@ const DEFAULT_BACKFILL_QUERY = [
 const NOISE_SUBJECT_PATTERNS = [
   /\b(otp|one-time password|verification code|security code|2fa|two-factor)\b/i,
   /\b(reset your password|sign-in code|login code|verify your email|verify your account)\b/i,
-  /\b(receipt|invoice|subscription renewal|sale ends|limited time offer|welcome to chat)\b/i
+  /\b(receipt|invoice|subscription renewal|sale ends|limited time offer|welcome to chat)\b/i,
+  // EEO / OFCCP / self-identification compliance forms — NOT pipeline events
+  /\b(self.?identification|voluntary self.?id|eeo (survey|form|questionnaire)|equal employment opportunity (survey|form)|ofccp|disability self.?id|veteran self.?id|demographic (survey|form)|race and ethnicity (survey|form))\b/i
 ];
 
 async function main() {
@@ -536,6 +538,9 @@ ANTI-PATTERNS (DO NOT CLASSIFY AS "reply_needed"):
 - Technical assessments and online coding tests -> MUST be "interviewed" (Interview / Assessment lane).
 - Standard submission receipts ("Thank you for applying - we received your submission") with no assessment or requested action -> MUST be "applied".
 - One-Time Password (OTP) security codes, login verification codes, or password setup emails -> MUST be "not_related".
+- EEO surveys, voluntary self-identification forms, OFCCP disability/veteran/race demographic forms -> MUST be "not_related". These are compliance emails, NOT recruiter outreach.
+- LinkedIn Easy Apply auto-confirmation emails ("Your application was sent to [Company]") -> MUST be "applied". These are automated receipts, NOT recruiter outreach.
+- Any email from a known ATS platform sender (LinkedIn no-reply, @myworkday.com, @greenhouse-mail.io, @lever.co, @ashbyhq.com, @smartrecruiters.com) that contains "application received" / "application submitted" / "thank you for applying" -> MUST be "applied".
 
 --------------------------------------------------------------------------------
 4. "applied" (Application Submission Acknowledgment)
@@ -578,10 +583,13 @@ Emails that do not represent an actionable stage in the job search pipeline:
 A. Authentication & Security:
    - One-Time Passwords (OTPs), 2-Factor Authentication (2FA) verification codes, candidate account verification codes (Workday OTP, Greenhouse security codes, Taleo verification, Oracle identity confirmation, Paycom password setup, password reset links).
 
-B. Surveys & Feedback:
-   - Voluntary Equal Employment Opportunity (EEO) demographic surveys, diversity questionnaires, candidate experience surveys, feedback forms ("How was your application experience?").
+B. EEO / OFCCP / Self-Identification Compliance Forms:
+   - Voluntary Equal Employment Opportunity (EEO) demographic surveys, diversity questionnaires, disability self-ID, veteran self-ID forms (OFCCP), race and ethnicity surveys, gender identity surveys. These are mandatory pre-hire compliance forms sent to ALL applicants — NOT pipeline events.
 
-C. Platform Notifications, Newsletters & Spam:
+C. Surveys & Feedback:
+   - Candidate experience surveys, feedback forms ("How was your application experience?").
+
+D. Platform Notifications, Newsletters & Spam:
    - Job board digests ("10 new Data Engineer jobs in your area"), LinkedIn job alerts, Glassdoor newsletter, promotional sales emails, Google account security alerts, Google Cloud trial notices, delivery failure / bounce notifications, Google Voice incoming text messages without full job context.
 
 ================================================================================
@@ -598,7 +606,8 @@ Example 2: Online Coding Assessment
 - FROM: "IBM Talent Acquisition <talent@ibm.com>"
 - SUBJECT: "Action Required: IBM Coding Assessment for completion - Associate Data Engineer"
 - SNIPPET: "Please complete your coding assessment within 7 days using the following link on HackerRank."
--> OUTPUT: {"is_job": true, "company": "IBM", "role": "Associate Data Engineer", "status": "reply_needed", "confidence": "high"}
+-> OUTPUT: {"is_job": true, "company": "IBM", "role": "Associate Data Engineer", "status": "interviewed", "confidence": "high"}
+NOTE: This is a technical assessment/coding test — ALWAYS "interviewed", NEVER "reply_needed".
 
 Example 3: ATS Application Confirmation
 - FROM: "Stripe Careers <no-reply@us.greenhouse-mail.io>"
@@ -755,10 +764,47 @@ CRITICAL PRECEDENCE RULE (ASSESSMENT VS REPLY NEEDED):
 - Any email directing the candidate to take an online assessment, screening quiz, behavioral evaluation, or video interview prompt (Outmatch, Harver, TestGorilla, HackerRank, pymetrics) MUST ALWAYS be classified as "interviewed", NEVER "reply_needed"!
 - "reply_needed" is strictly reserved for direct human recruiter emails asking for text replies (e.g. salary expectation, availability, visa questions) or simple administrative forms.
 
+CRITICAL PRECEDENCE RULE (EEO / SELF-ID / OFCCP COMPLIANCE FORMS):
+- EEO surveys, voluntary self-identification forms, disability self-ID, veteran self-ID, OFCCP demographic forms, diversity questionnaires are MANDATORY pre-hire compliance forms sent to ALL applicants by law — they are NOT an interview, assessment, offer, or any actionable recruiting step!
+- These MUST ALWAYS be classified as "not_related", NEVER as "interviewed", "reply_needed", "applied", or "offered".
+- Look for: "self-identification", "voluntary self-id", "EEO survey", "OFCCP", "disability disclosure", "veteran status form", "race and ethnicity".
+
+CRITICAL PRECEDENCE RULE (PLATFORM AUTO-RECEIPT SENDERS):
+- Emails from known job platform senders are always automated system confirmations — NEVER recruiter outreach. Classify as "applied":
+  - linkedin.com (jobs-noreply@, jobalerts-noreply@, notifications@)
+  - @myworkday.com, @otp.workday.com (Application Received confirmations)
+  - @greenhouse-mail.io (ATS confirmation)
+  - @hire.lever.co, @lever.co (ATS confirmation)
+  - @ashbyhq.com, @smartrecruiters.com, @icims.com, @bamboohr.com, @workablemail.com, @applytojob.com
+  - @dover.com, noreply@indeed.com
+- NEVER classify these platform auto-receipts as "reply_needed" — they require ZERO action from the candidate!
+
+Example 15: LinkedIn Easy Apply Confirmation (Platform Auto-Receipt)
+- FROM: "LinkedIn Job Alerts <jobs-noreply@linkedin.com>"
+- SUBJECT: "Your application was sent to Acme Corp"
+- SNIPPET: "Your application was sent to Acme Corp for the Data Engineer position. You applied via Easy Apply. Check your application status in My Jobs."
+-> OUTPUT: {"is_job": true, "company": "Acme Corp", "role": "Data Engineer", "status": "applied", "confidence": "high"}
+NOTE: LinkedIn Easy Apply auto-confirm is ALWAYS "applied". These are automated receipts — NO action required from candidate. NEVER classify as "reply_needed".
+
+Example 16: EEO / Voluntary Self-Identification Form
+- FROM: "Talent Acquisition <no-reply@greenhouse-mail.io>"
+- SUBJECT: "Action Required: Complete your self-identification for Microsoft"
+- SNIPPET: "As part of our commitment to equal employment opportunity, Microsoft invites you to voluntarily self-identify your demographic information. This survey is completely voluntary and will not affect your application."
+-> OUTPUT: {"is_job": false, "company": "Microsoft", "role": "General Application", "status": "not_related", "confidence": "high"}
+NOTE: EEO/self-ID/OFCCP forms are mandatory pre-hire compliance forms sent to ALL applicants — they are NOT an interview, assessment, or offer. ALWAYS "not_related". NEVER "interviewed" or "reply_needed".
+
+Example 17: Workday Platform Application Receipt
+- FROM: "workday hr <atcllc@myworkday.com>"
+- SUBJECT: "Job Application: Senior Data Engineer - R0003261 atcllc on 2024-07-10"
+- SNIPPET: "Your application for Senior Data Engineer has been received. Thank you for your interest in joining our team. We will review your qualifications and be in touch if there is a match."
+-> OUTPUT: {"is_job": true, "company": "ATC", "role": "Senior Data Engineer", "status": "applied", "confidence": "high"}
+NOTE: Workday @myworkday.com sender = automated ATS receipt. ALWAYS "applied". The "will be in touch if there is a match" phrase is a conditional disclaimer in a receipt — NOT a rejection.
+
 ================================================================================
 SECTION 4: EXECUTION
 ================================================================================
 Carefully evaluate the provided batch of emails according to all the above rules and output strictly valid JSON matching the schema.
+
 `.trim();
 
   // Run all AI batches concurrently in parallel across keys
@@ -931,10 +977,43 @@ function parseJsonResponse(raw) {
 function extractWithHeuristics(item) {
   const { subject, from, body } = item.parsed;
   const haystack = `${subject} ${body}`.toLowerCase();
+  const fromLower = from.toLowerCase();
 
   let status = "applied";
   let confidence = "low";
   let reason = "keyword heuristic";
+
+  // ─────────────────────────────────────────────────────────────────────
+  // PRIORITY GUARD 1: EEO / OFCCP / Self-Identification compliance forms
+  // These are mandatory pre-hire compliance forms sent to all applicants —
+  // NOT an interview, assessment, or recruiter outreach.
+  // ─────────────────────────────────────────────────────────────────────
+  const EEO_RE = /self.?identification|voluntary self.?id|equal employment opportunity|eeo (survey|form|questionnaire|information)|ofccp|disability self.?id|veteran self.?id|demographic (survey|form|information)|race and ethnicity|ethnic(ity)? (survey|form)|gender (survey|form)|diversity questionnaire/i;
+  if (EEO_RE.test(haystack)) {
+    status = "not_related";
+    confidence = "high";
+    reason = "EEO/self-ID compliance form — not a pipeline event";
+    const company = sanitizeCompanyName(inferCompanyHeuristic(from, subject, body));
+    const role = sanitizeRole(inferRoleHeuristic(subject, body), subject, body);
+    return { message: item.message, parsed: item.parsed, company, role, status, confidence, classifier: "rules", reason };
+  }
+
+  // ─────────────────────────────────────────────────────────────────────
+  // PRIORITY GUARD 2: Platform auto-receipt senders
+  // Emails from known ATS/job-board no-reply senders are always submission
+  // confirmations, NEVER recruiter outreach requiring a reply.
+  // ─────────────────────────────────────────────────────────────────────
+  const PLATFORM_SENDER_RE = /jobs-noreply@linkedin\.com|jobalerts-noreply@linkedin\.com|noreply@linkedin\.com|no-?reply@linkedin\.com|notifications@linkedin\.com|@myworkday\.com|@otp\.workday\.com|@greenhouse-mail\.io|no-?reply@us\.greenhouse-mail\.io|no-?reply@hire\.lever\.co|@lever\.co|no-?reply@ashbyhq\.com|@smartrecruiters\.com|no-?reply@smartrecruiters\.com|@icims\.com|@bamboohr\.com|@workablemail\.com|@applytojob\.com|@comeet-notifications\.com|noreply@indeed\.com|no-?reply@indeed\.com|@dover\.com/i;
+  const PLATFORM_RECEIPT_SUBJECT_RE = /your application (was sent|has been submitted|was submitted|has been received|was received)|application (received|submitted|confirmed|confirmation)|we received your application|thanks? for applying|thank you for applying|thank you for your application|you.ve applied to|application sent to/i;
+
+  if (PLATFORM_SENDER_RE.test(fromLower) && (PLATFORM_RECEIPT_SUBJECT_RE.test(subject) || /application/i.test(subject))) {
+    status = "applied";
+    confidence = "high";
+    reason = "platform auto-receipt sender — application acknowledgment";
+    const company = sanitizeCompanyName(inferCompanyHeuristic(from, subject, body));
+    const role = sanitizeRole(inferRoleHeuristic(subject, body), subject, body);
+    return { message: item.message, parsed: item.parsed, company, role, status, confidence, classifier: "rules", reason };
+  }
 
   // Rejection detection: check for genuine rejection phrases
   // We test against the full text, then exclude conditional/hypothetical disclaimers
@@ -1246,10 +1325,30 @@ function upsertApplication(data, incoming) {
       }
 
       // Stage progression check for the same role:
-      if (app.status === "offered" || incoming.status === "offered") return true;
+      // ── Strict Conflict Guard 3: Offer cards must only merge with emails from the SAME sender domain.
+      // A different email domain (e.g. Workday receipt vs. a direct recruiter offer) = different application.
+      const extractDomain = (from) => (from || "").match(/@([\w.-]+)/)?.[1]?.toLowerCase() || "";
+      const existingDomain = extractDomain(app.latestFrom || "");
+      const incomingDomain = extractDomain(incoming.latestFrom || "");
+      const sameSenderDomain = existingDomain && incomingDomain && existingDomain === incomingDomain;
+      const sameThread = Boolean(incoming.gmailThreadId && app.gmailThreadId && incoming.gmailThreadId === app.gmailThreadId);
+
+      if (app.status === "offered") {
+        // ONLY merge into an existing offer card if it's from the same thread OR same sender domain.
+        // This prevents a Workday receipt or a different-role recruiter pitch from hijacking the offer card.
+        if (sameThread || sameSenderDomain) return true;
+        return false; // Different domain/thread → let it create a new record
+      }
+      if (incoming.status === "offered") {
+        // A new offer email: merge into an existing record only if same thread or same domain+role
+        if (sameThread) return true;
+        if (sameSenderDomain) return true;
+        return false; // Different domain → create a new record for this offer
+      }
       if (app.status === "interviewed" || incoming.status === "interviewed") return true;
       if (app.status === "reply_needed" || incoming.status === "reply_needed") return true;
       if ((app.status === "rejected" && incoming.status === "applied") || (app.status === "applied" && incoming.status === "rejected")) return true;
+
 
       // Do NOT merge separate applied receipts if they are from different threads!
       return false;
