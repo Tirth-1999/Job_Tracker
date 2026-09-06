@@ -1187,6 +1187,18 @@ function sanitizeCompanyName(company, subject = "", from = "", notes = "") {
 }
 
 function sanitizeRole(role, subject = "", notes = "") {
+  // Explicit Normalizations for Offer Rollout / PandaDoc / ATC:
+  if (/ATC Offer Letter.*BA\b/i.test(subject) || /ATC Offer Letter.*BA\b/i.test(notes) || /Details Required For Offer Rollout/i.test(subject)) {
+    return "Business Analyst";
+  }
+  if (/^offer rollout$/i.test(role) || /^tirthcshah1999$/i.test(role)) {
+    if (/ATC/i.test(subject) || /ATC/i.test(notes)) return "Business Analyst";
+    return "General Application";
+  }
+  if (/The Senior Data Engineer Position/i.test(role)) {
+    return "Senior Data Engineer";
+  }
+
   let cleaned = String(role || "")
     .replace(/\bSr\.\s*/gi, "Senior ")
     .replace(/\bJr\.\s*/gi, "Junior ")

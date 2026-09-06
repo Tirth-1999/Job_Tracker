@@ -37,6 +37,89 @@ function initSupabase() {
   return supabaseClient;
 }
 
+// ─── Tirth Shah Portfolio & Career Context for AI Reply Generator ─────────────
+const PORTFOLIO_DATA = {
+  personalInfo: {
+    name: "Tirth Shah",
+    title: "Data and AI Engineer",
+    tagline: "Business analysis, data engineering, BI, data science, and agentic AI systems for practical product and operations work",
+    location: "Dallas, Texas",
+    email: "tirth.shah@tamu.edu",
+    phone: "979-635-2045",
+    linkedin: "https://www.linkedin.com/in/tirth-chirayu-shah/",
+    github: "https://github.com/Tirth-1999",
+    portfolioUrl: "https://www.tirthcshah.me/"
+  },
+  education: [
+    {
+      degree: "Master of Science - MS in Management Information Systems",
+      institution: "Texas A&M University",
+      duration: "Aug 2024 - May 2026",
+      gpa: "3.90/4.00",
+      focus: "Data Engineering, Applied AI, Analytics, and Business Systems",
+      honors: "MS-MIS Scholarship Recipient; President of Buddy Connect"
+    },
+    {
+      degree: "Bachelor of Engineering - BE in Computer Engineering",
+      institution: "Gujarat Technological University",
+      duration: "Jul 2017 - Jul 2021",
+      gpa: "9.50/10.00 CGPA",
+      focus: "Data Science with Python"
+    }
+  ],
+  experiences: [
+    {
+      company: "HCLTech / Verizon Business",
+      position: "Global Engagement Management Intern (TMT / Verizon)",
+      duration: "Feb 2026 - May 2026",
+      highlights: "Designed agentic NWDAF operations architecture for Verizon $3.5B Managed Network Services partnership; co-built interactive 5G network intelligence prototype (React 19, TypeScript, Three.js, Zustand, LangChain)."
+    },
+    {
+      company: "Mays Business School - Texas A&M University",
+      position: "Data and AI Graduate Student Worker (Founding Engineer)",
+      duration: "Nov 2025 - Feb 2026",
+      highlights: "Founding engineer for Mays Flex Online admissions & marketing analytics platform (Edulytix) across 7 graduate programs; built Python ETL, 17-table SQLite warehouse, LangChain schema RAG, OpenRouter API multi-model assistant, cut manual reporting ~95%."
+    },
+    {
+      company: "Utilities & Energy Services - Texas A&M University",
+      position: "Data Engineer Student Worker",
+      duration: "Apr 2025 - Nov 2025",
+      highlights: "Shipped production Python and SQL Server automation across 13 projects (50K–500K+ daily records); designed free-tier Databricks + SQL Server architecture with Airflow DAG design; 8-stage CHP pipeline cut 3-hr daily manual process to 5 minutes (97% reduction, 99.5% reliability)."
+    },
+    {
+      company: "Black Tie Concierge, Inc.",
+      position: "Data & AI Product Strategy Intern (Founding Engineer)",
+      duration: "May 2025 - Aug 2025",
+      highlights: "Built full-stack booking platform in 12 weeks (Next.js, TypeScript, Supabase PostgreSQL, Stripe, Google Maps, Vercel), supporting $10K+ revenue and 3x early growth."
+    },
+    {
+      company: "Tata Consultancy Services",
+      position: "Data Engineer (Equifax Account)",
+      duration: "Aug 2021 - Aug 2024",
+      highlights: "On-prem to GCP cloud migration, multi-source credit data fabric (10M+ records/day, 45% identity match lift, 93% latency cut); led 5-person SAS-to-Python modernization POC (60+ scripts converted, 80% runtime cut, 50% compute savings, Airflow DAG orchestration, FCRA/HIPAA-aware PII masking)."
+    },
+    {
+      company: "PMC Retail (Paul Mason Consulting)",
+      position: "Business Analyst Intern",
+      duration: "Sep 2020 - Apr 2021",
+      highlights: "Supported Oracle Xstore POS modernization: retail workflows, UML use cases, user stories, UAT test scenarios, Scrum delivery."
+    }
+  ],
+  skills: [
+    "Python", "SQL", "Databricks", "Snowflake", "dbt", "Airflow", "Apache Spark", "PySpark",
+    "GCP", "AWS", "Azure", "Agentic AI", "LangChain", "LangGraph", "RAG", "Vector Databases (ChromaDB, FAISS)",
+    "Streamlit", "Power BI", "Next.js", "TypeScript", "React", "FastAPI", "Supabase PostgreSQL", "Docker"
+  ],
+  certifications: [
+    "AI Engineer for Developers Associate (DataCamp)",
+    "Academy Accreditation - AI Agent Fundamentals (Databricks)",
+    "Academy Accreditation - Generative AI Fundamentals (Databricks)",
+    "Introduction to LangChain (LangChain Academy)",
+    "Professional Scrum Master I (PSM I)",
+    "Microsoft Certified: Azure Data Engineer Associate"
+  ]
+};
+
 // ─── Map in-memory app object → Supabase row ─────────────────────────────────
 // manualAction: string like "move_to_interviewed" | "mark_done" | "ignore" | "reopen" | null
 function appToSupabaseRow(app, manualAction = null) {
@@ -227,7 +310,17 @@ const state = {
   followupFilter: "all",
   followupSort: "days_desc",
   followupSearch: "",
-  activeFollowupId: null
+  activeFollowupId: null,
+  // Draft My Reply tab
+  draftReplySelectedId: null,
+  draftReplySearch: "",
+  draftReplyFilter: "reply_needed", // "reply_needed" | "all_active" | "starred"
+  draftReplyIntent: "interest", // "interest" | "interview" | "questions" | "followup" | "decline"
+  draftReplyExtraContext: "",
+  draftReplyOutput: "",
+  draftReplyLoading: false,
+  draftReplyError: null,
+  draftReplyCopied: false
 };
 
 const byId = (id) => document.getElementById(id);
@@ -296,6 +389,18 @@ function sanitizeCompanyName(name, subject = "", from = "", notes = "") {
 
 function cleanJobRole(role, subject = "", notes = "") {
   let r = String(role || "").trim();
+
+  // Explicit Normalizations for Offer Rollout / PandaDoc / ATC:
+  if (/ATC Offer Letter.*BA\b/i.test(subject) || /ATC Offer Letter.*BA\b/i.test(notes) || /Details Required For Offer Rollout/i.test(subject)) {
+    return "Business Analyst";
+  }
+  if (/^offer rollout$/i.test(r) || /^tirthcshah1999$/i.test(r)) {
+    if (/ATC/i.test(subject) || /ATC/i.test(notes)) return "Business Analyst";
+    return "General Application";
+  }
+  if (/The Senior Data Engineer Position/i.test(r)) {
+    return "Senior Data Engineer";
+  }
 
   // Normalize "Sr." and "Jr."
   r = r.replace(/\bSr\.\s*/gi, "Senior ").replace(/\bJr\.\s*/gi, "Junior ");
@@ -438,6 +543,16 @@ function deduplicateAndConsolidateApplications(appList) {
       }
     }
 
+    // 3.5 Match Same Company Offer (an offer at a company collapses offer letters, rollout paperwork, and offer emails)
+    if (!targetGroup && item.normComp && item.normComp !== "unknown" && (item.app.status === "offered" || item.normRole === "offerrollout")) {
+      const existingOfferGroup = groups.find((g) =>
+        g.some((other) => other.normComp === item.normComp && (other.app.status === "offered" || other.normRole === "offerrollout"))
+      );
+      if (existingOfferGroup) {
+        targetGroup = existingOfferGroup;
+      }
+    }
+
     // 4. Match Same Company + Same Role for Stage Progressions (e.g. Applied -> Interview / Rejection)
     if (!targetGroup && item.normComp && item.normComp !== "unknown") {
       const compRoleKey = `${item.normComp}:${item.normRole}`;
@@ -548,7 +663,7 @@ function resolveClusterStatus(appCluster) {
       const appCluster = cluster.map((c) => c.app);
       const bestStatus = resolveClusterStatus(appCluster);
       const cleanComp = appCluster.find((a) => a.company && a.company.toLowerCase() !== "tirth shah" && a.company.toLowerCase() !== "unknown")?.company || appCluster[0].company;
-      const cleanRole = appCluster.find((a) => a.role && a.role !== "General Application" && a.role !== "Unknown role" && a.role.length > 3 && !/^(sr|jr|you)$/i.test(a.role))?.role || cleanJobRole(appCluster[0].role, appCluster[0].latestSubject, appCluster[0].notes);
+      const cleanRole = appCluster.find((a) => a.role && a.role !== "General Application" && a.role !== "Unknown role" && a.role !== "Offer Rollout" && a.role.length > 3 && !/^(sr|jr|you|offer rollout|tirthcshah1999)$/i.test(a.role))?.role || cleanJobRole(appCluster[0].role, appCluster[0].latestSubject, appCluster[0].notes);
       appCluster.sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
       const latest = appCluster[0];
       const rawMsgIds = [...new Set(cluster.flatMap((c) => c.msgIds))];
@@ -774,6 +889,8 @@ function render() {
     renderOtherEmails(filteredApps);
   } else if (currentView === "followup") {
     renderFollowUp();
+  } else if (currentView === "draftReply") {
+    renderDraftReply(allApps);
   } else if (currentView === "analytics") {
     renderAnalytics(allApps);
   } else if (currentView === "services") {
@@ -1881,6 +1998,563 @@ async function markFollowupDismissed(id) {
   }
 }
 
+// ─── Draft My Reply Tab (On-Demand AI Email Reply Drafter) ─────────────────────
+
+function getRelevantPortfolioHighlights(roleName = "") {
+  const r = (roleName || "").toLowerCase();
+  if (r.includes("data eng") || r.includes("etl") || r.includes("pipeline") || r.includes("warehouse") || r.includes("spark")) {
+    return {
+      title: "Data Engineering & Lakehouse Highlights",
+      summary: "TCS / Equifax GCP credit data fabric (10M+ records/day, 45% match lift); Texas A&M UES energy operations automation across 13 pipelines (50K–500K daily records); Databricks lakehouse, Airflow DAG orchestration, Python & SQL Server optimization."
+    };
+  }
+  if (r.includes("ai") || r.includes("ml") || r.includes("machine learning") || r.includes("prompt") || r.includes("agent") || r.includes("llm")) {
+    return {
+      title: "Agentic AI & LLM Systems Highlights",
+      summary: "Mays Business School LangChain schema RAG & OpenRouter multi-model assistant (Gemini, ChromaDB, guarded text-to-SQL); HCLTech/Verizon 5G agentic NWDAF prototype; TAMU Datathon 2025 1st place winner; DataCamp AI Engineer Associate certified."
+    };
+  }
+  if (r.includes("analyst") || r.includes("business") || r.includes("product") || r.includes("bi") || r.includes("intelligence")) {
+    return {
+      title: "Business Analysis & Product Delivery Highlights",
+      summary: "Mays Flex Online founding engineer (cut reporting ~95%, saving 100+ staff hrs/yr); PMC Retail Oracle Xstore POS modernization (Scrum, UML, user stories, UAT); BlackTieCars 0-to-1 platform ($10K+ revenue, 3x growth); PSM I certified."
+    };
+  }
+  return {
+    title: "Data & AI Engineering Profile Match",
+    summary: "Texas A&M M.S. MIS (GPA 3.90, May 2026); Equifax cloud migration & data fabric at TCS (10M+ records/day); Mays Business School AI platform founding engineer; production Python, SQL, Databricks, LangChain, and cloud platforms."
+  };
+}
+
+function generateLocalSmartDraft(app, intent = "interest", extraContext = "") {
+  const comp = app.company || "the company";
+  const role = app.role || "this position";
+  const sender = (app.latestFrom || "").split("<")[0].replace(/"/g, "").trim() || "Hiring Team";
+  const firstName = sender.split(" ")[0] || "Hiring Manager";
+  const highlights = getRelevantPortfolioHighlights(role).summary;
+
+  if (intent === "interview") {
+    return `Subject: Re: ${app.latestSubject || `Interview Invitation - ${role} at ${comp}`}
+
+Dear ${firstName},
+
+Thank you very much for reaching out and for the invitation to speak regarding the ${role} position at ${comp}. I would be delighted to connect and discuss how my background in data engineering, analytics, and practical AI systems can contribute to your team.
+
+I am available for a conversation at the following times (Central Time):
+- Tuesday & Thursday: 9:00 AM – 1:00 PM or 2:00 PM – 5:00 PM CT
+- Wednesday & Friday: 10:00 AM – 3:00 PM CT
+
+If any of these windows work for your schedule, please let me know, or feel free to share a calendar link and I will gladly select an open slot. 
+
+I look forward to our conversation!
+
+Warm regards,
+
+Tirth Shah
+Data and AI Engineer
+Dallas, Texas | (979) 635-2045
+tirth.shah@tamu.edu | linkedin.com/in/tirth-chirayu-shah | github.com/Tirth-1999`;
+  }
+
+  if (intent === "questions") {
+    return `Subject: Re: ${app.latestSubject || `${role} Opportunity at ${comp}`}
+
+Hi ${firstName},
+
+Thank you for contacting me regarding the ${role} opportunity at ${comp}. The position sounds like an exciting opportunity that aligns closely with my experience in data engineering and scalable AI systems.
+
+Before we proceed to an introductory call, I would love to clarify a couple of quick details:
+1. What are the primary core technologies and data stack that the team is currently working with (e.g., cloud platforms, orchestration, or modern data architectures)?
+2. What are the key near-term initiatives or deliverables the team is looking for this role to own?
+
+I have attached my resume and portfolio (https://www.tirthcshah.me/) for your reference, and I look forward to your thoughts.
+
+Best regards,
+
+Tirth Shah
+Data and AI Engineer
+Dallas, Texas | (979) 635-2045
+tirth.shah@tamu.edu | linkedin.com/in/tirth-chirayu-shah | github.com/Tirth-1999`;
+  }
+
+  if (intent === "followup") {
+    return `Subject: Following up: ${role} application - Tirth Shah
+
+Hi ${firstName},
+
+I hope you are having a productive week.
+
+I am writing to follow up on my application and our previous correspondence regarding the ${role} position at ${comp}. I remain very enthusiastic about the opportunity to bring my experience in building reliable data platforms and AI systems (${highlights}) to ${comp}.
+
+Please let me know if there are any additional details or work samples I can provide to support your review. I look forward to hearing about the next steps in the process.
+
+Thank you again for your time and consideration!
+
+Sincerely,
+
+Tirth Shah
+Data and AI Engineer
+Dallas, Texas | (979) 635-2045
+tirth.shah@tamu.edu | linkedin.com/in/tirth-chirayu-shah | github.com/Tirth-1999`;
+  }
+
+  if (intent === "decline") {
+    return `Subject: Re: ${app.latestSubject || `Opportunity at ${comp}`}
+
+Dear ${firstName},
+
+Thank you very much for reaching out and considering me for the ${role} opportunity at ${comp}.
+
+While I appreciate your interest in my background, I am currently focusing on opportunities that align specifically with my current trajectory in senior data platforms and agentic AI systems, so I will have to respectfully decline at this time.
+
+I would love to stay connected on LinkedIn (https://www.linkedin.com/in/tirth-chirayu-shah/) for potential future collaborations as things evolve. Thank you again for your time and professional outreach.
+
+Best regards,
+
+Tirth Shah
+Data and AI Engineer
+Dallas, Texas | (979) 635-2045
+tirth.shah@tamu.edu`;
+  }
+
+  // Default: interest
+  return `Subject: Re: ${app.latestSubject || `${role} Opportunity at ${comp}`}
+
+Hi ${firstName},
+
+Thank you for reaching out regarding the ${role} opening at ${comp}. I am very interested in learning more about the role and your team's objectives.
+
+By way of brief introduction, I recently completed my M.S. in Management Information Systems from Texas A&M University (GPA 3.90/4.00) following three years as a Data Engineer on the Equifax credit engagement at TCS. My core focus is building production-grade data pipelines, analytics warehouses, and practical AI systems—such as converting 60+ legacy scripts to modern Python/Airflow at TCS (cutting runtime ~80%), automating Texas A&M campus energy operations across 13 workflows, and founding the Mays Flex Online AI analytics platform.
+
+Given this background, I would welcome the chance to connect for a brief 15-minute conversation to learn more about ${comp}'s priorities and discuss how I can add immediate value. Please let me know what times might work best for you this week.
+
+Thank you again, and I look forward to speaking!
+
+Warm regards,
+
+Tirth Shah
+Data and AI Engineer
+Dallas, Texas | (979) 635-2045
+tirth.shah@tamu.edu | linkedin.com/in/tirth-chirayu-shah | github.com/Tirth-1999`;
+}
+
+function renderDraftReply(applications) {
+  const shell = byId("draftReply");
+  if (!shell) return;
+
+  const currentSearch = (state.draftReplySearch || "").trim().toLowerCase();
+  const currentFilter = state.draftReplyFilter || "reply_needed";
+  const currentIntent = state.draftReplyIntent || "interest";
+
+  // Filter application candidates
+  let candidateApps = applications.filter((a) => {
+    const s = normalizeStatus(a.effectiveStatus || a.status);
+    if (s === "not_related") return false;
+    if (currentFilter === "reply_needed") return s === "reply_needed";
+    if (currentFilter === "starred") return state.starredIds.has(a.id);
+    return true; // "all_active"
+  });
+
+  if (currentSearch) {
+    candidateApps = candidateApps.filter((a) => {
+      const c = (a.company || "").toLowerCase();
+      const r = (a.role || "").toLowerCase();
+      const s = (a.latestSubject || "").toLowerCase();
+      const f = (a.latestFrom || "").toLowerCase();
+      return c.includes(currentSearch) || r.includes(currentSearch) || s.includes(currentSearch) || f.includes(currentSearch);
+    });
+  }
+
+  // Sort: newest activity first
+  candidateApps.sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
+
+  // Ensure an application is selected
+  if (!state.draftReplySelectedId && candidateApps.length > 0) {
+    state.draftReplySelectedId = candidateApps[0].id;
+  }
+
+  const selectedApp = applications.find((a) => a.id === state.draftReplySelectedId) || candidateApps[0] || null;
+
+  // Counts for filter pills
+  const replyNeededTotal = applications.filter((a) => normalizeStatus(a.effectiveStatus || a.status) === "reply_needed").length;
+  const allActiveTotal = applications.filter((a) => normalizeStatus(a.effectiveStatus || a.status) !== "not_related").length;
+  const starredTotal = state.starredIds.size;
+
+  const highlights = selectedApp ? getRelevantPortfolioHighlights(selectedApp.role) : null;
+  const activeModelId = getSelectedModel();
+  const activeModel = AI_MODELS.find((m) => m.id === activeModelId) || AI_MODELS[0];
+
+  shell.innerHTML = `
+    <!-- Header Card -->
+    <div class="draft-reply-header-card">
+      <div class="draft-reply-title">
+        <h2>
+          <span>Draft My Reply</span>
+          <span class="pill pill-done" style="font-size:11px;background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;">
+            AI Engine: ${escapeHtml(activeModel.name)}
+          </span>
+        </h2>
+        <p>AI-assisted recruiter email replies grounded in your verified portfolio, job history, and specific thread memory.</p>
+      </div>
+      <div class="draft-reply-controls">
+        <input type="search" id="draftReplySearchInput" class="draft-reply-search-input" placeholder="Search company, role, sender..." value="${escapeHtml(state.draftReplySearch || "")}" />
+        <div class="draft-reply-filter-pills">
+          <button type="button" class="draft-reply-pill-btn ${currentFilter === "reply_needed" ? "active" : ""}" data-filter="reply_needed">
+            Reply Needed (${replyNeededTotal})
+          </button>
+          <button type="button" class="draft-reply-pill-btn ${currentFilter === "all_active" ? "active" : ""}" data-filter="all_active">
+            All Pipeline (${allActiveTotal})
+          </button>
+          <button type="button" class="draft-reply-pill-btn ${currentFilter === "starred" ? "active" : ""}" data-filter="starred">
+            Starred (${starredTotal})
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2-Column Workbench Layout -->
+    <div class="draft-reply-layout">
+      <!-- Left Column: Recruiter Communication List -->
+      <div class="draft-reply-list-pane">
+        <div class="draft-reply-list-header">
+          <span>Awaiting Response (${candidateApps.length})</span>
+          <span style="font-size:11px;color:var(--muted);text-transform:none;font-weight:normal;">Click to select</span>
+        </div>
+        <div class="draft-reply-list-items">
+          ${
+            candidateApps.length === 0
+              ? `<div style="padding:32px 16px;text-align:center;color:var(--muted);font-size:13px;">No applications match the filter.</div>`
+              : candidateApps
+                  .map((app) => {
+                    const isSelected = selectedApp && selectedApp.id === app.id;
+                    const st = normalizeStatus(app.effectiveStatus || app.status);
+                    const daysAgo = app.lastActivityAt ? Math.floor((Date.now() - new Date(app.lastActivityAt).getTime()) / (1000 * 60 * 60 * 24)) : 0;
+                    const cleanComp = escapeHtml(app.company || "Unknown");
+                    const cleanRole = escapeHtml(app.role || "General");
+                    const cleanFrom = escapeHtml((app.latestFrom || "Unknown sender").replace(/<.*?>/, "").trim());
+                    const cleanSubj = escapeHtml(app.latestSubject || "No Subject");
+                    const gmailUrl = getGmailUrl(app);
+
+                    return `
+                    <div class="draft-reply-item-card ${isSelected ? "active" : ""}" data-id="${app.id}">
+                      <div class="draft-reply-item-top">
+                        <span class="draft-reply-item-company">${cleanComp}</span>
+                        <span class="pill status-pill ${statusClass(st)}" style="font-size:10px;padding:2px 6px;">${escapeHtml(labelForStatus(st))}</span>
+                      </div>
+                      <div class="draft-reply-item-role">${cleanRole}</div>
+                      <div class="draft-reply-item-sender" title="${escapeHtml(app.latestFrom || "")}">From: ${cleanFrom}</div>
+                      <div class="draft-reply-item-subject" title="${cleanSubj}">"${cleanSubj}"</div>
+                      <div class="draft-reply-item-meta">
+                        <span class="draft-reply-item-date">${daysAgo > 0 ? `${daysAgo}d ago` : "Today"}</span>
+                        <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" class="draft-reply-gmail-link" style="padding:2px 6px;font-size:11px;" onclick="event.stopPropagation();">
+                          Gmail ↗
+                        </a>
+                      </div>
+                    </div>
+                  `;
+                  })
+                  .join("")
+          }
+        </div>
+      </div>
+
+      <!-- Right Column: Reply Drafting Workbench -->
+      <div class="draft-reply-workbench">
+        ${
+          !selectedApp
+            ? `
+          <div class="draft-reply-empty-state">
+            <div class="draft-reply-empty-icon">✉️</div>
+            <h3>Select a Conversation to Draft a Reply</h3>
+            <p>Choose any recruiter outreach or thread from the left column to preview the thread and generate an AI-tailored reply.</p>
+          </div>
+        `
+            : `
+          <!-- Target Application Context Header Card -->
+          <div class="draft-reply-job-card">
+            <div class="draft-reply-job-info">
+              <div class="draft-reply-job-title">${escapeHtml(selectedApp.company)} — <span style="font-weight:normal;color:#475569;">${escapeHtml(selectedApp.role)}</span></div>
+              <div class="draft-reply-job-sub">
+                Sender: <strong>${escapeHtml(selectedApp.latestFrom || "Unknown")}</strong> &bull; Subject: "${escapeHtml(selectedApp.latestSubject || "No Subject")}"
+              </div>
+            </div>
+            <a href="${getGmailUrl(selectedApp)}" target="_blank" rel="noopener noreferrer" class="draft-reply-gmail-link" title="Open the exact thread in Gmail">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Open Thread in Gmail
+            </a>
+          </div>
+
+          <!-- Dynamic Portfolio Match Card -->
+          ${
+            highlights
+              ? `
+            <div class="draft-reply-highlights-box">
+              <div class="draft-reply-highlights-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Portfolio Grounding Match: ${escapeHtml(highlights.title)}</span>
+              </div>
+              <p class="draft-reply-highlights-text">${escapeHtml(highlights.summary)}</p>
+            </div>
+          `
+              : ""
+          }
+
+          <!-- Reply Intent Selector -->
+          <div class="draft-reply-intent-wrap">
+            <label class="draft-reply-section-label">Select Reply Goal &amp; Tone:</label>
+            <div class="draft-reply-intent-pills">
+              <button type="button" class="draft-reply-intent-btn ${currentIntent === "interest" ? "active" : ""}" data-intent="interest">
+                ✨ Express Interest &amp; Connect
+              </button>
+              <button type="button" class="draft-reply-intent-btn ${currentIntent === "interview" ? "active" : ""}" data-intent="interview">
+                📅 Accept Interview &amp; Provide Availability
+              </button>
+              <button type="button" class="draft-reply-intent-btn ${currentIntent === "questions" ? "active" : ""}" data-intent="questions">
+                ❓ Ask Clarifying Questions
+              </button>
+              <button type="button" class="draft-reply-intent-btn ${currentIntent === "followup" ? "active" : ""}" data-intent="followup">
+                💼 Follow-Up on Status
+              </button>
+              <button type="button" class="draft-reply-intent-btn ${currentIntent === "decline" ? "active" : ""}" data-intent="decline">
+                🙏 Respectfully Decline
+              </button>
+            </div>
+          </div>
+
+          <!-- Optional Context / Message Paste Area -->
+          <div class="draft-reply-context-wrap">
+            <label class="draft-reply-section-label" for="draftReplyExtraContextInput">
+              Paste Recruiter Message or Additional Notes (Optional):
+            </label>
+            <textarea id="draftReplyExtraContextInput" class="draft-reply-context-textarea" placeholder="Paste the recruiter's specific message, questions asked, or details like preferred time slots to include in the draft...">${escapeHtml(state.draftReplyExtraContext || "")}</textarea>
+          </div>
+
+          <!-- Generate Action Button -->
+          <div>
+            <button type="button" id="btnGenerateReplyDraft" class="draft-reply-generate-btn" ${state.draftReplyLoading ? "disabled" : ""}>
+              ${
+                state.draftReplyLoading
+                  ? `<span class="followup-spinner" style="width:16px;height:16px;border-width:2px;"></span> Generating Draft with ${escapeHtml(activeModel.name)}...`
+                  : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Generate Reply Draft`
+              }
+            </button>
+          </div>
+
+          <!-- Generated Reply Output Box -->
+          ${
+            state.draftReplyOutput
+              ? `
+            <div class="draft-reply-output-wrap">
+              <div class="draft-reply-output-header">
+                <span class="draft-reply-section-label" style="color:#1d4ed8;">
+                  ✨ Generated Email Reply (Ready to Send):
+                </span>
+                <div class="draft-reply-actions-row">
+                  <button type="button" id="btnCopyReplyDraft" class="btn-draft-copy ${state.draftReplyCopied ? "copied" : ""}">
+                    ${
+                      state.draftReplyCopied
+                        ? `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied to Clipboard!`
+                        : `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Draft`
+                    }
+                  </button>
+                  <a href="${getGmailUrl(selectedApp)}" target="_blank" rel="noopener noreferrer" class="btn-draft-gmail">
+                    Open in Gmail &amp; Send ↗
+                  </a>
+                  <button type="button" id="btnRegenerateDraft" class="btn-draft-regenerate" title="Regenerate draft">
+                    ↻ Regenerate
+                  </button>
+                </div>
+              </div>
+              <textarea id="draftReplyOutputTextarea" class="draft-reply-output-textarea" rows="12">${escapeHtml(state.draftReplyOutput)}</textarea>
+            </div>
+          `
+              : ""
+          }
+        `
+        }
+      </div>
+    </div>
+  `;
+
+  attachDraftReplyListeners(applications);
+}
+
+function attachDraftReplyListeners(applications) {
+  // Search input
+  const searchInput = byId("draftReplySearchInput");
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      state.draftReplySearch = e.target.value;
+      renderDraftReply(applications);
+      const newSearchInput = byId("draftReplySearchInput");
+      if (newSearchInput) {
+        newSearchInput.focus();
+        newSearchInput.setSelectionRange(newSearchInput.value.length, newSearchInput.value.length);
+      }
+    });
+  }
+
+  // Filter pills
+  document.querySelectorAll(".draft-reply-pill-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state.draftReplyFilter = btn.dataset.filter;
+      state.draftReplySelectedId = null; // reset to top match in filtered list
+      renderDraftReply(applications);
+    });
+  });
+
+  // Thread item selection
+  document.querySelectorAll(".draft-reply-item-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const id = card.dataset.id;
+      if (id && id !== state.draftReplySelectedId) {
+        state.draftReplySelectedId = id;
+        state.draftReplyOutput = "";
+        state.draftReplyCopied = false;
+        renderDraftReply(applications);
+      }
+    });
+  });
+
+  // Intent selector pills
+  document.querySelectorAll(".draft-reply-intent-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state.draftReplyIntent = btn.dataset.intent;
+      renderDraftReply(applications);
+    });
+  });
+
+  // Extra context textarea change listener
+  const contextInput = byId("draftReplyExtraContextInput");
+  if (contextInput) {
+    contextInput.addEventListener("input", (e) => {
+      state.draftReplyExtraContext = e.target.value;
+    });
+  }
+
+  // Output textarea live edit listener
+  const outputTextarea = byId("draftReplyOutputTextarea");
+  if (outputTextarea) {
+    outputTextarea.addEventListener("input", (e) => {
+      state.draftReplyOutput = e.target.value;
+    });
+  }
+
+  // Copy Draft Button
+  const btnCopy = byId("btnCopyReplyDraft");
+  if (btnCopy && outputTextarea) {
+    btnCopy.addEventListener("click", () => {
+      const textToCopy = outputTextarea.value;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        state.draftReplyCopied = true;
+        btnCopy.classList.add("copied");
+        btnCopy.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied to Clipboard!`;
+        setTimeout(() => {
+          state.draftReplyCopied = false;
+          if (btnCopy) {
+            btnCopy.classList.remove("copied");
+            btnCopy.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Draft`;
+          }
+        }, 2500);
+      });
+    });
+  }
+
+  // Generate Draft Button
+  const btnGenerate = byId("btnGenerateReplyDraft");
+  const btnRegenerate = byId("btnRegenerateDraft");
+  const runGeneration = async () => {
+    const selectedApp = applications.find((a) => a.id === state.draftReplySelectedId);
+    if (!selectedApp) return;
+
+    state.draftReplyLoading = true;
+    state.draftReplyCopied = false;
+    renderDraftReply(applications);
+
+    const activeModelId = getSelectedModel();
+    const customOrKey = getOpenRouterKey();
+
+    try {
+      const reqHeaders = { "Content-Type": "application/json" };
+      if (customOrKey) {
+        reqHeaders["Authorization"] = `Bearer ${customOrKey}`;
+      }
+
+      // 1. Try serverless /api/generate-reply
+      const response = await fetch("/api/generate-reply", {
+        method: "POST",
+        headers: reqHeaders,
+        body: JSON.stringify({
+          app: selectedApp,
+          intent: state.draftReplyIntent || "interest",
+          extraContext: state.draftReplyExtraContext || "",
+          model: activeModelId
+        })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.draft) {
+          state.draftReplyOutput = data.draft;
+          state.draftReplyLoading = false;
+          renderDraftReply(applications);
+          return;
+        }
+      }
+
+      // 2. Direct browser OpenRouter fallback if API route not running
+      if (customOrKey) {
+        const directRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${customOrKey}`,
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
+            "X-Title": "Job Tracker Draft My Reply"
+          },
+          body: JSON.stringify({
+            model: activeModelId,
+            messages: [
+              {
+                role: "system",
+                content: `You are an expert executive talent agent for Tirth Shah. Write an authentic, polite, professional email reply from Tirth Shah ("I") to a recruiter. Keep it concise (2-4 paragraphs). Ground in his verified background (Texas A&M MS-MIS, Equifax credit data at TCS, Mays Business School analytics platform, UES energy automation).`
+              },
+              {
+                role: "user",
+                content: `Company: ${selectedApp.company}\nRole: ${selectedApp.role}\nRecruiter: ${selectedApp.latestFrom}\nSubject: ${selectedApp.latestSubject}\nIntent: ${state.draftReplyIntent}\nExtra Notes: ${state.draftReplyExtraContext || "None"}\nWrite the email reply now.`
+              }
+            ],
+            temperature: 0.4
+          })
+        });
+
+        if (directRes.ok) {
+          const directJson = await directRes.json();
+          const draft = directJson.choices?.[0]?.message?.content;
+          if (draft) {
+            state.draftReplyOutput = draft.trim();
+            state.draftReplyLoading = false;
+            renderDraftReply(applications);
+            return;
+          }
+        }
+      }
+
+      // 3. Smart local template generator fallback
+      state.draftReplyOutput = generateLocalSmartDraft(selectedApp, state.draftReplyIntent || "interest", state.draftReplyExtraContext || "");
+    } catch (err) {
+      console.warn("AI generation fell back to smart local template:", err.message);
+      state.draftReplyOutput = generateLocalSmartDraft(selectedApp, state.draftReplyIntent || "interest", state.draftReplyExtraContext || "");
+    } finally {
+      state.draftReplyLoading = false;
+      renderDraftReply(applications);
+    }
+  };
+
+  if (btnGenerate) btnGenerate.addEventListener("click", runGeneration);
+  if (btnRegenerate) btnRegenerate.addEventListener("click", runGeneration);
+}
+
 function renderPaginationBar(totalItems, currentPage, pageSize, prefix, pos = "bottom") {
   if (totalItems === 0) return "";
   const isAll = pageSize === "all";
@@ -2450,7 +3124,9 @@ function renderAnalytics(applications) {
   });
   const isSelectedToday = currentSelectedDate === getTodayDateStr();
 
-  analyticsEl.innerHTML = `
+    const totalPipelineEmails = applications.reduce((sum, a) => sum + (a.gmailMessageIds?.length || 1), 0);
+
+    analyticsEl.innerHTML = `
     <div class="analytics-header-card">
       <div class="analytics-title">
         <h2>${formattedSelectedDate} ${isSelectedToday ? '<span class="pill pill-done" style="font-size:12px;vertical-align:middle;margin-left:6px;">Today</span>' : ''}</h2>
@@ -2477,29 +3153,35 @@ function renderAnalytics(applications) {
     </div>
 
     <div class="analytics-kpi-grid">
-      <div class="kpi-card kpi-total">
-        <strong>${totalEmailsReceived}</strong>
-        <span>Total Emails Received</span>
-      </div>
       <div class="kpi-card kpi-applied">
-        <strong>${appliedCount}</strong>
-        <span>Applications Applied</span>
+        <strong>${overallCounts.applied || 0}</strong>
+        <span>Applied</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">${appliedCount > 0 ? `<span style="color:var(--applied);font-weight:600;">+${appliedCount}</span> on date` : `0 on selected date`}</div>
       </div>
       <div class="kpi-card kpi-reply">
-        <strong>${replyNeededCount}</strong>
-        <span>Recruiter Outreach / Inquiries</span>
+        <strong>${overallCounts.reply_needed || 0}</strong>
+        <span>Reply Needed</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">${replyNeededCount > 0 ? `<span style="color:var(--reply);font-weight:600;">+${replyNeededCount}</span> on date` : `0 on selected date`}</div>
       </div>
       <div class="kpi-card kpi-interviewed">
-        <strong>${interviewCount}</strong>
-        <span>Interviews & Assessments</span>
+        <strong>${overallCounts.interviewed || 0}</strong>
+        <span>Interview / Assessment</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">${interviewCount > 0 ? `<span style="color:var(--interviewed);font-weight:600;">+${interviewCount}</span> on date` : `0 on selected date`}</div>
       </div>
       <div class="kpi-card kpi-offered">
-        <strong>${offeredCount}</strong>
-        <span>Offers Received</span>
+        <strong>${overallCounts.offered || 0}</strong>
+        <span>Offered</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">${offeredCount > 0 ? `<span style="color:var(--offered);font-weight:600;">+${offeredCount}</span> on date` : `0 on selected date`}</div>
       </div>
       <div class="kpi-card kpi-rejected">
-        <strong>${rejectedCount}</strong>
-        <span>Rejections</span>
+        <strong>${overallCounts.rejected || 0}</strong>
+        <span>Rejected</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">${rejectedCount > 0 ? `<span style="color:var(--danger);font-weight:600;">+${rejectedCount}</span> on date` : `0 on selected date`}</div>
+      </div>
+      <div class="kpi-card kpi-total" style="border-top: 3px solid #64748b;">
+        <strong>${overallCounts.not_related || 0}</strong>
+        <span>Other Emails</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">Filtered non-pipeline</div>
       </div>
     </div>
 
