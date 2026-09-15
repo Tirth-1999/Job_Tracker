@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-09-15T21:47:11.536Z",
+  "applyJson": true,
+  "applySupabase": true,
+  "proposals": 12,
+  "proposalsByStatus": {
+    "applied": 6,
+    "rejected": 4,
+    "reply_needed": 2
+  },
+  "proposalExamples": [
+    {
+      "id": "sarah-valentin-from-red-bull-distribution-company-taking-the-time-to-apply-for-the-nbsp",
+      "oldCompany": "Sarah Valentin From Red Bull Distribution Company",
+      "newCompany": "Red Bull Distribution Company",
+      "role": "Business Analyst",
+      "status": "applied",
+      "subject": "Your​ Business Analyst application",
+      "from": "Sarah Valentin from Red Bull Distribution Company <notifications@career.redbull.com>"
+    },
+    {
+      "id": "kristen-gabrielli-from-wavestone-further-consideration-at-this-time-if-interested-we-will-keep-your-resume-on-f",
+      "oldCompany": "Kristen Gabrielli From Wavestone",
+      "newCompany": "Wavestone",
+      "role": "Further Consideration At This Time. If Interested, We Will Keep Your Resume On F",
+      "status": "rejected",
+      "subject": "Wavestone | Application Update",
+      "from": "Kristen Gabrielli from Wavestone <notifications@smartrecruiters.com>"
+    },
+    {
+      "id": "soumya-kalra-from-city-and-county-of-san-francisco-completing-the-application-for-the-enablement-engineer",
+      "oldCompany": "Soumya Kalra From City And County Of San Francisco",
+      "newCompany": "City And County Of San Francisco",
+      "role": "Completing The Application For The Enablement Engineer",
+      "status": "reply_needed",
+      "subject": "DataSF Principal Enablement Engineer supplemental questionnaire follow up",
+      "from": "Soumya Kalra from City and County of San Francisco <notifications@smartrecruiters.com>"
+    },
+    {
+      "id": "howard-corley-from-servicenow-your-application",
+      "oldCompany": "Howard Corley From Servicenow",
+      "newCompany": "Servicenow",
+      "role": "Senior Staff Data Platform Engineer - Apache Iceberg - Apache Spark",
+      "status": "applied",
+      "subject": "Thank You for Your Application",
+      "from": "Howard Corley from ServiceNow <notifications@smartrecruiters.com>"
+    },
+    {
+      "id": "colleague-zone-your-interest",
+      "oldCompany": "Colleague Zone",
+      "newCompany": "CVS Health",
+      "role": "Data Engineer",
+      "status": "rejected",
+      "subject": "Thank you for your interest in CVS Health",
+      "from": "Colleague Zone <cvshealth@myworkday.com>"
+    },
+    {
+      "id": "city-and-county-of-san-francisco-general-application",
+      "oldCompany": "City And County Of San Francisco",
+      "newCompany": "City and County of San Francisco",
+      "role": "Enablement Engineer",
+      "status": "reply_needed",
+      "subject": "supplemental questionnaire (reminder to complete)",
+      "from": "Soumya Kalra from City and County of San Francisco <notifications@smartrecruiters.com>"
+    },
+    {
+      "id": "pilot-company-sr-engineer-data-engineering",
+      "oldCompany": "Pilot Company",
+      "newCompany": "Pilot Company (SSC)",
+      "role": "Sr Engineer, Data Engineering",
+      "status": "applied",
+      "subject": "Thanks for Your Interest in ​Sr Engineer, Data Engineering​ at Pilot Company (SSC)​",
+      "from": "\"Joel Algeri from Pilot Company (SSC)\" <notifications@smartrecruiters.com>"
+    },
+    {
+      "id": "captech-data-analyst",
+      "oldCompany": "Captech",
+      "newCompany": "CapTech Consulting",
+      "role": "Data Analyst",
+      "status": "rejected",
+      "subject": "Thank you for your interest in CapTech",
+      "from": "Laura Massa from CapTech Consulting <notifications@captechcareers.com>"
+    },
+    {
+      "id": "my-submitting-your-application-for-the-position-of-data-engineer",
+      "oldCompany": "My",
+      "newCompany": "The Hartford",
+      "role": "Submitting Your Application For The Position Of Data Engineer",
+      "status": "rejected",
+      "subject": "The Hartford: Data Engineer, R2625811",
+      "from": "My Workday <myworkday@thehartford.com>"
+    },
+    {
+      "id": "msg-19fd2d7b04afe135",
+      "oldCompany": "Joshua Jacobs from Mattel",
+      "newCompany": "Mattel",
+      "role": "Data Engineer",
+      "status": "applied",
+      "subject": "Thank you for your interest in Mattel",
+      "from": "Joshua Jacobs from Mattel <notifications@smartrecruiters.com>"
+    },
+    {
+      "id": "msg-19f959427efadb4c",
+      "oldCompany": "Joel Algeri from Pilot Company",
+      "newCompany": "Pilot Company",
+      "role": "General Application",
+      "status": "applied",
+      "subject": "Thanks for Your Interest in ​Engineer II, Analytics​ at Pilot Company​",
+      "from": "Joel Algeri from Pilot Company <notifications@smartrecruiters.com>"
+    },
+    {
+      "id": "msg-19f8f61310159041",
+      "oldCompany": "Colleague Zone",
+      "newCompany": "CVS Health",
+      "role": "Data Engineer",
+      "status": "applied",
+      "subject": "Your application with Signify Health has been received!",
+      "from": "Colleague Zone <cvshealth@myworkday.com>"
+    }
+  ]
+}

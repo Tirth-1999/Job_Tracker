@@ -1,0 +1,108 @@
+[
+  {
+    "name": "ATC offer keeps business analyst display fields",
+    "rows": [
+      {
+        "id": "atc-this-position-we-want-to-ensure-alignment-regarding-the-location-requirements-uested",
+        "company": "ATC",
+        "role": "Senior Data Engineer",
+        "status": "reply_needed",
+        "lastActivityAt": "2026-09-11T13:00:00.000Z",
+        "latestSubject": "Sr. Data Engineer Opportunity at ATC – Relocation Confirmation Requested by September 11",
+        "latestFrom": "ATC <careers@atc.xyz>",
+        "gmailThreadId": "thread-sde-location",
+        "gmailMessageIds": ["thread-sde-location"],
+        "notes": "Please confirm relocation requirements for the Sr. Data Engineer role at ATC."
+      },
+      {
+        "id": "atc-general-application",
+        "company": "ATC",
+        "role": "Business Analyst",
+        "status": "offered",
+        "lastActivityAt": "2026-08-28T14:19:24.000Z",
+        "latestSubject": "Kirstyn Thompson sent you ATC Offer Letter - Tirth Chirayu Shah BA via PandaDoc",
+        "latestFrom": "Kirstyn Thompson via PandaDoc <docs@email.pandadoc.net>",
+        "gmailThreadId": "thread-ba-offer",
+        "gmailMessageIds": ["thread-ba-offer"],
+        "notes": "ATC Offer Letter - Tirth Chirayu Shah BA"
+      },
+      {
+        "id": "atc-data-engineer",
+        "company": "ATC",
+        "role": "Senior Data Engineer",
+        "status": "interviewed",
+        "lastActivityAt": "2026-08-11T23:26:13.000Z",
+        "latestSubject": "ATC- VIDEO SCREENING",
+        "latestFrom": "Shakthi Srinithi Sivadoss <shakthi@atc.xyz>",
+        "gmailThreadId": "thread-sde-video",
+        "gmailMessageIds": ["thread-sde-video"],
+        "notes": "ATC Data Engineering Journey: Roles & Skills"
+      }
+    ],
+    "expected": [
+      {
+        "id": "atc-general-application",
+        "company": "ATC",
+        "role": "Business Analyst",
+        "status": "offered",
+        "latestSubject": "Kirstyn Thompson sent you ATC Offer Letter - Tirth Chirayu Shah BA via PandaDoc",
+        "reqId": null
+      },
+      {
+        "id": "atc-this-position-we-want-to-ensure-alignment-regarding-the-location-requirements-uested",
+        "company": "ATC",
+        "role": "Senior Data Engineer",
+        "status": "reply_needed",
+        "latestSubject": "Sr. Data Engineer Opportunity at ATC – Relocation Confirmation Requested by September 11",
+        "reqId": null
+      }
+    ]
+  },
+  {
+    "name": "Same company different explicit roles stay separate",
+    "rows": [
+      {
+        "id": "acme-data-engineer",
+        "company": "Acme",
+        "role": "Data Engineer",
+        "status": "applied",
+        "lastActivityAt": "2026-09-01T10:00:00.000Z",
+        "latestSubject": "Thank you for applying for Data Engineer",
+        "latestFrom": "Acme <jobs@acme.com>",
+        "gmailThreadId": "thread-acme-de",
+        "gmailMessageIds": ["thread-acme-de"],
+        "notes": "We received your application for the Data Engineer position."
+      },
+      {
+        "id": "acme-business-analyst",
+        "company": "Acme",
+        "role": "Business Analyst",
+        "status": "applied",
+        "lastActivityAt": "2026-09-02T10:00:00.000Z",
+        "latestSubject": "Thank you for applying for Business Analyst",
+        "latestFrom": "Acme <jobs@acme.com>",
+        "gmailThreadId": "thread-acme-ba",
+        "gmailMessageIds": ["thread-acme-ba"],
+        "notes": "We received your application for the Business Analyst position."
+      }
+    ],
+    "expected": [
+      {
+        "id": "acme-data-engineer",
+        "company": "Acme",
+        "role": "Data Engineer",
+        "status": "applied",
+        "latestSubject": "Thank you for applying for Data Engineer",
+        "reqId": null
+      },
+      {
+        "id": "acme-business-analyst",
+        "company": "Acme",
+        "role": "Business Analyst",
+        "status": "applied",
+        "latestSubject": "Thank you for applying for Business Analyst",
+        "reqId": null
+      }
+    ]
+  }
+]

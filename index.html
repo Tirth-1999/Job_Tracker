@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Tracker</title>
-    <link rel="stylesheet" href="./styles.css?v=4.0.4" />
+    <link rel="stylesheet" href="./styles.css?v=4.0.5" />
   </head>
   <body>
     <header class="topbar">
@@ -37,6 +37,7 @@
         <button class="tab" type="button" data-view="companies">Companies</button>
         <button class="tab" type="button" data-view="applications">Applications</button>
         <button class="tab tab-starred" type="button" data-view="starred">Starred <span id="starredCountBadge" class="tab-badge" style="display:none;">0</span></button>
+        <button class="tab" type="button" data-view="needsReview">Needs Review</button>
         <button class="tab" type="button" data-view="otherEmails">Other Emails</button>
         <button class="tab tab-followup" type="button" data-view="followup">Follow-Up Needed</button>
         <button class="tab tab-draft-reply" type="button" data-view="draftReply">Draft My Reply</button>
@@ -82,6 +83,10 @@
 
       <section id="starredView" class="view">
         <div id="starred" class="starred-shell"></div>
+      </section>
+
+      <section id="needsReviewView" class="view">
+        <div id="needsReview" class="table-shell"></div>
       </section>
 
       <section id="otherEmailsView" class="view">
@@ -132,6 +137,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="./app.js?v=4.0.4" type="module"></script>
+    <script src="./app.js?v=4.0.5" type="module"></script>
   </body>
 </html>

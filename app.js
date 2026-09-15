@@ -294,6 +294,8 @@ const state = {
   pageSizeCompanies: 50,
   pageOther: 1,
   pageSizeOther: 50,
+  pageReview: 1,
+  pageSizeReview: 50,
   selectedDate: getTodayDateStr(),
   boardSort: "date_desc",
   boardTimeRange: "all",
@@ -479,6 +481,41 @@ function getRoleQuality(app, displayRole) {
   };
 }
 
+function getCompanyQuality(app) {
+  const company = String(app?.company || "").trim();
+  const from = String(app?.latestFrom || "");
+  const subject = String(app?.latestSubject || "");
+  const suspicious = /^(amy from zensearch|jobright|seek|trueup|ziprecruiter|linkedin|noreply|notification|workdaynotification|colleague zone|career|my|general application|tirth shah|other|msg|right\s*alert|unknown company|unknown)$/i.test(company)
+    || /^at\s+/i.test(company)
+    || /\bfrom\b/i.test(company)
+    || /^(workday|myworkday|greenhouse|lever|smartrecruiters|ashby|paylocity|paycom)$/i.test(company);
+  const platformSender = /jobright|ziprecruiter|zensearch|linkedin|myworkday|greenhouse|lever|smartrecruiters|ashby|paylocity|paycom/i.test(from);
+  const selfAuthored = /Tirth Shah <|tirthcshah1999@gmail\.com/i.test(from);
+  return {
+    needsReview: suspicious || (platformSender && /general application|unknown/i.test(company)) || selfAuthored,
+    reason: suspicious
+      ? "Company may be a recruiter, platform, sender alias, or generic placeholder"
+      : selfAuthored
+        ? "Self-authored outreach needs company confirmation"
+        : "Company source needs confirmation"
+  };
+}
+
+function getReviewReasons(app) {
+  const role = cleanJobRole(app.role, app.latestSubject, app.notes);
+  const roleQuality = getRoleQuality(app, role);
+  const companyQuality = getCompanyQuality(app);
+  const status = normalizeStatus(app.effectiveStatus || app.status);
+  const reasons = [];
+  if (roleQuality.needsReview) reasons.push("Role");
+  if (companyQuality.needsReview) reasons.push("Company");
+  if (roleQuality.lowConfidence) reasons.push("Low confidence");
+  if (status === "not_related" && /\b(application|applied|interview|offer|assessment|recruiter|hiring|position)\b/i.test(`${app.latestSubject || ""} ${app.notes || ""}`)) {
+    reasons.push("Possible job email");
+  }
+  return { role, reasons, roleQuality, companyQuality };
+}
+
 function extractRequisitionId(text) {
   if (!text) return null;
   const reqMatch = text.match(/\b(?:req(?:uisition)?|ref|reference|job\s*id|job\s*#|posting\s*#)\b\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
@@ -561,6 +598,7 @@ function deduplicateAndConsolidateApplications(appList) {
       for (const mid of item.msgIds) {
         if (msgMap.has(mid)) {
           targetGroup = msgMap.get(mid);
+          if (hasHardMergeConflict(item, targetGroup)) targetGroup = null;
           break;
         }
       }
@@ -633,9 +671,6 @@ function deduplicateAndConsolidateApplications(appList) {
     }
     if (item.normComp && item.normComp !== "unknown") {
       compRoleMap.set(`${item.normComp}:${item.normRole}`, targetGroup);
-      if (item.normRole !== "general") {
-        compRoleMap.set(`${item.normComp}:general`, targetGroup);
-      }
     }
   }
 
@@ -654,6 +689,7 @@ function resolveClusterStatus(appCluster) {
 
   // 3. If the most recent communication is a formal rejection, the application is rejected
   if (latest.status === "rejected") return "rejected";
+  if (latest.status === "reply_needed") return "reply_needed";
 
   // 4. If any communication is an active interview/assessment, check if a rejection happened after
   const interviewApp = sorted.find((a) => a.status === "interviewed");
@@ -682,6 +718,15 @@ function resolveClusterStatus(appCluster) {
   if (appCluster.some((a) => a.status === "applied")) return "applied";
 
   return latest.status || "not_related";
+}
+
+function hasHardMergeConflict(item, candidateGroup) {
+  return candidateGroup.some((other) => {
+    if (item.reqId && other.reqId && item.reqId.toLowerCase() !== other.reqId.toLowerCase()) return true;
+    if (!item.normComp || !other.normComp || item.normComp !== other.normComp) return false;
+    if (item.normRole === "general" || other.normRole === "general") return false;
+    return item.normRole !== other.normRole;
+  });
 }
 
 function isUsefulDisplayRole(role) {
@@ -937,6 +982,8 @@ function render() {
     renderCompanies(filteredApps);
   } else if (currentView === "applications") {
     renderApplications(filteredApps);
+  } else if (currentView === "needsReview") {
+    renderNeedsReview(filteredApps);
   } else if (currentView === "otherEmails") {
     renderOtherEmails(filteredApps);
   } else if (currentView === "followup") {
@@ -2901,6 +2948,62 @@ function renderApplications(applications) {
   });
 }
 
+function renderNeedsReview(applications) {
+  const rows = applications
+    .map((app) => ({ app, review: getReviewReasons(app) }))
+    .filter(({ review }) => review.reasons.length > 0)
+    .sort((a, b) => {
+      const score = (item) => item.review.reasons.length + (normalizeStatus(item.app.effectiveStatus || item.app.status) === "not_related" ? 1 : 0);
+      const scoreDiff = score(b) - score(a);
+      if (scoreDiff) return scoreDiff;
+      return (b.app.lastActivityAt || "").localeCompare(a.app.lastActivityAt || "");
+    });
+  const pagedRows = paginateArray(rows, state.pageReview, state.pageSizeReview);
+
+  byId("needsReview").innerHTML = rows.length ? `
+    <div style="padding: 14px 18px; border-bottom: 1px solid var(--border); background: #fff7ed; font-size: 13px; color: #9a3412;">
+      <strong>Review Queue:</strong> ${rows.length} cards have weak titles, questionable company extraction, low confidence, or job-like emails parked in Other.
+    </div>
+    ${renderPaginationBar(rows.length, state.pageReview, state.pageSizeReview, "review", "top")}
+    <table>
+      <thead><tr><th>Issue</th><th>Company</th><th>Role</th><th>Status</th><th>Latest Email</th><th>Action</th></tr></thead>
+      <tbody>
+        ${pagedRows.map(({ app, review }) => {
+          const status = normalizeStatus(app.effectiveStatus || app.status);
+          return `
+            <tr>
+              <td>${review.reasons.map((reason) => `<span class="badge-quality ${reason === "Company" ? "badge-low-confidence" : "badge-review"}">${escapeHtml(reason)}</span>`).join(" ")}</td>
+              <td><strong>${escapeHtml(app.company || "Unknown company")}</strong><div style="color:var(--muted);font-size:11px;margin-top:3px;">${escapeHtml(app.latestFrom || "")}</div></td>
+              <td>${escapeHtml(review.role || app.role || "Unknown role")}</td>
+              <td><span class="pill status-pill ${statusClass(status)}">${escapeHtml(labelForStatus(status))}</span></td>
+              <td>${escapeHtml(app.latestSubject || "No subject")}</td>
+              <td>
+                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+                  <a class="btn-gmail-table" href="${getGmailUrl(app)}" target="_blank" rel="noopener noreferrer">Open ↗</a>
+                  <select class="select-move-lane" data-id="${app.id}" data-current="${status}" style="font-size:11px;padding:3px 6px;border-radius:4px;border:1px solid var(--border);" title="Move after review">
+                    <option value="" disabled selected>Move ▾</option>
+                    <option value="applied" ${status === "applied" ? "disabled" : ""}>Applied</option>
+                    <option value="reply_needed" ${status === "reply_needed" ? "disabled" : ""}>Reply Needed</option>
+                    <option value="interviewed" ${status === "interviewed" ? "disabled" : ""}>Interview / Assessment</option>
+                    <option value="offered" ${status === "offered" ? "disabled" : ""}>Offered</option>
+                    <option value="rejected" ${status === "rejected" ? "disabled" : ""}>Rejected</option>
+                    <option value="not_related" ${status === "not_related" ? "disabled" : ""}>Other Emails</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+          `;
+        }).join("")}
+      </tbody>
+    </table>
+    ${renderPaginationBar(rows.length, state.pageReview, state.pageSizeReview, "review", "bottom")}
+  ` : `<div class="empty">No review items found</div>`;
+
+  attachPaginationListeners("review", rows.length, "pageReview", "pageSizeReview", () => {
+    renderNeedsReview(applications);
+  });
+}
+
 function renderOtherEmails(applications) {
   const otherApps = applications.filter((app) => normalizeStatus(app.effectiveStatus || app.status) === "not_related");
   const allRows = [...otherApps].sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
@@ -4855,6 +4958,7 @@ byId("searchInput").addEventListener("input", (event) => {
     state.pageApps = 1;
     state.pageCompanies = 1;
     state.pageOther = 1;
+    state.pageReview = 1;
     render();
   }, 80);
 });
