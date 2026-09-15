@@ -481,7 +481,7 @@ function getRoleQuality(app, displayRole) {
 
 function extractRequisitionId(text) {
   if (!text) return null;
-  const reqMatch = text.match(/\b(?:req(?:uisition)?|ref|reference|job\s*id|job\s*#|posting\s*#)\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
+  const reqMatch = text.match(/\b(?:req(?:uisition)?|ref|reference|job\s*id|job\s*#|posting\s*#)\b\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
   if (reqMatch && !/^(?:uired|uire|uest|uirements|uests)$/i.test(reqMatch[1])) return reqMatch[1];
   const numDash = text.match(/[-–]\s*([0-9]{5,8})\s*(?:[-–\s]|$)/);
   if (numDash) return numDash[1];
@@ -684,6 +684,21 @@ function resolveClusterStatus(appCluster) {
   return latest.status || "not_related";
 }
 
+function isUsefulDisplayRole(role) {
+  const value = String(role || "").trim();
+  if (!value || value.length <= 3) return false;
+  if (/^(general application|unknown role|offer rollout|sr|jr|you|tirthcshah1999)$/i.test(value)) return false;
+  if (/more success view similar jobs|candidate account|job alert|view similar jobs|after careful|further consideration|thank you|&nbsp/i.test(value)) return false;
+  return true;
+}
+
+function pickDisplayRoleApp(appCluster, bestStatus) {
+  const sorted = [...appCluster].sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
+  return sorted.find((a) => a.status === bestStatus && isUsefulDisplayRole(a.role))
+    || sorted.find((a) => isUsefulDisplayRole(a.role))
+    || sorted[0];
+}
+
   // Step 3: Consolidate each group into a single application
   const consolidated = new Array(groups.length);
   for (let g = 0; g < groups.length; g++) {
@@ -693,18 +708,20 @@ function resolveClusterStatus(appCluster) {
     } else {
       const appCluster = cluster.map((c) => c.app);
       const bestStatus = resolveClusterStatus(appCluster);
+      const statusWinner = appCluster.find((a) => a.status === bestStatus);
       const cleanComp = appCluster.find((a) => a.company && a.company.toLowerCase() !== "tirth shah" && a.company.toLowerCase() !== "unknown")?.company || appCluster[0].company;
-      const cleanRole = appCluster.find((a) => a.role && a.role !== "General Application" && a.role !== "Unknown role" && a.role !== "Offer Rollout" && a.role.length > 3 && !/^(sr|jr|you|offer rollout|tirthcshah1999)$/i.test(a.role))?.role || cleanJobRole(appCluster[0].role, appCluster[0].latestSubject, appCluster[0].notes);
+      const bestRoleApp = pickDisplayRoleApp(appCluster, bestStatus) || statusWinner || appCluster[0];
+      const cleanRole = cleanJobRole(bestRoleApp.role, bestRoleApp.latestSubject, bestRoleApp.notes);
       appCluster.sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
       const latest = appCluster[0];
       const rawMsgIds = [...new Set(cluster.flatMap((c) => c.msgIds))];
       const allMsgIds = rawMsgIds.length > 5 ? (latest.gmailThreadId ? [latest.gmailThreadId] : rawMsgIds.slice(0, 2)) : rawMsgIds;
       const manualApp = appCluster.find((a) => a.isManualOverride);
-      const clusterReqId = cluster.find((c) => c.reqId)?.reqId || null;
+      const clusterReqId = cluster.find((c) => c.app.id === bestRoleApp.id && c.reqId)?.reqId || null;
 
       consolidated[g] = {
         ...latest,
-        id: appCluster.find((a) => a.status === bestStatus)?.id || latest.id,
+        id: statusWinner?.id || latest.id,
         company: cleanComp,
         role: cleanRole,
         reqId: clusterReqId,
