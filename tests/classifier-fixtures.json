@@ -68,5 +68,12 @@
     "from": "HR <hr@company.com>",
     "subject": "Offer of Employment - Senior Data Engineer",
     "body": "We are pleased to offer you the position of Senior Data Engineer. Please review the attached offer letter."
+  },
+  {
+    "name": "Conditional offer boilerplate is not offer",
+    "expected": "reply_needed",
+    "from": "Yoh <selfidentify@yoh.com>",
+    "subject": "Next step with Yoh",
+    "body": "Thank you for your interest in our latest opportunities. Help us move your application forward by confirming your contact information. Due to government reporting requirements, a criminal history may have a direct, adverse, and negative relationship potentially resulting in the withdrawal of a conditional offer of employment."
   }
 ]

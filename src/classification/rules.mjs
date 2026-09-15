@@ -25,7 +25,7 @@ const ASSESSMENT_RE = /hackerrank|testgorilla|codility|codesignal|coderbyte|hire
 
 const INTERVIEW_RE = /interview confirmation|interview scheduled|technical screen|phone screen|final round|technical interview|panel interview|video interview|hiring manager screen|zoom interview|google meet|microsoft teams/i;
 
-const HUMAN_REPLY_RE = /please reply|please respond|reply with|send me your|share your (resume|availability|phone|rate)|are you available|available to connect|schedule a call|when are you free|what is your availability|expected compensation|work authorization|visa status|earliest start/i;
+const HUMAN_REPLY_RE = /please reply|please respond|reply with|send me your|share your (resume|availability|phone|rate)|confirm(ing)? your (cell|phone|contact|zip|information)|are you available|available to connect|schedule a call|when are you free|what is your availability|expected compensation|work authorization|visa status|earliest start/i;
 
 const AUTOMATED_SENDER_RE = /noreply|no-reply|donotreply|do-not-reply|notifications?@|mailer@|postmaster@|bounce@|automailer@|jobs-noreply|jobalerts-noreply|@otp\.|@ats\./i;
 

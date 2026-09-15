@@ -34,6 +34,8 @@ export function isBadRole(role, company = "") {
 
 export function improveRole({ currentRole = "", company = "", subject = "", body = "", from = "" } = {}) {
   if (!isBadRole(currentRole, company)) return null;
+  const specialRole = inferSpecialRole({ company, subject, body, from });
+  if (specialRole) return specialRole;
   const context = isApplicationContext({ subject, body, from });
   if (context.blockRoleRepair) return null;
 
@@ -106,6 +108,18 @@ export function cleanRole(role, company = "") {
   if (!KNOWN_ROLE_RE.test(cleaned)) return "";
   if (normalizeKey(cleaned) === normalizeKey(company)) return "";
   return titleCaseRole(cleaned).slice(0, 90);
+}
+
+export function inferSpecialRole({ company = "", subject = "", body = "", from = "" } = {}) {
+  const text = `${company || ""} ${subject || ""} ${body || ""} ${from || ""}`;
+  if (!/\bATC\b|atc\.xyz|atcllc|american technology consulting/i.test(text)) return "";
+  if (/offer letter.*\bBA\b|details required for offer rollout|business analyst|final interview/i.test(text)) {
+    return "Business Analyst";
+  }
+  if (/ATC-\s*VIDEO|video screening|shakthi@atc\.xyz|data engineering|senior data engineer|sr\.?\s*data engineer/i.test(text)) {
+    return "Senior Data Engineer";
+  }
+  return "";
 }
 
 function extractSubjectCandidates(subject) {

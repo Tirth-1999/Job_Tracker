@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-09-15T20:49:06.422Z",
+  "applyJson": true,
+  "proposals": [
+    {
+      "id": "atc-data-engineer",
+      "oldCompany": "ATC",
+      "newCompany": "ATC",
+      "oldRole": "Us To Take This To The Next Stage Please Tell Us A Little About You By Answering",
+      "newRole": "Senior Data Engineer",
+      "status": "interviewed",
+      "subject": "ATC- VIDEO SCREENING",
+      "from": "Shakthi Srinithi Sivadoss <shakthi@atc.xyz>",
+      "reasons": [
+        "ATC sender/domain/thread context",
+        "ATC role inferred from thread context"
+      ]
+    },
+    {
+      "id": "msg-19ff323848f3db13",
+      "oldCompany": "Tirth Shah",
+      "newCompany": "ATC",
+      "oldRole": "Data Engineer",
+      "newRole": "Senior Data Engineer",
+      "status": "interviewed",
+      "subject": "Re: Interview Questions - Response",
+      "from": "Tirth Shah <tirthcshah1999@gmail.com>",
+      "reasons": [
+        "ATC sender/domain/thread context",
+        "ATC role inferred from thread context"
+      ]
+    }
+  ],
+  "proposalsByStatus": {
+    "interviewed": 2
+  }
+}

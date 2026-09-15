@@ -21,15 +21,18 @@ for (const app of after.applications || []) {
   if (!old) continue;
   const statusChanged = old.status !== app.status || old.confidence !== app.confidence || old.aiDecision !== app.aiDecision;
   const roleChanged = old.role !== app.role;
-  if (!statusChanged && !roleChanged) continue;
+  const companyChanged = old.company !== app.company;
+  if (!statusChanged && !roleChanged && !companyChanged) continue;
   changes.push({
     id: app.id,
-    company: app.company,
+    oldCompany: old.company,
+    newCompany: app.company,
     oldRole: old.role,
     newRole: app.role,
     oldStatus: old.status,
     newStatus: app.status,
     roleChanged,
+    companyChanged,
     statusChanged,
     confidence: app.confidence || "high",
     aiDecision: app.aiDecision || app.reason || "deterministic reclassification",
@@ -42,6 +45,7 @@ console.log(JSON.stringify({
   dryRun: DRY_RUN,
   changes: changes.length,
   roleChanges: changes.filter((change) => change.roleChanged).length,
+  companyChanges: changes.filter((change) => change.companyChanged).length,
   statusChanges: changes.filter((change) => change.statusChanged).length,
   byNewStatus: countBy(changes, "newStatus"),
   examples: changes.slice(0, 20)
@@ -73,6 +77,7 @@ for (let i = 0; i < changes.length; i += BATCH_SIZE) {
           ai_classified_at: now,
           ai_confidence: change.aiConfidence
         } : {}),
+        ...(change.companyChanged ? { company: change.newCompany } : {}),
         ...(change.roleChanged ? { role: change.newRole } : {}),
         updated_at: now
       })

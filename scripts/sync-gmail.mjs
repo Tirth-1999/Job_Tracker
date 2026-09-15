@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "node:path";
 import { classifyDeterministic } from "../src/classification/rules.mjs";
-import { cleanRole } from "../src/classification/normalize.mjs";
+import { cleanRole, inferSpecialRole } from "../src/classification/normalize.mjs";
 
 // Auto-load local .env file if present
 if (fsSync.existsSync(".env")) {
@@ -1227,6 +1227,9 @@ function sanitizeCompanyName(company, subject = "", from = "", notes = "") {
 }
 
 function sanitizeRole(role, subject = "", notes = "") {
+  const specialRole = inferSpecialRole({ subject, body: notes });
+  if (specialRole) return specialRole;
+
   // Explicit Normalizations for Offer Rollout / PandaDoc / ATC:
   if (/ATC Offer Letter.*BA\b/i.test(subject) || /ATC Offer Letter.*BA\b/i.test(notes) || /Details Required For Offer Rollout/i.test(subject)) {
     return "Business Analyst";

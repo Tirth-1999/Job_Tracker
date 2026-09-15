@@ -389,6 +389,16 @@ function sanitizeCompanyName(name, subject = "", from = "", notes = "") {
 
 function cleanJobRole(role, subject = "", notes = "") {
   let r = String(role || "").trim();
+  const roleContext = `${subject || ""} ${notes || ""}`;
+
+  if (/\bATC\b|atc\.xyz|atcllc|american technology consulting/i.test(roleContext)) {
+    if (/offer letter.*\bBA\b|details required for offer rollout|business analyst|final interview/i.test(roleContext)) {
+      return "Business Analyst";
+    }
+    if (/ATC-\s*VIDEO|video screening|shakthi@atc\.xyz|data engineering|senior data engineer|sr\.?\s*data engineer/i.test(roleContext)) {
+      return "Senior Data Engineer";
+    }
+  }
 
   // Explicit Normalizations for Offer Rollout / PandaDoc / ATC:
   if (/ATC Offer Letter.*BA\b/i.test(subject) || /ATC Offer Letter.*BA\b/i.test(notes) || /Details Required For Offer Rollout/i.test(subject)) {
