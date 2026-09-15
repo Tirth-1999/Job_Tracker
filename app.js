@@ -3125,11 +3125,54 @@ function renderSankeySVG(applications, currentCategoryFilter, overallCounts) {
     `;
   }).join("");
 
+  function wrapSvgText(value, maxChars, maxLines = 2) {
+    const words = String(value || "").trim().split(/\s+/).filter(Boolean);
+    const lines = [];
+    let current = "";
+
+    for (const word of words) {
+      const next = current ? `${current} ${word}` : word;
+      if (next.length <= maxChars) {
+        current = next;
+      } else {
+        if (current) lines.push(current);
+        current = word.length > maxChars ? `${word.slice(0, Math.max(1, maxChars - 3))}...` : word;
+      }
+
+      if (lines.length === maxLines) break;
+    }
+
+    if (lines.length < maxLines && current) lines.push(current);
+    if (lines.length > maxLines) lines.length = maxLines;
+
+    const consumed = lines.join(" ").replace(/\.\.\.$/, "");
+    const original = words.join(" ");
+    if (original.length > consumed.length && lines.length) {
+      lines[lines.length - 1] = `${lines[lines.length - 1].replace(/\.\.\.$/, "").slice(0, Math.max(1, maxChars - 3)).trim()}...`;
+    }
+
+    return lines.length ? lines : [""];
+  }
+
+  function renderSvgTextLines(lines, className, x, y, lineHeight = 13, attrs = "") {
+    return `
+      <text x="${x}" y="${y}" class="${className}" ${attrs}>
+        ${lines.map((line, idx) => `<tspan x="${x}" dy="${idx === 0 ? 0 : lineHeight}">${escapeHtml(line)}</tspan>`).join("")}
+      </text>
+    `;
+  }
+
   const nodesSvg = nodes.map((n) => {
     const isFiltered = currentCategoryFilter !== "all";
     const isActive = n.cat === currentCategoryFilter || (n.cat === "all" && !isFiltered);
     const nodeClass = isActive ? "active" : (isFiltered && n.cat !== "all" ? "dimmed" : "");
     const offerStyle = n.isOffer ? 'filter="url(#offer-glow)"' : "";
+    const maxChars = Math.max(12, Math.floor((n.w - 28) / 6.2));
+    const titleLines = wrapSvgText(n.title, maxChars, n.h < 70 ? 1 : 2);
+    const subLines = n.h < 76 ? [] : wrapSvgText(n.sub, Math.max(14, Math.floor((n.w - 28) / 5.3)), 2);
+    const titleY = 23;
+    const countY = titleY + (titleLines.length * 13) + 13;
+    const subY = Math.min(n.h - ((subLines.length - 1) * 12) - 10, countY + 17);
     return `
       <g class="sankey-node ${nodeClass}"
          data-category="${n.cat}"
@@ -3139,9 +3182,9 @@ function renderSankeySVG(applications, currentCategoryFilter, overallCounts) {
          ${offerStyle}>
         <rect class="sankey-node-bg" width="${n.w}" height="${n.h}" rx="8" />
         <rect class="sankey-node-accent" x="0" y="0" width="4" height="${n.h}" rx="2" fill="${n.color}" />
-        <text x="14" y="24" class="sankey-node-title">${escapeHtml(n.title)}</text>
-        <text x="14" y="48" class="sankey-node-count" fill="${n.color}">${n.count}</text>
-        <text x="14" y="65" class="sankey-node-sub">${escapeHtml(n.sub)}</text>
+        ${renderSvgTextLines(titleLines, "sankey-node-title", 14, titleY)}
+        <text x="14" y="${countY}" class="sankey-node-count" fill="${n.color}">${n.count}</text>
+        ${subLines.length ? renderSvgTextLines(subLines, "sankey-node-sub", 14, subY, 12) : ""}
       </g>
     `;
   }).join("");
