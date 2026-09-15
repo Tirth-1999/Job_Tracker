@@ -516,6 +516,29 @@ function getReviewReasons(app) {
   return { role, reasons, roleQuality, companyQuality };
 }
 
+function clientFallbackReclassify(app, reason = "API fallback") {
+  const from = String(app.latestFrom || app.from || "");
+  const subject = String(app.latestSubject || app.subject || "");
+  const notes = String(app.notes || "");
+  const text = `${from} ${subject} ${notes}`;
+  const isSecurity = /\b(verification code|security code|pin\s*\d{4,8}|verify your new device|2fa|two-factor|sign-in code|login code|reset your password)\b/i.test(text);
+  const isJobAlert = /zensearch|jobright|ziprecruiter|trueup|seek recommendations|job alert|your daily zen|personalized job matches|jobs you might like|recommended jobs|new job opportunities|view similar jobs|unsubscribe from job alerts?/i.test(text)
+    && !/your application was sent to|application received|we received your application|thanks? for applying|thank you for applying/i.test(text);
+  const status = isSecurity || isJobAlert ? "not_related" : normalizeStatus(app.effectiveStatus || app.status);
+  return {
+    id: app.id,
+    company: app.company,
+    role: app.role,
+    status,
+    confidence: isSecurity || isJobAlert ? "high" : "low",
+    reason: isSecurity
+      ? "client fallback: security/account verification noise"
+      : isJobAlert
+        ? "client fallback: job alert/newsletter/recommendation digest"
+        : `${reason}: retained existing classification`
+  };
+}
+
 function extractRequisitionId(text) {
   if (!text) return null;
   const reqMatch = text.match(/\b(?:req(?:uisition)?|ref|reference|job\s*id|job\s*#|posting\s*#)\b\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
@@ -4574,12 +4597,19 @@ function attachServicesListeners(applications) {
             })
           });
 
+          let resData;
           if (!response.ok) {
             const errData = await response.json().catch(() => ({}));
-            throw new Error(errData.error || `HTTP ${response.status} from /api/reclassify`);
+            const message = errData.error || errData.warning || `HTTP ${response.status} from /api/reclassify`;
+            appendConsole(`Batch ${batch.index}: ${message}. Using local fallback rules for this batch.`, "error");
+            resData = {
+              warning: message,
+              usage: null,
+              results: batch.chunk.map((app) => clientFallbackReclassify(app, message))
+            };
+          } else {
+            resData = await response.json();
           }
-
-          const resData = await response.json();
           if (resData.warning) {
             appendConsole(`Batch ${batch.index}: ${resData.warning}`, "info");
           }
