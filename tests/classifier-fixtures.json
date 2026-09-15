@@ -1,0 +1,72 @@
+[
+  {
+    "name": "LinkedIn Easy Apply receipt",
+    "expected": "applied",
+    "from": "LinkedIn <jobs-noreply@linkedin.com>",
+    "subject": "Tirth Chirayu, your application was sent to CoreWeave",
+    "body": "Your application was sent to CoreWeave Account Solution Architect. Applied on September 6, 2026. Now, take these next steps for more success. View similar jobs you may be interested in."
+  },
+  {
+    "name": "Jobright job alert",
+    "expected": "not_related",
+    "from": "Jobright Job Alert <noreply@jobright.ai>",
+    "subject": "Latest Data Engineer jobs you might like",
+    "body": "Explore today's top matches, curated to align with your preferences. View More Opportunities. Apply Faster with Autofill. Update Job Alert Preference | Unsubscribe."
+  },
+  {
+    "name": "Application receipt",
+    "expected": "applied",
+    "from": "Recruiting at Deloitte <donotreply@deloitte.com>",
+    "subject": "Thank you for applying to Deloitte!",
+    "body": "Thank you for submitting an application for the position of Lead Forward Deployed Engineer - AWS. You can view the status of your application in your candidate profile."
+  },
+  {
+    "name": "Greenhouse receipt with conditional disclaimer",
+    "expected": "applied",
+    "from": "no-reply@us.greenhouse-mail.io",
+    "subject": "Thank you for applying to CoreWeave",
+    "body": "Thank you for your interest in CoreWeave. We received your application. A member of our recruiting team will review your application and be in touch if your qualifications match the needs of the team."
+  },
+  {
+    "name": "Formal rejection",
+    "expected": "rejected",
+    "from": "Talent <careers@example.com>",
+    "subject": "Application Update",
+    "body": "Thank you for your interest. After careful review, we have decided not to move forward with your application at this time. We wish you the best in your job search."
+  },
+  {
+    "name": "Conditional rejection language in receipt",
+    "expected": "applied",
+    "from": "careers@jbsinternational.com",
+    "subject": "Application Received for Data Operations Specialist",
+    "body": "Thank you for applying. Your candidacy will be reviewed by the hiring team. If you have not heard from us, it means the hiring team has decided to pursue other candidates or the position has been filled."
+  },
+  {
+    "name": "Coding assessment",
+    "expected": "interviewed",
+    "from": "HackerRank <support@hackerrank.net>",
+    "subject": "Complete your Data Engineer Technical Assessment",
+    "body": "Please complete your online coding challenge on HackerRank within 5 days."
+  },
+  {
+    "name": "Human recruiter asks availability",
+    "expected": "reply_needed",
+    "from": "Jane Recruiter <jane@agency.com>",
+    "subject": "Data Engineer role",
+    "body": "I reviewed your profile for a Data Engineer role. Are you available to connect today? Please share your resume and availability."
+  },
+  {
+    "name": "EEO self identification",
+    "expected": "not_related",
+    "from": "Talent Acquisition <no-reply@greenhouse-mail.io>",
+    "subject": "Action Required: Complete your self-identification",
+    "body": "Please complete the voluntary self-identification and equal employment opportunity form. This will not affect your application."
+  },
+  {
+    "name": "Offer letter",
+    "expected": "offered",
+    "from": "HR <hr@company.com>",
+    "subject": "Offer of Employment - Senior Data Engineer",
+    "body": "We are pleased to offer you the position of Senior Data Engineer. Please review the attached offer letter."
+  }
+]

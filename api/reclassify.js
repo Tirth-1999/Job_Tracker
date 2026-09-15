@@ -1,6 +1,8 @@
 // api/reclassify.js
 // Vercel Serverless Function — Real LLM Batch Reclassification via OpenRouter / Gemini API
 
+import { classifyDeterministic } from "../src/classification/rules.mjs";
+
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 const SYSTEM_PROMPT = `
@@ -327,12 +329,42 @@ export default async function handler(req, res) {
     }
 
     const parsedResults = extractJsonFromContent(rawContent);
+    const aiResultsById = new Map(parsedResults.map((item) => [item.id, item]));
+    const mergedResults = inputPayload.map((app) => {
+      const deterministic = classifyDeterministic({
+        from: app.latest_from,
+        subject: app.latest_subject,
+        body: app.notes || app.email_body_snippet
+      });
+
+      if (deterministic) {
+        return {
+          ...(aiResultsById.get(app.id) || {}),
+          id: app.id,
+          company: aiResultsById.get(app.id)?.company || app.company,
+          role: aiResultsById.get(app.id)?.role || app.role,
+          status: deterministic.status,
+          confidence: deterministic.confidence,
+          reason: deterministic.reason,
+          rule_id: deterministic.ruleId
+        };
+      }
+
+      return aiResultsById.get(app.id) || {
+        id: app.id,
+        company: app.company,
+        role: app.role,
+        status: app.current_status,
+        confidence: "low",
+        reason: "No result returned by classifier"
+      };
+    });
 
     return res.status(200).json({
       success: true,
       model_used: chosenModel,
       usage: aiJson.usage || null,
-      results: parsedResults
+      results: mergedResults
     });
   } catch (err) {
     return res.status(500).json({

@@ -84,3 +84,19 @@ Optional repository variable:
 ## Data
 
 Applications live in `data/applications.json`. The GitHub Action commits changes only when the sync script finds matching Gmail messages.
+
+## Classifier Quality Checks
+
+Run the deterministic classifier fixture suite:
+
+```sh
+node scripts/evaluate-classifier.mjs
+```
+
+Run a read-only audit against the current dataset:
+
+```sh
+node scripts/audit-classifier.mjs
+```
+
+The audit separates safe automatic cleanup candidates from review-only changes so existing rejected, offered, or interviewed applications are not downgraded accidentally.

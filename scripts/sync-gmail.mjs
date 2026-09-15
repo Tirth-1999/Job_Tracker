@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "node:path";
+import { classifyDeterministic } from "../src/classification/rules.mjs";
 
 // Auto-load local .env file if present
 if (fsSync.existsSync(".env")) {
@@ -255,7 +256,7 @@ async function getAccessToken() {
 
 async function listMessages(token) {
   const isBackfill = process.env.GMAIL_BACKFILL === "true";
-  const fetchAll = process.env.GMAIL_FETCH_ALL !== "false";
+  const fetchAll = process.env.GMAIL_FETCH_ALL === "true";
   const query = process.env.GMAIL_QUERY || (fetchAll ? "" : (isBackfill ? DEFAULT_BACKFILL_QUERY : DEFAULT_RECENT_QUERY));
   const maxResults = 500;
   const maxPages = Number(process.env.GMAIL_MAX_PAGES || "20");
@@ -913,6 +914,28 @@ Carefully evaluate the provided batch of emails according to all the above rules
       const batchResults = [];
 
       for (const item of batch) {
+        const deterministic = classifyDeterministic({
+          from: item.parsed.from,
+          subject: item.parsed.subject,
+          body: item.parsed.body
+        });
+
+        if (deterministic) {
+          const company = sanitizeCompanyName(inferCompanyHeuristic(item.parsed.from, item.parsed.subject, item.parsed.body));
+          const role = sanitizeRole(inferRoleHeuristic(item.parsed.subject, item.parsed.body), item.parsed?.subject, item.parsed?.body);
+          batchResults.push({
+            message: item.message,
+            parsed: item.parsed,
+            company,
+            role,
+            status: deterministic.status,
+            confidence: deterministic.confidence,
+            classifier: deterministic.classifier,
+            reason: deterministic.reason
+          });
+          continue;
+        }
+
         const aiResult = parsedMap.get(item.message.id);
         const isJob = aiResult?.is_job ?? aiResult?.is_job_application ?? false;
 
@@ -982,6 +1005,22 @@ function extractWithHeuristics(item) {
   let status = "applied";
   let confidence = "low";
   let reason = "keyword heuristic";
+
+  const deterministic = classifyDeterministic({ from, subject, body });
+  if (deterministic) {
+    const company = sanitizeCompanyName(inferCompanyHeuristic(from, subject, body));
+    const role = sanitizeRole(inferRoleHeuristic(subject, body), subject, body);
+    return {
+      message: item.message,
+      parsed: item.parsed,
+      company,
+      role,
+      status: deterministic.status,
+      confidence: deterministic.confidence,
+      classifier: deterministic.classifier,
+      reason: deterministic.reason
+    };
+  }
 
   // ─────────────────────────────────────────────────────────────────────
   // PRIORITY GUARD 1: EEO / OFCCP / Self-Identification compliance forms
