@@ -56,6 +56,13 @@
     "body": "I reviewed your profile for a Data Engineer role. Are you available to connect today? Please share your resume and availability."
   },
   {
+    "name": "Human recruiter quick discussion",
+    "expected": "reply_needed",
+    "from": "Alex Recruiter <alex@northstartalent.com>",
+    "subject": "Quick connect",
+    "body": "Your profile looks relevant for a data platform opportunity with a healthcare client. Are you open to a quick discussion this week? Please share availability and expected rate."
+  },
+  {
     "name": "EEO self identification",
     "expected": "not_related",
     "from": "Talent Acquisition <no-reply@greenhouse-mail.io>",

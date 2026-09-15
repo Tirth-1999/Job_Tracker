@@ -4558,8 +4558,8 @@ function attachServicesListeners(applications) {
       appendConsole(`Scope: ${scopeLabel} (${total} targeted apps) | Connecting to OpenRouter API (model: ${activeModel.id})...`);
 
       try {
-        const chunkSize = 25; // 25 applications per LLM request
-        const CONCURRENCY = 6; // 6 parallel streams simultaneously for blazing speed
+        const chunkSize = 10; // Keep serverless requests small enough to avoid model/provider timeouts
+        const CONCURRENCY = 2; // Favor reliable classification over flooding the free router
         let reclassifiedCount = 0;
         let totalTokensUsed = 0;
         let completedBatches = 0;

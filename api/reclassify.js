@@ -5,6 +5,11 @@ import { classifyDeterministic } from "../src/classification/rules.mjs";
 import { cleanRole } from "../src/classification/normalize.mjs";
 
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
+const MAX_EMAIL_CHARS = 900;
+
+export const config = {
+  maxDuration: 60
+};
 
 const SYSTEM_PROMPT = `
 You are the World's Foremost Principal AI Recruitment Auditor and Talent Acquisition Systems Architect.
@@ -234,9 +239,44 @@ export default async function handler(req, res) {
     current_status: app.status,
     latest_subject: app.latestSubject || app.subject || "",
     latest_from: app.latestFrom || app.from || "",
-    email_body_snippet: (app.notes || app.email_body || app.snippet || "").slice(0, 3000),
-    notes: (app.notes || "").slice(0, 3000)
+    email_body_snippet: (app.notes || app.email_body || app.snippet || "").slice(0, MAX_EMAIL_CHARS),
+    notes: (app.notes || "").slice(0, MAX_EMAIL_CHARS)
   }));
+
+  const deterministicById = new Map();
+  const unresolvedPayload = [];
+
+  for (const app of inputPayload) {
+    const deterministic = classifyDeterministic({
+      from: app.latest_from,
+      subject: app.latest_subject,
+      body: app.notes || app.email_body_snippet
+    });
+
+    if (deterministic) {
+      deterministicById.set(app.id, {
+        id: app.id,
+        company: app.company,
+        role: normalizeRoleResult(app.role, app.company),
+        status: deterministic.status,
+        confidence: deterministic.confidence,
+        reason: deterministic.reason,
+        rule_id: deterministic.ruleId
+      });
+    } else {
+      unresolvedPayload.push(app);
+    }
+  }
+
+  if (unresolvedPayload.length === 0) {
+    return res.status(200).json({
+      success: true,
+      model_used: "deterministic_rules",
+      usage: { total_tokens: 0 },
+      warning: "All records matched deterministic rules; no LLM call was needed.",
+      results: inputPayload.map((app) => deterministicById.get(app.id))
+    });
+  }
 
   if (!apiKey) {
     return res.status(200).json({
@@ -261,7 +301,7 @@ export default async function handler(req, res) {
           { role: "system", content: SYSTEM_PROMPT },
           {
             role: "user",
-            content: `Analyze and classify the following batch of ${inputPayload.length} job applications:\n${JSON.stringify(inputPayload, null, 2)}`
+            content: `Analyze and classify the following batch of ${unresolvedPayload.length} job applications:\n${JSON.stringify(unresolvedPayload, null, 2)}`
           }
         ],
         temperature: 0.1
@@ -306,8 +346,9 @@ export default async function handler(req, res) {
       });
     }
 
-    const aiJson = await aiResponse.json();
-    const rawContent = aiJson.choices?.[0]?.message?.content || "{}";
+    let modelUsed = chosenModel;
+    let aiJson = await aiResponse.json();
+    let rawContent = aiJson.choices?.[0]?.message?.content || "{}";
 
     function extractJsonFromContent(text) {
       if (!text) return [];
@@ -337,28 +378,52 @@ export default async function handler(req, res) {
       return [];
     }
 
-    const parsedResults = extractJsonFromContent(rawContent);
-    const aiResultsById = new Map(parsedResults.map((item) => [item.id, item]));
-    const mergedResults = inputPayload.map((app) => {
-      const deterministic = classifyDeterministic({
-        from: app.latest_from,
-        subject: app.latest_subject,
-        body: app.notes || app.email_body_snippet
+    let parsedResults = extractJsonFromContent(rawContent);
+    const hasUsableResult = (items) => {
+      const ids = new Set(unresolvedPayload.map((app) => app.id));
+      return items.some((item) => item?.id && ids.has(item.id));
+    };
+
+    if (chosenModel === "openrouter/free" && !hasUsableResult(parsedResults)) {
+      const fallbackModel = "nvidia/nemotron-3.5-lightning:free";
+      const retryResponse = await fetch(OPENROUTER_API_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
+          "X-Title": "Job Tracker Master AI Auditor"
+        },
+        body: JSON.stringify({
+          model: fallbackModel,
+          messages: [
+            { role: "system", content: SYSTEM_PROMPT },
+            {
+              role: "user",
+              content: `Analyze and classify the following batch of ${unresolvedPayload.length} job applications:\n${JSON.stringify(unresolvedPayload, null, 2)}`
+            }
+          ],
+          temperature: 0.1,
+          response_format: { type: "json_object" }
+        })
       });
 
-      if (deterministic) {
-        const aiResult = aiResultsById.get(app.id) || {};
-        return {
-          ...aiResult,
-          id: app.id,
-          company: aiResult.company || app.company,
-          role: normalizeRoleResult(aiResult.role || app.role, aiResult.company || app.company),
-          status: deterministic.status,
-          confidence: deterministic.confidence,
-          reason: deterministic.reason,
-          rule_id: deterministic.ruleId
-        };
+      if (retryResponse.ok) {
+        const retryJson = await retryResponse.json();
+        const retryContent = retryJson.choices?.[0]?.message?.content || "{}";
+        const retryResults = extractJsonFromContent(retryContent);
+        if (hasUsableResult(retryResults)) {
+          modelUsed = fallbackModel;
+          aiJson = retryJson;
+          rawContent = retryContent;
+          parsedResults = retryResults;
+        }
       }
+    }
+    const aiResultsById = new Map(parsedResults.map((item) => [item.id, item]));
+    const mergedResults = inputPayload.map((app) => {
+      const deterministicResult = deterministicById.get(app.id);
+      if (deterministicResult) return deterministicResult;
 
       const aiResult = aiResultsById.get(app.id);
       if (aiResult) {
@@ -380,7 +445,7 @@ export default async function handler(req, res) {
 
     return res.status(200).json({
       success: true,
-      model_used: chosenModel,
+      model_used: modelUsed,
       usage: aiJson.usage || null,
       results: mergedResults
     });
