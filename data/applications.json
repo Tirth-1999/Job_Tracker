@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T21:47:11.536Z",
+  "updatedAt": "2026-09-15T21:55:22.814Z",
   "applications": [
     {
       "id": "sarah-valentin-from-red-bull-distribution-company-taking-the-time-to-apply-for-the-nbsp",
@@ -123,10 +123,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Forward Deployed Engineer Sandtech New York, NY Full Time 3+ Y",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-09-15T14:00:38.000Z",
@@ -135,7 +135,11 @@
       "gmailMessageIds": [
         "1a0a55ea671127bb"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Forward Deployed Engineer Sandtech New York, NY Full time 3+ years New York, NY Full time 3+ years Data Engineer II Scan.com New York, NY, NY Full time $140k - $160k New York, NY, NY Full time $140k - $160k Data Engineer Alloy Washington, DC, DC Full time $85k - $110k 1+ years Washington, DC, DC Full time $85k - $110k 1+ years DevOps Engineer Clair Remote, US Full time 3+ years Remote, US Full time 3+ years Forward Deployed Engineer Venn New York, NY, NY Full time $200k - $400k New York, NY, NY Full time $200k - $400k Data Engineer II- Life Sciences H1 New York, NY Full time $110k - $135k 3+ years New York, NY Full time $110k - $135k 3+ years Forward Deployed Engineer - Investment Systems KKR New York, NY, NY Full time $180k - $200k New York, NY, NY Full time $180k - $200k Senior DevOps Engineer dscout Remote, US Full time 4+ years Remote, US Full time 4+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Forward Deployed Engineer Sandtech New York, NY Full time 3+ years New York, NY Full time 3+ years Data Engineer II Scan.com New York, NY, NY Full time $140k - $160k New York, NY, NY Full time $140k - $160k Data Engineer Alloy Washington, DC, DC Full time $85k - $110k 1+ years Washington, DC, DC Full time $85k - $110k 1+ years DevOps Engineer Clair Remote, US Full time 3+ years Remote, US Full time 3+ years Forward Deployed Engineer Venn New York, NY, NY Full time $200k - $400k New York, NY, NY Full time $200k - $400k Data Engineer II- Life Sciences H1 New York, NY Full time $110k - $135k 3+ years New York, NY Full time $110k - $135k 3+ years Forward Deployed Engineer - Investment Systems KKR New York, NY, NY Full time $180k - $200k New York, NY, NY Full time $180k - $200k Senior DevOps Engineer dscout Remote, US Full time 4+ years Remote, US Full time 4+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "komodo-health-komodo-health",
@@ -1361,10 +1365,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Forward Deployed Engineer Appen Remote, US Full Time",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-09-14T14:02:00.000Z",
@@ -1373,7 +1377,11 @@
       "gmailMessageIds": [
         "1a0a0398e043f1f1"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Forward Deployed Engineer Appen Remote, US Full time $150k - $200k Remote, US Full time $150k - $200k See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Forward Deployed Engineer Appen Remote, US Full time $150k - $200k Remote, US Full time $150k - $200k See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "ziprecruiter-general-application",
@@ -2269,8 +2277,8 @@
       "id": "american-express-general-application",
       "company": "American Express",
       "role": "The Domain Aexp.com.",
-      "status": "applied",
-      "confidence": "low",
+      "status": "not_related",
+      "confidence": "high",
       "lastActivityAt": "2026-09-14T03:50:44.000Z",
       "latestSubject": "New job opportunities at American Express",
       "latestFrom": "Amex Careers <careers@recruitment.americanexpress.com>",
@@ -2286,12 +2294,12 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Automated email delivery bounce notification",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:24.203+00:00",
-      "aiConfidence": "medium",
-      "classifier": "rules",
-      "reason": "keyword heuristic"
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest"
     },
     {
       "id": "deloitte-senior-forward-deployed-engineer-aws",
@@ -2614,10 +2622,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Devops Engineer Smartrent Phoenix, Az, AZ Full Time 2+ Years P",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-09-12T14:00:41.000Z",
@@ -2626,7 +2634,11 @@
       "gmailMessageIds": [
         "1a095eb9eb375dd0"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. DevOps Engineer SmartRent Phoenix, AZ, AZ Full time 2+ years Phoenix, AZ, AZ Full time 2+ years Senior Data Engineer Centerfield Los Angeles, CA Full time 3+ years Los Angeles, CA Full time 3+ years Data Engineer, Ground Network Engineering (Gateway) SpaceX Redmond, WA, WA Full time $125k - $200k Redmond, WA, WA Full time $125k - $200k Associate DevOps Engineer Liatrio Chico, CA, CA Full time Chico, CA, CA Full time Data Engineer - GenAI Reply Chicago, Illinois, IL Full time $90k - $110k 3+ years Chicago, Illinois, IL Full time $90k - $110k 3+ years DevSecOps Engineer Chaos Industries Washington, DC Full time $110k - $160k 4+ years Washington, DC Full time $110k - $160k 4+ years Data Engineer Vitol Houston, TX Full time 3+ years Houston, TX Full time 3+ years Senior Data Engineer Prenuvo Remote, US Full time $165k - $185k 4+ years Remote, US Full time $165k - $185k 4+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. DevOps Engineer SmartRent Phoenix, AZ, AZ Full time 2+ years Phoenix, AZ, AZ Full time 2+ years Senior Data Engineer Centerfield Los Angeles, CA Full time 3+ years Los Angeles, CA Full time 3+ years Data Engineer, Ground Network Engineering (Gateway) SpaceX Redmond, WA, WA Full time $125k - $200k Redmond, WA, WA Full time $125k - $200k Associate DevOps Engineer Liatrio Chico, CA, CA Full time Chico, CA, CA Full time Data Engineer - GenAI Reply Chicago, Illinois, IL Full time $90k - $110k 3+ years Chicago, Illinois, IL Full time $90k - $110k 3+ years DevSecOps Engineer Chaos Industries Washington, DC Full time $110k - $160k 4+ years Washington, DC Full time $110k - $160k 4+ years Data Engineer Vitol Houston, TX Full time 3+ years Houston, TX Full time 3+ years Senior Data Engineer Prenuvo Remote, US Full time $165k - $185k 4+ years Remote, US Full time $165k - $185k 4+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "jpmorganchase-your-interest-in-the-position-listed-below-we-regret-to-inform-you-that-busines",
@@ -3041,10 +3053,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Data Engineer Proarch Athens, GA Contract Athens, GA Contract",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-09-11T14:00:22.000Z",
@@ -3053,7 +3065,11 @@
       "gmailMessageIds": [
         "1a090c4f95d02433"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer ProArch Athens, GA Contract Athens, GA Contract Senior Scientific Data Engineer Eurofins Stafford, VA Full time Stafford, VA Full time Business Intelligence Engineer Courier Health New York, NY, NY Full time $120k - $150k 3+ years New York, NY, NY Full time $120k - $150k 3+ years DevOps Engineer II Best Egg Wilmington, DE, DE Full time $120k - $140k Wilmington, DE, DE Full time $120k - $140k Data Architect Node.digital McLean, VA Full time McLean, VA Full time Junior Forward Deployed Engineer Interplay New York, NY, NY Full time $85k - $100k 2+ years New York, NY, NY Full time $85k - $100k 2+ years Senior DevOps Engineer City of New York Brooklyn, NY Full time 3+ years Brooklyn, NY Full time 3+ years Tableau Data Architect Buyers Edge Platform Chicago, IL, Lake Worth, FL, Littleton, CO, New London, CT, Waltham, MA, IL Full time 4+ years Chicago, IL, Lake Worth, FL, Littleton, CO, New London, CT, Waltham, MA, IL Full time 4+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer ProArch Athens, GA Contract Athens, GA Contract Senior Scientific Data Engineer Eurofins Stafford, VA Full time Stafford, VA Full time Business Intelligence Engineer Courier Health New York, NY, NY Full time $120k - $150k 3+ years New York, NY, NY Full time $120k - $150k 3+ years DevOps Engineer II Best Egg Wilmington, DE, DE Full time $120k - $140k Wilmington, DE, DE Full time $120k - $140k Data Architect Node.digital McLean, VA Full time McLean, VA Full time Junior Forward Deployed Engineer Interplay New York, NY, NY Full time $85k - $100k 2+ years New York, NY, NY Full time $85k - $100k 2+ years Senior DevOps Engineer City of New York Brooklyn, NY Full time 3+ years Brooklyn, NY Full time 3+ years Tableau Data Architect Buyers Edge Platform Chicago, IL, Lake Worth, FL, Littleton, CO, New London, CT, Waltham, MA, IL Full time 4+ years Chicago, IL, Lake Worth, FL, Littleton, CO, New London, CT, Waltham, MA, IL Full time 4+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "alpaca-senior-data-engineer-here",
@@ -4781,10 +4797,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Forward Deployed Data Engineer - US Datafold Remote, US Full T",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-09-10T14:00:43.000Z",
@@ -4793,7 +4809,11 @@
       "gmailMessageIds": [
         "1a08b9ef17b20091"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Forward Deployed Data Engineer - US DataFold Remote, US Full time $155k - $200k 3+ years Remote, US Full time $155k - $200k 3+ years Senior Data Engineer Eurofins Stafford, VA Full time Stafford, VA Full time DevSecOps Engineer II Accenture Federal Services Reston, VA, VA Full time $86k - $176k 4+ years Reston, VA, VA Full time $86k - $176k 4+ years Contract AI Data Engineer Jet Support Services Chicago, IL, IL Contract Chicago, IL, IL Contract Design Release Engineer (Interior - Instrument Panel) Alten Technology Auburn Heights, MI, MI Full time 3+ years Auburn Heights, MI, MI Full time 3+ years Forward Deployed Engineer Nash San Francisco, CA Full time 4+ years San Francisco, CA Full time 4+ years Forward Deployed Engineer - New Grad, 2027 Domino Data Lab New York, NY, NY Full time $150k - $165k New York, NY, NY Full time $150k - $165k Data Engineer (Various Locations) Agile Defense Peterson Space Force Base, CO, CO Full time $135k - $165k 3+ years Peterson Space Force Base, CO, CO Full time $135k - $165k 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Forward Deployed Data Engineer - US DataFold Remote, US Full time $155k - $200k 3+ years Remote, US Full time $155k - $200k 3+ years Senior Data Engineer Eurofins Stafford, VA Full time Stafford, VA Full time DevSecOps Engineer II Accenture Federal Services Reston, VA, VA Full time $86k - $176k 4+ years Reston, VA, VA Full time $86k - $176k 4+ years Contract AI Data Engineer Jet Support Services Chicago, IL, IL Contract Chicago, IL, IL Contract Design Release Engineer (Interior - Instrument Panel) Alten Technology Auburn Heights, MI, MI Full time 3+ years Auburn Heights, MI, MI Full time 3+ years Forward Deployed Engineer Nash San Francisco, CA Full time 4+ years San Francisco, CA Full time 4+ years Forward Deployed Engineer - New Grad, 2027 Domino Data Lab New York, NY, NY Full time $150k - $165k New York, NY, NY Full time $150k - $165k Data Engineer (Various Locations) Agile Defense Peterson Space Force Base, CO, CO Full time $135k - $165k 3+ years Peterson Space Force Base, CO, CO Full time $135k - $165k 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "guidehouse-notification-43344-data-infrastructure-engineer",
@@ -6139,10 +6159,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Data Engineer Ii, Analytics & Modeling Clear New York, Ny, NY",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-09-09T14:00:41.000Z",
@@ -6151,7 +6171,11 @@
       "gmailMessageIds": [
         "1a086788af075384"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer II, Analytics & Modeling Clear New York, NY, NY Full time $180k - $220k 4+ years New York, NY, NY Full time $180k - $220k 4+ years Forward Deployed Engineer, AI Agents CoreWeave Sunnyvale, CA / San Francisco, CA, CA Full time $182k - $242k Sunnyvale, CA / San Francisco, CA, CA Full time $182k - $242k Forward Deployed Engineer Wealth.com New York, NY, NY Full time $240k - $280k New York, NY, NY Full time $240k - $280k Senior Forward Deployed Engineer Webflow Remote, US Full time $143k - $210k 4+ years Remote, US Full time $143k - $210k 4+ years Senior DevOps Engineer Beyond Finance Chicago, IL, IL Full time $120k - $160k 3+ years Chicago, IL, IL Full time $120k - $160k 3+ years Forward Deployed Engineer - Software Engineer - North America ElevenLabs San Francisco, CA, New York, NY, CA Full time San Francisco, CA, New York, NY, CA Full time DevOps Engineer 768 Freedom Technology Solutions Group Annapolis Junction, MD, MD Full time $150k - $200k 3+ years Annapolis Junction, MD, MD Full time $150k - $200k 3+ years DevOps Engineer DuploCloud New York, NY Full time $80k - $100k 2+ years New York, NY Full time $80k - $100k 2+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer II, Analytics & Modeling Clear New York, NY, NY Full time $180k - $220k 4+ years New York, NY, NY Full time $180k - $220k 4+ years Forward Deployed Engineer, AI Agents CoreWeave Sunnyvale, CA / San Francisco, CA, CA Full time $182k - $242k Sunnyvale, CA / San Francisco, CA, CA Full time $182k - $242k Forward Deployed Engineer Wealth.com New York, NY, NY Full time $240k - $280k New York, NY, NY Full time $240k - $280k Senior Forward Deployed Engineer Webflow Remote, US Full time $143k - $210k 4+ years Remote, US Full time $143k - $210k 4+ years Senior DevOps Engineer Beyond Finance Chicago, IL, IL Full time $120k - $160k 3+ years Chicago, IL, IL Full time $120k - $160k 3+ years Forward Deployed Engineer - Software Engineer - North America ElevenLabs San Francisco, CA, New York, NY, CA Full time San Francisco, CA, New York, NY, CA Full time DevOps Engineer 768 Freedom Technology Solutions Group Annapolis Junction, MD, MD Full time $150k - $200k 3+ years Annapolis Junction, MD, MD Full time $150k - $200k 3+ years DevOps Engineer DuploCloud New York, NY Full time $80k - $100k 2+ years New York, NY Full time $80k - $100k 2+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "superhuman-your-interest-in-joining-superhuman-after-careful-review-we-have-decided-not-t",
@@ -9059,10 +9083,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Data Engineer Centerfield Los Angeles, Ca, CA Full Time",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-09-05T14:00:23.000Z",
@@ -9071,7 +9095,11 @@
       "gmailMessageIds": [
         "1a071ded5d1af2bd"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer Centerfield Los Angeles, CA, CA Full time $100k - $130k 3+ years Los Angeles, CA, CA Full time $100k - $130k 3+ years DevOps Engineer Accenture Federal Services Arlington, VA, VA Full time $100k - $203k 3+ years Arlington, VA, VA Full time $100k - $203k 3+ years Data Engineer FanDuel New York, NY, NY Full time $116k - $145k 3+ years New York, NY, NY Full time $116k - $145k 3+ years Data Engineer Allegiant Las Vegas, NV, NV Full time $87k - $124k 3+ years Las Vegas, NV, NV Full time $87k - $124k 3+ years DevSecOps Engineer Dark Wolf Solutions Tampa, FL, FL Full time $160k - $180k 3+ years Tampa, FL, FL Full time $160k - $180k 3+ years Forward Deployed Engineer (Remote) Telnyx San Francisco, CA, CA Full time 3+ years San Francisco, CA, CA Full time 3+ years Pre-Sales Forward Deployed Engineer - IFS Loops IFS Palo Alto, CA Full time $190k - $230k Palo Alto, CA Full time $190k - $230k Senior Data Engineer Garner Health New York, NY, NY Full time $220k - $245k 4+ years New York, NY, NY Full time $220k - $245k 4+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer Centerfield Los Angeles, CA, CA Full time $100k - $130k 3+ years Los Angeles, CA, CA Full time $100k - $130k 3+ years DevOps Engineer Accenture Federal Services Arlington, VA, VA Full time $100k - $203k 3+ years Arlington, VA, VA Full time $100k - $203k 3+ years Data Engineer FanDuel New York, NY, NY Full time $116k - $145k 3+ years New York, NY, NY Full time $116k - $145k 3+ years Data Engineer Allegiant Las Vegas, NV, NV Full time $87k - $124k 3+ years Las Vegas, NV, NV Full time $87k - $124k 3+ years DevSecOps Engineer Dark Wolf Solutions Tampa, FL, FL Full time $160k - $180k 3+ years Tampa, FL, FL Full time $160k - $180k 3+ years Forward Deployed Engineer (Remote) Telnyx San Francisco, CA, CA Full time 3+ years San Francisco, CA, CA Full time 3+ years Pre-Sales Forward Deployed Engineer - IFS Loops IFS Palo Alto, CA Full time $190k - $230k Palo Alto, CA Full time $190k - $230k Senior Data Engineer Garner Health New York, NY, NY Full time $220k - $245k 4+ years New York, NY, NY Full time $220k - $245k 4+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "accenture-your-interest-6461115",
@@ -9820,10 +9848,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Data Engineer Baselayer San Francisco, Ca, CA Full Time",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-09-04T14:00:22.000Z",
@@ -9832,7 +9860,11 @@
       "gmailMessageIds": [
         "1a06cb872e3a916e"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer Baselayer San Francisco, CA, CA Full time $120k - $150k 1+ years San Francisco, CA, CA Full time $120k - $150k 1+ years Data Engineer Everseen Herndon, VA, VA Full time 3+ years Herndon, VA, VA Full time 3+ years Associate DevOps Engineer Ontic Austin, TX, TX Full time $100k - $115k Austin, TX, TX Full time $100k - $115k Forward Deployed Engineer Caylent Remote, US Full time $136k - $216k 2+ years Remote, US Full time $136k - $216k 2+ years Forward Deployed Engineer, Applied AI Juniper Square New York, NY Full time $130k - $160k 2+ years New York, NY Full time $130k - $160k 2+ years Data Engineer Zefr Marina del Rey, CA, CA Full time $100k - $130k 1+ years Marina del Rey, CA, CA Full time $100k - $130k 1+ years DevOps Engineer CreatorIQ New York, NY, NY Full time $106k - $127k 3+ years New York, NY, NY Full time $106k - $127k 3+ years Senior Data Engineer Clarity MacDill AFB, FL, FL Full time $77k - $180k 1+ years MacDill AFB, FL, FL Full time $77k - $180k 1+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer Baselayer San Francisco, CA, CA Full time $120k - $150k 1+ years San Francisco, CA, CA Full time $120k - $150k 1+ years Data Engineer Everseen Herndon, VA, VA Full time 3+ years Herndon, VA, VA Full time 3+ years Associate DevOps Engineer Ontic Austin, TX, TX Full time $100k - $115k Austin, TX, TX Full time $100k - $115k Forward Deployed Engineer Caylent Remote, US Full time $136k - $216k 2+ years Remote, US Full time $136k - $216k 2+ years Forward Deployed Engineer, Applied AI Juniper Square New York, NY Full time $130k - $160k 2+ years New York, NY Full time $130k - $160k 2+ years Data Engineer Zefr Marina del Rey, CA, CA Full time $100k - $130k 1+ years Marina del Rey, CA, CA Full time $100k - $130k 1+ years DevOps Engineer CreatorIQ New York, NY, NY Full time $106k - $127k 3+ years New York, NY, NY Full time $106k - $127k 3+ years Senior Data Engineer Clarity MacDill AFB, FL, FL Full time $77k - $180k 1+ years MacDill AFB, FL, FL Full time $77k - $180k 1+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "caci-cyber-data-analyst-engineer",
@@ -11315,8 +11347,8 @@
       "id": "msg-1a014f9110ccd570",
       "company": "Linkedin",
       "role": "GCP Data Engineer",
-      "status": "reply_needed",
-      "confidence": "medium",
+      "status": "not_related",
+      "confidence": "high",
       "lastActivityAt": "2026-09-04T05:30:38.000Z",
       "latestSubject": "Tirth Chirayu, please verify your new device",
       "latestFrom": "LinkedIn <security-noreply@linkedin.com>",
@@ -11328,22 +11360,22 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Classified as not_related",
-      "aiModel": "rules_1to1",
-      "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
+      "aiDecision": "security/account verification noise",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
       "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
+      "classifier": "deterministic_rules",
+      "reason": "security/account verification noise"
     },
     {
       "id": "linkedin-using-linkedin",
       "company": "Linkedin",
       "role": "Using Linkedin",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "security/account verification noise",
       "latestSubject": "Tirth Chirayu, please verify your new device",
       "latestFrom": "LinkedIn <security-noreply@linkedin.com>",
       "lastActivityAt": "2026-09-04T05:30:38.000Z",
@@ -11356,7 +11388,11 @@
         "1a06ae06b1e48311",
         "1a06adf4d3b1c488"
       ],
-      "notes": "Hi Tirth Chirayu, We noticed you recently tried to sign in to your LinkedIn account from a new device. You can finish signing in to your LinkedIn account by following the instructions that we sent to your LinkedIn App. If you're having trouble signing in, please visit the LinkedIn Help Center https://www.linkedin.com/e/v2?urlhash=rFXq&url=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fhelp%2Flinkedin%3Flang%3Den&lipi=urn%3Ali%3Apage%3Aemail_security_two_step_verification_login_attempt%3B5dnxr5NjR1Km6FkEajD%2F%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1Lrb1-0Nv4DYk1&ek=security_two_step_verification_login_attempt&e=a06oc2-mrfibqjd-et&eid=a06oc2-mrfibqjd-et&m=null&ts=null&li=0&t=plh Thanks for using LinkedIn! The LinkedIn Team When and where it happened: Date: July 10, 2026 at 10:28 PM (GMT) Browser: Unknown Operating System: Unknown Approximate Location: New York, New York, United States Didn't do this? Be sure to change your password right away: https://www.linkedin.com/e/v2?urlhash=PeEi&url=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fuas%2Frequest-password-reset&lipi=urn%3Ali%3Apage%3Aemail_security_two_step_verification_login_attempt%3B5dnxr5NjR1Km6FkEajD%2F%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1Lrb1-0Nv4DYk1&ek=security_two_step_verification_login_attempt&e=a06oc2-mrfibqjd-et&eid=a06oc2-mrfibqjd-et&m=null&ts=null&li=0&t=plh ---------------------------------------- This email was intended for Tirth Chirayu Shah (Data & Agentic AI Engineer | MS-MIS ’26 @ Texas A&M | Built a Startup @BlackTieCars | Python • SQL • Power BI • Azure/GCP/AWS • Databricks) Learn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_security_two_step_verification_login_attempt%3B5dnxr5NjR1Km6FkEajD%2F%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1Lrb1-0Nv4DYk1&trk=eml-security_two_step_verification_login_attempt-SecurityHelp-0-textfooterglimmer&trkEmail=eml-security_two_step_verification_login_attempt-SecurityHelp-0-textfooterglimmer-null-a06oc2~mrfibqjd~et-null-null&eid=a06oc2-mrfibqjd-et You are receiving LinkedIn notification emails. Help: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_security_two_step_verification_login_attempt%3B5dnxr5NjR1Km6FkEajD%2F%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1Lrb1-0Nv4DYk1&trk=eml-security_two_step_verification_login_attempt-help-0-textfooterglimmer&trkEmail=eml-security_two_step_verification_login_attempt-help-0-textfooterglimmer-null-a06oc2~mrfibqjd~et-null-null&eid=a06oc2-mrfibqjd-et © 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn. Tirth Chirayu, please verify your new device ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏"
+      "notes": "Hi Tirth Chirayu, We noticed you recently tried to sign in to your LinkedIn account from a new device. You can finish signing in to your LinkedIn account by following the instructions that we sent to your LinkedIn App. If you're having trouble signing in, please visit the LinkedIn Help Center https://www.linkedin.com/e/v2?urlhash=rFXq&url=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fhelp%2Flinkedin%3Flang%3Den&lipi=urn%3Ali%3Apage%3Aemail_security_two_step_verification_login_attempt%3B5dnxr5NjR1Km6FkEajD%2F%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1Lrb1-0Nv4DYk1&ek=security_two_step_verification_login_attempt&e=a06oc2-mrfibqjd-et&eid=a06oc2-mrfibqjd-et&m=null&ts=null&li=0&t=plh Thanks for using LinkedIn! The LinkedIn Team When and where it happened: Date: July 10, 2026 at 10:28 PM (GMT) Browser: Unknown Operating System: Unknown Approximate Location: New York, New York, United States Didn't do this? Be sure to change your password right away: https://www.linkedin.com/e/v2?urlhash=PeEi&url=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fuas%2Frequest-password-reset&lipi=urn%3Ali%3Apage%3Aemail_security_two_step_verification_login_attempt%3B5dnxr5NjR1Km6FkEajD%2F%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1Lrb1-0Nv4DYk1&ek=security_two_step_verification_login_attempt&e=a06oc2-mrfibqjd-et&eid=a06oc2-mrfibqjd-et&m=null&ts=null&li=0&t=plh ---------------------------------------- This email was intended for Tirth Chirayu Shah (Data & Agentic AI Engineer | MS-MIS ’26 @ Texas A&M | Built a Startup @BlackTieCars | Python • SQL • Power BI • Azure/GCP/AWS • Databricks) Learn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_security_two_step_verification_login_attempt%3B5dnxr5NjR1Km6FkEajD%2F%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1Lrb1-0Nv4DYk1&trk=eml-security_two_step_verification_login_attempt-SecurityHelp-0-textfooterglimmer&trkEmail=eml-security_two_step_verification_login_attempt-SecurityHelp-0-textfooterglimmer-null-a06oc2~mrfibqjd~et-null-null&eid=a06oc2-mrfibqjd-et You are receiving LinkedIn notification emails. Help: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_security_two_step_verification_login_attempt%3B5dnxr5NjR1Km6FkEajD%2F%2FQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1Lrb1-0Nv4DYk1&trk=eml-security_two_step_verification_login_attempt-help-0-textfooterglimmer&trkEmail=eml-security_two_step_verification_login_attempt-help-0-textfooterglimmer-null-a06oc2~mrfibqjd~et-null-null&eid=a06oc2-mrfibqjd-et © 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn. Tirth Chirayu, please verify your new device ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "aiDecision": "security/account verification noise",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "at-t-ai-software-engineer",
@@ -17131,10 +17167,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Cloud / Devops Engineer",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-09-02T14:00:29.000Z",
@@ -17143,7 +17179,11 @@
       "gmailMessageIds": [
         "1a0626bd6031f29d"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Cloud / DevOps Engineer (Infra & IaC) Weekday Remote, US Full time 4+ years Remote, US Full time 4+ years Data Engineer Proximate Technologies Plano, TX Full time Plano, TX Full time Data Engineer II Dave Remote, US Full time $129k - $156k 2+ years Remote, US Full time $129k - $156k 2+ years Intermediate Automation / DevSecOps Engineer Pingwind Quantico VA, VA Full time $80k - $110k 3+ years Quantico VA, VA Full time $80k - $110k 3+ years Forward Deployed Engineer Stability.ai Remote, US Full time Remote, US Full time Mid Level Data Engineer Redhorse Arlington, VA, VA Full time $145k - $165k 3+ years Arlington, VA, VA Full time $145k - $165k 3+ years Staff Engineer, DevOps Bellese Remote, US Full time $150k - $182k Remote, US Full time $150k - $182k Senior DevOps Engineer, Infrastructure City of New York Brooklyn, NY Full time 3+ years Brooklyn, NY Full time 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Cloud / DevOps Engineer (Infra & IaC) Weekday Remote, US Full time 4+ years Remote, US Full time 4+ years Data Engineer Proximate Technologies Plano, TX Full time Plano, TX Full time Data Engineer II Dave Remote, US Full time $129k - $156k 2+ years Remote, US Full time $129k - $156k 2+ years Intermediate Automation / DevSecOps Engineer Pingwind Quantico VA, VA Full time $80k - $110k 3+ years Quantico VA, VA Full time $80k - $110k 3+ years Forward Deployed Engineer Stability.ai Remote, US Full time Remote, US Full time Mid Level Data Engineer Redhorse Arlington, VA, VA Full time $145k - $165k 3+ years Arlington, VA, VA Full time $145k - $165k 3+ years Staff Engineer, DevOps Bellese Remote, US Full time $150k - $182k Remote, US Full time $150k - $182k Senior DevOps Engineer, Infrastructure City of New York Brooklyn, NY Full time 3+ years Brooklyn, NY Full time 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "seton-ny-general-application",
@@ -18562,10 +18602,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Forward Deployed Engineer",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-09-01T14:00:28.000Z",
@@ -18574,7 +18614,11 @@
       "gmailMessageIds": [
         "1a05d457811da57c"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Forward Deployed Engineer (Generative AI) Tiger Analytics New York, NY Full time New York, NY Full time DevOps Engineer, Data & AI Platform SimplePractice Remote, US Full time $144k - $180k 3+ years Remote, US Full time $144k - $180k 3+ years Forward Deployed Engineer - Palantir Foundry (TS/SCI cleared) Accenture Federal Services Colorado Springs, CO, CO Full time $100k - $243k Colorado Springs, CO, CO Full time $100k - $243k Data Engineer, Hardware Reliability (Starlink) SpaceX Bastrop, TX, TX Full time 4+ years Bastrop, TX, TX Full time 4+ years Data Engineer - SOCOM Agile Defense Tampa, FL, FL Full time 3+ years Tampa, FL, FL Full time 3+ years Forward Deployed Engineer, AI and Agentic SDLC Gitlab Remote, US Full time Remote, US Full time Senior Data Engineer - GTM Vercel San Francisco, New York, NY, CA Full time $170k - $260k 4+ years San Francisco, New York, NY, CA Full time $170k - $260k 4+ years Build & Release Engineer - New Grad (December 2026) Applied Intuition Sunnyvale, CA, CA Full time $90k - $115k 3+ years Sunnyvale, CA, CA Full time $90k - $115k 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Forward Deployed Engineer (Generative AI) Tiger Analytics New York, NY Full time New York, NY Full time DevOps Engineer, Data & AI Platform SimplePractice Remote, US Full time $144k - $180k 3+ years Remote, US Full time $144k - $180k 3+ years Forward Deployed Engineer - Palantir Foundry (TS/SCI cleared) Accenture Federal Services Colorado Springs, CO, CO Full time $100k - $243k Colorado Springs, CO, CO Full time $100k - $243k Data Engineer, Hardware Reliability (Starlink) SpaceX Bastrop, TX, TX Full time 4+ years Bastrop, TX, TX Full time 4+ years Data Engineer - SOCOM Agile Defense Tampa, FL, FL Full time 3+ years Tampa, FL, FL Full time 3+ years Forward Deployed Engineer, AI and Agentic SDLC Gitlab Remote, US Full time Remote, US Full time Senior Data Engineer - GTM Vercel San Francisco, New York, NY, CA Full time $170k - $260k 4+ years San Francisco, New York, NY, CA Full time $170k - $260k 4+ years Build & Release Engineer - New Grad (December 2026) Applied Intuition Sunnyvale, CA, CA Full time $90k - $115k 3+ years Sunnyvale, CA, CA Full time $90k - $115k 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "omnicell-commercial-data-insights-analyst",
@@ -21202,10 +21246,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. AWS Devops Engineer",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-08-31T14:01:09.000Z",
@@ -21214,7 +21258,11 @@
       "gmailMessageIds": [
         "1a0581fbcb21197c"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. AWS DevOps Engineer (Freelancer) Mactores Seattle, WA, WA Contract 4+ years Seattle, WA, WA Contract 4+ years IT DevOps Engineer Penumbra Alameda, CA, CA Full time $125k - $185k 4+ years Alameda, CA, CA Full time $125k - $185k 4+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. AWS DevOps Engineer (Freelancer) Mactores Seattle, WA, WA Contract 4+ years Seattle, WA, WA Contract 4+ years IT DevOps Engineer Penumbra Alameda, CA, CA Full time $125k - $185k 4+ years Alameda, CA, CA Full time $125k - $185k 4+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "msg-19fccbc81ca7233d",
@@ -22549,10 +22597,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Senior Data Engineer Granum Atlanta, GA Full Time",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-08-30T14:00:26.000Z",
@@ -22561,7 +22609,11 @@
       "gmailMessageIds": [
         "1a052f8b945d4d28"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Senior Data Engineer Granum Atlanta, GA Full time $180k - $200k Atlanta, GA Full time $180k - $200k Senior DevOps Engineer, Infrastructure City of New York Brooklyn, NY Full time 3+ years Brooklyn, NY Full time 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Senior Data Engineer Granum Atlanta, GA Full time $180k - $200k Atlanta, GA Full time $180k - $200k Senior DevOps Engineer, Infrastructure City of New York Brooklyn, NY Full time 3+ years Brooklyn, NY Full time 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "saic-data-ops-engineer",
@@ -23054,10 +23106,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Data Engineer, Growth Superhuman Hub - San Francisco, Ca, Hub",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-08-29T14:00:26.000Z",
@@ -23066,7 +23118,11 @@
       "gmailMessageIds": [
         "1a04dd25f2762916"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer, Growth Superhuman Hub - San Francisco, CA, Hub - Seattle, WA, Seattle, WA, CA Full time $190k - $240k 3+ years Hub - San Francisco, CA, Hub - Seattle, WA, Seattle, WA, CA Full time $190k - $240k 3+ years DevOps Engineer Bloomerang Indianapolis, IN Full time $98k - $130k 3+ years Indianapolis, IN Full time $98k - $130k 3+ years Data Engineer (Fully Remote) PadSplit Atlanta, GA, GA Full time $150k - $165k Atlanta, GA, GA Full time $150k - $165k Senior DevOps Engineer Level99 Entertainment Greater Boston, MA, MA Full time $150k - $170k Greater Boston, MA, MA Full time $150k - $170k Forward Deployed Engineer Sweed Remote, US Full time 2+ years Remote, US Full time 2+ years Associate Data Engineer (College Grad 2027) Solace Redwood City, CA, CA Full time Redwood City, CA, CA Full time Forward Deployed Engineer, Ecosystem - Tavily Nebius New York, NY, NY Full time $140k - $183k 3+ years New York, NY, NY Full time $140k - $183k 3+ years Data Engineer Benchling San Francisco, CA Full time $83k - $207k 3+ years San Francisco, CA Full time $83k - $207k 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer, Growth Superhuman Hub - San Francisco, CA, Hub - Seattle, WA, Seattle, WA, CA Full time $190k - $240k 3+ years Hub - San Francisco, CA, Hub - Seattle, WA, Seattle, WA, CA Full time $190k - $240k 3+ years DevOps Engineer Bloomerang Indianapolis, IN Full time $98k - $130k 3+ years Indianapolis, IN Full time $98k - $130k 3+ years Data Engineer (Fully Remote) PadSplit Atlanta, GA, GA Full time $150k - $165k Atlanta, GA, GA Full time $150k - $165k Senior DevOps Engineer Level99 Entertainment Greater Boston, MA, MA Full time $150k - $170k Greater Boston, MA, MA Full time $150k - $170k Forward Deployed Engineer Sweed Remote, US Full time 2+ years Remote, US Full time 2+ years Associate Data Engineer (College Grad 2027) Solace Redwood City, CA, CA Full time Redwood City, CA, CA Full time Forward Deployed Engineer, Ecosystem - Tavily Nebius New York, NY, NY Full time $140k - $183k 3+ years New York, NY, NY Full time $140k - $183k 3+ years Data Engineer Benchling San Francisco, CA Full time $83k - $207k 3+ years San Francisco, CA Full time $83k - $207k 3+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "bank-of-hawaii-senior-technical-data-analyst-ii",
@@ -25502,10 +25558,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Senior Data Engineer - Revenue Data Platform Datadog Boston, M",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-08-28T14:00:25.000Z",
@@ -25514,7 +25570,11 @@
       "gmailMessageIds": [
         "1a048abfb4d66802"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Senior Data Engineer - Revenue Data Platform Datadog Boston, MA, New York, NY, MA Full time $192k - $240k Boston, MA, New York, NY, MA Full time $192k - $240k Data Engineer Navan Dallas, TX, TX Full time 2+ years Dallas, TX, TX Full time 2+ years Data Engineer 1, Operational Technology - Operations #4941 Grail Durham, NC, NC Full time $86k - $106k 1+ years Durham, NC, NC Full time $86k - $106k 1+ years Junior Data Engineer (DEA) Hatch IT Arlington, VA, VA Full time 1+ years Arlington, VA, VA Full time 1+ years Senior Forward Deployed Engineer (CDC) Skylight Digital Remote, US Full time $90k - $230k Remote, US Full time $90k - $230k Lead Data Engineer Atticus Los Angeles, CA Full time $174k - $230k 4+ years Los Angeles, CA Full time $174k - $230k 4+ years Forward Deployed Engineer, Public Sector Domino Data Lab Remote, US Full time $175k - $220k Remote, US Full time $175k - $220k Forward Deployed Engineer Vinmar Remote, US Full time Remote, US Full time See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Senior Data Engineer - Revenue Data Platform Datadog Boston, MA, New York, NY, MA Full time $192k - $240k Boston, MA, New York, NY, MA Full time $192k - $240k Data Engineer Navan Dallas, TX, TX Full time 2+ years Dallas, TX, TX Full time 2+ years Data Engineer 1, Operational Technology - Operations #4941 Grail Durham, NC, NC Full time $86k - $106k 1+ years Durham, NC, NC Full time $86k - $106k 1+ years Junior Data Engineer (DEA) Hatch IT Arlington, VA, VA Full time 1+ years Arlington, VA, VA Full time 1+ years Senior Forward Deployed Engineer (CDC) Skylight Digital Remote, US Full time $90k - $230k Remote, US Full time $90k - $230k Lead Data Engineer Atticus Los Angeles, CA Full time $174k - $230k 4+ years Los Angeles, CA Full time $174k - $230k 4+ years Forward Deployed Engineer, Public Sector Domino Data Lab Remote, US Full time $175k - $220k Remote, US Full time $175k - $220k Forward Deployed Engineer Vinmar Remote, US Full time Remote, US Full time See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "uplight-software-engineer-i",
@@ -26386,8 +26446,8 @@
       "id": "linkedin-general-application",
       "company": "Linkedin",
       "role": "Using Linkedin",
-      "status": "reply_needed",
-      "confidence": "low",
+      "status": "not_related",
+      "confidence": "high",
       "lastActivityAt": "2026-08-28T07:56:27.000Z",
       "latestSubject": "Tirth Chirayu, please verify your new device",
       "latestFrom": "LinkedIn <security-noreply@linkedin.com>",
@@ -26400,12 +26460,12 @@
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
-      "aiDecision": "Review / Other",
-      "aiModel": "openrouter",
-      "aiClassifiedAt": "2026-08-20T19:52:17.228+00:00",
-      "aiConfidence": "medium",
-      "classifier": "rules",
-      "reason": "keyword heuristic"
+      "aiDecision": "security/account verification noise",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "security/account verification noise"
     },
     {
       "id": "blue-origin-data-solutions-engineer-blue-national-security",
@@ -28063,10 +28123,10 @@
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Senior Devops Engineer Mainspring Menlo Park, Ca, CA Full Time",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
       "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
       "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
       "lastActivityAt": "2026-08-27T14:00:26.000Z",
@@ -28075,7 +28135,11 @@
       "gmailMessageIds": [
         "1a04385a494c8b02"
       ],
-      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Senior DevOps Engineer Mainspring Menlo Park, CA, CA Full time $134k - $158k Menlo Park, CA, CA Full time $134k - $158k Data Engineer II PlayStation Global Aliso Viejo, CA Full time $150k - $225k 3+ years Aliso Viejo, CA Full time $150k - $225k 3+ years DevOps Engineer (Relocation OR 100% travel to St. Louis, MO) Accenture Federal Services St. Louis, MO, MO Full time $83k - $221k 3+ years St. Louis, MO, MO Full time $83k - $221k 3+ years Contract AI Data Engineer Jet Support Services Chicago, IL, IL Contract Chicago, IL, IL Contract Data Engineer (Snowflake) Prominence Advisors Remote, US Full time 3+ years Remote, US Full time 3+ years DevOps Engineer City of New York New York, NY Full time 4+ years New York, NY Full time 4+ years Senior Configuration Release Engineer Intuitive Sunnyvale, CA Full time 3+ years Sunnyvale, CA Full time 3+ years Forward Deployed Engineer Ent Security Remote, US Full time Remote, US Full time See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Senior DevOps Engineer Mainspring Menlo Park, CA, CA Full time $134k - $158k Menlo Park, CA, CA Full time $134k - $158k Data Engineer II PlayStation Global Aliso Viejo, CA Full time $150k - $225k 3+ years Aliso Viejo, CA Full time $150k - $225k 3+ years DevOps Engineer (Relocation OR 100% travel to St. Louis, MO) Accenture Federal Services St. Louis, MO, MO Full time $83k - $221k 3+ years St. Louis, MO, MO Full time $83k - $221k 3+ years Contract AI Data Engineer Jet Support Services Chicago, IL, IL Contract Chicago, IL, IL Contract Data Engineer (Snowflake) Prominence Advisors Remote, US Full time 3+ years Remote, US Full time 3+ years DevOps Engineer City of New York New York, NY Full time 4+ years New York, NY Full time 4+ years Senior Configuration Release Engineer Intuitive Sunnyvale, CA Full time 3+ years Sunnyvale, CA Full time 3+ years Forward Deployed Engineer Ent Security Remote, US Full time Remote, US Full time See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time",
+      "aiDecision": "job alert/newsletter/recommendation digest",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "fora-general-application",
@@ -33807,10 +33871,10 @@
       "company": "Linkedin",
       "role": "Helping Us Keep Your Account Secure. The Linkedin Team",
       "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "security/account verification noise",
       "latestSubject": "Tirth Chirayu, here's your PIN 455961",
       "latestFrom": "LinkedIn <security-noreply@linkedin.com>",
       "lastActivityAt": "2026-08-25T12:13:55.000Z",
@@ -33819,7 +33883,11 @@
       "gmailMessageIds": [
         "1a038d7652e77d57"
       ],
-      "notes": "Hi Tirth Chirayu, Enter this code to complete the reset. 455961 If you didn't request this pin, we recommend you change your LinkedIn password. Go to Settings & Privacy > Sign in & security > Change password To further secure your account, you should also: Enable two-step verification Settings & Privacy > Sign in & security > Two-step verification Check where you are signed in Settings & Privacy > Sign in & security > Where you're signed in Thanks for helping us keep your account secure. The LinkedIn Team ---------------------------------------- This email was intended for Tirth Chirayu Shah (Data & Agentic AI Engineer | Python • SQL • Power BI • Azure/GCP/AWS • Databricks | Built a Startup @BlackTieCars) Learn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_security_ato_challenge_send_pin%3BsDmE2xVMT6C8EoVDgCWrRw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1AzQd5E9EtEco1&trk=eml-security_ato_challenge_send_pin-SecurityHelp-0-textfooterglimmer&trkEmail=eml-security_ato_challenge_send_pin-SecurityHelp-0-textfooterglimmer-null-a06oc2~mt8mmmli~f0-null-null&eid=a06oc2-mt8mmmli-f0 You are receiving LinkedIn notification emails. Help: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_security_ato_challenge_send_pin%3BsDmE2xVMT6C8EoVDgCWrRw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1AzQd5E9EtEco1&trk=eml-security_ato_challenge_send_pin-help-0-textfooterglimmer&trkEmail=eml-security_ato_challenge_send_pin-help-0-textfooterglimmer-null-a06oc2~mt8mmmli~f0-null-null&eid=a06oc2-mt8mmmli-f0 © 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn. Please verify it's you. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ Hi Tirth Chirayu, Enter this code to complete the reset. 455961 If you didn't request this pin, we recommend you change your LinkedIn password. Go to Settings & Privacy > Sign in & security > Change password To further secure your account, you should also: Enable two-step verification Settings & Privacy > Sign in & security > Two-step verification Check where you are signed in Settings & Privacy > Sign in & security > Where you're signed in Thanks for helping us keep your account secure. The LinkedIn Team When and where this happened: Date: August 25, 2026 at 12:13 PM GMT Operating System: Windows Browser: Chrome Approximate Location: Ahmedabad, Gujarat, India Didn't do this? Be sure to change your password right away. Never miss an update with the LinkedIn app This email was intended for Tirth Chirayu Shah (Data & Agentic AI Engineer | Python • SQL • Power BI • Azure/GCP/AWS • Databricks | Built a Startup"
+      "notes": "Hi Tirth Chirayu, Enter this code to complete the reset. 455961 If you didn't request this pin, we recommend you change your LinkedIn password. Go to Settings & Privacy > Sign in & security > Change password To further secure your account, you should also: Enable two-step verification Settings & Privacy > Sign in & security > Two-step verification Check where you are signed in Settings & Privacy > Sign in & security > Where you're signed in Thanks for helping us keep your account secure. The LinkedIn Team ---------------------------------------- This email was intended for Tirth Chirayu Shah (Data & Agentic AI Engineer | Python • SQL • Power BI • Azure/GCP/AWS • Databricks | Built a Startup @BlackTieCars) Learn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_security_ato_challenge_send_pin%3BsDmE2xVMT6C8EoVDgCWrRw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1AzQd5E9EtEco1&trk=eml-security_ato_challenge_send_pin-SecurityHelp-0-textfooterglimmer&trkEmail=eml-security_ato_challenge_send_pin-SecurityHelp-0-textfooterglimmer-null-a06oc2~mt8mmmli~f0-null-null&eid=a06oc2-mt8mmmli-f0 You are receiving LinkedIn notification emails. Help: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_security_ato_challenge_send_pin%3BsDmE2xVMT6C8EoVDgCWrRw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1AzQd5E9EtEco1&trk=eml-security_ato_challenge_send_pin-help-0-textfooterglimmer&trkEmail=eml-security_ato_challenge_send_pin-help-0-textfooterglimmer-null-a06oc2~mt8mmmli~f0-null-null&eid=a06oc2-mt8mmmli-f0 © 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn. Please verify it's you. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ Hi Tirth Chirayu, Enter this code to complete the reset. 455961 If you didn't request this pin, we recommend you change your LinkedIn password. Go to Settings & Privacy > Sign in & security > Change password To further secure your account, you should also: Enable two-step verification Settings & Privacy > Sign in & security > Two-step verification Check where you are signed in Settings & Privacy > Sign in & security > Where you're signed in Thanks for helping us keep your account secure. The LinkedIn Team When and where this happened: Date: August 25, 2026 at 12:13 PM GMT Operating System: Windows Browser: Chrome Approximate Location: Ahmedabad, Gujarat, India Didn't do this? Be sure to change your password right away. Never miss an update with the LinkedIn app This email was intended for Tirth Chirayu Shah (Data & Agentic AI Engineer | Python • SQL • Power BI • Azure/GCP/AWS • Databricks | Built a Startup",
+      "aiDecision": "security/account verification noise",
+      "aiModel": "deterministic_rules",
+      "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
+      "aiConfidence": "high"
     },
     {
       "id": "software-general-application",

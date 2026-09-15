@@ -4580,6 +4580,9 @@ function attachServicesListeners(applications) {
           }
 
           const resData = await response.json();
+          if (resData.warning) {
+            appendConsole(`Batch ${batch.index}: ${resData.warning}`, "info");
+          }
           const results = resData.results || [];
           const batchTokens = resData.usage?.total_tokens || 0;
           totalTokensUsed += batchTokens;
@@ -4668,7 +4671,7 @@ function attachServicesListeners(applications) {
         localStorage.setItem("job_tracker_latest_reclassify_audit", JSON.stringify(auditReport));
         state.latestAuditReport = auditReport;
 
-        appendConsole(`Parallel OpenRouter AI Execution Complete! Processed ${total} targeted items (${reclassifiedCount} adjustments, ~${totalTokensUsed} tokens).`, "success");
+        appendConsole(`Re-Classification Complete! Processed ${total} targeted items (${reclassifiedCount} adjustments, ~${totalTokensUsed} tokens).`, "success");
         appendConsole(`Persisting ${total} updated application rows to Supabase...`, "info");
 
         state.data.updatedAt = new Date().toISOString();

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T21:47:20.990Z",
+  "generatedAt": "2026-09-15T21:56:11.614Z",
   "statusFilter": "all",
   "applyJson": false,
   "applySupabase": false,
@@ -10,11 +10,11 @@
     "not_related": 47
   },
   "stillBadByStatus": {
-    "applied": 514,
+    "not_related": 332,
+    "applied": 504,
     "rejected": 67,
-    "not_related": 321,
     "interviewed": 8,
-    "reply_needed": 7
+    "reply_needed": 6
   },
   "proposalExamples": [
     {
@@ -446,7 +446,7 @@
       "id": "amy-from-zensearch-you-by-zensearch-forward-deployed-engineer-sandtech-new-york-ny-full-time-3-y",
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Forward Deployed Engineer Sandtech New York, NY Full Time 3+ Y",
-      "status": "applied",
+      "status": "not_related",
       "subject": "Your Daily Zen: Today's Personalized Job Matches",
       "from": "Amy from ZenSearch <amy@zensearch.jobs>"
     },
@@ -662,7 +662,7 @@
       "id": "american-express-general-application",
       "company": "American Express",
       "role": "The Domain Aexp.com.",
-      "status": "applied",
+      "status": "not_related",
       "subject": "New job opportunities at American Express",
       "from": "Amex Careers <careers@recruitment.americanexpress.com>"
     },
@@ -694,7 +694,7 @@
       "id": "amy-from-zensearch-you-by-zensearch-devops-engineer-smartrent-phoenix-az-az-full-time-2-years-p",
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Devops Engineer Smartrent Phoenix, Az, AZ Full Time 2+ Years P",
-      "status": "applied",
+      "status": "not_related",
       "subject": "Your Daily Zen: Today's Personalized Job Matches",
       "from": "Amy from ZenSearch <amy@zensearch.jobs>"
     },
@@ -742,7 +742,7 @@
       "id": "amy-from-zensearch-you-by-zensearch-data-engineer-proarch-athens-ga-contract-athens-ga-contract",
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Data Engineer Proarch Athens, GA Contract Athens, GA Contract",
-      "status": "applied",
+      "status": "not_related",
       "subject": "Your Daily Zen: Today's Personalized Job Matches",
       "from": "Amy from ZenSearch <amy@zensearch.jobs>"
     },
@@ -862,7 +862,7 @@
       "id": "amy-from-zensearch-you-by-zensearch-forward-deployed-data-engineer-us-datafold-remote-us-full-t",
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Forward Deployed Data Engineer - US Datafold Remote, US Full T",
-      "status": "applied",
+      "status": "not_related",
       "subject": "Your Daily Zen: Today's Personalized Job Matches",
       "from": "Amy from ZenSearch <amy@zensearch.jobs>"
     },
@@ -1014,7 +1014,7 @@
       "id": "amy-from-zensearch-you-by-zensearch-data-engineer-ii-analytics-modeling-clear-new-york-ny-ny",
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Data Engineer Ii, Analytics & Modeling Clear New York, Ny, NY",
-      "status": "applied",
+      "status": "not_related",
       "subject": "Your Daily Zen: Today's Personalized Job Matches",
       "from": "Amy from ZenSearch <amy@zensearch.jobs>"
     },

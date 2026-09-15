@@ -9,11 +9,11 @@ export const ALLOWED_STATUSES = new Set([
 
 const EEO_RE = /self.?identification|voluntary self.?id|equal employment opportunity|eeo (survey|form|questionnaire|information)|ofccp|disability self.?id|veteran self.?id|demographic (survey|form|information)|race and ethnicity|ethnic(ity)? (survey|form)|gender (survey|form)|diversity questionnaire/i;
 
-const SECURITY_RE = /\b(otp|one-time password|verification code|security code|2fa|two-factor|reset your password|sign-in code|login code|verify your email|verify your account|candidate account verification)\b/i;
+const SECURITY_RE = /\b(otp|one-time password|verification code|security code|pin\s*\d{4,8}|2fa|two-factor|reset your password|sign-in code|login code|verify your email|verify your account|verify your new device|candidate account verification)\b/i;
 
-const JOB_ALERT_RE = /\b(job alert|jobs you might like|recommended jobs|job recommendations|new jobs|latest .* jobs|similar jobs|view similar jobs|opportunities you may be interested|apply faster with autofill|job matches for|curated for you|unsubscribe from job alerts?)\b/i;
+const JOB_ALERT_RE = /\b(job alert|jobs you might like|recommended jobs|job recommendations|new jobs|latest .* jobs|similar jobs|view similar jobs|opportunities you may be interested|apply faster with autofill|job matches for|curated for you|personalized job matches|your daily zen|new job opportunities|is hiring now|unsubscribe from job alerts?)\b/i;
 
-const JOB_ALERT_SENDER_RE = /jobalerts?|jobright|ziprecruiter|trueup|seek recommendations|builtin|alerts\.jobot|jobs@alerts|noreply@s\.seek/i;
+const JOB_ALERT_SENDER_RE = /jobalerts?|jobright|ziprecruiter|trueup|seek recommendations|zensearch|builtin|alerts\.jobot|jobs@alerts|noreply@s\.seek/i;
 
 const PLATFORM_SENDER_RE = /jobs-noreply@linkedin\.com|jobalerts-noreply@linkedin\.com|noreply@linkedin\.com|no-?reply@linkedin\.com|notifications@linkedin\.com|@myworkday\.com|@otp\.workday\.com|@greenhouse-mail\.io|no-?reply@us\.greenhouse-mail\.io|no-?reply@hire\.lever\.co|@lever\.co|no-?reply@ashbyhq\.com|@smartrecruiters\.com|no-?reply@smartrecruiters\.com|@icims\.com|@bamboohr\.com|@workablemail\.com|@applytojob\.com|@comeet-notifications\.com|noreply@indeed\.com|no-?reply@indeed\.com|@dover\.com/i;
 

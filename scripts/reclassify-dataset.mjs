@@ -154,7 +154,7 @@ function classifyCleanupSafety(currentStatus, proposedStatus, ruleId) {
 
 async function applySupabase(changes, classifiedAt) {
   const sbUrl = process.env.SUPABASE_URL || "https://dykamjxudtxkwgfllxxy.supabase.co";
-  const sbKey = process.env.SUPABASE_ANON_KEY;
+  const sbKey = process.env.SUPABASE_ANON_KEY || "sb_publishable_b2SuLtxZgeR-LGQRzMa3_A_lxV0bn75";
   if (!sbUrl || !sbKey) throw new Error("SUPABASE_URL and SUPABASE_ANON_KEY are required for --apply-supabase");
 
   for (let i = 0; i < changes.length; i += BATCH_SIZE) {

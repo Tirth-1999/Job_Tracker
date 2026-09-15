@@ -224,13 +224,6 @@ export default async function handler(req, res) {
   const customKey = req.headers.authorization ? req.headers.authorization.replace(/^Bearer\s+/i, "") : null;
   const apiKey = customKey || process.env.OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEYS || process.env.OPENROUTER_API_KEY_2 || process.env.GEMINI_API_KEY;
 
-  if (!apiKey) {
-    return res.status(500).json({
-      error: "OPENROUTER_API_KEY is not configured in Vercel Environment Variables. " +
-        "Please add OPENROUTER_API_KEY in Vercel Dashboard → Project Settings → Environment Variables."
-    });
-  }
-
   const chosenModel = model || process.env.OPENROUTER_MODEL || "google/gemini-3.7-flash";
 
   // Build input payload for LLM
@@ -244,6 +237,16 @@ export default async function handler(req, res) {
     email_body_snippet: (app.notes || app.email_body || app.snippet || "").slice(0, 3000),
     notes: (app.notes || "").slice(0, 3000)
   }));
+
+  if (!apiKey) {
+    return res.status(200).json({
+      success: true,
+      model_used: "deterministic_rules",
+      usage: null,
+      warning: "OpenRouter key is not configured; returned deterministic fallback classifications.",
+      results: deterministicFallbackResults(inputPayload, "OpenRouter key missing")
+    });
+  }
 
   try {
     let aiResponse;
@@ -293,8 +296,13 @@ export default async function handler(req, res) {
 
     if (!aiResponse.ok) {
       const errText = await aiResponse.text();
-      return res.status(aiResponse.status).json({
-        error: `OpenRouter API returned HTTP ${aiResponse.status}: ${errText}`
+      return res.status(200).json({
+        success: true,
+        model_used: "deterministic_rules",
+        usage: null,
+        warning: `OpenRouter API returned HTTP ${aiResponse.status}; returned deterministic fallback classifications.`,
+        error_detail: errText.slice(0, 1000),
+        results: deterministicFallbackResults(inputPayload, `OpenRouter HTTP ${aiResponse.status}`)
       });
     }
 
@@ -377,12 +385,36 @@ export default async function handler(req, res) {
       results: mergedResults
     });
   } catch (err) {
-    return res.status(500).json({
-      error: `Server error executing AI Reclassification: ${err.message}`
+    return res.status(200).json({
+      success: true,
+      model_used: "deterministic_rules",
+      usage: null,
+      warning: "AI reclassification fell back to deterministic rules after a server error.",
+      error_detail: err.message,
+      results: deterministicFallbackResults(inputPayload, "Server fallback")
     });
   }
 }
 
 function normalizeRoleResult(role, company) {
   return cleanRole(role, company) || role || "General Application";
+}
+
+function deterministicFallbackResults(inputPayload, fallbackReason) {
+  return inputPayload.map((app) => {
+    const deterministic = classifyDeterministic({
+      from: app.latest_from,
+      subject: app.latest_subject,
+      body: app.notes || app.email_body_snippet
+    });
+    return {
+      id: app.id,
+      company: app.company,
+      role: normalizeRoleResult(app.role, app.company),
+      status: deterministic?.status || app.current_status,
+      confidence: deterministic?.confidence || "low",
+      reason: deterministic?.reason || `${fallbackReason}: retained existing classification`,
+      rule_id: deterministic?.ruleId || "fallback_retain"
+    };
+  });
 }
