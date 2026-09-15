@@ -33,7 +33,9 @@ const REJECTION_RE = /won.t be moving forward|will not be moving forward|decided
 
 const CONDITIONAL_REJECTION_RE = /if (you are|you were|we are) not (selected|able).{0,150}(please|check|visit|keep|our|feel|thank)|if we are unable to offer.{0,100}(encourage|invite|visit|thank)|we will (only )?(be )?in touch (only )?if your qualifications|we will reach out (to you )?if your (skills|qualifications|experience|background)|if your (qualifications|skills|experience|background) (match|align|fit)|only if your qualifications|will be in touch if your|will contact you if (your|we)|reach out if (your|we|there)|it is likely that we have decided|if you (do not hear|have not heard) from us.{0,180}(likely|means|decided|moved|pursue|filled)|if the position is no longer listed.{0,200}(decided|pursue|filled|canceled)/i;
 
-const OFFER_RE = /pleased to offer|extend an offer|offer letter|employment offer|congratulations on your offer|formal offer|offer of employment/i;
+const OFFER_RE = /(?:we are|we're|i am|i'm) (?:pleased|thrilled|excited|happy) to offer you|(?:extend|extended) (?:you )?an offer|your offer letter|offer letter (?:is|for|from)|formal offer|offer of employment/i;
+
+const OFFER_FALSE_POSITIVE_RE = /not an offer of employment|prepare an offer of employment|if you accept the offer|not selected.{0,80}(interview|offer)|no guarantee of (an )?offer/i;
 
 export function classifyDeterministic({ from = "", subject = "", body = "" } = {}) {
   const fromLower = String(from).toLowerCase();
@@ -65,7 +67,7 @@ export function classifyDeterministic({ from = "", subject = "", body = "" } = {
     return result("rejected", "high", "formal rejection/non-selection language", "rejection");
   }
 
-  if (OFFER_RE.test(text)) {
+  if (OFFER_RE.test(text) && !OFFER_FALSE_POSITIVE_RE.test(text)) {
     return result("offered", "high", "formal offer language", "offer");
   }
 
