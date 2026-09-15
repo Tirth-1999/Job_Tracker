@@ -35,7 +35,7 @@ const CONDITIONAL_REJECTION_RE = /if (you are|you were|we are) not (selected|abl
 
 const OFFER_RE = /(?:we are|we're|i am|i'm) (?:pleased|thrilled|excited|happy) to offer you|(?:extend|extended) (?:you )?an offer|your offer letter|offer letter (?:is|for|from)|formal offer|offer of employment/i;
 
-const OFFER_FALSE_POSITIVE_RE = /not an offer of employment|prepare an offer of employment|if you accept the offer|not selected.{0,80}(interview|offer)|no guarantee of (an )?offer/i;
+const OFFER_FALSE_POSITIVE_RE = /not an offer of employment|conditional offer of employment|prepare an offer of employment|if you accept the offer|not selected.{0,80}(interview|offer)|no guarantee of (an )?offer/i;
 
 export function classifyDeterministic({ from = "", subject = "", body = "" } = {}) {
   const fromLower = String(from).toLowerCase();

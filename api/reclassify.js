@@ -2,6 +2,7 @@
 // Vercel Serverless Function — Real LLM Batch Reclassification via OpenRouter / Gemini API
 
 import { classifyDeterministic } from "../src/classification/rules.mjs";
+import { cleanRole } from "../src/classification/normalize.mjs";
 
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
@@ -338,11 +339,12 @@ export default async function handler(req, res) {
       });
 
       if (deterministic) {
+        const aiResult = aiResultsById.get(app.id) || {};
         return {
-          ...(aiResultsById.get(app.id) || {}),
+          ...aiResult,
           id: app.id,
-          company: aiResultsById.get(app.id)?.company || app.company,
-          role: aiResultsById.get(app.id)?.role || app.role,
+          company: aiResult.company || app.company,
+          role: normalizeRoleResult(aiResult.role || app.role, aiResult.company || app.company),
           status: deterministic.status,
           confidence: deterministic.confidence,
           reason: deterministic.reason,
@@ -350,7 +352,15 @@ export default async function handler(req, res) {
         };
       }
 
-      return aiResultsById.get(app.id) || {
+      const aiResult = aiResultsById.get(app.id);
+      if (aiResult) {
+        return {
+          ...aiResult,
+          role: normalizeRoleResult(aiResult.role, aiResult.company || app.company)
+        };
+      }
+
+      return {
         id: app.id,
         company: app.company,
         role: app.role,
@@ -371,4 +381,8 @@ export default async function handler(req, res) {
       error: `Server error executing AI Reclassification: ${err.message}`
     });
   }
+}
+
+function normalizeRoleResult(role, company) {
+  return cleanRole(role, company) || role || "General Application";
 }

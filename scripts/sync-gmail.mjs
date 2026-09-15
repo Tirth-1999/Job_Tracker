@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "node:path";
 import { classifyDeterministic } from "../src/classification/rules.mjs";
+import { cleanRole } from "../src/classification/normalize.mjs";
 
 // Auto-load local .env file if present
 if (fsSync.existsSync(".env")) {
@@ -1237,6 +1238,9 @@ function sanitizeRole(role, subject = "", notes = "") {
   if (/The Senior Data Engineer Position/i.test(role)) {
     return "Senior Data Engineer";
   }
+
+  const normalizedRole = cleanRole(role);
+  if (normalizedRole) return normalizedRole;
 
   let cleaned = String(role || "")
     .replace(/\bSr\.\s*/gi, "Senior ")

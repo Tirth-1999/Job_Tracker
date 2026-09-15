@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import { classifyDeterministic } from "../src/classification/rules.mjs";
+import { isBadRole } from "../src/classification/normalize.mjs";
 
 const DATA_PATH = new URL("../data/applications.json", import.meta.url);
 const data = JSON.parse(await fs.readFile(DATA_PATH, "utf8"));
@@ -74,7 +75,8 @@ function normalize(value) {
 
 function getBadRoleReason(app) {
   const role = String(app.role || "");
-  if (!role || /^general application$/i.test(role)) return "generic_role";
+  if (!isBadRole(role, app.company)) return "";
+  if (!role || /^(general application|your application|your interest|this role|unknown|applying|sr|jr|you)$/i.test(role)) return "generic_role";
   if (normalize(app.company) && normalize(app.company) === normalize(role)) return "role_equals_company";
   if (/more success view similar jobs|using linkedin|candidate account|job alert|&nbsp|view similar jobs|you from jobright/i.test(role)) {
     return "artifact_phrase";

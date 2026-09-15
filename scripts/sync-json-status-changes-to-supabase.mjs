@@ -19,13 +19,18 @@ const changes = [];
 for (const app of after.applications || []) {
   const old = beforeById.get(app.id);
   if (!old) continue;
-  if (old.status === app.status && old.confidence === app.confidence && old.aiDecision === app.aiDecision) continue;
+  const statusChanged = old.status !== app.status || old.confidence !== app.confidence || old.aiDecision !== app.aiDecision;
+  const roleChanged = old.role !== app.role;
+  if (!statusChanged && !roleChanged) continue;
   changes.push({
     id: app.id,
     company: app.company,
-    role: app.role,
+    oldRole: old.role,
+    newRole: app.role,
     oldStatus: old.status,
     newStatus: app.status,
+    roleChanged,
+    statusChanged,
     confidence: app.confidence || "high",
     aiDecision: app.aiDecision || app.reason || "deterministic reclassification",
     aiModel: app.aiModel || app.classifier || "deterministic_rules",
@@ -36,6 +41,8 @@ for (const app of after.applications || []) {
 console.log(JSON.stringify({
   dryRun: DRY_RUN,
   changes: changes.length,
+  roleChanges: changes.filter((change) => change.roleChanged).length,
+  statusChanges: changes.filter((change) => change.statusChanged).length,
   byNewStatus: countBy(changes, "newStatus"),
   examples: changes.slice(0, 20)
 }, null, 2));
@@ -58,12 +65,15 @@ for (let i = 0; i < changes.length; i += BATCH_SIZE) {
         Prefer: "return=minimal"
       },
       body: JSON.stringify({
-        status: change.newStatus,
-        confidence: change.confidence,
-        ai_decision: change.aiDecision,
-        ai_model: change.aiModel,
-        ai_classified_at: now,
-        ai_confidence: change.aiConfidence,
+        ...(change.statusChanged ? {
+          status: change.newStatus,
+          confidence: change.confidence,
+          ai_decision: change.aiDecision,
+          ai_model: change.aiModel,
+          ai_classified_at: now,
+          ai_confidence: change.aiConfidence
+        } : {}),
+        ...(change.roleChanged ? { role: change.newRole } : {}),
         updated_at: now
       })
     });
