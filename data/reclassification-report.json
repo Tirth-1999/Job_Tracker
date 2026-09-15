@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T16:19:15.671Z",
+  "generatedAt": "2026-09-15T21:15:01.450Z",
   "mode": {
     "applyJson": false,
     "applySupabase": false,
@@ -7,28 +7,28 @@
     "limit": 0,
     "batchSize": 50
   },
-  "totalApplications": 3456,
-  "unchanged": 3303,
-  "proposedChanges": 153,
+  "totalApplications": 3462,
+  "unchanged": 3308,
+  "proposedChanges": 154,
   "selectedChanges": 0,
   "safeAutoFixes": 0,
-  "reviewOnlyChanges": 153,
+  "reviewOnlyChanges": 154,
   "byCurrentStatus": {
     "rejected": 104,
-    "applied": 7,
+    "applied": 8,
     "interviewed": 4,
     "not_related": 38
   },
   "byProposedStatus": {
     "applied": 132,
-    "reply_needed": 11,
+    "reply_needed": 12,
     "not_related": 5,
     "interviewed": 5
   },
   "byRule": {
     "application_receipt": 65,
+    "human_reply": 12,
     "platform_receipt": 62,
-    "human_reply": 11,
     "job_alert": 2,
     "linkedin_receipt": 5,
     "interview": 4,
@@ -39,7 +39,7 @@
   "selectedByRule": {},
   "reviewReasons": {
     "do_not_downgrade_rejected": 104,
-    "ambiguous_status_change": 7,
+    "ambiguous_status_change": 8,
     "do_not_downgrade_interviewed": 4,
     "reactivating_other_email_requires_review": 38
   },
@@ -58,6 +58,20 @@
       "reason": "application receipt",
       "safe": false,
       "reviewReason": "do_not_downgrade_rejected"
+    },
+    {
+      "id": "yoh-this-role-thank-you-for-your-interest",
+      "company": "Yoh",
+      "role": "This Role. Thank You For Your Interest",
+      "from": "Yoh <selfidentify@yoh.com>",
+      "subject": "Next step with Yoh",
+      "currentStatus": "applied",
+      "proposedStatus": "reply_needed",
+      "confidence": "medium",
+      "ruleId": "human_reply",
+      "reason": "human recruiter response requested",
+      "safe": false,
+      "reviewReason": "ambiguous_status_change"
     },
     {
       "id": "home-depot-your-interest-188577",
@@ -730,20 +744,6 @@
       "reason": "application receipt",
       "safe": false,
       "reviewReason": "reactivating_other_email_requires_review"
-    },
-    {
-      "id": "modus-create-general-application",
-      "company": "Modus Create",
-      "role": "AI Engineer",
-      "from": "no-reply@moduscreate.com",
-      "subject": "Thank you for applying to Modus Create LLC!",
-      "currentStatus": "rejected",
-      "proposedStatus": "applied",
-      "confidence": "high",
-      "ruleId": "application_receipt",
-      "reason": "application receipt",
-      "safe": false,
-      "reviewReason": "do_not_downgrade_rejected"
     }
   ]
 }

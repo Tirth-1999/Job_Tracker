@@ -450,6 +450,37 @@ button:hover {
   white-space: nowrap;
 }
 
+.badge-quality {
+  display: inline-flex;
+  align-items: center;
+  min-height: 18px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.badge-review {
+  color: #9f1239;
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+
+.badge-low-confidence {
+  color: #92400e;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.badge-repaired {
+  color: #166534;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
 .card-subject-link {
   text-decoration: none;
   color: inherit;

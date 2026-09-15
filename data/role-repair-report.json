@@ -1,2717 +1,444 @@
 {
-  "generatedAt": "2026-09-15T16:14:31.088Z",
-  "statusFilter": "applied",
-  "applyJson": true,
+  "generatedAt": "2026-09-15T21:15:01.450Z",
+  "statusFilter": "all",
+  "applyJson": false,
   "applySupabase": false,
-  "totalApplications": 3456,
-  "proposals": 300,
-  "stillBad": 513,
+  "totalApplications": 3462,
+  "proposals": 47,
+  "stillBad": 917,
   "proposalsByStatus": {
-    "applied": 300
+    "not_related": 47
   },
   "stillBadByStatus": {
-    "applied": 513
+    "applied": 514,
+    "rejected": 67,
+    "not_related": 321,
+    "interviewed": 8,
+    "reply_needed": 7
   },
   "proposalExamples": [
     {
-      "id": "anthropic-anthropic",
-      "company": "Anthropic",
-      "oldRole": "Anthropic",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Anthropic",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "lyra-health-lyra-health",
-      "company": "Lyra Health",
-      "oldRole": "Lyra Health",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Lyra Health",
-      "from": "Lyra Health <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "yoh-your-application",
-      "company": "Yoh",
-      "oldRole": "Your Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank You for Your Application!",
-      "from": "Yoh Recruiting Team <Do-not-reply@yoh.com>"
-    },
-    {
-      "id": "h1-general-application",
-      "company": "H1",
+      "id": "seek-recommendations-general-application",
+      "company": "SEEK Recommendations",
       "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to H1",
-      "from": "H1 <no-reply@hire.lever.co>"
+      "newRole": "Senior Business Analyst",
+      "status": "not_related",
+      "subject": "Senior Business Analyst + 11 new jobs",
+      "from": "SEEK Recommendations <noreply@s.seek.com.au>"
     },
     {
-      "id": "alloy-ai-alloy-ai",
-      "company": "Alloy.ai",
-      "oldRole": "Alloy.ai",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Alloy.ai",
-      "from": "\"Alloy.ai\" <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "nyl-expressing-an-interest-in-new-york-life-by-applying-to-req-94843-associate-aw-94843",
-      "company": "NYL",
-      "oldRole": "Expressing An Interest In New York Life By Applying To Req 94843 - Associate, AW",
-      "newRole": "Req 94843 - Associate, AWS Data Engineer",
-      "status": "applied",
-      "subject": "Tirth, we've received your application!",
-      "from": "NYL Talent Acquisition <careerautoresponder@careerhub.newyorklife.com>"
-    },
-    {
-      "id": "enhance-it-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Enhance IT",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Enhance IT",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "leaderhub-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Leaderhub",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to LeaderHub",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "nam-info-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "NAM Info",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to NAM Info Inc",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "optomi-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Optomi",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Platform Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Optomi",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "reach-velocity-emerging-technology-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Reach Velocity - Emerging Technology",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Reach Velocity - Emerging Technology 🇺🇸 🇵🇹",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "kareer-basycs-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Kareer Basycs",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Junior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Kareer Basycs",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "clearco-your-application",
-      "company": "Clearco",
-      "oldRole": "Your Application",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Sign-in link for your application at Pantherx Specialty LLC",
-      "from": "ClearCo <do_not_reply@clearcompany.com>"
-    },
-    {
-      "id": "pantherx-rare-pharmacy-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Pantherx Rare Pharmacy",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to PANTHERx Rare Pharmacy",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "focus-general-application",
-      "company": "Focus",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying with Focus",
-      "from": "Focus <hello@send.applicantemails.com>"
-    },
-    {
-      "id": "onin-technology-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Onin Technology",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Onin Technology",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "contractstaffingrecruiters-com-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Contractstaffingrecruiters.com",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to ContractStaffingRecruiters.com",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "brooksource-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Brooksource",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Brooksource",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "yoh-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Yoh",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Yoh, A Day & Zimmermann Company",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "smart-it-frame-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Smart IT Frame",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Smart IT Frame LLC",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "infoway-group-the-below-requirements-kindly-send-me-the-suitable-profiles-for-this-role",
-      "company": "Infoway Group",
-      "oldRole": "The Below Requirements. Kindly Send Me The Suitable Profiles For This Role.",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Data Engineer",
-      "from": "Sedhu Infoway <Sedhu@infowaygroup.com>"
-    },
-    {
-      "id": "position-of-data-analytics-engineer-the-position-of-data-analytics-engineer",
-      "company": "Position Of Data & Analytics Engineer",
-      "oldRole": "The Position Of Data & Analytics Engineer",
-      "newRole": "Data & Analytics Engineer",
-      "status": "applied",
-      "subject": "ADT Careers application update for the position of Data & Analytics Engineer",
-      "from": "ADT Careers <ADTCareers@horizon.mail.adt.com>"
-    },
-    {
-      "id": "shweta-lonare-its-end-customer-through-salesforce-servicenow-selenium-and-automation-our-r",
-      "company": "Shweta Lonare",
-      "oldRole": "Its End Customer Through Salesforce, Servicenow, Selenium, And Automation. Our R",
-      "newRole": "Cloud Data Solution Architect (data & AI Solution Specialist)",
-      "status": "applied",
-      "subject": "Hiring - Cloud Data Solution Architect - NJ / NYC, NY / Dallas, TX / Charlotte, NC / Atlanta, GA / Chicago, IL - Onsite - Fulltime Employment",
-      "from": "Shweta Lonare <shweta@clifyx.com>"
-    },
-    {
-      "id": "smartrent-smartrent",
-      "company": "Smartrent",
-      "oldRole": "Smartrent",
-      "newRole": "DevOps Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to SmartRent",
-      "from": "no-reply@smartrent.com"
-    },
-    {
-      "id": "oxbow-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Oxbow",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Oxbow Talent",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "ethos-advisory-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "ETHOS - & Advisory",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to ETHOS - Talent & Advisory",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "jobot-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Jobot",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Jobot",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "jenner-block-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Jenner & Block",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Jenner & Block",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "reuben-cooley-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Reuben Cooley",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Reuben Cooley Inc.",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "caspian-one-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Caspian One",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Databricks Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Caspian One",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "coreview-coreview",
-      "company": "Coreview",
-      "oldRole": "Coreview",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to CoreView",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "coreview-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Coreview",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to CoreView",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "bln24-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "BLN24",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to BLN24",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "ledgent-technology-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Ledgent Technology",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Ledgent Technology",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "dacut-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "DACUT",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to DACUT",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "atrium-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Atrium",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Atrium",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "linkedin-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Linkedin",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to 7 Brew Coffee",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "codernation-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Codernation",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Automation Test Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Codernation Technologies",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "stelvio-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Stelvio",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Stelvio Inc.",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "c5i-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "C5i",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to C5i",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "vitol-the-position-of-data-engineer-we-will-be",
-      "company": "Vitol",
-      "oldRole": "The Position Of Data Engineer . We Will Be",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Vitol application confirmation",
-      "from": "Vitol <notification@smartrecruiters.com>"
-    },
-    {
-      "id": "fieldai-fieldai",
-      "company": "Fieldai",
-      "oldRole": "Fieldai",
-      "newRole": "Senior Data Platform Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to FieldAI",
-      "from": "FieldAI <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "centerfield-centerfield",
-      "company": "Centerfield",
-      "oldRole": "Centerfield",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Centerfield!",
-      "from": "Centerfield Talent Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "novellia-novellia",
-      "company": "Novellia",
-      "oldRole": "Novellia",
-      "newRole": "Senior Product Analytics Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Novellia!",
-      "from": "Novellia Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "prenuvo-prenuvo",
-      "company": "Prenuvo",
-      "oldRole": "Prenuvo",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "We have received your application! Thank you for applying to Prenuvo",
-      "from": "no-reply@prenuvo.com"
-    },
-    {
-      "id": "quest-global-the-role-of-nbsp",
-      "company": "Quest Global",
-      "oldRole": "The Role Of&nbsp",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "We're inviting you to apply!",
-      "from": "Quest Global <talent@recruitment.quest-global.com>"
-    },
-    {
-      "id": "abbvie-the-data-engineer",
-      "company": "Abbvie",
-      "oldRole": "The Data Engineer",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "AbbVie Application Received - Thank you!",
-      "from": "AbbVie <notification@talentacquisition.abbvie.com>"
-    },
-    {
-      "id": "fanduel-fanduel",
-      "company": "Fanduel",
-      "oldRole": "Fanduel",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to FanDuel",
-      "from": "no-reply@fanduel.com"
-    },
-    {
-      "id": "job-updates-the-operations-data-analyst",
-      "company": "Job Updates",
-      "oldRole": "The Operations Data Analyst",
-      "newRole": "Operations Data Analyst",
-      "status": "applied",
-      "subject": "Application Status Update: Operations Data Analyst at Somerled Group",
-      "from": "Job Updates <updates@mail.hiringfluency.com>"
-    },
-    {
-      "id": "greylock-partners-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Greylock Partners",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Greylock Partners",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "inventure-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Inventure",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Inventure",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "riim-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "RIIM",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Forward Deployed AI Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to RIIM",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "power-bi-developer-role-at-aperia-the-power-bi-developer",
-      "company": "Power BI Developer Role At Aperia",
-      "oldRole": "The Power BI Developer",
-      "newRole": "Power BI Developer",
-      "status": "applied",
-      "subject": "Thank you for applying to the Power BI Developer role at Aperia!",
-      "from": "no-reply@aperia.com"
-    },
-    {
-      "id": "gopuff-general-application",
-      "company": "Gopuff",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying at Gopuff!",
-      "from": "Gopuff <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "taxrise-taxrise",
-      "company": "Taxrise",
-      "oldRole": "Taxrise",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to TaxRise!",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "proarch-proarch",
-      "company": "Proarch",
-      "oldRole": "Proarch",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to ProArch",
-      "from": "Workable <noreply@candidates.workablemail.com>"
-    },
-    {
-      "id": "abby-care-your-interest",
-      "company": "Abby Care",
-      "oldRole": "Your Interest",
-      "newRole": "Applied AI Engineer",
-      "status": "applied",
-      "subject": "We’ve received your application! | Abby Care   ",
-      "from": "Abby Care Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "11x-ai-11x-ai",
-      "company": "11x.ai",
-      "oldRole": "11x.ai",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to 11x.ai",
-      "from": "\"11x.ai Recruiting\" <no-reply@gem.com>"
-    },
-    {
-      "id": "r0000393551-data-engineer-r0000393551-data-engineer-erence",
-      "company": "R0000393551 Data Engineer",
-      "oldRole": "R0000393551 Data Engineer",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Application Received for R0000393551 Data Engineer",
-      "from": "cat@myworkday.com"
-    },
-    {
-      "id": "accenture-strategy-senior-manager-for-technology-ai-native-companies-erence",
-      "company": "Accenture",
-      "oldRole": "Your Interest",
-      "newRole": "Forward Deployed AI Engineer",
-      "status": "applied",
-      "subject": "Update on Your Accenture Application",
-      "from": "Accenture Careers <accenture@myworkday.com>"
-    },
-    {
-      "id": "imprint-team-your-application",
-      "company": "Imprint Team",
-      "oldRole": "Your Application",
-      "newRole": "Data Infrastructure Engineer",
-      "status": "applied",
-      "subject": "Imprint | Thank you for your Application",
-      "from": "Imprint Talent Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "trupanion-trupanion",
-      "company": "Trupanion",
-      "oldRole": "Trupanion",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Trupanion!",
-      "from": "Trupanion <notification@recruiting.trupanion.com>"
-    },
-    {
-      "id": "humana-humana-425558",
-      "company": "Humana",
-      "oldRole": "Humana",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Finish your Humana application today",
-      "from": "Humana <Recruiting@jobs.humana.com>"
-    },
-    {
-      "id": "event-network-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Event Network",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Event Network",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "cvent-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Cvent",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Senior Database Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Cvent",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "paretohealth-paretohealth",
-      "company": "Paretohealth",
-      "oldRole": "Paretohealth",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to ParetoHealth",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "paretohealth-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Paretohealth",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to ParetoHealth",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "alvion-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Alvion",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Alvion",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "taxrise-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Taxrise",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to TaxRise",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "sotalent-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Sotalent",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Databricks Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to SoTalent",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "per-scholas-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Per Scholas",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Per Scholas",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "prodigy-resources-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Prodigy Resources",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Prodigy Resources",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "ocmi-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "OCMI",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to OCMI, Inc. (O'Connor Construction Management)",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "gopuff-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Gopuff",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to GoPuff",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "tenet-healthcare-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Tenet Healthcare",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Tenet Healthcare",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "optum-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Optum",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Forward Deployed Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Optum",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "steampunk-your-application",
-      "company": "Steampunk",
-      "oldRole": "Your Application",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application",
-      "from": "steampunk recruiting <steampunk+autoreply@talent.icims.com>"
-    },
-    {
-      "id": "cognite-cognite",
-      "company": "Cognite",
-      "oldRole": "Cognite",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Cognite",
-      "from": "no-reply@eu.greenhouse-mail.io"
-    },
-    {
-      "id": "astrana-health-your-interest-in-the-position-at-astrana-health-inc-and-for-taking-the-time-to",
-      "company": "Astrana Health",
-      "oldRole": "Your Interest In The Position At Astrana Health, Inc. And For Taking The Time To",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Your application to Astrana Health, Inc.",
-      "from": "Astrana Health Inc <astranahealth@pinpoint.email>"
-    },
-    {
-      "id": "mastercard-people-your-application",
-      "company": "Mastercard People",
-      "oldRole": "Your Application",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application!",
-      "from": "MasterCard People Services <mastercard@myworkday.com>"
-    },
-    {
-      "id": "roblox-roblox",
-      "company": "Roblox",
-      "oldRole": "Roblox",
-      "newRole": "Senior Software Engineer, Data Engineering (short Term)",
-      "status": "applied",
-      "subject": "Thank you for applying to Roblox!",
-      "from": "no-reply@roblox.com"
-    },
-    {
-      "id": "ananya-singh-the-below-position-if-you-are-interested-please-share-your-resume-at",
-      "company": "Ananya Singh",
-      "oldRole": "The Below Position. If You Are Interested, Please Share Your Resume At",
-      "newRole": "Senior AI Engineer, Agentic Systems (java, Python)",
-      "status": "applied",
-      "subject": "Fwd: Senior AI Engineer, Agentic Systems (Java, Python) | Plano, TX/ Columbus, OH (5 days onsite – Day 1)",
-      "from": "Ananya Singh <ananya.anil.sing@gmail.com>"
-    },
-    {
-      "id": "ananya-singh-with-verizon-that-you-might-be-interested-in-would-go-onsite-3-4-days-a-week-in",
-      "company": "Insight Global",
-      "oldRole": "With Verizon That You Might Be Interested In. Would Go Onsite 3-4 Days A Week In",
-      "newRole": "AI Engineer",
-      "status": "applied",
-      "subject": "Fwd: AI Engineer Seeking Opportunities Through Insight Global",
-      "from": "Ananya Singh <ananya.anil.sing@gmail.com>"
-    },
-    {
-      "id": "ariel-partners-general-application",
-      "company": "Ariel Partners",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying at Ariel Partners",
-      "from": "Ariel Partners <notifications@app.bamboohr.com>"
-    },
-    {
-      "id": "double-e-double-e",
-      "company": "Double E",
-      "oldRole": "Double E",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Double E!",
-      "from": "\"Double E Company, LLC\" <do-not-reply@mail.paylocity.com>"
-    },
-    {
-      "id": "lower-lower",
-      "company": "Lower",
-      "oldRole": "Lower",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Lower",
-      "from": "Lower Recruiting <no-reply@gem.com>"
-    },
-    {
-      "id": "xcimer-energy-xcimer-energy",
-      "company": "Xcimer Energy",
-      "oldRole": "Xcimer Energy",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Xcimer Energy",
-      "from": "Xcimer Energy <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "msg-19fdc206809c504f",
-      "company": "Clera",
-      "oldRole": "Clera",
-      "newRole": "AWS Data Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Clera!",
-      "from": "Clera Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "equipmentshare-equipmentshare",
-      "company": "Equipmentshare",
-      "oldRole": "Equipmentshare",
-      "newRole": "Data Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to EquipmentShare",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "walmart-esignature-the-role-listed-above-however-we-need-additional-information-nbsp",
-      "company": "Walmart Esignature",
-      "oldRole": "The Role Listed Above. However, We Need Additional Information. &nbsp",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "WALMART/ Tirth Shah – Data Engineer III",
-      "from": "Walmart esignature <docusign@esignature.walmart.com>"
-    },
-    {
-      "id": "franklin-templeton-the-data-engineer",
-      "company": "Franklin Templeton",
-      "oldRole": "The Data Engineer",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "We received your application. Here’s the next steps.",
-      "from": "Franklin Templeton <recruiting@jobalerts.franklintempleton.com>"
-    },
-    {
-      "id": "hr-service-desk-your-application",
-      "company": "HR Service Desk",
-      "oldRole": "Your Application",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank You for Your Application",
-      "from": "HR Service Desk <brookfield@myworkday.com>"
-    },
-    {
-      "id": "abbvie-the-associate-data-engineer-ii-r00149997",
-      "company": "Abbvie",
-      "oldRole": "The Associate Data Engineer II-R00149997",
-      "newRole": "Associate Data Engineer II",
-      "status": "applied",
-      "subject": "AbbVie Application Received - Thank you!",
-      "from": "AbbVie <notification@talentacquisition.abbvie.com>"
-    },
-    {
-      "id": "alpaca-markets-alpaca-markets",
-      "company": "Alpaca Markets",
-      "oldRole": "Alpaca Markets",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Alpaca Markets",
-      "from": "no-reply@alpaca.markets"
-    },
-    {
-      "id": "ranger-technical-resources-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Ranger Technical Resources",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Ranger Technical Resources",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "equipmentshare-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Equipmentshare",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to EquipmentShare",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "taskrabbit-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Taskrabbit",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Taskrabbit",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "robert-half-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Robert Half",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Robert Half",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "intellisoft-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Intellisoft",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Forward Deployed Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Intellisoft Technologies",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "fintal-partners-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Fintal Partners",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Platform Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Fintal Partners",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "akkodis-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Akkodis",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Akkodis",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "quadrant-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Quadrant",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Quadrant Technologies",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "k-health-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "K Health",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to K Health",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "smartlight-analytics-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Smartlight Analytics",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Junior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to SmartLight Analytics",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "arkhya-tech-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Arkhya Tech",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Arkhya Tech. Inc.",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "syngenta-seeds-the-machine-learning-engineer-position-use-following-link-to-answer-it-https",
-      "company": "Syngenta Seeds",
-      "oldRole": "The Machine Learning Engineer Position. Use Following Link To Answer It. Https",
-      "newRole": "Machine Learning Engineer",
-      "status": "applied",
-      "subject": "Your job application at Syngenta Seeds has updates.",
-      "from": "Syngenta Seeds <notifications@careers.syngenta.com>"
-    },
-    {
-      "id": "xforia-global-technology-solutions-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Xforia Global & Technology Solutions",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Xforia Global Talent  & Technology Solutions",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "dexian-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Dexian",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Dexian",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "new-york-technology-partners-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "New York Technology Partners",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to New York Technology Partners",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "idr-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "IDR",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to IDR, Inc.",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "shakti-solutions-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Shakti Solutions",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Databricks Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Shakti Solutions",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "it-resources-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "IT Resources",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to IT Resources",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "selby-jennings-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Selby Jennings",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Selby Jennings",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "e-solutions-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "E-solutions",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to E-Solutions",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "mondrian-alpha-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Mondrian Alpha",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Mondrian Alpha",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "phoenix-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Phoenix",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to The Phoenix Group",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "allegiant-air-your-interest",
-      "company": "Allegiant Air",
-      "oldRole": "Your Interest",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thanks for your interest in the Data Engineer role, Tirth",
-      "from": "Allegiant Air <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "allegiant-allegiant",
-      "company": "Allegiant",
-      "oldRole": "Allegiant",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Allegiant",
-      "from": "Allegiant <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "circadia-health-circadia-health",
-      "company": "Circadia Health",
-      "oldRole": "Circadia Health",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Circadia Health",
-      "from": "Circadia Health <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "oorwin-the-data-engineer-matillion-bigquery",
-      "company": "Oorwin",
-      "oldRole": "The Data Engineer - Matillion, Bigquery",
-      "newRole": "Data Engineer - Matillion, Bigquery (w2 Only) Successfully",
-      "status": "applied",
-      "subject": "Received application for the Data Engineer - Matillion, BigQuery (W2 Only) successfully",
-      "from": "Oorwin <noreply@notify.triconitsolutions.com>"
-    },
-    {
-      "id": "r-011031-senior-data-engineer-r-011031-senior-data-engineer-011031",
-      "company": "R-011031 Senior Data Engineer",
-      "oldRole": "R-011031 Senior Data Engineer",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to R-011031 Senior Data Engineer",
-      "from": "Workday Notifications <workdaynotifications@alliedsolutions.net>"
-    },
-    {
-      "id": "data-ai-engineer-data-ai-engineer",
-      "company": "Data & AI Engineer",
-      "oldRole": "Data & AI Engineer",
-      "newRole": "AI Engineer",
-      "status": "applied",
-      "subject": "Application Received for Data & AI Engineer",
-      "from": "Workday Carlyle <carlyle@myworkday.com>"
-    },
-    {
-      "id": "tech-genius-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Tech Genius",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Tech Genius inc",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "next-gen-it-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Next Gen IT",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Next Gen IT, Inc",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "puig-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Puig",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Puig",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "curate-partners-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Curate Partners",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Curate Partners",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "tp-link-systems-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Tp-link Systems",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to TP-Link Systems Inc.",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "harvey-nash-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Harvey Nash",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Junior Databricks Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Harvey Nash",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "phaxis-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Phaxis",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "AI Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Phaxis",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "georgiatek-systems-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Georgiatek Systems",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to GeorgiaTEK Systems Inc.",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "futran-solutions-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Futran Solutions",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Forward Deployed Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Futran Solutions",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "howard-corley-from-servicenow-your-application",
-      "company": "Howard Corley From Servicenow",
-      "oldRole": "Your Application",
-      "newRole": "Senior Staff Data Platform Engineer - Apache Iceberg - Apache Spark",
-      "status": "applied",
-      "subject": "Thank You for Your Application",
-      "from": "Howard Corley from ServiceNow <notifications@smartrecruiters.com>"
-    },
-    {
-      "id": "samalla-pavan-kumar-any-emergency-needs-i-am-out-of-office-until-friday-08-04-please-reach-out-kar",
-      "company": "Samalla, Pavan Kumar",
-      "oldRole": "Any Emergency Needs. I Am Out Of Office Until Friday 08/04. Please Reach Out Kar",
-      "newRole": "AI Engineer",
-      "status": "applied",
-      "subject": "Automatic reply: In-Person Ai Engineer Interview - Tirth Shah",
-      "from": "\"Samalla, Pavan kumar\" <Pavan.Samalla@nexteraenergy.com>"
-    },
-    {
-      "id": "addgene-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Addgene",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Addgene",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "captech-ventures-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Captech Ventures",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to CapTech Ventures",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "treqs-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "TREQS",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to TREQS",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "hmg-america-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "HMG AMERICA",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to HMG AMERICA LLC",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "harnham-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Harnham",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Harnham",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "agero-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Agero",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Agero",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "zipliens-zipliens-uiring",
-      "company": "Zipliens",
-      "oldRole": "Zipliens",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to ZipLiens",
-      "from": "Workable <noreply@candidates.workablemail.com>"
-    },
-    {
-      "id": "zipliens-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Zipliens",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Zipliens",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "jobgether-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Jobgether",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Jobgether",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "galent-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Galent",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Galent",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "claritas-rx-claritas-rx",
-      "company": "Claritas Rx",
-      "oldRole": "Claritas Rx",
-      "newRole": "Data Engineer, Customer Engineering",
-      "status": "applied",
-      "subject": "Thanks for applying to Claritas Rx",
-      "from": "Workable <noreply@candidates.workablemail.com>"
-    },
-    {
-      "id": "aleph-your-interest",
-      "company": "Aleph",
-      "oldRole": "Your Interest",
-      "newRole": "Aleph And Our Senior Analytics Engineer",
-      "status": "applied",
-      "subject": "Your application has been received - Aleph",
-      "from": "Aleph Talent <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "qode-qode",
-      "company": "Qode",
-      "oldRole": "Qode",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Qode",
-      "from": "Workable <noreply@candidates.workablemail.com>"
-    },
-    {
-      "id": "hatz-ai-hatz-ai",
-      "company": "Hatz AI",
-      "oldRole": "Hatz AI",
-      "newRole": "Forward Deployed Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Hatz AI!",
-      "from": "Hatz AI Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "versant-media-your-interest",
-      "company": "Versant Media",
-      "oldRole": "Your Interest",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank You For Your Interest in VERSANT!",
-      "from": "Versant Media <notification@smartrecruiters.com>"
-    },
-    {
-      "id": "cohere-cohere",
-      "company": "Cohere",
-      "oldRole": "Cohere",
-      "newRole": "Data Engineer, Data Foundations",
-      "status": "applied",
-      "subject": "Thanks for applying to Cohere!",
-      "from": "Cohere Talent Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "zefr-your-interest",
-      "company": "Zefr",
-      "oldRole": "Your Interest",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Regarding Your Application With ZEFR!",
-      "from": "Zefr Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "wm-candidate-support-general-application-2589805",
-      "company": "WM Candidate Support",
-      "oldRole": "General Application",
-      "newRole": "Data Analyst",
-      "status": "applied",
-      "subject": "Final Reminder – Action Required for R-2589805",
-      "from": "WM Candidate Support <wmcandidatesppt@walmart.com>"
-    },
-    {
-      "id": "captech-consulting-your-interest",
-      "company": "Captech Consulting",
-      "oldRole": "Your Interest",
-      "newRole": "Data Engineer (aws, Azure, Gcp)",
-      "status": "applied",
-      "subject": "Thank you for your interest in CapTech",
-      "from": "CapTech Consulting Hiring Team <notifications@captechcareers.com>"
-    },
-    {
-      "id": "coreweave-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Coreweave",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Forward Deployed Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to CoreWeave",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "yara-the-forward-deployed-engineer",
-      "company": "Yara",
-      "oldRole": "The Forward Deployed Engineer",
-      "newRole": "Forward Deployed Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying for the Forward Deployed Engineer role in the Yara Network",
-      "from": "Yara <notifications@yara.so>"
-    },
-    {
-      "id": "lasalle-network-the-database-engineer-data-warehouses-role-your-profile-i",
-      "company": "Lasalle Network",
-      "oldRole": "The Database Engineer - Data Warehouses Role. Your Profile I",
-      "newRole": "Database Engineer - Data Warehouses Role. Your Profile I",
-      "status": "applied",
-      "subject": "LaSalle Network - Update Missing Info",
-      "from": "LaSalle Network <website@lasallenetwork.com>"
-    },
-    {
-      "id": "persistent-systems-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Persistent Systems",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Forward Deployed Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Persistent Systems",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "casual-precision-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Casual Precision",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Casual Precision",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "cvs-health-the-data-engineer-r0977321",
-      "company": "CVS Health",
-      "oldRole": "The Data Engineer",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth, how was your experience with CVS Health?",
-      "from": "CVS Health <candidatefeedback@cvshealth.com>"
-    },
-    {
-      "id": "accenture-your-interest-6461115",
-      "company": "Accenture",
-      "oldRole": "Your Interest",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "We’re sorry your Accenture application isn’t progressing further",
-      "from": "Accenture Careers <accenture@myworkday.com>"
-    },
-    {
-      "id": "oscar-oscar",
-      "company": "Oscar",
-      "oldRole": "Oscar",
-      "newRole": "Analytics Engineer I",
-      "status": "applied",
-      "subject": "Thank you for applying to Oscar!",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "credit-genie-the-data-engineer",
-      "company": "Credit Genie",
-      "oldRole": "The Data Engineer",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Application with Credit Genie",
-      "from": "Credit Genie Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19fd71c0b7cb9073",
-      "company": "Doordash",
-      "oldRole": "Doordash",
-      "newRole": "Doordash's Analytics Engineer, Data Science",
-      "status": "applied",
-      "subject": "Thank you for applying to DoorDash",
-      "from": "no-reply@doordash.com"
-    },
-    {
-      "id": "esri-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Esri",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Esri",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "home-chef-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Home Chef",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Home Chef",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "ifs-general-application",
-      "company": "IFS",
-      "oldRole": "General Application",
-      "newRole": "Forward Deployed Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to IFS",
-      "from": "IFS <notification@smartrecruiters.com>"
-    },
-    {
-      "id": "atcllc-the-senior-data-engineer-position-after-reviewing-your-application-we-will-con",
-      "company": "ATC",
-      "oldRole": "The Senior Data Engineer Position. After Reviewing Your Application, We Will Con",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Application Received",
-      "from": "workday atcllc <atcllc@myworkday.com>"
-    },
-    {
-      "id": "syncreon-consulting-syncreon-consulting",
-      "company": "Syncreon Consulting",
-      "oldRole": "Syncreon Consulting",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Syncreon Consulting",
-      "from": "Syncreon Consulting <notification@smartrecruiters.com>"
-    },
-    {
-      "id": "ncontracts-ncontracts",
-      "company": "Ncontracts",
-      "oldRole": "Ncontracts",
-      "newRole": "Data Engineer II",
-      "status": "applied",
-      "subject": "Tirth, Thanks for applying to Ncontracts!",
-      "from": "\"Ncontracts' Talent Team\" <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "asg-recruitment-team-the-data-operations-engineer",
-      "company": "ASG Recruitment Team",
-      "oldRole": "The Data Operations Engineer",
-      "newRole": "Data Operations Engineer",
-      "status": "applied",
-      "subject": "Your Application at Advanced Systems Group (ASG)",
-      "from": "ASG Recruitment Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "grupo-oricteropo-tropical-grupo-oricteropo-tropical",
-      "company": "Grupo Oricteropo Tropical",
-      "oldRole": "Grupo Oricteropo Tropical",
-      "newRole": "Junior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Grupo Oricteropo Tropical",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "capitalonehrworkday-the-r999347-senior-lead-data-engineer-number",
-      "company": "Capitalonehrworkday",
-      "oldRole": "The R999019 Senior Business Analyst - Incentive Compensation Risk Management Rol",
-      "newRole": "Senior Business Analyst - Incentive Compensation Risk Management",
-      "status": "applied",
-      "subject": "You’ve hit your active application limit",
-      "from": "CapitalOneHRWorkday <capitalone@myworkday.com>"
-    },
-    {
-      "id": "nextpath-career-partners-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Kforce",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to NextPath Career Partners",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "american-tower-the-job-data-engineer",
-      "company": "American Tower",
-      "oldRole": "The Job Data Engineer",
-      "newRole": "Job Data Engineer",
-      "status": "applied",
-      "subject": "Continue to apply for the job Data Engineer",
-      "from": "American Tower Recruiting <noreply@americantower.com>"
-    },
-    {
-      "id": "mainspring-energy-mainspring-energy",
-      "company": "Mainspring Energy",
-      "oldRole": "Mainspring Energy",
-      "newRole": "Senior DevOps Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Mainspring Energy",
-      "from": "Mainspring Energy <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "hahsler-michael-your-email-i-am-currently-not-adding-to-my-research-group-best-regards-mfh",
-      "company": "Hahsler, Michael",
-      "oldRole": "Your Email. I Am Currently Not Adding To My Research Group. Best Regards, -MFH",
-      "newRole": "AI Engineer",
-      "status": "applied",
-      "subject": "Re: Research Data Systems research fit | AI/ML, data mining, data science",
-      "from": "\"Hahsler, Michael\" <mhahsler@smu.edu>"
-    },
-    {
-      "id": "jpmorgan-chase-the-position-listed-below-was-successfully-submitted-and-we-appreciate-your-pati",
-      "company": "Jpmorgan Chase &",
-      "oldRole": "The Position Listed Below Was Successfully Submitted And We Appreciate Your Pati",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "We received your job application (Job Number: 210769357)",
-      "from": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>"
-    },
-    {
-      "id": "delaware-nation-industries-delaware-nation-industries",
-      "company": "Delaware Nation Industries",
-      "oldRole": "Delaware Nation Industries",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Delaware Nation Industries",
-      "from": "Workable <noreply@candidates.workablemail.com>"
-    },
-    {
-      "id": "msg-19f6ac89952a386c",
-      "company": "Purple Carrot",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Purple Carrot",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "purple-carrot-your-interest",
-      "company": "Purple Carrot",
+      "id": "abk-your-interest-lection",
+      "company": "ABK",
       "oldRole": "Your Interest",
       "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Analytics Engineer - Purple Carrot",
-      "from": "Purple Carrot <noreply@candidates.workablemail.com>"
-    },
-    {
-      "id": "purple-carrot-purple-carrot",
-      "company": "Purple Carrot",
-      "oldRole": "Purple Carrot",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Purple Carrot",
-      "from": "Workable <noreply@candidates.workablemail.com>"
-    },
-    {
-      "id": "coric-industries-general-application",
-      "company": "Coric Industries",
-      "oldRole": "General Application",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application, Tirth",
-      "from": "<CoricIndustriesLLC.hr@adp.com>"
-    },
-    {
-      "id": "marss-general-application",
-      "company": "MARSS",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying at MARSS",
-      "from": "MARSS <notifications@app.bamboohr.com>"
-    },
-    {
-      "id": "bluesight-general-application",
-      "company": "Bluesight",
-      "oldRole": "General Application",
-      "newRole": "Data Analyst",
-      "status": "applied",
-      "subject": "Thank you for your application to Bluesight!",
-      "from": "Bluesight <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "reply-general-application",
-      "company": "Reply",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Reply",
-      "from": "Reply <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "aspire-general-insurance-general-application",
-      "company": "Aspire General Insurance",
-      "oldRole": "General Application",
-      "newRole": "Senior Claims Data Analyst",
-      "status": "applied",
-      "subject": "Thank you for applying at Aspire!",
-      "from": "Aspire General Insurance Services <do-not-reply@mail.paylocity.com>"
-    },
-    {
-      "id": "istari-digital-general-application",
-      "company": "Istari Digital",
-      "oldRole": "General Application",
-      "newRole": "Senior Forward Deployed Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Istari Digital",
-      "from": "Istari Digital <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "rethink-first-general-application",
-      "company": "Rethink First",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying at Rethink First",
-      "from": "RethinkFirst <noreply@applytojob.com>"
-    },
-    {
-      "id": "collegis-education-general-application",
-      "company": "Collegis Education",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying!",
-      "from": "Collegis Education <do-not-reply@mail.paylocity.com>"
-    },
-    {
-      "id": "career-general-application",
-      "company": "Career",
-      "oldRole": "General Application",
-      "newRole": "AI Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application!",
-      "from": "career <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "fhlbank-topeka-general-application",
-      "company": "FHLBank Topeka",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer II",
-      "status": "applied",
-      "subject": "Thank You For Applying!",
-      "from": "fhlbtopeka@myworkday.com"
-    },
-    {
-      "id": "bob-general-application",
-      "company": "HiBob",
-      "oldRole": "General Application",
-      "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Your application was received",
-      "from": "\"No-reply (via Bob)\" <no-reply@hibob.com>"
-    },
-    {
-      "id": "bounteous-x-accolite-general-application",
-      "company": "Bounteous x Accolite",
-      "oldRole": "General Application",
-      "newRole": "CDP Data Engineer",
-      "status": "applied",
-      "subject": "Bounteous x Accolite | Thank you for your application, Tirth!",
-      "from": "Bounteous <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "stem-search-general-application",
-      "company": "STEM Search",
-      "oldRole": "General Application",
-      "newRole": "Data Infrastructure Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying!",
-      "from": "STEM Search Group <noreply@recruiterflowmail.com>"
-    },
-    {
-      "id": "providence-groups-general-application",
-      "company": "Providence Groups",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying!",
-      "from": "The Providence Groups <do-not-reply@mail.paylocity.com>"
-    },
-    {
-      "id": "activision-blizzard-king-general-application",
-      "company": "Activision Blizzard King",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "We’ve Got Your Activision Blizzard King Application",
+      "status": "not_related",
+      "subject": "Thank You For Your Interest In Our Analytics Engineer Position",
       "from": "ABK Workday <activision@myworkday.com>"
     },
     {
-      "id": "latentview-analytics-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Latentview Analytics",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to LatentView Analytics",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
+      "id": "trueup-general-application",
+      "company": "Trueup",
+      "oldRole": "General Application",
+      "newRole": "Data Analyst",
+      "status": "not_related",
+      "subject": "New jobs at Merge & Anthropic, added today",
+      "from": "TrueUp <hello@trueup.io>"
     },
     {
-      "id": "doubleverify-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Doubleverify",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
+      "id": "jobot-general-application",
+      "company": "Jobot",
+      "oldRole": "General Application",
       "newRole": "Senior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to DoubleVerify",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
+      "status": "not_related",
+      "subject": "New Senior Data Engineer opportunity",
+      "from": "Jobot Alerts <jobs@alerts.jobot.com>"
     },
     {
-      "id": "cresset-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Cresset",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Cresset",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
+      "id": "seek-general-application",
+      "company": "SEEK",
+      "oldRole": "General Application",
+      "newRole": "Systems Analyst",
+      "status": "not_related",
+      "subject": "Systems Analyst / Mid-Level Business Analyst - 12 Month contract - Government + 11 new jobs",
+      "from": "SEEK Recommendations <noreply@s.seek.com.au>"
     },
     {
-      "id": "tech-consulting-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Tech Consulting",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Junior Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to Tech Consulting",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
+      "id": "remotehunter-general-application",
+      "company": "RemoteHunter",
+      "oldRole": "General Application",
+      "newRole": "Staff Data Engineer",
+      "status": "not_related",
+      "subject": "Tirth, Explore Your Weekend Remote Job Matches 🚀",
+      "from": "RemoteHunter <notifications@mail.remotehunter.com>"
     },
     {
-      "id": "msg-1a014db873eea037",
+      "id": "resume-worded-general-application-uires",
+      "company": "Resume Worded",
+      "oldRole": "General Application",
+      "newRole": "Data Scientist",
+      "status": "not_related",
+      "subject": "Coached: A short story on reinvention (+ more)",
+      "from": "Resume Worded <contact@mautem.resumeworded.com>"
+    },
+    {
+      "id": "pageup-people-general-application",
+      "company": "Pageup People",
+      "oldRole": "General Application",
+      "newRole": "Data Engineer I",
+      "status": "not_related",
+      "subject": "Incomplete job application reminder",
+      "from": "UFHR Talent <talent-674@mail.pageuppeople.com>"
+    },
+    {
+      "id": "msg-1a01553d1d57e35c",
+      "company": "Google",
+      "oldRole": "General Application",
+      "newRole": "Business Analyst",
+      "status": "not_related",
+      "subject": "2-Step Verification turned on",
+      "from": "Google <no-reply@accounts.google.com>"
+    },
+    {
+      "id": "msg-1a0154c3badc4c7a",
+      "company": "Workflow",
+      "oldRole": "General Application",
+      "newRole": "Senior Data Scientist",
+      "status": "not_related",
+      "subject": "Status of your Candidacy with CSC®",
+      "from": "hczw.fa.sender@workflow.email.us-phoenix-1.ocs.oraclecloud.com"
+    },
+    {
+      "id": "msg-1a014daf66ab240d",
       "company": "FanDuel",
       "oldRole": "General Application",
       "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to FanDuel",
-      "from": "no-reply@fanduel.com"
+      "status": "not_related",
+      "subject": "Security code for your application to FanDuel",
+      "from": "Greenhouse <no-reply@us.greenhouse-mail.io>"
     },
     {
-      "id": "msg-1a014d81754f9979",
-      "company": "Us",
-      "oldRole": "General Application",
-      "newRole": "AI Engineer",
-      "status": "applied",
-      "subject": "Thanks!  We're excited you've chosen to apply to Axogen!",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "msg-1a014d3b66ddf238",
-      "company": "Lindblad Expeditions",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Lindblad Expeditions",
-      "from": "Lindblad Expeditions <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "msg-1a014cf6c14de89d",
-      "company": "Ontic",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank You for Applying to Ontic!",
-      "from": "Ontic Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-1a014cd214632159",
-      "company": "Klaviyo",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Klaviyo",
-      "from": "no-reply@klaviyo.com"
-    },
-    {
-      "id": "msg-1a014b1812af711c",
-      "company": "Capstone Investment Advisors",
-      "oldRole": "General Application",
-      "newRole": "Database Platform Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Capstone Investment Advisors",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "msg-1a010ba7024d3626",
-      "company": "True Classic TA",
+      "id": "msg-1a014b593f2423ff",
+      "company": "Fdmgroup",
       "oldRole": "General Application",
       "newRole": "Data & Analytics Engineer",
-      "status": "applied",
-      "subject": "An update on your True Classic application",
-      "from": "True Classic TA Team <no-reply@ashbyhq.com>"
+      "status": "not_related",
+      "subject": "Your application for Data & Analytics Engineer",
+      "from": "<careers@fdmgroup.com>"
     },
     {
-      "id": "msg-1a0103c46577edb3",
-      "company": "Shield AI",
+      "id": "msg-1a00d1aa6b30e269",
+      "company": "Uber",
       "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Senior Data &amp; Analytics Engineer, Domain Enablement (R5536), Shield AI- Thank you for your interest, Tirth",
-      "from": "Shield AI <no-reply@hire.lever.co>"
+      "newRole": "Data Scientist",
+      "status": "not_related",
+      "subject": "Confirm your identity",
+      "from": "Uber Talent <no-reply@uber.com>"
     },
     {
-      "id": "sdlc-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "SDLC",
-      "oldRole": "More Success View Similar Jobs You May Be Interested",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth Chirayu, your application was sent to SDLC Technologies",
-      "from": "LinkedIn <jobs-noreply@linkedin.com>"
-    },
-    {
-      "id": "msg-1a00fa4a46c9f234",
-      "company": "Engineering Tools & Analytics Engineer",
-      "oldRole": "General Application",
-      "newRole": "Engineering Tools & Analytics Engineer (1000044), Allen, TX",
-      "status": "applied",
-      "subject": "Application Received for Engineering Tools & Analytics Engineer position [Application #51353955]",
-      "from": "\"Sol-Ark, LLC\" <notifications@r.applicant-tracking.com>"
-    },
-    {
-      "id": "msg-1a00f8d0c2cefefe",
-      "company": "4P Consulting.",
-      "oldRole": "General Application",
-      "newRole": "Data Analytics Engineer IV",
-      "status": "applied",
-      "subject": "Thank you for applying!",
-      "from": "\"4P Consulting Inc.\" <noreply@recruiterflowmail.com>"
-    },
-    {
-      "id": "msg-1a00d1b0462f117f",
-      "company": "Global  Workday",
-      "oldRole": "General Application",
-      "newRole": "Data Scientist II",
-      "status": "applied",
-      "subject": "We’ve received your application for the Data Scientist II position",
-      "from": "Global HR Workday <ghr@myworkday.com>"
-    },
-    {
-      "id": "msg-1a000564475403d3",
-      "company": "Dandelion Health",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Dandelion Health Inc!",
-      "from": "Dandelion Health Recruiting <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-1a00055506a6647b",
-      "company": "Celigo",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Celigo",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "msg-1a00053cd0dbc3dc",
-      "company": "Duetti",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Duetti",
-      "from": "Duetti <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "saaf-finance-general-application",
-      "company": "Saaf Finance",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying at Saaf Finance",
-      "from": "Saaf Finance <notifications@app.bamboohr.com>"
-    },
-    {
-      "id": "msg-19ffb17449bc1081",
-      "company": "the Analytics Engineer",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to the Analytics Engineer role at Aperia!",
-      "from": "no-reply@aperia.com"
-    },
-    {
-      "id": "msg-19ff725783c6cb4e",
-      "company": "Google Voice",
-      "oldRole": "And Id Love For You To Call Me Back When Its Convenient Or Ill Try You Again Lat",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "New voicemail from (952) 521-5467",
-      "from": "Google Voice <voice-noreply@google.com>"
-    },
-    {
-      "id": "952-395-5033-the-etl-data-engineer-role-to-move-forward-the-next-step-is-a-qui",
-      "company": "(952) 395-5033",
-      "oldRole": "The ETL Data Engineer Role. To Move Forward, The Next Step Is A Qui",
-      "newRole": "ETL Data Engineer Role. To Move Forward, The Next Step Is A Qui",
-      "status": "applied",
-      "subject": "New text message from (952) 395-5033",
-      "from": "\"(952) 395-5033\" <14157411711.19523955033.TbqCk8xqkh@txt.voice.google.com>"
-    },
-    {
-      "id": "msg-19ff5e77debbfe75",
-      "company": "Shield AI",
-      "oldRole": "General Application",
-      "newRole": "Senior Data & Analytics Engineer, Domain Enablement (r5536)",
-      "status": "applied",
-      "subject": "Thank you for your application to Shield AI, Tirth!",
-      "from": "Shield AI <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "msg-19ff5e31fb561971",
-      "company": "OnePay",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to OnePay",
-      "from": "\"Talent @ OnePay\" <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19ff5c91aaa162f9",
-      "company": "Now Brands",
-      "oldRole": "General Application",
-      "newRole": "Data Platform Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Career Now Brands",
-      "from": "Career Now Brands <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "msg-19ff0e464ad5b77b",
-      "company": "Linear",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Linear",
-      "from": "Talent at Linear <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "b-lab-b-lab",
-      "company": "B Lab",
-      "oldRole": "B Lab",
-      "newRole": "B Lab ( Junior Data Engineer (philadelphia, Pa) )",
-      "status": "applied",
-      "subject": "Thank you for applying to B Lab ( Junior Data Engineer (Philadelphia, PA) )",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "msg-19febfec097c7a4e",
-      "company": "Rhythm Energy",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer II",
-      "status": "applied",
-      "subject": "Analytics Engineer II Application Update | Rhythm Energy",
-      "from": "Rhythm Energy <no-reply@ats.rippling.com>"
-    },
-    {
-      "id": "msg-19febbac93bc680a",
-      "company": "Meta",
-      "oldRole": "General Application",
-      "newRole": "Data Infrastructure Engineer",
-      "status": "applied",
-      "subject": "Confirm your Meta Career Profile email address",
-      "from": "The Recruiting team at Meta <do-not-reply@recruiting.facebook.com>"
-    },
-    {
-      "id": "msg-19febaf1510dd31c",
-      "company": "Clear Street",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Clear Street",
-      "from": "no-reply@clearstreet.io"
-    },
-    {
-      "id": "msg-19feb8707a679908",
-      "company": "Huron",
-      "oldRole": "General Application",
-      "newRole": "Data Operations Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Huron",
-      "from": "Huron Consulting Group <huron@myworkday.com>"
-    },
-    {
-      "id": "pepsico-general-application",
-      "company": "PepsiCo",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Your job application is incomplete!",
-      "from": "\"Jobs @ Pepsi\" <pepsico+autoreply@talent.icims.com>"
-    },
-    {
-      "id": "virginia-tech-general-application",
-      "company": "Virginia Tech",
-      "oldRole": "General Application",
-      "newRole": "Associate Data And Analytics Engineer",
-      "status": "applied",
-      "subject": "Incomplete job application reminder",
-      "from": "\"careers@vt.edu\" <careers-968@mail.pageuppeople.com>"
-    },
-    {
-      "id": "msg-19fdc3c02538a07b",
-      "company": "AccuWeather",
-      "oldRole": "General Application",
-      "newRole": "Data Operations Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to AccuWeather",
-      "from": "no-reply@accuweather.com"
-    },
-    {
-      "id": "msg-19fd700c0807507d",
-      "company": "Arizent",
+      "id": "msg-1a006db42b7aacb3",
+      "company": "Westrock Coffee",
       "oldRole": "General Application",
       "newRole": "Data & AI Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Arizent!",
-      "from": "Arizent Hiring Team <no-reply@ashbyhq.com>"
+      "status": "not_related",
+      "subject": "Employment Update",
+      "from": "Career OpportunitiesWestrock Coffee <jobs@adp.com>"
     },
     {
-      "id": "data-engineer-i-at-varsity-brands-the-data-engineer-i-at-varsity-brands-llc",
-      "company": "Data Engineer I At Varsity Brands",
-      "oldRole": "The Data Engineer I At Varsity Brands, LLC",
-      "newRole": "Data Engineer I At Varsity Brands, LLC",
-      "status": "applied",
-      "subject": "Thank You for Applying to the Data Engineer I at Varsity Brands, LLC",
-      "from": "varsitybrands@myworkday.com"
+      "id": "msg-1a006630c67c4501",
+      "company": "Tsenta",
+      "oldRole": "General Application",
+      "newRole": "Platform Engineer",
+      "status": "not_related",
+      "subject": "Re: how's tsenta working for you?",
+      "from": "Tirth Shah <tirthcshah1999@gmail.com>"
     },
     {
-      "id": "msg-19fd5ecef91f2640",
-      "company": "Plata",
+      "id": "msg-1a0003df97d601aa",
+      "company": "Adp",
+      "oldRole": "General Application",
+      "newRole": "Associate Data & Analytics Engineer",
+      "status": "not_related",
+      "subject": "Here's your verification code from ADP",
+      "from": "SecurityServices_NoReply@adp.com"
+    },
+    {
+      "id": "msg-1a0002625b5b9ad7",
+      "company": "ot Alerts",
+      "oldRole": "General Application",
+      "newRole": "ML Engineer",
+      "status": "not_related",
+      "subject": "Apply for Director of IT and Infrastructure - (Finance/Payments Experience required)",
+      "from": "Jobot Alerts <jobs@alerts.jobot.com>"
+    },
+    {
+      "id": "msg-19ffc806666bc708",
+      "company": "NC State",
+      "oldRole": "General Application",
+      "newRole": "Business Intelligence Analyst",
+      "status": "not_related",
+      "subject": "NC State University application has been Submitted - Business Intelligence Analyst",
+      "from": "workatncstate@ncsu.edu"
+    },
+    {
+      "id": "msg-19ff280b1f6e85ce",
+      "company": "Caroline Sullivan",
+      "oldRole": "General Application",
+      "newRole": "Analytics Engineer - Next Steps",
+      "status": "not_related",
+      "subject": "Ursa Health Application for Analytics Engineer - Next Steps",
+      "from": "Caroline Sullivan <mail@ats.rippling.com>"
+    },
+    {
+      "id": "msg-19fefa44d2bdad8e",
+      "company": "Sara Seale",
       "oldRole": "General Application",
       "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Your application to Plata",
-      "from": "no-reply@plata.careers"
+      "status": "not_related",
+      "subject": "Your application at Kalibrate",
+      "from": "Sara Seale <sara.kalibrate@recruitee-mailbox.com>"
     },
     {
-      "id": "msg-19fd3d2338737e6e",
-      "company": "Rippling",
-      "oldRole": "General Application",
+      "id": "msg-19fdfebf5afa5e7c",
+      "company": "Mercury Insurance",
+      "oldRole": "mercuryinsurance",
       "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Rippling - Analytics Engineer - Payments",
-      "from": "Rippling <no-reply@ats.rippling.com>"
+      "status": "not_related",
+      "subject": "Complete Your Application",
+      "from": "\"Mercury Insurance Services, LLC @ icims\" <mercuryinsurance+autoreply@talent.icims.com>"
     },
     {
-      "id": "msg-19fd3c7b68e552b5",
-      "company": "Merit America",
+      "id": "msg-19fdca276ebb929e",
+      "company": "Playonsports",
       "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Update on your application to Merit America",
-      "from": "Talent Acquisition Team <recruiting@meritamerica.org>"
+      "newRole": "Senior Analytics Engineer, Product Opportunity Here",
+      "status": "not_related",
+      "subject": "Thanks for your interest in PlayOn",
+      "from": "no-reply@playonsports.com"
     },
     {
-      "id": "msg-19fd3994c5bc6700",
-      "company": "Se",
+      "id": "msg-19fd56cc8e64241f",
+      "company": "Jayanthi Mary Charles",
       "oldRole": "General Application",
-      "newRole": "Data Analytics Engineer - Chicago",
-      "status": "applied",
-      "subject": "Thank you for your interest in STEAMe - Role Update",
-      "from": "STEAMe LLC <recruiting+429388952-c7d4d166@applytojob.com>"
+      "newRole": "Lead Data Scientist",
+      "status": "not_related",
+      "subject": "Infosys - Hiring || Senior /Lead Data Scientist with Gen AI || Fulltime",
+      "from": "Jayanthi Mary Charles <jayanthi.charles@infosys.com>"
     },
     {
-      "id": "msg-19fd383b32dd4df1",
-      "company": "Duke",
+      "id": "msg-19fc8ab8e46b3002",
+      "company": "Anjali Misa",
       "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Application Status Update – Duke Health",
-      "from": "Duke Careers <system@successfactors.com>"
+      "newRole": "Data Scientist",
+      "status": "not_related",
+      "subject": "Hiring Data Scientist  -  Tampa, FL or Irving, TX - Onsite Contract",
+      "from": "Anjali Mishra <Anjali.Mishra@pyramidci.com>"
     },
     {
-      "id": "msg-19fd1e5cc21adf48",
-      "company": "Kalibrate/Analytics Engineer (US)",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Analytics Engineer (US) - Confirmation of your application",
-      "from": "\"Kalibrate/Analytics Engineer (US)\" <e+ohpnsrc3ftee9k19.kalibrate@recruitee-mailbox.com>"
-    },
-    {
-      "id": "msg-19fcdbae257f2ed3",
-      "company": "Pathstream",
-      "oldRole": "General Application",
-      "newRole": "Senior Analytics Engineer",
-      "status": "applied",
-      "subject": "Update on your application to Pathstream",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "msg-19fccffcc73fae9a",
-      "company": "CurbWaste",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to CurbWaste",
-      "from": "Workable <noreply@candidates.workablemail.com>"
-    },
-    {
-      "id": "msg-19fccc8a7bd42e04",
-      "company": "Profound",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Profound!",
-      "from": "Profound Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19fccc7bd1adf0fd",
-      "company": "WHOOP",
-      "oldRole": "General Application",
-      "newRole": "WHOOP For The Analytics Engineer II",
-      "status": "applied",
-      "subject": "Thank you for your application to WHOOP!",
-      "from": "Whoop Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "xometry-xometry",
-      "company": "Xometry",
-      "oldRole": "Xometry",
-      "newRole": "Analytics Engineer II",
-      "status": "applied",
-      "subject": "Thank you for applying to Xometry!",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "msg-19fccaf77efc4904",
-      "company": "Morgan & Morgan, P.A.",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer Posting",
-      "status": "applied",
-      "subject": "Thank you for applying to Morgan & Morgan, P.A.",
-      "from": "no-reply@forthepeople.com"
-    },
-    {
-      "id": "ntt-data-general-application",
-      "company": "NTT DATA",
-      "oldRole": "General Application",
-      "newRole": "NTT Data, Data Engineer - Oracle Data Integrator And BI",
-      "status": "applied",
-      "subject": "NTT DATA: Thank You For Your Application",
-      "from": "Antony.James@nttdata.com"
-    },
-    {
-      "id": "msg-19fc79fa2571296d",
-      "company": "Confido",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Confido!",
-      "from": "Confido Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19fc79e80a6cad68",
-      "company": "iHeartMedia",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to iHeartMedia!",
-      "from": "Workday-HR4U iheartmedia <iheartmedia@myworkday.com>"
-    },
-    {
-      "id": "msg-19fb84f9e407153b",
-      "company": "Lean Layer",
-      "oldRole": "General Application",
-      "newRole": "Revops Analytics Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Lean Layer!",
-      "from": "Lean Layer Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19fb81fe7c501426",
-      "company": "Allen Control Systems",
-      "oldRole": "General Application",
-      "newRole": "Platform Engineer, Data",
-      "status": "applied",
-      "subject": "Thank you for applying to Allen Control Systems",
-      "from": "Allen Control Systems Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19fb0d9cbf2747ea",
-      "company": "AndHealth",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Application Status: Analytics Engineer, Data Platform at AndHealth",
-      "from": "AndHealth <recruiting+430427527-f172df44@applytojob.com>"
-    },
-    {
-      "id": "msg-19fa8a6b2da57390",
-      "company": "Kalibrate/Analytics Engineer",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Analytics Engineer - Confirmation of your application",
-      "from": "\"Kalibrate/Analytics Engineer\" <e+os7kwb4p2on5ypvo.kalibrate@recruitee-mailbox.com>"
-    },
-    {
-      "id": "msg-19fa8a67811cded4",
-      "company": "Cerebras",
-      "oldRole": "General Application",
-      "newRole": "Hardware Analytics Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Cerebras!",
-      "from": "Cerebras Systems Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19fa861a4ab34ae2",
-      "company": "Pinpoint",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Application Received",
-      "from": "Intermedia Intelligent Communications <71a0f771-46bd-47ee-89a5-3a8d5a0ae8ff@pinpoint.email>"
-    },
-    {
-      "id": "msg-19fa5aa879534ba1",
-      "company": "Innovu,",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying at Innovu",
-      "from": "\"Innovu, LLC\" <notifications@app.bamboohr.com>"
-    },
-    {
-      "id": "msg-19fa38a67f76865f",
-      "company": "Statista",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer (m/f/d)",
-      "status": "applied",
-      "subject": "Thanks for applying to Statista",
-      "from": "Statista Recruitment Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19f9422af274e552",
-      "company": "MoonPay",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer - Crypto And Payments",
-      "status": "applied",
-      "subject": "Thank you for your application to MoonPay",
-      "from": "MoonPay <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "bloomerang-your-interest",
-      "company": "Bloomerang",
-      "oldRole": "Your Interest",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Application Update From Bloomerang",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "msg-19f8fc8243f4b328",
-      "company": "Abbott--Workday",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "We Received Your Application for Analytics Engineer – 31148507",
-      "from": "Abbott-HR-Workday <abbott@myworkday.com>"
-    },
-    {
-      "id": "signify-health-general-application",
-      "company": "Signify Health",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Your application with Signify Health has been received!",
-      "from": "Colleague Zone <cvshealth@myworkday.com>"
-    },
-    {
-      "id": "clearpointco-general-application",
-      "company": "Clearpointco",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying!",
-      "from": "\"ClearpointCo.\" <noreply@recruiterflowmail.com>"
-    },
-    {
-      "id": "msg-19f8ad39c620c68f",
-      "company": "Counsel Health Hiring",
-      "oldRole": "General Application",
-      "newRole": "Submitting Your Resume To The Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for considering Counsel Health",
-      "from": "Counsel Health Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "momenti-general-application",
-      "company": "Momenti",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Momenti, Inc.",
-      "from": "\"Momenti, Inc.\" <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "gridware-general-application",
-      "company": "Gridware",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Gridware",
-      "from": "Gridware <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "msg-19f84a931bb28ee5",
-      "company": "CreatorIQ",
-      "oldRole": "General Application",
-      "newRole": "Creatoriq And The Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to CreatorIQ",
-      "from": "CreatorIQ Talent Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19f849e0dbb41403",
-      "company": "Sprinter Health Hiring",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for Applying to Analytics Engineer (Senior)",
-      "from": "Sprinter Health Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "crosscountry-mortgage-general-application",
-      "company": "Crosscountry Mortgage",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Application Received",
-      "from": "Crosscountry Mortgage <crosscountrymortgage@myworkday.com>"
-    },
-    {
-      "id": "msg-19f81474e86f806c",
-      "company": "PermitFlow",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thanks for your interest in PermitFlow, Tirth!",
-      "from": "PermitFlow Recruiting Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19f7f5d880c066bb",
-      "company": "HubSpot",
-      "oldRole": "General Application",
-      "newRole": "Senior Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to HubSpot!",
-      "from": "no-reply@hubspot.com"
-    },
-    {
-      "id": "msg-19f7f4e65cf35cd3",
-      "company": "Spring Financial.",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer II",
-      "status": "applied",
-      "subject": "Thank you for applying at Spring Financial.",
-      "from": "\"Spring Financial Inc.\" <notifications@app.bamboohr.com>"
-    },
-    {
-      "id": "spring-financial-general-application",
-      "company": "Spring Financial",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer II",
-      "status": "applied",
-      "subject": "Thank you for applying at Spring Financial.",
-      "from": "\"Spring Financial Inc.\" <notifications@app.bamboohr.com>"
-    },
-    {
-      "id": "humble-robotics-general-application",
-      "company": "Humble Robotics",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Humble Robotics",
-      "from": "Humble Robotics <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "mactores-general-application",
-      "company": "Mactores",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Mactores",
-      "from": "Mactores <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "curtin-maritime-general-application",
-      "company": "Curtin Maritime",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying at Curtin Maritime",
-      "from": "Curtin Maritime <notifications@app.bamboohr.com>"
-    },
-    {
-      "id": "msg-19f7f2f105bd4b59",
-      "company": "Constant Contact",
-      "oldRole": "General Application",
-      "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank You For Applying to Constant Contact",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "rjw-logistics-general-application",
-      "company": "RJW Logistics",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Employment Update - RJW Logistics Group",
-      "from": "RJW Logistics Group Career Opportunities <jobs@adp.com>"
-    },
-    {
-      "id": "grant-street-general-application",
-      "company": "Grant Street",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "We received your application!",
-      "from": "Grant Street Group <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "blain-s-farm-fleet-general-application",
-      "company": "Blain's Farm & Fleet",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Your job application is incomplete!",
-      "from": "\"Blain's Farm & Fleet @ icims\" <blainsupplyff+autoreply@talent.icims.com>"
-    },
-    {
-      "id": "msg-19f6ff65d857a35b",
+      "id": "msg-19fbf022852c0a63",
       "company": "Podium",
       "oldRole": "General Application",
       "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thanks for applying to Podium!",
-      "from": "no-reply@podium.com"
+      "status": "not_related",
+      "subject": "Updates from Podium",
+      "from": "recruiting@podium.com"
     },
     {
-      "id": "msg-19f6ac49799cccb8",
-      "company": "Rogo",
+      "id": "msg-19fb8d260365864c",
+      "company": "Jeni from ot",
+      "oldRole": "General Application",
+      "newRole": "Business Systems Analyst",
+      "status": "not_related",
+      "subject": "Thank You for Connecting with Jeni from Jobot",
+      "from": "Jeni from Jobot <noreply@alerts.jobot.com>"
+    },
+    {
+      "id": "msg-19fb8cccb7c1c8ca",
+      "company": "Pave",
       "oldRole": "General Application",
       "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Rogo",
-      "from": "Rogo Hiring Team <no-reply@ashbyhq.com>"
+      "status": "not_related",
+      "subject": "Update from Pave",
+      "from": "Pave Recruiting <no-reply@appreview.gem.com>"
     },
     {
-      "id": "msg-19f6ac08a8bd360a",
-      "company": "Rightway",
+      "id": "msg-19fb87c99f7be44f",
+      "company": "Amira Williams",
       "oldRole": "General Application",
-      "newRole": "Analytics Engineer, Platform",
-      "status": "applied",
-      "subject": "Thank you for applying to Rightway",
-      "from": "no-reply@us.greenhouse-mail.io"
+      "newRole": "Revops Analytics Engineer",
+      "status": "not_related",
+      "subject": "Follow-Up from Lean Layer About Your Application",
+      "from": "Amira Williams <awilliams@leanlayer.com>"
     },
     {
-      "id": "msg-19f6abd46b46f586",
-      "company": "Counsel Health",
+      "id": "msg-19fb84e23d164cf6",
+      "company": "Duke",
+      "oldRole": "General Application",
+      "newRole": "Analytics Engineer Job ID",
+      "status": "not_related",
+      "subject": "Application Confirmation – Duke Health ",
+      "from": "Duke Careers <system@successfactors.com>"
+    },
+    {
+      "id": "msg-19fa39720bcef00c",
+      "company": "CreatorIQ",
       "oldRole": "General Application",
       "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Counsel Health",
-      "from": "Counsel Health Hiring Team <no-reply@ashbyhq.com>"
+      "status": "not_related",
+      "subject": "Regarding Your Application at CreatorIQ",
+      "from": "CreatorIQ <recruitment@creatoriq.com>"
     },
     {
-      "id": "msg-19f6ab7fd147347d",
+      "id": "msg-19f9b22d38338b35",
+      "company": "SAP",
+      "oldRole": "General Application",
+      "newRole": "Role 448944 Senior Agentic AI Engineer",
+      "status": "not_related",
+      "subject": "Friendly reminder: Please share your feedback on your entire SAP recruitment experience for role 448944 Senior Agentic AI Engineer",
+      "from": "SAP Careers via Starred <support@starred.com>"
+    },
+    {
+      "id": "msg-19f905f75d2a3fc7",
+      "company": "Abbott  Acquisition",
+      "oldRole": "General Application",
+      "newRole": "Analytics Engineer",
+      "status": "not_related",
+      "subject": "Abbott Application Feedback",
+      "from": "Abbott Talent Acquisition <noreply@talentacquisition.abbott.com>"
+    },
+    {
+      "id": "msg-19f89dcd3c6c23a5",
+      "company": "Melisse Robinson",
+      "oldRole": "General Application",
+      "newRole": "Analytics Engineer",
+      "status": "not_related",
+      "subject": "HRCCU Employment Application",
+      "from": "Melisse Robinson via ClearCompany Talent Management <melisse.robinson@msg.clrco.com>"
+    },
+    {
+      "id": "zoetis-general-application",
+      "company": "Zoetis",
+      "oldRole": "General Application",
+      "newRole": "Data Engineer",
+      "status": "not_related",
+      "subject": "Verify your candidate account",
+      "from": "Zoetis Colleague Services <zoetis@otp.workday.com>"
+    },
+    {
+      "id": "msg-19f89b30e4c242a2",
+      "company": "ClearCo",
+      "oldRole": "General Application",
+      "newRole": "Analytics Engineer I",
+      "status": "not_related",
+      "subject": "Sign-in link for your application at Hudson River Community Credit Union",
+      "from": "ClearCo <do_not_reply@clearcompany.com>"
+    },
+    {
+      "id": "paper-store-general-application",
+      "company": "Paper Store",
+      "oldRole": "General Application",
+      "newRole": "Data Engineer",
+      "status": "not_related",
+      "subject": "The Paper Store Password setup",
+      "from": "The Paper Store <donotreply@msg.paycomonline.com>"
+    },
+    {
+      "id": "msg-19f7f9ce772d94b5",
       "company": "Heliocampus",
       "oldRole": "General Application",
       "newRole": "Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying at HelioCampus!",
+      "status": "not_related",
+      "subject": "Thank You for Your Interest in HelioCampus",
       "from": "Carolina Bartolome-Pate - HelioCampus <carolina.bartolome-pate@heliocampus.teamtailor-mail.com>"
     },
     {
-      "id": "synacy-general-application",
-      "company": "Synacy",
+      "id": "priority-management-general-application",
+      "company": "Priority Management",
+      "oldRole": "General Application",
+      "newRole": "Data Analyst/data Engineer",
+      "status": "not_related",
+      "subject": "PRIORITY MANAGEMENT Password setup",
+      "from": "PRIORITY MANAGEMENT <donotreply@msg.paycomonline.com>"
+    },
+    {
+      "id": "msg-19f7f2a496249225",
+      "company": "BankUnited  Opportunities",
+      "oldRole": "General Application",
+      "newRole": "Data Analytics Engineer",
+      "status": "not_related",
+      "subject": "Employment Update - BankUnited",
+      "from": "BankUnited Career Opportunities <jobs@adp.com>"
+    },
+    {
+      "id": "msg-19f6fd40ba3a57a1",
+      "company": "Msg",
+      "oldRole": "General Application",
+      "newRole": "Data And Analytics Engineer",
+      "status": "not_related",
+      "subject": "Ace Relocation Systems, Inc. Password setup",
+      "from": "\"Ace Relocation Systems, Inc.\" <donotreply@msg.paycomonline.com>"
+    },
+    {
+      "id": "ace-relocation-systems-general-application",
+      "company": "Ace Relocation Systems",
+      "oldRole": "General Application",
+      "newRole": "Data And Analytics Engineer",
+      "status": "not_related",
+      "subject": "Ace Relocation Systems, Inc. Password setup",
+      "from": "\"Ace Relocation Systems, Inc.\" <donotreply@msg.paycomonline.com>"
+    },
+    {
+      "id": "msg-19f6f93c2abf26ac",
+      "company": "Tealinc",
+      "oldRole": "General Application",
+      "newRole": "Analytics Engineer",
+      "status": "not_related",
+      "subject": "Thank you for your Application at Tealinc",
+      "from": "Tealinc <do_not_reply@clearcompany.com>"
+    },
+    {
+      "id": "imperial-pfs-general-application",
+      "company": "Imperial PFS",
+      "oldRole": "General Application",
+      "newRole": "Analytics Engineer",
+      "status": "not_related",
+      "subject": "Sign-in link for your application at Imperial PFS",
+      "from": "ClearCo <do_not_reply@clearcompany.com>"
+    },
+    {
+      "id": "msg-19f6acfaa5e8f8d1",
+      "company": "Workable",
+      "oldRole": "General Application",
+      "newRole": "Analytics Engineer",
+      "status": "not_related",
+      "subject": "EEO survey for Analytics Engineer, at Purple Carrot",
+      "from": "Workable <noreply@candidates.workablemail.com>"
+    },
+    {
+      "id": "security-first-insurance-general-application",
+      "company": "Security First Insurance",
       "oldRole": "General Application",
       "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth, we have received your application",
-      "from": "Synacy <noreply@applytojob.com>"
+      "status": "not_related",
+      "subject": "Sign-in link for your application at Security First Insurance Company (Security First Managers)",
+      "from": "ClearCompany <do_not_reply@clearcompany.com>"
     },
     {
-      "id": "grace-hill-general-application",
-      "company": "IRIUM",
+      "id": "autosavvy-general-application",
+      "company": "Autosavvy",
       "oldRole": "General Application",
       "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Tirth, we've received your resume",
-      "from": "IRIUM - Spain <noreply@applytojob.com>"
+      "status": "not_related",
+      "subject": "AutoSavvy Password setup",
+      "from": "AutoSavvy <donotreply@msg.paycomonline.com>"
     },
     {
-      "id": "institute-of-foundation-models-general-application",
-      "company": "Institute Of Foundation Models",
+      "id": "msg-19f5d115d3fb3999",
+      "company": "Careerplug",
       "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to the Institute of Foundation Models",
-      "from": "Institute of Foundation Models <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "moneta-general-application",
-      "company": "Moneta",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Moneta",
-      "from": "<MonetaGroupInvestmentAdvisorsLLC.hr@adp.com>"
-    },
-    {
-      "id": "neighbor-general-application",
-      "company": "Neighbor",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to Neighbor",
-      "from": "Neighbor <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "msg-19f6413102b819b6",
-      "company": "GDIT Workday",
-      "oldRole": "General Application",
-      "newRole": "Agentic AI Engineer",
-      "status": "applied",
-      "subject": "Your GDIT Job Application for RQ217958 Agentic AI Engineer",
-      "from": "GDIT Workday <GDIT@myworkday.com>"
-    },
-    {
-      "id": "ust-general-application",
-      "company": "UST",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Job application successful.",
-      "from": "UST Talent Acquisition <USTCareers.noreply@ust.com>"
-    },
-    {
-      "id": "xylem-general-application",
-      "company": "Xylem",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your interest in Xylem! Your application has been received.",
-      "from": "Xylem Workday <xylem@myworkday.com>"
-    },
-    {
-      "id": "msg-19f628d5e30584c1",
-      "company": "Faire",
-      "oldRole": "General Application",
-      "newRole": "Senior Analytics Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Faire!",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "plusai-general-application",
-      "company": "Plusai",
-      "oldRole": "General Application",
-      "newRole": "Data Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to PlusAI",
-      "from": "PlusAI <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "msg-19f5d16e2cc50fe1",
-      "company": "ServiceNow",
-      "oldRole": "General Application",
-      "newRole": "Machine Learning Engineer, Agentic Application",
-      "status": "applied",
-      "subject": "Thank You for Applying to ServiceNow!",
-      "from": "ServiceNow <notification@smartrecruiters.com>"
-    },
-    {
-      "id": "msg-19f5d0ff8fe01453",
-      "company": "Eigen Labs",
-      "oldRole": "General Application",
-      "newRole": "AI Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Eigen Labs!",
-      "from": "Eigen Labs Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "msg-19f5d0fa1f78df1e",
-      "company": "NextGen Federal Systems",
-      "oldRole": "General Application",
-      "newRole": "Application/agentic AI Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to NextGen Federal Systems",
-      "from": "NextGen Federal Systems <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "nextgen-federal-systems-general-application",
-      "company": "Nextgen Federal Systems",
-      "oldRole": "General Application",
-      "newRole": "Application/agentic AI Engineer",
-      "status": "applied",
-      "subject": "Thank you for your application to NextGen Federal Systems",
-      "from": "NextGen Federal Systems <no-reply@hire.lever.co>"
-    },
-    {
-      "id": "msg-19f5d038ccc8f2dd",
-      "company": "Benchling",
-      "oldRole": "General Application",
-      "newRole": "Agentic AI Engineer",
-      "status": "applied",
-      "subject": "Thank you for applying to Benchling!",
-      "from": "No-reply <no-reply@benchling.com>"
-    },
-    {
-      "id": "msg-19f5cf4a6e7f2405",
-      "company": "Dayforce",
-      "oldRole": "General Application",
-      "newRole": "AI Engineer",
-      "status": "applied",
-      "subject": "Engineering - Agentic AI Engineer (Junior) Application Update",
-      "from": "notify@dayforce.com"
-    },
-    {
-      "id": "msg-19f5cd326e7bc747",
-      "company": "Senior AI Engineer I",
-      "oldRole": "General Application",
-      "newRole": "Senior AI Engineer I - Agentic AI",
-      "status": "applied",
-      "subject": "Thank you for applying to Senior AI Engineer I - Agentic AI - 26002766",
-      "from": "Amex Careers <careers@recruitment.americanexpress.com>"
-    },
-    {
-      "id": "msg-19f5ccde57b141d6",
-      "company": "Collabera",
-      "oldRole": "General Application",
-      "newRole": "- Agentic AI Engineer",
-      "status": "applied",
-      "subject": "Thank You for Applying to - Agentic AI Engineer  - 31311",
-      "from": "JOB ALERT <JOB-ALERT@collabera.com>"
+      "newRole": "Genai & Agentic AI Engineer",
+      "status": "not_related",
+      "subject": "Thank You For Your Application",
+      "from": "notifications@careerplug.com"
     }
   ],
   "stillBadExamples": [
@@ -2754,6 +481,14 @@
       "status": "applied",
       "subject": "Next step with Yoh",
       "from": "Yoh <selfidentify@yoh.com>"
+    },
+    {
+      "id": "google-general-application",
+      "company": "Google",
+      "role": "The Following Reasons",
+      "status": "rejected",
+      "subject": "Security alert",
+      "from": "Google <no-reply@accounts.google.com>"
     },
     {
       "id": "venn-venn",
@@ -2804,6 +539,14 @@
       "from": "Focus Human Resources <focus-1-71424@mg.refer.io>"
     },
     {
+      "id": "home-depot-your-interest-188577",
+      "company": "Home Depot",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Application Received",
+      "from": "The Home Depot <homedepot@myworkday.com>"
+    },
+    {
       "id": "covalent-your-interest",
       "company": "Covalent",
       "role": "Your Interest",
@@ -2812,12 +555,28 @@
       "from": "Covalent <no-reply@ats.rippling.com>"
     },
     {
+      "id": "kristen-gabrielli-from-wavestone-further-consideration-at-this-time-if-interested-we-will-keep-your-resume-on-f",
+      "company": "Kristen Gabrielli From Wavestone",
+      "role": "Further Consideration At This Time. If Interested, We Will Keep Your Resume On F",
+      "status": "rejected",
+      "subject": "Wavestone | Application Update",
+      "from": "Kristen Gabrielli from Wavestone <notifications@smartrecruiters.com>"
+    },
+    {
       "id": "team-at-waymo-general-application",
       "company": "Team At Waymo",
       "role": "General Application",
       "status": "applied",
       "subject": "Here are some new roles at Waymo",
       "from": "The Talent Acquisition team at Waymo <user-e65a8e09c91dc79cdac854bf73c74dd1@waymo.mail.clinchtalent.com>"
+    },
+    {
+      "id": "ziprecruiter-general-application",
+      "company": "Ziprecruiter",
+      "role": "The Job Opportunity Referenced Above. If You Have Applied To Multiple Positions",
+      "status": "rejected",
+      "subject": "Blue Cross and Blue Shield of North Carolina is hiring now. September 11, 2026",
+      "from": "ZipRecruiter <alerts@ziprecruiter.com>"
     },
     {
       "id": "bln24-your-interest-in-employment-at-bln24-if-your-qualifications-match-our-needs-we",
@@ -2842,6 +601,14 @@
       "status": "applied",
       "subject": "Thank you for applying to Chainguard!",
       "from": "no-reply@us.greenhouse-mail.io"
+    },
+    {
+      "id": "jobber-attraction-team-your-interest-lects",
+      "company": "Jobber Attraction Team",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Thank you for your interest in Jobber",
+      "from": "Jobber Talent Attraction Team <no-reply@ashbyhq.com>"
     },
     {
       "id": "liberate-liberate",
@@ -2900,6 +667,30 @@
       "from": "Amex Careers <careers@recruitment.americanexpress.com>"
     },
     {
+      "id": "wellsky-your-interest",
+      "company": "Wellsky",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Thank You For Applying with WellSky!",
+      "from": "WellSky <wellsky@myworkday.com>"
+    },
+    {
+      "id": "ibm-the-job-opportunity-referenced-above-if-you-have-applied-to-multiple-positions-118809",
+      "company": "IBM",
+      "role": "The Job Opportunity Referenced Above. If You Have Applied To Multiple Positions",
+      "status": "rejected",
+      "subject": "Alert Notification: User account changed",
+      "from": "IBMid <ibmacct@iam.ibm.com>"
+    },
+    {
+      "id": "built-in-general-application",
+      "company": "Built In",
+      "role": "General Application",
+      "status": "not_related",
+      "subject": "New Engineering Job Matches",
+      "from": "Built In <support@builtin.com>"
+    },
+    {
       "id": "amy-from-zensearch-you-by-zensearch-devops-engineer-smartrent-phoenix-az-az-full-time-2-years-p",
       "company": "Amy From Zensearch",
       "role": "You By Zensearch. Devops Engineer Smartrent Phoenix, Az, AZ Full Time 2+ Years P",
@@ -2908,12 +699,36 @@
       "from": "Amy from ZenSearch <amy@zensearch.jobs>"
     },
     {
+      "id": "kristen-chatley-your-interest-in-gridmatic-and-for-taking-the-time-to-apply-we-truly-appreciate",
+      "company": "Kristen Chatley",
+      "role": "Your Interest In Gridmatic And For Taking The Time To Apply. We Truly Appreciate",
+      "status": "rejected",
+      "subject": "Gridmatic Update",
+      "from": "Kristen Chatley <kristen@gridmatic.com>"
+    },
+    {
+      "id": "exxonmobil-careerconnect-your-interest-erred",
+      "company": "Exxonmobil Careerconnect",
+      "role": "Your Interest",
+      "status": "interviewed",
+      "subject": "Next Step in Your ExxonMobil Application: Online Behavioral Assessment Invitation",
+      "from": "ExxonMobil CareerConnect <donotreply@successfactors.com>"
+    },
+    {
       "id": "leela-yanamaddi-the-job-portal-filling-out-the-ats-form-uploading-the-resume-writing-the-cove-uires",
       "company": "Leela Yanamaddi",
       "role": "The Job Portal, Filling Out The ATS Form, Uploading The Resume, Writing The Cove",
       "status": "applied",
       "subject": "The question nobody thinks to ask about their job search",
       "from": "Leela Yanamaddi <hello@scale.jobs>"
+    },
+    {
+      "id": "exl-fusion-notification-general-application",
+      "company": "Exl-fusion-notification",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Confirm your identity",
+      "from": "EXL-Fusion-Notification <EXL-Fusion-Notification@exlservice.com>"
     },
     {
       "id": "dreamforce-a-one-of-a-kind-conversation-on-advancing-the-ai-frontier-and-what-it-means-for",
@@ -2972,6 +787,14 @@
       "from": "ENGIE Human Resources <No-reply@mycareer.engie.com>"
     },
     {
+      "id": "garikipati-tejaswini-our-discussion-on-the-take-home-assignment-scheduled-for-monday-september-14th-erence",
+      "company": "Garikipati, TEJASWINI",
+      "role": "Our Discussion On The Take-home Assignment, Scheduled For Monday, September 14th",
+      "status": "interviewed",
+      "subject": "RE: Take Home Assignment",
+      "from": "\"GARIKIPATI, TEJASWINI\" <TEJASWINI.GARIKIPATI@nexteraenergy.com>"
+    },
+    {
       "id": "madhur-chaurasia-an-immediate-role-which-might-be-of-interest-to-you-please-review-the-job-descr-erred",
       "company": "Madhur Chaurasia",
       "role": "An Immediate Role Which Might Be Of Interest To You. Please Review The Job Descr",
@@ -2986,6 +809,22 @@
       "status": "applied",
       "subject": "Thank you for applying to Jobber! So what happens next?",
       "from": "Jobber Talent Attraction Team <no-reply@ashbyhq.com>"
+    },
+    {
+      "id": "garner-health-general-application",
+      "company": "Garner Health",
+      "role": "Garner Health",
+      "status": "rejected",
+      "subject": "Thank you for applying to Garner Health",
+      "from": "no-reply@getgarner.com"
+    },
+    {
+      "id": "myworkday-t-mobile-your-candidate-account-https",
+      "company": "Myworkday T-mobile",
+      "role": "Your Candidate Account Https",
+      "status": "not_related",
+      "subject": "Verify your candidate account",
+      "from": "MyWorkday T-Mobile <tmobile@otp.workday.com>"
     },
     {
       "id": "ta-dataeconomy-general-application",
@@ -3092,6 +931,14 @@
       "from": "no-reply@us.greenhouse-mail.io"
     },
     {
+      "id": "k-health-general-application",
+      "company": "K Health",
+      "role": "K Health",
+      "status": "rejected",
+      "subject": "Thank you for applying to K Health!",
+      "from": "no-reply@khealth.com"
+    },
+    {
       "id": "smartlight-analytics-your-interest",
       "company": "Smartlight Analytics",
       "role": "Your Interest",
@@ -3124,12 +971,44 @@
       "from": "Maven <maven@list.maven.com>"
     },
     {
+      "id": "caci-your-interest",
+      "company": "CACI",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Thank you for your interest in the AI Prompt Engineer position at CACI",
+      "from": "caci@myworkday.com"
+    },
+    {
       "id": "suneel-kumar-our-client-if-interested-please-send-me-your-updated-resume-in-word-format-job-uirement",
       "company": "Suneel Kumar",
       "role": "Our Client. If Interested Please Send Me Your Updated Resume In Word Format. Job",
       "status": "applied",
       "subject": "Urgent Hiring _ .NET Developer. __ Charlotte, NC (Hybrid 3 Days onsite every week) __ Need USC (Local Only)",
       "from": "Suneel Kumar <suneel.kumar@tekfortune.com>"
+    },
+    {
+      "id": "taylor-richmond-your-interest",
+      "company": "Taylor Richmond",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Thank you for your Interest!",
+      "from": "Taylor Richmond <centralhealth+email+81pa-47343f450b@talent.icims.com>"
+    },
+    {
+      "id": "thrive-market-your-interest",
+      "company": "Thrive Market",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Thanks for your interest in Thrive Market",
+      "from": "Thrive Market Recruiting <no-reply@appreview.gem.com>"
+    },
+    {
+      "id": "bellese-your-interest",
+      "company": "Bellese",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Thanks for your interest in Bellese Technologies, Tirth",
+      "from": "Bellese Technologies <mail@hire.lever.co>"
     },
     {
       "id": "amy-from-zensearch-you-by-zensearch-data-engineer-ii-analytics-modeling-clear-new-york-ny-ny",
@@ -3164,12 +1043,28 @@
       "from": "no-reply@us.greenhouse-mail.io"
     },
     {
+      "id": "ramsey-solutions-ramsey-solutions",
+      "company": "Ramsey Solutions",
+      "role": "Ramsey Solutions",
+      "status": "not_related",
+      "subject": "Equal Opportunity Compliance Forms Request for Ramsey Solutions",
+      "from": "Ramsey Solutions Recruiting Team <notifications@ramseysolutions.com>"
+    },
+    {
       "id": "infoblox-general-application",
       "company": "Infoblox",
       "role": "General Application",
       "status": "applied",
       "subject": "Confirm your identity",
       "from": "Infoblox Careers <noreply@talent.infoblox.com>"
+    },
+    {
+      "id": "conagra-brands-general-application",
+      "company": "Conagra Brands",
+      "role": "Sr",
+      "status": "rejected",
+      "subject": "Thank you for Applying!",
+      "from": "Conagra Brands Workday <conagrabrands@myworkday.com>"
     },
     {
       "id": "earnest-partners-earnest-partners",
@@ -3180,12 +1075,44 @@
       "from": "EARNEST Partners <no-reply@hire.lever.co>"
     },
     {
+      "id": "home-depot-general-application",
+      "company": "Home Depot",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Application Received",
+      "from": "The Home Depot <homedepot@myworkday.com>"
+    },
+    {
+      "id": "covista-your-interest-in-the-nbsp",
+      "company": "Covista",
+      "role": "Your Interest In The&nbsp",
+      "status": "rejected",
+      "subject": "Covista",
+      "from": "Covista Hiring Team <notifications@careers.covista.com>"
+    },
+    {
+      "id": "vagaro-team-taking-the-time-to-apply-to-vagaro-and-for-your-interest-in-joining-our-team-we",
+      "company": "Vagaro Team",
+      "role": "Taking The Time To Apply To Vagaro And For Your Interest In Joining Our Team. We",
+      "status": "rejected",
+      "subject": "Vagaro: Application Status",
+      "from": "Vagaro Talent Acquisition Team <candidate-ff257efcbabb@vagaro.breezy-mail.com>"
+    },
+    {
       "id": "career-now-brands-your-interest",
       "company": "Career Now Brands",
       "role": "Your Interest",
       "status": "applied",
       "subject": "Thanks for your interest in Career Now Brands",
       "from": "Career Now Brands <no-reply@hire.lever.co>"
+    },
+    {
+      "id": "salesforce-platform-agentforce-is-easier-than-ever-on-the-salesforce-platform-unfortunately-your-e",
+      "company": "Salesforce Platform",
+      "role": "Agentforce Is Easier Than Ever On The Salesforce Platform. Unfortunately, Your E",
+      "status": "rejected",
+      "subject": "Empower your Agentforce with secure data.",
+      "from": "Salesforce Platform <email@mail.salesforce.com>"
     },
     {
       "id": "ananya-singh-job-opportunities-while-we-love-to-be-part-of-your-job-search-we-respect-your",
@@ -3226,6 +1153,14 @@
       "status": "applied",
       "subject": "Thank you for applying to Kargo",
       "from": "no-reply@us.greenhouse-mail.io"
+    },
+    {
+      "id": "associate-data-engineer-associate-data-engineer",
+      "company": "Associate Data Engineer",
+      "role": "Associate Data Engineer",
+      "status": "rejected",
+      "subject": "Application Received for Associate Data Engineer",
+      "from": "themutualgroup@myworkday.com"
     },
     {
       "id": "tabapay-tabapay",
@@ -3292,6 +1227,22 @@
       "from": "Leela Yanamaddi <hello@scale.jobs>"
     },
     {
+      "id": "truelogic-general-application",
+      "company": "Truelogic",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Thank you for your interest in joining Truelogic",
+      "from": "Truelogic Hiring Team <no-reply@ashbyhq.com>"
+    },
+    {
+      "id": "truelogic-your-interest",
+      "company": "Truelogic",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Thank you for your interest in joining Truelogic",
+      "from": "Truelogic Hiring Team <no-reply@ashbyhq.com>"
+    },
+    {
       "id": "floqast-your-interest",
       "company": "Floqast",
       "role": "Your Interest",
@@ -3308,12 +1259,36 @@
       "from": "AG SOLUTION <no-reply@quariq.teamtailor-mail.com>"
     },
     {
+      "id": "cloudforce-general-application",
+      "company": "Cloudforce",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Thanks for your interest in Cloudforce",
+      "from": "Cloudforce <no-reply@hire.lever.co>"
+    },
+    {
+      "id": "cloudforce-your-interest",
+      "company": "Cloudforce",
+      "role": "Your Interest",
+      "status": "rejected",
+      "subject": "Thanks for your interest in Cloudforce",
+      "from": "Cloudforce <no-reply@hire.lever.co>"
+    },
+    {
       "id": "ringcentral-general-application",
       "company": "Ringcentral",
       "role": "General Application",
       "status": "applied",
       "subject": "Reminder: activate your RingCentral Video account",
       "from": "RingCentral <alerts@mvp.ringcentral.com>"
+    },
+    {
+      "id": "wonderful-wonderful",
+      "company": "Wonderful",
+      "role": "Wonderful",
+      "status": "rejected",
+      "subject": "Application Update",
+      "from": "Wonderful Hiring Team <no-reply@ashbyhq.com>"
     },
     {
       "id": "michelle-price-general-application",
@@ -3338,6 +1313,14 @@
       "status": "applied",
       "subject": "Thank you for applying to CoreWeave",
       "from": "no-reply@us.greenhouse-mail.io"
+    },
+    {
+      "id": "chatgpt-meetings-and-move-faster-connect-apps-create-even-better-images-use-expanded-i",
+      "company": "Chatgpt",
+      "role": "Meetings, And Move Faster. Connect Apps Create Even Better Images Use Expanded I",
+      "status": "reply_needed",
+      "subject": "Got a question? Start here",
+      "from": "ChatGPT <noreply@email.openai.com>"
     },
     {
       "id": "z-from-levels-fyi-general-application",
@@ -3372,6 +1355,30 @@
       "from": "\"Coached (by Resume Worded)\" <team@cs.resumeworded.com>"
     },
     {
+      "id": "openai-general-application",
+      "company": "Openai",
+      "role": "Openai",
+      "status": "reply_needed",
+      "subject": "ChatGPT - Your plan will not renew",
+      "from": "OpenAI <noreply@tm.openai.com>"
+    },
+    {
+      "id": "msg-1a014f54dfc10522",
+      "company": "Headwater Science",
+      "role": "General Application",
+      "status": "rejected",
+      "subject": "Important information about your application to Headwater Science",
+      "from": "no-reply@us.greenhouse-mail.io"
+    },
+    {
+      "id": "zensearch-general-application",
+      "company": "Zensearch",
+      "role": "General Application",
+      "status": "not_related",
+      "subject": "Your Daily Zen: Today's Personalized Job Matches",
+      "from": "Amy from ZenSearch <amy@zensearch.jobs>"
+    },
+    {
       "id": "stash-general-application",
       "company": "Stash",
       "role": "General Application",
@@ -3394,286 +1401,6 @@
       "status": "applied",
       "subject": "Thank you for applying to SixSpeed",
       "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "highlights-for-children-general-application",
-      "company": "Highlights For Children",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying!",
-      "from": "<HighlightsforChildren.hr@adp.com>"
-    },
-    {
-      "id": "baselayer-general-application",
-      "company": "Baselayer",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to Baselayer",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "artech-general-application-35092",
-      "company": "Artech",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #26-35092",
-      "from": "HumanResources@artechinfo.com"
-    },
-    {
-      "id": "georgia-infotech-general-application-01026",
-      "company": "Georgia Infotech",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #23-01026",
-      "from": "HumanResources@georgiainfotech.com"
-    },
-    {
-      "id": "artech-general-application-35173",
-      "company": "Artech",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #26-35173",
-      "from": "HumanResources@artechinfo.com"
-    },
-    {
-      "id": "artech-general-application-35165",
-      "company": "Artech",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #26-35165",
-      "from": "HumanResources@artechinfo.com"
-    },
-    {
-      "id": "infowave-systems-general-application-00625",
-      "company": "Infowave Systems",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #25-00625",
-      "from": "HumanResources@infowavesystems.com"
-    },
-    {
-      "id": "citizens-general-application",
-      "company": "Citizens",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Confirm your identity",
-      "from": "Citizens Careers <CitizensCareers@orc.mycitizenshr.com>"
-    },
-    {
-      "id": "linkedin-using-linkedin",
-      "company": "Linkedin",
-      "role": "Using Linkedin",
-      "status": "applied",
-      "subject": "Tirth Chirayu, please verify your new device",
-      "from": "LinkedIn <security-noreply@linkedin.com>"
-    },
-    {
-      "id": "ibm-subscription-login-ibm-com-if-you-did-not-request-this-change-please-contact",
-      "company": "IBM",
-      "role": "Subscription Login.ibm.com . If You Did Not Request This Change, Please Contact",
-      "status": "applied",
-      "subject": "Multifactor enrollment added",
-      "from": "IBMid <ibmacct@iam.ibm.com>"
-    },
-    {
-      "id": "clarity-innovations-general-application",
-      "company": "Clarity Innovations",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to Clarity Innovations",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "clarity-innovations-clarity-innovations",
-      "company": "Clarity Innovations",
-      "role": "Clarity Innovations",
-      "status": "applied",
-      "subject": "Thank you for applying to Clarity Innovations",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "viant-technology-general-application",
-      "company": "Viant Technology",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to Viant Technology",
-      "from": "noreply@viantinc.com"
-    },
-    {
-      "id": "curaleaf-curaleaf",
-      "company": "Curaleaf",
-      "role": "Curaleaf",
-      "status": "applied",
-      "subject": "Thank you for applying to Curaleaf",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "ruggable-general-application",
-      "company": "Ruggable",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to Ruggable",
-      "from": "theteam@ruggable.com"
-    },
-    {
-      "id": "indicium-ai-general-application",
-      "company": "Indicium AI",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to Indicium AI",
-      "from": "no-reply@eu.greenhouse-mail.io"
-    },
-    {
-      "id": "adyen-general-application",
-      "company": "Adyen",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to Adyen!",
-      "from": "jobs@adyen.com"
-    },
-    {
-      "id": "adyen-adyen",
-      "company": "Adyen",
-      "role": "Adyen",
-      "status": "applied",
-      "subject": "Thank you for applying to Adyen!",
-      "from": "jobs@adyen.com"
-    },
-    {
-      "id": "gridmatic-general-application",
-      "company": "Gridmatic",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to Gridmatic Inc",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "figs-general-application",
-      "company": "FIGS",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to FIGS",
-      "from": "no-reply@wearfigs.com"
-    },
-    {
-      "id": "tria-federal-general-application",
-      "company": "Tria Federal",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to Tria Federal",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "chatgpt-general-application",
-      "company": "Chatgpt",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Transform your images with ChatGPT",
-      "from": "ChatGPT <noreply@email.openai.com>"
-    },
-    {
-      "id": "studyfetch-studyfetch",
-      "company": "Studyfetch",
-      "role": "Studyfetch",
-      "status": "applied",
-      "subject": "Thank you for applying to Studyfetch",
-      "from": "Studyfetch <no-reply@ats.rippling.com>"
-    },
-    {
-      "id": "lumilens-general-application",
-      "company": "Lumilens",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank You for Your Application to Lumilens",
-      "from": "Lumilens Hiring Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "maintainx-general-application",
-      "company": "Maintainx",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to MaintainX! | Merci d’avoir postulé chez MaintainX!",
-      "from": "MaintainX Talent Team <no-reply@ashbyhq.com>"
-    },
-    {
-      "id": "qube-research-general-application",
-      "company": "Qube Research &",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "QRT | Application Received",
-      "from": "global-recruitment@qube-rt.com"
-    },
-    {
-      "id": "georgia-infotech-general-application-00435",
-      "company": "Georgia Infotech",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #23-00435",
-      "from": "HumanResources@georgiainfotech.com"
-    },
-    {
-      "id": "brixton-general-application-00924",
-      "company": "Brixton",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #26-00924",
-      "from": "HumanResources@brixton.net"
-    },
-    {
-      "id": "georgia-infotech-general-application-02873",
-      "company": "Georgia Infotech",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #20-02873",
-      "from": "HumanResources@georgiainfotech.com"
-    },
-    {
-      "id": "georgia-infotech-general-application-01377",
-      "company": "Georgia Infotech",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #21-01377",
-      "from": "HumanResources@georgiainfotech.com"
-    },
-    {
-      "id": "georgia-infotech-general-application-00108",
-      "company": "Georgia Infotech",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #23-00108",
-      "from": "HumanResources@georgiainfotech.com"
-    },
-    {
-      "id": "georgia-infotech-general-application-01852",
-      "company": "Georgia Infotech",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Application Received for Job #22-01852",
-      "from": "HumanResources@georgiainfotech.com"
-    },
-    {
-      "id": "ra-capital-management-general-application",
-      "company": "RA Capital Management",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to RA Capital Management, LLC",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "whop-general-application",
-      "company": "Whop",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank you for applying to Whop!",
-      "from": "no-reply@us.greenhouse-mail.io"
-    },
-    {
-      "id": "careatc-general-application",
-      "company": "Careatc",
-      "role": "General Application",
-      "status": "applied",
-      "subject": "Thank You For Applying!",
-      "from": "careatc@myworkday.com"
     }
   ]
 }

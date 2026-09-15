@@ -458,6 +458,27 @@ function cleanJobRole(role, subject = "", notes = "") {
   return r;
 }
 
+function getRoleQuality(app, displayRole) {
+  const rawRole = String(app?.role || "").trim();
+  const role = String(displayRole || rawRole || "").trim();
+  const company = String(app?.company || "").trim();
+  const subject = String(app?.latestSubject || "");
+  const notes = String(app?.notes || "");
+  const genericRole = /^(general application|your interest|your application|this role|unknown role|unknown|sr|jr|you)$/i;
+  const artifactRole = /more success view similar jobs|candidate account|job alert|view similar jobs|after careful|further consideration|thank you|&nbsp/i;
+  const sentenceRole = role.length > 70 || /^(the|a|an|our)\s+/i.test(role);
+  const companyAsRole = normalizeCompany(role) && normalizeCompany(role) === normalizeCompany(company);
+  const hasRoleSignal = /\b(data engineer|analytics engineer|data analyst|business analyst|software engineer|forward deployed|ai engineer|machine learning|data scientist|architect|developer|analyst|engineer)\b/i.test(`${role} ${subject} ${notes}`);
+  const needsReview = !role || genericRole.test(rawRole) || artifactRole.test(rawRole) || sentenceRole || companyAsRole || !hasRoleSignal;
+  const repaired = rawRole && role && rawRole !== role;
+  return {
+    needsReview,
+    repaired,
+    lowConfidence: /^(low|medium)$/i.test(String(app?.confidence || app?.aiConfidence || "")),
+    reason: needsReview ? "Role title may be generic, inferred, or missing clear job-title evidence" : ""
+  };
+}
+
 function extractRequisitionId(text) {
   if (!text) return null;
   const reqMatch = text.match(/\b(?:req(?:uisition)?|ref|reference|job\s*id|job\s*#|posting\s*#)\s*[:#\-]?\s*([0-9A-Za-z]{4,15})\b/i);
@@ -1213,6 +1234,18 @@ function renderCard(app) {
   ];
 
   const cleanRole = cleanJobRole(app.role, app.latestSubject, app.notes);
+  const roleQuality = getRoleQuality(app, cleanRole);
+  const qualityBadges = [
+    roleQuality.needsReview
+      ? `<span class="badge-quality badge-review" title="${escapeHtml(roleQuality.reason)}">Needs review</span>`
+      : "",
+    roleQuality.lowConfidence
+      ? `<span class="badge-quality badge-low-confidence" title="Low or medium classifier confidence">Low confidence</span>`
+      : "",
+    roleQuality.repaired
+      ? `<span class="badge-quality badge-repaired" title="Displayed title was repaired from raw email extraction">Title repaired</span>`
+      : ""
+  ].filter(Boolean).join("");
 
   // Authentic thread count badge (only when genuine conversation with 2-5 emails)
   const msgCount = Array.isArray(app.gmailMessageIds) ? app.gmailMessageIds.length : 1;
@@ -1273,6 +1306,7 @@ function renderCard(app) {
       <div class="card-role-row">
         <span class="card-role">${escapeHtml(cleanRole)}</span>
         ${reqBadge}
+        ${qualityBadges}
       </div>
 
       <a class="card-subject-link" href="${gmailUrl}" target="_blank" rel="noopener noreferrer" title="Subject Context: ${subjectText}">
