@@ -868,6 +868,10 @@ function filteredApplications(allApps) {
   });
 }
 
+function getFilteredApplications() {
+  return filteredApplications(computeEffectiveStatuses(state.data?.applications ?? []));
+}
+
 // ─── Lazy Active View Renderer: Renders ONLY the currently visible tab ──────
 function render() {
   const currentView = state.view || "board";
