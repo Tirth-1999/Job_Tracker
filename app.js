@@ -708,27 +708,27 @@ function pickDisplayRoleApp(appCluster, bestStatus) {
     } else {
       const appCluster = cluster.map((c) => c.app);
       const bestStatus = resolveClusterStatus(appCluster);
-      const statusWinner = appCluster.find((a) => a.status === bestStatus);
+      const sortedByActivity = [...appCluster].sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
+      const statusWinner = sortedByActivity.find((a) => a.status === bestStatus);
       const cleanComp = appCluster.find((a) => a.company && a.company.toLowerCase() !== "tirth shah" && a.company.toLowerCase() !== "unknown")?.company || appCluster[0].company;
       const bestRoleApp = pickDisplayRoleApp(appCluster, bestStatus) || statusWinner || appCluster[0];
       const cleanRole = cleanJobRole(bestRoleApp.role, bestRoleApp.latestSubject, bestRoleApp.notes);
-      appCluster.sort((a, b) => (b.lastActivityAt || "").localeCompare(a.lastActivityAt || ""));
-      const latest = appCluster[0];
+      const displayApp = statusWinner || sortedByActivity[0];
       const rawMsgIds = [...new Set(cluster.flatMap((c) => c.msgIds))];
-      const allMsgIds = rawMsgIds.length > 5 ? (latest.gmailThreadId ? [latest.gmailThreadId] : rawMsgIds.slice(0, 2)) : rawMsgIds;
+      const allMsgIds = rawMsgIds.length > 5 ? (displayApp.gmailThreadId ? [displayApp.gmailThreadId] : rawMsgIds.slice(0, 2)) : rawMsgIds;
       const manualApp = appCluster.find((a) => a.isManualOverride);
       const clusterReqId = cluster.find((c) => c.app.id === bestRoleApp.id && c.reqId)?.reqId || null;
 
       consolidated[g] = {
-        ...latest,
-        id: statusWinner?.id || latest.id,
+        ...displayApp,
+        id: statusWinner?.id || displayApp.id,
         company: cleanComp,
         role: cleanRole,
         reqId: clusterReqId,
         status: bestStatus,
         effectiveStatus: bestStatus,
         gmailMessageIds: allMsgIds,
-        gmailThreadId: latest.gmailThreadId || appCluster.find((a) => a.gmailThreadId)?.gmailThreadId || null,
+        gmailThreadId: displayApp.gmailThreadId || appCluster.find((a) => a.gmailThreadId)?.gmailThreadId || null,
         confidence: "high",
         isManualOverride: Boolean(manualApp),
         manualAction: manualApp ? manualApp.manualAction : null
