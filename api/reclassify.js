@@ -1,11 +1,31 @@
-// api/reclassify.js
-// Vercel Serverless Function — Real LLM Batch Reclassification via OpenRouter / Gemini API
-
+import fs from "fs";
 import { classifyDeterministic } from "../src/classification/rules.mjs";
 import { cleanRole } from "../src/classification/normalize.mjs";
 
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 const MAX_EMAIL_CHARS = 900;
+
+// In local development, load .env if environment variables are not set
+function loadLocalEnv() {
+  if (process.env.OPENROUTER_API_KEY) return;
+  try {
+    if (fs.existsSync(".env")) {
+      const envContent = fs.readFileSync(".env", "utf8");
+      envContent.split("\n").forEach((line) => {
+        const m = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
+        if (m) {
+          const key = m[1];
+          let value = m[2] || "";
+          if (value.startsWith('"') && value.endsWith('"')) value = value.slice(1, -1);
+          if (value.startsWith("'") && value.endsWith("'")) value = value.slice(1, -1);
+          if (!process.env[key]) process.env[key] = value;
+        }
+      });
+    }
+  } catch (err) {
+    // Ignore error in serverless environment
+  }
+}
 
 export const config = {
   maxDuration: 60
@@ -226,10 +246,11 @@ export default async function handler(req, res) {
   }
 
   // Check OpenRouter API key from server environment or client header
+  loadLocalEnv();
   const customKey = req.headers.authorization ? req.headers.authorization.replace(/^Bearer\s+/i, "") : null;
   const apiKey = customKey || process.env.OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEYS || process.env.OPENROUTER_API_KEY_2 || process.env.GEMINI_API_KEY;
 
-  const chosenModel = model || process.env.OPENROUTER_MODEL || "google/gemini-3.7-flash";
+  let chosenModel = model || process.env.OPENROUTER_MODEL || "google/gemini-3.7-flash";
 
   // Build input payload for LLM
   const inputPayload = applications.map((app) => ({
@@ -304,7 +325,8 @@ export default async function handler(req, res) {
             content: `Analyze and classify the following batch of ${unresolvedPayload.length} job applications:\n${JSON.stringify(unresolvedPayload, null, 2)}`
           }
         ],
-        temperature: 0.1
+        temperature: 0.1,
+        max_tokens: 3500
       };
       if (useJsonFormat) {
         requestBody.response_format = { type: "json_object" };
@@ -323,6 +345,13 @@ export default async function handler(req, res) {
 
       if (aiResponse.status === 400 && useJsonFormat) {
         // Some free models do not support response_format: { type: "json_object" }
+        useJsonFormat = false;
+        continue;
+      }
+
+      if ((aiResponse.status === 402 || aiResponse.status === 429 || aiResponse.status === 404) && chosenModel !== "openrouter/free") {
+        console.warn(`Model ${chosenModel} returned HTTP ${aiResponse.status}. Retrying with openrouter/free.`);
+        chosenModel = "openrouter/free";
         useJsonFormat = false;
         continue;
       }
@@ -404,6 +433,7 @@ export default async function handler(req, res) {
             }
           ],
           temperature: 0.1,
+          max_tokens: 3500,
           response_format: { type: "json_object" }
         })
       });

@@ -464,27 +464,52 @@ BUSINESS DAYS SINCE TIRTH'S LAST EMAIL: ${candidate.days_elapsed}
 ${candidate.threadContext}
 --- END CONVERSATION THREAD ---`;
 
-  const response = await fetch(OPENROUTER_API_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-      "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
-      "X-Title": "Job Tracker Follow-Up Scanner"
-    },
-    body: JSON.stringify({
-      model: OPENROUTER_MODEL,
-      messages: [
-        { role: "system", content: DRAFT_SYSTEM_PROMPT },
-        { role: "user", content: userPrompt }
-      ],
-      temperature: 0.25
-    })
-  });
+    let activeModel = OPENROUTER_MODEL;
+    let response = await fetch(OPENROUTER_API_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
+        "X-Title": "Job Tracker Follow-Up Scanner"
+      },
+      body: JSON.stringify({
+        model: activeModel,
+        messages: [
+          { role: "system", content: DRAFT_SYSTEM_PROMPT },
+          { role: "user", content: userPrompt }
+        ],
+        temperature: 0.25,
+        max_tokens: 1500
+      })
+    });
 
-  if (!response.ok) {
-    throw new Error(`OpenRouter HTTP ${response.status}: ${await response.text()}`);
-  }
+    if ((response.status === 402 || response.status === 429) && activeModel !== "openrouter/free") {
+      console.warn(`OpenRouter HTTP ${response.status} on ${activeModel}, falling back to openrouter/free`);
+      activeModel = "openrouter/free";
+      response = await fetch(OPENROUTER_API_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
+          "X-Title": "Job Tracker Follow-Up Scanner"
+        },
+        body: JSON.stringify({
+          model: activeModel,
+          messages: [
+            { role: "system", content: DRAFT_SYSTEM_PROMPT },
+            { role: "user", content: userPrompt }
+          ],
+          temperature: 0.25,
+          max_tokens: 1500
+        })
+      });
+    }
+
+    if (!response.ok) {
+      throw new Error(`OpenRouter HTTP ${response.status}: ${await response.text()}`);
+    }
 
   const data = await response.json();
   const content = data.choices?.[0]?.message?.content ?? "";

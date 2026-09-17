@@ -1,7 +1,28 @@
-// api/generate-reply.js
-// Vercel Serverless Function — AI Recruiter Reply Generator grounded in Tirth Shah's Portfolio
+import fs from "fs";
 
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
+
+// In local development, load .env if environment variables are not set
+function loadLocalEnv() {
+  if (process.env.OPENROUTER_API_KEY) return;
+  try {
+    if (fs.existsSync(".env")) {
+      const envContent = fs.readFileSync(".env", "utf8");
+      envContent.split("\n").forEach((line) => {
+        const m = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
+        if (m) {
+          const key = m[1];
+          let value = m[2] || "";
+          if (value.startsWith('"') && value.endsWith('"')) value = value.slice(1, -1);
+          if (value.startsWith("'") && value.endsWith("'")) value = value.slice(1, -1);
+          if (!process.env[key]) process.env[key] = value;
+        }
+      });
+    }
+  } catch (err) {
+    // Ignore error in serverless environments where fs is restricted
+  }
+}
 
 const PORTFOLIO_SUMMARY = `
 CANDIDATE PROFILE:
@@ -51,7 +72,8 @@ export default async function handler(req, res) {
     }
 
     // Resolve OpenRouter API Key
-    let apiKey = process.env.OPENROUTER_API_KEY;
+    loadLocalEnv();
+    let apiKey = process.env.OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEYS || process.env.OPENROUTER_API_KEY_2;
     const authHeader = req.headers.authorization || req.headers.Authorization;
     if (authHeader && authHeader.startsWith("Bearer ")) {
       const customKey = authHeader.replace("Bearer ", "").trim();
@@ -66,7 +88,7 @@ export default async function handler(req, res) {
       });
     }
 
-    const chosenModel = model || "google/gemini-3.7-flash";
+    let chosenModel = model || "google/gemini-3.7-flash";
 
     const intentDescriptions = {
       interest: "Express enthusiastic but grounded interest in the role, briefly highlighting 1-2 relevant accomplishments that directly match the position, and propose coordinating a brief initial conversation.",
@@ -110,7 +132,7 @@ ${targetIntentDesc}
 Write the email reply now.
 `;
 
-    const aiResponse = await fetch(OPENROUTER_API_URL, {
+    let aiResponse = await fetch(OPENROUTER_API_URL, {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${apiKey}`,
@@ -128,6 +150,30 @@ Write the email reply now.
         max_tokens: 1000
       })
     });
+
+    // Graceful fallback to OpenRouter Free tier if model is unavailable, rate-limited, or credit-limited
+    if (!aiResponse.ok && chosenModel !== "openrouter/free") {
+      console.warn(`Model ${chosenModel} returned HTTP ${aiResponse.status}. Falling back to openrouter/free.`);
+      chosenModel = "openrouter/free";
+      aiResponse = await fetch(OPENROUTER_API_URL, {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
+          "X-Title": "Job Tracker Draft My Reply"
+        },
+        body: JSON.stringify({
+          model: chosenModel,
+          messages: [
+            { role: "system", content: systemPrompt.trim() },
+            { role: "user", content: userMessage.trim() }
+          ],
+          temperature: 0.4,
+          max_tokens: 1000
+        })
+      });
+    }
 
     if (!aiResponse.ok) {
       const errText = await aiResponse.text();

@@ -821,8 +821,8 @@ Carefully evaluate the provided batch of emails according to all the above rules
     try {
       const parsedBatch = await rotator.callWithFailover(async (apiKey, keyIndex) => {
         if (apiKey.startsWith("sk-or-") || process.env.OPENROUTER_API_KEY || !apiKey.startsWith("AIza")) {
-          // OpenRouter Structured JSON Call
-          const response = await fetch(OPENROUTER_API_URL, {
+          let activeModel = OPENROUTER_MODEL;
+          let response = await fetch(OPENROUTER_API_URL, {
             method: "POST",
             headers: {
               Authorization: `Bearer ${apiKey}`,
@@ -831,7 +831,7 @@ Carefully evaluate the provided batch of emails according to all the above rules
               "X-Title": "Job Tracker"
             },
             body: JSON.stringify({
-              model: OPENROUTER_MODEL,
+              model: activeModel,
               messages: [
                 { role: "system", content: systemPrompt },
                 { role: "user", content: `Extract emails:\n${JSON.stringify(batchPromptPayload)}` }
@@ -840,9 +840,33 @@ Carefully evaluate the provided batch of emails according to all the above rules
                 type: "json_schema",
                 json_schema: STRUCTURED_JSON_SCHEMA
               },
-              temperature: 0
+              temperature: 0,
+              max_tokens: 4000
             })
           });
+
+          if ((response.status === 402 || response.status === 429) && activeModel !== "openrouter/free") {
+            console.warn(`OpenRouter HTTP ${response.status} on ${activeModel}, falling back to openrouter/free`);
+            activeModel = "openrouter/free";
+            response = await fetch(OPENROUTER_API_URL, {
+              method: "POST",
+              headers: {
+                Authorization: `Bearer ${apiKey}`,
+                "Content-Type": "application/json",
+                "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
+                "X-Title": "Job Tracker"
+              },
+              body: JSON.stringify({
+                model: activeModel,
+                messages: [
+                  { role: "system", content: systemPrompt },
+                  { role: "user", content: `Extract emails:\n${JSON.stringify(batchPromptPayload)}` }
+                ],
+                temperature: 0,
+                max_tokens: 4000
+              })
+            });
+          }
 
           if (!response.ok) {
             throw new Error(`OpenRouter HTTP ${response.status}: ${await response.text()}`);

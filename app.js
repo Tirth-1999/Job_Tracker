@@ -2796,7 +2796,8 @@ function attachDraftReplyListeners(applications) {
                 content: `Company: ${selectedApp.company}\nRole: ${selectedApp.role}\nRecruiter: ${selectedApp.latestFrom}\nSubject: ${selectedApp.latestSubject}\nIntent: ${state.draftReplyIntent}\nExtra Notes: ${state.draftReplyExtraContext || "None"}\nWrite the email reply now.`
               }
             ],
-            temperature: 0.4
+            temperature: 0.4,
+            max_tokens: 1000
           })
         });
 
@@ -3915,13 +3916,6 @@ const AI_MODELS = [
     description: "Automatically routes requests to the fastest, best available 100% free model across all providers."
   },
   {
-    id: "nvidia/nemotron-3-ultra-550b-a55b:free",
-    name: "NVIDIA Nemotron 3 Ultra (550B)",
-    badge: "100% Free · 550B Frontier Reasoning",
-    provider: "NVIDIA (via OpenRouter)",
-    description: "NVIDIA's massive 550B parameter frontier model. Unrivaled reasoning, document comprehension, and intent classification."
-  },
-  {
     id: "nvidia/nemotron-3.5-lightning:free",
     name: "NVIDIA Nemotron 3.5 Lightning",
     badge: "100% Free · Lightning Speed",
@@ -3929,32 +3923,18 @@ const AI_MODELS = [
     description: "Ultra-fast latency with cutting-edge extraction capabilities. Engineered for instant high-throughput parsing."
   },
   {
+    id: "nvidia/nemotron-3-ultra-550b-a55b:free",
+    name: "NVIDIA Nemotron 3 Ultra (550B)",
+    badge: "100% Free · 550B Frontier Reasoning",
+    provider: "NVIDIA (via OpenRouter)",
+    description: "NVIDIA's massive 550B parameter frontier model. Unrivaled reasoning, document comprehension, and intent classification."
+  },
+  {
     id: "nvidia/nemotron-3-super-120b-a12b:free",
     name: "NVIDIA Nemotron 3 Super (120B)",
     badge: "100% Free · Deep Analytical Precision",
     provider: "NVIDIA (via OpenRouter)",
     description: "Powerful 120B open weights model with state-of-the-art accuracy in recruiter message analysis and status auditing."
-  },
-  {
-    id: "google/gemma-4-31b-it:free",
-    name: "Google Gemma 4 (31B)",
-    badge: "100% Free · Google Open Weights",
-    provider: "Google (via OpenRouter)",
-    description: "Google's premier open weights model optimized for high accuracy instruction following and JSON extraction."
-  },
-  {
-    id: "minimax/minimax-m3:free",
-    name: "MiniMax M3",
-    badge: "100% Free · Long Context Extraction",
-    provider: "MiniMax (via OpenRouter)",
-    description: "High-capability free model with deep multi-paragraph context awareness for complex email thread parsing."
-  },
-  {
-    id: "z-ai/glm-5.2:free",
-    name: "Z.ai GLM 5.2",
-    badge: "100% Free · Robust Schema Compliance",
-    provider: "Z.ai (via OpenRouter)",
-    description: "Next-gen bilingual model with strong structured output adherence and recruiter tone recognition."
   },
 
   // ─── Frontier & High Precision Models ──────────────────────────────────────
@@ -3966,22 +3946,22 @@ const AI_MODELS = [
     description: "Google's newest frontier Flash model. Deep reasoning with lightning speed and advanced semantic precision."
   },
   {
-    id: "google/gemini-2.5-flash-lite",
-    name: "Google Gemini 2.5 Flash Lite",
+    id: "google/gemini-3.5-flash-lite",
+    name: "Google Gemini 3.5 Flash Lite",
     badge: "Blazing Fast · High Volume",
     provider: "Google (via OpenRouter)",
     description: "Ultra-fast latency, high throughput JSON structured output. Ideal for rapid multi-batch classification."
   },
   {
-    id: "anthropic/claude-3.7-sonnet",
-    name: "Anthropic Claude 3.7 Sonnet",
+    id: "anthropic/claude-sonnet-4.5",
+    name: "Anthropic Claude Sonnet 4.5",
     badge: "Frontier Reasoning · Complex Auditor",
     provider: "Anthropic (via OpenRouter)",
-    description: "Gold standard for complex multi-turn reasoning and nuanced contract/offer letter analysis."
+    description: "Gold standard for complex multi-turn reasoning and nuanced recruiter communication analysis."
   },
   {
-    id: "anthropic/claude-3.5-haiku",
-    name: "Anthropic Claude 3.5 Haiku",
+    id: "anthropic/claude-3-haiku",
+    name: "Anthropic Claude 3 Haiku",
     badge: "High Precision · Fast Reasoning",
     provider: "Anthropic (via OpenRouter)",
     description: "Anthropic's fastest intelligence model. Exceptional precision in natural language parsing and recruiter intent extraction."
