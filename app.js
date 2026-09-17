@@ -4539,7 +4539,7 @@ function attachServicesListeners(applications) {
 
       try {
         const chunkSize = 10; // Keep serverless requests small enough to avoid model/provider timeouts
-        const CONCURRENCY = 2; // Favor reliable classification over flooding the free router
+        const CONCURRENCY = 1; // Sequential execution to prevent provider rate-limits / concurrent timeouts
         let reclassifiedCount = 0;
         let totalTokensUsed = 0;
         let completedBatches = 0;
@@ -4564,32 +4564,44 @@ function attachServicesListeners(applications) {
         }
         const totalBatches = batches.length;
 
-        appendConsole(`Launching ${Math.min(CONCURRENCY, totalBatches)} parallel worker streams across ${totalBatches} batches (${total} targeted apps)...`);
+        appendConsole(`Processing ${totalBatches} batch(es) (${total} targeted apps) sequentially for maximum stability...`);
 
         // Worker processor for each batch
         async function processBatch(batch) {
-          const response = await fetch("/api/reclassify", {
-            method: "POST",
-            headers: reqHeaders,
-            body: JSON.stringify({
-              applications: batch.chunk,
-              model: activeModel.id
-            })
-          });
-
+          let response;
           let resData;
-          if (!response.ok) {
-            const errData = await response.json().catch(() => ({}));
-            const message = errData.error || errData.warning || `HTTP ${response.status} from /api/reclassify`;
-            appendConsole(`Batch ${batch.index}: ${message}. Using local fallback rules for this batch.`, "error");
+          try {
+            response = await fetch("/api/reclassify", {
+              method: "POST",
+              headers: reqHeaders,
+              body: JSON.stringify({
+                applications: batch.chunk,
+                model: activeModel.id
+              })
+            });
+
+            if (!response.ok) {
+              const errData = await response.json().catch(() => ({}));
+              const message = errData.error || errData.warning || `HTTP ${response.status} from /api/reclassify`;
+              appendConsole(`Batch ${batch.index}: ${message}. Using local fallback rules for this batch.`, "error");
+              resData = {
+                warning: message,
+                usage: null,
+                results: batch.chunk.map((app) => clientFallbackReclassify(app, message))
+              };
+            } else {
+              resData = await response.json();
+            }
+          } catch (netErr) {
+            const message = `Network / connection error (${netErr.message})`;
+            appendConsole(`Batch ${batch.index}: ${message}. Using local fallback rules.`, "error");
             resData = {
               warning: message,
               usage: null,
               results: batch.chunk.map((app) => clientFallbackReclassify(app, message))
             };
-          } else {
-            resData = await response.json();
           }
+
           if (resData.warning) {
             appendConsole(`Batch ${batch.index}: ${resData.warning}`, "info");
           }

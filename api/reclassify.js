@@ -240,81 +240,91 @@ export default async function handler(req, res) {
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  const { applications, model } = req.body || {};
-  if (!applications || !Array.isArray(applications) || applications.length === 0) {
-    return res.status(400).json({ error: "applications array is required in request body" });
-  }
-
-  // Check OpenRouter API key from server environment or client header
-  loadLocalEnv();
-  const customKey = req.headers.authorization ? req.headers.authorization.replace(/^Bearer\s+/i, "") : null;
-  const apiKey = customKey || process.env.OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEYS || process.env.OPENROUTER_API_KEY_2 || process.env.GEMINI_API_KEY;
-
-  let chosenModel = model || process.env.OPENROUTER_MODEL || "google/gemini-3.7-flash";
-
-  // Build input payload for LLM
-  const inputPayload = applications.map((app) => ({
-    id: app.id,
-    company: app.company,
-    role: app.role,
-    current_status: app.status,
-    latest_subject: app.latestSubject || app.subject || "",
-    latest_from: app.latestFrom || app.from || "",
-    email_body_snippet: (app.notes || app.email_body || app.snippet || "").slice(0, MAX_EMAIL_CHARS),
-    notes: (app.notes || "").slice(0, MAX_EMAIL_CHARS)
-  }));
-
-  const deterministicById = new Map();
-  const unresolvedPayload = [];
-
-  for (const app of inputPayload) {
-    const deterministic = classifyDeterministic({
-      from: app.latest_from,
-      subject: app.latest_subject,
-      body: app.notes || app.email_body_snippet
-    });
-
-    if (deterministic) {
-      deterministicById.set(app.id, {
-        id: app.id,
-        company: app.company,
-        role: normalizeRoleResult(app.role, app.company),
-        status: deterministic.status,
-        confidence: deterministic.confidence,
-        reason: deterministic.reason,
-        rule_id: deterministic.ruleId
-      });
-    } else {
-      unresolvedPayload.push(app);
-    }
-  }
-
-  if (unresolvedPayload.length === 0) {
-    return res.status(200).json({
-      success: true,
-      model_used: "deterministic_rules",
-      usage: { total_tokens: 0 },
-      warning: "All records matched deterministic rules; no LLM call was needed.",
-      results: inputPayload.map((app) => deterministicById.get(app.id))
-    });
-  }
-
-  if (!apiKey) {
-    return res.status(200).json({
-      success: true,
-      model_used: "deterministic_rules",
-      usage: null,
-      warning: "OpenRouter key is not configured; returned deterministic fallback classifications.",
-      results: deterministicFallbackResults(inputPayload, "OpenRouter key missing")
-    });
-  }
+  let inputPayload = [];
 
   try {
+    const { applications, model } = req.body || {};
+    if (!applications || !Array.isArray(applications) || applications.length === 0) {
+      return res.status(400).json({ error: "applications array is required in request body" });
+    }
+
+    // Check OpenRouter API key from server environment or client header
+    loadLocalEnv();
+    const customKey = req.headers.authorization ? req.headers.authorization.replace(/^Bearer\s+/i, "") : null;
+    const apiKey = customKey || process.env.OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEYS || process.env.OPENROUTER_API_KEY_2 || process.env.GEMINI_API_KEY;
+
+    let chosenModel = model || process.env.OPENROUTER_MODEL || "google/gemini-3.7-flash";
+
+    // Safely build input payload for LLM
+    inputPayload = applications.map((app) => {
+      if (!app || typeof app !== "object") return null;
+      const notesStr = typeof app.notes === "string" ? app.notes : "";
+      const bodyStr = typeof app.email_body === "string" ? app.email_body : "";
+      const snippetStr = typeof app.snippet === "string" ? app.snippet : "";
+      const combinedSnippet = (notesStr || bodyStr || snippetStr).slice(0, MAX_EMAIL_CHARS);
+      return {
+        id: String(app.id || ""),
+        company: String(app.company || ""),
+        role: String(app.role || ""),
+        current_status: String(app.status || "applied"),
+        latest_subject: String(app.latestSubject || app.subject || ""),
+        latest_from: String(app.latestFrom || app.from || ""),
+        email_body_snippet: combinedSnippet,
+        notes: notesStr.slice(0, MAX_EMAIL_CHARS)
+      };
+    }).filter(Boolean);
+
+    const deterministicById = new Map();
+    const unresolvedPayload = [];
+
+    for (const app of inputPayload) {
+      const deterministic = classifyDeterministic({
+        from: app.latest_from,
+        subject: app.latest_subject,
+        body: app.notes || app.email_body_snippet
+      });
+
+      if (deterministic) {
+        deterministicById.set(app.id, {
+          id: app.id,
+          company: app.company,
+          role: normalizeRoleResult(app.role, app.company),
+          status: deterministic.status,
+          confidence: deterministic.confidence,
+          reason: deterministic.reason,
+          rule_id: deterministic.ruleId
+        });
+      } else {
+        unresolvedPayload.push(app);
+      }
+    }
+
+    if (unresolvedPayload.length === 0) {
+      return res.status(200).json({
+        success: true,
+        model_used: "deterministic_rules",
+        usage: { total_tokens: 0 },
+        warning: "All records matched deterministic rules; no LLM call was needed.",
+        results: inputPayload.map((app) => deterministicById.get(app.id))
+      });
+    }
+
+    if (!apiKey) {
+      return res.status(200).json({
+        success: true,
+        model_used: "deterministic_rules",
+        usage: null,
+        warning: "OpenRouter key is not configured; returned deterministic fallback classifications.",
+        results: deterministicFallbackResults(inputPayload, "OpenRouter key missing")
+      });
+    }
+
     let aiResponse;
     let attempts = 0;
     let useJsonFormat = true;
+    const deadline = Date.now() + 8500; // 8.5s maximum execution time to avoid serverless gateway timeout
 
-    while (attempts < 3) {
+    while (attempts < 2 && Date.now() < deadline) {
       attempts++;
       const requestBody = {
         model: chosenModel,
@@ -332,6 +342,7 @@ export default async function handler(req, res) {
         requestBody.response_format = { type: "json_object" };
       }
 
+      const remainingMs = Math.max(1000, deadline - Date.now());
       aiResponse = await fetch(OPENROUTER_API_URL, {
         method: "POST",
         headers: {
@@ -340,11 +351,11 @@ export default async function handler(req, res) {
           "HTTP-Referer": "https://github.com/Tirth-1999/Job_Tracker",
           "X-Title": "Job Tracker Master AI Auditor"
         },
-        body: JSON.stringify(requestBody)
+        body: JSON.stringify(requestBody),
+        signal: AbortSignal.timeout(remainingMs)
       });
 
       if (aiResponse.status === 400 && useJsonFormat) {
-        // Some free models do not support response_format: { type: "json_object" }
         useJsonFormat = false;
         continue;
       }
@@ -356,22 +367,23 @@ export default async function handler(req, res) {
         continue;
       }
 
-      if (aiResponse.status === 429 && attempts < 3) {
-        await new Promise((r) => setTimeout(r, 1500 * attempts));
+      if (aiResponse.status === 429 && attempts < 2 && Date.now() + 1500 < deadline) {
+        await new Promise((r) => setTimeout(r, 1000));
         continue;
       }
       break;
     }
 
-    if (!aiResponse.ok) {
-      const errText = await aiResponse.text();
+    if (!aiResponse || !aiResponse.ok) {
+      const status = aiResponse ? aiResponse.status : 504;
+      const errText = aiResponse ? await aiResponse.text().catch(() => "") : "Request timed out";
       return res.status(200).json({
         success: true,
         model_used: "deterministic_rules",
         usage: null,
-        warning: `OpenRouter API returned HTTP ${aiResponse.status}; returned deterministic fallback classifications.`,
+        warning: `OpenRouter returned HTTP ${status}; applied deterministic fallback classifications.`,
         error_detail: errText.slice(0, 1000),
-        results: deterministicFallbackResults(inputPayload, `OpenRouter HTTP ${aiResponse.status}`)
+        results: deterministicFallbackResults(inputPayload, `OpenRouter HTTP ${status}`)
       });
     }
 
