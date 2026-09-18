@@ -1,6 +1,44 @@
 {
-  "updatedAt": "2026-09-18T14:15:57.575Z",
+  "updatedAt": "2026-09-18T17:36:37.350Z",
   "applications": [
+    {
+      "id": "clay-labs-your-interest",
+      "company": "Clay Labs",
+      "role": "Your Interest",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "formal rejection/non-selection language",
+      "latestSubject": "Thank You for Your Interest in Clay!",
+      "latestFrom": "Clay Labs Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-09-18T16:45:58.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0b56918e07592f",
+      "gmailMessageIds": [
+        "1a0b56918e07592f"
+      ],
+      "notes": "Hi Tirth, Thank you again for your interest in the Data Science & Analytics Manager role at Clay, and for your patience as we've reviewed a high volume of applications. We're so sorry you had to wait so long to hear from us. After reviewing your resume, we've decided not to move forward with your application right now. We know it's a bummer to hear, especially when you've put in the effort to apply. Rest assured, we'll keep your application on file. Our team is constantly growing and evolving, and there may be a perfect opportunity for you in the future that matches your skillset. In the meantime, keep an eye on our https://www.clay.com/careers to see if anything catches your eye. Thanks again for considering Clay as your next adventure. We wish you the best of luck in your search! Best, Talent @ Clay Hi Tirth , Thank you again for your interest in the Data Science & Analytics Manager role at Clay, and for your patience as we've reviewed a high volume of applications. We're so sorry you had to wait so long to hear from us. After reviewing your resume, we've decided not to move forward with your application right now. We know it's a bummer to hear, especially when you've put in the effort to apply. Rest assured, we'll keep your application on file. Our team is constantly growing and evolving, and there may be a perfect opportunity for you in the future that matches your skillset. In the meantime, keep an eye on our careers page to see if anything catches your eye. Thanks again for considering Clay as your next adventure. We wish you the best of luck in your search! Best, Talent @ Clay"
+    },
+    {
+      "id": "rmi-lead-data-engineer",
+      "company": "RMI",
+      "role": "Lead Data Engineer",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "RMI Update on Application",
+      "latestFrom": "RMI Workday <rockymountain@myworkday.com>",
+      "lastActivityAt": "2026-09-18T15:01:05.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a06cefb66249196",
+      "gmailMessageIds": [
+        "1a06cefb66249196"
+      ],
+      "notes": "Hi Tirth , We wanted to check in and let you know that we’ve received a high volume of interest in our Lead Data Engineer role and are continuing to carefully review all resumes. While we don’t have a specific update at this time, our Talent Acquisition team is actively working through the review process. If you are selected to move forward, someone from our team will be in touch with next steps. In the meantime, no action is needed from you—we just appreciate your patience and continued interest. We’ll check in again soon! Best regards, RMI Talent Acquisition Team Click here to view the notification details. This email was intended for tirthcshah1999@gmail.com"
+    },
     {
       "id": "amy-from-zensearch-you-by-zensearch-senior-cloud-devops-engineer",
       "company": "Amy From Zensearch",
@@ -230,6 +268,30 @@
       "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 525758 Note : This code will expire in 10 minutes. Sincerely, Ascot Group Recruiting Team."
     },
     {
+      "id": "ascot-general-application",
+      "company": "Ascot",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "lastActivityAt": "2026-09-18T08:22:59.000Z",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "Talent Acquisition at Ascot Group <emkq.fa.sender@workflow.mail.em2.cloud.oracle.com>",
+      "gmailThreadId": "1a01f047be9a0d73",
+      "gmailMessageIds": [
+        "1a01f047be9a0d73"
+      ],
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 314294 Note : This code will expire in 10 minutes. Sincerely, Ascot Group Recruiting Team.",
+      "isManualOverride": false,
+      "manualAction": null,
+      "manualChangedAt": null,
+      "aiDecision": "Identity verification / account security email",
+      "aiModel": "Google Gemini 3.7 Flash",
+      "aiClassifiedAt": "2026-08-22T17:01:38.126+00:00",
+      "aiConfidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other"
+    },
+    {
       "id": "quantiphi-alerts-data-engineer-usa",
       "company": "Quantiphi Alerts",
       "role": "Data Engineer - USA",
@@ -268,6 +330,25 @@
       ],
       "notes": " Hi Tirth,&nbsp; Thanks for your interest in VERSANT. We really appreciate the time you have taken to share your details with us. You have successfully submitted an application to the following job: Data Engineer II. Our Recruiters will review your information and will contact you directly if your skills and experience match the requirements of the position you&rsquo;ve applied to. You can check the status of your application at any time by visiting the Candidate Zone on careers.versantmedia.com Please note, your information will be stored in our database for Recruiters to consider for any future openings that may align with your experience. If you prefer to not have your details on file, you can delete your account at any time.&nbsp; We wish you the best in finding a career opportunity that is both challenging and rewarding. Here you can create the extraordinary.&nbsp; VERSANT Talent &nbsp; &nbsp; Access My Application: https://jobs.smartrecruiters.com/my-applications/Versant3/b44e672e-1c13-42ec-a9ab-9da665d016d0?dcr_ci=Versant3 If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application Hi Tirth, Thanks for your interest in VERSANT. We really appreciate the time you have taken to share your details with us. You have successfully submitted an application to the following job: Data Engineer II . Our Recruiters will review your information and will contact you directly if your skills and experience match the requirements of the position you&rsquo;ve applied to. You can check the status of your application at any time by visiting the Candidate Zone on careers.versantmedia.com Please note, your information will be stored in our database for Recruiters to consider for any future openings that may align with your experience. If you prefer to not have your details on file, you can delete your account at any time. We wish you the best in finding a career opportunity that is both challenging and rewarding. Here you can create the extraordinary. VERSANT Talent Access My Application If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company ( contactsupport@smartrecruiters.com ). Please do not share or forward this email, as it pertains to your specific job application",
       "updatedAt": "2026-09-15T16:14:31.088Z"
+    },
+    {
+      "id": "versant-media-data-engineer-ii",
+      "company": "Versant Media",
+      "role": "Data Engineer II",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank You For Your Interest in VERSANT!",
+      "latestFrom": "Versant Media <notification@smartrecruiters.com>",
+      "lastActivityAt": "2026-09-18T08:14:50.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0b395238398918",
+      "gmailMessageIds": [
+        "1a0b395238398918"
+      ],
+      "notes": " Hi Tirth,&nbsp; Thanks for your interest in VERSANT. We really appreciate the time you have taken to share your details with us. You have successfully submitted an application to the following job: Data Engineer II. Our Recruiters will review your information and will contact you directly if your skills and experience match the requirements of the position you&rsquo;ve applied to. You can check the status of your application at any time by visiting the Candidate Zone on careers.versantmedia.com Please note, your information will be stored in our database for Recruiters to consider for any future openings that may align with your experience. If you prefer to not have your details on file, you can delete your account at any time.&nbsp; We wish you the best in finding a career opportunity that is both challenging and rewarding. Here you can create the extraordinary.&nbsp; VERSANT Talent &nbsp; &nbsp; Access My Application: https://jobs.smartrecruiters.com/my-applications/Versant3/b44e672e-1c13-42ec-a9ab-9da665d016d0?dcr_ci=Versant3 If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application Hi Tirth, Thanks for your interest in VERSANT. We really appreciate the time you have taken to share your details with us. You have successfully submitted an application to the following job: Data Engineer II . Our Recruiters will review your information and will contact you directly if your skills and experience match the requirements of the position you&rsquo;ve applied to. You can check the status of your application at any time by visiting the Candidate Zone on careers.versantmedia.com Please note, your information will be stored in our database for Recruiters to consider for any future openings that may align with your experience. If you prefer to not have your details on file, you can delete your account at any time. We wish you the best in finding a career opportunity that is both challenging and rewarding. Here you can create the extraordinary. VERSANT Talent Access My Application If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company ( contactsupport@smartrecruiters.com ). Please do not share or forward this email, as it pertains to your specific job application"
     },
     {
       "id": "versant-media-your-continued-interest-in-the-data-engineer-ii-nbsp",
@@ -347,6 +428,25 @@
       "notes": "Dear Tirth, We have received your application for the Data Warehouse Developer position, requisition #2026-17858, at the American Heart Association. Our recruiting team will review your resume, and we will contact you soon should your background meet our current needs. Thank you for your interest! American Heart Association, Talent Attraction Team This is an automated email response. Please do not reply. ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/hbA0zwOgxxN6A-vWrjrCKQ~~/AAIB5hA~/T5hCg0FELdE39hO52PT971w-tUFQR8KF0NIGIiFCQK-Wz5k6eKSka58kjI0ZLvqI5CFSzrzct1gMXaKBfn7JPC9dOfIjvLqg4Eoz6siNWZTb_dfDPQ2wqNRc4R24IPO-rjs5oPI8t3Ssfc5LDJONYsTO4GgnK5Quslp0htRJBgM~ /n &#169; American Heart Association, Inc.; 7272 Greenville Ave; Dallas, TX 75231-5129; USA/n Dear Tirth, We have received your application for the Data Warehouse Developer position, requisition #2026-17858, at the American Heart Association. Our recruiting team will review your resume, and we will contact you soon should your background meet our current needs. Thank you for your interest! American Heart Association, Talent Attraction Team This is an automated email response. Please do not reply. This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://heart.icims.com/icims2/?r=6C7D929498&contactId=6218383&pid=17 &#169; American Heart Association, Inc.; 7272 Greenville Ave; Dallas, TX 75231-5129; USA"
     },
     {
+      "id": "american-heart-association-data-warehouse-developer",
+      "company": "American Heart Association",
+      "role": "Data Warehouse Developer",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "You've Started Your Job Application!",
+      "latestFrom": "\"American Heart Association @ icims\" <heart+autoreply@talent.icims.com>",
+      "lastActivityAt": "2026-09-18T07:55:18.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0b38345c2b06ed",
+      "gmailMessageIds": [
+        "1a0b38345c2b06ed"
+      ],
+      "notes": "Dear Tirth, Thanks for starting your application for job: Data Warehouse Developer If you lose track of the job application process please follow this link to return to the job application: https://tracking.icims.com/f/a/vg2V7Hn6apx38jkUXt2ULA~~/AAIB5hA~/yCZMcP2yNFOI2JFOdT7pARVCh-WsYlH8Z-Af9KdYOUENVrozteZbspcMaSgUaSKKfbsFdVpfsV1Y2Js7a62PpZnV5vamxS4ulI24FWZMd7oSboOERVXdwzBwHamLoQ6K_ieYOUFZJ1ytHNgNpd1adQ~~ Check out our Social Media pages below and stay tuned to the hashtag #TheAHALife to know what it's like to work at the American Heart Association. ************************************************** This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://tracking.icims.com/f/a/t3KFIHBjNuJo5wFMTI5nqg~~/AAIB5hA~/zPIVRqBVTcdADQ8fXFqIV3pe9mx4Q6AfJYb-kr-7df44GfDx7GJ1CRTBj8HAOnYrD-tvWkCUIMvGpr4GocAvIDnBw7xoZDlEqE702B7HN8C3_d9zVUqY9Ow9kfWCkKkgiyx0wW6XWN8Jv5uRezzPmRO5lcWDsVaF6ALKyTmBqko~ /n &#169; American Heart Association, Inc.; 7272 Greenville Ave; Dallas, TX 75231-5129; USA/n Dear Tirth, Thanks for starting your application for job: Data Warehouse Developer If you lose track of the job application process please follow this link to return to the job application: https://careers-heart.icims.com/r.jsp?p=17858 Check out our Social Media pages below and stay tuned to the hashtag #TheAHALife to know what it's like to work at the American Heart Association. This message was sent to tirthcshah1999@gmail.com. If you don't want to receive these emails from this company in the future, please go to: https://heart.icims.com/icims2/?r=6C7D929498&contactId=6218379&pid=17 &#169; American Heart Association, Inc.; 7272 Greenville Ave; Dallas, TX 75231-5129; USA"
+    },
+    {
       "id": "varda-space-industries-varda-space-industries",
       "company": "Varda Space Industries",
       "role": "Varda Space Industries",
@@ -370,7 +470,7 @@
       "company": "Accenture",
       "role": "Your Interest",
       "reqId": "erence",
-      "status": "applied",
+      "status": "rejected",
       "confidence": "high",
       "classifier": "rules",
       "reason": "platform auto-receipt sender — application acknowledgment",
@@ -443,6 +543,25 @@
         "1a0b36f77c5fbc25"
       ],
       "notes": "Dear Tirth Shah, Thank you for your interest in the MS Fabric Data Engineer position at Ovation Healthcare, and for the time you invested in applying with us. After careful consideration, we regret to inform you that we have decided to move forward with another candidate whose qualifications and experience more closely align with the requirements for this position. We appreciate your enthusiasm and your desire to contribute to our team. While your skills are impressive, we believe there is a better fit for this particular role at this time. We will keep your resume on file for future opportunities that may align more closely with your qualifications and experience. We encourage you to apply again if a suitable position becomes available. Thank you again for your interest in Ovation Healthcare, and we wish you all the best in your job search. Warm Regards, People Operations at Ovation Healthcare https://ovationhealthcare.wd5.myworkdayjobs.com/ovationhealthcare This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
+      "id": "greenbrook-medical-senior-engineer-data-analytics",
+      "company": "Greenbrook Medical",
+      "role": "Senior Engineer, Data & Analytics",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Thank you for your interest in working at TGH Senior Center Powered by Greenbrook Medical",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-09-18T04:35:47.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0b2cc9ae430c5d",
+      "gmailMessageIds": [
+        "1a0b2cc9ae430c5d"
+      ],
+      "notes": "Dear Tirth, Thank you for your interest and application for the Senior Engineer, Data & Analytics role at Greenbrook Medical. Although your skills and background are impressive, it was a competitive candidate pool and we have decided to move forward with another candidate at this time. Thanks again for your interest in TGH Senior Center Powered by Greenbrook Medical and we wish you luck in your search. Please check out our future job opportunities on our Careers Page ( https://greenbrookmedical.com/careers/ ). Regards, TGH Senior Center Powered by Greenbrook Medical Dear Tirth, Thank you for your interest and application for the Senior Engineer, Data & Analytics role at Greenbrook Medical. Although your skills and background are impressive, it was a competitive candidate pool and we have decided to move forward with another candidate at this time. Thanks again for your interest in TGH Senior Center Powered by Greenbrook Medical and we wish you luck in your search. Please check out our future job opportunities on our Careers Page . Regards, TGH Senior Center Powered by Greenbrook Medical"
     },
     {
       "id": "home-depot-your-interest-188575",
@@ -1015,30 +1134,6 @@
         "1a0ae35ab68574e9"
       ],
       "notes": "96 Hello Tirth Shah, Thank you for applying for Comm Ops Data Engineer - Shockwave Medical R-083694 at Johnson & Johnson. We have successfully received your application. We appreciate your interest in joining us. When you join Johnson & Johnson, your next move could mean our next breakthrough. Here’s what to expect in the coming weeks: Your application is currently under review, a process that usually takes up to 2 weeks. You can expect to hear from us about the next steps in the process within that time frame. Thank you again for your application. Sincerely, Johnson & Johnson Talent Acquisition Team Please explore our Career Site to learn about more exciting opportunities! Please do not reply to this message. Replies are undeliverable and will not reach the Human Resources Department. Confidentiality Notice: This e-mail transmission may contain confidential or legally privileged information that is intended only for the individual or entity named in the e-mail address. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution, or reliance upon the contents of this e-mail is strictly prohibited. If you have received this e-mail transmission in error, please delete the message from your Inbox. Thank you. This email was intended for tirthcshah1999@gmail.com"
-    },
-    {
-      "id": "ascot-general-application",
-      "company": "Ascot",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "lastActivityAt": "2026-09-17T07:12:00.000Z",
-      "latestSubject": "Confirm your identity",
-      "latestFrom": "Talent Acquisition at Ascot Group <emkq.fa.sender@workflow.mail.em2.cloud.oracle.com>",
-      "gmailThreadId": "1a01f047be9a0d73",
-      "gmailMessageIds": [
-        "1a01f047be9a0d73"
-      ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 525758 Note : This code will expire in 10 minutes. Sincerely, Ascot Group Recruiting Team.",
-      "isManualOverride": false,
-      "manualAction": null,
-      "manualChangedAt": null,
-      "aiDecision": "Identity verification / account security email",
-      "aiModel": "Google Gemini 3.7 Flash",
-      "aiClassifiedAt": "2026-08-22T17:01:38.126+00:00",
-      "aiConfidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
     },
     {
       "id": "huron-huron",
@@ -2766,7 +2861,7 @@
       "gmailMessageIds": [
         "1a0860764f44b690"
       ],
-      "notes": "Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic",
+      "notes": "Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer, GTM position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer, GTM position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -7902,7 +7997,7 @@
       "gmailMessageIds": [
         "19fdc206809c504f"
       ],
-      "notes": "Hi Tirth, Thank you for applying for the AWS Data Engineer role at Clera! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team Hi Tirth , Thank you for applying for the AWS Data Engineer role at Clera ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team",
+      "notes": "Hi Tirth, Thank you for applying for the AI Engineer (Mid-Level) role at Clera! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team Hi Tirth , Thank you for applying for the AI Engineer (Mid-Level) role at Clera ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -12505,25 +12600,6 @@
       "aiConfidence": "medium",
       "classifier": "openrouter",
       "reason": "Review / Other"
-    },
-    {
-      "id": "rmi-lead-data-engineer",
-      "company": "RMI",
-      "role": "Lead Data Engineer",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "RMI Update on Application",
-      "latestFrom": "RMI Workday <rockymountain@myworkday.com>",
-      "lastActivityAt": "2026-09-04T15:00:44.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a06cefb66249196",
-      "gmailMessageIds": [
-        "1a06cefb66249196"
-      ],
-      "notes": "Hi Tirth , We wanted to check in and let you know that we’ve received a high volume of interest in our Lead Data Engineer role and are continuing to carefully review all resumes. While we don’t have a specific update at this time, our Talent Acquisition team is actively working through the review process. If you are selected to move forward, someone from our team will be in touch with next steps. In the meantime, no action is needed from you—we just appreciate your patience and continued interest. We’ll check in again soon! Best regards, RMI Talent Acquisition Team Click here to view the notification details. This email was intended for tirthcshah1999@gmail.com"
     },
     {
       "id": "msg-1a014f54dfc10522",
@@ -31005,7 +31081,7 @@
       "gmailMessageIds": [
         "19fc7b51e249890a"
       ],
-      "notes": "Prominence Advisors ------------------------------------------------------------------------------- Your application for the Data Engineer job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Phone: +14157411711 Where are you located?: Texas ** PROFILE ** Resume: Tirth.pdf ** DETAILS ** When are you available to start?: August 17, 2026 Desired Compensation?: 75000 Answers [\"Yes\"] Are you eligible to work in the U.S. without visa sponsorship? [\"Yes\"] Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? How many years experience with healthcare data do you have? 2-4 Years [\"No\"] Do you have experience working with data architecture, modeling, or engineering in the healthcare industry? Which of Prominence's core values resonates most with you and why? **Integrity** resonates with me the most. I believe trusted data is the foundation of good decisions, so I focus on building reliable pipelines with strong validation, monitoring, and data quality checks. Delivering accurate, dependable solutions has always been a priority throughout my data engineering work. ------------------------------------------------------------------------------- You have applied again for this job. This application has overwritten the previous one. If this wasn't you or you've changed your mind, you can manage your applications online. https://prominence-advisors.workable.com/jobs/5160745/candidate_conflicts/pmMVQqQyhmynpwLIophjAxsGGkMJ-anx3KGwMwwvODE ------------------------------------------------------------------------------- Withdraw this application https://prominence-advisors.workable.com/jobs/5160745/candidates/ht5UTcfZzi4zZPQiCI6bcVRZy8ATZtC6ckyj44IJH10 ------------------------------------------------------------------------------- Jobs by Workable https://jobs.workable.com/ Your application for the Data Engineer job was submitted successfully. Here's a copy of your application data for safekeeping. You have applied again for this job. This application has overwritten the previous one. If this wasn't you or you've changed your mind, you can manage your applications online. Manage your applications Personal information Name Tirth Shah Email tirthcshah1999@gmail.com Profile Resume Tirth.pdf Details When are you available to start? August 17, 2026 Desired Compensation? 75000 Answers Are you eligible to work in the U.S. without visa sponsorship? Yes Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? Yes How many years experience with healthcare data do you have? 2-4 Years Do you have experience working with data architecture, modeling, or engineering in the healthcare indust"
+      "notes": "Prominence Advisors ------------------------------------------------------------------------------- Your application for the Data Engineer (Snowflake) job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Phone: +19796352045 Where are you located?: Texas ** PROFILE ** Resume: Tirth_Shah_AI_Data_Engineer.pdf ** DETAILS ** When are you available to start?: September 01, 2026 Desired Compensation?: 75000 Answers [\"Yes\"] Are you eligible to work in the U.S. without visa sponsorship? [\"Yes\"] Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? How many years experience with healthcare data do you have? 0-1 Year [\"Yes\"] Do you have experience working with data architecture, modeling, or engineering in the healthcare industry? Which of Prominence's core values resonates most with you and why? Ownership resonates most with me because I believe in taking responsibility from understanding the problem through delivery, while continuously improving the solution and creating meaningful value. ------------------------------------------------------------------------------- You have applied again for this job. This application has overwritten the previous one. If this wasn't you or you've changed your mind, you can manage your applications online. https://prominence-advisors.workable.com/jobs/6056030/candidate_conflicts/mjjvhT55K3udWsaPVlO8C5geLp1ni81HVnhtcZFHe0A ------------------------------------------------------------------------------- Withdraw this application https://prominence-advisors.workable.com/jobs/6056030/candidates/l8jqvz945VTnpaCFcJZJY-pxo9s4SBKB_MxJvZBBnMA ------------------------------------------------------------------------------- Jobs by Workable https://jobs.workable.com/ Your application for the Data Engineer (Snowflake) job was submitted successfully. Here's a copy of your application data for safekeeping. You have applied again for this job. This application has overwritten the previous one. If this wasn't you or you've changed your mind, you can manage your applications online. Manage your applications Personal information Name Tirth Shah Email tirthcshah1999@gmail.com Profile Resume Tirth_Shah_AI_Data_Engineer.pdf Details When are you available to start? September 01, 2026 Desired Compensation? 75000 Answers Are you eligible to work in the U.S. without visa sponsorship? Yes Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? Yes How many years experience with healthcare data do you have? 0-1 Year Do you have experience working with data architecture, modeling, or engineering in the healthcare industry? Yes Which of Prominence's core value"
     },
     {
       "id": "golden-state-warriors-data-engineer",
@@ -47904,7 +47980,7 @@
       "gmailMessageIds": [
         "1a010743e9326fd5"
       ],
-      "notes": " Thank you for your interest in CapTech! We received your application for the&nbsp;Data Engineer (AWS, Azure, GCP)&nbsp;position in&nbsp;Richmond, VA, USA. &nbsp;We understand that looking for a new job can be stressful&nbsp;but our goal is to provide an informative, authentic, and unique experience for&nbsp;go-getters who want to join our organization. Our process can take anywhere from 3-6 + weeks depending on the opportunity as well as our demand. To ensure your safety as well as our employees, our process is completely virtual. &nbsp; You can expect the following going through our process:A thorough review of your application which can take up to a week or more due to the volume of applications we receiveA follow-up correspondence, regardless of if we are moving forward in the processIf we move forward, you can expect to engage in a similar experience to the below: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Initial interview with Talent Acquisition Team member &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Skills/Technical interview &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Final Virtual interviews&nbsp;with 3-4 of our team members Follow us on Glassdoor, LinkedIn, Facebook, Twitter, and Instagram to stay connected with us and learn about the people and work that drives our organization.&nbsp; &nbsp; Thank you!&nbsp; The CapTech Talent Acquisition Team&nbsp; Access My Application: https://u22907469.ct.sendgrid.net/ls/click?upn=u001.IZjfOPRqp8JBv7HvxfE578IdjeTB-2BVXiFSgBw8dD7CgQrre-2FDc-2F6bInzDyF88Dh3BU-2BrMeBQhMr5mCays9yMJbiTDsCekuiq3Wc33pGebNfqM6KUNtG20Lx-2B7QH8R0lEBguKUef02I-2BxvmtJWMwDhpqe0vDRTDyhWOeOafLG4l8Nq37G-2FL3EYk-2BzkhQsSGeLu9AK_3iIz9nyIoE7WYm9EGmPy-2FHdpg9RX0TMZqeH-2Fa-2FauaY7IG0cUJ34GuiCQsYgpNRQd8Ly7mhax8LMn6IbTbc-2FmFguW9RMcmlfLFGa9MLqaJMB1SNKPOFF4p8SwFTRPsB5QeThfrqtdXFpAeKxfYRbBIafTF-2FLNfivo1Iz2YWF8zc33fh2mgPE-2BJRRqWvHM9wbMctIg8sTvdkaIaJvIcHwtfx9kigkW7-2BJJqswcVbPVD1HKrpkT28UglYuqDRfn77Ai8yh-2BSUsaU8sj6tkEgHdPHFx3MibXmE-2BwboqM3zyX33REKlw7iDm4VN9J7smSzCGuPLIMRKWDV7BePudn6bUI6V6tCtgpz6LMx5Qq-2F5PAzokRq3B4aA735FdSMxIlI-2BoYhQxctUn6ySYil3HxZXmZ4RXlJvnT6thUAyAkJwIRaULXAxoM66vfEUgluUKorzhnHLbZG8J2Pxg7EBVd-2B-2BNyy77eLZpUqUNhReo9CVy2nIPvK5GUiEVUfBLsoovzOOGH If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application Thank you for your interest in CapTech! We received your application for the Data Engineer (AWS, Azure, GCP) position in Richmond, VA, USA. We understand that looking for a new job can be stressful but our goal is to provide an informative, authentic, and unique experience for go-getters who want to join our organization. Our process can take anywhere from 3-6 + weeks depending on the opportunity as well as our demand. To ensure your safety as well as our employees, our process is completely virtual. You can expec",
+      "notes": " Thank you for your interest in CapTech! We received your application for the&nbsp;Data Engineer (AWS, Azure, GCP)&nbsp;position in&nbsp;Reston, VA, USA. &nbsp;We understand that looking for a new job can be stressful&nbsp;but our goal is to provide an informative, authentic, and unique experience for&nbsp;go-getters who want to join our organization. Our process can take anywhere from 3-6 + weeks depending on the opportunity as well as our demand. To ensure your safety as well as our employees, our process is completely virtual. &nbsp; You can expect the following going through our process:A thorough review of your application which can take up to a week or more due to the volume of applications we receiveA follow-up correspondence, regardless of if we are moving forward in the processIf we move forward, you can expect to engage in a similar experience to the below: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Initial interview with Talent Acquisition Team member &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Skills/Technical interview &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Final Virtual interviews&nbsp;with 3-4 of our team members Follow us on Glassdoor, LinkedIn, Facebook, Twitter, and Instagram to stay connected with us and learn about the people and work that drives our organization.&nbsp; &nbsp; Thank you!&nbsp; The CapTech Talent Acquisition Team&nbsp; Access My Application: https://u22907469.ct.sendgrid.net/ls/click?upn=u001.IZjfOPRqp8JBv7HvxfE578IdjeTB-2BVXiFSgBw8dD7CgQrre-2FDc-2F6bInzDyF88Dh3BU-2BrMeBQhMr5mCays9yMJbiTDsCekuiq3Wc33pGebNfqM6KUNtG20Lx-2B7QH8R0lEBguKUef02I-2BxvmtJWMwDhpqe0vDRTDyhWOeOafLG4l8Nq37G-2FL3EYk-2BzkhQsSGeLyGVb_3iIz9nyIoE7WYm9EGmPy-2FHdpg9RX0TMZqeH-2Fa-2FauaY7IG0cUJ34GuiCQsYgpNRQd8Ly7mhax8LMn6IbTbc-2FmFguW9RMcmlfLFGa9MLqaJMB1SNKPOFF4p8SwFTRPsB5QhX3QvQ4gchUMdT-2BopWMsUj7r4LS8P3LXbueLRwEUuX2aT1vRgKOoZYFwcCeOEkgNEYgaO4cPyRaI-2FvMcq0QNdgZlHqkK1A0aPAhB7BOYamEPpkOAtrf-2FDx-2B4vEJiK2DeGuzIp1DvOqW5CYswN2mIUcSlJT4-2F5kGDimNicyNAf9Ykp6DRcvP3NIQpggKjhNxGPgJ-2FEuLQSv76tcla6N6sMT9zVSp1tAZFt-2BqRXaVu0LapjjVjxHPfiZgT-2BTbzsuexp7BEBa-2F1PuCqBoW0W9Ej2Mie4efl9Kw-2FXaz5kqn5BodExz-2BzqW-2BRcTE6E4gEn3XYgJXOF0qkalEengQemiHNNwOAOEezZKAN7dgqnFNp148XLNMb3iB2iCKwcIQQZ0TE If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application Thank you for your interest in CapTech! We received your application for the Data Engineer (AWS, Azure, GCP) position in Reston, VA, USA. We understand that looking for a new job can be stressful but our goal is to provide an informative, authentic, and unique experience for go-getters who want to join our organization. Our process can take anywhere from 3-6 + weeks depending on the opportunity as well as our demand. To ensure your safety as well as our employees, our process is completely virtual. You can exp",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
