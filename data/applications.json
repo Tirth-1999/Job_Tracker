@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-09-17T23:58:49.272Z",
+  "updatedAt": "2026-09-18T04:24:34.573Z",
   "applications": [
+    {
+      "id": "home-depot-your-interest-188575",
+      "company": "Home Depot",
+      "role": "Your Interest",
+      "reqId": "188575",
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "formal rejection/non-selection language",
+      "latestSubject": "Thank You for Your Interest in The Home Depot",
+      "latestFrom": "The Home Depot <homedepot@myworkday.com>",
+      "lastActivityAt": "2026-09-18T04:13:00.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0b2b7ba3ce0663",
+      "gmailMessageIds": [
+        "1a0b2b7ba3ce0663"
+      ],
+      "notes": "96 Dear Tirth, Thank you for applying for the Online Senior Data Engineer , Req188575 position with The Home Depot. After careful consideration, we will not be moving you forward in the process for this position. If you have applied for other roles, you will receive a separate email regarding that position(s) when an update is available. We value your time and interest in exploring career opportunities with The Home Depot. We encourage you to visit careers.homedepot.com to sign up for our talent community and explore additional roles that may be a good match for your experience. Thank you again for your interest in a career at The Home Depot! The Home Depot’s Talent Acquisition Team Visit our Build from Scratch page for real-time company updates: thd.co/bfs This email was intended for tirthcshah1999+workday-homedepot@gmail.com"
+    },
     {
       "id": "imprint-team-your-interest",
       "company": "Imprint Team",
@@ -592,7 +611,7 @@
       "gmailMessageIds": [
         "1a08a5248fcff656"
       ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 994551 Note : This code will expire in 10 minutes. Sincerely, Ascot Group Recruiting Team."
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 525758 Note : This code will expire in 10 minutes. Sincerely, Ascot Group Recruiting Team."
     },
     {
       "id": "ascot-general-application",
@@ -1244,9 +1263,9 @@
       "reqId": "erence",
       "status": "applied",
       "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "platform application receipt",
-      "latestSubject": "Thanks for your interest in Accenture!",
+      "classifier": "rules",
+      "reason": "platform auto-receipt sender — application acknowledgment",
+      "latestSubject": "Update on Your Accenture Application",
       "latestFrom": "Accenture Careers <accenture@myworkday.com>",
       "lastActivityAt": "2026-09-16T21:29:55.000Z",
       "source": "gmail",
@@ -1256,7 +1275,7 @@
         "1a05d3dc53851fe9",
         "1a067182924e98e8"
       ],
-      "notes": "96 Hi Tirth, Thanks for applying for the role of Forward Deployed Engineer (FDE) Health. Our team will review your application against the stated qualifications and keep you updated about next steps. You can learn more about Accenture's recruiting process here . You can also log in to your candidate home page . Here you can track the status of your application, see any actions you need to take, and withdraw your application if your situation changes. At Accenture, reinvention is at the heart of everything we do—bringing together technology and human ingenuity to drive meaningful change. See how we're shaping the future by following Accenture on Linkedin . We appreciate your application and will be in touch with you soon. Reference Role: R00355645 Forward Deployed Engineer Accenture Recruitment Team Accenture is committed to keeping your personal data secure and processing it in accordance with applicable data protection laws. Read our privacy statement and the specific recruiting and hiring privacy statement , which include important information on why and how Accenture is processing your personal data. This email was intended for tirthcshah1999+workday-accenture@gmail.com",
+      "notes": "96 Hi Tirth, Thank you for your interest in Accenture and giving us the opportunity to learn about your background and qualifications. We have carefully considered your application against our hiring needs and are unable to move forward at this time. We’re continually hiring and our needs change over time, so we invite you to continue to visit our careers site to explore open opportunities. We will keep you in mind for future hiring needs. We wish you the best in your career search. Reference Role: R00353368 Forward Deployed AI Engineer Accenture Recruitment Team This email was intended for tirthcshah1999+workday-accenture@gmail.com",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -1380,9 +1399,9 @@
       "role": "General Application",
       "reqId": null,
       "status": "applied",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
       "latestSubject": "Confirm your identity",
       "latestFrom": "Photon Talent Acquisition Group <no-reply@photon.com>",
       "lastActivityAt": "2026-09-16T21:25:18.000Z",
@@ -1541,7 +1560,7 @@
       "company": "Trupanion",
       "role": "Data Engineer",
       "status": "rejected",
-      "confidence": "high",
+      "confidence": "low",
       "lastActivityAt": "2026-09-16T17:48:01.000Z",
       "latestSubject": "Your Application for the ​Data Engineer​ Position with ​Trupanion​",
       "latestFrom": "Trupanion Hiring Team <notifications@recruiting.trupanion.com>",
@@ -1558,8 +1577,8 @@
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:01:33.829+00:00",
       "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
+      "classifier": "rules",
+      "reason": "keyword heuristic"
     },
     {
       "id": "walt-disney-company-data-analyst",
@@ -1666,7 +1685,7 @@
       "confidence": "low",
       "classifier": "rules",
       "reason": "keyword heuristic",
-      "latestSubject": "We received your job application (Job Number: 210769357)",
+      "latestSubject": "We received your job application (Job Number: 210769104)",
       "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
       "lastActivityAt": "2026-09-16T14:56:08.000Z",
       "source": "gmail",
@@ -1674,7 +1693,7 @@
       "gmailMessageIds": [
         "1a0394facacb63cd"
       ],
-      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Data Engineer III 210769357 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
+      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Data Scientist-Senior Associate 210767245 210769104 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -1767,9 +1786,9 @@
       "role": "Data Engineer",
       "reqId": "48310",
       "status": "interviewed",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
       "latestSubject": "Confirm your identity",
       "latestFrom": "Citizens Careers <CitizensCareers@orc.mycitizenshr.com>",
       "lastActivityAt": "2026-09-16T14:35:09.000Z",
@@ -2128,7 +2147,7 @@
       "gmailMessageIds": [
         "1a065c508386d545"
       ],
-      "notes": "Your application was sent to Robert Half Data Engineer Robert Half Oxnard, CA View job: https://www.linkedin.com/comm/jobs/view/4465921966/?trackingId=UMV1v2LnS4m8Ei4mNWfQXQ%3D%3D&refId=ojmhC8geTh%2BEqvrNQhYsdQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BxsgqiaXIQSK04S2IxM3NHw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=18jFUGNLLS6Ys1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu437cie~dy-null-null&eid=a06oc2-mu437cie-dy&otpToken=NTgwYzVkMmU5MmEzNzAyYzZhMTEzODI3YjVjNzQ0MzViYTU1MjdmZWQ2MTQ2ZDlmMGJlNWUyMmQ3NTE5OWNkYzdkOTYzZDViODZjYjY5NTg4OTYwY2JlY2M2ZTgwZDA4ZjMzZGM4ZjhmMzE1ZDc1MTJiNWQ5OGI2NmRhZmFlY2ZiMzAwZTZmMDMxZTU1YWQ2LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 16, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Engagement Manager Kensho Technologies Cambridge, MA 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4455331496/?trackingId=NXonYs0fRUuWTD5eCYivlQ%3D%3D&refId=DDO4hLgxQJWoIJuzIgWENQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BxsgqiaXIQSK04S2IxM3NHw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=18jFUGNLLS6Ys1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu437cie~dy-null-null&eid=a06oc2-mu437cie-dy&otpToken=NTgwYzVkMmU5MmEzNzAyYzZhMTEzODI3YjVjNzQ0MzViYTU1MjdmZWQ2MTQ2ZDlmMGJlNWUyMmQ3NTE5OWNkYzdkOTYzZDViODZjYjY5NTg4OTYwY2JlY2M2ZTgwZDA4ZjMzZGM4ZjhmMzE1ZDc1MTJiNWQ5OGI2NmRhZmFlY2ZiMzAwZTZmMDMxZTU1YWQ2LDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager, US Cradle Boston, MA View job: https://www.linkedin.com/comm/jobs/view/4461914590/?trackingId=0v6f9b0bS32qKDM7JgRsTg%3D%3D&refId=zxe6T31%2BSvWkNoPZOCVzeA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BxsgqiaXIQSK04S2IxM3NHw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=18jFUGNLLS6Ys1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu437cie~dy-null-null&eid=a06oc2-mu437cie-dy&otpToken=NTgwYzVkMmU5MmEzNzAyYzZhMTEzODI3YjVjNzQ0MzViYTU1MjdmZWQ2MTQ2ZDlmMGJlNWUyMmQ3NTE5OWNkYzdkOTYzZDViODZjYjY5NTg4OTYwY2JlY2M2ZTgwZDA4ZjMzZGM4ZjhmMzE1ZDc1MTJiNWQ5OGI2NmRhZmFlY2ZiMzAwZTZmMDMxZTU1YWQ2LDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager Cradle Boston, MA View job: https://www.linkedin.com/comm/jobs/view/4377800214/?trackingId=SM2kNknrT2ib%2FFp4a6taIw%3D%3D&refId=iiOK%2FfEWR6m%2BUhcND7xspw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nb",
+      "notes": "Your application was sent to Robert Half Data Engineer Robert Half Des Moines Metropolitan Area View job: https://www.linkedin.com/comm/jobs/view/4460685637/?trackingId=O%2FAIDTI%2FS8yqf6W%2BJZUP4w%3D%3D&refId=0R9g51yHRvaTERx%2Fs03CbA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BqqluBopSQqqi80sO1H%2Bo%2FA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1hjpgTeX6IOYo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtjoyvv8~qz-null-null&eid=a06oc2-mtjoyvv8-qz&otpToken=NGZmZmRlNjMxZmIyNTQ2ZDMyY2M5OGRmZjE1NWU2ZGM4MmQ0YmE5NmQ4YjExMGMzNDNmYTYyYjhiZjg3NDE4MmE1OTY0YWQ3NmEzMTUxZTRhODQ5ZjdlYzFkZTY0MjA0MGE0NjIxYTY4YWE1OWQ0ZjliZjY5YzIxNzMzZTQ3ODRmOTc5NjE3YTEzMWIyYmYyLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 2, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Product Manager Applied Systems Lewisville, TX 3 connections 12 company alumni 10 school alumni View job: https://www.linkedin.com/comm/jobs/view/4440780268/?trackingId=5JZIZ8mfTka2eC6uNm%2B0Ng%3D%3D&refId=DTBIrw6tTXqFwa9OhNAS9A%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BqqluBopSQqqi80sO1H%2Bo%2FA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1hjpgTeX6IOYo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtjoyvv8~qz-null-null&eid=a06oc2-mtjoyvv8-qz&otpToken=NGZmZmRlNjMxZmIyNTQ2ZDMyY2M5OGRmZjE1NWU2ZGM4MmQ0YmE5NmQ4YjExMGMzNDNmYTYyYjhiZjg3NDE4MmE1OTY0YWQ3NmEzMTUxZTRhODQ5ZjdlYzFkZTY0MjA0MGE0NjIxYTY4YWE1OWQ0ZjliZjY5YzIxNzMzZTQ3ODRmOTc5NjE3YTEzMWIyYmYyLDIsMQ%3D%3D --------------------------------------------------------- Product Manager, AI Enablement Pindrop Atlanta, GA 4 school alumni View job: https://www.linkedin.com/comm/jobs/view/4458915497/?trackingId=ZTPbmtFZSx65DOctvne4dQ%3D%3D&refId=zQOSPmnKRiqyAsSi3oUzog%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BqqluBopSQqqi80sO1H%2Bo%2FA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1hjpgTeX6IOYo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtjoyvv8~qz-null-null&eid=a06oc2-mtjoyvv8-qz&otpToken=NGZmZmRlNjMxZmIyNTQ2ZDMyY2M5OGRmZjE1NWU2ZGM4MmQ0YmE5NmQ4YjExMGMzNDNmYTYyYjhiZjg3NDE4MmE1OTY0YWQ3NmEzMTUxZTRhODQ5ZjdlYzFkZTY0MjA0MGE0NjIxYTY4YWE1OWQ0ZjliZjY5YzIxNzMzZTQ3ODRmOTc5NjE3YTEzMWIyYmYyLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager MicroAI Texas, United States View job: https://www.linkedin.com/comm/jobs/view/4432436798/?trackingId=A%2BQM3sIYSTSx3Acar6Uj0w%3D%3D&re",
       "aiDecision": "LinkedIn application receipt",
       "aiModel": "deterministic_rules",
       "aiClassifiedAt": "2026-09-15T15:55:17.612Z",
@@ -3241,7 +3260,7 @@
       "gmailMessageIds": [
         "1a02d7e71dafe4d4"
       ],
-      "notes": "View job recommendations just for you %%str_to_replace_open_tracking%% seek [https://seekcdn.com/notifications/apac-mail/shared/seek-logo-white-bg.png]https://au.seek.com/?tracking=PAC-JobRecs-anz-1-logo Hi, we've got new job recommendations for you We want to help find the job that’s right for you – and these roles could be a match. We recommend these jobs based on your profile, past viewed jobs and applications. logo [https://bx-branding-gateway.cloud.seek.com.au/80a7c123-b985-4091-ba44-386d249e7e38.1/serpLogo] Application Support Analyst HR Systems Water Corporation Leederville, Perth WA from $115,561 + 12% super * Are you a passionate systems analyst ready to take on a dynamic challenge? * Join a collaborative team driving proactive and continuous improvement * Permanent and fixed term opportunities with flexible working based in Leederv... [https://au.seek.com/job/94385063?token=1%7Ed78c58a1-bb87-4360-a123-d5c39374af65&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/9120c280-950a-b3b2-3584-1749b331a6c7.1/serpLogo] Senior Systems Administrator Legeneering (Aust) Pty Ltd Perth WA $140,000 – $150,000 per year * Full Time, ongoing role * Enjoy benefits such as weekly pay and novated leasing * Join a small, close-knit IT team with direct exposure to CEO and SLT Recently posted [https://au.seek.com/job/94416442?token=1%7Ed78c58a1-bb87-4360-a123-d5c39374af65&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/408fa1ef-f6ca-e63d-8689-dd9cb4bb5029.1/serpLogo] Systems Administrator Mars Recruitment Perth WA $115k - $120k p.a.+ Super * Take ownership of the internal IT environment * Broad role spanning Microsoft infrastructure, networking, security and projects * Work directly with the IT Systems Manager to improve systems and services Recently posted [https://au.seek.com/job/94453880?token=1%7Ed78c58a1-bb87-4360-a123-d5c39374af65&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/c02bc969-5715-48a4-842b-162d0a1ea840.1/serpLogo] Technology Site Consultant Caterpillar of Australia Redcliffe, Perth WA + Bonus and Share Options * Located in either Perth, Adelaide or Brisbane * Competitive remuneration package, including an attractive Bonus & Share options * Comprehensive training Recently posted [https://au.seek.com/job/94457354?token=1%7Ed78c58a1-bb87-4360-a123-d5c39374af65&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/31399e2c-7157-934d-0879-12404c192554.1/serpLogo] Business Systems Lead Brightwater Inglewood, Perth WA (Hybrid) * Salary packaging up to $18,550 per annum * Hybrid work arrangements to support healthy work life balance * State of the art working space with an onsite café and staff gym [https://au.seek.com/job/94310608?token=1%7Ed78c58a1-bb87-4360-a123-d5c39374af65&tracking=PAC-JobRecs-anz-1] [https://image-service-cdn.seek.com.au/9734ad25aeab02d075932f7194359488c5bf6817/1c056a984962480605a20a31bcae496022b57b25] logo [h",
+      "notes": "View job recommendations just for you %%str_to_replace_open_tracking%% seek [https://seekcdn.com/notifications/apac-mail/shared/seek-logo-white-bg.png]https://au.seek.com/?tracking=PAC-JobRecs-anz-1-logo Hi, we've got new job recommendations for you We want to help find the job that’s right for you – and these roles could be a match. We recommend these jobs based on your profile, past viewed jobs and applications. logo [https://bx-branding-gateway.cloud.seek.com.au/80a7c123-b985-4091-ba44-386d249e7e38.1/serpLogo] Application Support Analyst HR Systems Water Corporation Leederville, Perth WA from $115,561 + 12% super * Are you a passionate systems analyst ready to take on a dynamic challenge? * Join a collaborative team driving proactive and continuous improvement * Permanent and fixed term opportunities with flexible working based in Leederv... Recently posted [https://au.seek.com/job/94385063?token=1%7E3be4e32d-3a77-4ab2-9fe8-12165fedab00&tracking=PAC-JobRecs-anz-1] ICT Business Systems Analyst Bob’s Diesel Maintenance Solutions Perth WA $80,000 – $95,000 per year [https://au.seek.com/job/94293922?token=1%7E3be4e32d-3a77-4ab2-9fe8-12165fedab00&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/a3d9af23-e45e-41a9-87b8-6969f6357952.1/serpLogo] IT Systems Administrator Red Piranha Perth WA * An exciting scale up company in cyber security * Join a growing global team, where you will make a difference! * Based in Perth CBD (not remote) [https://au.seek.com/job/94310190?token=1%7E3be4e32d-3a77-4ab2-9fe8-12165fedab00&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/29bc278a-51ce-4a0c-ba2d-7b040c849213.1/serpLogo] ICT Project Officer City of Perth Perth WA $113,369 to $120,094 per annum, plus super * CBD location | On-site * Up to 22% superannuation contribution | paid fortnightly * Help shape the City's digital future through innovative ICT projects [https://au.seek.com/job/94323923?token=1%7E3be4e32d-3a77-4ab2-9fe8-12165fedab00&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/9120c280-950a-b3b2-3584-1749b331a6c7.1/serpLogo] Senior Systems Administrator Legeneering (Aust) Pty Ltd Perth WA $140,000 – $150,000 per year * Full Time, ongoing role * Enjoy benefits such as weekly pay and novated leasing * Join a small, close-knit IT team with direct exposure to CEO and SLT Recently posted [https://au.seek.com/job/94416442?token=1%7E3be4e32d-3a77-4ab2-9fe8-12165fedab00&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/b14e15fc-0ab4-4e0b-a258-76473260c255.1/serpLogo] Desktop Deployment Consultant - Immediate start Ethan Talent Perth WA * Immediate start * multi site engagement * Work for a Global market leader Recently posted [https://au.seek.com/job/94386253?token=1%7E3be4e32d-3a77-4ab2-9fe8-12165fedab00&tracking=PAC-JobRecs-anz-1] logo [https://bx-branding-gateway.cloud.seek.com.au/f285cb1d-299c-4f0a-af72-c10303947f98.1/serpLogo] ICT Offic",
       "aiDecision": "job alert/newsletter/recommendation digest",
       "aiModel": "deterministic_rules",
       "aiClassifiedAt": "2026-09-15T15:55:17.612Z",
@@ -4829,7 +4848,7 @@
         "1a020a37644d9f24",
         "1a020a381832c59a"
       ],
-      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: AI Engineer III - Global Dining Technology Senior Software Engineers Sr AI Engineer II - Agentic AI Senior Data Engineer II - Amex Ads, Offers, and Dining Technology Director of Cyber Security / Agentic AI - Privileged Access Management (PAM) See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
+      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: Sr AI Engineer I - Agentic AI Senior Data Engineer I - Amex Ads, Offers, and Dining Technology Sr Software Engineer II Staff AI Engineer - Enterprise Architecture Campus Undergraduate Summer Internship Program - 2027 AI Engineer, Enterprise Technology Services- New York, NY See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -4843,11 +4862,11 @@
     {
       "id": "deloitte-senior-forward-deployed-engineer-aws",
       "company": "Deloitte",
-      "role": "Senior Forward Deployed Engineer- AWS",
+      "role": "At Deloitte.",
       "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
       "latestSubject": "Reminder: Apply to the Senior Forward Deployed Engineer- AWS position at Deloitte.",
       "latestFrom": "Recruiting at Deloitte <donotreply@deloitte.com>",
       "lastActivityAt": "2026-09-14T03:49:12.000Z",
@@ -7444,7 +7463,7 @@
       "gmailMessageIds": [
         "19fdc206809c504f"
       ],
-      "notes": "Hi Tirth, Thank you for applying for the AWS Data Engineer role at Clera! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team Hi Tirth , Thank you for applying for the AWS Data Engineer role at Clera ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team",
+      "notes": "Hi Tirth, Thank you for applying for the Staff Engineer — Agentic AI role at Clera! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team Hi Tirth , Thank you for applying for the Staff Engineer — Agentic AI role at Clera ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -28862,7 +28881,7 @@
       "gmailMessageIds": [
         "1a0346f6d28f7f59"
       ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 533148 Note : This code will expire in 10 minutes. Sincerely, American Tower Global Recruiting Team."
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 167829 Note : This code will expire in 10 minutes. Sincerely, American Tower Global Recruiting Team."
     },
     {
       "id": "answersnow-business-intelligence-engineer",
