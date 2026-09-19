@@ -1,6 +1,46 @@
 {
-  "updatedAt": "2026-09-18T23:08:14.156Z",
+  "updatedAt": "2026-09-19T01:28:10.372Z",
   "applications": [
+    {
+      "id": "abbvie-taking-the-time-to-apply-for-this",
+      "company": "Abbvie",
+      "role": "Taking The Time To Apply For This",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "formal rejection/non-selection language",
+      "latestSubject": "​Data Engineer (Hybrid) - R00150420 ​Update from AbbVie",
+      "latestFrom": "AbbVie Hiring Team <notifications@talentacquisition.abbvie.com>",
+      "lastActivityAt": "2026-09-19T00:12:58.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0b702589a90e3d",
+      "gmailMessageIds": [
+        "1a0b702589a90e3d"
+      ],
+      "notes": " Dear Tirth,&nbsp;&nbsp; Thank you for taking the time to apply for this position at AbbVie. We appreciate your interest in exploring a career with us.&nbsp;&nbsp; After careful consideration we have made the difficult decision to move forward with other candidates whose skills and experience more closely align to the requirements of the position.&nbsp;&nbsp; We encourage you to continue browsing our career site for open, relevant roles and join our Talent Community if you&rsquo;re interested in learning more about future opportunities with AbbVie.&nbsp;&nbsp; Thank you once again for your interest in pursuing opportunities with AbbVie.&nbsp;&nbsp; &nbsp; Sincerely, AbbVie Talent Acquisition&nbsp;&nbsp; &#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203; Dear Tirth , Thank you for taking the time to apply for this position at AbbVie. We appreciate your interest in exploring a career with us. After careful consideration we have made the difficult decision to move forward with other candidates whose skills and experience more closely align to the requirements of the position. We encourage you to continue browsing our career site for open, relevant roles and join our Talent Community if you&rsquo;re interested in learning more about future opportunities with AbbVie. Thank you once again for your interest in pursuing opportunities with AbbVie. Sincerely, AbbVie Talent Acquisition"
+    },
+    {
+      "id": "aws-marketplace-general-application-000000",
+      "company": "AWS Marketplace",
+      "role": "General Application",
+      "reqId": "000000",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "You accepted an AWS Marketplace offer",
+      "latestFrom": "AWS Marketplace <no-reply@marketplace.aws>",
+      "lastActivityAt": "2026-09-18T23:59:30.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0b6e784405c884",
+      "gmailMessageIds": [
+        "1a0b6f602bce8c7b",
+        "1a0b6f60049d0506",
+        "1a0b6e784405c884"
+      ],
+      "notes": "Greetings from AWS Marketplace, An AWS Marketplace offer has been accepted by AWS account: 294150216522 on September, 18 2026 11:43 PM UTC, and an agreement was created. Review the following details: Seller details Seller name: Anthropic, PBC Product details Product name: Claude Haiku 4.5 (Amazon Bedrock Edition) Product ID: prod-xdkflymybwmvi Offer details Offer name: Offer created on 2025-10-06T20:18:48.877Z Offer ID: offer-fudwqbphlos64 Agreement details Agreement ID: agmt-910m4qze62eabs3vpw4izbl0x Agreement start date: September, 18 2026 11:43 PM UTC Agreement end date: N/A Purchase amount: 0.00 (USD) For SaaS products, register with the seller’s website by visiting the procurement page to set up your account and start using the product. For more details, review ourBuyers guide. The subscriber You will receive entitlements to the product on the September, 18 2026 11:43 PM UTC. If there are processing issues, you will be notified in a separate email. To review details of your agreement, visit the https://us-east-1.console.aws.amazon.com/marketplace/home#/subscriptions. For agreements on data products, visit the https://us-east-1.console.aws.amazon.com/dataexchange/home?region=us-east-1#/owned/products. If you have any questions about your agreement or need assistance, visit https://support.console.aws.amazon.com/support/home#/case/create?issueType=customer-service&serviceCode=amazon-marketplace. Regards, The AWS Marketplace Team Update notification preferences using https://us-east-1.user-subscription.com/uw/a923e2a7-04f1-4e46-bd84-a7d2ebb3fbab/a1078208-ad4b-4f87-8891-00ad1fd4ba75/010001a0b6e7846c-c6de158c-9449-40e3-87ea-e82da093483d-000000 if you no longer want to receive these notifications. --- AWS Marketplace notifications are moving to a new sender AWS Marketplace is moving all buyer notifications to AWS User Notifications. When you opt in, emails like this come from marketplace@aws.com instead of no-reply@marketplace.aws. Opt in to managed notifications, then update any email filters or forwarding rules to allow marketplace@aws.com so you keep receiving notifications. If you don't opt in, your account is enrolled automatically by January 2027. How to manage notifications: https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-notifications.html Amazon Web Services, Inc. is a subsidiary of Amazon.com, Inc. Amazon.com is a registered trademark of Amazon.com. This message was produced and distributed by Amazon Web Services, Inc. or its affiliates https://aws.amazon.com/legal/marketingentities/ 410 Terry Ave. North, Seattle, WA 98109. © [2026], Amazon Web Services, Inc. or its affiliates. All rights reserved. Read our Privacy Notice. https://aws.amazon.com/privacy/ Greetings from AWS Marketplace, An AWS Marketplace offer has been accepted by AWS account: 294150216522 on September, 18 2026 11:43 PM UTC, and an agreement was created. Review the following details: Seller details Seller name : Anthropic, PBC Product details Product name"
+    },
     {
       "id": "citizens-data-engineer-48310-mentioned",
       "company": "Citizens",
@@ -566,9 +606,9 @@
       "reqId": "erence",
       "status": "rejected",
       "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "platform application receipt",
-      "latestSubject": "Thanks for your interest in Accenture!",
+      "classifier": "rules",
+      "reason": "platform auto-receipt sender — application acknowledgment",
+      "latestSubject": "Update on Your Accenture Application",
       "latestFrom": "Accenture Careers <accenture@myworkday.com>",
       "lastActivityAt": "2026-09-18T07:34:10.000Z",
       "source": "gmail",
@@ -578,7 +618,7 @@
         "1a05d3dc53851fe9",
         "1a067182924e98e8"
       ],
-      "notes": "96 Hi Tirth, Thanks for applying for the role of Forward Deployed Engineer (FDE) Health. Our team will review your application against the stated qualifications and keep you updated about next steps. You can learn more about Accenture's recruiting process here . You can also log in to your candidate home page . Here you can track the status of your application, see any actions you need to take, and withdraw your application if your situation changes. At Accenture, reinvention is at the heart of everything we do—bringing together technology and human ingenuity to drive meaningful change. See how we're shaping the future by following Accenture on Linkedin . We appreciate your application and will be in touch with you soon. Reference Role: R00355645 Forward Deployed Engineer Accenture Recruitment Team Accenture is committed to keeping your personal data secure and processing it in accordance with applicable data protection laws. Read our privacy statement and the specific recruiting and hiring privacy statement , which include important information on why and how Accenture is processing your personal data. This email was intended for tirthcshah1999+workday-accenture@gmail.com",
+      "notes": "96 Hi Tirth, Thank you for your interest in Accenture and giving us the opportunity to learn about your background and qualifications. We have carefully considered your application against our hiring needs and are unable to move forward at this time. We’re continually hiring and our needs change over time, so we invite you to continue to visit our careers site to explore open opportunities. We will keep you in mind for future hiring needs. We wish you the best in your career search. Reference Role: R00353368 Forward Deployed AI Engineer Accenture Recruitment Team This email was intended for tirthcshah1999+workday-accenture@gmail.com",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -1691,7 +1731,7 @@
       "gmailMessageIds": [
         "1a06acac92402e38"
       ],
-      "notes": "96 Dear Tirth, Thank you for your interest in R0977321 Data Engineer (Fill Date: 09/13/2026) . After careful review, we will not be moving forward with your application for this role. We also encourage you to explore other opportunities at CVS Health® that match your skills and interests. Visit https://jobs.cvshealth.com/us/en or text “CVS” to 29000 to connect with our virtual recruiting assistant. To support your career journey, we’re offering free access to a virtual career development platform with tools for networking, resume building and interview prep. Enroll here: https://cvshealthcareers.yournextstep.com/users/sign_up?direct=XM73OrS-nKtg6Gk1 . Thank you again for considering CVS Health. We wish you success in your career. Sincerely, CVS Health Talent Acquisition Life at CVS Health Candidate Home Join #TeamCVS on social! *This is an automated e-mail; please do not reply to this message. This email was intended for tirthcshah1999@gmail.com CVS Health &#8226; One CVS Drive, Woonsocket, Rhode Island 02895",
+      "notes": "96 Dear Tirth, Thank you for your interest in R1015994 Principal Software Development Engineer (AI Innovation) (Open) . After careful review, we will not be moving forward with your application for this role. We also encourage you to explore other opportunities at CVS Health® that match your skills and interests. Visit https://jobs.cvshealth.com/us/en or text “CVS” to 29000 to connect with our virtual recruiting assistant. To support your career journey, we’re offering free access to a virtual career development platform with tools for networking, resume building and interview prep. Enroll here: https://cvshealthcareers.yournextstep.com/users/sign_up?direct=XM73OrS-nKtg6Gk1 . Thank you again for considering CVS Health. We wish you success in your career. Sincerely, CVS Health Talent Acquisition Life at CVS Health Candidate Home Join #TeamCVS on social! *This is an automated e-mail; please do not reply to this message. This email was intended for tirthcshah1999+workday-cvshealth@gmail.com CVS Health &#8226; One CVS Drive, Woonsocket, Rhode Island 02895",
       "updatedAt": "2026-09-15T21:47:11.536Z"
     },
     {
@@ -1988,9 +2028,9 @@
       "role": "General Application",
       "reqId": null,
       "status": "applied",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
       "latestSubject": "Confirm your identity",
       "latestFrom": "Photon Talent Acquisition Group <no-reply@photon.com>",
       "lastActivityAt": "2026-09-16T21:25:18.000Z",
@@ -2149,7 +2189,7 @@
       "company": "Trupanion",
       "role": "Data Engineer",
       "status": "rejected",
-      "confidence": "high",
+      "confidence": "low",
       "lastActivityAt": "2026-09-16T17:48:01.000Z",
       "latestSubject": "Your Application for the ​Data Engineer​ Position with ​Trupanion​",
       "latestFrom": "Trupanion Hiring Team <notifications@recruiting.trupanion.com>",
@@ -2166,8 +2206,8 @@
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:01:33.829+00:00",
       "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
+      "classifier": "rules",
+      "reason": "keyword heuristic"
     },
     {
       "id": "walt-disney-company-data-analyst",
@@ -2274,7 +2314,7 @@
       "confidence": "low",
       "classifier": "rules",
       "reason": "keyword heuristic",
-      "latestSubject": "We received your job application (Job Number: 210769104)",
+      "latestSubject": "We received your job application (Job Number: 210769357)",
       "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
       "lastActivityAt": "2026-09-16T14:56:08.000Z",
       "source": "gmail",
@@ -2282,7 +2322,7 @@
       "gmailMessageIds": [
         "1a0394facacb63cd"
       ],
-      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Data Scientist-Senior Associate 210767245 210769104 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
+      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Data Engineer III 210769357 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -3314,9 +3354,9 @@
       "role": "Free With IBM Skillsbuild, Step Inside Our Software Innovation Lab, And Catch Up",
       "reqId": "rain",
       "status": "applied",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
       "latestSubject": "Which IBM career opportunities match your goals?",
       "latestFrom": "IBM Talent Acquisition <talent@ibm.com>",
       "lastActivityAt": "2026-09-16T00:06:49.000Z",
@@ -5590,7 +5630,7 @@
         "1a020a37644d9f24",
         "1a020a381832c59a"
       ],
-      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: Sr AI Engineer I - Agentic AI Senior Data Engineer I - Amex Ads, Offers, and Dining Technology Sr Software Engineer II Staff AI Engineer - Enterprise Architecture Campus Undergraduate Summer Internship Program - 2027 AI Engineer, Enterprise Technology Services- New York, NY See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
+      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: AI Engineer III - Global Dining Technology Senior Software Engineers Sr AI Engineer II - Agentic AI Senior Data Engineer II - Amex Ads, Offers, and Dining Technology Director of Cyber Security / Agentic AI - Privileged Access Management (PAM) See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -6326,7 +6366,7 @@
       "gmailMessageIds": [
         "1a06158e13e5e00f"
       ],
-      "notes": "Problem with your Data Engineer application Oh no! Something went wrong... Dear Tirth Chirayu Shah,<br><br>There was a problem completing your application for {:linkedinJobPostingURL}. To be sure it goes through, please complete your application <a href=\"https://recruiting.ultipro.com/GUI1001/JobBoard/634382fd-6424-ec1b-8e37-2aa4ce4c10de/OpportunityDetail?opportunityId=ff4f5956-88b1-45fc-b462-a0d5b2a5b242&source=LinkedIn\" style=\"color: #0a66c2; cursor: pointer; display: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;\">here</a>. We’re sorry about the inconvenience, and hope you get the job!<br><br>Thanks for being a member,<br>The LinkedIn Jobs Team Apply on company websitehttps://recruiting.ultipro.com/comm/GUI1001/JobBoard/634382fd-6424-ec1b-8e37-2aa4ce4c10de/OpportunityDetail?opportunityId=ff4f5956-88b1-45fc-b462-a0d5b2a5b242&source=LinkedIn&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BtHKTt7FIReCTpCLtt9nyqg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0V6ZHguXPYHYo1&trk=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text&trkEmail=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text-null-a06oc2~mtcnr30y~dp-null-null&eid=a06oc2-mtcnr30y-dp&otpToken=YjYxYWI0MWM3M2M2MzVmOTc0ZTZjOTk3YzlhZGRlNmU2YTYyMjM1ZWVhZTE4MDk5OWUzMWNmZmUzZDEyMGU5OWY1ZGEyZmZjY2QzNGRmOThjZjdkN2YyYzZmZWU5MTA1MWU0OTZiYjIzMTNhODdmYjIzNTFhYjQ2MmZlZTAwOGRhYzYyM2M4NzgyNTM0YWM3LDIsMQ%3D%3D ---------------------------------------- This email was intended for Tirth Chirayu Shah (Data & Agentic AI Engineer | Python • SQL • Power BI • Azure/GCP/AWS • Databricks | Built a Startup @BlackTieCars) Learn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BtHKTt7FIReCTpCLtt9nyqg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0V6ZHguXPYHYo1&trk=eml-email_jobs_offsite_application_failure-SecurityHelp-0-textfooterglimmer&trkEmail=eml-email_jobs_offsite_application_failure-SecurityHelp-0-textfooterglimmer-null-a06oc2~mtcnr30y~dp-null-null&eid=a06oc2-mtcnr30y-dp&otpToken=YjYxYWI0MWM3M2M2MzVmOTc0ZTZjOTk3YzlhZGRlNmU2YTYyMjM1ZWVhZTE4MDk5OWUzMWNmZmUzZDEyMGU5OWY1ZGEyZmZjY2QzNGRmOThjZjdkN2YyYzZmZWU5MTA1MWU0OTZiYjIzMTNhODdmYjIzNTFhYjQ2MmZlZTAwOGRhYzYyM2M4NzgyNTM0YWM3LDIsMQ%3D%3D You are receiving LinkedIn notification emails. Help: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BtHKTt7FIReCTpCLtt9nyqg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0V6ZHguXPYHYo1&trk=eml-email_jobs_offsite_application_failure-help-0-textfooterglimmer&trkEmail=eml-email_jobs_offsite_application_failure-help-0-textfooterglimmer-null-a06oc2~mtcnr30y~dp-null-null&eid=a06oc2-mtcnr30y-dp&otpToken=YjYxYWI0MWM3M2M2MzVmOTc0ZTZjOTk3YzlhZGRlNmU2YTYyMjM1ZWVhZTE4MDk5OWUzMWNmZmUzZDEyMGU5OWY1ZGEyZmZjY2QzNGRmOThjZjdkN2YyYzZmZWU5MTA1MWU0OTZiYjIzMTNhODdmYjIzNTFhYjQ"
+      "notes": "Problem with your Data Engineer application Oh no! Something went wrong... Dear Tirth Chirayu Shah,<br><br>There was a problem completing your application for {:linkedinJobPostingURL}. To be sure it goes through, please complete your application <a href=\"https://grnh.se/w3bgiy0s6us?gh_src=c2458f606us\" style=\"color: #0a66c2; cursor: pointer; display: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;\">here</a>. We’re sorry about the inconvenience, and hope you get the job!<br><br>Thanks for being a member,<br>The LinkedIn Jobs Team Apply on company websitehttps://grnh.se/comm/w3bgiy0s6us?gh_src=c2458f606us&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BNEtKvSC2S7SbWxVutxuwLg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2mo-K50Lfy0cs1&trk=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text&trkEmail=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text-null-a06oc2~mtx7kv59~vl-null-null&eid=a06oc2-mtx7kv59-vl&otpToken=YmEzYjliY2VmNmQ5ZGFjMjY5YTc2ZDU4ZjFjYTc1NzE3MTkzYjZmNDMxYTc5ZGE2MTg1Mzc3MzU5YThkOWRjYTVlNWY1YjAwNjA5ZDM2NWY1OTlmY2I2MzZjYWRjNTk0ZDA2OTNmYWRkNTkwNWU0NjQ5NzZjMTMzODc1ODFjNzdlY2I0YTI3YWI1NmYyMTc2LDIsMQ%3D%3D ---------------------------------------- This email was intended for Tirth Chirayu Shah (Forward Deployed Data & Agentic AI Engineer | Langchain • Deep Agents • Python • SQL • Power BI • Azure/GCP/AWS • Databricks | Built a Startup @BlackTieCars | Audit -​> Build -​> Observe -​> Loop) Learn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BNEtKvSC2S7SbWxVutxuwLg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2mo-K50Lfy0cs1&trk=eml-email_jobs_offsite_application_failure-SecurityHelp-0-textfooterglimmer&trkEmail=eml-email_jobs_offsite_application_failure-SecurityHelp-0-textfooterglimmer-null-a06oc2~mtx7kv59~vl-null-null&eid=a06oc2-mtx7kv59-vl&otpToken=YmEzYjliY2VmNmQ5ZGFjMjY5YTc2ZDU4ZjFjYTc1NzE3MTkzYjZmNDMxYTc5ZGE2MTg1Mzc3MzU5YThkOWRjYTVlNWY1YjAwNjA5ZDM2NWY1OTlmY2I2MzZjYWRjNTk0ZDA2OTNmYWRkNTkwNWU0NjQ5NzZjMTMzODc1ODFjNzdlY2I0YTI3YWI1NmYyMTc2LDIsMQ%3D%3D You are receiving LinkedIn notification emails. Help: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BNEtKvSC2S7SbWxVutxuwLg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2mo-K50Lfy0cs1&trk=eml-email_jobs_offsite_application_failure-help-0-textfooterglimmer&trkEmail=eml-email_jobs_offsite_application_failure-help-0-textfooterglimmer-null-a06oc2~mtx7kv59~vl-null-null&eid=a06oc2-mtx7kv59-vl&otpToken=YmEzYjliY2VmNmQ5ZGFjMjY5YTc2ZDU4ZjFjYTc1NzE3MTkzYjZmNDMxYTc5ZGE2MTg1Mzc3MzU5YThkOWRjYTVlNWY1YjAwNjA5ZDM2NWY1OTlmY2I2MzZjYWRjNTk0ZDA2OTNmYWRkNTkwNWU0NjQ5NzZjMTMzODc1ODFjNzdlY2I0YTI3YWI1NmYyMTc2LDIsMQ%3D%3D © 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085. LinkedIn and the LinkedIn logo are regis"
     },
     {
       "id": "exl-fusion-notification-general-application",
@@ -31271,7 +31311,7 @@
       "gmailMessageIds": [
         "19fc7b51e249890a"
       ],
-      "notes": "Prominence Advisors ------------------------------------------------------------------------------- Your application for the Data Engineer (Snowflake) job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Phone: +19796352045 Where are you located?: Texas ** PROFILE ** Resume: Tirth_Shah_AI_Data_Engineer.pdf ** DETAILS ** When are you available to start?: September 01, 2026 Desired Compensation?: 75000 Answers [\"Yes\"] Are you eligible to work in the U.S. without visa sponsorship? [\"Yes\"] Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? How many years experience with healthcare data do you have? 0-1 Year [\"Yes\"] Do you have experience working with data architecture, modeling, or engineering in the healthcare industry? Which of Prominence's core values resonates most with you and why? Ownership resonates most with me because I believe in taking responsibility from understanding the problem through delivery, while continuously improving the solution and creating meaningful value. ------------------------------------------------------------------------------- You have applied again for this job. This application has overwritten the previous one. If this wasn't you or you've changed your mind, you can manage your applications online. https://prominence-advisors.workable.com/jobs/6056030/candidate_conflicts/mjjvhT55K3udWsaPVlO8C5geLp1ni81HVnhtcZFHe0A ------------------------------------------------------------------------------- Withdraw this application https://prominence-advisors.workable.com/jobs/6056030/candidates/l8jqvz945VTnpaCFcJZJY-pxo9s4SBKB_MxJvZBBnMA ------------------------------------------------------------------------------- Jobs by Workable https://jobs.workable.com/ Your application for the Data Engineer (Snowflake) job was submitted successfully. Here's a copy of your application data for safekeeping. You have applied again for this job. This application has overwritten the previous one. If this wasn't you or you've changed your mind, you can manage your applications online. Manage your applications Personal information Name Tirth Shah Email tirthcshah1999@gmail.com Profile Resume Tirth_Shah_AI_Data_Engineer.pdf Details When are you available to start? September 01, 2026 Desired Compensation? 75000 Answers Are you eligible to work in the U.S. without visa sponsorship? Yes Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? Yes How many years experience with healthcare data do you have? 0-1 Year Do you have experience working with data architecture, modeling, or engineering in the healthcare industry? Yes Which of Prominence's core value"
+      "notes": "Prominence Advisors ------------------------------------------------------------------------------- Your application for the Data Engineer (Snowflake) job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Chirayu Shah Email: tirthcshah1999@gmail.com Phone: +1 (979) 635 2045 Where are you located?: Texas ** PROFILE ** Resume: Tirth_Shah_AI_Data_Engineer.pdf ** DETAILS ** When are you available to start?: September 01, 2026 Desired Compensation?: 75000 Answers [\"Yes\"] Are you eligible to work in the U.S. without visa sponsorship? [\"Yes\"] Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? How many years experience with healthcare data do you have? 5+ Years [\"Yes\"] Do you have experience working with data architecture, modeling, or engineering in the healthcare industry? Which of Prominence's core values resonates most with you and why? The core value that resonates most with me is ownership. I enjoy taking responsibility from understanding the problem through implementation and delivery, while continuously improving the solution and supporting the team. Withdraw this application https://prominence-advisors.workable.com/jobs/6056030/candidates/HCOylKGYjymgVJx5jwyi0lSpXrWV3Ng5J0QwZTlip_I ------------------------------------------------------------------------------- Powered by Workable https://jobs.workable.com/ Your application for the Data Engineer (Snowflake) job was submitted successfully. Here's a copy of your application data for safekeeping. Personal information Name Tirth Chirayu Shah Email tirthcshah1999@gmail.com Profile Resume Tirth_Shah_AI_Data_Engineer.pdf Details When are you available to start? September 01, 2026 Desired Compensation? 75000 Answers Are you eligible to work in the U.S. without visa sponsorship? Yes Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? Yes How many years experience with healthcare data do you have? 5+ Years Do you have experience working with data architecture, modeling, or engineering in the healthcare industry? Yes Which of Prominence's core values resonates most with you and why? The core value that resonates most with me is ownership. I enjoy taking responsibility from understanding the problem through implementation and delivery, while continuously improving the solution and supporting the team. Withdraw this application Powered by Workable"
     },
     {
       "id": "golden-state-warriors-data-engineer",
