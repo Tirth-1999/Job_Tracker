@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-09-19T11:25:42.394Z",
+  "updatedAt": "2026-09-19T13:48:39.065Z",
   "applications": [
+    {
+      "id": "orum-your-interest",
+      "company": "Orum",
+      "role": "Your Interest",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "formal rejection/non-selection language",
+      "latestSubject": "Thanks for your interest in Orum, Tirth",
+      "latestFrom": "Orum Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-09-19T13:35:28.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0b9e10c2fe3362",
+      "gmailMessageIds": [
+        "1a0b9e10c2fe3362"
+      ],
+      "notes": "Hi Tirth, Thank you for your application to the Staff / Principal Data Engineer role at Orum. Competition for jobs at Orum is always strong, and we often have to make difficult choices between many high-caliber candidates. We ended up moving forward with other candidates, but we’d like to thank you for applying. It's not lost on us that the job search can be stressful, and we appreciate that you considered us as one of your options. We will be advertising more positions in the coming months. We hope you’ll keep us in mind, and we encourage you to apply again. We wish you success in your search for a company where your skills and talents will shine. Sincerely, Orum Talent Acquisition Hi Tirth , Thank you for your application to the Staff / Principal Data Engineer role at Orum. Competition for jobs at Orum is always strong, and we often have to make difficult choices between many high-caliber candidates. We ended up moving forward with other candidates, but we’d like to thank you for applying. It's not lost on us that the job search can be stressful, and we appreciate that you considered us as one of your options. We will be advertising more positions in the coming months. We hope you’ll keep us in mind, and we encourage you to apply again. We wish you success in your search for a company where your skills and talents will shine. Sincerely, Orum Talent Acquisition"
+    },
     {
       "id": "myhr-data-engineer-senior-consultant",
       "company": "Myhr",
@@ -2390,7 +2409,7 @@
       "confidence": "low",
       "classifier": "rules",
       "reason": "keyword heuristic",
-      "latestSubject": "We received your job application (Job Number: 210769104)",
+      "latestSubject": "We received your job application (Job Number: 210772921)",
       "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
       "lastActivityAt": "2026-09-16T14:56:08.000Z",
       "source": "gmail",
@@ -2398,7 +2417,7 @@
       "gmailMessageIds": [
         "1a0394facacb63cd"
       ],
-      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Data Scientist-Senior Associate 210767245 210769104 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
+      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Lead Software Engineer - Cloud 210772921 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -2510,18 +2529,18 @@
       "role": "Data Engineer",
       "reqId": "48310",
       "status": "interviewed",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
-      "latestSubject": "Confirm your identity",
-      "latestFrom": "Citizens Careers <CitizensCareers@orc.mycitizenshr.com>",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "assessment/coding challenge",
+      "latestSubject": "Your Citizens interview link is a click away! Take action within 4 days!",
+      "latestFrom": "Citizens <noreply@mail.modernhire.com>",
       "lastActivityAt": "2026-09-16T14:35:09.000Z",
       "source": "gmail",
       "gmailThreadId": "1a06b2e7c246a18d",
       "gmailMessageIds": [
         "1a06b2e7c246a18d"
       ],
-      "notes": "Hi Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 447671 Note : This code will expire in 10 minutes. Citizens Talent Acquisition This message is sent from an automated system that cannot accept responses. If you have a question about Citizens or our hiring process , please visit us online."
+      "notes": "Hi Tirth, Welcome to the next step for our Data Engineer | Enterprise Technology & Security Development Program role. Here's what to expect after clicking \"Get Started\": Your experience will depend on whether you've recently completed a HireVue assessment for a role at Citizens: If it's your first time completing a HireVue assessment for Citizens, or it's been more than 6 months, you'll be asked to complete a full assessment. If you completed a HireVue assessment for Citizens within the past 6 months, you might be asked to answer 1-2 additional questions, depending on the role. If no further action is needed, the system will automatically move your forward, and you can simply close out of the experience. If prompted, you’ll complete a self-guided video interview and games that measure core competencies for your selected program. This unique interviewing opportunity lets you share your skills and experience with our recruiting team in your own words and bring your personality to the self-guided interview. You’ll also complete games that measure core competencies to help us understand candidates best fit for the role. You have 4 days to complete this assessment after receiving this email. This experience can take anywhere from 30-45 minutes. You are invited to complete an interactive assessment. From the time this interview request was sent, you have 96 hour(s) to complete and submit. Keep in mind: Lean on your educational/professional experiences and skills to share more about your background, your interest in the role, and how you’d navigate the responsibilities. If you don’t nail the answer on the first try, you’ll have an opportunity to re-record. Treat the experience as if it were an in-person interview and dress professionally. Record in areas without noise around you. A strong Wi-Fi connection is needed. While we know you want to be prepared, we want to see your authentic self on camera. It’s best to avoid using AI to formulate answers or reading scripted responses, and just let your personality and enthusiasm for the opportunity shine. Learn more about how to prepare here . Things can move quickly due to the number of candidates who apply, and we don’t want to miss out on meeting you. If you don’t complete this step within the 4-day window, there will be no extensions, and you’ll be withdrawn from the process. Get Started Best of luck! The Citizens Talent Acquisition Team We’re committed to ensuring that all interested candidates can successfully participate in our recruitment process. If you’re an individual with a disability or require a reasonable accommodation, please reference our Job Seeker Help policy and follow the instructions. We partner with HireVue to conduct our assessments. For technical help, visit https://hirevuesupport.zendesk.com/hc/en-us for frequently asked questions, or contact the HireVue support team by submitting this form https://hirevuesupport.zendesk.com/hc/en-us/requests/new . This message is sent from an automat"
     },
     {
       "id": "sunstone-hr-consulting-your-interest-in-employment-at-sunstone-hr-consulting-as-you-can-imagine-we-re",
@@ -6434,7 +6453,7 @@
       "confidence": "high",
       "classifier": "rules",
       "reason": "platform auto-receipt sender — application acknowledgment",
-      "latestSubject": "Problem with your Senior Database Engineer application",
+      "latestSubject": "Problem with your Data Engineer application",
       "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
       "lastActivityAt": "2026-09-11T17:13:04.000Z",
       "source": "gmail",
@@ -6442,7 +6461,7 @@
       "gmailMessageIds": [
         "1a06158e13e5e00f"
       ],
-      "notes": "Problem with your Senior Database Engineer application Oh no! Something went wrong... Dear Tirth Chirayu Shah,<br><br>There was a problem completing your application for {:linkedinJobPostingURL}. To be sure it goes through, please complete your application <a href=\"https://uscareers-cvent.icims.com/jobs/9239/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn&mode=job&iis=SOURCE&iisn=Linkedin&iis=Job%2BBoard&iisn=LinkedIn.com&iisn%09=LinkedIn%09&_jvst=jobboard&_jvsd=LinkedIn_Promoted&iis=LinkedIn&iisn=LinkedIn+Job+Slot&iisn=LinkedIn&%3Fmode=job&iis=Job%2BBoard&iisn=LinkedIn&mode=apply&mode=job&iis=JobBoard&iis=linkedinapply&mode=prepopulate&mode=job&iis=AutoSourced&source=Linked_In&source=LinkedIn&source=mode%3Djob%26iis%3DJob%2BBoard%26iisn%3DLinkedIn&iis=SOURCE&iis=Job%2BBoard&source=LinkedIn&mode=job&iis=LinkedIn&mode=apply&iisn=LinkedIn-Jobs&mode=job&iis=Job+Board&iisn=LinkedIn&iis=SOURCE&iis=LinkedIn&iisn=LinkedIn.com&mode=job&iis=LinkedIn&in_iframe=1&mode=job&iis=LinkedIn&mode=prepopulate&iis=Job%2BBoard&iisn=LinkedIn\" style=\"color: #0a66c2; cursor: pointer; display: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;\">here</a>. We’re sorry about the inconvenience, and hope you get the job!<br><br>Thanks for being a member,<br>The LinkedIn Jobs Team Apply on company websitehttps://uscareers-cvent.icims.com/comm/jobs/9239/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn&mode=job&iis=SOURCE&iisn=Linkedin&iis=Job%2BBoard&iisn=LinkedIn.com&iisn%09=LinkedIn%09&_jvst=jobboard&_jvsd=LinkedIn_Promoted&iis=LinkedIn&iisn=LinkedIn+Job+Slot&iisn=LinkedIn&%3Fmode=job&iis=Job%2BBoard&iisn=LinkedIn&mode=apply&mode=job&iis=JobBoard&iis=linkedinapply&mode=prepopulate&mode=job&iis=AutoSourced&source=Linked_In&source=LinkedIn&source=mode%3Djob%26iis%3DJob%2BBoard%26iisn%3DLinkedIn&iis=SOURCE&iis=Job%2BBoard&source=LinkedIn&mode=job&iis=LinkedIn&mode=apply&iisn=LinkedIn-Jobs&mode=job&iis=Job+Board&iisn=LinkedIn&iis=SOURCE&iis=LinkedIn&iisn=LinkedIn.com&mode=job&iis=LinkedIn&in_iframe=1&mode=job&iis=LinkedIn&mode=prepopulate&iis=Job%2BBoard&iisn=LinkedIn&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BNtg%2BkLUSTqKJrvGc3VRQiw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=38qdSF7QzF0cs1&trk=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text&trkEmail=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text-null-a06oc2~mtx7sts4~v3-null-null&eid=a06oc2-mtx7sts4-v3&otpToken=ZTFhYWM3MWU0NTRhNzliZmRkNmNmN2FlMjk1ZjkwN2Y0N2JlYzA4ZmQwMWU4OTk1N2E4OTU2MDJjYTMzNzE3MGIzNGE5ZTcyMzI1MGYyYWQxMGVhNTZlM2UzNjg5MmM2MzFjZGQxMGE1MzdhNzk4NDZjZmUwOGU2ZjZmOWRlNGY3NjhkZTY0NTFkNWFhNjViLDIsMQ%3D%3D ---------------------------------------- This email was intended for Tirth Chirayu Shah (Forward Deployed Data & Agentic AI Engineer | Langchain • Deep Agents • Python • SQL • Power BI • Azure/GCP/AWS • Databricks | Built a Startup @BlackTieCars | Audit -​> Build -​> Observe -​> Loop) Learn why we "
+      "notes": "Problem with your Data Engineer application Oh no! Something went wrong... Dear Tirth Chirayu Shah,<br><br>There was a problem completing your application for {:linkedinJobPostingURL}. To be sure it goes through, please complete your application <a href=\"https://grnh.se/w3bgiy0s6us?gh_src=c2458f606us\" style=\"color: #0a66c2; cursor: pointer; display: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;\">here</a>. We’re sorry about the inconvenience, and hope you get the job!<br><br>Thanks for being a member,<br>The LinkedIn Jobs Team Apply on company websitehttps://grnh.se/comm/w3bgiy0s6us?gh_src=c2458f606us&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BNEtKvSC2S7SbWxVutxuwLg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2mo-K50Lfy0cs1&trk=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text&trkEmail=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text-null-a06oc2~mtx7kv59~vl-null-null&eid=a06oc2-mtx7kv59-vl&otpToken=YmEzYjliY2VmNmQ5ZGFjMjY5YTc2ZDU4ZjFjYTc1NzE3MTkzYjZmNDMxYTc5ZGE2MTg1Mzc3MzU5YThkOWRjYTVlNWY1YjAwNjA5ZDM2NWY1OTlmY2I2MzZjYWRjNTk0ZDA2OTNmYWRkNTkwNWU0NjQ5NzZjMTMzODc1ODFjNzdlY2I0YTI3YWI1NmYyMTc2LDIsMQ%3D%3D ---------------------------------------- This email was intended for Tirth Chirayu Shah (Forward Deployed Data & Agentic AI Engineer | Langchain • Deep Agents • Python • SQL • Power BI • Azure/GCP/AWS • Databricks | Built a Startup @BlackTieCars | Audit -​> Build -​> Observe -​> Loop) Learn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BNEtKvSC2S7SbWxVutxuwLg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2mo-K50Lfy0cs1&trk=eml-email_jobs_offsite_application_failure-SecurityHelp-0-textfooterglimmer&trkEmail=eml-email_jobs_offsite_application_failure-SecurityHelp-0-textfooterglimmer-null-a06oc2~mtx7kv59~vl-null-null&eid=a06oc2-mtx7kv59-vl&otpToken=YmEzYjliY2VmNmQ5ZGFjMjY5YTc2ZDU4ZjFjYTc1NzE3MTkzYjZmNDMxYTc5ZGE2MTg1Mzc3MzU5YThkOWRjYTVlNWY1YjAwNjA5ZDM2NWY1OTlmY2I2MzZjYWRjNTk0ZDA2OTNmYWRkNTkwNWU0NjQ5NzZjMTMzODc1ODFjNzdlY2I0YTI3YWI1NmYyMTc2LDIsMQ%3D%3D You are receiving LinkedIn notification emails. Help: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BNEtKvSC2S7SbWxVutxuwLg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2mo-K50Lfy0cs1&trk=eml-email_jobs_offsite_application_failure-help-0-textfooterglimmer&trkEmail=eml-email_jobs_offsite_application_failure-help-0-textfooterglimmer-null-a06oc2~mtx7kv59~vl-null-null&eid=a06oc2-mtx7kv59-vl&otpToken=YmEzYjliY2VmNmQ5ZGFjMjY5YTc2ZDU4ZjFjYTc1NzE3MTkzYjZmNDMxYTc5ZGE2MTg1Mzc3MzU5YThkOWRjYTVlNWY1YjAwNjA5ZDM2NWY1OTlmY2I2MzZjYWRjNTk0ZDA2OTNmYWRkNTkwNWU0NjQ5NzZjMTMzODc1ODFjNzdlY2I0YTI3YWI1NmYyMTc2LDIsMQ%3D%3D © 2026 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA 94085. LinkedIn and the LinkedIn logo are regis"
     },
     {
       "id": "exl-fusion-notification-general-application",
@@ -27566,7 +27585,7 @@
     {
       "id": "capitalonehrworkday-the-r999347-senior-lead-data-engineer-number",
       "company": "Capitalonehrworkday",
-      "role": "Senior Business Analyst - Incentive Compensation Risk Management Role A",
+      "role": "Senior Business Analyst - Global Payment Network",
       "reqId": "number",
       "status": "applied",
       "confidence": "high",
@@ -27580,7 +27599,7 @@
       "gmailMessageIds": [
         "1a04b0d726037204"
       ],
-      "notes": "96 Hi, Tirth, It looks like you’ve reached the limit of five active applications, so we’re unable to review your application for the R999019 Sr. Business Analyst - Incentive Compensation Risk Management role at the moment. If you’d still like to be considered for this role, you’ll need to withdraw one of your active applications by following these steps: Log in to your candidate portal . Navigate to Candidate Home in the top right corner. Then, scroll down the page to My Applications . Under the Action column, click the three dots next to the role you’d like to withdraw from. Select Withdraw Application . Once you have withdrawn an application, reply to this email with the requisition number and ask the Careers team to reactivate your application. We look forward to hearing from you. Capital One Recruiting #MAAM -USA-IND-MEX This email was intended for tirthcshah1999@gmail.com",
+      "notes": "96 Hi, Tirth, It looks like you’ve reached the limit of five active applications, so we’re unable to review your application for the R249842 Sr. Business Analyst - Global Payment Network role at the moment. If you’d still like to be considered for this role, you’ll need to withdraw one of your active applications by following these steps: Log in to your candidate portal . Navigate to Candidate Home in the top right corner. Then, scroll down the page to My Applications . Under the Action column, click the three dots next to the role you’d like to withdraw from. Select Withdraw Application . Once you have withdrawn an application, reply to this email with the requisition number and ask the Careers team to reactivate your application. We look forward to hearing from you. Capital One Recruiting #MAAM -USA-IND-MEX This email was intended for tirthcshah1999@gmail.com",
       "updatedAt": "2026-09-15T16:14:31.088Z"
     },
     {
@@ -39367,7 +39386,7 @@
         "1a0208754ffddda4",
         "1a02088dc9890b1e"
       ],
-      "notes": "96 Dear Tirth, Thank you for your taking the time to apply with us here at Guidehouse. Your application for the Data Engineer position has been received. If you are selected to move forward, a member of the Talent Acquisition Team will reach out to you to discuss next steps. Any updates to your status can also be found in your Candidate Portal. Your Candidate Portal will always show real-time status as well as any task(s)/information that we may need throughout the process. You can use the link below to access your Candidate Portal at any time: https://guidehouse.wd1.myworkdayjobs.com/External We encourage you to continue exploring other career opportunities with us by setting up job alerts (via your Candidate Portal) so that you will receive emails when new positions that meet your criteria become available. Thank You, Guidehouse Talent Acquisition Team NOTE: Replies to this email inbox are not monitored. This email was intended for tirthcshah1999@gmail.com Guidehouse, Inc. &#8226; Washington, D.C.",
+      "notes": "96 Dear Tirth, Thank you for your taking the time to apply with us here at Guidehouse. Your application for the Data Engineer Lead position has been received. If you are selected to move forward, a member of the Talent Acquisition Team will reach out to you to discuss next steps. Any updates to your status can also be found in your Candidate Portal. Your Candidate Portal will always show real-time status as well as any task(s)/information that we may need throughout the process. You can use the link below to access your Candidate Portal at any time: https://guidehouse.wd1.myworkdayjobs.com/External We encourage you to continue exploring other career opportunities with us by setting up job alerts (via your Candidate Portal) so that you will receive emails when new positions that meet your criteria become available. Thank You, Guidehouse Talent Acquisition Team NOTE: Replies to this email inbox are not monitored. This email was intended for tirthcshah1999@gmail.com Guidehouse, Inc. &#8226; Washington, D.C.",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -52207,7 +52226,7 @@
       "gmailMessageIds": [
         "19fa8628451dbcbc"
       ],
-      "notes": "Hello TIRTH, Thank you for your interest in working at American Express. Before you get started with your application, please confirm your identity using the one-time passcode below: 317919 This code will expire in 10 minutes. Once verified, you will be able to continue exploring opportunities and manage your profile at https://www.americanexpress.com/en-us/careers/ . If you did not attempt to login or have any questions, please contact us . Sincerely, Amex Talent Acquisition Team Replies to this email are undeliverable. If contacted by a suspicious profile, or if something feels off, don’t engage — email us to verify. Always confirm or apply for any open roles directly on the official American Express Careers Site ."
+      "notes": "Hello Tirth, Thank you for your interest in working at American Express. Before you get started with your application, please confirm your identity using the one-time passcode below: 968963 This code will expire in 10 minutes. Once verified, you will be able to continue exploring opportunities and manage your profile at https://www.americanexpress.com/en-us/careers/ . If you did not attempt to login or have any questions, please contact us . Sincerely, Amex Talent Acquisition Team Replies to this email are undeliverable. If contacted by a suspicious profile, or if something feels off, don’t engage — email us to verify. Always confirm or apply for any open roles directly on the official American Express Careers Site ."
     },
     {
       "id": "msg-19ffb0157d7ce8cd",
