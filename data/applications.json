@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T14:43:15.278Z",
+  "updatedAt": "2026-09-19T17:54:20.817Z",
   "applications": [
     {
       "id": "amy-from-zensearch-you-by-zensearch-data-engineer-mobile-game-analytics-mattel-el-segundo-ca-ful",
@@ -2548,18 +2548,18 @@
       "role": "Data Engineer",
       "reqId": "48310",
       "status": "interviewed",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "assessment/coding challenge",
-      "latestSubject": "Your Citizens interview link is a click away! Take action within 4 days!",
-      "latestFrom": "Citizens <noreply@mail.modernhire.com>",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "Citizens Careers <CitizensCareers@orc.mycitizenshr.com>",
       "lastActivityAt": "2026-09-16T14:35:09.000Z",
       "source": "gmail",
       "gmailThreadId": "1a06b2e7c246a18d",
       "gmailMessageIds": [
         "1a06b2e7c246a18d"
       ],
-      "notes": "Hi Tirth, Welcome to the next step for our Data Engineer | Enterprise Technology & Security Development Program role. Here's what to expect after clicking \"Get Started\": Your experience will depend on whether you've recently completed a HireVue assessment for a role at Citizens: If it's your first time completing a HireVue assessment for Citizens, or it's been more than 6 months, you'll be asked to complete a full assessment. If you completed a HireVue assessment for Citizens within the past 6 months, you might be asked to answer 1-2 additional questions, depending on the role. If no further action is needed, the system will automatically move your forward, and you can simply close out of the experience. If prompted, you’ll complete a self-guided video interview and games that measure core competencies for your selected program. This unique interviewing opportunity lets you share your skills and experience with our recruiting team in your own words and bring your personality to the self-guided interview. You’ll also complete games that measure core competencies to help us understand candidates best fit for the role. You have 4 days to complete this assessment after receiving this email. This experience can take anywhere from 30-45 minutes. You are invited to complete an interactive assessment. From the time this interview request was sent, you have 96 hour(s) to complete and submit. Keep in mind: Lean on your educational/professional experiences and skills to share more about your background, your interest in the role, and how you’d navigate the responsibilities. If you don’t nail the answer on the first try, you’ll have an opportunity to re-record. Treat the experience as if it were an in-person interview and dress professionally. Record in areas without noise around you. A strong Wi-Fi connection is needed. While we know you want to be prepared, we want to see your authentic self on camera. It’s best to avoid using AI to formulate answers or reading scripted responses, and just let your personality and enthusiasm for the opportunity shine. Learn more about how to prepare here . Things can move quickly due to the number of candidates who apply, and we don’t want to miss out on meeting you. If you don’t complete this step within the 4-day window, there will be no extensions, and you’ll be withdrawn from the process. Get Started Best of luck! The Citizens Talent Acquisition Team We’re committed to ensuring that all interested candidates can successfully participate in our recruitment process. If you’re an individual with a disability or require a reasonable accommodation, please reference our Job Seeker Help policy and follow the instructions. We partner with HireVue to conduct our assessments. For technical help, visit https://hirevuesupport.zendesk.com/hc/en-us for frequently asked questions, or contact the HireVue support team by submitting this form https://hirevuesupport.zendesk.com/hc/en-us/requests/new . This message is sent from an automat"
+      "notes": "Hi Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 447671 Note : This code will expire in 10 minutes. Citizens Talent Acquisition This message is sent from an automated system that cannot accept responses. If you have a question about Citizens or our hiring process , please visit us online."
     },
     {
       "id": "sunstone-hr-consulting-your-interest-in-employment-at-sunstone-hr-consulting-as-you-can-imagine-we-re",
@@ -3468,9 +3468,9 @@
       "role": "Free With IBM Skillsbuild, Step Inside Our Software Innovation Lab, And Catch Up",
       "reqId": "rain",
       "status": "applied",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
       "latestSubject": "Which IBM career opportunities match your goals?",
       "latestFrom": "IBM Talent Acquisition <talent@ibm.com>",
       "lastActivityAt": "2026-09-16T00:06:49.000Z",
@@ -5744,7 +5744,7 @@
         "1a020a37644d9f24",
         "1a020a381832c59a"
       ],
-      "notes": "Hello Tirth, Thank you for your interest in working at American Express. Before you get started with your application, please confirm your identity using the one-time passcode below: 968963 This code will expire in 10 minutes. Once verified, you will be able to continue exploring opportunities and manage your profile at https://www.americanexpress.com/en-us/careers/ . If you did not attempt to login or have any questions, please contact us . Sincerely, Amex Talent Acquisition Team Replies to this email are undeliverable. If contacted by a suspicious profile, or if something feels off, don’t engage — email us to verify. Always confirm or apply for any open roles directly on the official American Express Careers Site .",
+      "notes": "Hello TIRTH, Thank you for your interest in working at American Express. Before you get started with your application, please confirm your identity using the one-time passcode below: 317919 This code will expire in 10 minutes. Once verified, you will be able to continue exploring opportunities and manage your profile at https://www.americanexpress.com/en-us/careers/ . If you did not attempt to login or have any questions, please contact us . Sincerely, Amex Talent Acquisition Team Replies to this email are undeliverable. If contacted by a suspicious profile, or if something feels off, don’t engage — email us to verify. Always confirm or apply for any open roles directly on the official American Express Careers Site .",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -6472,7 +6472,7 @@
       "confidence": "high",
       "classifier": "rules",
       "reason": "platform auto-receipt sender — application acknowledgment",
-      "latestSubject": "Problem with your Data Engineer application",
+      "latestSubject": "Problem with your Senior Database Engineer application",
       "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
       "lastActivityAt": "2026-09-11T17:13:04.000Z",
       "source": "gmail",
@@ -6480,7 +6480,7 @@
       "gmailMessageIds": [
         "1a06158e13e5e00f"
       ],
-      "notes": "Problem with your Data Engineer application Oh no! Something went wrong... Dear Tirth Chirayu Shah,<br><br>There was a problem completing your application for {:linkedinJobPostingURL}. To be sure it goes through, please complete your application <a href=\"https://recruiting.ultipro.com/GUI1001/JobBoard/634382fd-6424-ec1b-8e37-2aa4ce4c10de/OpportunityDetail?opportunityId=ff4f5956-88b1-45fc-b462-a0d5b2a5b242&source=LinkedIn\" style=\"color: #0a66c2; cursor: pointer; display: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;\">here</a>. We’re sorry about the inconvenience, and hope you get the job!<br><br>Thanks for being a member,<br>The LinkedIn Jobs Team Apply on company websitehttps://recruiting.ultipro.com/comm/GUI1001/JobBoard/634382fd-6424-ec1b-8e37-2aa4ce4c10de/OpportunityDetail?opportunityId=ff4f5956-88b1-45fc-b462-a0d5b2a5b242&source=LinkedIn&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BtHKTt7FIReCTpCLtt9nyqg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0V6ZHguXPYHYo1&trk=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text&trkEmail=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text-null-a06oc2~mtcnr30y~dp-null-null&eid=a06oc2-mtcnr30y-dp&otpToken=YjYxYWI0MWM3M2M2MzVmOTc0ZTZjOTk3YzlhZGRlNmU2YTYyMjM1ZWVhZTE4MDk5OWUzMWNmZmUzZDEyMGU5OWY1ZGEyZmZjY2QzNGRmOThjZjdkN2YyYzZmZWU5MTA1MWU0OTZiYjIzMTNhODdmYjIzNTFhYjQ2MmZlZTAwOGRhYzYyM2M4NzgyNTM0YWM3LDIsMQ%3D%3D ---------------------------------------- This email was intended for Tirth Chirayu Shah (Data & Agentic AI Engineer | Python • SQL • Power BI • Azure/GCP/AWS • Databricks | Built a Startup @BlackTieCars) Learn why we included this: https://www.linkedin.com/help/linkedin/answer/4788?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BtHKTt7FIReCTpCLtt9nyqg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0V6ZHguXPYHYo1&trk=eml-email_jobs_offsite_application_failure-SecurityHelp-0-textfooterglimmer&trkEmail=eml-email_jobs_offsite_application_failure-SecurityHelp-0-textfooterglimmer-null-a06oc2~mtcnr30y~dp-null-null&eid=a06oc2-mtcnr30y-dp&otpToken=YjYxYWI0MWM3M2M2MzVmOTc0ZTZjOTk3YzlhZGRlNmU2YTYyMjM1ZWVhZTE4MDk5OWUzMWNmZmUzZDEyMGU5OWY1ZGEyZmZjY2QzNGRmOThjZjdkN2YyYzZmZWU5MTA1MWU0OTZiYjIzMTNhODdmYjIzNTFhYjQ2MmZlZTAwOGRhYzYyM2M4NzgyNTM0YWM3LDIsMQ%3D%3D You are receiving LinkedIn notification emails. Help: https://www.linkedin.com/help/linkedin/answer/67?lang=en&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BtHKTt7FIReCTpCLtt9nyqg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0V6ZHguXPYHYo1&trk=eml-email_jobs_offsite_application_failure-help-0-textfooterglimmer&trkEmail=eml-email_jobs_offsite_application_failure-help-0-textfooterglimmer-null-a06oc2~mtcnr30y~dp-null-null&eid=a06oc2-mtcnr30y-dp&otpToken=YjYxYWI0MWM3M2M2MzVmOTc0ZTZjOTk3YzlhZGRlNmU2YTYyMjM1ZWVhZTE4MDk5OWUzMWNmZmUzZDEyMGU5OWY1ZGEyZmZjY2QzNGRmOThjZjdkN2YyYzZmZWU5MTA1MWU0OTZiYjIzMTNhODdmYjIzNTFhYjQ"
+      "notes": "Problem with your Senior Database Engineer application Oh no! Something went wrong... Dear Tirth Chirayu Shah,<br><br>There was a problem completing your application for {:linkedinJobPostingURL}. To be sure it goes through, please complete your application <a href=\"https://uscareers-cvent.icims.com/jobs/9239/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn&mode=job&iis=SOURCE&iisn=Linkedin&iis=Job%2BBoard&iisn=LinkedIn.com&iisn%09=LinkedIn%09&_jvst=jobboard&_jvsd=LinkedIn_Promoted&iis=LinkedIn&iisn=LinkedIn+Job+Slot&iisn=LinkedIn&%3Fmode=job&iis=Job%2BBoard&iisn=LinkedIn&mode=apply&mode=job&iis=JobBoard&iis=linkedinapply&mode=prepopulate&mode=job&iis=AutoSourced&source=Linked_In&source=LinkedIn&source=mode%3Djob%26iis%3DJob%2BBoard%26iisn%3DLinkedIn&iis=SOURCE&iis=Job%2BBoard&source=LinkedIn&mode=job&iis=LinkedIn&mode=apply&iisn=LinkedIn-Jobs&mode=job&iis=Job+Board&iisn=LinkedIn&iis=SOURCE&iis=LinkedIn&iisn=LinkedIn.com&mode=job&iis=LinkedIn&in_iframe=1&mode=job&iis=LinkedIn&mode=prepopulate&iis=Job%2BBoard&iisn=LinkedIn\" style=\"color: #0a66c2; cursor: pointer; display: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;\">here</a>. We’re sorry about the inconvenience, and hope you get the job!<br><br>Thanks for being a member,<br>The LinkedIn Jobs Team Apply on company websitehttps://uscareers-cvent.icims.com/comm/jobs/9239/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn&mode=job&iis=SOURCE&iisn=Linkedin&iis=Job%2BBoard&iisn=LinkedIn.com&iisn%09=LinkedIn%09&_jvst=jobboard&_jvsd=LinkedIn_Promoted&iis=LinkedIn&iisn=LinkedIn+Job+Slot&iisn=LinkedIn&%3Fmode=job&iis=Job%2BBoard&iisn=LinkedIn&mode=apply&mode=job&iis=JobBoard&iis=linkedinapply&mode=prepopulate&mode=job&iis=AutoSourced&source=Linked_In&source=LinkedIn&source=mode%3Djob%26iis%3DJob%2BBoard%26iisn%3DLinkedIn&iis=SOURCE&iis=Job%2BBoard&source=LinkedIn&mode=job&iis=LinkedIn&mode=apply&iisn=LinkedIn-Jobs&mode=job&iis=Job+Board&iisn=LinkedIn&iis=SOURCE&iis=LinkedIn&iisn=LinkedIn.com&mode=job&iis=LinkedIn&in_iframe=1&mode=job&iis=LinkedIn&mode=prepopulate&iis=Job%2BBoard&iisn=LinkedIn&lipi=urn%3Ali%3Apage%3Aemail_email_jobs_offsite_application_failure%3BNtg%2BkLUSTqKJrvGc3VRQiw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=38qdSF7QzF0cs1&trk=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text&trkEmail=eml-email_jobs_offsite_application_failure-main~module~text-0-visit~linkedin~text-null-a06oc2~mtx7sts4~v3-null-null&eid=a06oc2-mtx7sts4-v3&otpToken=ZTFhYWM3MWU0NTRhNzliZmRkNmNmN2FlMjk1ZjkwN2Y0N2JlYzA4ZmQwMWU4OTk1N2E4OTU2MDJjYTMzNzE3MGIzNGE5ZTcyMzI1MGYyYWQxMGVhNTZlM2UzNjg5MmM2MzFjZGQxMGE1MzdhNzk4NDZjZmUwOGU2ZjZmOWRlNGY3NjhkZTY0NTFkNWFhNjViLDIsMQ%3D%3D ---------------------------------------- This email was intended for Tirth Chirayu Shah (Forward Deployed Data & Agentic AI Engineer | Langchain • Deep Agents • Python • SQL • Power BI • Azure/GCP/AWS • Databricks | Built a Startup @BlackTieCars | Audit -​> Build -​> Observe -​> Loop) Learn why we "
     },
     {
       "id": "exl-fusion-notification-general-application",
@@ -29381,7 +29381,7 @@
       "gmailMessageIds": [
         "1a0483a06fc7fd9e"
       ],
-      "notes": "Hi Tirth Shah , Thank you for taking the time to apply for the Data Engineer position. We truly appreciate your interest and the effort you put into your application. After careful consideration, we have decided to move forward with other candidates whose experience more closely aligns with the requirements for this role. We encourage you to visit our Career Page for other opportunities that may be a great fit, and we hope you&rsquo;ll consider applying again in the future. Thank you again for your interest and we wish you the very best in your job search. Best regards, Human Resources Click here to manage your applications"
+      "notes": "Hello Tirth Shah, Thank you for your interest in the Data Engineer position. At this time it appears that the minimum requirements of the role are not met and you have been removed from the running. Thank you again for your interest and please apply to any opening in the future that you believe you may be suited for. Click here to manage your applications"
     },
     {
       "id": "hurrdat-data-engineer",
@@ -52658,6 +52658,25 @@
       "aiConfidence": "high"
     },
     {
+      "id": "mail-delivery-subsystem-general-application",
+      "company": "Mail Delivery Subsystem",
+      "role": "General Application",
+      "reqId": null,
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Delivery Status Notification (Failure)",
+      "latestFrom": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "lastActivityAt": "2026-08-12T22:01:57.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fedc9d79e2b7b7",
+      "gmailMessageIds": [
+        "19fedc9dc94748c5"
+      ],
+      "notes": " ** Address not found ** Your message wasn't delivered to Kirtee.Jeena@innovasolutions.com because the address couldn't be found, or is unable to receive mail. Learn more here: https://aka.ms/EXOSmtpErrors (Warning: This link will take you to a third-party site) The response from the remote server was: 550 5.4.1 Recipient address rejected: Access denied. For more information see https://aka.ms/EXOSmtpErrors [DS3PEPF000099E0.namprd04.prod.outlook.com 2026-08-12T22:01:57.782Z 08DEF8AE85B6FDEB] Address not found Your message wasn't delivered to Kirtee.Jeena@innovasolutions.com because the address couldn't be found, or is unable to receive mail. LEARN MORE This link will take you to a third-party site The response from the remote server was: 550 5.4.1 Recipient address rejected: Access denied. For more information see https://aka.ms/EXOSmtpErrors [DS3PEPF000099E0.namprd04.prod.outlook.com 2026-08-12T22:01:57.782Z 08DEF8AE85B6FDEB] Final-Recipient: rfc822; Kirtee.Jeena@innovasolutions.com Action: failed Status: 5.4.1 Remote-MTA: dns; innovasolutions-com.mail.protection.outlook.com. (2a01:111:f403:c92c::2, the server for the domain innovasolutions.com.) Diagnostic-Code: smtp; 550 5.4.1 Recipient address rejected: Access denied. For more information see https://aka.ms/EXOSmtpErrors [DS3PEPF000099E0.namprd04.prod.outlook.com 2026-08-12T22:01:57.782Z 08DEF8AE85B6FDEB] Last-Attempt-Date: Wed, 12 Aug 2026 15:01:57 -0700 (PDT) "
+    },
+    {
       "id": "mail-delivery-subsystem-the-domain",
       "company": "Mail Delivery Subsystem",
       "role": "The Domain.",
@@ -54625,25 +54644,6 @@
         "19fedca2c32c3abf"
       ],
       "notes": " ** Address not found ** Your message wasn't delivered to alexandra.a.shackleton@pwc.com because the address couldn't be found, or is unable to receive mail. Learn more here: https://support.google.com/mail/?p=NoSuchUser The response was: The email account that you tried to reach does not exist. Please try double-checking the recipient's email address for typos or unnecessary spaces. For more information, go to https://support.google.com/mail/?p=NoSuchUser Address not found Your message wasn't delivered to alexandra.a.shackleton@pwc.com because the address couldn't be found, or is unable to receive mail. LEARN MORE The response was: The email account that you tried to reach does not exist. Please try double-checking the recipient's email address for typos or unnecessary spaces. For more information, go to https://support.google.com/mail/?p=NoSuchUser Final-Recipient: rfc822; alexandra.a.shackleton@pwc.com Action: failed Status: 5.1.3 Diagnostic-Code: smtp; The email account that you tried to reach does not exist. Please try double-checking the recipient's email address for typos or unnecessary spaces. For more information, go to https://support.google.com/mail/?p=NoSuchUser Last-Attempt-Date: Wed, 05 Aug 2026 13:42:54 -0700 (PDT) "
-    },
-    {
-      "id": "mail-delivery-subsystem-general-application",
-      "company": "Mail Delivery Subsystem",
-      "role": "General Application",
-      "reqId": null,
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Delivery Status Notification (Failure)",
-      "latestFrom": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
-      "lastActivityAt": "2026-08-10T22:27:37.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fedc9d79e2b7b7",
-      "gmailMessageIds": [
-        "19fedc9dc94748c5"
-      ],
-      "notes": " ** Address not found ** Your message wasn't delivered to Andrew.Claybourn@sds.io because the address couldn't be found, or is unable to receive mail. Learn more here: https://aka.ms/EXOSmtpErrors (Warning: This link will take you to a third-party site) The response from the remote server was: 550 5.4.1 Recipient address rejected: Access denied. For more information see https://aka.ms/EXOSmtpErrors [BN1PEPF00004688.namprd05.prod.outlook.com 2026-08-10T22:27:37.255Z 08DEF3030B88230F] Address not found Your message wasn't delivered to Andrew.Claybourn@sds.io because the address couldn't be found, or is unable to receive mail. LEARN MORE This link will take you to a third-party site The response from the remote server was: 550 5.4.1 Recipient address rejected: Access denied. For more information see https://aka.ms/EXOSmtpErrors [BN1PEPF00004688.namprd05.prod.outlook.com 2026-08-10T22:27:37.255Z 08DEF3030B88230F] Final-Recipient: rfc822; Andrew.Claybourn@sds.io Action: failed Status: 5.4.1 Remote-MTA: dns; sds-io.mail.protection.outlook.com. (2a01:111:f403:f908::2, the server for the domain sds.io.) Diagnostic-Code: smtp; 550 5.4.1 Recipient address rejected: Access denied. For more information see https://aka.ms/EXOSmtpErrors [BN1PEPF00004688.namprd05.prod.outlook.com 2026-08-10T22:27:37.255Z 08DEF3030B88230F] Last-Attempt-Date: Mon, 10 Aug 2026 15:27:37 -0700 (PDT) "
     },
     {
       "id": "msg-19fed75afaa73c4d",
