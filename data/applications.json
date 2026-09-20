@@ -1,6 +1,44 @@
 {
-  "updatedAt": "2026-09-20T10:01:33.472Z",
+  "updatedAt": "2026-09-20T14:04:25.095Z",
   "applications": [
+    {
+      "id": "amy-from-zensearch-you-by-zensearch-data-engineer-san-francisco-ca-homelight-san-francisco-ca",
+      "company": "Amy From Zensearch",
+      "role": "You By Zensearch. Data Engineer, San Francisco, CA Homelight San Francisco, CA",
+      "reqId": null,
+      "status": "not_related",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest",
+      "latestSubject": "Your Daily Zen: Today's Personalized Job Matches",
+      "latestFrom": "Amy from ZenSearch <amy@zensearch.jobs>",
+      "lastActivityAt": "2026-09-20T14:00:29.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0bf1e4e9571064",
+      "gmailMessageIds": [
+        "1a0bf1e4e9571064"
+      ],
+      "notes": "Your Daily Zen: Today's Personalized Job Matches Hi Tirth, Here are today's job matches, personalized for you by ZenSearch. Data Engineer, San Francisco, CA HomeLight San Francisco, CA, CA Full time 2+ years San Francisco, CA, CA Full time 2+ years See all your matches Namaste, Amy If these jobs aren't good matches update your preferences. You can unsubscribe or update your email preferences at any time"
+    },
+    {
+      "id": "dominika-skladowska-your-interest",
+      "company": "Dominika Skladowska",
+      "role": "Your Interest",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "formal rejection/non-selection language",
+      "latestSubject": "Thank you for your interest in MARSS",
+      "latestFrom": "Dominika Skladowska <notifications@app.bamboohr.com>",
+      "lastActivityAt": "2026-09-20T10:13:00.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0be4e0b5b0c20d",
+      "gmailMessageIds": [
+        "1a0be4e0b5b0c20d"
+      ],
+      "notes": "##- Yes! You can reply directly to this email within 30 days and Dominika will get it. Just make sure it’s above this line so we can read it right. -## Hi Tirth, Thank you for your interest in MARSS! We received an overwhelming response to the FR - Data Engineer – Complex Data Pipelines (On-Premise) position, which makes us feel both humble and proud that so many talented individuals (like you!) want to join our team. This volume of response makes for an extremely competitive selection process. Although your background is impressive, we regret to inform you that we have decided to pursue other candidates for the position at this time. Just as we at MARSS value our customers, we value our job candidates and invite you to review future job openings. We hope you see another position that sparks your interest! Best wishes, Dominika Skladowska Recruitment & HR Manager MARSS - an EOS Company"
+    },
     {
       "id": "equifax-equifax",
       "company": "Equifax",
@@ -815,9 +853,9 @@
       "reqId": "erence",
       "status": "rejected",
       "confidence": "high",
-      "classifier": "rules",
-      "reason": "platform auto-receipt sender — application acknowledgment",
-      "latestSubject": "Update on Your Accenture Application",
+      "classifier": "deterministic_rules",
+      "reason": "platform application receipt",
+      "latestSubject": "Thanks for your interest in Accenture!",
       "latestFrom": "Accenture Careers <accenture@myworkday.com>",
       "lastActivityAt": "2026-09-18T07:34:10.000Z",
       "source": "gmail",
@@ -827,7 +865,7 @@
         "1a05d3dc53851fe9",
         "1a067182924e98e8"
       ],
-      "notes": "96 Hi Tirth, Thank you for your interest in Accenture and giving us the opportunity to learn about your background and qualifications. We have carefully considered your application against our hiring needs and are unable to move forward at this time. We’re continually hiring and our needs change over time, so we invite you to continue to visit our careers site to explore open opportunities. We will keep you in mind for future hiring needs. We wish you the best in your career search. Reference Role: R00353368 Forward Deployed AI Engineer Accenture Recruitment Team This email was intended for tirthcshah1999+workday-accenture@gmail.com",
+      "notes": "96 Hi Tirth, Thanks for applying for the role of Forward Deployed Engineer (FDE) Health. Our team will review your application against the stated qualifications and keep you updated about next steps. You can learn more about Accenture's recruiting process here . You can also log in to your candidate home page . Here you can track the status of your application, see any actions you need to take, and withdraw your application if your situation changes. At Accenture, reinvention is at the heart of everything we do—bringing together technology and human ingenuity to drive meaningful change. See how we're shaping the future by following Accenture on Linkedin . We appreciate your application and will be in touch with you soon. Reference Role: R00355645 Forward Deployed Engineer Accenture Recruitment Team Accenture is committed to keeping your personal data secure and processing it in accordance with applicable data protection laws. Read our privacy statement and the specific recruiting and hiring privacy statement , which include important information on why and how Accenture is processing your personal data. This email was intended for tirthcshah1999+workday-accenture@gmail.com",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -2237,9 +2275,9 @@
       "role": "General Application",
       "reqId": null,
       "status": "applied",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
       "latestSubject": "Confirm your identity",
       "latestFrom": "Photon Talent Acquisition Group <no-reply@photon.com>",
       "lastActivityAt": "2026-09-16T21:25:18.000Z",
@@ -2398,7 +2436,7 @@
       "company": "Trupanion",
       "role": "Data Engineer",
       "status": "rejected",
-      "confidence": "high",
+      "confidence": "low",
       "lastActivityAt": "2026-09-16T17:48:01.000Z",
       "latestSubject": "Your Application for the ​Data Engineer​ Position with ​Trupanion​",
       "latestFrom": "Trupanion Hiring Team <notifications@recruiting.trupanion.com>",
@@ -2415,8 +2453,8 @@
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:01:33.829+00:00",
       "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
+      "classifier": "rules",
+      "reason": "keyword heuristic"
     },
     {
       "id": "walt-disney-company-data-analyst",
@@ -2523,7 +2561,7 @@
       "confidence": "low",
       "classifier": "rules",
       "reason": "keyword heuristic",
-      "latestSubject": "We received your job application (Job Number: 210772921)",
+      "latestSubject": "We received your job application (Job Number: 210769104)",
       "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
       "lastActivityAt": "2026-09-16T14:56:08.000Z",
       "source": "gmail",
@@ -2531,7 +2569,7 @@
       "gmailMessageIds": [
         "1a0394facacb63cd"
       ],
-      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Lead Software Engineer - Cloud 210772921 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
+      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Data Scientist-Senior Associate 210767245 210769104 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -3023,7 +3061,7 @@
       "gmailMessageIds": [
         "1a065c508386d545"
       ],
-      "notes": "Your application was sent to Robert Half Data Engineer Robert Half Coppell, TX View job: https://www.linkedin.com/comm/jobs/view/4464144153/?trackingId=t3IfVLHIRLO5%2Fq3%2ByyQRvQ%3D%3D&refId=vc2gNWduRoa5jrPyYf%2B0Vg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B149fFKUeRWijakEeTWjpxw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3_id5KVMnk-co1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtv5wo99~cn-null-null&eid=a06oc2-mtv5wo99-cn&otpToken=YmY3ODZkOGRlZjRmODA5MTBkNmEzZTAyNTVlOTNjNmNmOTI3NmFmZTE5Njc1ZjQwMTAzNTYyOTk5OTI4NTViZTdlYzQ4ZGEyMmJhNGM0MjA2OGFhMzc0Y2UwM2M5YWYxYWY2YmUwOTc1ZTcyZGFlZTNjNjlmZWU2YjcwNDU5OWM4MTg5MDBkMGMwNTYyMjA5LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 10, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4462570233/?trackingId=dkuRGhJlQru8BD%2FPz8spfg%3D%3D&refId=7K4HLo7URSSv1KQbZ38T%2BQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B149fFKUeRWijakEeTWjpxw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3_id5KVMnk-co1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtv5wo99~cn-null-null&eid=a06oc2-mtv5wo99-cn&otpToken=YmY3ODZkOGRlZjRmODA5MTBkNmEzZTAyNTVlOTNjNmNmOTI3NmFmZTE5Njc1ZjQwMTAzNTYyOTk5OTI4NTViZTdlYzQ4ZGEyMmJhNGM0MjA2OGFhMzc0Y2UwM2M5YWYxYWY2YmUwOTc1ZTcyZGFlZTNjNjlmZWU2YjcwNDU5OWM4MTg5MDBkMGMwNTYyMjA5LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=bjMmYa7YTny%2Bue4by%2BEH%2BQ%3D%3D&refId=uEx76pApR2ymTw23Uw0V8Q%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B149fFKUeRWijakEeTWjpxw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3_id5KVMnk-co1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtv5wo99~cn-null-null&eid=a06oc2-mtv5wo99-cn&otpToken=YmY3ODZkOGRlZjRmODA5MTBkNmEzZTAyNTVlOTNjNmNmOTI3NmFmZTE5Njc1ZjQwMTAzNTYyOTk5OTI4NTViZTdlYzQ4ZGEyMmJhNGM0MjA2OGFhMzc0Y2UwM2M5YWYxYWY2YmUwOTc1ZTcyZGFlZTNjNjlmZWU2YjcwNDU5OWM4MTg5MDBkMGMwNTYyMjA5LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed AI Engineer Quantix Search New York, United States Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4462030867/?track",
+      "notes": "Your application was sent to Robert Half Data Engineer Robert Half Oxnard, CA View job: https://www.linkedin.com/comm/jobs/view/4465921966/?trackingId=UMV1v2LnS4m8Ei4mNWfQXQ%3D%3D&refId=ojmhC8geTh%2BEqvrNQhYsdQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BxsgqiaXIQSK04S2IxM3NHw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=18jFUGNLLS6Ys1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu437cie~dy-null-null&eid=a06oc2-mu437cie-dy&otpToken=NTgwYzVkMmU5MmEzNzAyYzZhMTEzODI3YjVjNzQ0MzViYTU1MjdmZWQ2MTQ2ZDlmMGJlNWUyMmQ3NTE5OWNkYzdkOTYzZDViODZjYjY5NTg4OTYwY2JlY2M2ZTgwZDA4ZjMzZGM4ZjhmMzE1ZDc1MTJiNWQ5OGI2NmRhZmFlY2ZiMzAwZTZmMDMxZTU1YWQ2LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 16, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Engagement Manager Kensho Technologies Cambridge, MA 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4455331496/?trackingId=NXonYs0fRUuWTD5eCYivlQ%3D%3D&refId=DDO4hLgxQJWoIJuzIgWENQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BxsgqiaXIQSK04S2IxM3NHw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=18jFUGNLLS6Ys1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu437cie~dy-null-null&eid=a06oc2-mu437cie-dy&otpToken=NTgwYzVkMmU5MmEzNzAyYzZhMTEzODI3YjVjNzQ0MzViYTU1MjdmZWQ2MTQ2ZDlmMGJlNWUyMmQ3NTE5OWNkYzdkOTYzZDViODZjYjY5NTg4OTYwY2JlY2M2ZTgwZDA4ZjMzZGM4ZjhmMzE1ZDc1MTJiNWQ5OGI2NmRhZmFlY2ZiMzAwZTZmMDMxZTU1YWQ2LDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager, US Cradle Boston, MA View job: https://www.linkedin.com/comm/jobs/view/4461914590/?trackingId=0v6f9b0bS32qKDM7JgRsTg%3D%3D&refId=zxe6T31%2BSvWkNoPZOCVzeA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BxsgqiaXIQSK04S2IxM3NHw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=18jFUGNLLS6Ys1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu437cie~dy-null-null&eid=a06oc2-mu437cie-dy&otpToken=NTgwYzVkMmU5MmEzNzAyYzZhMTEzODI3YjVjNzQ0MzViYTU1MjdmZWQ2MTQ2ZDlmMGJlNWUyMmQ3NTE5OWNkYzdkOTYzZDViODZjYjY5NTg4OTYwY2JlY2M2ZTgwZDA4ZjMzZGM4ZjhmMzE1ZDc1MTJiNWQ5OGI2NmRhZmFlY2ZiMzAwZTZmMDMxZTU1YWQ2LDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager Cradle Boston, MA View job: https://www.linkedin.com/comm/jobs/view/4377800214/?trackingId=SM2kNknrT2ib%2FFp4a6taIw%3D%3D&refId=iiOK%2FfEWR6m%2BUhcND7xspw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nb",
       "aiDecision": "LinkedIn application receipt",
       "aiModel": "deterministic_rules",
       "aiClassifiedAt": "2026-09-15T15:55:17.612Z",
@@ -3242,7 +3280,7 @@
       "gmailMessageIds": [
         "1a0860764f44b690"
       ],
-      "notes": "Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer, GTM position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer, GTM position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic",
+      "notes": "Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -3602,9 +3640,9 @@
       "role": "Free With IBM Skillsbuild, Step Inside Our Software Innovation Lab, And Catch Up",
       "reqId": "rain",
       "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
       "latestSubject": "Which IBM career opportunities match your goals?",
       "latestFrom": "IBM Talent Acquisition <talent@ibm.com>",
       "lastActivityAt": "2026-09-16T00:06:49.000Z",
@@ -4113,6 +4151,25 @@
       "gmailThreadId": "19fd1e53866d8b8c",
       "gmailMessageIds": [
         "19fd1e53866d8b8c"
+      ],
+      "notes": "Hi Tirth, Thanks so much for applying for the Analytics Engineer, Data position at Tailscale! We’ve received your application and are excited about your interest in joining us. We want to find the right people to join our growing team, and with a high volume of applications, it may take us a bit longer to share an update. Our goal is to personally review each and every application. We move candidates through our hiring process on a continuous basis, which means that you don't have to wait around for a specific date or deadline before hearing back from us. This also means that we usually have candidates in different stages of the hiring process for each role. If there are any updates on the status of this role, we'll let you know in a timely manner. This email confirms that we've received your application, and we'll be in touch if we feel it’s a good match. While it may not always be possible, we do our best to get back to every candidate, even if it means making the difficult decision to say \"not right now\" or \"not for this role\". We look forward to seeing if you're the missing node in our tailnet! Please be aware that legitimate emails from Tailscale's talent team will only originate from @tailscale.com, @greenhouse.io, and @interviews.modernloop.io email addresses. For more information about protecting yourself from impersonators and scams, please visit https://tailscale.com/scam-awareness. Hi Tirth, Thanks so much for applying for the Analytics Engineer, Data position at Tailscale! We&rsquo;ve received your application and are excited about your interest in joining us. We want to find the right people to join our growing team, and with a high volume of applications, it may take us a bit longer to share an update. Our goal is to personally review each and every application. We move candidates through our hiring process on a continuous basis, which means that you don't have to wait around for a specific date or deadline before hearing back from us. This also means that we usually have candidates in different stages of the hiring process for each role. If there are any updates on the status of this role, we'll let you know in a timely manner. This email confirms that we've received your application, and we'll be in touch if we feel it&rsquo;s a good match. While it may not always be possible, we do our best to get back to every candidate, even if it means making the difficult decision to say \"not right now\" or \"not for this role\". We look forward to seeing if you're the missing node in our tailnet! Please be aware that legitimate emails from Tailscale's talent team will only originate from @tailscale.com, @greenhouse.io, and @interviews.modernloop.io email addresses. For more information about protecting yourself from impersonators and scams, please visit https://tailscale.com/scam-awareness ."
+    },
+    {
+      "id": "tailscale-analytics-engineer",
+      "company": "Tailscale",
+      "role": "Analytics Engineer",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We've received your Analytics Engineer, Data application for Tailscale!",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-09-15T07:55:07.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19ff66dd890c967d",
+      "gmailMessageIds": [
+        "19ff66dd890c967d"
       ],
       "notes": "Hi Tirth, Thanks so much for applying for the Analytics Engineer, Data position at Tailscale! We’ve received your application and are excited about your interest in joining us. We want to find the right people to join our growing team, and with a high volume of applications, it may take us a bit longer to share an update. Our goal is to personally review each and every application. We move candidates through our hiring process on a continuous basis, which means that you don't have to wait around for a specific date or deadline before hearing back from us. This also means that we usually have candidates in different stages of the hiring process for each role. If there are any updates on the status of this role, we'll let you know in a timely manner. This email confirms that we've received your application, and we'll be in touch if we feel it’s a good match. While it may not always be possible, we do our best to get back to every candidate, even if it means making the difficult decision to say \"not right now\" or \"not for this role\". We look forward to seeing if you're the missing node in our tailnet! Please be aware that legitimate emails from Tailscale's talent team will only originate from @tailscale.com, @greenhouse.io, and @interviews.modernloop.io email addresses. For more information about protecting yourself from impersonators and scams, please visit https://tailscale.com/scam-awareness. Hi Tirth, Thanks so much for applying for the Analytics Engineer, Data position at Tailscale! We&rsquo;ve received your application and are excited about your interest in joining us. We want to find the right people to join our growing team, and with a high volume of applications, it may take us a bit longer to share an update. Our goal is to personally review each and every application. We move candidates through our hiring process on a continuous basis, which means that you don't have to wait around for a specific date or deadline before hearing back from us. This also means that we usually have candidates in different stages of the hiring process for each role. If there are any updates on the status of this role, we'll let you know in a timely manner. This email confirms that we've received your application, and we'll be in touch if we feel it&rsquo;s a good match. While it may not always be possible, we do our best to get back to every candidate, even if it means making the difficult decision to say \"not right now\" or \"not for this role\". We look forward to seeing if you're the missing node in our tailnet! Please be aware that legitimate emails from Tailscale's talent team will only originate from @tailscale.com, @greenhouse.io, and @interviews.modernloop.io email addresses. For more information about protecting yourself from impersonators and scams, please visit https://tailscale.com/scam-awareness ."
     },
@@ -4855,6 +4912,25 @@
       "gmailMessageIds": [
         "1a0487d212166fd4",
         "1a05958b0515c212"
+      ],
+      "notes": "Face, Head, Person, Electronics, Mobile Phone, Phone, Indoors, Basketball, Basketball (Ball), Sport Hi Tirth,Â Â Here are some jobs that best fit your preferences! Staff Machine Learning Engineer, Mapping Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/4b69cfb31a3971d483baeb7d52985d89/events/clicked?signature=7e28f36db2f88d24c11d83ed5af7a9ba3581dbea&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fstaff-machine-learning-engineer-mapping-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Senior Software Engineer, Internal Tooling Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/4b69cfb31a3971d483baeb7d52985d89/events/clicked?signature=5d35d756bd55e76b9aedb40f54f0866976c0b55d&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsenior-software-engineer-internal-tooling-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Senior Machine Learning Engineer (Infra), Driver Understanding and Evaluation Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/4b69cfb31a3971d483baeb7d52985d89/events/clicked?signature=78b9fc2219e22d1dc67c3a9adc193dde3430a535&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsenior-machine-learning-engineer-infra-driver-understanding-and-evaluation-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Software Engineer, Trip Platform Mountain View, California, United States. San Francisco, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/4b69cfb31a3971d483baeb7d52985d89/events/clicked?signature=ae4c71f5d91d7432c24396a0e57449ebdea47fd4&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsoftware-engineer-trip-platform-mountain-view-california-united-stat"
+    },
+    {
+      "id": "waymo-staff-machine-learning-engineer",
+      "company": "Waymo",
+      "role": "Staff Machine Learning Engineer",
+      "reqId": null,
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Here are some new roles at Waymo",
+      "latestFrom": "The Talent Acquisition team at Waymo <user-e65a8e09c91dc79cdac854bf73c74dd1@waymo.mail.clinchtalent.com>",
+      "lastActivityAt": "2026-09-14T16:51:39.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0a4c50322d8941",
+      "gmailMessageIds": [
+        "1a0a4c50322d8941"
       ],
       "notes": "Face, Head, Person, Electronics, Mobile Phone, Phone, Indoors, Basketball, Basketball (Ball), Sport Hi Tirth,Â Â Here are some jobs that best fit your preferences! Staff Machine Learning Engineer, Mapping Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/4b69cfb31a3971d483baeb7d52985d89/events/clicked?signature=7e28f36db2f88d24c11d83ed5af7a9ba3581dbea&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fstaff-machine-learning-engineer-mapping-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Senior Software Engineer, Internal Tooling Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/4b69cfb31a3971d483baeb7d52985d89/events/clicked?signature=5d35d756bd55e76b9aedb40f54f0866976c0b55d&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsenior-software-engineer-internal-tooling-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Senior Machine Learning Engineer (Infra), Driver Understanding and Evaluation Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/4b69cfb31a3971d483baeb7d52985d89/events/clicked?signature=78b9fc2219e22d1dc67c3a9adc193dde3430a535&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsenior-machine-learning-engineer-infra-driver-understanding-and-evaluation-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Software Engineer, Trip Platform Mountain View, California, United States. San Francisco, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/4b69cfb31a3971d483baeb7d52985d89/events/clicked?signature=ae4c71f5d91d7432c24396a0e57449ebdea47fd4&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsoftware-engineer-trip-platform-mountain-view-california-united-stat"
     },
@@ -5878,7 +5954,7 @@
         "1a020a37644d9f24",
         "1a020a381832c59a"
       ],
-      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: AI Engineer III - Global Dining Technology Senior Software Engineers Sr AI Engineer II - Agentic AI Senior Data Engineer II - Amex Ads, Offers, and Dining Technology Director of Cyber Security / Agentic AI - Privileged Access Management (PAM) See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
+      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: Sr AI Engineer I - Agentic AI Senior Data Engineer I - Amex Ads, Offers, and Dining Technology Sr Software Engineer II Staff AI Engineer - Enterprise Architecture Campus Undergraduate Summer Internship Program - 2027 AI Engineer, Enterprise Technology Services- New York, NY See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -5892,12 +5968,12 @@
     {
       "id": "deloitte-senior-forward-deployed-engineer-aws",
       "company": "Deloitte",
-      "role": "Deloitte",
+      "role": "At Deloitte.",
       "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "application receipt",
-      "latestSubject": "Thank you for applying to Deloitte!",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "Reminder: Apply to the Senior Forward Deployed Engineer- AWS position at Deloitte.",
       "latestFrom": "Recruiting at Deloitte <donotreply@deloitte.com>",
       "lastActivityAt": "2026-09-14T03:49:12.000Z",
       "source": "gmail",
@@ -5906,7 +5982,7 @@
         "1a0370956b4e6eb6",
         "1a0434dbf7c3548d"
       ],
-      "notes": "Dear Tirth, Thank you for submitting an application for the position of Lead Forward Deployed Engineer - AWS, 350637. You can view the status of your application by navigating to the ‘My Jobs’ section in your Deloitte careers profile. If you would like to review or update your candidate profile related to this position, please click [1] here. If you are receiving this email and have not yet set a password for your Deloitte careers portal account, it is important that you click [2] here to do so. When you enter the portal, you will want to click your name in the upper righthand corner to direct you to your profile page, and then follow the prompts to 'reset password'. If your name is not in the upper righthand corner, you will want to select 'login' and reset your password to gain access to your profile. Thank you! Deloitte Recruiting [3] [4] [5] [6] [7] [8] [9] Deloitte.com | [10] Legal | [11] Privacy Deloitte 30 Rockefeller Plaza New York, NY 10112-0015 United States All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability or protected veteran status, or any other legally protected basis, in accordance with applicable law. About Deloitte Deloitte refers to one or more of Deloitte Touche Tohmatsu Limited, a UK private company limited by guarantee (\"DTTL\"), its network of member firms, and their related entities. DTTL and each of its member firms are legally separate and independent entities. DTTL (also referred to as \"Deloitte Global\") does not provide services to clients. In the United States, Deloitte refers to one or more of the US member firms of DTTL, their related entities that operate using the \"Deloitte\" name in the United States and their respective affiliates. Certain services may not be available to attest clients under the rules and regulations of public accounting. Please see [12] www.deloitte.com/about to learn more about our global network of member firms. (c) 2026. Deloitte Development LLC. All rights reserved. References Visible links 1. http://deloitteus.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzM5MjIyOTMsImhhc2giOiIwODliM2RlMWI1NmE5MmZmYzI0ZjJiMjAwNmU5NjljYzEyNjJmNzQyMDkzNmI3YTM2ZmViMTQ0YjFjMjYxY2RhIn0.Zw2BsY5ixz0LcI0JvCRYnrB18F6nef1WxSZIlIm2kcE 2. http://deloitteus.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzM5MjIyOTMsImhhc2giOiI5YjQ3OWFiODBmZGM5MTA5OTQ4YzFhMGU3NWQ2NDVjYjJiNDRkZGNlNTAwMGNhNzRkNDk1ODg0YjdkNDM1MTY0In0.UvKk9lHXQe39RFy0n87vOU47XiZoHZvW-ddAfTm-Znk 3. http://deloitteus.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzM5MjIyOTMsImhhc2giOiJiZDY0NGJlODU2MTc1MmIyYmJmZDk2ZjI5NGQwZWM1OTJmNzJiYWIxNDA3YmU3NTdiMGI3MDYzNjVjOGQzNmIyIn0.PN1-N25fclYdY0gqTKhqxHJnajWiVnObOIFBEo12n-4 4. http://deloitteus.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzM5MjIyOTMsImhhc2giOiIxNGRkZjIwOWE3NTIyYzU4MTYwZjg1MTEyYjFjNzE0ZTg1NjlkYjEwNTk4NWY4Zjgw"
+      "notes": "Dear Tirth, This is a friendly reminder for you to complete your application for the [1] Senior Forward Deployed Engineer- AWS position. If you no longer wish to pursue this opportunity, please disregard this message. Thank you! Deloitte Recruiting For any questions, please contact your recruiter. [2] [3] [4] [5] [6] [7] [8] Deloitte.com | [9] Legal | [10] Privacy Deloitte 30 Rockefeller Plaza New York, NY 10112-0015 United States All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability or protected veteran status, or any other legally protected basis, in accordance with applicable law. About Deloitte Deloitte refers to one or more of Deloitte Touche Tohmatsu Limited, a UK private company limited by guarantee (\"DTTL\"), its network of member firms, and their related entities. DTTL and each of its member firms are legally separate and independent entities. DTTL (also referred to as \"Deloitte Global\") does not provide services to clients. In the United States, Deloitte refers to one or more of the US member firms of DTTL, their related entities that operate using the \"Deloitte\" name in the United States and their respective affiliates. Certain services may not be available to attest clients under the rules and regulations of public accounting. Please see [11] www.deloitte.com/about to learn more about our global network of member firms. (c) 2026. Deloitte Development LLC. All rights reserved. References Visible links 1. http://deloitteus.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzQyODMyODcsImhhc2giOiIwNzFmNjQ2NzYyZGZhNjQyNTc2MjAxOWFiMmZmOGFmNDM2MTZlNTIwZGNhYjMxOTE4Y2I4YmM1MWZhZTU5YzhmIn0.44YrJjs0NwjPnWbULtB6N21bHZNkFP0rIL4ec-CiIuI 2. http://deloitteus.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzQyODMyODcsImhhc2giOiI5YmZiZDgwMDk2ZDJiMGY3MDI5MGNlZjUyYmU5ZmQxNDliY2Y4OTMwOGVlYWMzMmY3NWMwMjFjZDM2MTcxY2I2In0.ZMFEMQ-sYR-x6dTc-MguVfZwcULMWjtp40Q5Dp2M2po 3. http://deloitteus.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzQyODMyODcsImhhc2giOiJmYmFhMDkzMjJmNGJiZGYyOTQ2OGU1ZGM2ZGVlNWFmYzZiYjAwZDc4NDM5MTM1Mjc5NzE5OTNhYTE2OTk1ODU3In0.Qu5soonUFsPj_BqrLkbrUNWXgDNZsxRoJIFnz_tT5js 4. http://deloitteus.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzQyODMyODcsImhhc2giOiI3NWI5ZmMwODhjNjRkM2U3ZDc2NDgzMzRiZjlmZGE3ZGFmNTcxNzkwOWZiNGUzYWJmZDdhNjYwYjc0OTNhOTU3In0.Sa04C7iG95NWUqf5ujl-2kayHInodlbFOqx1UCP7OB0 5. http://deloitteus.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzQyODMyODcsImhhc2giOiIyYzg0YjQ5NTAyYjhkMjgyZTk2NzE2YzViODUxNzM5ZTVhODRmMjY5ZmQxNTBmMDliYzEwMjg4MTg2M2UxNWRkIn0.k_1x9fytN_0XZzZ3QKfajmYefPAvLl5dUf7vXGMoJAA 6. http://deloitteus.avature.net/ltrk/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzQyODMyODcsImhhc2giOiIwM2Q5NWI1MDc5YWM2ZGFkZjg3MmVmZDZjM2RlMDZhOTU0MzViMjRlOTEzMWM4YzEwZWFjYzQzZmRlMTYwM2JiIn0.8MpGyRt-kde8z-wqF88wta7c0YIgIV3nWFdryP6dmOQ 7."
     },
     {
       "id": "apollo-founders-live-apollo-trainings-and-more",
@@ -6077,7 +6153,7 @@
       "gmailMessageIds": [
         "1a099372a891e1a5"
       ],
-      "notes": "96 Dear Tirth Shah, Thank you for applying with WellSky! Your application has been received and will be taken into careful consideration. WellSky Careers This email was intended for tirthcshah1999@gmail.com WellSky Corporation &#8226; 11300 Switzer Road Overland Park, KS 66210"
+      "notes": "96 Dear Tirth, Thank you for applying with WellSky! Your application has been received and will be taken into careful consideration. WellSky Careers This email was intended for tirthcshah1999+workday-wellsky@gmail.com WellSky Corporation &#8226; 11300 Switzer Road Overland Park, KS 66210"
     },
     {
       "id": "moderna-the-senior-software-engineer-enterprise-ai-enablement-engineer",
@@ -29910,7 +29986,7 @@
       "gmailMessageIds": [
         "1a0346f6d28f7f59"
       ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 167829 Note : This code will expire in 10 minutes. Sincerely, American Tower Global Recruiting Team."
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 187406 Note : This code will expire in 10 minutes. Sincerely, American Tower Global Recruiting Team."
     },
     {
       "id": "answersnow-business-intelligence-engineer",
@@ -48575,7 +48651,7 @@
       "gmailMessageIds": [
         "1a010743e9326fd5"
       ],
-      "notes": " Thank you for your interest in CapTech! We received your application for the&nbsp;Data Engineer (AWS, Azure, GCP)&nbsp;position in&nbsp;Richmond, VA, USA. &nbsp;We understand that looking for a new job can be stressful&nbsp;but our goal is to provide an informative, authentic, and unique experience for&nbsp;go-getters who want to join our organization. Our process can take anywhere from 3-6 + weeks depending on the opportunity as well as our demand. To ensure your safety as well as our employees, our process is completely virtual. &nbsp; You can expect the following going through our process:A thorough review of your application which can take up to a week or more due to the volume of applications we receiveA follow-up correspondence, regardless of if we are moving forward in the processIf we move forward, you can expect to engage in a similar experience to the below: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Initial interview with Talent Acquisition Team member &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Skills/Technical interview &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Final Virtual interviews&nbsp;with 3-4 of our team members Follow us on Glassdoor, LinkedIn, Facebook, Twitter, and Instagram to stay connected with us and learn about the people and work that drives our organization.&nbsp; &nbsp; Thank you!&nbsp; The CapTech Talent Acquisition Team&nbsp; Access My Application: https://u22907469.ct.sendgrid.net/ls/click?upn=u001.IZjfOPRqp8JBv7HvxfE578IdjeTB-2BVXiFSgBw8dD7CgQrre-2FDc-2F6bInzDyF88Dh3BU-2BrMeBQhMr5mCays9yMJbiTDsCekuiq3Wc33pGebNfqM6KUNtG20Lx-2B7QH8R0lEBguKUef02I-2BxvmtJWMwDhpqe0vDRTDyhWOeOafLG4l8Nq37G-2FL3EYk-2BzkhQsSGeLw71b_3iIz9nyIoE7WYm9EGmPy-2FHdpg9RX0TMZqeH-2Fa-2FauaY7IG0cUJ34GuiCQsYgpNRQd8Ly7mhax8LMn6IbTbc-2FmFguW9RMcmlfLFGa9MLqaJMB1SNKPOFF4p8SwFTRPsB5QTpAHxgt3bgvqkvZVqczH2-2F9cgbdB-2By453FUzezrPtVRpeIiPDbugTKjA14Gimaclusi2D8To9oD4o-2BDf2qLGidMwzMRmiWw4EFhVDJJDPcqyY47oaunAUCx8w9iT0rowfkNB5l6BSUmAoFNkOfjmXvKy4WWvul7bDSoJk9x1fqCr0IE8nHG8DCDnEwg3FfLCn0VBn-2FQw-2BwS8KzMmYgyBl20OUklg4-2FLQhaK2XqLRulxQbagc40iqBdoYJFwpknhyWcnJLLPM5JziluxQrUJoIuRATndpedsn-2BiIixetKJ19ijs5Njro-2BnjWo9Uq1ljK-2FjjAuDO5wAz5OVzHFO5tqmPluQF2aGKr9KhgIy8waDOziuPRwQqXTu24XpGwGY3sv If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application Thank you for your interest in CapTech! We received your application for the Data Engineer (AWS, Azure, GCP) position in Richmond, VA, USA. We understand that looking for a new job can be stressful but our goal is to provide an informative, authentic, and unique experience for go-getters who want to join our organization. Our process can take anywhere from 3-6 + weeks depending on the opportunity as well as our demand. To ensure your safety as well as our employees, our process is completely virtual. You can expec",
+      "notes": " Thank you for your interest in CapTech! We received your application for the&nbsp;Data Engineer (AWS, Azure, GCP)&nbsp;position in&nbsp;Richmond, VA, USA. &nbsp;We understand that looking for a new job can be stressful&nbsp;but our goal is to provide an informative, authentic, and unique experience for&nbsp;go-getters who want to join our organization. Our process can take anywhere from 3-6 + weeks depending on the opportunity as well as our demand. To ensure your safety as well as our employees, our process is completely virtual. &nbsp; You can expect the following going through our process:A thorough review of your application which can take up to a week or more due to the volume of applications we receiveA follow-up correspondence, regardless of if we are moving forward in the processIf we move forward, you can expect to engage in a similar experience to the below: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Initial interview with Talent Acquisition Team member &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Skills/Technical interview &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Final Virtual interviews&nbsp;with 3-4 of our team members Follow us on Glassdoor, LinkedIn, Facebook, Twitter, and Instagram to stay connected with us and learn about the people and work that drives our organization.&nbsp; &nbsp; Thank you!&nbsp; The CapTech Talent Acquisition Team&nbsp; Access My Application: https://u22907469.ct.sendgrid.net/ls/click?upn=u001.IZjfOPRqp8JBv7HvxfE578IdjeTB-2BVXiFSgBw8dD7CgQrre-2FDc-2F6bInzDyF88Dh3BU-2BrMeBQhMr5mCays9yMJbiTDsCekuiq3Wc33pGebNfqM6KUNtG20Lx-2B7QH8R0lEBguKUef02I-2BxvmtJWMwDhpqe0vDRTDyhWOeOafLG4l8Nq37G-2FL3EYk-2BzkhQsSGeLu9AK_3iIz9nyIoE7WYm9EGmPy-2FHdpg9RX0TMZqeH-2Fa-2FauaY7IG0cUJ34GuiCQsYgpNRQd8Ly7mhax8LMn6IbTbc-2FmFguW9RMcmlfLFGa9MLqaJMB1SNKPOFF4p8SwFTRPsB5QeThfrqtdXFpAeKxfYRbBIafTF-2FLNfivo1Iz2YWF8zc33fh2mgPE-2BJRRqWvHM9wbMctIg8sTvdkaIaJvIcHwtfx9kigkW7-2BJJqswcVbPVD1HKrpkT28UglYuqDRfn77Ai8yh-2BSUsaU8sj6tkEgHdPHFx3MibXmE-2BwboqM3zyX33REKlw7iDm4VN9J7smSzCGuPLIMRKWDV7BePudn6bUI6V6tCtgpz6LMx5Qq-2F5PAzokRq3B4aA735FdSMxIlI-2BoYhQxctUn6ySYil3HxZXmZ4RXlJvnT6thUAyAkJwIRaULXAxoM66vfEUgluUKorzhnHLbZG8J2Pxg7EBVd-2B-2BNyy77eLZpUqUNhReo9CVy2nIPvK5GUiEVUfBLsoovzOOGH If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application Thank you for your interest in CapTech! We received your application for the Data Engineer (AWS, Azure, GCP) position in Richmond, VA, USA. We understand that looking for a new job can be stressful but our goal is to provide an informative, authentic, and unique experience for go-getters who want to join our organization. Our process can take anywhere from 3-6 + weeks depending on the opportunity as well as our demand. To ensure your safety as well as our employees, our process is completely virtual. You can expec",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -53458,25 +53534,6 @@
       "aiModel": "rules_1to1",
       "aiClassifiedAt": "2026-08-20T16:59:56.184+00:00",
       "aiConfidence": "high"
-    },
-    {
-      "id": "tailscale-analytics-engineer",
-      "company": "Tailscale",
-      "role": "Analytics Engineer",
-      "reqId": null,
-      "status": "rejected",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "We've received your Analytics Engineer, Data application for Tailscale!",
-      "latestFrom": "no-reply@us.greenhouse-mail.io",
-      "lastActivityAt": "2026-08-12T14:43:41.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19ff66dd890c967d",
-      "gmailMessageIds": [
-        "19ff66dd890c967d"
-      ],
-      "notes": "Hi Tirth, Thanks so much for applying for the Analytics Engineer, Data position at Tailscale! We’ve received your application and are excited about your interest in joining us. We want to find the right people to join our growing team, and with a high volume of applications, it may take us a bit longer to share an update. Our goal is to personally review each and every application. We move candidates through our hiring process on a continuous basis, which means that you don't have to wait around for a specific date or deadline before hearing back from us. This also means that we usually have candidates in different stages of the hiring process for each role. If there are any updates on the status of this role, we'll let you know in a timely manner. This email confirms that we've received your application, and we'll be in touch if we feel it’s a good match. While it may not always be possible, we do our best to get back to every candidate, even if it means making the difficult decision to say \"not right now\" or \"not for this role\". We look forward to seeing if you're the missing node in our tailnet! Please be aware that legitimate emails from Tailscale's talent team will only originate from @tailscale.com, @greenhouse.io, and @interviews.modernloop.io email addresses. For more information about protecting yourself from impersonators and scams, please visit https://tailscale.com/scam-awareness. Hi Tirth, Thanks so much for applying for the Analytics Engineer, Data position at Tailscale! We&rsquo;ve received your application and are excited about your interest in joining us. We want to find the right people to join our growing team, and with a high volume of applications, it may take us a bit longer to share an update. Our goal is to personally review each and every application. We move candidates through our hiring process on a continuous basis, which means that you don't have to wait around for a specific date or deadline before hearing back from us. This also means that we usually have candidates in different stages of the hiring process for each role. If there are any updates on the status of this role, we'll let you know in a timely manner. This email confirms that we've received your application, and we'll be in touch if we feel it&rsquo;s a good match. While it may not always be possible, we do our best to get back to every candidate, even if it means making the difficult decision to say \"not right now\" or \"not for this role\". We look forward to seeing if you're the missing node in our tailnet! Please be aware that legitimate emails from Tailscale's talent team will only originate from @tailscale.com, @greenhouse.io, and @interviews.modernloop.io email addresses. For more information about protecting yourself from impersonators and scams, please visit https://tailscale.com/scam-awareness ."
     },
     {
       "id": "msg-19ff65912de1a99a",
