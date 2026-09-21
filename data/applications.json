@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-09-20T22:41:17.110Z",
+  "updatedAt": "2026-09-21T00:54:42.602Z",
   "applications": [
+    {
+      "id": "osmo-general-application",
+      "company": "Osmo",
+      "role": "Applying And For The Time You Spent On Your Application",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "formal rejection/non-selection language",
+      "latestSubject": "Following up on Staff Backend Engineer, Data Platform @ Osmo.ai",
+      "latestFrom": "Osmo Hiring Team <recruiting@osmo.ai>",
+      "lastActivityAt": "2026-09-21T00:33:50.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a059f664ff89b0a",
+      "gmailMessageIds": [
+        "1a059f664ff89b0a"
+      ],
+      "notes": "Hi Tirth, Thank you for applying and for the time you spent on your application with us. We read every one closely, and yours was no exception. After careful review, we've decided not to move forward at this time. This isn't a reflection of your skills or potential — it's simply a decision shaped by the specific needs we're hiring for right now. We know applying takes real effort, and we don't take that for granted. We'd genuinely welcome you applying again in the future, and we hope our paths cross again. Wishing you the best in your search — we're rooting for you. Regards, Osmo People Team Hi Tirth , Thank you for applying and for the time you spent on your application with us. We read every one closely, and yours was no exception. After careful review, we've decided not to move forward at this time. This isn't a reflection of your skills or potential — it's simply a decision shaped by the specific needs we're hiring for right now. We know applying takes real effort, and we don't take that for granted. We'd genuinely welcome you applying again in the future, and we hope our paths cross again. Wishing you the best in your search — we're rooting for you. Regards, Osmo People Team"
+    },
     {
       "id": "viking-cruises-us-your-interest-in-employment-with-viking-after-careful-consideration-we-have-de",
       "company": "| Viking Cruises US",
@@ -25,11 +44,11 @@
       "company": "Citizens",
       "role": "Data Engineer",
       "status": "interviewed",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "assessment/coding challenge",
-      "latestSubject": "Your Citizens interview link is a click away! Take action within 4 days!",
-      "latestFrom": "Citizens <noreply@mail.modernhire.com>",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "Confirm your identity",
+      "latestFrom": "Citizens Careers <CitizensCareers@orc.mycitizenshr.com>",
       "lastActivityAt": "2026-09-20T15:05:08.000Z",
       "source": "gmail",
       "gmailThreadId": "1a03460511a27235",
@@ -37,7 +56,7 @@
         "1a03460511a27235",
         "1a039acade677a53"
       ],
-      "notes": "Hi Tirth, Welcome to the next step for our Data Engineer | Enterprise Technology & Security Development Program role. Here's what to expect after clicking \"Get Started\": Your experience will depend on whether you've recently completed a HireVue assessment for a role at Citizens: If it's your first time completing a HireVue assessment for Citizens, or it's been more than 6 months, you'll be asked to complete a full assessment. If you completed a HireVue assessment for Citizens within the past 6 months, you might be asked to answer 1-2 additional questions, depending on the role. If no further action is needed, the system will automatically move your forward, and you can simply close out of the experience. If prompted, you’ll complete a self-guided video interview and games that measure core competencies for your selected program. This unique interviewing opportunity lets you share your skills and experience with our recruiting team in your own words and bring your personality to the self-guided interview. You’ll also complete games that measure core competencies to help us understand candidates best fit for the role. You have 4 days to complete this assessment after receiving this email. This experience can take anywhere from 30-45 minutes. You are invited to complete an interactive assessment. From the time this interview request was sent, you have 96 hour(s) to complete and submit. Keep in mind: Lean on your educational/professional experiences and skills to share more about your background, your interest in the role, and how you’d navigate the responsibilities. If you don’t nail the answer on the first try, you’ll have an opportunity to re-record. Treat the experience as if it were an in-person interview and dress professionally. Record in areas without noise around you. A strong Wi-Fi connection is needed. While we know you want to be prepared, we want to see your authentic self on camera. It’s best to avoid using AI to formulate answers or reading scripted responses, and just let your personality and enthusiasm for the opportunity shine. Learn more about how to prepare here . Things can move quickly due to the number of candidates who apply, and we don’t want to miss out on meeting you. If you don’t complete this step within the 4-day window, there will be no extensions, and you’ll be withdrawn from the process. Get Started Best of luck! The Citizens Talent Acquisition Team We’re committed to ensuring that all interested candidates can successfully participate in our recruitment process. If you’re an individual with a disability or require a reasonable accommodation, please reference our Job Seeker Help policy and follow the instructions. We partner with HireVue to conduct our assessments. For technical help, visit https://hirevuesupport.zendesk.com/hc/en-us for frequently asked questions, or contact the HireVue support team by submitting this form https://hirevuesupport.zendesk.com/hc/en-us/requests/new . This message is sent from an automat"
+      "notes": "Hi Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 447671 Note : This code will expire in 10 minutes. Citizens Talent Acquisition This message is sent from an automated system that cannot accept responses. If you have a question about Citizens or our hiring process , please visit us online."
     },
     {
       "id": "amy-from-zensearch-you-by-zensearch-data-engineer-san-francisco-ca-homelight-san-francisco-ca",
@@ -684,7 +703,7 @@
       "gmailMessageIds": [
         "1a08a5248fcff656"
       ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 525758 Note : This code will expire in 10 minutes. Sincerely, Ascot Group Recruiting Team."
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 994551 Note : This code will expire in 10 minutes. Sincerely, Ascot Group Recruiting Team."
     },
     {
       "id": "ascot-general-application",
@@ -2313,9 +2332,9 @@
       "role": "General Application",
       "reqId": null,
       "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
       "latestSubject": "Confirm your identity",
       "latestFrom": "Photon Talent Acquisition Group <no-reply@photon.com>",
       "lastActivityAt": "2026-09-16T21:25:18.000Z",
@@ -2474,7 +2493,7 @@
       "company": "Trupanion",
       "role": "Data Engineer",
       "status": "rejected",
-      "confidence": "low",
+      "confidence": "high",
       "lastActivityAt": "2026-09-16T17:48:01.000Z",
       "latestSubject": "Your Application for the ​Data Engineer​ Position with ​Trupanion​",
       "latestFrom": "Trupanion Hiring Team <notifications@recruiting.trupanion.com>",
@@ -2491,8 +2510,8 @@
       "aiModel": "Google Gemini 3.7 Flash",
       "aiClassifiedAt": "2026-08-22T17:01:33.829+00:00",
       "aiConfidence": "high",
-      "classifier": "rules",
-      "reason": "keyword heuristic"
+      "classifier": "openrouter",
+      "reason": "AI extracted"
     },
     {
       "id": "walt-disney-company-data-analyst",
@@ -2599,7 +2618,7 @@
       "confidence": "low",
       "classifier": "rules",
       "reason": "keyword heuristic",
-      "latestSubject": "We received your job application (Job Number: 210772921)",
+      "latestSubject": "We received your job application (Job Number: 210769104)",
       "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
       "lastActivityAt": "2026-09-16T14:56:08.000Z",
       "source": "gmail",
@@ -2607,7 +2626,7 @@
       "gmailMessageIds": [
         "1a0394facacb63cd"
       ],
-      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Lead Software Engineer - Cloud 210772921 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
+      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Data Scientist-Senior Associate 210767245 210769104 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -3318,7 +3337,7 @@
       "gmailMessageIds": [
         "1a0860764f44b690"
       ],
-      "notes": "Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic",
+      "notes": "Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer, GTM position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer, GTM position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -6006,11 +6025,11 @@
     {
       "id": "deloitte-senior-forward-deployed-engineer-aws",
       "company": "Deloitte",
-      "role": "At Deloitte.",
+      "role": "Senior Forward Deployed Engineer- AWS",
       "status": "reply_needed",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
       "latestSubject": "Reminder: Apply to the Senior Forward Deployed Engineer- AWS position at Deloitte.",
       "latestFrom": "Recruiting at Deloitte <donotreply@deloitte.com>",
       "lastActivityAt": "2026-09-14T03:49:12.000Z",
@@ -23539,25 +23558,6 @@
       "notes": " Hi Tirth,&nbsp; Thanks for your interest in NBCUniversal. We really appreciate the time you have taken to share your details with us. You have successfully submitted an application to the following job: Staff Software Engineer (GenAI Innovation/ Forward deployed). Our Recruiters will review your information and will contact you directly if your skills and experience match the requirements of the position you&rsquo;ve applied to. You can check the status of your application at any time by visiting the Candidate Zone on nbcunicareers.com. We wish you the best in finding a career opportunity that is both challenging and rewarding. Here you can create the extraordinary.&nbsp; NBCUniversal Talent Team &nbsp; Access My Application: https://jobs.smartrecruiters.com/my-applications/NBCUniversal3/fbd8d8fe-8403-4ab9-abc0-3999553617f5?dcr_ci=NBCUniversal3 If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application Hi Tirth, Thanks for your interest in NBCUniversal. We really appreciate the time you have taken to share your details with us. You have successfully submitted an application to the following job: Staff Software Engineer (GenAI Innovation/ Forward deployed) . Our Recruiters will review your information and will contact you directly if your skills and experience match the requirements of the position you&rsquo;ve applied to. You can check the status of your application at any time by visiting the Candidate Zone on nbcunicareers.com. We wish you the best in finding a career opportunity that is both challenging and rewarding. Here you can create the extraordinary. NBCUniversal Talent Team Access My Application If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company ( contactsupport@smartrecruiters.com ). Please do not share or forward this email, as it pertains to your specific job application"
     },
     {
-      "id": "osmo-general-application",
-      "company": "Osmo",
-      "role": "General Application",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Thank you for Applying to Osmo",
-      "latestFrom": "Osmo Hiring Team <recruiting@osmo.ai>",
-      "lastActivityAt": "2026-08-31T22:35:13.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a059f664ff89b0a",
-      "gmailMessageIds": [
-        "1a059f664ff89b0a"
-      ],
-      "notes": "Hi Tirth, Thanks for applying to Osmo. Your application has been received and we will review it as soon as possible. If your application seems like a good fit for the position we will contact you soon. Regards, Osmo ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Hi Tirth , Thanks for applying to Osmo . Your application has been received and we will review it as soon as possible. If your application seems like a good fit for the position we will contact you soon. Regards, Osmo ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
-    },
-    {
       "id": "globality-general-application",
       "company": "Globality",
       "role": "General Application",
@@ -34414,17 +34414,17 @@
     {
       "id": "msg-1a01072229d0ca6d",
       "company": "Ford",
-      "role": "Job Data Engineer",
+      "role": "Senior Data Engineer - Cybersecurity",
       "status": "rejected",
       "confidence": "low",
       "lastActivityAt": "2026-08-26T00:29:15.000Z",
-      "latestSubject": "Confirm your identity for job Data Engineer - 67674",
+      "latestSubject": "Your recent job application for Senior Data Engineer - Cybersecurity - 69344",
       "latestFrom": "Ford Careers <RecruitingNoReply@ford.com>",
       "gmailThreadId": "1a01570d468cccaa",
       "gmailMessageIds": [
         "1a01570d468cccaa"
       ],
-      "notes": "Hello, Tirth, We need you to confirm your identity so that your job application is considered for the job Data Engineer - 67674. Confirm your identity using this code: 886267. The code expires in 10 minutes. If you want to manage your profile and application, go to your candidate self service page. If you received this message in error, notify us that it was not intended for you. For future reference, your candidate ID is 45983580. Please note that you will need this for correspondence and troubleshooting. Sincerely, Ford Talent Acquisition Team",
+      "notes": "Hello Tirth, Thank you for your interest in joining the Ford Motor Company team. You've taken the first steps by completing your application and sharing your qualifications for the Senior Data Engineer - Cybersecurity - 69344 position. We will contact you if we think you're a good fit for that position. In the meantime, keep checking www.careers.ford.com for additional opportunities – we'd love to help you find your dream job. For future reference, your candidate ID is 45983580. Please note that you will need this for correspondence and troubleshooting. Sincerely, The Ford Talent Acquisition Team",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
