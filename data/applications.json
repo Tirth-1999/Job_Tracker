@@ -1,6 +1,44 @@
 {
-  "updatedAt": "2026-09-26T16:38:17.063Z",
+  "updatedAt": "2026-09-26T19:38:25.340Z",
   "applications": [
+    {
+      "id": "sheela-lokesh-your-interest-in-the-analyst-sf",
+      "company": "Sheela Lokesh",
+      "role": "Your Interest In The Analyst- SF",
+      "reqId": null,
+      "status": "interviewed",
+      "confidence": "medium",
+      "classifier": "rules",
+      "reason": "action requested",
+      "latestSubject": "RZR Global Inc. Interview Availability",
+      "latestFrom": "Sheela Lokesh <sheela.l@aarki.com>",
+      "lastActivityAt": "2026-09-26T19:22:57.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0c9def015e4e80",
+      "gmailMessageIds": [
+        "1a0c9def015e4e80"
+      ],
+      "notes": "Tirth Shah, Thanks for your interest in the Analyst- SF position at RZR Global Inc.. We're excited to move forward with the interview process. To help us schedule your next interview(s), please let us know when you're available by selecting the online calendar link below. Enter your availability now > ( https://app9.greenhouse.io/availability/e44a632bfc9736d71d69c56d6f281124?utm_medium=email&utm_source=AvailabilityRequest ) We'll coordinate with our team and confirm a time with you. Regards, Sheela Tirth Shah, Thanks for your interest in the Analyst- SF position at RZR Global Inc.. We're excited to move forward with the interview process. To help us schedule your next interview(s), please let us know when you're available by selecting the online calendar link below. Enter your availability now > We'll coordinate with our team and confirm a time with you. Regards, Sheela"
+    },
+    {
+      "id": "sheela-lokesh-submitting-your-availability-for-the-analyst-sf-position-you",
+      "company": "Sheela Lokesh",
+      "role": "Submitting Your Availability For The Analyst- SF Position. You",
+      "reqId": null,
+      "status": "interviewed",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "interview scheduled or confirmed",
+      "latestSubject": "RZR Global Inc. Interview Confirmation",
+      "latestFrom": "Sheela Lokesh <sheela.l@aarki.com>",
+      "lastActivityAt": "2026-09-26T19:22:45.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0cebe6fa8688a4",
+      "gmailMessageIds": [
+        "1a0cebe6fa8688a4"
+      ],
+      "notes": "Hi Tirth Shah, Thanks for submitting your availability for the Analyst- SF position. You're confirmed for your interview on: Date/Time: Sep 28, 2026 1:30pm-2:00pm (GMT-04:00) Eastern Time (US & Canada) Interviewers: Frances Ding Interview type: Technical Interview Google Meet: https://meet.google.com/uwh-znrv-ewo To help you prepare, please review the candidate preparation document here. ( https://drive.google.com/file/d/13QQDEcB1eKpGZ-bX4214NBgWGQPx2UBf/view ) Let us know if you have any other questions before your interview. Thanks, Sheela Hi Tirth Shah, Thanks for submitting your availability for the Analyst- SF position. You're confirmed for your interview on: Date/Time: Sep 28, 2026 1:30pm-2:00pm (GMT-04:00) Eastern Time (US & Canada) Interviewers: Frances Ding Interview type: Technical Interview Google Meet: https://meet.google.com/uwh-znrv-ewo To help you prepare, please review the candidate preparation document here. Let us know if you have any other questions before your interview. Thanks, Sheela"
+    },
     {
       "id": "grant-thornton-head-of-data-analytics-senior-director-116025",
       "company": "Grant Thornton",
@@ -1329,7 +1367,7 @@
       "confidence": "low",
       "classifier": "rules",
       "reason": "keyword heuristic",
-      "latestSubject": "We received your job application (Job Number: 210792108)",
+      "latestSubject": "We received your job application (Job Number: 210728002)",
       "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
       "lastActivityAt": "2026-09-25T22:32:58.000Z",
       "source": "gmail",
@@ -1337,7 +1375,7 @@
       "gmailMessageIds": [
         "1a0394facacb63cd"
       ],
-      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Senior Associate, AI Customer Journey Transformation Analytics 210792108 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
+      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Lead Software Engineer - Databricks/PySpark/AI 210728002 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -1691,7 +1729,7 @@
       "company": "Ford",
       "role": "Data Engineer",
       "status": "rejected",
-      "confidence": "high",
+      "confidence": "low",
       "lastActivityAt": "2026-09-25T22:16:39.000Z",
       "latestSubject": "Your recent job application for Data Engineer - 70886",
       "latestFrom": "Ford Careers <RecruitingNoReply@ford.com>",
@@ -1707,8 +1745,8 @@
       "aiModel": "rule-based-scan",
       "aiClassifiedAt": "2026-08-20T16:59:56.183+00:00",
       "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted"
+      "classifier": "rules",
+      "reason": "keyword heuristic"
     },
     {
       "id": "uc-health-recently-applying-for-job",
@@ -1822,7 +1860,7 @@
       "gmailMessageIds": [
         "1a0c97400d20d000"
       ],
-      "notes": "Hello Tirth, We need you to confirm your identity for your job application for using this code: 389192. This code expires in 10 minutes. If you received this message in error, please delete this email. Sincerely, The Ford Talent Acquisition Team"
+      "notes": "Hello Tirth, We need you to confirm your identity for your job application for using this code: 162179. This code expires in 10 minutes. If you received this message in error, please delete this email. Sincerely, The Ford Talent Acquisition Team"
     },
     {
       "id": "astrazeneca-your-candidate-account-https",
@@ -2393,7 +2431,7 @@
       "gmailMessageIds": [
         "1a0724818e1490fb"
       ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 783532 Note : This code will expire in 10 minutes. Sincerely, SAIC Recruiting Team.",
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 172935 Note : This code will expire in 10 minutes. Sincerely, SAIC Recruiting Team.",
       "updatedAt": "2026-09-15T16:11:10.358Z"
     },
     {
@@ -4286,7 +4324,7 @@
       "gmailMessageIds": [
         "19fa8628451dbcbc"
       ],
-      "notes": "Hello Tirth, Thank you for your interest in working at American Express. Before you get started with your application, please confirm your identity using the one-time passcode below: 968963 This code will expire in 10 minutes. Once verified, you will be able to continue exploring opportunities and manage your profile at https://www.americanexpress.com/en-us/careers/ . If you did not attempt to login or have any questions, please contact us . Sincerely, Amex Talent Acquisition Team Replies to this email are undeliverable. If contacted by a suspicious profile, or if something feels off, don’t engage — email us to verify. Always confirm or apply for any open roles directly on the official American Express Careers Site ."
+      "notes": "Hello Tirth, Thank you for your interest in working at American Express. Before you get started with your application, please confirm your identity using the one-time passcode below: 960940 This code will expire in 10 minutes. Once verified, you will be able to continue exploring opportunities and manage your profile at https://www.americanexpress.com/en-us/careers/ . If you did not attempt to login or have any questions, please contact us . Sincerely, Amex Talent Acquisition Team Replies to this email are undeliverable. If contacted by a suspicious profile, or if something feels off, don’t engage — email us to verify. Always confirm or apply for any open roles directly on the official American Express Careers Site ."
     },
     {
       "id": "american-express-general-application",
@@ -4305,7 +4343,7 @@
         "1a020a37644d9f24",
         "1a020a381832c59a"
       ],
-      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: Sr AI Engineer I - Agentic AI Senior Data Engineer I - Amex Ads, Offers, and Dining Technology Sr Software Engineer II Staff AI Engineer - Enterprise Architecture Campus Undergraduate Summer Internship Program - 2027 AI Engineer, Enterprise Technology Services- New York, NY See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
+      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: AI Engineer III - Global Dining Technology Senior Software Engineers Sr AI Engineer II - Agentic AI Senior Data Engineer II - Amex Ads, Offers, and Dining Technology Director of Cyber Security / Agentic AI - Privileged Access Management (PAM) See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -4662,6 +4700,25 @@
       "updatedAt": "2026-09-15T16:14:31.088Z"
     },
     {
+      "id": "jpmorgan-chase-senior-associate-ai-customer-journey-transformation-analytics",
+      "company": "Jpmorgan Chase",
+      "role": "Senior Associate, AI Customer Journey Transformation Analytics",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "We received your job application (Job Number: 210792108)",
+      "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
+      "lastActivityAt": "2026-09-24T22:48:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0d59abc54e2113",
+      "gmailMessageIds": [
+        "1a0d59abc54e2113"
+      ],
+      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Senior Associate, AI Customer Journey Transformation Analytics 210792108 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans."
+    },
+    {
       "id": "nokiame-donotreply-principal-ai-and-cloud-architect-uested",
       "company": "Nokiame Donotreply",
       "role": "Principal AI And Cloud Architect",
@@ -4895,9 +4952,9 @@
       "role": "General Application",
       "reqId": null,
       "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
       "latestSubject": "Lazard: Confirm Your Identity",
       "latestFrom": "Lazard Careers <onehr@notifications.lazard.com>",
       "lastActivityAt": "2026-09-24T22:43:41.000Z",
@@ -5520,7 +5577,7 @@
       "gmailMessageIds": [
         "1a08bdb79b90dcf9"
       ],
-      "notes": " Tirth - We think it's awesome that you chose to apply with us. As you know, T-Mobile is changing the wireless industry for good. And that means we're always listening to find out how we can do better. Will you help us by taking a short survey to tell us about your experience applying for job requisition (REQ372480)? Your responses will have no impact on your candidacy. ACCESSING THE SURVEY If clicking on the link does not take you directly to the survey, please copy and paste the url into the address bar of your internet browser. START THE SURVEY <https://tmobilesurveys.az1.qualtrics.com/jfe/form/SV_0q9QTXS1UCbCzT8?Q_DL=RiFz5Gm9egcUVT4_0q9QTXS1UCbCzT8_CTR_aUs4RSaTkdMv3zp&Q_CHL=email> NEED HELP? For technical help while completing this survey, please visit our Support <https://www.qualtrics.com/support/survey-platform/information-survey-takers/> page. Please click the link below if you would like to opt out of receiving further communications about this requisition ID: Opt out <https://tmobilesurveys.az1.qualtrics.com/subscription/manage/confirmation?recipientId=CTR_aUs4RSaTkdMv3zp&distributionId=EMD_RiFz5Gm9egcUVT4&BT=dG1vYmlsZXN1cnZleXM> Tirth - We think it's awesome that you chose to apply with us. As you know, T-Mobile is changing the wireless industry for good. And that means we're always listening to find out how we can do better. Will you help us by taking a short survey to tell us about your experience applying for job requisition (REQ372480)? Your responses will have no impact on your candidacy. ACCESSING THE SURVEY If clicking on the link does not take you directly to the survey, please copy and paste the url into the address bar of your internet browser. START THE SURVEY NEED HELP? For technical help while completing this survey, please visit our Support page . Please click the link below if you would like to opt out of receiving further communications about this requisition ID: Opt out"
+      "notes": " Tirth - We think it's awesome that you chose to apply with us. As you know, T-Mobile is changing the wireless industry for good. And that means we're always listening to find out how we can do better. Will you help us by taking a short survey to tell us about your experience applying for job requisition (REQ375069)? Your responses will have no impact on your candidacy. ACCESSING THE SURVEY If clicking on the link does not take you directly to the survey, please copy and paste the url into the address bar of your internet browser. START THE SURVEY <https://tmobilesurveys.az1.qualtrics.com/jfe/form/SV_0q9QTXS1UCbCzT8?Q_DL=RiFz5Gm9egcUVT4_0q9QTXS1UCbCzT8_CTR_cvKd5iWRohhTcTr&Q_CHL=email> NEED HELP? For technical help while completing this survey, please visit our Support <https://www.qualtrics.com/support/survey-platform/information-survey-takers/> page. Please click the link below if you would like to opt out of receiving further communications about this requisition ID: Opt out <https://tmobilesurveys.az1.qualtrics.com/subscription/manage/confirmation?recipientId=CTR_cvKd5iWRohhTcTr&distributionId=EMD_RiFz5Gm9egcUVT4&BT=dG1vYmlsZXN1cnZleXM> Tirth - We think it's awesome that you chose to apply with us. As you know, T-Mobile is changing the wireless industry for good. And that means we're always listening to find out how we can do better. Will you help us by taking a short survey to tell us about your experience applying for job requisition (REQ375069)? Your responses will have no impact on your candidacy. ACCESSING THE SURVEY If clicking on the link does not take you directly to the survey, please copy and paste the url into the address bar of your internet browser. START THE SURVEY NEED HELP? For technical help while completing this survey, please visit our Support page . Please click the link below if you would like to opt out of receiving further communications about this requisition ID: Opt out"
     },
     {
       "id": "trisha-guzman-your-interest",
@@ -6311,7 +6368,7 @@
       "gmailMessageIds": [
         "1a08111760a93680"
       ],
-      "notes": "Your application was sent to Harnham Data Engineer Harnham Austin, Texas Metropolitan Area View job: https://www.linkedin.com/comm/jobs/view/4468853227/?trackingId=WrqhmWdFQQm4yxHp%2BpTdmA%3D%3D&refId=pMNcjD5MRVqRbqx%2Bq1xIJw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BzHf9979fQcapptyAvWqO4g%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2cMP7Wg8yGdIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muavdyka~rf-null-null&eid=a06oc2-muavdyka-rf&otpToken=ODg3NzA0OTMyNGJhZDZkNzFmYmViNzU1ZjYxN2M2NTVhZThkMWU3MmFiNmI2MmIyNTBlZTQyOGEyNGUyYjY0YWNlNDIzM2IwNzA2N2UyZTNlYTQxNGMzNjQ0NWQ5OTc4ZjFiNzMxMjQ1MTNjMWMzOWRhNDgyNzVjOWNhZTcyYjc5MGZiM2Q2ZWYxZjBhOWVkLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 21, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed Engineer - AI scalr New York, United States Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4467347160/?trackingId=ZMlNdIgjRf%2BAdIQF1%2FTBhA%3D%3D&refId=p709OAryRY24Lmopy8I5%2Fw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BzHf9979fQcapptyAvWqO4g%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2cMP7Wg8yGdIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muavdyka~rf-null-null&eid=a06oc2-muavdyka-rf&otpToken=ODg3NzA0OTMyNGJhZDZkNzFmYmViNzU1ZjYxN2M2NTVhZThkMWU3MmFiNmI2MmIyNTBlZTQyOGEyNGUyYjY0YWNlNDIzM2IwNzA2N2UyZTNlYTQxNGMzNjQ0NWQ5OTc4ZjFiNzMxMjQ1MTNjMWMzOWRhNDgyNzVjOWNhZTcyYjc5MGZiM2Q2ZWYxZjBhOWVkLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Dallas, TX 10 connections 158 company alumni 6 school alumni Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4440563792/?trackingId=pWeg1PjtT0qHxKvS7k%2BFXw%3D%3D&refId=h8RcUZz%2FTk6iLhY3NYjPsw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BzHf9979fQcapptyAvWqO4g%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2cMP7Wg8yGdIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muavdyka~rf-null-null&eid=a06oc2-muavdyka-rf&otpToken=ODg3NzA0OTMyNGJhZDZkNzFmYmViNzU1ZjYxN2M2NTVhZThkMWU3MmFiNmI2MmIyNTBlZTQyOGEyNGUyYjY0YWNlNDIzM2IwNzA2N2UyZTNlYTQxNGMzNjQ0NWQ5OTc4ZjFiNzMxMjQ1MTNjMWMzOWRhNDgyNzVjOWNhZTcyYjc5MGZiM2Q2ZWYxZjBhOWVkLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View ",
+      "notes": "Your application was sent to Harnham Data Engineer Harnham Miami-Fort Lauderdale Area View job: https://www.linkedin.com/comm/jobs/view/4471143441/?trackingId=0Ddhble2TpyK%2FFk%2FWcBkLQ%3D%3D&refId=6REqe8kpTLiZhLbfg6PVEg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BvYDbUASaQ2CreSSLg3WVJg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2hpTPHSRJChYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muf4f22f~wa-null-null&eid=a06oc2-muf4f22f-wa&otpToken=ZWE1NTdiZThjM2RjMzBmNjc0Njc2NTY3OGE2ODIwZjhkM2I3MWI4YWNhNDY3OGNhOTk0OGY3ZDJkMzA0NTM0NDkwMjhlNjU2MGEzZjM3MDgwODBkZGU4MGI3NDYzYjgxMmEyZmIxNmRiYTQ4NWNmN2Y0YjFjZjM3MThmNDFiM2IxYjZmZjRlOWMzNTBkMGRlLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 24, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Engagement Manager Kensho Technologies Cambridge, MA 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4455331496/?trackingId=SFstCnl4QRysy4ezyAGmsA%3D%3D&refId=UL6IlTlcQIqPfR99O5HvTw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BvYDbUASaQ2CreSSLg3WVJg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2hpTPHSRJChYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muf4f22f~wa-null-null&eid=a06oc2-muf4f22f-wa&otpToken=ZWE1NTdiZThjM2RjMzBmNjc0Njc2NTY3OGE2ODIwZjhkM2I3MWI4YWNhNDY3OGNhOTk0OGY3ZDJkMzA0NTM0NDkwMjhlNjU2MGEzZjM3MDgwODBkZGU4MGI3NDYzYjgxMmEyZmIxNmRiYTQ4NWNmN2Y0YjFjZjM3MThmNDFiM2IxYjZmZjRlOWMzNTBkMGRlLDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager Kensho Technologies New York, NY 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4455346350/?trackingId=MnV0MO%2F2TN6ompHzPYLCbA%3D%3D&refId=teBF%2BU9FQiiAFvoOlGZCJw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BvYDbUASaQ2CreSSLg3WVJg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2hpTPHSRJChYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muf4f22f~wa-null-null&eid=a06oc2-muf4f22f-wa&otpToken=ZWE1NTdiZThjM2RjMzBmNjc0Njc2NTY3OGE2ODIwZjhkM2I3MWI4YWNhNDY3OGNhOTk0OGY3ZDJkMzA0NTM0NDkwMjhlNjU2MGEzZjM3MDgwODBkZGU4MGI3NDYzYjgxMmEyZmIxNmRiYTQ4NWNmN2Y0YjFjZjM3MThmNDFiM2IxYjZmZjRlOWMzNTBkMGRlLDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager, US Cradle Boston, MA View job: https://www.linkedin.com/comm/jobs/view/4461914590/?trackingId=rq06XF2oSBWBv3r1JodyIQ%3D%3D&refId=6pRKqEEhSWiyWimHz2LGgw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_ema",
       "updatedAt": "2026-09-15T16:14:31.088Z"
     },
     {
@@ -6815,7 +6872,7 @@
         "1a0cfce2227cbb20",
         "1a0cf3381d9bc7d4"
       ],
-      "notes": "96 Dear Tirth, Thank you for your taking the time to apply with us here at Guidehouse. Your application for the Data Engineer Lead position has been received. If you are selected to move forward, a member of the Talent Acquisition Team will reach out to you to discuss next steps. Any updates to your status can also be found in your Candidate Portal. Your Candidate Portal will always show real-time status as well as any task(s)/information that we may need throughout the process. You can use the link below to access your Candidate Portal at any time: https://guidehouse.wd1.myworkdayjobs.com/External We encourage you to continue exploring other career opportunities with us by setting up job alerts (via your Candidate Portal) so that you will receive emails when new positions that meet your criteria become available. Thank You, Guidehouse Talent Acquisition Team NOTE: Replies to this email inbox are not monitored. This email was intended for tirthcshah1999@gmail.com Guidehouse, Inc. &#8226; Washington, D.C."
+      "notes": "96 Dear Tirth, Thank you for your taking the time to apply with us here at Guidehouse. Your application for the Data Engineer position has been received. If you are selected to move forward, a member of the Talent Acquisition Team will reach out to you to discuss next steps. Any updates to your status can also be found in your Candidate Portal. Your Candidate Portal will always show real-time status as well as any task(s)/information that we may need throughout the process. You can use the link below to access your Candidate Portal at any time: https://guidehouse.wd1.myworkdayjobs.com/External We encourage you to continue exploring other career opportunities with us by setting up job alerts (via your Candidate Portal) so that you will receive emails when new positions that meet your criteria become available. Thank You, Guidehouse Talent Acquisition Team NOTE: Replies to this email inbox are not monitored. This email was intended for tirthcshah1999@gmail.com Guidehouse, Inc. &#8226; Washington, D.C."
     },
     {
       "id": "campus-graduate-masters-full-time-senior-analyst-2027-data-campus-graduate-masters-full-time-senior-analyst-2027-data-analy-26013683",
@@ -6948,7 +7005,7 @@
       "gmailMessageIds": [
         "1a0860764f44b690"
       ],
-      "notes": "Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Engineering Manager, Data Infrastructure position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Engineering Manager, Data Infrastructure position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic",
+      "notes": "Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer, GTM position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic Hi Tirth Chirayu, We appreciate you taking the time to submit an application for the Data Engineer, GTM position, and are delighted that you would consider joining our team! Please note that with the high volume of candidates interested in Anthropic, our team may need some additional time to thoroughly review your application. We may not reach out unless we think you are a strong fit for the role you applied to. In the meantime, we truly appreciate your patience throughout our hiring process. We are grateful for your interest, and for the time and effort that you have invested in our process so far. Best, Anthropic",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -8902,44 +8959,6 @@
         "1a0cee8c13df89a0"
       ],
       "notes": "Including Eliassen Group, USD 55 - 65/hr. Apply before others do. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ https://haystack.cv 5 NEW JOBS MATCHING YOUR SEARCH Here are the latest opportunities we found for you 🔥 2 hours agoTechnology Informatica/Tableau Developer 🏢 Eliassen Group 📍 Almont, United States 🇺🇸 • 💰 USD 55 - 65/hr Apply Now → https://haystack.cv/go?j=9af987b2-9713-4671-acec-79fd4a8759c1&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FJL0xRkvXieAjUh8Xk5sXQwduJktIlLmlmZCTkAKn9dv5a9bmKcN6y0VkWOc_SdPo&t=Informatica%2FTableau%20Developer&c=Eliassen%20Group 🔥 2 hours agoTechnology Data Center Operations Engineer 🏢 Milestone Technologies, Inc. 📍 Lyon, United States 🇺🇸 Apply Now → https://haystack.cv/go?j=cb2659c5-5aae-4d16-8f98-626bccbf6a00&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FOJ_q6X8hKhW1mxCuL7tYXvBicXz0hl08TaKorZ3jCplCgBMHoKB3g3JB_b97edWU&t=Data%20Center%20Operations%20Engineer&c=Milestone%20Technologies%2C%20Inc. 🔥 3 hours agoTechnology Senior Data Engineer 🏢 Eliassen Group 📍 Covington, United States 🇺🇸 • 💰 USD 60 - 70/hr Apply Now → https://haystack.cv/go?j=4bbd78fb-fc74-4a65-a162-b9fe239369b7&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FO-rGKSSE4yHjDIvHrru6v6m6LcbT5zabAdeIYyNIX7m5-UKw8CHOTa5aVv-Gv0sL&t=Senior%20Data%20Engineer&c=Eliassen%20Group 🔥 Just nowTechnology Business Data Analyst - Commercial Lending 🏢 Apex Systems 📍 Charlotte, United States 🇺🇸 Apply Now → https://haystack.cv/go?j=c35eda94-96f4-4029-b20a-fef7c3fd6d38&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2F5MKSDXu2D_4kfkpydXAEcQy0MoaHkfbLr363Fu-rKwcZBX-r1ULorli3A89x8JSF&t=Business%20Data%20Analyst%20-%20Commercial%20Lending&c=Apex%20Systems 🔥 Just nowTechnology .Net Applications Developer 🏢 INFT Solutions inc 📍 United States 🇺🇸 Apply Now → https://haystack.cv/go?j=e970d431-5a9e-47bc-b20c-fee880dadc27&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FydIiOTfhEyCxfrOqW6y9-DLNFCuw6B5dKKfzKhdgJI1SvKzFlK716ajy8DKiy5y1&t=.Net%20Applications%20Developer&c=INFT%20Solutions%20inc Browse All Jobs https://haystack.cv/jobs?src=searches-email Hiring as well? Post a role on Haystack and get AI-matched, vetted candidates in 24 hours. $349 for your first job, with a 10-candidate guarantee. Post a job → https://haystackapp.io/employers?utm_source=job_alert_email&utm_medium=email&utm_campaign=employer_crosssell&utm_content=alert_footer You're receiving this because you subscribed to job alerts on haystack.cv Unsubscribe from these emails https://haystack.cv/unsubscribe?token=eyJpZCI6IjViMjg2YTBiLWFjYTctNDQyZi05Y2NmLWVjMzNhN2ZlNDRiNCIsImVtYWlsIjoidGlydGhjc2hhaDE5OTlAZ21haWwuY29tIn0%3D New Job Opportunities Including Eliassen Group, USD 55 - 65/hr. Apply before others do. &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj"
-    },
-    {
-      "id": "sheela-lokesh-your-interest-in-the-analyst-sf",
-      "company": "Sheela Lokesh",
-      "role": "Your Interest In The Analyst- SF",
-      "reqId": null,
-      "status": "interviewed",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "interview scheduled or confirmed",
-      "latestSubject": "Invitation: Interview with RZR Global Inc. @ Fri Sep 25, 2026 12:30pm - 1pm (EDT) (tirthcshah1999@gmail.com)",
-      "latestFrom": "Sheela Lokesh <sheela.l@aarki.com>",
-      "lastActivityAt": "2026-09-23T14:49:47.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0c9def015e4e80",
-      "gmailMessageIds": [
-        "1a0c9def015e4e80"
-      ],
-      "notes": "Interview with RZR Global Inc. Friday Sep 25, 2026 ⋅ 12:30pm – 1pm Eastern Time - New York Join with Google Meet https://meet.google.com/nhp-nghd-jfw?hs=224 Join by phone (US) +1 219-304-6500 PIN: 328556693 More phone numbers https://tel.meet/nhp-nghd-jfw?pin=8467686949504&hs=0 Join the Google Meet meeting: https://meet.google.com/nhp-nghd-jfw Guests tirthcshah1999@gmail.com schedule@anil.greenhouse.io View all guest info https://calendar.google.com/calendar/event?action=VIEW&eid=dGc4b3BhamY2Nm5xc3NjMHM2Zm05dmY5MzQgdGlydGhjc2hhaDE5OTlAbQ&tok=OTIjY19kNWQyZTU2MzM0Y2Q1NDE2M2M3MjdjZjg0Zjk5ZTIzOWVlN2IyNjBjYTI0MTVhYTkyY2U5YzhhN2RjYjgwMjU5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb203ZmNhN2JiYWFiOWFjZDFhOTY4YTAwMDBiMGQwNDQwMTc2ZDk3NWQ1&ctz=America%2FNew_York&hl=en&es=1 Reply for tirthcshah1999@gmail.com and view more details https://calendar.google.com/calendar/event?action=VIEW&eid=dGc4b3BhamY2Nm5xc3NjMHM2Zm05dmY5MzQgdGlydGhjc2hhaDE5OTlAbQ&tok=OTIjY19kNWQyZTU2MzM0Y2Q1NDE2M2M3MjdjZjg0Zjk5ZTIzOWVlN2IyNjBjYTI0MTVhYTkyY2U5YzhhN2RjYjgwMjU5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb203ZmNhN2JiYWFiOWFjZDFhOTY4YTAwMDBiMGQwNDQwMTc2ZDk3NWQ1&ctz=America%2FNew_York&hl=en&es=1 Your attendance is optional. ~~//~~ Invitation from Google Calendar: https://calendar.google.com/calendar/ You are receiving this email because you are subscribed to calendar notifications. To stop receiving these emails, go to https://calendar.google.com/calendar/r/settings, select this calendar, and change \"Other notifications\". Forwarding this invitation could allow any recipient to send a response to the organizer, be added to the guest list, invite others regardless of their own invitation status, or modify your RSVP. Learn more https://support.google.com/calendar/answer/37135#forwarding 96 Interview with RZR Global Inc. Join with Google Meet – Join the Google Meet meeting: https://meet.google.com/nhp-nghd-jfw Join with Google Meet Meeting link meet.google.com/nhp-nghd-jfw Join by phone (US) +1 219-304-6500 PIN: 328556693 More phone numbers Join the Google Meet meeting: https://meet.google.com/nhp-nghd-jfw When Friday Sep 25, 2026 ⋅ 12:30pm – 1pm (Eastern Time - New York) Guests tirthcshah1999@gmail.com schedule@anil.greenhouse.io View all guest info Reply for tirthcshah1999@gmail.com Yes No Maybe More options Invitation from Google Calendar You are receiving this email because you are subscribed to calendar notifications. To stop receiving these emails, go to Calendar settings , select this calendar, and change \"Other notifications\". Forwarding this invitation could allow any recipient to send a response to the organizer, be added to the guest list, invite others regardless of their own invitation status, or modify your RSVP. Learn more"
-    },
-    {
-      "id": "sheela-lokesh-submitting-your-availability-for-the-analyst-sf-position-you",
-      "company": "Sheela Lokesh",
-      "role": "Submitting Your Availability For The Analyst- SF Position. You",
-      "reqId": null,
-      "status": "interviewed",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "interview scheduled or confirmed",
-      "latestSubject": "RZR Global Inc. Interview Confirmation",
-      "latestFrom": "Sheela Lokesh <sheela.l@aarki.com>",
-      "lastActivityAt": "2026-09-23T14:49:41.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0cebe6fa8688a4",
-      "gmailMessageIds": [
-        "1a0cebe6fa8688a4"
-      ],
-      "notes": "Hi Tirth Shah, Thanks for submitting your availability for the Analyst- SF position. You're confirmed for your interview on: Date/Time: Sep 25, 2026 12:30pm-1:00pm (GMT-04:00) Eastern Time (US & Canada) Interviewers: Sheela Lokesh Interview type: Recruiter Prescreen (Discussion about your current and previous company roles and responsibilities, alignment of role and designation, and you're understanding of the organization. ) Google Meet: https://meet.google.com/nhp-nghd-jfw To help you prepare, please review the candidate preparation document here. ( https://drive.google.com/file/d/13QQDEcB1eKpGZ-bX4214NBgWGQPx2UBf/view ) Let us know if you have any other questions before your interview. Thanks, Sheela Hi Tirth Shah, Thanks for submitting your availability for the Analyst- SF position. You're confirmed for your interview on: Date/Time: Sep 25, 2026 12:30pm-1:00pm (GMT-04:00) Eastern Time (US & Canada) Interviewers: Sheela Lokesh Interview type: Recruiter Prescreen (Discussion about your current and previous company roles and responsibilities, alignment of role and designation, and you're understanding of the organization. ) Google Meet: https://meet.google.com/nhp-nghd-jfw To help you prepare, please review the candidate preparation document here. Let us know if you have any other questions before your interview. Thanks, Sheela"
     },
     {
       "id": "eric-jackson-construction-data-engineer-opportunity-with-us",
@@ -11077,7 +11096,7 @@
       "gmailMessageIds": [
         "1a0810a45b2bcae9"
       ],
-      "notes": "Your application was sent to Enhance IT Jr Data Engineer Enhance IT Nevada, United States View job: https://www.linkedin.com/comm/jobs/view/4465937386/?trackingId=ItILZLpXSr63QSmJQ9rAJg%3D%3D&refId=MHd%2BsxXhTAuMwMUjGSgNAg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3By2VA3nQnTUCd25O3hvHnEA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2BL3dYCHzU6Ys1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu439jps~5x-null-null&eid=a06oc2-mu439jps-5x&otpToken=NjZiMDFhM2E2ZmQwYTliZDk3MzFkODRiYWM1MjQ0MDFhYmYzNWQ5OTdmYzhjZjlkMTQ4N2UzNmYwM2UxMzVjMWVhOGE5OTdhNzdiNWI3MzUyMDkyMzM2NzA3NjQ0ZDgyNDBiMjMyODU4YmMwNDBjMDA0NGIwZjFhOGMyMjQzM2FhNDgwNTUyNDQ1MDgyZWJhLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 16, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=TzIGgTd1ShGOfDUTIwlSpQ%3D%3D&refId=L48KAiN6QM2%2F6qxVPV4RuA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3By2VA3nQnTUCd25O3hvHnEA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2BL3dYCHzU6Ys1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu439jps~5x-null-null&eid=a06oc2-mu439jps-5x&otpToken=NjZiMDFhM2E2ZmQwYTliZDk3MzFkODRiYWM1MjQ0MDFhYmYzNWQ5OTdmYzhjZjlkMTQ4N2UzNmYwM2UxMzVjMWVhOGE5OTdhNzdiNWI3MzUyMDkyMzM2NzA3NjQ0ZDgyNDBiMjMyODU4YmMwNDBjMDA0NGIwZjFhOGMyMjQzM2FhNDgwNTUyNDQ1MDgyZWJhLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4465984671/?trackingId=U0wRh4TLTJKrDBH2CL2%2BiA%3D%3D&refId=PsG3bZtzTPe9ixFIndbHxw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3By2VA3nQnTUCd25O3hvHnEA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2BL3dYCHzU6Ys1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu439jps~5x-null-null&eid=a06oc2-mu439jps-5x&otpToken=NjZiMDFhM2E2ZmQwYTliZDk3MzFkODRiYWM1MjQ0MDFhYmYzNWQ5OTdmYzhjZjlkMTQ4N2UzNmYwM2UxMzVjMWVhOGE5OTdhNzdiNWI3MzUyMDkyMzM2NzA3NjQ0ZDgyNDBiMjMyODU4YmMwNDBjMDA0NGIwZjFhOGMyMjQzM2FhNDgwNTUyNDQ1MDgyZWJhLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer, Agentic AI Redapt, Inc. Seattle, WA 1 school alum Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4453807",
+      "notes": "Your application was sent to Enhance IT Jr Data Engineer Enhance IT Iowa, United States View job: https://www.linkedin.com/comm/jobs/view/4465220134/?trackingId=cb9eMhXnQ9e5oCjbW1bdlg%3D%3D&refId=OgEGuEVOSfy80SxokoNnAg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BobwrHtvmRTyKgEgOJGN7yw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3F1OLjswXI5cs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu2at83g~nc-null-null&eid=a06oc2-mu2at83g-nc&otpToken=MTllOGMwNzkwOWNkNWEzN2EzMjA3N2IzZjYyMjI3NzhjNjcwNzcyMzZmYWU1YmMwNzBhMDBhYTcwZDkwM2RiY2FmNjM3ZDQwZDRjZmNiMzY3MTM2YTdiMDk1Y2RmZmM1OTQ2ZGE2NGEyMWEwYWMyNDRkYTZkMTI5NGVkY2E1OGViNTZmYzgwYjFkZGZkY2ZlLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 15, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=AlKFm4mpR86qzgYKi2vcfQ%3D%3D&refId=LsDUZ2Y9TV2lhv92Kr9w1Q%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BobwrHtvmRTyKgEgOJGN7yw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3F1OLjswXI5cs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu2at83g~nc-null-null&eid=a06oc2-mu2at83g-nc&otpToken=MTllOGMwNzkwOWNkNWEzN2EzMjA3N2IzZjYyMjI3NzhjNjcwNzcyMzZmYWU1YmMwNzBhMDBhYTcwZDkwM2RiY2FmNjM3ZDQwZDRjZmNiMzY3MTM2YTdiMDk1Y2RmZmM1OTQ2ZGE2NGEyMWEwYWMyNDRkYTZkMTI5NGVkY2E1OGViNTZmYzgwYjFkZGZkY2ZlLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Austin, TX 159 company alumni 6 school alumni Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4440572213/?trackingId=GroEQsVHSWKTaEL7QBfRiA%3D%3D&refId=YNbjKaTYQqGEVAHvUCvbpA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BobwrHtvmRTyKgEgOJGN7yw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3F1OLjswXI5cs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu2at83g~nc-null-null&eid=a06oc2-mu2at83g-nc&otpToken=MTllOGMwNzkwOWNkNWEzN2EzMjA3N2IzZjYyMjI3NzhjNjcwNzcyMzZmYWU1YmMwNzBhMDBhYTcwZDkwM2RiY2FmNjM3ZDQwZDRjZmNiMzY3MTM2YTdiMDk1Y2RmZmM1OTQ2ZGE2NGEyMWEwYWMyNDRkYTZkMTI5NGVkY2E1OGViNTZmYzgwYjFkZGZkY2ZlLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Dallas, TX 10 connections 159 company alumni 6 school alumni Apply w",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -11662,12 +11681,12 @@
     {
       "id": "accenture-strategy-senior-manager-for-technology-ai-native-companies-erence",
       "company": "Accenture",
-      "role": "Your Interest",
+      "role": "Forward Deployed Engineer",
       "reqId": "erence",
       "status": "rejected",
       "confidence": "high",
-      "classifier": "rules",
-      "reason": "platform auto-receipt sender — application acknowledgment",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
       "latestSubject": "Update on Your Accenture Application",
       "latestFrom": "Accenture Careers <accenture@myworkday.com>",
       "lastActivityAt": "2026-09-22T07:47:45.000Z",
@@ -11678,7 +11697,7 @@
         "1a05d3dc53851fe9",
         "1a067182924e98e8"
       ],
-      "notes": "96 Hi Tirth, Thank you for your interest in Accenture and giving us the opportunity to learn about your background and qualifications. We have carefully considered your application against our hiring needs and are unable to move forward at this time. We’re continually hiring and our needs change over time, so we invite you to continue to visit our careers site to explore open opportunities. We will keep you in mind for future hiring needs. We wish you the best in your career search. Reference Role: R00353368 Forward Deployed AI Engineer Accenture Recruitment Team This email was intended for tirthcshah1999+workday-accenture@gmail.com",
+      "notes": "96 Hi Tirth, Thank you for your interest in Accenture and giving us the opportunity to learn about your background and qualifications. We have carefully considered your application against our hiring needs and are unable to move forward at this time. We’re continually hiring and our needs change over time, so we invite you to continue to visit our careers site to explore open opportunities. We will keep you in mind for future hiring needs. We wish you the best in your career search. Reference Role: R00355645 Forward Deployed Engineer Accenture Recruitment Team This email was intended for tirthcshah1999+workday-accenture@gmail.com",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -22142,7 +22161,7 @@
       "gmailMessageIds": [
         "19fdc206809c504f"
       ],
-      "notes": "Hi Tirth, Thank you for applying for the Senior Software Engineer, Distributed Data Systems role at Clera! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team Hi Tirth , Thank you for applying for the Senior Software Engineer, Distributed Data Systems role at Clera ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team",
+      "notes": "Hi Tirth, Thank you for applying for the AWS Data Engineer role at Clera! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team Hi Tirth , Thank you for applying for the AWS Data Engineer role at Clera ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -50444,7 +50463,7 @@
       "gmailMessageIds": [
         "19f8fde4b8dafbd5"
       ],
-      "notes": "Hello Tirth, Thank you for your interest in joining Talkiatry and for taking the time to apply to our Software Engineer (Data) opportunity. We appreciate you sharing your experience with us. Our team is reviewing applications now, and if your background looks like a potential match, we’ll be in touch about next steps. Regardless, we’re grateful for your interest in our work and wish you the best in your job search. To learn more about Talkiatry in the meantime, please visit our website: https://www.talkiatry.com/ Best, The Talkiatry Corporate Recruitment Team! Hello Tirth , Thank you for your interest in joining Talkiatry and for taking the time to apply to our Software Engineer (Data) opportunity. We appreciate you sharing your experience with us. Our team is reviewing applications now, and if your background looks like a potential match, we’ll be in touch about next steps. Regardless, we’re grateful for your interest in our work and wish you the best in your job search. To learn more about Talkiatry in the meantime, please visit our website: https://www.talkiatry.com/ Best, The Talkiatry Corporate Recruitment Team!",
+      "notes": "Hello Tirth, Thank you for your interest in joining Talkiatry and for taking the time to apply to our Data Engineer opportunity. We appreciate you sharing your experience with us. Our team is reviewing applications now, and if your background looks like a potential match, we’ll be in touch about next steps. Regardless, we’re grateful for your interest in our work and wish you the best in your job search. To learn more about Talkiatry in the meantime, please visit our website: https://www.talkiatry.com/ Best, The Talkiatry Corporate Recruitment Team! Hello Tirth , Thank you for your interest in joining Talkiatry and for taking the time to apply to our Data Engineer opportunity. We appreciate you sharing your experience with us. Our team is reviewing applications now, and if your background looks like a potential match, we’ll be in touch about next steps. Regardless, we’re grateful for your interest in our work and wish you the best in your job search. To learn more about Talkiatry in the meantime, please visit our website: https://www.talkiatry.com/ Best, The Talkiatry Corporate Recruitment Team!",
       "updatedAt": "2026-09-15T16:11:10.358Z"
     },
     {
