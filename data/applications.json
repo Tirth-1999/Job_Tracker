@@ -1,6 +1,63 @@
 {
-  "updatedAt": "2026-09-29T15:28:47.924Z",
+  "updatedAt": "2026-09-29T16:26:19.418Z",
   "applications": [
+    {
+      "id": "teleport-your-interest",
+      "company": "Teleport",
+      "role": "Your Interest",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "formal rejection/non-selection language",
+      "latestSubject": "Thanks for your interest in Teleport",
+      "latestFrom": "Teleport Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-09-29T16:17:43.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0edf52ee03d455",
+      "gmailMessageIds": [
+        "1a0edf52ee03d455"
+      ],
+      "notes": "Hi Tirth, Thank you for your application to the Senior Data Engineer role and for your interest in Teleport. Although you have many valuable skills, unfortunately we will not be moving forward with your candidacy at this time. We will reach out to you in the future if a position opens up that's in alignment with your skill set. Please note, if you're currently interviewing for another role with us, this doesn't affect that process. Please continue as planned, and reach out to your recruiter directly if you have any questions. We truly appreciate your interest in Teleport and wish you success in your job search. Kind Regards, The Teleport Recruiting Team Hi Tirth , Thank you for your application to the Senior Data Engineer role and for your interest in Teleport. Although you have many valuable skills, unfortunately we will not be moving forward with your candidacy at this time. We will reach out to you in the future if a position opens up that's in alignment with your skill set. Please note , if you're currently interviewing for another role with us, this doesn't affect that process. Please continue as planned, and reach out to your recruiter directly if you have any questions. We truly appreciate your interest in Teleport and wish you success in your job search. Kind Regards, The Teleport Recruiting Team"
+    },
+    {
+      "id": "haystack-general-application",
+      "company": "Haystack",
+      "role": "General Application",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "CGI is hiring - USD 88,200/yr",
+      "latestFrom": "Haystack Jobs <alerts@alerts.haystack.cv>",
+      "lastActivityAt": "2026-09-29T16:11:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0c7b6cc05d8b31",
+      "gmailMessageIds": [
+        "1a0c7b6cc05d8b31"
+      ],
+      "notes": "Including CGI, USD 88,200/yr. Apply before others do. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ https://haystack.cv 5 NEW JOBS MATCHING YOUR SEARCH Here are the latest opportunities we found for you 🔥 Just nowTechnology Databricks Developer - Databricks Apps Specialist 🏢 CGI 📍 Houston, United States 🇺🇸 • 💰 USD 88,200/yr Apply Now → https://haystack.cv/go?j=fd5d303f-f71d-4235-9b61-bc1996d9dfcd&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FgNRpksiHqbb-OZRTt5r2sCAEtZIHEzyR7XcAMSMtJZW-O2YQOwgse5YyAZkmIArg&t=Databricks%20Developer%20-%20Databricks%20Apps%20Specialist&c=CGI 🔥 3 hours agoTechnology Lead Full Stack AI Engineer 🏢 Strategic Staffing Solutions 📍 Columbus, United States 🇺🇸 • 💰 USD 78/hr Apply Now → https://haystack.cv/go?j=91f29525-f1a9-4169-86bc-148fbbda24b4&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FCn4dkD0hsJ9DrE9J9HOmNGbJLkJCr5nCaFNfMrIqqLhDbOUDXMRe8WYeDHXLaZWz&t=Lead%20Full%20Stack%20AI%20Engineer&c=Strategic%20Staffing%20Solutions 🔥 4 hours agoTechnology Sr. Data Analytics Engineer 🏢 Innova 📍 Charlotte, United States 🇺🇸 • 💰 USD 53 - 58/hr Apply Now → https://haystack.cv/go?j=ca01c94e-eb84-47ef-b2e4-8be531aa7cfb&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FquGgSllENySUGU8_oEpvrB6b1ZHIyUN4ZUv55iATLzheYSCz_G5g-XS6h05kwFwV&t=Sr.%20Data%20Analytics%20Engineer&c=Innova 🔥 2 hours agoTechnology Senior Data Scientist with Security Clearance 🏢 Prescient Edge 📍 Washington, United States 🇺🇸 • 💰 USD 160,000 - 200,000/yr Apply Now → https://haystack.cv/go?j=8f3e1ca8-293d-4370-9501-31df606633d9&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FYfcByJMhjtzfWYUc8dhXleptmviYsx2Rw6ha96WfwIG69EDKrrf-ExCLQIYcK_wq&t=Senior%20Data%20Scientist%20with%20Security%20Clearance&c=Prescient%20Edge 🔥 3 hours agoTechnology Cloud Developer, Mid with Security Clearance 🏢 Cayuse Technologies 📍 Washington, United States 🇺🇸 Apply Now → https://haystack.cv/go?j=3bb4f836-fb77-4475-8334-107049eb4118&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2F9-UCJ6BquNBbHWPo9bpPjWdKspzcEmNz32uys64mI9WOj7k93Op1E3z91WUlykwg&t=Cloud%20Developer%2C%20Mid%20with%20Security%20Clearance&c=Cayuse%20Technologies Browse All Jobs https://haystack.cv/jobs?src=searches-email Hiring as well? Post a role on Haystack and get AI-matched, vetted candidates in 24 hours. $349 for your first job, with a 10-candidate guarantee. Post a job → https://haystackapp.io/employers?utm_source=job_alert_email&utm_medium=email&utm_campaign=employer_crosssell&utm_content=alert_footer You're receiving this because you subscribed to job alerts on haystack.cv Unsubscribe from these emails https://haystack.cv/unsubscribe?token=eyJpZCI6IjViMjg2YTBiLWFjYTctNDQyZi05Y2NmLWVjMzNhN2ZlNDRiNCIsImVtYWlsIjoidGlydGhjc2hhaDE5OTlAZ21haWwuY29tIn0%3D New Job Opportunities Inc"
+    },
+    {
+      "id": "jungle-a-job-on-welcome-to-the-jungle",
+      "company": "Jungle",
+      "role": "A Job On Welcome To The Jungle",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "What happened to your application at Newsela?",
+      "latestFrom": "Welcome to the Jungle <help@welcometothejungle.com>",
+      "lastActivityAt": "2026-09-29T15:45:22.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0edd7985f9614c",
+      "gmailMessageIds": [
+        "1a0edd7985f9614c"
+      ],
+      "notes": "What happened to your application? 96 Hi Tirth, you recently applied for a job on Welcome to the Jungle: Data Engineer What happened next with your application? 📨 Please check your spam/junk folder for a response before answering. I was invited to the next stage They rejected my application I never received a response Not sure what answer to give? Send us a message. Your two second submission will help us improve job search. We show response rates on jobs to encourage companies to get back to your initial application within two weeks. Welcome to the Jungle is a trading name of Otta Technology Ltd. Unit 1.3, 11-29 Fashion Street, London, E1 6PX, England Manage email notifications | Unsubscribe"
+    },
     {
       "id": "sonarsource-s-rl-your-interest",
       "company": "Sonarsource Sàrl",
@@ -132,6 +189,25 @@
       "gmailThreadId": "1a0d0cdd948175ad",
       "gmailMessageIds": [
         "1a0d0cdd948175ad"
+      ],
+      "notes": "Hello Tirth Thank you for your interest in the Data Scientist (2617203) position at SAIC. At this time, we will not be proceeding with your application for this position. We encourage you to look at future openings that match your professional interests and qualifications on our career website. New positions open on a daily basis. Also, you can click here to set up job alerts based on your career interests. Start by filtering your preferences (skills, location) and then choose how frequently you want to be notified about relevant jobs by clicking \"Set Up Job Alerts >\". At SAIC, we believe that putting people first is the right thing to do. That's why we've brought you the best job searching tools all in one place! Take advantage of these Job Search Assistance Tools to help you right away. This is a free platform, powered by SAIC. When you register, you will have access to resume development, interview practices, self-assessments and more! This platform is available 24 hours a day, 7 days a week. We sincerely wish you success in your job search."
+    },
+    {
+      "id": "saic-data-scientist",
+      "company": "SAIC",
+      "role": "Data Scientist",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "formal rejection/non-selection language",
+      "latestSubject": "SAIC – Job Application Status Update",
+      "latestFrom": "SAIC Careers <careers@talent.saic.com>",
+      "lastActivityAt": "2026-09-29T12:35:13.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0ed29836db403b",
+      "gmailMessageIds": [
+        "1a0ed29836db403b"
       ],
       "notes": "Hello Tirth Thank you for your interest in the Data Scientist (2617203) position at SAIC. At this time, we will not be proceeding with your application for this position. We encourage you to look at future openings that match your professional interests and qualifications on our career website. New positions open on a daily basis. Also, you can click here to set up job alerts based on your career interests. Start by filtering your preferences (skills, location) and then choose how frequently you want to be notified about relevant jobs by clicking \"Set Up Job Alerts >\". At SAIC, we believe that putting people first is the right thing to do. That's why we've brought you the best job searching tools all in one place! Take advantage of these Job Search Assistance Tools to help you right away. This is a free platform, powered by SAIC. When you register, you will have access to resume development, interview practices, self-assessments and more! This platform is available 24 hours a day, 7 days a week. We sincerely wish you success in your job search."
     },
@@ -269,6 +345,26 @@
       "notes": "Apply Now, Christine and Charles are hiring for Staff Data Engineer and Senior AI/ML Engineer roles! ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ [Jobot logo] Tirth Chirayu Shah 12 New Jobs for your Job Search Recommended Apply -- Based on your resume Staff Data Engineer [https://url9751.alerts.jobot.com/ls/click?upn=u001.nzDSnI8Q0Y9UfX4wWW5-2BpLmDLJUw5zsWrRP9ba15kqo9NfCQG0ZfADR3xHhx20jMghqihx63MNU9NuYqlvqwerTFnLJFPrrxmnxlrslFqfckFMaT4rAWe-2B7hzGOhVBaMwVTaLWNawRtsYcExA6RHchnOXUbLHTJVZtmNQQ5-2BtZ1JDwXGkywC6KW9hoQD2C2jcs4n_3iIz9nyIoE7WYm9EGmPy-2FHdpg9RX0TMZqeH-2Fa-2FauaY5JI6is5Df4yfy33UBJs-2BtbHxWZ34RPOVwnEqR-2Fo0r3vWb8-2FPadgZAB2Ut8DFURkoI-2Bio62ULOrqAaBvwGJvaoMYZoChi-2BpQ-2BMjN-2F4Gc75j0PAnxLa5fyfUVhZvcT4O-2F1R8NHpKRH3ts9h1A-2BU3PrwNS5v9K1MinSWECRklyRVDTlfMqk6-2FXWHjRooa-2B7Qn-2F4Jp3WquaI1c9oFvoWFH-2BLrg2DsfbV-2B1HmLiXcq-2BvTDVJg-3D-3D] Fintech firm hiring remote Principal Data Engineer / Generous pay + benefits / Remote in NYC or Chicago [🏡] REMOTE [📍] Chicago, IL +1 [💵] $170,000 - $205,000 1-Click Apply [https://url9751.alerts.jobot.com/ls/click?upn=u001.nzDSnI8Q0Y9UfX4wWW5-2BpGg733glLFowWEMvwvyCDrx076BZVjT8FuXW2Bs6fF8RVVpfblQybCNteLJJ5VjrJpSJbq9KPaVYeO11Isb30ZQ1xu8o84D20FXtRxaEuSEPIhoZ-2FSDzVKOsM0byrFsgQ8kpZbmWPZuphcFaJelX0jSU5bM24f4yypKVZTmVpcLKnhDyx3riyATmsuDqi-2BJx-2Fs2QYnKO6dWsdVoOvULXYzhyoKh3bzXs62cT4KQgV55tV979_3iIz9nyIoE7WYm9EGmPy-2FHdpg9RX0TMZqeH-2Fa-2FauaY5JI6is5Df4yfy33UBJs-2BtbHxWZ34RPOVwnEqR-2Fo0r3vVfebsP8tkUXIa-2BoOFxQxriMUzesyI5msqlHdmjSJo0AiHhL9lNnO2-2FV6Fk-2FBXqjVm4cyMvzKiHlg7mfvA9CHn3FIntlDzAwdFXCmcqRN4LpHZb9kIo5KbPFWe7V7C62l9Dj33uzDZIB8KWSdtlegFLmqWXjldGYTxtJoRqtxk84lh2IYNKLAR8i9CdjxN2p4g-3D-3D] [Christine McNamara] Christine Also Consider -- Based on your resume Senior Data Scientist [https://url9751.alerts.jobot.com/ls/click?upn=u001.nzDSnI8Q0Y9UfX4wWW5-2BpLmDLJUw5zsWrRP9ba15kqoAU6psKz-2FlJBnkMQrOiiMV6xOQfieNX55GKYgKT89y9t7B-2BT1Al3Eyk3c-2BkOhWDE1qxI8TbeV3Mk7bRMzII3i2ajAHZikD2ogZsv4Ui2KyySRMScUL8rPjpMrXbRlhWSv4Qaoz4QQhuW-2F05kF-2F6us4LKdN_3iIz9nyIoE7WYm9EGmPy-2FHdpg9RX0TMZqeH-2Fa-2FauaY5JI6is5Df4yfy33UBJs-2BtbHxWZ34RPOVwnEqR-2Fo0r3vRX7-2BwagkquZnYPFRr49DxvH4Ee1k8wLh88W57ECGd-2B3UFZzL5XGzQJHt4DtxtE-2BTGQDEXDjJj28YJgyd-2F6-2BASdqQ-2Bjfl23AgO5NasQBepZ2t43Bn-2FJPr6v-2Fexns4-2FtvQTRRRZddk-2Fm33-2BB6KsaRGP6O7Tt-2BlkQC-2BhrgAF8A-2BtsirqfvG97i6WJfWO8XJ9p5Kw-3D-3D] Fintech firm hiring remote Senior Data Scientist / Generous pay + benefits /100% remote [🏡] REMOTE [📍] Chicago, IL +1 [💵] $150,000 - $180,000 1-Click Apply [https://url9751.alerts.jobot.com/ls/click?upn=u001.nzDSnI8Q0Y9UfX4wWW5-2BpGg733glLFowWEMvwvyCDrxTjhCNpcokMcS182DMSx943WmPvwXJL-2F1-2F5hx-2B01kIkH0ZyIjcoPZfnWDdITtM2wn-2Bdhn7FMUUBRP72ovtB1Kef6GuqB98Fcgqdzy6KSO2enM8BB-2FaCZyDUDGN4FTDLzWgFAMS1M5zzn1E1WoxfMZC9zM5gmFtTe9jN1U2DO1rkx682gvoZBb9fKfNSVSH-2F34obPvWg5ZWkOK4oNz8ZwOOzOHylKfw2IvWjUK0V-2Bn"
     },
     {
+      "id": "icf-bell-ceremony-discover-more",
+      "company": "ICF",
+      "role": "Bell Ceremony. DISCOVER MORE",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "Do you feel recognized at work?",
+      "latestFrom": "ICF Careers <icfcareers@icf.com>",
+      "lastActivityAt": "2026-09-29T11:39:02.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0ece1cf3eb2bf1",
+      "gmailMessageIds": [
+        "1a0ece1cf3eb2bf1",
+        "1a0edfa3e6049a28"
+      ],
+      "notes": "Sept Newsletter 96 We'd love to see you apply Learn more about ICF Complete your ICF profile Browse open jobs A culture of recognition At ICF, recognition is more than an annual award ceremony or once-a-year performance appraisal. It’s woven into the everyday—from a timely note of appreciation to structured conversations about performance, purpose, and career growth. LEARN MORE LEARN MORE Open jobs spotlight FEMA Business Development Manager | Energy Markets Consultant | Threat Detection & Response Engineer, Senior | Residential Account Specialist - Multifamily Homes | ServiceNow Solutions Architect | Disaster Response Planning - Reservist (On Call) | Project Lead - Cybersecurity | Computer Scientist / Software Developer, Junior | Energy Market Analyst - Power And more— browse our open jobs today > ICF's 20 years on Nasdaq 2026 marks the 20th anniversary of ICF becoming a publicly traded company. This month, our leadership team gathered in New York to celebrate this milestone and participate in the Nasdaq Opening Bell ceremony. DISCOVER MORE > Meet us on Instagram Want to know what it's like to work at ICF? FOLLOW US FOLLOW US ICF 1902 Reston Metro Plaza, Reston, VA 20190 Website | LinkedIn | Facebook | Inside ICF Copyright 2026, ICF International Inc. All Rights Reserved click here to unsubscribe"
+    },
+    {
       "id": "american-express-data-engineer-26012288",
       "company": "American Express",
       "role": "Data Engineer - 26012288",
@@ -306,25 +402,6 @@
         "1a0ece6a49cb8199"
       ],
       "notes": "Hello Tirth Shah, Thank you for your interest for the position of Data Engineer II - 26009300. We appreciate your time and effort in applying for this position at American Express. After careful consideration, we will not be moving forward with your application. We encourage you to continue reviewing the American Express Careers Site and to also update your candidate profile and job preferences to stay up-to-date on future opportunities. Thank you again for your interest in American Express. Amex Talent Acquisition Team Please note, American Express will retain and process your personal data submitted via your application for a limited period in accordance with our Online Recruitment Privacy Statement . Replies to this email are undeliverable. If contacted by a suspicious profile, or if something feels off, don’t engage — email us to verify. Always confirm or apply for any open roles directly on the official American Express Careers Site ."
-    },
-    {
-      "id": "icf-bell-ceremony-discover-more",
-      "company": "ICF",
-      "role": "Bell Ceremony. DISCOVER MORE",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
-      "latestSubject": "Do you feel recognized at work?",
-      "latestFrom": "ICF Careers <icfcareers@icf.com>",
-      "lastActivityAt": "2026-09-29T11:16:10.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0ece1cf3eb2bf1",
-      "gmailMessageIds": [
-        "1a0ece1cf3eb2bf1"
-      ],
-      "notes": "Sept Newsletter 96 We'd love to see you apply Learn more about ICF Complete your ICF profile Browse open jobs A culture of recognition At ICF, recognition is more than an annual award ceremony or once-a-year performance appraisal. It’s woven into the everyday—from a timely note of appreciation to structured conversations about performance, purpose, and career growth. LEARN MORE LEARN MORE Open jobs spotlight FEMA Business Development Manager | Energy Markets Consultant | Threat Detection & Response Engineer, Senior | Residential Account Specialist - Multifamily Homes | ServiceNow Solutions Architect | Disaster Response Planning - Reservist (On Call) | Project Lead - Cybersecurity | Computer Scientist / Software Developer, Junior | Energy Market Analyst - Power And more— browse our open jobs today > ICF's 20 years on Nasdaq 2026 marks the 20th anniversary of ICF becoming a publicly traded company. This month, our leadership team gathered in New York to celebrate this milestone and participate in the Nasdaq Opening Bell ceremony. DISCOVER MORE > Meet us on Instagram Want to know what it's like to work at ICF? FOLLOW US FOLLOW US ICF 1902 Reston Metro Plaza, Reston, VA 20190 Website | LinkedIn | Facebook | Inside ICF Copyright 2026, ICF International Inc. All Rights Reserved click here to unsubscribe"
     },
     {
       "id": "rhino-rhino-jetty",
@@ -535,25 +612,6 @@
         "1a0ec3a73c542a20"
       ],
       "notes": "Tirth, Thanks for applying for the Data Engineer position at ABACUS. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, ABACUS ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Tirth, Thanks for applying for the Data Engineer position at ABACUS. Your application has been received and we will review it right away. If your application seems like a good fit for the position we will contact you soon. Regards, ABACUS ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
-    },
-    {
-      "id": "haystack-general-application",
-      "company": "Haystack",
-      "role": "General Application",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
-      "latestSubject": "CGI is hiring - USD 88,200/yr",
-      "latestFrom": "Haystack Jobs <alerts@alerts.haystack.cv>",
-      "lastActivityAt": "2026-09-29T07:50:28.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0c7b6cc05d8b31",
-      "gmailMessageIds": [
-        "1a0c7b6cc05d8b31"
-      ],
-      "notes": "Including CGI, USD 88,200/yr. Apply before others do. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ https://haystack.cv 5 NEW JOBS MATCHING YOUR SEARCH Here are the latest opportunities we found for you 🔥 Just nowTechnology Databricks Developer - Databricks Apps Specialist 🏢 CGI 📍 Houston, United States 🇺🇸 • 💰 USD 88,200/yr Apply Now → https://haystack.cv/go?j=fd5d303f-f71d-4235-9b61-bc1996d9dfcd&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FgNRpksiHqbb-OZRTt5r2sCAEtZIHEzyR7XcAMSMtJZW-O2YQOwgse5YyAZkmIArg&t=Databricks%20Developer%20-%20Databricks%20Apps%20Specialist&c=CGI 🔥 3 hours agoTechnology Lead Full Stack AI Engineer 🏢 Strategic Staffing Solutions 📍 Columbus, United States 🇺🇸 • 💰 USD 78/hr Apply Now → https://haystack.cv/go?j=91f29525-f1a9-4169-86bc-148fbbda24b4&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FCn4dkD0hsJ9DrE9J9HOmNGbJLkJCr5nCaFNfMrIqqLhDbOUDXMRe8WYeDHXLaZWz&t=Lead%20Full%20Stack%20AI%20Engineer&c=Strategic%20Staffing%20Solutions 🔥 4 hours agoTechnology Sr. Data Analytics Engineer 🏢 Innova 📍 Charlotte, United States 🇺🇸 • 💰 USD 53 - 58/hr Apply Now → https://haystack.cv/go?j=ca01c94e-eb84-47ef-b2e4-8be531aa7cfb&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FquGgSllENySUGU8_oEpvrB6b1ZHIyUN4ZUv55iATLzheYSCz_G5g-XS6h05kwFwV&t=Sr.%20Data%20Analytics%20Engineer&c=Innova 🔥 2 hours agoTechnology Senior Data Scientist with Security Clearance 🏢 Prescient Edge 📍 Washington, United States 🇺🇸 • 💰 USD 160,000 - 200,000/yr Apply Now → https://haystack.cv/go?j=8f3e1ca8-293d-4370-9501-31df606633d9&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FYfcByJMhjtzfWYUc8dhXleptmviYsx2Rw6ha96WfwIG69EDKrrf-ExCLQIYcK_wq&t=Senior%20Data%20Scientist%20with%20Security%20Clearance&c=Prescient%20Edge 🔥 3 hours agoTechnology Cloud Developer, Mid with Security Clearance 🏢 Cayuse Technologies 📍 Washington, United States 🇺🇸 Apply Now → https://haystack.cv/go?j=3bb4f836-fb77-4475-8334-107049eb4118&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2F9-UCJ6BquNBbHWPo9bpPjWdKspzcEmNz32uys64mI9WOj7k93Op1E3z91WUlykwg&t=Cloud%20Developer%2C%20Mid%20with%20Security%20Clearance&c=Cayuse%20Technologies Browse All Jobs https://haystack.cv/jobs?src=searches-email Hiring as well? Post a role on Haystack and get AI-matched, vetted candidates in 24 hours. $349 for your first job, with a 10-candidate guarantee. Post a job → https://haystackapp.io/employers?utm_source=job_alert_email&utm_medium=email&utm_campaign=employer_crosssell&utm_content=alert_footer You're receiving this because you subscribed to job alerts on haystack.cv Unsubscribe from these emails https://haystack.cv/unsubscribe?token=eyJpZCI6IjViMjg2YTBiLWFjYTctNDQyZi05Y2NmLWVjMzNhN2ZlNDRiNCIsImVtYWlsIjoidGlydGhjc2hhaDE5OTlAZ21haWwuY29tIn0%3D New Job Opportunities Inc"
     },
     {
       "id": "nimble-gravity-nimble-gravity",
@@ -806,7 +864,7 @@
       "gmailMessageIds": [
         "1a0c5cdf3ce61c3e"
       ],
-      "notes": "Your application was sent to EXL Senior Data Engineer EXL Jersey City, NJ View job: https://www.linkedin.com/comm/jobs/view/4471385939/?trackingId=lQB%2FTbgySjK2CYQTlzUbWg%3D%3D&refId=q%2Bwjyu7hQnWJsVEMcsANlA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BqvmTubpqSICRckavV5YBaA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1xTJKCsM6BoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumaqh71~8j-null-null&eid=a06oc2-mumaqh71-8j&otpToken=NDQxZWIyZGNiNGJhNmVhZjEyNjk4YjczNGQyN2E5MWNlNjgxOTI5OGU0MzZlNWJmMWIxMGZhMmRmMDE1OTI3MmFmZmMxNWQxMDkwODQzMmNhYWM0ZTljNDg1MjQ4NzNiNjU3Zjg0OTIzZjZmNmFhMTZiOGZkMmQxYjU5YWE4ZTEwYWE5ZDYwODQ1NDdiYjdmLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 29, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=oQZNl4RlSLCkkw%2Bw%2BvE6ZQ%3D%3D&refId=oECP4QllQ%2BywsajCrhRn7w%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BqvmTubpqSICRckavV5YBaA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1xTJKCsM6BoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumaqh71~8j-null-null&eid=a06oc2-mumaqh71-8j&otpToken=NDQxZWIyZGNiNGJhNmVhZjEyNjk4YjczNGQyN2E5MWNlNjgxOTI5OGU0MzZlNWJmMWIxMGZhMmRmMDE1OTI3MmFmZmMxNWQxMDkwODQzMmNhYWM0ZTljNDg1MjQ4NzNiNjU3Zjg0OTIzZjZmNmFhMTZiOGZkMmQxYjU5YWE4ZTEwYWE5ZDYwODQ1NDdiYjdmLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics New York, NY 10 connections 158 company alumni 6 school alumni Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4440565680/?trackingId=Vup8iAH3TpSDQDofF3wnCA%3D%3D&refId=3GiqKX8yRSGltS5eRku0nA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BqvmTubpqSICRckavV5YBaA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1xTJKCsM6BoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumaqh71~8j-null-null&eid=a06oc2-mumaqh71-8j&otpToken=NDQxZWIyZGNiNGJhNmVhZjEyNjk4YjczNGQyN2E5MWNlNjgxOTI5OGU0MzZlNWJmMWIxMGZhMmRmMDE1OTI3MmFmZmMxNWQxMDkwODQzMmNhYWM0ZTljNDg1MjQ4NzNiNjU3Zjg0OTIzZjZmNmFhMTZiOGZkMmQxYjU5YWE4ZTEwYWE5ZDYwODQ1NDdiYjdmLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Chicago, IL 158 company alumni 6 school alumni Apply wi"
+      "notes": "Your application was sent to EXL Forward Deployed Engineer EXL Jersey City, NJ View job: https://www.linkedin.com/comm/jobs/view/4469699753/?trackingId=OiA%2F9awjSXyy6b3AxL4hmA%3D%3D&refId=NtcFDxJMTnWUwRF88LYa%2BA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BRNHipub5SPaCMHBOl4%2B9cw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3wQgQs164tjIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mugttx3y~tj-null-null&eid=a06oc2-mugttx3y-tj&otpToken=ODVmYWQ5ZWMwYTQ3NTc3MGU0NzJmMjI1ZjU2ZjFjZDM5NmM3MjUyY2UzZTBjYmY4YzYyOTQwN2U3NzE3YWVlZTg1NTY0MGVlZDI2ZjExMDI0MzI5MjRlZGZkZjRkMjdjZTNmOGQ1MmVlY2ZkMjIyYmI3NjE0OWJjZjVhZmUwMWIyZGJjY2Q4ZDQ3OGE5YWY0LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 25, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=iLiR5TskRBaFnoNiFhWPzQ%3D%3D&refId=zKzfcPCJQ3CQ%2F7EGBguyMQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BRNHipub5SPaCMHBOl4%2B9cw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3wQgQs164tjIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mugttx3y~tj-null-null&eid=a06oc2-mugttx3y-tj&otpToken=ODVmYWQ5ZWMwYTQ3NTc3MGU0NzJmMjI1ZjU2ZjFjZDM5NmM3MjUyY2UzZTBjYmY4YzYyOTQwN2U3NzE3YWVlZTg1NTY0MGVlZDI2ZjExMDI0MzI5MjRlZGZkZjRkMjdjZTNmOGQ1MmVlY2ZkMjIyYmI3NjE0OWJjZjVhZmUwMWIyZGJjY2Q4ZDQ3OGE5YWY0LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4469681369/?trackingId=CEolnHLaQaK9WzBZCm08eA%3D%3D&refId=LFcUQfF5QRKe3%2FHeWv4Fww%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BRNHipub5SPaCMHBOl4%2B9cw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3wQgQs164tjIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mugttx3y~tj-null-null&eid=a06oc2-mugttx3y-tj&otpToken=ODVmYWQ5ZWMwYTQ3NTc3MGU0NzJmMjI1ZjU2ZjFjZDM5NmM3MjUyY2UzZTBjYmY4YzYyOTQwN2U3NzE3YWVlZTg1NTY0MGVlZDI2ZjExMDI0MzI5MjRlZGZkZjRkMjdjZTNmOGQ1MmVlY2ZkMjIyYmI3NjE0OWJjZjVhZmUwMWIyZGJjY2Q4ZDQ3OGE5YWY0LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (FDE) Nexien Inc. Englewood Cliffs, NJ Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4463558029/?trackingId"
     },
     {
       "id": "umbrella-digital-more-success-view-similar-jobs-you-may-be-interested",
@@ -1595,7 +1653,7 @@
       "gmailMessageIds": [
         "1a08111760a93680"
       ],
-      "notes": "Your application was sent to Harnham Analytics Engineer Harnham United States View job: https://www.linkedin.com/comm/jobs/view/4471697556/?trackingId=PdLj0kDGRRyZKVZPQ5MBxQ%3D%3D&refId=Q1Cc1%2FnMSAGsgSdGCgQ%2BsQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BYWCYJv6qTqyXoinKUk9%2B%2Bw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2AS7zPFXDDnYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mulchxnx~4r-null-null&eid=a06oc2-mulchxnx-4r&otpToken=YTg0ZjU3MDM0ZWM5NjQ1NDhkY2NiNGFjMGJhM2VmYjA3MTQwNzkxYmQxODM2YThmMjAyMjQ4Nzk1OGNlYzc5Mzk0OGUyNmU4Y2Q1NzBhOTVhMjhmOWNhNmY3MjUxOWEyZjJmYzQ3NzRjODNmYzgyY2JkMDE3NWRlZDlmMDNlYWM2NzVlNTRkMTRlMGY3ZmQyLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 28, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Engagement Manager, US Cradle Boston, MA View job: https://www.linkedin.com/comm/jobs/view/4461914590/?trackingId=nmBVdHDRR3qBrnn1Za9sAg%3D%3D&refId=SUsq7iKMQ6OW4D3cmkjM3Q%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BYWCYJv6qTqyXoinKUk9%2B%2Bw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2AS7zPFXDDnYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mulchxnx~4r-null-null&eid=a06oc2-mulchxnx-4r&otpToken=YTg0ZjU3MDM0ZWM5NjQ1NDhkY2NiNGFjMGJhM2VmYjA3MTQwNzkxYmQxODM2YThmMjAyMjQ4Nzk1OGNlYzc5Mzk0OGUyNmU4Y2Q1NzBhOTVhMjhmOWNhNmY3MjUxOWEyZjJmYzQ3NzRjODNmYzgyY2JkMDE3NWRlZDlmMDNlYWM2NzVlNTRkMTRlMGY3ZmQyLDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager Kensho Technologies Cambridge, MA 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4455331496/?trackingId=SOS%2B8sVfSGyg6dR5QsB7qQ%3D%3D&refId=MQxVeFNPRWKf9uTKkFz4QQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BYWCYJv6qTqyXoinKUk9%2B%2Bw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2AS7zPFXDDnYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mulchxnx~4r-null-null&eid=a06oc2-mulchxnx-4r&otpToken=YTg0ZjU3MDM0ZWM5NjQ1NDhkY2NiNGFjMGJhM2VmYjA3MTQwNzkxYmQxODM2YThmMjAyMjQ4Nzk1OGNlYzc5Mzk0OGUyNmU4Y2Q1NzBhOTVhMjhmOWNhNmY3MjUxOWEyZjJmYzQ3NzRjODNmYzgyY2JkMDE3NWRlZDlmMDNlYWM2NzVlNTRkMTRlMGY3ZmQyLDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager Cradle Boston, MA View job: https://www.linkedin.com/comm/jobs/view/4377800214/?trackingId=d5D%2FJFEBSl%2BLsxhu68euqg%3D%3D&refId=YFwQ24nIR2CsH9ZGVmGeog%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirma",
+      "notes": "Your application was sent to Harnham Data Engineer Harnham Miami-Fort Lauderdale Area View job: https://www.linkedin.com/comm/jobs/view/4471143441/?trackingId=0Ddhble2TpyK%2FFk%2FWcBkLQ%3D%3D&refId=6REqe8kpTLiZhLbfg6PVEg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BvYDbUASaQ2CreSSLg3WVJg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2hpTPHSRJChYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muf4f22f~wa-null-null&eid=a06oc2-muf4f22f-wa&otpToken=ZWE1NTdiZThjM2RjMzBmNjc0Njc2NTY3OGE2ODIwZjhkM2I3MWI4YWNhNDY3OGNhOTk0OGY3ZDJkMzA0NTM0NDkwMjhlNjU2MGEzZjM3MDgwODBkZGU4MGI3NDYzYjgxMmEyZmIxNmRiYTQ4NWNmN2Y0YjFjZjM3MThmNDFiM2IxYjZmZjRlOWMzNTBkMGRlLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 24, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Engagement Manager Kensho Technologies Cambridge, MA 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4455331496/?trackingId=SFstCnl4QRysy4ezyAGmsA%3D%3D&refId=UL6IlTlcQIqPfR99O5HvTw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BvYDbUASaQ2CreSSLg3WVJg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2hpTPHSRJChYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muf4f22f~wa-null-null&eid=a06oc2-muf4f22f-wa&otpToken=ZWE1NTdiZThjM2RjMzBmNjc0Njc2NTY3OGE2ODIwZjhkM2I3MWI4YWNhNDY3OGNhOTk0OGY3ZDJkMzA0NTM0NDkwMjhlNjU2MGEzZjM3MDgwODBkZGU4MGI3NDYzYjgxMmEyZmIxNmRiYTQ4NWNmN2Y0YjFjZjM3MThmNDFiM2IxYjZmZjRlOWMzNTBkMGRlLDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager Kensho Technologies New York, NY 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4455346350/?trackingId=MnV0MO%2F2TN6ompHzPYLCbA%3D%3D&refId=teBF%2BU9FQiiAFvoOlGZCJw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BvYDbUASaQ2CreSSLg3WVJg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2hpTPHSRJChYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muf4f22f~wa-null-null&eid=a06oc2-muf4f22f-wa&otpToken=ZWE1NTdiZThjM2RjMzBmNjc0Njc2NTY3OGE2ODIwZjhkM2I3MWI4YWNhNDY3OGNhOTk0OGY3ZDJkMzA0NTM0NDkwMjhlNjU2MGEzZjM3MDgwODBkZGU4MGI3NDYzYjgxMmEyZmIxNmRiYTQ4NWNmN2Y0YjFjZjM3MThmNDFiM2IxYjZmZjRlOWMzNTBkMGRlLDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager, US Cradle Boston, MA View job: https://www.linkedin.com/comm/jobs/view/4461914590/?trackingId=rq06XF2oSBWBv3r1JodyIQ%3D%3D&refId=6pRKqEEhSWiyWimHz2LGgw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_ema",
       "updatedAt": "2026-09-15T16:14:31.088Z"
     },
     {
@@ -1786,7 +1844,7 @@
       "gmailMessageIds": [
         "1a076fd96e6eb332"
       ],
-      "notes": "Hi Tirth, Thank you for your interest in CoreWeave ! We appreciate you taking the time to complete your application for Senior Analytics Engineer, and we are delighted that you would consider joining our team. What Happens Next? A member of our recruiting team will review your application and be in touch if your qualifications match the needs of the team. If we believe you may also be a fit for other open roles, we’ll be in touch about those as well! Stay Up to Date with CoreWeave CoreWeave is growing quickly, and there’s always something new happening. Visit our Newsroom ( https://coreweave.com/newsroom ) to see the latest updates, including recent milestones like: * Our agreements with major companies to deliver AI infrastructure * Record-breaking advances in AI inferencing * Recent acquisitions * Our initial public offering announcement Warmly, CoreWeave Recruiting Team Please do not reply. This mailbox is not monitored. Hi Tirth, Thank you for your interest in CoreWeave ! We appreciate you taking the time to complete your application for Senior Analytics Engineer, and we are delighted that you would consider joining our team. What Happens Next? A member of our recruiting team will review your application and be in touch if your qualifications match the needs of the team. If we believe you may also be a fit for other open roles, we&rsquo;ll be in touch about those as well! Stay Up to Date with CoreWeave CoreWeave is growing quickly, and there&rsquo;s always something new happening. Visit our Newsroom to see the latest updates, including recent milestones like: Our agreements with major companies to deliver AI infrastructure Record-breaking advances in AI inferencing Recent acquisitions Our initial public offering announcement Warmly, CoreWeave Recruiting Team Please do not reply. This mailbox is not monitored."
+      "notes": "Hi Tirth, Thank you for your interest in CoreWeave ! We appreciate you taking the time to complete your application for Senior Account Solutions Architect, and we are delighted that you would consider joining our team. What Happens Next? A member of our recruiting team will review your application and be in touch if your qualifications match the needs of the team. If we believe you may also be a fit for other open roles, we’ll be in touch about those as well! Stay Up to Date with CoreWeave CoreWeave is growing quickly, and there’s always something new happening. Visit our Newsroom ( https://coreweave.com/newsroom ) to see the latest updates, including recent milestones like: * Our agreements with major companies to deliver AI infrastructure * Record-breaking advances in AI inferencing * Recent acquisitions * Our initial public offering announcement Warmly, CoreWeave Recruiting Team Please do not reply. This mailbox is not monitored. Hi Tirth, Thank you for your interest in CoreWeave ! We appreciate you taking the time to complete your application for Senior Account Solutions Architect, and we are delighted that you would consider joining our team. What Happens Next? A member of our recruiting team will review your application and be in touch if your qualifications match the needs of the team. If we believe you may also be a fit for other open roles, we&rsquo;ll be in touch about those as well! Stay Up to Date with CoreWeave CoreWeave is growing quickly, and there&rsquo;s always something new happening. Visit our Newsroom to see the latest updates, including recent milestones like: Our agreements with major companies to deliver AI infrastructure Record-breaking advances in AI inferencing Recent acquisitions Our initial public offering announcement Warmly, CoreWeave Recruiting Team Please do not reply. This mailbox is not monitored."
     },
     {
       "id": "vay-general-application",
@@ -2014,7 +2072,7 @@
         "1a020a37644d9f24",
         "1a020a381832c59a"
       ],
-      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: Sr AI Engineer II - Enterprise Architecture Senior Systems Analyst, RevOps Tech & Systems - Global Dining Associate - Technology Vendor Management Senior Frontend Software Engineer - Global Commercial Services Technology Sr Mgr-Program Mgmt See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
+      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: Director - AI Engineering - Enterprise AI Platforms Director - Technologies Staff AI Engineer - Personalization, Brand, Communications Tech Senior AI Engineer II - Forward Deployment - Enterprise AI Platforms Senior Solutions Architect I See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -3911,7 +3969,7 @@
       "confidence": "low",
       "classifier": "rules",
       "reason": "keyword heuristic",
-      "latestSubject": "We received your job application (Job Number: 210790028)",
+      "latestSubject": "We received your job application (Job Number: 210709366)",
       "latestFrom": "\"JPMorgan Chase & Co. Human Resources\" <eino.fa.sender@workflow.mail.us2.cloud.oracle.com>",
       "lastActivityAt": "2026-09-25T22:32:58.000Z",
       "source": "gmail",
@@ -3919,7 +3977,7 @@
       "gmailMessageIds": [
         "1a0394facacb63cd"
       ],
-      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Software Engineer III - AI Native Development 210790028 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
+      "notes": "Tirth, We’re glad that you’re interested in a career at JPMorganChase ! Your application for the position listed below was successfully submitted and we appreciate your patience as we review all applications for this job opportunity. Please check your email for updates and feel free to log into your candidate profile on our job search site at any time to view your application status. Data Engineer III - Python / SQL 210709366 Thanks for taking the time to apply and good luck! Sincerely, JPMorganChase Talent Team Once in your profile, you can update your personal information and/or withdraw your job application. This is an automatically generated email sent from an unmonitored email box. Please do not reply. Visit our careers site and read our FAQs for more information. jpmorganchase.com/careers Follow us on ©2024 JPMorgan Chase & Co. All rights reserved. JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -45086,7 +45144,7 @@
       "gmailMessageIds": [
         "1a0346f6d28f7f59"
       ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 167829 Note : This code will expire in 10 minutes. Sincerely, American Tower Global Recruiting Team."
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 115842 Note : This code will expire in 10 minutes. Sincerely, American Tower Global Recruiting Team."
     },
     {
       "id": "answersnow-business-intelligence-engineer",
