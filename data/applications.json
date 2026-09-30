@@ -1,6 +1,453 @@
 {
-  "updatedAt": "2026-09-30T04:34:27.239Z",
+  "updatedAt": "2026-09-30T10:59:07.998Z",
   "applications": [
+    {
+      "id": "early-career-support-speak",
+      "company": "Early Career Support",
+      "role": "Speak",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "Reminder from Roblox!",
+      "latestFrom": "Early Career Talent Support <assessment-support@roblox.com>",
+      "lastActivityAt": "2026-09-30T09:37:32.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0ec7b7228f84ea",
+      "gmailMessageIds": [
+        "1a0ec7b7228f84ea"
+      ],
+      "notes": "Hey Tirth, We hope you’re doing well. Our team noticed you haven’t had a chance to complete your assessments yet. We understand it's a busy time of year; if you need more time or your assessments have expired, you can extend your deadline here. In the meantime, check out the following resources: How to Prepare Sign up for Speak_ where you’ll gain access to our practice assessments, comprehensive guides, and live workshops designed to help you ace the hiring process. Fun fact: In the last year, more than half of our Early Career hires utilized Speak_ to prepare for their interviews! Check out our assessment resources and FAQs. Join our virtual events to meet the Roblox team, get an inside look at the innovative work we're doing, and discover how you can help build what’s next. Helpful Tips Prepare Your Setup: Ensure you have plenty of uninterrupted time, a quiet space to focus, and a stable internet connection. Pace Yourself: You don't have to complete all the assessments at once! Feel free to take them task by task. (Note: Once you start one assessment, you must finish it.) Complete Every Assessment: We evaluate your performance holistically. If you feel you didn't do well on one task, strong results on the others can still carry you through! Good luck! Best, Roblox Early Career Talent Hey Tirth, We hope you’re doing well. Our team noticed you haven’t had a chance to complete your assessments yet. We understand it's a busy time of year; if you need more time or your assessments have expired, you can extend your deadline here . In the meantime, check out the following resources: How to Prepare Sign up for Speak_ where you’ll gain access to our practice assessments, comprehensive guides, and live workshops designed to help you ace the hiring process. Fun fact: In the last year, more than half of our Early Career hires utilized Speak_ to prepare for their interviews! Check out our assessment resources and FAQs . Join our virtual events to meet the Roblox team, get an inside look at the innovative work we're doing, and discover how you can help build what’s next. Helpful Tips Prepare Your Setup : Ensure you have plenty of uninterrupted time, a quiet space to focus, and a stable internet connection. Pace Yourself : You don't have to complete all the assessments at once! Feel free to take them task by task. (Note: Once you start one assessment, you must finish it.) Complete Every Assessment : We evaluate your performance holistically. If you feel you didn't do well on one task, strong results on the others can still carry you through! Good luck! Best, Roblox Early Career Talent"
+    },
+    {
+      "id": "robots-and-pencils-robots-and-pencils",
+      "company": "Robots And Pencils",
+      "role": "Robots And Pencils",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "platform application receipt",
+      "latestSubject": "Thank you for applying to Robots and Pencils",
+      "latestFrom": "no-reply@us.greenhouse-mail.io",
+      "lastActivityAt": "2026-09-30T08:54:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f185623ef044c",
+      "gmailMessageIds": [
+        "1a0f185623ef044c"
+      ],
+      "notes": "Dear Tirth, Thank you for your interest in working at Robots & Pencils! We really appreciate the time you took to apply for our Senior Data Engineer. What happens next? Someone on our Talent Attraction team will carefully review your application personally. If you aren’t selected to move forward on this role, we hope you’ll understand, and we encourage you to consider us for future opportunities. Best Wishes, Robots and Pencils ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read. Dear Tirth, Thank you for your interest in working at Robots & Pencils! We really appreciate the time you took to apply for our Senior Data Engineer. What happens next? Someone on our Talent Attraction team will carefully review your application personally. If you aren&rsquo;t selected to move forward on this role, we hope you&rsquo;ll understand, and we encourage you to consider us for future opportunities. Best Wishes, Robots and Pencils ** Please note: Do not reply to this email. This email is sent from an unattended mailbox. Replies will not be read."
+    },
+    {
+      "id": "itility-b-v-data-engineer-with-application-development-experience-your-application-tirth",
+      "company": "Itility B.v./data Engineer With Application Development Experience",
+      "role": "Your Application, Tirth",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "application receipt",
+      "latestSubject": "Thank you for your application, Tirth",
+      "latestFrom": "\"Itility B.V./Data Engineer with Application Development Experience\" <e+pws1a1dn69o3op2d.itilitybv@recruitee-inbox.com>",
+      "lastActivityAt": "2026-09-30T08:52:14.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f183b0fb8f30b",
+      "gmailMessageIds": [
+        "1a0f183b0fb8f30b"
+      ],
+      "notes": "Dear Tirth, Thank you for taking the time to apply for the position of Data Engineer with Application Development Experience. We appreciate your interest in Itility, you will hear from us shortly. In the meantime make sure to check out our stories at https://blogs.itility.nl/en . If you have any questions or comments for the moment, please don't hesitate to contact us at recruitment@itility.nl . Kind regards, —— We want you to be in control of your own data. You can submit a change request or a removal request to be removed from our database. This email was sent via Recruitee – the collaborative hiring software Dear Tirth, Thank you for taking the time to apply for the position of Data Engineer with Application Development Experience. We appreciate your interest in Itility, you will hear from us shortly. In the meantime make sure to check out our stories at https://blogs.itility.nl/en . If you have any questions or comments for the moment, please don't hesitate to contact us at recruitment@itility.nl . Kind regards, —— We want you to be in control of your own data. You can submit a change request or a removal request to be removed from our database. This email was sent via – the collaborative hiring software"
+    },
+    {
+      "id": "blueland-blueland",
+      "company": "Blueland",
+      "role": "Blueland",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "application receipt",
+      "latestSubject": "Thank you for your application to Blueland",
+      "latestFrom": "Blueland <no-reply@hire.lever.co>",
+      "lastActivityAt": "2026-09-30T08:48:53.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f180a27d37dc2",
+      "gmailMessageIds": [
+        "1a0f180a27d37dc2"
+      ],
+      "notes": "Hi Tirth, Thank you for your interest in Blueland! We have received your application for Analytics Engineer Contractor, and are so excited you want to join us on our mission to eliminate single-use plastic. While we&rsquo;re not able to respond to every applicant, our recruiting team will contact you if your skills and experience are a strong match for the role. If you are not selected for this position, keep an eye on our careers page ! Best, The Blueland Team"
+    },
+    {
+      "id": "blue-matter-ai-engineer-senior-ai-engineer",
+      "company": "Vision Government Solutions",
+      "role": "Your Interest",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "Tirth, we've received your resume",
+      "latestFrom": "Vision Government Solutions Inc <noreply@applytojob.com>",
+      "lastActivityAt": "2026-09-30T08:35:41.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f14c8dc10b8ef",
+      "gmailMessageIds": [
+        "1a0f174885ad034e",
+        "1a0f14c8dc10b8ef"
+      ],
+      "notes": "Hello Tirth, Thank you for your interest in employment at Vision Government Solutions Inc. If your qualifications match our needs, we will contact you to learn more about your fit in this position. Thanks again for your inquiry. - Vision Government Solutions Inc"
+    },
+    {
+      "id": "clearco-your-application",
+      "company": "Clearco",
+      "role": "Your Application",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "Sign-in link for your application at ClearPlan Consulting",
+      "latestFrom": "ClearCo <do_not_reply@clearcompany.com>",
+      "lastActivityAt": "2026-09-30T08:33:39.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0a39f369d95deb",
+      "gmailMessageIds": [
+        "1a0a39f369d95deb"
+      ],
+      "notes": "APPLICATION Thank you for your interest in the Data Analytics & Integration Analyst position at ClearPlan Consulting . If you need to return to your application, use the button below. View/Edit Application If the button does not work, copy and paste this link into your browser: https://clrco.com/M85pDVn6V9 Links expire in 15 minutes. You can set an optional password as well with this link. Your user name is your email address. POWERED BY CLEARCOMPANY You received this email because you applied for a job at ClearPlan Consulting",
+      "updatedAt": "2026-09-15T16:14:31.088Z"
+    },
+    {
+      "id": "job-general-application-01851",
+      "company": "Job",
+      "role": "General Application",
+      "reqId": "01851",
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "application receipt",
+      "latestSubject": "Application Received for Job #26-01851",
+      "latestFrom": "HumanResources@datumsoftware.com",
+      "lastActivityAt": "2026-09-30T08:26:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f17361255d32e",
+      "gmailMessageIds": [
+        "1a0f17361255d32e"
+      ],
+      "notes": "Dear Candidate, This message is to acknowledge receipt of your resume. We greatly appreciate your interest in the position. Your resume will be considered for our current and future opportunities. Thank you. Please note that this is an automated message, please do not reply to this email."
+    },
+    {
+      "id": "itility-b-v-azure-cloud-devops-engineer-your-application-tirth",
+      "company": "Itility B.v./azure Cloud Devops Engineer",
+      "role": "Your Application, Tirth",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "application receipt",
+      "latestSubject": "Thank you for your application, Tirth",
+      "latestFrom": "\"Itility B.V./Azure Cloud DevOps Engineer\" <e+gpe1wc6n7s1r2alu.itilitybv@recruitee-inbox.com>",
+      "lastActivityAt": "2026-09-30T07:50:16.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f14af4f20c7d4",
+      "gmailMessageIds": [
+        "1a0f14af4f20c7d4"
+      ],
+      "notes": "Dear Tirth, Thank you for taking the time to apply for the position of Azure Cloud DevOps Engineer. We appreciate your interest in Itility, you will hear from us shortly. In the meantime make sure to check out our stories at https://blogs.itility.nl/en . If you have any questions or comments for the moment, please don't hesitate to contact us at recruitment@itility.nl . Kind regards, —— We want you to be in control of your own data. You can submit a change request or a removal request to be removed from our database. This email was sent via Recruitee – the collaborative hiring software Dear Tirth, Thank you for taking the time to apply for the position of Azure Cloud DevOps Engineer. We appreciate your interest in Itility, you will hear from us shortly. In the meantime make sure to check out our stories at https://blogs.itility.nl/en . If you have any questions or comments for the moment, please don't hesitate to contact us at recruitment@itility.nl . Kind regards, —— We want you to be in control of your own data. You can submit a change request or a removal request to be removed from our database. This email was sent via – the collaborative hiring software"
+    },
+    {
+      "id": "peec-ai-taking-the-time-to-apply-for-the-ai-search-manager",
+      "company": "Peec AI",
+      "role": "Taking The Time To Apply For The AI Search Manager",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "rules",
+      "reason": "platform auto-receipt sender — application acknowledgment",
+      "latestSubject": "Peec AI Application Update",
+      "latestFrom": "Peec AI Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-09-30T07:36:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f13deba25d635",
+      "gmailMessageIds": [
+        "1a0f13deba25d635"
+      ],
+      "notes": "Hi Tirth, Thank you for taking the time to apply for the AI Search Manager role at Peec AI. After reviewing your application we've determined that there isn't an ideal fit at this time. We appreciate your interest in Peec AI, and wish you all the best with you next career move! All the best, Peec AI Hiring Team Hi Tirth , Thank you for taking the time to apply for the AI Search Manager role at Peec AI . After reviewing your application we've determined that there isn't an ideal fit at this time. We appreciate your interest in Peec AI , and wish you all the best with you next career move! All the best, Peec AI Hiring Team"
+    },
+    {
+      "id": "haystack-general-application",
+      "company": "Randstad",
+      "role": "General Application",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "low",
+      "classifier": "rules",
+      "reason": "keyword heuristic",
+      "latestSubject": "Washington Metroplitan Area Transit Authority is hiring Senior Data Engineer in Alexandria",
+      "latestFrom": "Haystack Jobs <alerts@alerts.haystack.cv>",
+      "lastActivityAt": "2026-09-30T07:29:33.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0c7b6cc05d8b31",
+      "gmailMessageIds": [
+        "1a0c7b6cc05d8b31"
+      ],
+      "notes": "Including Washington Metroplitan Area Transit Authority. Apply before others do. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ https://haystack.cv 5 NEW JOBS MATCHING YOUR SEARCH Here are the latest opportunities we found for you 🔥 Just nowTechnology Senior Data Engineer RCMP 🏢 Washington Metroplitan Area Transit Authority 📍 Alexandria, United States 🇺🇸 Apply Now → https://haystack.cv/go?j=681c51ba-578c-45ff-8773-edad76e42de2&s=searches-email&sub=c73b8612-46fc-4961-890a-f326ff8e2926&u=https%3A%2F%2Fclick.appcast.io%2Ft%2Fmq7NBiYzFEhsAnvw4qH-G4jHUQVliAgbwLub0U2o_RV3gZoEOs9sw5ig2qObd-1-&t=Senior%20Data%20Engineer%20RCMP&c=Washington%20Metroplitan%20Area%20Transit%20Authority 🔥 2 hours agoTechnology Sr Java Developer 🏢 Randstad Digital 📍 Newark, United States 🇺🇸 • 💰 USD 52 - 62/hr Apply Now → https://haystack.cv/go?j=0f9d4340-4775-442d-93b9-9330b7c4636c&s=searches-email&sub=c73b8612-46fc-4961-890a-f326ff8e2926&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FRkjobdsHPruSajA3lW6mIj41qpm3v6THrRR2YAAOODT5MlLiiE62U-2UQaviemSt&t=Sr%20Java%20Developer&c=Randstad%20Digital 🔥 2 hours agoTechnology Oracle Database Developer 🏢 Kforce Technology Staffing 📍 New York, United States 🇺🇸 Apply Now → https://haystack.cv/go?j=bfcf4f09-071d-4c8f-968f-eaf26482115f&s=searches-email&sub=c73b8612-46fc-4961-890a-f326ff8e2926&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FF9UHDJCieqiYycqnrCRnKvPr5GpQOU659lvvbZS67XzRxo9G0h0Tu_dWLq450VFB&t=Oracle%20Database%20Developer&c=Kforce%20Technology%20Staffing 🔥 Just nowTechnology Senior Web Developer 🏢 Photon 📍 Frisco, United States 🇺🇸 Apply Now → https://haystack.cv/go?j=d278e47a-f4bb-4bee-a9c8-f2413b378bb9&s=searches-email&sub=c73b8612-46fc-4961-890a-f326ff8e2926&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FqkuDGzFoSWl-L81buSEEbOFsoN__1AMsYo7n9JWHgvjGv4rSCaTSoyDZWVONPb1G&t=Senior%20Web%20Developer&c=Photon 🔥 2 hours agoTechnology Salesforce CPQ Developer (Conga/Apttus Specialist) 🏢 Sradha Technologies LLC 📍 San Francisco, United States 🇺🇸 Apply Now → https://haystack.cv/go?j=8a07e6ea-f4d6-4bb0-9d81-abe71b020151&s=searches-email&sub=c73b8612-46fc-4961-890a-f326ff8e2926&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FJ5P4Nh613mZ8je-iqOALUSmPrJX0A-LYLZHS2fy8JNXSqbuUKRPICCqRBm7v5Yo-&t=Salesforce%20CPQ%20Developer%20(Conga%2FApttus%20Specialist)&c=Sradha%20Technologies%20LLC Browse All Jobs https://haystack.cv/jobs?src=searches-email Hiring as well? Post a role on Haystack and get AI-matched, vetted candidates in 24 hours. $349 for your first job, with a 10-candidate guarantee. Post a job → https://haystackapp.io/employers?utm_source=job_alert_email&utm_medium=email&utm_campaign=employer_crosssell&utm_content=alert_footer You're receiving this because you subscribed to job alerts on haystack.cv Unsubscribe from these emails https://haystack.cv/unsubscribe?token=eyJpZCI6ImM3M2I4NjEyLTQ2ZmMtNDk2MS04OTBhLWYzMjZmZjhlMjkyNiIsImVtYWlsIjoidGlydGhjc2hhaDE5OTlAZ21haWwuY29tIn0%3D New Job Opportunities Including Washington Metroplitan Area Transit Authority. Apply before "
+    },
+    {
+      "id": "langchain-langchain",
+      "company": "Langchain",
+      "role": "Langchain",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "platform application receipt",
+      "latestSubject": "Thank you for applying to LangChain",
+      "latestFrom": "LangChain Hiring Team <no-reply@ashbyhq.com>",
+      "lastActivityAt": "2026-09-30T07:20:10.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0af0ba524fc8ad",
+      "gmailMessageIds": [
+        "1a0af0ba524fc8ad"
+      ],
+      "notes": "Hi Tirth, Thank you for your application for Deployed Engineer (East). Our team will review your profile and will reach out if there is a fit for this role or any open role. Thanks, LangChain Recruiting Hi Tirth , Thank you for your application for Deployed Engineer (East) . Our team will review your profile and will reach out if there is a fit for this role or any open role. Thanks, LangChain Recruiting"
+    },
+    {
+      "id": "emonics-more-success-view-similar-jobs-you-may-be-interested",
+      "company": "Emonics",
+      "role": "More Success View Similar Jobs You May Be Interested",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "LinkedIn application receipt",
+      "latestSubject": "Tirth Chirayu, your application was sent to Emonics LLC",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-09-30T06:36:53.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0e6d4944a42052",
+      "gmailMessageIds": [
+        "1a0e6d4944a42052"
+      ],
+      "notes": "Your application was sent to Emonics LLC Entry-Level Data Engineer Emonics LLC Modesto, CA View job: https://www.linkedin.com/comm/jobs/view/4471948419/?trackingId=0JqFqIxVRjKE2r6y7NTj3w%3D%3D&refId=fBH60KiKQcy%2BXARF6PhdCg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B5FgfpUCJQyyJiwvAXRdn0Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=03tSffQE1cqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munqfuyf~h8-null-null&eid=a06oc2-munqfuyf-h8&otpToken=N2NjNTlkMTM0ZjA0YTc2NGNlOThmMTE4N2QzYjBjZDE5ZmVjNGFhOWM0MWIzY2Q1MDVjOTMyZmYxOWM4MDNkZWUwMDZhY2VkYWEwMzcwYjIyYjNlODUyNmI4MGUwN2MzZmUwNDIwMzBlZmVjMjExMTM3ZjYyZjA1MDk3ZDMyOWNlMmNjMjkxMTZiYjkxZGE0LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 30, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=Js7uidBjQPavR8kUuJ5qcQ%3D%3D&refId=IucXAZpFSFKuRWb94qyklQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B5FgfpUCJQyyJiwvAXRdn0Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=03tSffQE1cqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munqfuyf~h8-null-null&eid=a06oc2-munqfuyf-h8&otpToken=N2NjNTlkMTM0ZjA0YTc2NGNlOThmMTE4N2QzYjBjZDE5ZmVjNGFhOWM0MWIzY2Q1MDVjOTMyZmYxOWM4MDNkZWUwMDZhY2VkYWEwMzcwYjIyYjNlODUyNmI4MGUwN2MzZmUwNDIwMzBlZmVjMjExMTM3ZjYyZjA1MDk3ZDMyOWNlMmNjMjkxMTZiYjkxZGE0LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4471756150/?trackingId=Y%2B%2BrqDkJQPyPDDdsJNp99A%3D%3D&refId=IuFqkCkyR8KdM9hRh4AQ5w%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B5FgfpUCJQyyJiwvAXRdn0Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=03tSffQE1cqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munqfuyf~h8-null-null&eid=a06oc2-munqfuyf-h8&otpToken=N2NjNTlkMTM0ZjA0YTc2NGNlOThmMTE4N2QzYjBjZDE5ZmVjNGFhOWM0MWIzY2Q1MDVjOTMyZmYxOWM4MDNkZWUwMDZhY2VkYWEwMzcwYjIyYjNlODUyNmI4MGUwN2MzZmUwNDIwMzBlZmVjMjExMTM3ZjYyZjA1MDk3ZDMyOWNlMmNjMjkxMTZiYjkxZGE0LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?trackingId=urvq7aGURBa31R8SVVAQTQ%3D%3D&refId=aORlwV"
+    },
+    {
+      "id": "sotalent-more-success-view-similar-jobs-you-may-be-interested",
+      "company": "Sotalent",
+      "role": "More Success View Similar Jobs You May Be Interested",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "LinkedIn application receipt",
+      "latestSubject": "Tirth Chirayu, your application was sent to SoTalent",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-09-30T06:07:34.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a089d8d2e20a9f0",
+      "gmailMessageIds": [
+        "1a089d8d2e20a9f0"
+      ],
+      "notes": "Your application was sent to SoTalent Data Platform Engineer SoTalent United States View job: https://www.linkedin.com/comm/jobs/view/4470893124/?trackingId=U6p2CHVtRMu8V4TVsUBsBg%3D%3D&refId=7enUtTACRjuJemaa0Be6rg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bt%2BsbfFsQTfelWaqCItaKag%3D%3D&midToken=AQG7i8fZeRVENg&midSig=22QbTZDpiuoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumahfh9~k5-null-null&eid=a06oc2-mumahfh9-k5&otpToken=ZjdjODIxMjQwYTY3OWUwODA5MzIzNTFiZTFlNjc1NzQzYjgzZmI0ZmMzZDllNzhiZWMyNGY1OWJkZDIwNDkzYzk1NjM2Mzc5MDI4MzEwNWRiODhmYzE5NzA4ODEyNDI2ZTNmNTIxYTU5ZDQ1NWY2MjVjOGM3OGQyOGE3YTVlY2Q3OThiMTNmYTk5YzIzOGY4LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 29, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=stigimKwQVu6M%2F%2F0O36NBA%3D%3D&refId=qW3KMQQPQPGCmsnMOnmEpg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bt%2BsbfFsQTfelWaqCItaKag%3D%3D&midToken=AQG7i8fZeRVENg&midSig=22QbTZDpiuoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumahfh9~k5-null-null&eid=a06oc2-mumahfh9-k5&otpToken=ZjdjODIxMjQwYTY3OWUwODA5MzIzNTFiZTFlNjc1NzQzYjgzZmI0ZmMzZDllNzhiZWMyNGY1OWJkZDIwNDkzYzk1NjM2Mzc5MDI4MzEwNWRiODhmYzE5NzA4ODEyNDI2ZTNmNTIxYTU5ZDQ1NWY2MjVjOGM3OGQyOGE3YTVlY2Q3OThiMTNmYTk5YzIzOGY4LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Chicago, IL 10 connections 158 company alumni 6 school alumni Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4440557967/?trackingId=qr9JD2VeRoeDIydZ68HsYg%3D%3D&refId=v7%2Bs9hxEQqOQnBhhcFnC4g%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bt%2BsbfFsQTfelWaqCItaKag%3D%3D&midToken=AQG7i8fZeRVENg&midSig=22QbTZDpiuoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumahfh9~k5-null-null&eid=a06oc2-mumahfh9-k5&otpToken=ZjdjODIxMjQwYTY3OWUwODA5MzIzNTFiZTFlNjc1NzQzYjgzZmI0ZmMzZDllNzhiZWMyNGY1OWJkZDIwNDkzYzk1NjM2Mzc5MDI4MzEwNWRiODhmYzE5NzA4ODEyNDI2ZTNmNTIxYTU5ZDQ1NWY2MjVjOGM3OGQyOGE3YTVlY2Q3OThiMTNmYTk5YzIzOGY4LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics New York, NY 158 company alumni 6 school alu",
+      "updatedAt": "2026-09-15T21:14:25.108Z"
+    },
+    {
+      "id": "jobgether-more-success-view-similar-jobs-you-may-be-interested",
+      "company": "Jobgether",
+      "role": "More Success View Similar Jobs You May Be Interested",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "LinkedIn application receipt",
+      "latestSubject": "Tirth Chirayu, your application was sent to Jobgether",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-09-30T06:06:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0810b852a16dd2",
+      "gmailMessageIds": [
+        "1a0810b852a16dd2"
+      ],
+      "notes": "Your application was sent to Jobgether Data Engineer Jobgether United States View job: https://www.linkedin.com/comm/jobs/view/4471265623/?trackingId=mLSc8nx0SlCH0O1s1cfTiw%3D%3D&refId=3tQ2d0hbTlKH6nEdSys2aQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BTu0ImfOVQF27ImCoriO7HA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0PdrnpfJoKqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpcwft~ul-null-null&eid=a06oc2-munpcwft-ul&otpToken=ODVmYWQ3M2NjNjFmYmE4YmVmOTZlNWZhYWZhMGQ2ODdiMjdhMmUwNjBlZDIwNzlhZWM4ZTgwMmNhMDdjNjM0ZWEwMDRkNGZmMWMyNDdjYmQ1OGIwNzQwYWIyYjZkOWIwMDI1Y2QzZGJiYjMxZTY2MWExYzkyOWZiMDY3N2I0ODI2MzNjYzYwMmQ3NDhhZmViLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 30, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=9NVEO9U9Q%2BOSmrBjwKtQgw%3D%3D&refId=nYxSTAh6SG2nh1B1uE1g%2Fg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BTu0ImfOVQF27ImCoriO7HA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0PdrnpfJoKqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpcwft~ul-null-null&eid=a06oc2-munpcwft-ul&otpToken=ODVmYWQ3M2NjNjFmYmE4YmVmOTZlNWZhYWZhMGQ2ODdiMjdhMmUwNjBlZDIwNzlhZWM4ZTgwMmNhMDdjNjM0ZWEwMDRkNGZmMWMyNDdjYmQ1OGIwNzQwYWIyYjZkOWIwMDI1Y2QzZGJiYjMxZTY2MWExYzkyOWZiMDY3N2I0ODI2MzNjYzYwMmQ3NDhhZmViLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4471756150/?trackingId=mpR6fKDGS7q4M%2FaiZse8dA%3D%3D&refId=KRoK2Ve7QsGD6c6sLGxQkQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BTu0ImfOVQF27ImCoriO7HA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0PdrnpfJoKqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpcwft~ul-null-null&eid=a06oc2-munpcwft-ul&otpToken=ODVmYWQ3M2NjNjFmYmE4YmVmOTZlNWZhYWZhMGQ2ODdiMjdhMmUwNjBlZDIwNzlhZWM4ZTgwMmNhMDdjNjM0ZWEwMDRkNGZmMWMyNDdjYmQ1OGIwNzQwYWIyYjZkOWIwMDI1Y2QzZGJiYjMxZTY2MWExYzkyOWZiMDY3N2I0ODI2MzNjYzYwMmQ3NDhhZmViLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?trackingId=PsUh4KlUR2K7K0jHTN7dtg%3D%3D&refId=F9%2FURDT%2FTUCSwX36",
+      "updatedAt": "2026-09-15T16:14:31.088Z"
+    },
+    {
+      "id": "jobot-more-success-view-similar-jobs-you-may-be-interested",
+      "company": "Jobot",
+      "role": "More Success View Similar Jobs You May Be Interested",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "LinkedIn application receipt",
+      "latestSubject": "Tirth Chirayu, your application was sent to Jobot",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-09-30T06:05:56.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a086194245d2134",
+      "gmailMessageIds": [
+        "1a086194245d2134"
+      ],
+      "notes": "Your application was sent to Jobot Data Engineer Jobot Chicago, IL View job: https://www.linkedin.com/comm/jobs/view/4473200888/?trackingId=Ui4R3yNKS5mJCDPRMvqGPw%3D%3D&refId=CVmh%2BrYsSM6JATMs3pfP7A%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BjlIuPziURpWfVnNHVQn8QQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=35qynNTa4Jqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpc2gc~50-null-null&eid=a06oc2-munpc2gc-50&otpToken=MWZlYjNjOTUzMjBkZGNhMDVjZjkxMzBlYjAwYThkZGI2MWFiY2E4NWRiZjY2OTI2YzhkYTA0YjVmYWMyMGNhY2JlZGZmMmQ3ZDgxZjU0ZjZhYjFkMjlhNWEzYTk5Yjc3ZTQyOTE2ZmY1NTBjMjM1Y2QwMWZjMWRjMTdlYTNhZDA5M2UzNTZmYzU2YmQxODU4LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 30, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=RMWG9dXjSde6ch1ytjJcZw%3D%3D&refId=JAdHw4GFRWa50sweOUj%2BaQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BjlIuPziURpWfVnNHVQn8QQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=35qynNTa4Jqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpc2gc~50-null-null&eid=a06oc2-munpc2gc-50&otpToken=MWZlYjNjOTUzMjBkZGNhMDVjZjkxMzBlYjAwYThkZGI2MWFiY2E4NWRiZjY2OTI2YzhkYTA0YjVmYWMyMGNhY2JlZGZmMmQ3ZDgxZjU0ZjZhYjFkMjlhNWEzYTk5Yjc3ZTQyOTE2ZmY1NTBjMjM1Y2QwMWZjMWRjMTdlYTNhZDA5M2UzNTZmYzU2YmQxODU4LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4471756150/?trackingId=24hOvY9oQj2%2BPyUaNZXp1Q%3D%3D&refId=6XfNJlATQXqAPXZo4Levxw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BjlIuPziURpWfVnNHVQn8QQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=35qynNTa4Jqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpc2gc~50-null-null&eid=a06oc2-munpc2gc-50&otpToken=MWZlYjNjOTUzMjBkZGNhMDVjZjkxMzBlYjAwYThkZGI2MWFiY2E4NWRiZjY2OTI2YzhkYTA0YjVmYWMyMGNhY2JlZGZmMmQ3ZDgxZjU0ZjZhYjFkMjlhNWEzYTk5Yjc3ZTQyOTE2ZmY1NTBjMjM1Y2QwMWZjMWRjMTdlYTNhZDA5M2UzNTZmYzU2YmQxODU4LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?trackingId=BHPGC8rqQiOs%2FIXOut9Z%2Bg%3D%3D&refId=OiLLJe66R0KB3Y75cW5k%2Bg%3",
+      "updatedAt": "2026-09-15T21:14:25.108Z"
+    },
+    {
+      "id": "mondrian-alpha-more-success-view-similar-jobs-you-may-be-interested",
+      "company": "Mondrian Alpha",
+      "role": "More Success View Similar Jobs You May Be Interested",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "LinkedIn application receipt",
+      "latestSubject": "Tirth Chirayu, your application was sent to Mondrian Alpha",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-09-30T06:05:25.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a086129e7d4f127",
+      "gmailMessageIds": [
+        "1a086129e7d4f127"
+      ],
+      "notes": "Your application was sent to Mondrian Alpha Data Engineer / SWE - Hedge Fund - Data Platform - NY - 225k+ TC Mondrian Alpha New York, NY View job: https://www.linkedin.com/comm/jobs/view/4471759648/?trackingId=vNyq5FRVTpuFMzDMzdRVCw%3D%3D&refId=YSeiQ%2B0ATXiEvNRQDlisgg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BstPQ84HoSVu2%2Fg5IaC1U4Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=35qynNTa4Jqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpbe83~y5-null-null&eid=a06oc2-munpbe83-y5&otpToken=YTcwZTM3MjI5OWY2ZDZiOTczNTM2ZWVkZTViNGQwMWZjZGQyMzk4MzU2ZmJjNGZlMmMwNTk4MjY2NzhhNTM3ODJjYmVhMTIxZGQ0NDMzZDllMzlkYmQ1OGFkODA0YjM2MTA1MDU0MTA3OGMzYWIyMmMzY2U4NGY0YWY4OGQ3OTZkYjVkY2E0NDVkY2MyODU5LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 30, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=1PHDNCVRSkSTdiF8Y630hg%3D%3D&refId=e9FfWcbiQgONEkNDlXMQzw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BstPQ84HoSVu2%2Fg5IaC1U4Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=35qynNTa4Jqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpbe83~y5-null-null&eid=a06oc2-munpbe83-y5&otpToken=YTcwZTM3MjI5OWY2ZDZiOTczNTM2ZWVkZTViNGQwMWZjZGQyMzk4MzU2ZmJjNGZlMmMwNTk4MjY2NzhhNTM3ODJjYmVhMTIxZGQ0NDMzZDllMzlkYmQ1OGFkODA0YjM2MTA1MDU0MTA3OGMzYWIyMmMzY2U4NGY0YWY4OGQ3OTZkYjVkY2E0NDVkY2MyODU5LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4471756150/?trackingId=6xz8MjpZSTGOHN2gSnwWsQ%3D%3D&refId=A%2FEYT1zASACcorqY24EHQA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BstPQ84HoSVu2%2Fg5IaC1U4Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=35qynNTa4Jqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpbe83~y5-null-null&eid=a06oc2-munpbe83-y5&otpToken=YTcwZTM3MjI5OWY2ZDZiOTczNTM2ZWVkZTViNGQwMWZjZGQyMzk4MzU2ZmJjNGZlMmMwNTk4MjY2NzhhNTM3ODJjYmVhMTIxZGQ0NDMzZDllMzlkYmQ1OGFkODA0YjM2MTA1MDU0MTA3OGMzYWIyMmMzY2U4NGY0YWY4OGQ3OTZkYjVkY2E0NDVkY2MyODU5LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?tr",
+      "updatedAt": "2026-09-15T16:14:31.088Z"
+    },
+    {
+      "id": "headfarmer-more-success-view-similar-jobs-you-may-be-interested",
+      "company": "Headfarmer",
+      "role": "More Success View Similar Jobs You May Be Interested",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "LinkedIn application receipt",
+      "latestSubject": "Tirth Chirayu, your application was sent to Headfarmer",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-09-30T06:05:01.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f0ea98a0e09ee",
+      "gmailMessageIds": [
+        "1a0f0ea98a0e09ee"
+      ],
+      "notes": "Your application was sent to Headfarmer Sr Data Engineer Headfarmer Phoenix, AZ View job: https://www.linkedin.com/comm/jobs/view/4471922608/?trackingId=YjdZ5eWnSf2Buqm2jHdpFQ%3D%3D&refId=w%2F772mAqSkiMwjiVsn8EuQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BVvfAZaSVQhCMaW8%2FvaQPGw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=35qynNTa4Jqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpaw2c~du-null-null&eid=a06oc2-munpaw2c-du&otpToken=NWFhZTU5NzU5ODY4ZDRiYzgzZDg5ODZmODRjYzEzMjQ0YjA2ZWQ1ZjNiZTg4YWJmY2ZmNTEwYjFjOWVmZWJkNjM2NDU5MDRhZjRhOGZjYjAzYmYzMzBhMjlhNDAwMzUyMGNkMGNmZmIwOWU3ZmQ4N2ZiZGI5MzdjOWU1MDNhNDgwZWI0ZjA2MWVhMGY3ZmEyLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 30, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=%2FwJgVmCbRzy27EODXRz6zw%3D%3D&refId=NL2jfXdCQGGxh1sMworDBQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BVvfAZaSVQhCMaW8%2FvaQPGw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=35qynNTa4Jqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpaw2c~du-null-null&eid=a06oc2-munpaw2c-du&otpToken=NWFhZTU5NzU5ODY4ZDRiYzgzZDg5ODZmODRjYzEzMjQ0YjA2ZWQ1ZjNiZTg4YWJmY2ZmNTEwYjFjOWVmZWJkNjM2NDU5MDRhZjRhOGZjYjAzYmYzMzBhMjlhNDAwMzUyMGNkMGNmZmIwOWU3ZmQ4N2ZiZGI5MzdjOWU1MDNhNDgwZWI0ZjA2MWVhMGY3ZmEyLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4471756150/?trackingId=4H9wJBiCR22ELSVpCOhrig%3D%3D&refId=FVxbvh4oRbCLCK4d925OcA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BVvfAZaSVQhCMaW8%2FvaQPGw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=35qynNTa4Jqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munpaw2c~du-null-null&eid=a06oc2-munpaw2c-du&otpToken=NWFhZTU5NzU5ODY4ZDRiYzgzZDg5ODZmODRjYzEzMjQ0YjA2ZWQ1ZjNiZTg4YWJmY2ZmNTEwYjFjOWVmZWJkNjM2NDU5MDRhZjRhOGZjYjAzYmYzMzBhMjlhNDAwMzUyMGNkMGNmZmIwOWU3ZmQ4N2ZiZGI5MzdjOWU1MDNhNDgwZWI0ZjA2MWVhMGY3ZmEyLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?trackingId=NbQSFaCZTpmDcXGms2bg1g%3D%3D&refId=Ina4jzgKQROk2"
+    },
+    {
+      "id": "largeton-more-success-view-similar-jobs-you-may-be-interested",
+      "company": "Largeton",
+      "role": "More Success View Similar Jobs You May Be Interested",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "LinkedIn application receipt",
+      "latestSubject": "Tirth Chirayu, your application was sent to Largeton Group",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-09-30T06:03:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f0e8d0fb8e90d",
+      "gmailMessageIds": [
+        "1a0f0e8d0fb8e90d"
+      ],
+      "notes": "Your application was sent to Largeton Group Data Engineer Largeton Group Okemos, MI View job: https://www.linkedin.com/comm/jobs/view/4473543661/?trackingId=Klg%2FFtB2QxGVKIC455zBFw%3D%3D&refId=27EmYfpvTjaKO525EtKPGg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BmOntDkXPQ46wXOpJtrSPxA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=241s5uLrcHqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munp8dui~zn-null-null&eid=a06oc2-munp8dui-zn&otpToken=YWIyYTU3NTc5ODZmMTExYmU3ZDEyMjk1M2U0MzJhNDg5ZjNjZDVjYmE1YjgxNDJmYzhkOGQ4ZGU1OGQ4OGNiMDZlMzIwMmY1YjY0NmFmZTI2NTlmZDM2MzFmZWQxOTg0NDhhYzVhODQ1MjBhNDJkYmMyZmQ1ZjVhN2M4NTM3M2M3MDUyODQ3ZGZjNWRkNzA4LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 30, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=pKjatCuZSU6u2tr%2F5A4hrA%3D%3D&refId=qUEF%2B9cZTxSnDcp6Rr%2B6GQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BmOntDkXPQ46wXOpJtrSPxA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=241s5uLrcHqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munp8dui~zn-null-null&eid=a06oc2-munp8dui-zn&otpToken=YWIyYTU3NTc5ODZmMTExYmU3ZDEyMjk1M2U0MzJhNDg5ZjNjZDVjYmE1YjgxNDJmYzhkOGQ4ZGU1OGQ4OGNiMDZlMzIwMmY1YjY0NmFmZTI2NTlmZDM2MzFmZWQxOTg0NDhhYzVhODQ1MjBhNDJkYmMyZmQ1ZjVhN2M4NTM3M2M3MDUyODQ3ZGZjNWRkNzA4LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4471756150/?trackingId=yasD53XyTUqBOhSVbGfzkw%3D%3D&refId=NLPEFKVAREiJtUE66OxYoQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BmOntDkXPQ46wXOpJtrSPxA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=241s5uLrcHqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munp8dui~zn-null-null&eid=a06oc2-munp8dui-zn&otpToken=YWIyYTU3NTc5ODZmMTExYmU3ZDEyMjk1M2U0MzJhNDg5ZjNjZDVjYmE1YjgxNDJmYzhkOGQ4ZGU1OGQ4OGNiMDZlMzIwMmY1YjY0NmFmZTI2NTlmZDM2MzFmZWQxOTg0NDhhYzVhODQ1MjBhNDJkYmMyZmQ1ZjVhN2M4NTM3M2M3MDUyODQ3ZGZjNWRkNzA4LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?trackingId=CcuJrbMISoWtI09cFMmKWw%3D%3D&refId=qOWxrALCThO"
+    },
+    {
+      "id": "altarum-institute-more-success-view-similar-jobs-you-may-be-interested",
+      "company": "Altarum Institute",
+      "role": "More Success View Similar Jobs You May Be Interested",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "LinkedIn application receipt",
+      "latestSubject": "Tirth Chirayu, your application was sent to Altarum Institute",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-09-30T06:00:55.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f0e6d708793e5",
+      "gmailMessageIds": [
+        "1a0f0e6d708793e5"
+      ],
+      "notes": "Your application was sent to Altarum Institute Data Engineer (Generative AI & Healthcare Data) Altarum United States View job: https://www.linkedin.com/comm/jobs/view/4473251708/?trackingId=J212nNcXRjWKv%2F9kRMhuAQ%3D%3D&refId=hMoDC%2FZKQEyKsENiP7%2F%2Fdg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BOBIGQL1ASb2YRXR83U3ESg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0Is9SMn5EEqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munp5lwc~6o-null-null&eid=a06oc2-munp5lwc-6o&otpToken=NzdiY2I3MTYyZjZkNTJlMjBiZDkwNmJlYWFjZDFiZGZmZjY1ZDhhMDY2ZTExNzZhNTEyOWE5YmU3N2M2ZjMyN2RiZmM3MTQyNzg3MjEwOTg1OWRlNWJkNmI3NjM1ZmY4ZTMyZmU1NWJjOTNlZWUwMGRjOTQwMzdjNzM0MTJiYzc5ZjNlYzAzNmY2NzNlNTg0LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 30, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=F287GNDJSCqIk2YFzFZy6g%3D%3D&refId=Uln5WybqQPaOio%2Fi7qgydA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BOBIGQL1ASb2YRXR83U3ESg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0Is9SMn5EEqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munp5lwc~6o-null-null&eid=a06oc2-munp5lwc-6o&otpToken=NzdiY2I3MTYyZjZkNTJlMjBiZDkwNmJlYWFjZDFiZGZmZjY1ZDhhMDY2ZTExNzZhNTEyOWE5YmU3N2M2ZjMyN2RiZmM3MTQyNzg3MjEwOTg1OWRlNWJkNmI3NjM1ZmY4ZTMyZmU1NWJjOTNlZWUwMGRjOTQwMzdjNzM0MTJiYzc5ZjNlYzAzNmY2NzNlNTg0LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4471756150/?trackingId=5OxAdRtKSCygQiJv10o%2FHg%3D%3D&refId=lD0xrYkTS4OdMmJGRVmp2w%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BOBIGQL1ASb2YRXR83U3ESg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0Is9SMn5EEqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munp5lwc~6o-null-null&eid=a06oc2-munp5lwc-6o&otpToken=NzdiY2I3MTYyZjZkNTJlMjBiZDkwNmJlYWFjZDFiZGZmZjY1ZDhhMDY2ZTExNzZhNTEyOWE5YmU3N2M2ZjMyN2RiZmM3MTQyNzg3MjEwOTg1OWRlNWJkNmI3NjM1ZmY4ZTMyZmU1NWJjOTNlZWUwMGRjOTQwMzdjNzM0MTJiYzc5ZjNlYzAzNmY2NzNlNTg0LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?trackingId=B7eL5necR"
+    },
+    {
+      "id": "nxt-level-more-success-view-similar-jobs-you-may-be-interested",
+      "company": "Nxt Level",
+      "role": "More Success View Similar Jobs You May Be Interested",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "LinkedIn application receipt",
+      "latestSubject": "Tirth Chirayu, your application was sent to Nxt Level",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-09-30T05:59:04.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f0e526a18ebd1",
+      "gmailMessageIds": [
+        "1a0f0e526a18ebd1"
+      ],
+      "notes": "Your application was sent to Nxt Level Senior Data Platform Engineer Nxt Level Los Angeles Metropolitan Area View job: https://www.linkedin.com/comm/jobs/view/4462197679/?trackingId=yt8YJWNMQAOuP8EZxK5c2g%3D%3D&refId=dePf%2FbufT0uM0QpEaEg%2BDg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BwxGHQ0SeSFOJb96ijph6hw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2v3U24tBQDqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munp38ah~72-null-null&eid=a06oc2-munp38ah-72&otpToken=ZDBlMTU0YmFiYzk0NGQ3MWJhZTI0NzJiMGMxYWYzNDRlZGZmY2Y3OGNiN2MxZjk5Nzg2NTAyNGRhNjNlMWM3N2FkNDFjYzgzZTBjYjhkMDM1YmNhZTEyOGI2MDMyNTQxOTAzMGQyZDEzYzg2NTJmZGZjZTA1NWEzMjg0ZTJkNzU3NGFmZDJjZWE5MzZmNjlmLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 30, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=hWmPFDLoQ1OEOa5vYeKvsw%3D%3D&refId=5mSuwBkrQdi0leUynjv2tQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BwxGHQ0SeSFOJb96ijph6hw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2v3U24tBQDqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munp38ah~72-null-null&eid=a06oc2-munp38ah-72&otpToken=ZDBlMTU0YmFiYzk0NGQ3MWJhZTI0NzJiMGMxYWYzNDRlZGZmY2Y3OGNiN2MxZjk5Nzg2NTAyNGRhNjNlMWM3N2FkNDFjYzgzZTBjYjhkMDM1YmNhZTEyOGI2MDMyNTQxOTAzMGQyZDEzYzg2NTJmZGZjZTA1NWEzMjg0ZTJkNzU3NGFmZDJjZWE5MzZmNjlmLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4471756150/?trackingId=BwjF3e6%2FQn%2B%2BtRt8lbjF0g%3D%3D&refId=ChaqohdoSmqegmseTY%2FbDQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BwxGHQ0SeSFOJb96ijph6hw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2v3U24tBQDqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munp38ah~72-null-null&eid=a06oc2-munp38ah-72&otpToken=ZDBlMTU0YmFiYzk0NGQ3MWJhZTI0NzJiMGMxYWYzNDRlZGZmY2Y3OGNiN2MxZjk5Nzg2NTAyNGRhNjNlMWM3N2FkNDFjYzgzZTBjYjhkMDM1YmNhZTEyOGI2MDMyNTQxOTAzMGQyZDEzYzg2NTJmZGZjZTA1NWEzMjg0ZTJkNzU3NGFmZDJjZWE5MzZmNjlmLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?trackingId=nVC7PeweTciQnSlD%"
+    },
+    {
+      "id": "zifo-sr",
+      "company": "Zifo",
+      "role": "Senior Data Engineer",
+      "reqId": null,
+      "status": "reply_needed",
+      "confidence": "medium",
+      "classifier": "rules",
+      "reason": "action requested",
+      "latestSubject": "Senior Data Engineer - Zifo",
+      "latestFrom": "Zifo <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-09-30T05:46:27.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0637bbb03daff0",
+      "gmailMessageIds": [
+        "1a0637bbb03daff0",
+        "1a0637899c2e244a",
+        "1a065d6a4324e561",
+        "1a065cfae39411a1"
+      ],
+      "notes": " ------------------------------------------------------------------------------- Dear Tirth Chirayu, We have received your application for the Senior Data Engineer position. We are currently reviewing applications and will contact you with any next steps or if we need additional information. Thank you again and good luck! Zifo ------------------------------------------------------------------------------- ------------------------------------------------------------------------------- Dear Tirth Chirayu, We have received your application for the Senior Data Engineer position. We are currently reviewing applications and will contact you with any next steps or if we need additional information. Thank you again and good luck! Zifo",
+      "updatedAt": "2026-09-15T21:14:25.108Z"
+    },
+    {
+      "id": "zifo-zifo",
+      "company": "Zifo",
+      "role": "Zifo",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "application receipt",
+      "latestSubject": "Thanks for applying to Zifo",
+      "latestFrom": "Workable <noreply@candidates.workablemail.com>",
+      "lastActivityAt": "2026-09-30T05:43:35.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f0d6fed714451",
+      "gmailMessageIds": [
+        "1a0f0d6fed714451"
+      ],
+      "notes": "Zifo ------------------------------------------------------------------------------- Your application for the Senior Data Engineer job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Chirayu Shah Email: tirthcshah1999@gmail.com Headline: Management at HCLTech Phone: +1 9796352045 Address: College Station, Texas, United States ** PROFILE ** Education 2024 - 2026 Master of Science - MS Management Information Systems, General at Texas A&amp;M University 2017 - 2021 Bachelor of Engineering - BE Computer Engineering at SARDAR VALLABHBHAI PATEL INSTITUTE OF TECH.,VASAD 041 2015 - 2017 Higher Secondary Certificate and Senior Secondary Certificate Physics,Chemistry,Mathematics at Kokilaben Dhirubhai Ambani Vidyamandir Experience 2026 - 2026 Global Engagement Management at HCLTech (4 months) • Shipped a live agentic 5G network orchestration prototype (telecom-simulation-5g.vercel.app) simulating closed-loop autonomy across RAN, Core, and Transport, presented to 10+ senior leaders including the SVP as the demo anchor for a $2.1B account growth strategy owned prototype-to-pitch end to end, from use case selection through demo flow design. • Drove the market and account research behind the strategy, analyzing the client's $34.4B Q1 revenue position, 32-country footprint, $5B CEO-mandated OpEx reduction, and 170+ operator partnership base to identify where a top tier US telecom account is most exposed in the TelCo-to-TechCo transition signaled at MWC 2026. • Built the product roadmap prioritizing four near-term agentic use cases against business impact and feasibility, mapped against a 3-horizon path (observe-and-recommend 2026 → closed-loop autonomy 2028 → governed autonomous operations 2030), benchmarked against industry consensus that only 23% of CSPs reach L4 autonomy by 2026. • Translated technical capability into executive narrative, connecting HCLTech's ART (AI Runtime Agentic Orchestration) framework and NWDAF signals into a single business case that delivery, account management, and solutioning teams could all sell from without the buyer needing to understand the underlying network architecture. • Aligned cross-functional stakeholders across the TMT vertical (SVP, account leadership, delivery leads, solutioning) on a unified strategy for shifting a managed services account into an AI-native transformation partner, including handling competing priorities between defend-current-revenue and extend-into-new-domains positions. 2025 - 2026 AI &amp; Data Engineer at Mays Business School - Texas A&amp;M University (4 months) • Architected end-to-end analytics platform with Python ETL pipeline processing 2,400+ admissions records from 7 graduate programs across 3 cohorts, automating data ingestion from Excel sources into SQLite with state-snapshot methodology, eliminating 95% of manual reporting and saving "
+    },
+    {
+      "id": "zifo-more-success-view-similar-jobs-you-may-be-interested",
+      "company": "Zifo",
+      "role": "More Success View Similar Jobs You May Be Interested",
+      "reqId": null,
+      "status": "applied",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "LinkedIn application receipt",
+      "latestSubject": "Tirth Chirayu, your application was sent to Zifo",
+      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
+      "lastActivityAt": "2026-09-30T05:43:09.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0f0d696f6692ac",
+      "gmailMessageIds": [
+        "1a0f0d696f6692ac"
+      ],
+      "notes": "Your application was sent to Zifo Senior Data Engineer Zifo United States View job: https://www.linkedin.com/comm/jobs/view/4473506122/?trackingId=49Lt%2FTHCR%2By8eKqmQNunOQ%3D%3D&refId=e8pZR02oQ8iw7XKLCN%2BwaQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BLTQ1vpEsQbaW9YB1JdzBlg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=04Ee3x2OUnqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munoirzl~ug-null-null&eid=a06oc2-munoirzl-ug&otpToken=ZDE3ZDZhYmZiZGE3ZGI4OGEyNmRhNTVhNGNhYjg4YWU4ZGZjZWRlNzY2M2I1ZTBjZDU4OGVkMzk5YzRhZDcxN2E0MTA1NmRiYjQxM2U3NjgwYTgzNDdjMjg5OWIyNzM1MDRlYzNiZjMwZDI1ZDNiODQ1MDMwZjI4MDQzZGNlMWUxZWI1MDQ0MjBlZWY4YmFiLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 30, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=3PQB%2Fm8YTfKqvwuFMnLPiA%3D%3D&refId=zdsPT8yqRvifnVohW8bFdw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BLTQ1vpEsQbaW9YB1JdzBlg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=04Ee3x2OUnqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munoirzl~ug-null-null&eid=a06oc2-munoirzl-ug&otpToken=ZDE3ZDZhYmZiZGE3ZGI4OGEyNmRhNTVhNGNhYjg4YWU4ZGZjZWRlNzY2M2I1ZTBjZDU4OGVkMzk5YzRhZDcxN2E0MTA1NmRiYjQxM2U3NjgwYTgzNDdjMjg5OWIyNzM1MDRlYzNiZjMwZDI1ZDNiODQ1MDMwZjI4MDQzZGNlMWUxZWI1MDQ0MjBlZWY4YmFiLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4471756150/?trackingId=YtcuuCYYRkOCRtPJqqXuVg%3D%3D&refId=vvucnxlCRTONN8KJhPKeXQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BLTQ1vpEsQbaW9YB1JdzBlg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=04Ee3x2OUnqss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~munoirzl~ug-null-null&eid=a06oc2-munoirzl-ug&otpToken=ZDE3ZDZhYmZiZGE3ZGI4OGEyNmRhNTVhNGNhYjg4YWU4ZGZjZWRlNzY2M2I1ZTBjZDU4OGVkMzk5YzRhZDcxN2E0MTA1NmRiYjQxM2U3NjgwYTgzNDdjMjg5OWIyNzM1MDRlYzNiZjMwZDI1ZDNiODQ1MDMwZjI4MDQzZGNlMWUxZWI1MDQ0MjBlZWY4YmFiLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?trackingId=9yKtIUjfSHev1MhF8vwmlA%3D%3D&refId=4%2FcHq%2F9VQTa4r7SZM"
+    },
     {
       "id": "axon-senior-data-engineer-ii",
       "company": "Axon",
@@ -250,25 +697,6 @@
         "1a0edf52ee03d455"
       ],
       "notes": "Hi Tirth, Thank you for your application to the Senior Data Engineer role and for your interest in Teleport. Although you have many valuable skills, unfortunately we will not be moving forward with your candidacy at this time. We will reach out to you in the future if a position opens up that's in alignment with your skill set. Please note, if you're currently interviewing for another role with us, this doesn't affect that process. Please continue as planned, and reach out to your recruiter directly if you have any questions. We truly appreciate your interest in Teleport and wish you success in your job search. Kind Regards, The Teleport Recruiting Team Hi Tirth , Thank you for your application to the Senior Data Engineer role and for your interest in Teleport. Although you have many valuable skills, unfortunately we will not be moving forward with your candidacy at this time. We will reach out to you in the future if a position opens up that's in alignment with your skill set. Please note , if you're currently interviewing for another role with us, this doesn't affect that process. Please continue as planned, and reach out to your recruiter directly if you have any questions. We truly appreciate your interest in Teleport and wish you success in your job search. Kind Regards, The Teleport Recruiting Team"
-    },
-    {
-      "id": "haystack-general-application",
-      "company": "Haystack",
-      "role": "General Application",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
-      "latestSubject": "CGI is hiring - USD 88,200/yr",
-      "latestFrom": "Haystack Jobs <alerts@alerts.haystack.cv>",
-      "lastActivityAt": "2026-09-29T16:11:34.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0c7b6cc05d8b31",
-      "gmailMessageIds": [
-        "1a0c7b6cc05d8b31"
-      ],
-      "notes": "Including CGI, USD 88,200/yr. Apply before others do. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ https://haystack.cv 5 NEW JOBS MATCHING YOUR SEARCH Here are the latest opportunities we found for you 🔥 Just nowTechnology Databricks Developer - Databricks Apps Specialist 🏢 CGI 📍 Houston, United States 🇺🇸 • 💰 USD 88,200/yr Apply Now → https://haystack.cv/go?j=fd5d303f-f71d-4235-9b61-bc1996d9dfcd&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FgNRpksiHqbb-OZRTt5r2sCAEtZIHEzyR7XcAMSMtJZW-O2YQOwgse5YyAZkmIArg&t=Databricks%20Developer%20-%20Databricks%20Apps%20Specialist&c=CGI 🔥 3 hours agoTechnology Lead Full Stack AI Engineer 🏢 Strategic Staffing Solutions 📍 Columbus, United States 🇺🇸 • 💰 USD 78/hr Apply Now → https://haystack.cv/go?j=91f29525-f1a9-4169-86bc-148fbbda24b4&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FCn4dkD0hsJ9DrE9J9HOmNGbJLkJCr5nCaFNfMrIqqLhDbOUDXMRe8WYeDHXLaZWz&t=Lead%20Full%20Stack%20AI%20Engineer&c=Strategic%20Staffing%20Solutions 🔥 4 hours agoTechnology Sr. Data Analytics Engineer 🏢 Innova 📍 Charlotte, United States 🇺🇸 • 💰 USD 53 - 58/hr Apply Now → https://haystack.cv/go?j=ca01c94e-eb84-47ef-b2e4-8be531aa7cfb&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FquGgSllENySUGU8_oEpvrB6b1ZHIyUN4ZUv55iATLzheYSCz_G5g-XS6h05kwFwV&t=Sr.%20Data%20Analytics%20Engineer&c=Innova 🔥 2 hours agoTechnology Senior Data Scientist with Security Clearance 🏢 Prescient Edge 📍 Washington, United States 🇺🇸 • 💰 USD 160,000 - 200,000/yr Apply Now → https://haystack.cv/go?j=8f3e1ca8-293d-4370-9501-31df606633d9&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2FYfcByJMhjtzfWYUc8dhXleptmviYsx2Rw6ha96WfwIG69EDKrrf-ExCLQIYcK_wq&t=Senior%20Data%20Scientist%20with%20Security%20Clearance&c=Prescient%20Edge 🔥 3 hours agoTechnology Cloud Developer, Mid with Security Clearance 🏢 Cayuse Technologies 📍 Washington, United States 🇺🇸 Apply Now → https://haystack.cv/go?j=3bb4f836-fb77-4475-8334-107049eb4118&s=searches-email&sub=5b286a0b-aca7-442f-9ccf-ec33a7fe44b4&u=https%3A%2F%2Fclick.appcast.io%2Ft%2F9-UCJ6BquNBbHWPo9bpPjWdKspzcEmNz32uys64mI9WOj7k93Op1E3z91WUlykwg&t=Cloud%20Developer%2C%20Mid%20with%20Security%20Clearance&c=Cayuse%20Technologies Browse All Jobs https://haystack.cv/jobs?src=searches-email Hiring as well? Post a role on Haystack and get AI-matched, vetted candidates in 24 hours. $349 for your first job, with a 10-candidate guarantee. Post a job → https://haystackapp.io/employers?utm_source=job_alert_email&utm_medium=email&utm_campaign=employer_crosssell&utm_content=alert_footer You're receiving this because you subscribed to job alerts on haystack.cv Unsubscribe from these emails https://haystack.cv/unsubscribe?token=eyJpZCI6IjViMjg2YTBiLWFjYTctNDQyZi05Y2NmLWVjMzNhN2ZlNDRiNCIsImVtYWlsIjoidGlydGhjc2hhaDE5OTlAZ21haWwuY29tIn0%3D New Job Opportunities Inc"
     },
     {
       "id": "jungle-a-job-on-welcome-to-the-jungle",
@@ -651,7 +1079,7 @@
       "gmailMessageIds": [
         "1a06acac92402e38"
       ],
-      "notes": "96 Dear Tirth Shah, Thank you for your interest in R1032070 Senior Data Engineer, Observability Engineering (Open) . After careful review, we will not be moving forward with your application for this role. We also encourage you to explore other opportunities at CVS Health® that match your skills and interests. Visit https://jobs.cvshealth.com/us/en or text “CVS” to 29000 to connect with our virtual recruiting assistant. To support your career journey, we’re offering free access to a virtual career development platform with tools for networking, resume building and interview prep. Enroll here: https://cvshealthcareers.yournextstep.com/users/sign_up?direct=XM73OrS-nKtg6Gk1 . Thank you again for considering CVS Health. We wish you success in your career. Sincerely, CVS Health Talent Acquisition Life at CVS Health Candidate Home Join #TeamCVS on social! *This is an automated e-mail; please do not reply to this message. This email was intended for tirthcshah1999@gmail.com CVS Health &#8226; One CVS Drive, Woonsocket, Rhode Island 02895",
+      "notes": "96 Dear Tirth, Thank you for your interest in R1047078 Staff Data Engineer, Observability Data Lake (Open) . After careful review, we will not be moving forward with your application for this role. We also encourage you to explore other opportunities at CVS Health® that match your skills and interests. Visit https://jobs.cvshealth.com/us/en or text “CVS” to 29000 to connect with our virtual recruiting assistant. To support your career journey, we’re offering free access to a virtual career development platform with tools for networking, resume building and interview prep. Enroll here: https://cvshealthcareers.yournextstep.com/users/sign_up?direct=XM73OrS-nKtg6Gk1 . Thank you again for considering CVS Health. We wish you success in your career. Sincerely, CVS Health Talent Acquisition Life at CVS Health Candidate Home Join #TeamCVS on social! *This is an automated e-mail; please do not reply to this message. This email was intended for tirthcshah1999+workday-cvshealth@gmail.com CVS Health &#8226; One CVS Drive, Woonsocket, Rhode Island 02895",
       "updatedAt": "2026-09-15T21:47:11.536Z"
     },
     {
@@ -691,25 +1119,6 @@
         "1a0ec7bdc5329a69"
       ],
       "notes": "Hello Tirth, We just received your information for our Data Engineer - Snowflake & Azure opening, thank you for considering Children's Hospital Association in your job search. Our hiring team will review your application and will contact you directly if you are selected to move forward in the hiring process. Best, Talent Acquisition Team Children's Hospital Association Hello Tirth, We just received your information for our Data Engineer - Snowflake & Azure opening, thank you for considering Children's Hospital Association in your job search. Our hiring team will review your application and will contact you directly if you are selected to move forward in the hiring process. Best, Talent Acquisition Team Children's Hospital Association"
-    },
-    {
-      "id": "early-career-support-speak",
-      "company": "Early Career Support",
-      "role": "Speak",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
-      "latestSubject": "Reminder from Roblox!",
-      "latestFrom": "Early Career Talent Support <assessment-support@roblox.com>",
-      "lastActivityAt": "2026-09-29T09:25:08.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0ec7b7228f84ea",
-      "gmailMessageIds": [
-        "1a0ec7b7228f84ea"
-      ],
-      "notes": "Hey Tirth, We hope you’re doing well. Our team noticed you haven’t had a chance to complete your assessments yet. We understand it's a busy time of year; if you need more time or your assessments have expired, you can extend your deadline here. In the meantime, check out the following resources: How to Prepare Sign up for Speak_ where you’ll gain access to our practice assessments, comprehensive guides, and live workshops designed to help you ace the hiring process. Fun fact: In the last year, more than half of our Early Career hires utilized Speak_ to prepare for their interviews! Check out our assessment resources and FAQs. Join our virtual events to meet the Roblox team, get an inside look at the innovative work we're doing, and discover how you can help build what’s next. Helpful Tips Prepare Your Setup: Ensure you have plenty of uninterrupted time, a quiet space to focus, and a stable internet connection. Pace Yourself: You don't have to complete all the assessments at once! Feel free to take them task by task. (Note: Once you start one assessment, you must finish it.) Complete Every Assessment: We evaluate your performance holistically. If you feel you didn't do well on one task, strong results on the others can still carry you through! Good luck! Best, Roblox Early Career Talent Hey Tirth, We hope you’re doing well. Our team noticed you haven’t had a chance to complete your assessments yet. We understand it's a busy time of year; if you need more time or your assessments have expired, you can extend your deadline here . In the meantime, check out the following resources: How to Prepare Sign up for Speak_ where you’ll gain access to our practice assessments, comprehensive guides, and live workshops designed to help you ace the hiring process. Fun fact: In the last year, more than half of our Early Career hires utilized Speak_ to prepare for their interviews! Check out our assessment resources and FAQs . Join our virtual events to meet the Roblox team, get an inside look at the innovative work we're doing, and discover how you can help build what’s next. Helpful Tips Prepare Your Setup : Ensure you have plenty of uninterrupted time, a quiet space to focus, and a stable internet connection. Pace Yourself : You don't have to complete all the assessments at once! Feel free to take them task by task. (Note: Once you start one assessment, you must finish it.) Complete Every Assessment : We evaluate your performance holistically. If you feel you didn't do well on one task, strong results on the others can still carry you through! Good luck! Best, Roblox Early Career Talent"
     },
     {
       "id": "abaka-ai-abaka-ai",
@@ -766,7 +1175,7 @@
       "gmailMessageIds": [
         "1a0b2b7ba3ce0663"
       ],
-      "notes": "96 Thank you for applying! We have received your application and will be in touch with next steps. This email was intended for tirthcshah1999+workday-homedepot@gmail.com"
+      "notes": "96 Thank you for applying! We have received your application and will be in touch with next steps. This email was intended for tirthcshah1999@gmail.com"
     },
     {
       "id": "leading-hotels-of-world-general-application",
@@ -1037,26 +1446,6 @@
         "1a0810a45b2bcae9"
       ],
       "notes": "Your application was sent to Enhance IT Data Engineer Enhance IT California, United States View job: https://www.linkedin.com/comm/jobs/view/4471204957/?trackingId=FfZEauytQEKTsc8AtLr9lw%3D%3D&refId=BMavUUAOTjGGnQIas3WOcg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Boc3AAleOTDmIEoAsQNyp3g%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0YSHw7KiiDoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumastvy~ml-null-null&eid=a06oc2-mumastvy-ml&otpToken=ZmJjZWI3MjMxMzMxY2U3NDk2NjcxNTFjNWY1Y2E3MzI0OGMzMGFkYTM5MmIzNjEzOTBmOTRlMzk2N2MyNjNkOGE2N2JhNWU4NTZhNjAyYzQ4NTM0ZDMwMmViNGJkODNhNzQ3NmI1OGIzNGY3NDM0Njg3ODAzNzU1OGI5Y2U4ODA3YzgyZGY2ZTQ1N2VlZTNjLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 29, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=zcso8ZOvTnmBbp%2FTvi4K8g%3D%3D&refId=fYFdTFJLRIGGbMVxgXATFw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Boc3AAleOTDmIEoAsQNyp3g%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0YSHw7KiiDoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumastvy~ml-null-null&eid=a06oc2-mumastvy-ml&otpToken=ZmJjZWI3MjMxMzMxY2U3NDk2NjcxNTFjNWY1Y2E3MzI0OGMzMGFkYTM5MmIzNjEzOTBmOTRlMzk2N2MyNjNkOGE2N2JhNWU4NTZhNjAyYzQ4NTM0ZDMwMmViNGJkODNhNzQ3NmI1OGIzNGY3NDM0Njg3ODAzNzU1OGI5Y2U4ODA3YzgyZGY2ZTQ1N2VlZTNjLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics New York, NY 10 connections 158 company alumni 6 school alumni Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4440565680/?trackingId=ZixoF%2BURQYyXdrFjBXB85Q%3D%3D&refId=DHNZ7fCOSnCxZbEXbt%2Fwxg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Boc3AAleOTDmIEoAsQNyp3g%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0YSHw7KiiDoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumastvy~ml-null-null&eid=a06oc2-mumastvy-ml&otpToken=ZmJjZWI3MjMxMzMxY2U3NDk2NjcxNTFjNWY1Y2E3MzI0OGMzMGFkYTM5MmIzNjEzOTBmOTRlMzk2N2MyNjNkOGE2N2JhNWU4NTZhNjAyYzQ4NTM0ZDMwMmViNGJkODNhNzQ3NmI1OGIzNGY3NDM0Njg3ODAzNzU1OGI5Y2U4ODA3YzgyZGY2ZTQ1N2VlZTNjLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Chicago, IL 158 company alumni 6 school al",
-      "updatedAt": "2026-09-15T21:14:25.108Z"
-    },
-    {
-      "id": "sotalent-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Sotalent",
-      "role": "More Success View Similar Jobs You May Be Interested",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "LinkedIn application receipt",
-      "latestSubject": "Tirth Chirayu, your application was sent to SoTalent",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-09-29T06:30:51.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a089d8d2e20a9f0",
-      "gmailMessageIds": [
-        "1a089d8d2e20a9f0"
-      ],
-      "notes": "Your application was sent to SoTalent Data Platform Engineer SoTalent United States View job: https://www.linkedin.com/comm/jobs/view/4470893124/?trackingId=U6p2CHVtRMu8V4TVsUBsBg%3D%3D&refId=7enUtTACRjuJemaa0Be6rg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bt%2BsbfFsQTfelWaqCItaKag%3D%3D&midToken=AQG7i8fZeRVENg&midSig=22QbTZDpiuoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumahfh9~k5-null-null&eid=a06oc2-mumahfh9-k5&otpToken=ZjdjODIxMjQwYTY3OWUwODA5MzIzNTFiZTFlNjc1NzQzYjgzZmI0ZmMzZDllNzhiZWMyNGY1OWJkZDIwNDkzYzk1NjM2Mzc5MDI4MzEwNWRiODhmYzE5NzA4ODEyNDI2ZTNmNTIxYTU5ZDQ1NWY2MjVjOGM3OGQyOGE3YTVlY2Q3OThiMTNmYTk5YzIzOGY4LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 29, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=stigimKwQVu6M%2F%2F0O36NBA%3D%3D&refId=qW3KMQQPQPGCmsnMOnmEpg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bt%2BsbfFsQTfelWaqCItaKag%3D%3D&midToken=AQG7i8fZeRVENg&midSig=22QbTZDpiuoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumahfh9~k5-null-null&eid=a06oc2-mumahfh9-k5&otpToken=ZjdjODIxMjQwYTY3OWUwODA5MzIzNTFiZTFlNjc1NzQzYjgzZmI0ZmMzZDllNzhiZWMyNGY1OWJkZDIwNDkzYzk1NjM2Mzc5MDI4MzEwNWRiODhmYzE5NzA4ODEyNDI2ZTNmNTIxYTU5ZDQ1NWY2MjVjOGM3OGQyOGE3YTVlY2Q3OThiMTNmYTk5YzIzOGY4LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Chicago, IL 10 connections 158 company alumni 6 school alumni Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4440557967/?trackingId=qr9JD2VeRoeDIydZ68HsYg%3D%3D&refId=v7%2Bs9hxEQqOQnBhhcFnC4g%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3Bt%2BsbfFsQTfelWaqCItaKag%3D%3D&midToken=AQG7i8fZeRVENg&midSig=22QbTZDpiuoYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mumahfh9~k5-null-null&eid=a06oc2-mumahfh9-k5&otpToken=ZjdjODIxMjQwYTY3OWUwODA5MzIzNTFiZTFlNjc1NzQzYjgzZmI0ZmMzZDllNzhiZWMyNGY1OWJkZDIwNDkzYzk1NjM2Mzc5MDI4MzEwNWRiODhmYzE5NzA4ODEyNDI2ZTNmNTIxYTU5ZDQ1NWY2MjVjOGM3OGQyOGE3YTVlY2Q3OThiMTNmYTk5YzIzOGY4LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics New York, NY 158 company alumni 6 school alu",
       "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
@@ -1334,8 +1723,8 @@
       "reqId": null,
       "status": "rejected",
       "confidence": "high",
-      "classifier": "rules",
-      "reason": "platform auto-receipt sender — application acknowledgment",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
       "latestSubject": "Regarding Your Application With ZEFR!",
       "latestFrom": "Zefr Hiring Team <no-reply@ashbyhq.com>",
       "lastActivityAt": "2026-09-28T19:54:49.000Z",
@@ -1490,10 +1879,10 @@
       "role": "Your Interest In The Analyst- SF",
       "reqId": null,
       "status": "interviewed",
-      "confidence": "medium",
-      "classifier": "rules",
-      "reason": "action requested",
-      "latestSubject": "RZR Global Inc. Interview Availability",
+      "confidence": "high",
+      "classifier": "deterministic_rules",
+      "reason": "interview scheduled or confirmed",
+      "latestSubject": "Canceled event: Interview with RZR Global Inc. @ Mon Sep 28, 2026 1:30pm - 2pm (EDT) (tirthcshah1999@gmail.com)",
       "latestFrom": "Sheela Lokesh <sheela.l@aarki.com>",
       "lastActivityAt": "2026-09-28T18:01:59.000Z",
       "source": "gmail",
@@ -1501,7 +1890,7 @@
       "gmailMessageIds": [
         "1a0c9def015e4e80"
       ],
-      "notes": "Tirth Shah, Thanks for your interest in the Analyst- SF position at RZR Global Inc.. We're excited to move forward with the interview process. To help us schedule your next interview(s), please let us know when you're available by selecting the online calendar link below. Enter your availability now > ( https://app9.greenhouse.io/availability/e44a632bfc9736d71d69c56d6f281124?utm_medium=email&utm_source=AvailabilityRequest ) We'll coordinate with our team and confirm a time with you. Regards, Sheela Tirth Shah, Thanks for your interest in the Analyst- SF position at RZR Global Inc.. We're excited to move forward with the interview process. To help us schedule your next interview(s), please let us know when you're available by selecting the online calendar link below. Enter your availability now > We'll coordinate with our team and confirm a time with you. Regards, Sheela"
+      "notes": "This event has been canceled and removed from your calendar. Interview with RZR Global Inc. Monday Sep 28, 2026 ⋅ 1:30pm – 2pm Eastern Time - New York Join with Google Meet https://meet.google.com/uwh-znrv-ewo?hs=224 Join by phone (US) +1 984-221-0867 PIN: 363420090 More phone numbers https://tel.meet/uwh-znrv-ewo?pin=7204490322625&hs=0 Join the Google Meet meeting: https://meet.google.com/uwh-znrv-ewo Guests tirthcshah1999@gmail.com schedule@anil.greenhouse.io ~~//~~ Invitation from Google Calendar: https://calendar.google.com/calendar/ You are receiving this email because you are subscribed to calendar notifications. To stop receiving these emails, go to https://calendar.google.com/calendar/r/settings, select this calendar, and change \"Other notifications\". Forwarding this invitation could allow any recipient to send a response to the organizer, be added to the guest list, invite others regardless of their own invitation status, or modify your RSVP. Learn more https://support.google.com/calendar/answer/37135#forwarding 96 Interview with RZR Global Inc. This event has been canceled and removed from your calendar. Join with Google Meet Meeting link meet.google.com/uwh-znrv-ewo Join by phone (US) +1 984-221-0867 PIN: 363420090 More phone numbers Join the Google Meet meeting: https://meet.google.com/uwh-znrv-ewo When Monday Sep 28, 2026 ⋅ 1:30pm – 2pm (Eastern Time - New York) Guests tirthcshah1999@gmail.com schedule@anil.greenhouse.io Invitation from Google Calendar You are receiving this email because you are subscribed to calendar notifications. To stop receiving these emails, go to Calendar settings , select this calendar, and change \"Other notifications\". Forwarding this invitation could allow any recipient to send a response to the organizer, be added to the guest list, invite others regardless of their own invitation status, or modify your RSVP. Learn more"
     },
     {
       "id": "sheela-lokesh-the-interview-cancellation-i-hope-everything-is",
@@ -1522,6 +1911,25 @@
         "1a0df2b845c6fdac"
       ],
       "notes": "Hi Tirth Shah, Thanks for submitting your availability for the Analyst- SF position. You're confirmed for your interview on: Date/Time: Sep 29, 2026 3:00pm-3:30pm (GMT-04:00) Eastern Time (US & Canada) Interviewers: Brian Feng Interview type: Technical Interview Google Meet: https://meet.google.com/nvs-eugu-zcb To help you prepare, please review the candidate preparation document here. ( https://drive.google.com/file/d/13QQDEcB1eKpGZ-bX4214NBgWGQPx2UBf/view ) Let us know if you have any other questions before your interview. Thanks, Sheela Hi Tirth Shah, Thanks for submitting your availability for the Analyst- SF position. You're confirmed for your interview on: Date/Time: Sep 29, 2026 3:00pm-3:30pm (GMT-04:00) Eastern Time (US & Canada) Interviewers: Brian Feng Interview type: Technical Interview Google Meet: https://meet.google.com/nvs-eugu-zcb To help you prepare, please review the candidate preparation document here. Let us know if you have any other questions before your interview. Thanks, Sheela"
+    },
+    {
+      "id": "rzr-global-analyst-sf",
+      "company": "RZR Global",
+      "role": "Analyst- SF",
+      "reqId": null,
+      "status": "reply_needed",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "RZR Global Inc. Interview Availability",
+      "latestFrom": "Sheela Lokesh <sheela.l@aarki.com>",
+      "lastActivityAt": "2026-09-28T18:01:20.000Z",
+      "source": "gmail",
+      "gmailThreadId": "19fdc40a02293d29",
+      "gmailMessageIds": [
+        "19fdc40a02293d29"
+      ],
+      "notes": "Tirth Shah, Thanks for your interest in the Analyst- SF position at RZR Global Inc.. We're excited to move forward with the interview process. To help us schedule your next interview(s), please let us know when you're available by selecting the online calendar link below. Enter your availability now > ( https://app9.greenhouse.io/availability/e44a632bfc9736d71d69c56d6f281124?utm_medium=email&utm_source=AvailabilityRequest ) We'll coordinate with our team and confirm a time with you. Regards, Sheela Tirth Shah, Thanks for your interest in the Analyst- SF position at RZR Global Inc.. We're excited to move forward with the interview process. To help us schedule your next interview(s), please let us know when you're available by selecting the online calendar link below. Enter your availability now > We'll coordinate with our team and confirm a time with you. Regards, Sheela"
     },
     {
       "id": "anduril-industries-anduril-industries-tirth",
@@ -1638,6 +2046,25 @@
       "notes": "Thank you for your time applying to the Senior IT Data Engineer position at Mosaic Health. We’ve received a tremendous interest in this position and have moved forward with other candidates. We will keep your application on file for future opportunities. In the meantime, we encourage you to continue to visit our career site. It's a great way to hear about new job openings, create personalized job alerts, and get up to date information on our collective work to improve affordability, deliver superior member experiences, and expand access to comprehensive primary care. Again, we appreciate your interest in a career with Mosaic Health and wish you success in your job search. Stay in touch, The Mosaic Health Talent Acquisition Team Business Process: Job Application: Tirth Shah Shah ‎- M104812 Senior IT Data Engineer (CANDIDATE-3-210610) on 09/16/2026 Subject: Tirth Shah Shah ‎- M104812 Senior IT Data Engineer (CANDIDATE-3-210610) Click here to view the notification details. This email was intended for tirthcshah1999@gmail.com"
     },
     {
+      "id": "mosaic-health-senior-it-data-engineer",
+      "company": "Mosaic Health",
+      "role": "Senior IT Data Engineer",
+      "reqId": null,
+      "status": "rejected",
+      "confidence": "high",
+      "classifier": "openrouter",
+      "reason": "AI extracted",
+      "latestSubject": "Update on your application for Senior IT Data Engineer at Mosaic Health",
+      "latestFrom": "MosaicHealthWorkday <verawholehealth@myworkday.com>",
+      "lastActivityAt": "2026-09-28T16:45:53.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0e8e89dbb8c4e7",
+      "gmailMessageIds": [
+        "1a0e8e89dbb8c4e7"
+      ],
+      "notes": "Thank you for your time applying to the Senior IT Data Engineer position at Mosaic Health. We’ve received a tremendous interest in this position and have moved forward with other candidates. We will keep your application on file for future opportunities. In the meantime, we encourage you to continue to visit our career site. It's a great way to hear about new job openings, create personalized job alerts, and get up to date information on our collective work to improve affordability, deliver superior member experiences, and expand access to comprehensive primary care. Again, we appreciate your interest in a career with Mosaic Health and wish you success in your job search. Stay in touch, The Mosaic Health Talent Acquisition Team Business Process: Job Application: Tirth Shah Shah ‎- M104812 Senior IT Data Engineer (CANDIDATE-3-210610) on 09/16/2026 Subject: Tirth Shah Shah ‎- M104812 Senior IT Data Engineer (CANDIDATE-3-210610) Click here to view the notification details. This email was intended for tirthcshah1999@gmail.com"
+    },
+    {
       "id": "protera-health-healthcare-claims-data-engineer",
       "company": "Protera Health",
       "role": "Healthcare Claims Data Engineer",
@@ -1672,6 +2099,25 @@
       "gmailThreadId": "1a07d4dabdae7279",
       "gmailMessageIds": [
         "1a07d4dabdae7279"
+      ],
+      "notes": "Face, Head, Person, Electronics, Mobile Phone, Phone, Indoors, Basketball, Basketball (Ball), Sport Hi Tirth,Â Â Here are some jobs that best fit your preferences! Marketplace Platform, TLM Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/1b7572b5b8ce361eb65ead9db0ab8631/events/clicked?signature=cc5bf5e149b0c6eda1a88aabc385033a6373db80&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fmarketplace-platform-tlm-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Senior Software Engineer, Mapping Field Response Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/1b7572b5b8ce361eb65ead9db0ab8631/events/clicked?signature=ed66f0a12e65bbe37a72f26317a0f01edd3c5235&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsenior-software-engineer-mapping-field-response-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) 2027 Summer Intern, BS/MS, Software Engineer San Francisco, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/1b7572b5b8ce361eb65ead9db0ab8631/events/clicked?signature=918933a0d7ee056e4bb5ac507b9d143e76d2ccc4&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2F2027-summer-intern-bs-ms-software-engineer-san-francisco-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) 2027 Summer Intern, BS/MS, Software Engineering, Commercialization Mountain View, California, United States. San Francisco, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/1b7572b5b8ce361eb65ead9db0ab8631/events/clicked?signature=fef023bf10655a3ec267629142e33f41408c346b&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2F2027-summer-intern-bs-ms-software-engineering-commercialization-mountain-view-california-united-states-san-francisco%"
+    },
+    {
+      "id": "waymo-general-application",
+      "company": "Waymo",
+      "role": "General Application",
+      "status": "not_related",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
+      "latestSubject": "Here are some new roles at Waymo",
+      "latestFrom": "The Talent Acquisition team at Waymo <user-e65a8e09c91dc79cdac854bf73c74dd1@waymo.mail.clinchtalent.com>",
+      "lastActivityAt": "2026-09-28T16:29:50.000Z",
+      "source": "gmail",
+      "gmailThreadId": "1a0487d212166fd4",
+      "gmailMessageIds": [
+        "1a0487d212166fd4",
+        "1a05958b0515c212"
       ],
       "notes": "Face, Head, Person, Electronics, Mobile Phone, Phone, Indoors, Basketball, Basketball (Ball), Sport Hi Tirth,Â Â Here are some jobs that best fit your preferences! Senior Backend Engineer, Security Mountain View, California, United States. San Francisco, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/502ca871ada7eafa84511a3656ae869d/events/clicked?signature=7e4980b1cb17e19abd52cc17e1c827b61aeea0d4&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsenior-backend-engineer-security-san-francisco-california-united-states-mountain-view%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Marketplace Platform, TLM Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/502ca871ada7eafa84511a3656ae869d/events/clicked?signature=cc5bf5e149b0c6eda1a88aabc385033a6373db80&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fmarketplace-platform-tlm-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Senior Fullstack Software Engineer, Workshop Management San Francisco, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/502ca871ada7eafa84511a3656ae869d/events/clicked?signature=f49401cbd45740549ced74b73018bad4542d8334&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsenior-fullstack-software-engineer-workshop-management-san-francisco-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Senior Software Engineer, Configuration & Experiments Mountain View, California, United States. San Francisco, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/502ca871ada7eafa84511a3656ae869d/events/clicked?signature=29154b958dcd7a34298ab20f375f501a7a1a7a39&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsenior-software-engineer-configuration-experiments-mountain-view-california-unite"
     },
@@ -1827,7 +2273,7 @@
       "gmailMessageIds": [
         "1a08111760a93680"
       ],
-      "notes": "Your application was sent to Harnham Data Engineer Harnham Austin, Texas Metropolitan Area View job: https://www.linkedin.com/comm/jobs/view/4469945075/?trackingId=kBjYL9huRJ%2BuE3i29jZcXg%3D%3D&refId=8dXtgw1MSbewfF4iMGL6cA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BmadFvaaPSgyCH5%2BeQpRF1Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2t82q1EwSVfss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mucnxmq7~8i-null-null&eid=a06oc2-mucnxmq7-8i&otpToken=ZDJkOGIyMDY0ZjBlYjI5MGVlNjY4N2I2YjJjMjMyOTVjNjg4NjQ1ZTdhZGM1NjBlM2QwMWNlY2Y5MDU0ZWZlM2M1M2VjMzFlN2IwOWE1NTk0OWZhOWQyMDY2NzcxMDM5NmE5MWU0ZjQ4NjRmMDJlY2NhNDZkZjVhZDdjNzkyOWU2NWMwY2E3ZDZlZTk1N2Y2LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 22, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=J5KaWNHJRl60ZElWufWK9g%3D%3D&refId=cBnmW7vZT3W9YcwczBi4xQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BmadFvaaPSgyCH5%2BeQpRF1Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2t82q1EwSVfss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mucnxmq7~8i-null-null&eid=a06oc2-mucnxmq7-8i&otpToken=ZDJkOGIyMDY0ZjBlYjI5MGVlNjY4N2I2YjJjMjMyOTVjNjg4NjQ1ZTdhZGM1NjBlM2QwMWNlY2Y5MDU0ZWZlM2M1M2VjMzFlN2IwOWE1NTk0OWZhOWQyMDY2NzcxMDM5NmE5MWU0ZjQ4NjRmMDJlY2NhNDZkZjVhZDdjNzkyOWU2NWMwY2E3ZDZlZTk1N2Y2LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer, Agentic AI Redapt, Inc. Seattle, WA 1 school alum Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4453807059/?trackingId=THHOVa4qSlibNyC660sefA%3D%3D&refId=e9epwrRfTTOnbcE0F7hqSA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BmadFvaaPSgyCH5%2BeQpRF1Q%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2t82q1EwSVfss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mucnxmq7~8i-null-null&eid=a06oc2-mucnxmq7-8i&otpToken=ZDJkOGIyMDY0ZjBlYjI5MGVlNjY4N2I2YjJjMjMyOTVjNjg4NjQ1ZTdhZGM1NjBlM2QwMWNlY2Y5MDU0ZWZlM2M1M2VjMzFlN2IwOWE1NTk0OWZhOWQyMDY2NzcxMDM5NmE5MWU0ZjQ4NjRmMDJlY2NhNDZkZjVhZDdjNzkyOWU2NWMwY2E3ZDZlZTk1N2Y2LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer - AI scalr New York, United States Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/446",
+      "notes": "Your application was sent to Harnham Data Engineer Harnham Miami-Fort Lauderdale Area View job: https://www.linkedin.com/comm/jobs/view/4471143441/?trackingId=0Ddhble2TpyK%2FFk%2FWcBkLQ%3D%3D&refId=6REqe8kpTLiZhLbfg6PVEg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BvYDbUASaQ2CreSSLg3WVJg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2hpTPHSRJChYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muf4f22f~wa-null-null&eid=a06oc2-muf4f22f-wa&otpToken=ZWE1NTdiZThjM2RjMzBmNjc0Njc2NTY3OGE2ODIwZjhkM2I3MWI4YWNhNDY3OGNhOTk0OGY3ZDJkMzA0NTM0NDkwMjhlNjU2MGEzZjM3MDgwODBkZGU4MGI3NDYzYjgxMmEyZmIxNmRiYTQ4NWNmN2Y0YjFjZjM3MThmNDFiM2IxYjZmZjRlOWMzNTBkMGRlLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 24, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Engagement Manager Kensho Technologies Cambridge, MA 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4455331496/?trackingId=SFstCnl4QRysy4ezyAGmsA%3D%3D&refId=UL6IlTlcQIqPfR99O5HvTw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BvYDbUASaQ2CreSSLg3WVJg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2hpTPHSRJChYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muf4f22f~wa-null-null&eid=a06oc2-muf4f22f-wa&otpToken=ZWE1NTdiZThjM2RjMzBmNjc0Njc2NTY3OGE2ODIwZjhkM2I3MWI4YWNhNDY3OGNhOTk0OGY3ZDJkMzA0NTM0NDkwMjhlNjU2MGEzZjM3MDgwODBkZGU4MGI3NDYzYjgxMmEyZmIxNmRiYTQ4NWNmN2Y0YjFjZjM3MThmNDFiM2IxYjZmZjRlOWMzNTBkMGRlLDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager Kensho Technologies New York, NY 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4455346350/?trackingId=MnV0MO%2F2TN6ompHzPYLCbA%3D%3D&refId=teBF%2BU9FQiiAFvoOlGZCJw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BvYDbUASaQ2CreSSLg3WVJg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2hpTPHSRJChYs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muf4f22f~wa-null-null&eid=a06oc2-muf4f22f-wa&otpToken=ZWE1NTdiZThjM2RjMzBmNjc0Njc2NTY3OGE2ODIwZjhkM2I3MWI4YWNhNDY3OGNhOTk0OGY3ZDJkMzA0NTM0NDkwMjhlNjU2MGEzZjM3MDgwODBkZGU4MGI3NDYzYjgxMmEyZmIxNmRiYTQ4NWNmN2Y0YjFjZjM3MThmNDFiM2IxYjZmZjRlOWMzNTBkMGRlLDIsMQ%3D%3D --------------------------------------------------------- Engagement Manager, US Cradle Boston, MA View job: https://www.linkedin.com/comm/jobs/view/4461914590/?trackingId=rq06XF2oSBWBv3r1JodyIQ%3D%3D&refId=6pRKqEEhSWiyWimHz2LGgw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_ema",
       "updatedAt": "2026-09-15T16:14:31.088Z"
     },
     {
@@ -2018,7 +2464,7 @@
       "gmailMessageIds": [
         "1a076fd96e6eb332"
       ],
-      "notes": "Hi Tirth, Thank you for your interest in CoreWeave ! We appreciate you taking the time to complete your application for Senior Account Solutions Architect, and we are delighted that you would consider joining our team. What Happens Next? A member of our recruiting team will review your application and be in touch if your qualifications match the needs of the team. If we believe you may also be a fit for other open roles, we’ll be in touch about those as well! Stay Up to Date with CoreWeave CoreWeave is growing quickly, and there’s always something new happening. Visit our Newsroom ( https://coreweave.com/newsroom ) to see the latest updates, including recent milestones like: * Our agreements with major companies to deliver AI infrastructure * Record-breaking advances in AI inferencing * Recent acquisitions * Our initial public offering announcement Warmly, CoreWeave Recruiting Team Please do not reply. This mailbox is not monitored. Hi Tirth, Thank you for your interest in CoreWeave ! We appreciate you taking the time to complete your application for Senior Account Solutions Architect, and we are delighted that you would consider joining our team. What Happens Next? A member of our recruiting team will review your application and be in touch if your qualifications match the needs of the team. If we believe you may also be a fit for other open roles, we&rsquo;ll be in touch about those as well! Stay Up to Date with CoreWeave CoreWeave is growing quickly, and there&rsquo;s always something new happening. Visit our Newsroom to see the latest updates, including recent milestones like: Our agreements with major companies to deliver AI infrastructure Record-breaking advances in AI inferencing Recent acquisitions Our initial public offering announcement Warmly, CoreWeave Recruiting Team Please do not reply. This mailbox is not monitored."
+      "notes": "Hi Tirth, Thank you for your interest in CoreWeave ! We appreciate you taking the time to complete your application for Senior Analytics Engineer, and we are delighted that you would consider joining our team. What Happens Next? A member of our recruiting team will review your application and be in touch if your qualifications match the needs of the team. If we believe you may also be a fit for other open roles, we’ll be in touch about those as well! Stay Up to Date with CoreWeave CoreWeave is growing quickly, and there’s always something new happening. Visit our Newsroom ( https://coreweave.com/newsroom ) to see the latest updates, including recent milestones like: * Our agreements with major companies to deliver AI infrastructure * Record-breaking advances in AI inferencing * Recent acquisitions * Our initial public offering announcement Warmly, CoreWeave Recruiting Team Please do not reply. This mailbox is not monitored. Hi Tirth, Thank you for your interest in CoreWeave ! We appreciate you taking the time to complete your application for Senior Analytics Engineer, and we are delighted that you would consider joining our team. What Happens Next? A member of our recruiting team will review your application and be in touch if your qualifications match the needs of the team. If we believe you may also be a fit for other open roles, we&rsquo;ll be in touch about those as well! Stay Up to Date with CoreWeave CoreWeave is growing quickly, and there&rsquo;s always something new happening. Visit our Newsroom to see the latest updates, including recent milestones like: Our agreements with major companies to deliver AI infrastructure Record-breaking advances in AI inferencing Recent acquisitions Our initial public offering announcement Warmly, CoreWeave Recruiting Team Please do not reply. This mailbox is not monitored."
     },
     {
       "id": "vay-general-application",
@@ -2272,9 +2718,9 @@
       "company": "American Express",
       "role": "The Domain Aexp.com.",
       "status": "not_related",
-      "confidence": "medium",
+      "confidence": "high",
       "lastActivityAt": "2026-09-28T08:16:12.000Z",
-      "latestSubject": "Please confirm your identity",
+      "latestSubject": "New job opportunities at American Express",
       "latestFrom": "Amex Careers <careers@recruitment.americanexpress.com>",
       "gmailThreadId": "1a020a37644d9f24",
       "gmailMessageIds": [
@@ -2284,7 +2730,7 @@
         "1a020a37644d9f24",
         "1a020a381832c59a"
       ],
-      "notes": "Hello Tirth, Thank you for your interest in working at American Express. Before you get started with your application, please confirm your identity using the one-time passcode below: 288229 This code will expire in 10 minutes. Once verified, you will be able to continue exploring opportunities and manage your profile at https://www.americanexpress.com/en-us/careers/ . If you did not attempt to login or have any questions, please contact us . Sincerely, Amex Talent Acquisition Team Replies to this email are undeliverable. If contacted by a suspicious profile, or if something feels off, don’t engage — email us to verify. Always confirm or apply for any open roles directly on the official American Express Careers Site .",
+      "notes": "New job opportunities for you! Hello Tirth, We have new job opportunities that might interest you. Check them out: Director - AI Engineering - Enterprise AI Platforms Director - Technologies Staff AI Engineer - Personalization, Brand, Communications Tech Senior AI Engineer II - Forward Deployment - Enterprise AI Platforms Senior Solutions Architect I See all opportunities Sincerely, American Express Recruiting team If you do not want to receive these job notifications, or if you want to update your preferences, go to our career site .",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -2292,8 +2738,8 @@
       "aiModel": "deterministic_rules",
       "aiClassifiedAt": "2026-09-15T21:55:22.814Z",
       "aiConfidence": "high",
-      "classifier": "openrouter",
-      "reason": "Review / Other"
+      "classifier": "deterministic_rules",
+      "reason": "job alert/newsletter/recommendation digest"
     },
     {
       "id": "hhs-technology-your-recent-application",
@@ -2350,7 +2796,7 @@
       "gmailMessageIds": [
         "1a065c508386d545"
       ],
-      "notes": "Your application was sent to Robert Half Data Engineer Robert Half Des Moines Metropolitan Area View job: https://www.linkedin.com/comm/jobs/view/4460685637/?trackingId=O%2FAIDTI%2FS8yqf6W%2BJZUP4w%3D%3D&refId=0R9g51yHRvaTERx%2Fs03CbA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BqqluBopSQqqi80sO1H%2Bo%2FA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1hjpgTeX6IOYo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtjoyvv8~qz-null-null&eid=a06oc2-mtjoyvv8-qz&otpToken=NGZmZmRlNjMxZmIyNTQ2ZDMyY2M5OGRmZjE1NWU2ZGM4MmQ0YmE5NmQ4YjExMGMzNDNmYTYyYjhiZjg3NDE4MmE1OTY0YWQ3NmEzMTUxZTRhODQ5ZjdlYzFkZTY0MjA0MGE0NjIxYTY4YWE1OWQ0ZjliZjY5YzIxNzMzZTQ3ODRmOTc5NjE3YTEzMWIyYmYyLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 2, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in AI Product Manager Applied Systems Lewisville, TX 3 connections 12 company alumni 10 school alumni View job: https://www.linkedin.com/comm/jobs/view/4440780268/?trackingId=5JZIZ8mfTka2eC6uNm%2B0Ng%3D%3D&refId=DTBIrw6tTXqFwa9OhNAS9A%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BqqluBopSQqqi80sO1H%2Bo%2FA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1hjpgTeX6IOYo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtjoyvv8~qz-null-null&eid=a06oc2-mtjoyvv8-qz&otpToken=NGZmZmRlNjMxZmIyNTQ2ZDMyY2M5OGRmZjE1NWU2ZGM4MmQ0YmE5NmQ4YjExMGMzNDNmYTYyYjhiZjg3NDE4MmE1OTY0YWQ3NmEzMTUxZTRhODQ5ZjdlYzFkZTY0MjA0MGE0NjIxYTY4YWE1OWQ0ZjliZjY5YzIxNzMzZTQ3ODRmOTc5NjE3YTEzMWIyYmYyLDIsMQ%3D%3D --------------------------------------------------------- Product Manager, AI Enablement Pindrop Atlanta, GA 4 school alumni View job: https://www.linkedin.com/comm/jobs/view/4458915497/?trackingId=ZTPbmtFZSx65DOctvne4dQ%3D%3D&refId=zQOSPmnKRiqyAsSi3oUzog%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BqqluBopSQqqi80sO1H%2Bo%2FA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1hjpgTeX6IOYo1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtjoyvv8~qz-null-null&eid=a06oc2-mtjoyvv8-qz&otpToken=NGZmZmRlNjMxZmIyNTQ2ZDMyY2M5OGRmZjE1NWU2ZGM4MmQ0YmE5NmQ4YjExMGMzNDNmYTYyYjhiZjg3NDE4MmE1OTY0YWQ3NmEzMTUxZTRhODQ5ZjdlYzFkZTY0MjA0MGE0NjIxYTY4YWE1OWQ0ZjliZjY5YzIxNzMzZTQ3ODRmOTc5NjE3YTEzMWIyYmYyLDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager MicroAI Texas, United States View job: https://www.linkedin.com/comm/jobs/view/4432436798/?trackingId=A%2BQM3sIYSTSx3Acar6Uj0w%3D%3D&re",
+      "notes": "Your application was sent to Robert Half Senior Data Engineer Robert Half Anaheim, CA View job: https://www.linkedin.com/comm/jobs/view/4468142501/?trackingId=DvTFC7vqREKbq%2B%2BsHLKxbg%3D%3D&refId=d0h7Kl%2FuSNCfjZMMajCE9Q%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BpVKjpd0aSHKeKhvkU9PqDQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0ZUv6bOdoHnIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mukwn5zj~gu-null-null&eid=a06oc2-mukwn5zj-gu&otpToken=Zjc5NWVhNTE1OGU2NjllZDdhYzBiMDgyMGFlNGI5NzgxN2FlNWJiZmViMjdmMWQ3MDIyZGYxMjg1NjBiNmRiMTE1MmNlYjhiOGQ5N2I2NTA2NDNlOWRkMWI5MzRiNjU3ZGNmODg3ZDU1MDVjODE3OWJlNzAzM2EzMWNmYWUzOGEwMmNiODhhNzFiMTNkOGE3LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 28, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=9S%2FnbD5ERAyRnI3Y1uOhCw%3D%3D&refId=WcxbV6wIQL%2BvB9ASsgEnJQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BpVKjpd0aSHKeKhvkU9PqDQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0ZUv6bOdoHnIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mukwn5zj~gu-null-null&eid=a06oc2-mukwn5zj-gu&otpToken=Zjc5NWVhNTE1OGU2NjllZDdhYzBiMDgyMGFlNGI5NzgxN2FlNWJiZmViMjdmMWQ3MDIyZGYxMjg1NjBiNmRiMTE1MmNlYjhiOGQ5N2I2NTA2NDNlOWRkMWI5MzRiNjU3ZGNmODg3ZDU1MDVjODE3OWJlNzAzM2EzMWNmYWUzOGEwMmNiODhhNzFiMTNkOGE3LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4470827139/?trackingId=cf8fhCYXTDaBr32wmfYsRA%3D%3D&refId=N94VHPVaTHKucEX0w0NhRg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BpVKjpd0aSHKeKhvkU9PqDQ%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0ZUv6bOdoHnIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mukwn5zj~gu-null-null&eid=a06oc2-mukwn5zj-gu&otpToken=Zjc5NWVhNTE1OGU2NjllZDdhYzBiMDgyMGFlNGI5NzgxN2FlNWJiZmViMjdmMWQ3MDIyZGYxMjg1NjBiNmRiMTE1MmNlYjhiOGQ5N2I2NTA2NDNlOWRkMWI5MzRiNjU3ZGNmODg3ZDU1MDVjODE3OWJlNzAzM2EzMWNmYWUzOGEwMmNiODhhNzFiMTNkOGE3LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (FDE) Nexien Inc. Englewood Cliffs, NJ Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4463558029/?trackin",
       "aiDecision": "LinkedIn application receipt",
       "aiModel": "deterministic_rules",
       "aiClassifiedAt": "2026-09-15T15:55:17.612Z",
@@ -2395,25 +2841,6 @@
         "1a0c2a64a4766c31"
       ],
       "notes": "Your application was sent to Saragossa Analytics Engineer Saragossa Santa Monica, CA View job: https://www.linkedin.com/comm/jobs/view/4467600838/?trackingId=TOxWB9rESG%2BPVxThtVM7PQ%3D%3D&refId=Vgz1F8IBT4yiFoxOKoORiQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B8q%2BxX3GtSCiyRrsuOLpDYg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0Gqah-Og4FnIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mukwlbdw~a8-null-null&eid=a06oc2-mukwlbdw-a8&otpToken=NGIzZjY2N2ZjNTBlMjUxNzI1ZTM1YWFlOTAxMzFjMTQyZTdlZGZmMzIyMTdkMDAwMTVlNWRmM2RlNGQyNjM0YWU0MDgwZjQwYjgzMGMwZjMxYWNmNzVjYjVkZDdlMWQ2ZGFlOTBmY2JmNGRlNGY5Y2MzZjVjNzU4NWI3ZDE1ODAxZDI5M2FiY2VjZGRhMzc2LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 28, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=TbybqFEqR2u5bUyorPrlkA%3D%3D&refId=vOLwLWYZQ2Cwzgxm1HQscA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B8q%2BxX3GtSCiyRrsuOLpDYg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0Gqah-Og4FnIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mukwlbdw~a8-null-null&eid=a06oc2-mukwlbdw-a8&otpToken=NGIzZjY2N2ZjNTBlMjUxNzI1ZTM1YWFlOTAxMzFjMTQyZTdlZGZmMzIyMTdkMDAwMTVlNWRmM2RlNGQyNjM0YWU0MDgwZjQwYjgzMGMwZjMxYWNmNzVjYjVkZDdlMWQ2ZGFlOTBmY2JmNGRlNGY5Y2MzZjVjNzU4NWI3ZDE1ODAxZDI5M2FiY2VjZGRhMzc2LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?trackingId=d4yogBdcTAip9a%2FLFx2A%2Fw%3D%3D&refId=Uclq9ztMRuWKNR5h6%2FyrLQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B8q%2BxX3GtSCiyRrsuOLpDYg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0Gqah-Og4FnIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mukwlbdw~a8-null-null&eid=a06oc2-mukwlbdw-a8&otpToken=NGIzZjY2N2ZjNTBlMjUxNzI1ZTM1YWFlOTAxMzFjMTQyZTdlZGZmMzIyMTdkMDAwMTVlNWRmM2RlNGQyNjM0YWU0MDgwZjQwYjgzMGMwZjMxYWNmNzVjYjVkZDdlMWQ2ZGFlOTBmY2JmNGRlNGY5Y2MzZjVjNzU4NWI3ZDE1ODAxZDI5M2FiY2VjZGRhMzc2LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4470827139/?trackingId=%2BCyUJYd%2BR2uPX%2FT%2FjGB3eg%3D%3D&re"
-    },
-    {
-      "id": "emonics-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Emonics",
-      "role": "More Success View Similar Jobs You May Be Interested",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "LinkedIn application receipt",
-      "latestSubject": "Tirth Chirayu, your application was sent to Emonics LLC",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-09-28T07:04:46.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0e6d4944a42052",
-      "gmailMessageIds": [
-        "1a0e6d4944a42052"
-      ],
-      "notes": "Your application was sent to Emonics LLC Data Engineer I Emonics LLC Sacramento, CA View job: https://www.linkedin.com/comm/jobs/view/4468106152/?trackingId=bgRKC1yaRpejW44zHS1nZg%3D%3D&refId=3nt4IiQHR6WUWUkDbI4n5A%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BE8oBEIurSbmw4xBqqvjNYA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3g0JYwV70EnIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mukwk0rp~hq-null-null&eid=a06oc2-mukwk0rp-hq&otpToken=MWQ3YmU0ODQwMzE5NDcxOGJlMjYyOWE3ZTIwMmU0MzA5MzdhMjczMjY5ZDFiNDhjNDUwMDZmNmYxNGQxMmY3ZDdiNTk1YjI5YzBiNmIzMTdhNDlkMzNhNDEzODRkNWQ3NjRhODYyZDM4NzBkOGRjMDlmZGE4ZjBkNTBkNmNlMGFjZjRkOGU5OGU3YTFkMWU5LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 28, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=twUBBKGOShiT%2FrGm4pd5Kw%3D%3D&refId=%2BmxhPnyiRrG1fW0e%2FfvA6w%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BE8oBEIurSbmw4xBqqvjNYA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3g0JYwV70EnIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mukwk0rp~hq-null-null&eid=a06oc2-mukwk0rp-hq&otpToken=MWQ3YmU0ODQwMzE5NDcxOGJlMjYyOWE3ZTIwMmU0MzA5MzdhMjczMjY5ZDFiNDhjNDUwMDZmNmYxNGQxMmY3ZDdiNTk1YjI5YzBiNmIzMTdhNDlkMzNhNDEzODRkNWQ3NjRhODYyZDM4NzBkOGRjMDlmZGE4ZjBkNTBkNmNlMGFjZjRkOGU5OGU3YTFkMWU5LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4470827139/?trackingId=RE5K87eeQzy7IqapsRgUTg%3D%3D&refId=bv5r%2BpsbTmqVEaXgs8iu7g%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BE8oBEIurSbmw4xBqqvjNYA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3g0JYwV70EnIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mukwk0rp~hq-null-null&eid=a06oc2-mukwk0rp-hq&otpToken=MWQ3YmU0ODQwMzE5NDcxOGJlMjYyOWE3ZTIwMmU0MzA5MzdhMjczMjY5ZDFiNDhjNDUwMDZmNmYxNGQxMmY3ZDdiNTk1YjI5YzBiNmIzMTdhNDlkMzNhNDEzODRkNWQ3NjRhODYyZDM4NzBkOGRjMDlmZGE4ZjBkNTBkNmNlMGFjZjRkOGU5OGU3YTFkMWU5LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer Taktile New York, NY View job: https://www.linkedin.com/comm/jobs/view/4440885759/?trackingId=i05OSFCITZWGD4A325mxqA%3D%3D&refId=N%2F%2FPE7t"
     },
     {
       "id": "midland-industries-more-success-view-similar-jobs-you-may-be-interested",
@@ -2932,25 +3359,6 @@
       "notes": "Hi Tirth Shah, Thanks for submitting your availability for the Analyst- SF position. You're confirmed for your interview on: Date/Time: Sep 28, 2026 1:30pm-2:00pm (GMT-04:00) Eastern Time (US & Canada) Interviewers: Frances Ding Interview type: Technical Interview Google Meet: https://meet.google.com/uwh-znrv-ewo To help you prepare, please review the candidate preparation document here. ( https://drive.google.com/file/d/13QQDEcB1eKpGZ-bX4214NBgWGQPx2UBf/view ) Let us know if you have any other questions before your interview. Thanks, Sheela Hi Tirth Shah, Thanks for submitting your availability for the Analyst- SF position. You're confirmed for your interview on: Date/Time: Sep 28, 2026 1:30pm-2:00pm (GMT-04:00) Eastern Time (US & Canada) Interviewers: Frances Ding Interview type: Technical Interview Google Meet: https://meet.google.com/uwh-znrv-ewo To help you prepare, please review the candidate preparation document here. Let us know if you have any other questions before your interview. Thanks, Sheela"
     },
     {
-      "id": "rzr-global-analyst-sf",
-      "company": "RZR Global",
-      "role": "Analyst- SF",
-      "reqId": null,
-      "status": "reply_needed",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "RZR Global Inc. Interview Availability",
-      "latestFrom": "Sheela Lokesh <sheela.l@aarki.com>",
-      "lastActivityAt": "2026-09-26T19:15:38.000Z",
-      "source": "gmail",
-      "gmailThreadId": "19fdc40a02293d29",
-      "gmailMessageIds": [
-        "19fdc40a02293d29"
-      ],
-      "notes": "Tirth Shah, Thanks for your interest in the Analyst- SF position at RZR Global Inc.. We're excited to move forward with the interview process. To help us schedule your next interview(s), please let us know when you're available by selecting the online calendar link below. Enter your availability now > ( https://app9.greenhouse.io/availability/e44a632bfc9736d71d69c56d6f281124?utm_medium=email&utm_source=AvailabilityRequest ) We'll coordinate with our team and confirm a time with you. Regards, Sheela Tirth Shah, Thanks for your interest in the Analyst- SF position at RZR Global Inc.. We're excited to move forward with the interview process. To help us schedule your next interview(s), please let us know when you're available by selecting the online calendar link below. Enter your availability now > We'll coordinate with our team and confirm a time with you. Regards, Sheela"
-    },
-    {
       "id": "grant-thornton-head-of-data-analytics-senior-director-116025",
       "company": "Grant Thornton",
       "role": "Head Of Data & Analytics, Senior Director",
@@ -3076,9 +3484,9 @@
       "role": "General Application",
       "reqId": null,
       "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
+      "confidence": "medium",
+      "classifier": "openrouter",
+      "reason": "Review / Other",
       "latestSubject": "Confirm your identity",
       "latestFrom": "Infoblox Careers <noreply@talent.infoblox.com>",
       "lastActivityAt": "2026-09-26T16:07:53.000Z",
@@ -5463,7 +5871,7 @@
         "1a036013c90f241b",
         "1a04b71d9ffeef66"
       ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 783532 Note : This code will expire in 10 minutes. Sincerely, SAIC Recruiting Team."
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 741997 Note : This code will expire in 10 minutes. Sincerely, SAIC Recruiting Team."
     },
     {
       "id": "statistics-data-sdc-expressing-your-interest",
@@ -13969,26 +14377,6 @@
       "notes": "Your application was sent to ProSearch Data Engineer ProSearch Portsmouth, NH View job: https://www.linkedin.com/comm/jobs/view/4467675557/?trackingId=C%2FSEHZk0SbWm2oE0kiamEQ%3D%3D&refId=VBhYhsVtSwqavy7Ji0QEtw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3ByWD1Q5vWQ9aQb%2BbjyvBCGw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1kT3CwKeWXfss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muco0bpy~pr-null-null&eid=a06oc2-muco0bpy-pr&otpToken=NDU2Mjc5N2IyNDVlMmJkNDUxMjc0NzYzZjYyNzliYmQ5MDVjMGJjYzQ1MzEyZDNiNjQ0M2U4YWZjMWFlYWU1OGYyMWFjMTNjMjg1ZDljMDRiMzIwMjZiOWJjNTVlNzdiMzkyMDZlNmE1ODkyZGUxYzk3Y2RhZmU3MmE4ZjM5MjgxMTg5MmQ5NDVkZWUxNTYyLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 22, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=MHU3qywMRFGvqsfspeKbwQ%3D%3D&refId=YVl4yYx4QNWTbnsmcbHz9w%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3ByWD1Q5vWQ9aQb%2BbjyvBCGw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1kT3CwKeWXfss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muco0bpy~pr-null-null&eid=a06oc2-muco0bpy-pr&otpToken=NDU2Mjc5N2IyNDVlMmJkNDUxMjc0NzYzZjYyNzliYmQ5MDVjMGJjYzQ1MzEyZDNiNjQ0M2U4YWZjMWFlYWU1OGYyMWFjMTNjMjg1ZDljMDRiMzIwMjZiOWJjNTVlNzdiMzkyMDZlNmE1ODkyZGUxYzk3Y2RhZmU3MmE4ZjM5MjgxMTg5MmQ5NDVkZWUxNTYyLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer, Agentic AI Redapt, Inc. Seattle, WA 1 school alum Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4453807059/?trackingId=z2f4kO7tRa%2Bi3kvHGIN2ew%3D%3D&refId=gg368RP%2BRjiZGAfuN%2BhMYg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3ByWD1Q5vWQ9aQb%2BbjyvBCGw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1kT3CwKeWXfss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muco0bpy~pr-null-null&eid=a06oc2-muco0bpy-pr&otpToken=NDU2Mjc5N2IyNDVlMmJkNDUxMjc0NzYzZjYyNzliYmQ5MDVjMGJjYzQ1MzEyZDNiNjQ0M2U4YWZjMWFlYWU1OGYyMWFjMTNjMjg1ZDljMDRiMzIwMjZiOWJjNTVlNzdiMzkyMDZlNmE1ODkyZGUxYzk3Y2RhZmU3MmE4ZjM5MjgxMTg5MmQ5NDVkZWUxNTYyLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4467348144/"
     },
     {
-      "id": "jobgether-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Jobgether",
-      "role": "More Success View Similar Jobs You May Be Interested",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "LinkedIn application receipt",
-      "latestSubject": "Tirth Chirayu, your application was sent to Jobgether",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-09-22T12:42:48.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0810b852a16dd2",
-      "gmailMessageIds": [
-        "1a0810b852a16dd2"
-      ],
-      "notes": "Your application was sent to Jobgether Senior Data Engineer Jobgether United States View job: https://www.linkedin.com/comm/jobs/view/4468500762/?trackingId=o8Pe6X45SHWnYUzfijBS4A%3D%3D&refId=I8lrx6lBTCqemjAH%2FS6Tcg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BD92d%2B5j%2FSEeqZVAqJCcgQg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1VCS2WSdSWfss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mucnzmrz~qf-null-null&eid=a06oc2-mucnzmrz-qf&otpToken=ZTQ5OWVmOWRhNzM4ZjFiMzVjNGU5ZjIzNzM3Zjk1MGM0Yjk4NGJiOGJjMjc0Mzc0YzZiZGEwNmIzYzk3YTEzZGNmMGJlZjljOGYwYzI4OTEwZTM0ZjUyOWRkYmUzM2E5M2QyMDFlOWU2ZGE1MDUzZDM1NTk2ZTQ1MTY4NTQxYjlkMWE2ZWZhZmZiMGIwNjRjLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 22, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=81afGx7BROW%2FqEUQeg5QGQ%3D%3D&refId=%2BBnpikySTOmyt5wBq4LXjg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BD92d%2B5j%2FSEeqZVAqJCcgQg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1VCS2WSdSWfss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mucnzmrz~qf-null-null&eid=a06oc2-mucnzmrz-qf&otpToken=ZTQ5OWVmOWRhNzM4ZjFiMzVjNGU5ZjIzNzM3Zjk1MGM0Yjk4NGJiOGJjMjc0Mzc0YzZiZGEwNmIzYzk3YTEzZGNmMGJlZjljOGYwYzI4OTEwZTM0ZjUyOWRkYmUzM2E5M2QyMDFlOWU2ZGE1MDUzZDM1NTk2ZTQ1MTY4NTQxYjlkMWE2ZWZhZmZiMGIwNjRjLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer - AI scalr New York, United States Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4467347160/?trackingId=T4cHEc3YQQqrfEBgQm6xZA%3D%3D&refId=x82m%2B0usTLyGlbFi3GeFLA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BD92d%2B5j%2FSEeqZVAqJCcgQg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=1VCS2WSdSWfss1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mucnzmrz~qf-null-null&eid=a06oc2-mucnzmrz-qf&otpToken=ZTQ5OWVmOWRhNzM4ZjFiMzVjNGU5ZjIzNzM3Zjk1MGM0Yjk4NGJiOGJjMjc0Mzc0YzZiZGEwNmIzYzk3YTEzZGNmMGJlZjljOGYwYzI4OTEwZTM0ZjUyOWRkYmUzM2E5M2QyMDFlOWU2ZGE1MDUzZDM1NTk2ZTQ1MTY4NTQxYjlkMWE2ZWZhZmZiMGIwNjRjLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (AI) scalr San Francisco Bay Area Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4467348144/?tra",
-      "updatedAt": "2026-09-15T16:14:31.088Z"
-    },
-    {
       "id": "mpower-plus-more-success-view-similar-jobs-you-may-be-interested",
       "company": "Mpower Plus",
       "role": "More Success View Similar Jobs You May Be Interested",
@@ -15029,25 +15417,6 @@
         "1a0c4dc7107aec65"
       ],
       "notes": "Hi Tirth, Thank you for applying to Vanna Health and for your interest in the Data Analyst - Service and Operations Analytics role. We sincerely appreciate the time and effort you put into your application. Our team will carefully review your background and experience. If your qualifications match our requirements, we will reach out to discuss next steps. At Vanna Health, we are dedicated to helping people lead healthier, more connected, and more meaningful lives through community-based care and support. We are grateful for your interest in our mission and the work we do every day. Thank you again for considering Vanna Health. We wish you the best in your job search and appreciate your interest in joining our community. Warm regards, Vanna Health Hiring Team Hi Tirth , Thank you for applying to Vanna Health and for your interest in the Data Analyst - Service and Operations Analytics role. We sincerely appreciate the time and effort you put into your application. Our team will carefully review your background and experience. If your qualifications match our requirements, we will reach out to discuss next steps. At Vanna Health, we are dedicated to helping people lead healthier, more connected, and more meaningful lives through community-based care and support. We are grateful for your interest in our mission and the work we do every day. Thank you again for considering Vanna Health. We wish you the best in your job search and appreciate your interest in joining our community. Warm regards, Vanna Health Hiring Team"
-    },
-    {
-      "id": "waymo-general-application",
-      "company": "Waymo",
-      "role": "General Application",
-      "status": "not_related",
-      "confidence": "medium",
-      "classifier": "openrouter",
-      "reason": "Review / Other",
-      "latestSubject": "Here are some new roles at Waymo",
-      "latestFrom": "The Talent Acquisition team at Waymo <user-e65a8e09c91dc79cdac854bf73c74dd1@waymo.mail.clinchtalent.com>",
-      "lastActivityAt": "2026-09-21T16:34:09.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0487d212166fd4",
-      "gmailMessageIds": [
-        "1a0487d212166fd4",
-        "1a05958b0515c212"
-      ],
-      "notes": "Face, Head, Person, Electronics, Mobile Phone, Phone, Indoors, Basketball, Basketball (Ball), Sport Hi Tirth,Â Â Here are some jobs that best fit your preferences! Marketplace Platform, TLM Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/1b7572b5b8ce361eb65ead9db0ab8631/events/clicked?signature=cc5bf5e149b0c6eda1a88aabc385033a6373db80&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fmarketplace-platform-tlm-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) Senior Software Engineer, Mapping Field Response Mountain View, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/1b7572b5b8ce361eb65ead9db0ab8631/events/clicked?signature=ed66f0a12e65bbe37a72f26317a0f01edd3c5235&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2Fsenior-software-engineer-mapping-field-response-mountain-view-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) 2027 Summer Intern, BS/MS, Software Engineer San Francisco, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/1b7572b5b8ce361eb65ead9db0ab8631/events/clicked?signature=918933a0d7ee056e4bb5ac507b9d143e76d2ccc4&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2F2027-summer-intern-bs-ms-software-engineer-san-francisco-california-united-states%3Futm_source%3Djob_alert%26utm_medium%3Demail%26utm_campaign%3DJob%2520Alert ) 2027 Summer Intern, BS/MS, Software Engineering, Commercialization Mountain View, California, United States. San Francisco, California, United States Waymo is an autonomous driving technology company with the mission to be the world's most trusted driver. Since its start as the Google Self-Driving Car Project in 2009, Waymo has focused on building the Waymo Driverâ€”The World's Most Experienced D... Read More Â» ( https://api.clinchtalent.com/v1/public/messages/1b7572b5b8ce361eb65ead9db0ab8631/events/clicked?signature=fef023bf10655a3ec267629142e33f41408c346b&url=https%3A%2F%2Fcareers.withwaymo.com%2Fjobs%2F2027-summer-intern-bs-ms-software-engineering-commercialization-mountain-view-california-united-states-san-francisco%"
     },
     {
       "id": "ul-solutions-digital-solutions-intern-10857",
@@ -16836,26 +17205,6 @@
       "notes": "Your application was sent to C.W. Matthews Contracting Co., Inc. Data Engineer C.W. Matthews Contracting Co., Inc. Marietta, GA View job: https://www.linkedin.com/comm/jobs/view/4466912461/?trackingId=aeVA18VDReKcCF%2FBNwsvdQ%3D%3D&refId=QGk7DXTDTPeqzy1ftqs2Qw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B8fnXEzfCTaW1HBv9Beosyg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2S0J7f6heEdIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muavb3ow~lz-null-null&eid=a06oc2-muavb3ow-lz&otpToken=NjI1YjgwOGVlY2QyMTVhMWE4MmQ4MzM4M2FiZDk5YTBjNDNlZGUzYzA2N2FkNWU2NmEyYTk4NjlhZmI5MThjM2I3MzlkZmNjNDg4MjQ3ODczNTJmNTAxMGRkMDkwN2VjNjMxZGUzM2U5MTY5NjM1NjBhNmJkZmE2ZjFjNzUzMWQwNjlhZjNhNGIzMWVlMGNkLDIsMQ%3D%3D --------------------------------------------------------- Applied on September 21, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed Engineer - AI scalr New York, United States Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4467347160/?trackingId=%2BB2bH%2BccTLakSW41UsUJtg%3D%3D&refId=CjBx%2FttNRVuuIX5BBC4OFQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B8fnXEzfCTaW1HBv9Beosyg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2S0J7f6heEdIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muavb3ow~lz-null-null&eid=a06oc2-muavb3ow-lz&otpToken=NjI1YjgwOGVlY2QyMTVhMWE4MmQ4MzM4M2FiZDk5YTBjNDNlZGUzYzA2N2FkNWU2NmEyYTk4NjlhZmI5MThjM2I3MzlkZmNjNDg4MjQ3ODczNTJmNTAxMGRkMDkwN2VjNjMxZGUzM2U5MTY5NjM1NjBhNmJkZmE2ZjFjNzUzMWQwNjlhZjNhNGIzMWVlMGNkLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Chicago, IL 158 company alumni 6 school alumni Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4440557967/?trackingId=nwz3Dja%2FRKemj19v5gg90w%3D%3D&refId=Dd6XN8l1QPiigqgIIF1iyg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3B8fnXEzfCTaW1HBv9Beosyg%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2S0J7f6heEdIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muavb3ow~lz-null-null&eid=a06oc2-muavb3ow-lz&otpToken=NjI1YjgwOGVlY2QyMTVhMWE4MmQ4MzM4M2FiZDk5YTBjNDNlZGUzYzA2N2FkNWU2NmEyYTk4NjlhZmI5MThjM2I3MzlkZmNjNDg4MjQ3ODczNTJmNTAxMGRkMDkwN2VjNjMxZGUzM2U5MTY5NjM1NjBhNmJkZmE2ZjFjNzUzMWQwNjlhZjNhNGIzMWVlMGNkLDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Dallas, TX 10 conne"
     },
     {
-      "id": "mondrian-alpha-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Mondrian Alpha",
-      "role": "More Success View Similar Jobs You May Be Interested",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "LinkedIn application receipt",
-      "latestSubject": "Tirth Chirayu, your application was sent to Mondrian Alpha",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-09-21T06:31:41.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a086129e7d4f127",
-      "gmailMessageIds": [
-        "1a086129e7d4f127"
-      ],
-      "notes": "Your application was sent to Mondrian Alpha Data Engineer - Global Hedge Fund - 300k+ Mondrian Alpha New York City Metropolitan Area View job: https://www.linkedin.com/comm/jobs/view/4466208451/?trackingId=UCn8N3hES3CxEvt3vcJ4Xw%3D%3D&refId=WKtjID9oTSmcYdXCqt6MRw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BRI7llHsZRZScFPHYUd7v8A%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3t8lcCKOeDdIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muavai6f~k9-null-null&eid=a06oc2-muavai6f-k9&otpToken=NTJhYzc1NzhmNjE3N2M5MzhkNDIwYmFjMWZjMTlkZDQxODA3OTFjN2Y5NGNhYjkwMWZhZGUwMGNlZmQ5YWI1MDBhYjE4NzM5NTE3M2M5MDA3MTQ0NjkwOTkwYTRkOTc3MDU4NjE3NGJlOWY0NjgzMDU2MTcwZTkyNGRlZjE3M2Q3MmRmOWExYzY4NmE3ZmQ3LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 21, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed Engineer - AI scalr New York, United States Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4467347160/?trackingId=KT7JGLFQQJa%2F0mvnchMMZA%3D%3D&refId=8FfPmpgOQceFUQuweab41w%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BRI7llHsZRZScFPHYUd7v8A%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3t8lcCKOeDdIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muavai6f~k9-null-null&eid=a06oc2-muavai6f-k9&otpToken=NTJhYzc1NzhmNjE3N2M5MzhkNDIwYmFjMWZjMTlkZDQxODA3OTFjN2Y5NGNhYjkwMWZhZGUwMGNlZmQ5YWI1MDBhYjE4NzM5NTE3M2M5MDA3MTQ0NjkwOTkwYTRkOTc3MDU4NjE3NGJlOWY0NjgzMDU2MTcwZTkyNGRlZjE3M2Q3MmRmOWExYzY4NmE3ZmQ3LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Austin, TX 158 company alumni 6 school alumni Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4459117673/?trackingId=Y7RwzU50SyuflhyAUqJjMw%3D%3D&refId=dvEYHgJoRPmVR7jBxSXyxg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BRI7llHsZRZScFPHYUd7v8A%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3t8lcCKOeDdIs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~muavai6f~k9-null-null&eid=a06oc2-muavai6f-k9&otpToken=NTJhYzc1NzhmNjE3N2M5MzhkNDIwYmFjMWZjMTlkZDQxODA3OTFjN2Y5NGNhYjkwMWZhZGUwMGNlZmQ5YWI1MDBhYjE4NzM5NTE3M2M5MDA3MTQ0NjkwOTkwYTRkOTc3MDU4NjE3NGJlOWY0NjgzMDU2MTcwZTkyNGRlZjE3M2Q3MmRmOWExYzY4NmE3ZmQ3LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Chicago, IL 10 connecti",
-      "updatedAt": "2026-09-15T16:14:31.088Z"
-    },
-    {
       "id": "infomatics-more-success-view-similar-jobs-you-may-be-interested",
       "company": "Infomatics",
       "role": "More Success View Similar Jobs You May Be Interested",
@@ -18329,25 +18678,6 @@
         "1a0af24e3678e580"
       ],
       "notes": " Hi Tirth,&nbsp; Thanks for your interest in VERSANT. We really appreciate the time you have taken to share your details with us. You have successfully submitted an application to the following job: Data Engineer II. Our Recruiters will review your information and will contact you directly if your skills and experience match the requirements of the position you&rsquo;ve applied to. You can check the status of your application at any time by visiting the Candidate Zone on careers.versantmedia.com Please note, your information will be stored in our database for Recruiters to consider for any future openings that may align with your experience. If you prefer to not have your details on file, you can delete your account at any time.&nbsp; We wish you the best in finding a career opportunity that is both challenging and rewarding. Here you can create the extraordinary.&nbsp; VERSANT Talent &nbsp; &nbsp; Access My Application: https://jobs.smartrecruiters.com/my-applications/Versant3/b44e672e-1c13-42ec-a9ab-9da665d016d0?dcr_ci=Versant3 If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company (contactsupport@smartrecruiters.com). Please do not share or forward this email, as it pertains to your specific job application Hi Tirth, Thanks for your interest in VERSANT. We really appreciate the time you have taken to share your details with us. You have successfully submitted an application to the following job: Data Engineer II . Our Recruiters will review your information and will contact you directly if your skills and experience match the requirements of the position you&rsquo;ve applied to. You can check the status of your application at any time by visiting the Candidate Zone on careers.versantmedia.com Please note, your information will be stored in our database for Recruiters to consider for any future openings that may align with your experience. If you prefer to not have your details on file, you can delete your account at any time. We wish you the best in finding a career opportunity that is both challenging and rewarding. Here you can create the extraordinary. VERSANT Talent Access My Application If you were not expecting this message you can report suspected suspicious activity to SmartRecruiters, An SAP company ( contactsupport@smartrecruiters.com ). Please do not share or forward this email, as it pertains to your specific job application"
-    },
-    {
-      "id": "langchain-langchain",
-      "company": "Langchain",
-      "role": "Langchain",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "platform application receipt",
-      "latestSubject": "Thank you for applying to LangChain",
-      "latestFrom": "LangChain Hiring Team <no-reply@ashbyhq.com>",
-      "lastActivityAt": "2026-09-17T11:06:10.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0af0ba524fc8ad",
-      "gmailMessageIds": [
-        "1a0af0ba524fc8ad"
-      ],
-      "notes": "Hi Tirth, Thank you for your application for AI Engineer, Enablement . Our team will review your profile and will reach out if there is a fit for this role or any open role. Thanks, LangChain Recruiting Hi Tirth , Thank you for your application for AI Engineer, Enablement . Our team will review your profile and will reach out if there is a fit for this role or any open role. Thanks, LangChain Recruiting"
     },
     {
       "id": "infinitive-your-interest",
@@ -20946,26 +21276,6 @@
       "aiConfidence": "high"
     },
     {
-      "id": "clearco-your-application",
-      "company": "Clearco",
-      "role": "Senior Data Engineer",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "low",
-      "classifier": "rules",
-      "reason": "keyword heuristic",
-      "latestSubject": "Sign-in link for your application at Pantherx Specialty LLC",
-      "latestFrom": "ClearCo <do_not_reply@clearcompany.com>",
-      "lastActivityAt": "2026-09-15T05:51:55.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0a39f369d95deb",
-      "gmailMessageIds": [
-        "1a0a39f369d95deb"
-      ],
-      "notes": "APPLICATION Thank you for your interest in the Senior Data Engineer position at Pantherx Specialty LLC . If you need to return to your application, use the button below. View/Edit Application If the button does not work, copy and paste this link into your browser: https://clrco.com/Mf5M2A3ufA Links expire in 15 minutes. You can set an optional password as well with this link. Your user name is your email address. POWERED BY CLEARCOMPANY You received this email because you applied for a job at Pantherx Specialty LLC",
-      "updatedAt": "2026-09-15T16:14:31.088Z"
-    },
-    {
       "id": "pantherx-rare-pharmacy-more-success-view-similar-jobs-you-may-be-interested",
       "company": "Pantherx Rare Pharmacy",
       "role": "Senior Data Engineer",
@@ -21529,26 +21839,6 @@
       ],
       "notes": "Your application was sent to ETHOS - Talent & Advisory Data Engineer ETHOS - Talent & Advisory United States View job: https://www.linkedin.com/comm/jobs/view/4462048779/?trackingId=mtF7YHr4TumX%2FmpATU1eUQ%3D%3D&refId=nAG5peb6Q7C2u5zkuZOfWQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BEZ2eLIJvSZeD6ZBP5X2APw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3Ztzc724-S4cs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu18aots~tp-null-null&eid=a06oc2-mu18aots-tp&otpToken=MWVlZjI5ZDc3NTM1MDAzMmZlNDMwYmMzY2E4ZDRiNWJhMmE2NTg1MTQ5MmJiMGFjN2IwYjU3N2Y0MjMyMTFmYmRkNjAxOWIzMTUxZGZkY2ZkNDQxNTBlY2UxNDQ3ODZkNjYyYTliOGNmYWM1OTc3OGI5OGNhMjRmNDA1MDY2ODI0MGYyZjM2MmM3NjdjZmY0LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 14, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=lZ1k1T4TSqu0UWkfMhNizQ%3D%3D&refId=1qi6EIhSQmm6V7Jc3mJWfg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BEZ2eLIJvSZeD6ZBP5X2APw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3Ztzc724-S4cs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu18aots~tp-null-null&eid=a06oc2-mu18aots-tp&otpToken=MWVlZjI5ZDc3NTM1MDAzMmZlNDMwYmMzY2E4ZDRiNWJhMmE2NTg1MTQ5MmJiMGFjN2IwYjU3N2Y0MjMyMTFmYmRkNjAxOWIzMTUxZGZkY2ZkNDQxNTBlY2UxNDQ3ODZkNjYyYTliOGNmYWM1OTc3OGI5OGNhMjRmNDA1MDY2ODI0MGYyZjM2MmM3NjdjZmY0LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer, Agentic AI Redapt, Inc. Seattle, WA 1 school alum Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4453807059/?trackingId=uw4Pa3ylTUq89ScQrZwCzw%3D%3D&refId=rJEj6TesSi6lZAgqQrtfHQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BEZ2eLIJvSZeD6ZBP5X2APw%3D%3D&midToken=AQG7i8fZeRVENg&midSig=3Ztzc724-S4cs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu18aots~tp-null-null&eid=a06oc2-mu18aots-tp&otpToken=MWVlZjI5ZDc3NTM1MDAzMmZlNDMwYmMzY2E4ZDRiNWJhMmE2NTg1MTQ5MmJiMGFjN2IwYjU3N2Y0MjMyMTFmYmRkNjAxOWIzMTUxZGZkY2ZkNDQxNTBlY2UxNDQ3ODZkNjYyYTliOGNmYWM1OTc3OGI5OGNhMjRmNDA1MDY2ODI0MGYyZjM2MmM3NjdjZmY0LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Austin, TX 10 connections 159 company alumni 6 school alumni Apply with ",
       "updatedAt": "2026-09-15T16:14:31.088Z"
-    },
-    {
-      "id": "jobot-more-success-view-similar-jobs-you-may-be-interested",
-      "company": "Jobot",
-      "role": "More Success View Similar Jobs You May Be Interested",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "deterministic_rules",
-      "reason": "LinkedIn application receipt",
-      "latestSubject": "Tirth Chirayu, your application was sent to Jobot",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-09-14T12:37:27.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a086194245d2134",
-      "gmailMessageIds": [
-        "1a086194245d2134"
-      ],
-      "notes": "Your application was sent to Jobot Data Engineer Jobot Addison, TX View job: https://www.linkedin.com/comm/jobs/view/4463439844/?trackingId=Zh35Mef4RuSLn7TWg7z%2Bdg%3D%3D&refId=QcfnQ3OSS12qMyrIRaclWw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BVJMBIUIOSAiehojKjcywlA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0fVxuZ-ECR4cs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu189x2j~6q-null-null&eid=a06oc2-mu189x2j-6q&otpToken=MjhkNGRkNjc4MTc5OTUxZTNiNzg4YmNlY2UwNThmYzJjODZhOGRlMTk5ZjA0MTkzOThlMGIwNjczZjQ3M2QyMTJkNTE3ZWEzYTlmYzI4ZWJkNWJlNGExYzQ2MGFiY2FiYTIzZjgxODkxOTA3OGQ4YWU0MzJkN2VlZjllNDBjNGJjOGIzZTViYzczMmUxZDg0LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 14, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Forward Deployed AI Engineer, West Arize AI San Francisco, CA 1 company alum 1 school alum View job: https://www.linkedin.com/comm/jobs/view/4429118858/?trackingId=bVKh854GRAuQWvO%2FccP6zQ%3D%3D&refId=Ft39dAL4TOyb6DPk2Z1C%2Bw%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BVJMBIUIOSAiehojKjcywlA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0fVxuZ-ECR4cs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu189x2j~6q-null-null&eid=a06oc2-mu189x2j-6q&otpToken=MjhkNGRkNjc4MTc5OTUxZTNiNzg4YmNlY2UwNThmYzJjODZhOGRlMTk5ZjA0MTkzOThlMGIwNjczZjQ3M2QyMTJkNTE3ZWEzYTlmYzI4ZWJkNWJlNGExYzQ2MGFiY2FiYTIzZjgxODkxOTA3OGQ4YWU0MzJkN2VlZjllNDBjNGJjOGIzZTViYzczMmUxZDg0LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer, Agentic AI Redapt, Inc. Seattle, WA 1 school alum Apply with resume & profile View job: https://www.linkedin.com/comm/jobs/view/4453807059/?trackingId=UC2%2BrfS0ShaM3zRSuaoJig%3D%3D&refId=WQHGKj8SR1eOzk3A3IL9Eg%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BVJMBIUIOSAiehojKjcywlA%3D%3D&midToken=AQG7i8fZeRVENg&midSig=0fVxuZ-ECR4cs1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mu189x2j~6q-null-null&eid=a06oc2-mu189x2j-6q&otpToken=MjhkNGRkNjc4MTc5OTUxZTNiNzg4YmNlY2UwNThmYzJjODZhOGRlMTk5ZjA0MTkzOThlMGIwNjczZjQ3M2QyMTJkNTE3ZWEzYTlmYzI4ZWJkNWJlNGExYzQ2MGFiY2FiYTIzZjgxODkxOTA3OGQ4YWU0MzJkN2VlZjllNDBjNGJjOGIzZTViYzczMmUxZDg0LDIsMQ%3D%3D --------------------------------------------------------- Forward Deployed Engineer (Generative AI) Tiger Analytics Austin, TX 10 connections 159 company alumni 6 school alumni Apply with resume & profile View job: https://w",
-      "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
       "id": "jenner-block-more-success-view-similar-jobs-you-may-be-interested",
@@ -24698,7 +24988,7 @@
       "gmailMessageIds": [
         "19fdc206809c504f"
       ],
-      "notes": "Hi Tirth, Thank you for applying for the AI Engineer (Mid-Level) role at Clera! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team Hi Tirth , Thank you for applying for the AI Engineer (Mid-Level) role at Clera ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team",
+      "notes": "Hi Tirth, Thank you for applying for the AWS Data Engineer role at Clera! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team Hi Tirth , Thank you for applying for the AWS Data Engineer role at Clera ! We appreciate your interest in joining the team. We will review your application and get back to you if there are next steps. If you'd like to refer candidates for other roles at Clera and earn referral bonuses, click here: https://www.getclera.com/referral All the best, Clera Hiring Team",
       "isManualOverride": false,
       "manualAction": null,
       "manualChangedAt": null,
@@ -34089,29 +34379,6 @@
         "1a065e1db56f2d40"
       ],
       "notes": "Your ChatGPT Desktop referral reward is ready OpenAI Your credits are ready You sent your first message in ChatGPT Desktop, so you and your friend received 500 credits each. Open ChatGPT Desktop You joined ChatGPT Desktop from your friend's invite and sent your first message. We've added 500 credits to each of your accounts. Use your credits to keep building, shipping, and exploring what ChatGPT Desktop can do. Need help? Just reply to this email or visit our Help Center . We're here 24/7 to make your experience seamless. OpenAI 1455 3rd Street San Francisco, CA 94158 Privacy &middot; Terms OpenAI © 2015–2026"
-    },
-    {
-      "id": "zifo-sr",
-      "company": "Zifo",
-      "role": "Senior Data Engineer",
-      "reqId": null,
-      "status": "applied",
-      "confidence": "high",
-      "classifier": "openrouter",
-      "reason": "AI extracted",
-      "latestSubject": "Tirth Chirayu, your application was sent to Zifo",
-      "latestFrom": "LinkedIn <jobs-noreply@linkedin.com>",
-      "lastActivityAt": "2026-09-03T05:56:00.000Z",
-      "source": "gmail",
-      "gmailThreadId": "1a0637bbb03daff0",
-      "gmailMessageIds": [
-        "1a0637bbb03daff0",
-        "1a0637899c2e244a",
-        "1a065d6a4324e561",
-        "1a065cfae39411a1"
-      ],
-      "notes": "Your application was sent to Zifo Sr. Data Engineer Zifo Raleigh, NC View job: https://www.linkedin.com/comm/jobs/view/4462401951/?trackingId=x3jrdqstRluY7KST5q1diw%3D%3D&refId=u9%2BSFIHfQU6gxx4Q%2B5QxYA%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BVyV8QNQwRmevJtUwx7i%2B6w%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2jDfmas4cYQso1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtl3tipe~co-null-null&eid=a06oc2-mtl3tipe-co&otpToken=NGRiYjJmNDMxNTgxZTE0ZWMxOTIyOTk5NTgzZjBjNTFhOTA3YzFlYmViZTc4NzIwZWFkNTBmNDliZjE5ZTIzMDQ0YTI4ZjdhNmU4YzcyOTg2ZWI3NTkzM2E1OWIyOWExMDFjM2UzMzU5Yzc0ZDU1MDk5ZmVjYzViZjk3Y2JhNTQxNjYzODBkMDZlMmY5MzE3LDIsMQ%3D%3D --------------------------------------------------------- Applied on September 3, 2026---------------------------------------------------------------- Now, take these next steps for more success View similar jobs you may be interested in Product Manager, AI Enablement Pindrop Atlanta Metropolitan Area 4 school alumni View job: https://www.linkedin.com/comm/jobs/view/4458915497/?trackingId=wYNOM6jrSDOXVwZljqNr6A%3D%3D&refId=ZoTBqeE3Qn63HDqdyaZcvQ%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BVyV8QNQwRmevJtUwx7i%2B6w%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2jDfmas4cYQso1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtl3tipe~co-null-null&eid=a06oc2-mtl3tipe-co&otpToken=NGRiYjJmNDMxNTgxZTE0ZWMxOTIyOTk5NTgzZjBjNTFhOTA3YzFlYmViZTc4NzIwZWFkNTBmNDliZjE5ZTIzMDQ0YTI4ZjdhNmU4YzcyOTg2ZWI3NTkzM2E1OWIyOWExMDFjM2UzMzU5Yzc0ZDU1MDk5ZmVjYzViZjk3Y2JhNTQxNjYzODBkMDZlMmY5MzE3LDIsMQ%3D%3D --------------------------------------------------------- AI Product Manager Applied Systems Lewisville, TX 3 connections 12 company alumni 10 school alumni View job: https://www.linkedin.com/comm/jobs/view/4440780268/?trackingId=IaP0xlcWS2aDI00i2OMgkw%3D%3D&refId=mxLmWZFbQ9iRvpgdyH%2Fu8A%3D%3D&lipi=urn%3Ali%3Apage%3Aemail_email_application_confirmation_with_nba_01%3BVyV8QNQwRmevJtUwx7i%2B6w%3D%3D&midToken=AQG7i8fZeRVENg&midSig=2jDfmas4cYQso1&trk=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job&trkEmail=eml-email_application_confirmation_with_nba_01-application~confirmation-0-view_job-null-a06oc2~mtl3tipe~co-null-null&eid=a06oc2-mtl3tipe-co&otpToken=NGRiYjJmNDMxNTgxZTE0ZWMxOTIyOTk5NTgzZjBjNTFhOTA3YzFlYmViZTc4NzIwZWFkNTBmNDliZjE5ZTIzMDQ0YTI4ZjdhNmU4YzcyOTg2ZWI3NTkzM2E1OWIyOWExMDFjM2UzMzU5Yzc0ZDU1MDk5ZmVjYzViZjk3Y2JhNTQxNjYzODBkMDZlMmY5MzE3LDIsMQ%3D%3D --------------------------------------------------------- AI Agent Product Manager Hello Patient New York, NY View job: https://www.linkedin.com/comm/jobs/view/4423029409/?trackingId=%2B%2FMFsPtKSV%2BIqX%2Bxq1rBvg%3D%3D&refId=C9ZxaXq6Q",
-      "updatedAt": "2026-09-15T21:14:25.108Z"
     },
     {
       "id": "sotalent-data-engineer",
@@ -45413,7 +45680,7 @@
       "gmailMessageIds": [
         "1a0346f6d28f7f59"
       ],
-      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 533148 Note : This code will expire in 10 minutes. Sincerely, American Tower Global Recruiting Team."
+      "notes": "Hello Tirth, Just one more step before you get started. You must confirm your identity using the one-time pass code : 167829 Note : This code will expire in 10 minutes. Sincerely, American Tower Global Recruiting Team."
     },
     {
       "id": "answersnow-business-intelligence-engineer",
@@ -47101,7 +47368,7 @@
       "gmailMessageIds": [
         "19fc7b51e249890a"
       ],
-      "notes": "Prominence Advisors ------------------------------------------------------------------------------- Your application for the Data Engineer (Snowflake) job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Phone: +19796352045 Where are you located?: Texas ** PROFILE ** Resume: Tirth_Shah_AI_Data_Engineer.pdf ** DETAILS ** When are you available to start?: September 01, 2026 Desired Compensation?: 75000 Answers [\"Yes\"] Are you eligible to work in the U.S. without visa sponsorship? [\"Yes\"] Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? How many years experience with healthcare data do you have? 0-1 Year [\"Yes\"] Do you have experience working with data architecture, modeling, or engineering in the healthcare industry? Which of Prominence's core values resonates most with you and why? Ownership resonates most with me because I believe in taking responsibility from understanding the problem through delivery, while continuously improving the solution and creating meaningful value. ------------------------------------------------------------------------------- You have applied again for this job. This application has overwritten the previous one. If this wasn't you or you've changed your mind, you can manage your applications online. https://prominence-advisors.workable.com/jobs/6056030/candidate_conflicts/mjjvhT55K3udWsaPVlO8C5geLp1ni81HVnhtcZFHe0A ------------------------------------------------------------------------------- Withdraw this application https://prominence-advisors.workable.com/jobs/6056030/candidates/l8jqvz945VTnpaCFcJZJY-pxo9s4SBKB_MxJvZBBnMA ------------------------------------------------------------------------------- Jobs by Workable https://jobs.workable.com/ Your application for the Data Engineer (Snowflake) job was submitted successfully. Here's a copy of your application data for safekeeping. You have applied again for this job. This application has overwritten the previous one. If this wasn't you or you've changed your mind, you can manage your applications online. Manage your applications Personal information Name Tirth Shah Email tirthcshah1999@gmail.com Profile Resume Tirth_Shah_AI_Data_Engineer.pdf Details When are you available to start? September 01, 2026 Desired Compensation? 75000 Answers Are you eligible to work in the U.S. without visa sponsorship? Yes Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? Yes How many years experience with healthcare data do you have? 0-1 Year Do you have experience working with data architecture, modeling, or engineering in the healthcare industry? Yes Which of Prominence's core value"
+      "notes": "Prominence Advisors ------------------------------------------------------------------------------- Your application for the Data Engineer job was submitted successfully. Here's a copy of your application data for safekeeping. ------------------------------------------------------------------------------- ** PERSONAL INFORMATION ** Name: Tirth Shah Email: tirthcshah1999@gmail.com Phone: +14157411711 Where are you located?: Texas ** PROFILE ** Resume: Tirth.pdf ** DETAILS ** When are you available to start?: August 17, 2026 Desired Compensation?: 75000 Answers [\"Yes\"] Are you eligible to work in the U.S. without visa sponsorship? [\"Yes\"] Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? How many years experience with healthcare data do you have? 2-4 Years [\"No\"] Do you have experience working with data architecture, modeling, or engineering in the healthcare industry? Which of Prominence's core values resonates most with you and why? **Integrity** resonates with me the most. I believe trusted data is the foundation of good decisions, so I focus on building reliable pipelines with strong validation, monitoring, and data quality checks. Delivering accurate, dependable solutions has always been a priority throughout my data engineering work. ------------------------------------------------------------------------------- You have applied again for this job. This application has overwritten the previous one. If this wasn't you or you've changed your mind, you can manage your applications online. https://prominence-advisors.workable.com/jobs/5160745/candidate_conflicts/pmMVQqQyhmynpwLIophjAxsGGkMJ-anx3KGwMwwvODE ------------------------------------------------------------------------------- Withdraw this application https://prominence-advisors.workable.com/jobs/5160745/candidates/ht5UTcfZzi4zZPQiCI6bcVRZy8ATZtC6ckyj44IJH10 ------------------------------------------------------------------------------- Jobs by Workable https://jobs.workable.com/ Your application for the Data Engineer job was submitted successfully. Here's a copy of your application data for safekeeping. You have applied again for this job. This application has overwritten the previous one. If this wasn't you or you've changed your mind, you can manage your applications online. Manage your applications Personal information Name Tirth Shah Email tirthcshah1999@gmail.com Profile Resume Tirth.pdf Details When are you available to start? August 17, 2026 Desired Compensation? 75000 Answers Are you eligible to work in the U.S. without visa sponsorship? Yes Have you worked with any of the following technologies in a data architecture or engineering role: Databricks, Snowflake, Palantir, Microsoft Fabric, or IICS? Yes How many years experience with healthcare data do you have? 2-4 Years Do you have experience working with data architecture, modeling, or engineering in the healthcare indust"
     },
     {
       "id": "golden-state-warriors-data-engineer",
